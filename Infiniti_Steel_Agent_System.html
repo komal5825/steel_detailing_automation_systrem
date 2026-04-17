@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infiniti Solutions — Steel Detailing Multi-Agent System Architecture</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+
+  :root {
+    --navy: #0D1B3E;
+    --blue: #1A56A0;
+    --teal: #0E7C7B;
+    --green: #1E7A3E;
+    --orange: #C85A00;
+    --red: #B91C1C;
+    --yellow: #92400E;
+    --lightblue: #D6E8F7;
+    --gray: #F3F6FA;
+    --darkgray: #374151;
+    --midgray: #6B7280;
+    --white: #FFFFFF;
+    --pass: #1E7A3E;
+    --passbg: #E6F4EA;
+    --warn: #92400E;
+    --warnbg: #FEF3C7;
+    --fail: #B91C1C;
+    --failbg: #FEE2E2;
+    --blocked: #374151;
+    --blockedbg: #F3F4F6;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background: #F0F4F8;
+    color: var(--darkgray);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .cover {
+    background: linear-gradient(135deg, var(--navy) 0%, #1A3A6B 60%, var(--teal) 100%);
+    color: white;
+    padding: 80px 60px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 500px; height: 500px;
+    background: rgba(14,124,123,0.15);
+    border-radius: 50%;
+  }
+
+  .cover::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -80px;
+    width: 400px; height: 400px;
+    background: rgba(26,86,160,0.2);
+    border-radius: 50%;
+  }
+
+  .cover-content { position: relative; z-index: 1; max-width: 900px; }
+  
+  .cover-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px; letter-spacing: 3px;
+    color: rgba(255,255,255,0.6);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .cover-title {
+    font-size: 52px; font-weight: 700; line-height: 1.1;
+    margin-bottom: 12px;
+  }
+
+  .cover-subtitle {
+    font-size: 22px; font-weight: 300;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 48px;
+  }
+
+  .cover-meta {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 24px; margin-top: 60px;
+  }
+
+  .meta-item {
+    border-top: 2px solid rgba(255,255,255,0.3);
+    padding-top: 12px;
+  }
+
+  .meta-label { font-size: 10px; letter-spacing: 2px; color: rgba(255,255,255,0.5); text-transform: uppercase; }
+  .meta-value { font-size: 15px; font-weight: 600; margin-top: 4px; }
+
+  .page {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 48px 40px;
+  }
+
+  .section {
+    background: white;
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border-left: 4px solid var(--blue);
+  }
+
+  .section.teal-border { border-left-color: var(--teal); }
+  .section.green-border { border-left-color: var(--green); }
+  .section.orange-border { border-left-color: var(--orange); }
+  .section.navy-border { border-left-color: var(--navy); }
+
+  h1 {
+    font-size: 28px; font-weight: 700; color: var(--navy);
+    margin-bottom: 8px; padding-bottom: 12px;
+    border-bottom: 2px solid var(--lightblue);
+  }
+
+  .section-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px; color: var(--teal);
+    letter-spacing: 2px; text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  h2 { font-size: 18px; font-weight: 600; color: var(--blue); margin: 28px 0 12px; }
+  h3 { font-size: 15px; font-weight: 600; color: var(--teal); margin: 20px 0 8px; }
+
+  p { margin-bottom: 12px; color: var(--darkgray); line-height: 1.7; }
+
+  ul, ol { padding-left: 24px; margin-bottom: 12px; }
+  li { margin-bottom: 6px; color: var(--darkgray); line-height: 1.6; }
+
+  .info-box {
+    background: var(--lightblue);
+    border-left: 4px solid var(--blue);
+    border-radius: 0 8px 8px 0;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+
+  .info-box.green { background: var(--passbg); border-color: var(--green); }
+  .info-box.orange { background: var(--warnbg); border-color: var(--orange); }
+  .info-box.red { background: var(--failbg); border-color: var(--red); }
+
+  .info-box-label {
+    font-size: 11px; font-weight: 700; letter-spacing: 1px;
+    text-transform: uppercase; color: var(--navy); margin-bottom: 6px;
+  }
+
+  table {
+    width: 100%; border-collapse: collapse;
+    font-size: 13px; margin: 16px 0;
+  }
+
+  th {
+    background: var(--navy); color: white;
+    padding: 10px 12px; text-align: left;
+    font-size: 12px; font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  td {
+    padding: 9px 12px; border-bottom: 1px solid #E5E7EB;
+    vertical-align: top;
+  }
+
+  tr:nth-child(even) td { background: var(--gray); }
+  tr:hover td { background: var(--lightblue); }
+
+  .badge {
+    display: inline-block; padding: 2px 8px; border-radius: 9999px;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.5px;
+  }
+
+  .badge-pass { background: var(--passbg); color: var(--pass); }
+  .badge-warn { background: var(--warnbg); color: var(--warn); }
+  .badge-fail { background: var(--failbg); color: var(--fail); }
+  .badge-blocked { background: var(--blockedbg); color: var(--blocked); }
+  .badge-blue { background: var(--lightblue); color: var(--blue); }
+
+  .phase-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 16px; margin: 20px 0;
+  }
+
+  .phase-card {
+    background: var(--gray); border-radius: 10px;
+    padding: 20px; border-top: 3px solid var(--blue);
+  }
+
+  .phase-card.p1 { border-top-color: var(--teal); }
+  .phase-card.p2 { border-top-color: var(--blue); }
+  .phase-card.p3 { border-top-color: var(--orange); }
+
+  .phase-code {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px; color: var(--midgray); margin-bottom: 4px;
+  }
+
+  .phase-name { font-weight: 700; font-size: 14px; color: var(--navy); margin-bottom: 8px; }
+  .phase-desc { font-size: 12px; color: var(--midgray); line-height: 1.5; }
+
+  .diagram-section {
+    background: white;
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+
+  .diagram-title {
+    font-size: 20px; font-weight: 700; color: var(--navy);
+    margin-bottom: 8px; text-align: center;
+  }
+  .diagram-subtitle {
+    font-size: 13px; color: var(--midgray);
+    text-align: center; margin-bottom: 24px;
+  }
+
+  svg text { font-family: 'IBM Plex Sans', Arial, sans-serif; }
+
+  .toc-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 8px; margin: 16px 0;
+  }
+
+  .toc-item {
+    display: flex; align-items: center; gap: 8px;
+    padding: 8px 12px; background: var(--gray);
+    border-radius: 6px; font-size: 13px; color: var(--darkgray);
+    text-decoration: none; transition: background 0.2s;
+  }
+
+  .toc-item:hover { background: var(--lightblue); }
+
+  .toc-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px; color: var(--teal);
+    min-width: 28px;
+  }
+
+  code {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px; background: var(--gray);
+    padding: 1px 5px; border-radius: 3px;
+    color: var(--navy);
+  }
+
+  .stack-table td:first-child { font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; color: var(--navy); }
+
+  .print-note {
+    text-align: center; padding: 20px;
+    color: var(--midgray); font-size: 12px;
+    font-style: italic;
+  }
+
+  @media print {
+    body { background: white; }
+    .cover { min-height: auto; padding: 40px; }
+    .page { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-content">
+    <div class="cover-label">Infiniti Solutions — Internal Architecture Document</div>
+    <div class="cover-title">Steel Detailing<br>Multi-Agent System</div>
+    <div class="cover-subtitle">Complete System Architecture, Orchestration & Implementation Design</div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;">
+      <span class="badge badge-pass">v1.0 April 2026</span>
+      <span class="badge badge-blue">Local-First Desktop System</span>
+      <span class="badge badge-blue">No API Dependency</span>
+      <span class="badge badge-warn">Engineering Controlled</span>
+    </div>
+    <div class="cover-meta">
+      <div class="meta-item"><div class="meta-label">Document Type</div><div class="meta-value">System Architecture</div></div>
+      <div class="meta-item"><div class="meta-label">Tech Stack</div><div class="meta-value">Python · LangGraph · FastAPI · React</div></div>
+      <div class="meta-item"><div class="meta-label">Phases</div><div class="meta-value">Phase 1 + Phase 2 + Phase 3</div></div>
+      <div class="meta-item"><div class="meta-label">Database</div><div class="meta-value">PostgreSQL + ChromaDB</div></div>
+      <div class="meta-item"><div class="meta-label">CAD Engine</div><div class="meta-value">ezdxf + ODA File Converter</div></div>
+      <div class="meta-item"><div class="meta-label">Status</div><div class="meta-value">Approved for Implementation</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+
+<!-- TABLE OF CONTENTS -->
+<div class="section">
+  <div class="section-num">Navigation</div>
+  <h1>Table of Contents</h1>
+  <div class="toc-grid">
+    <a href="#s1" class="toc-item"><span class="toc-num">01</span> Executive Summary</a>
+    <a href="#s2" class="toc-item"><span class="toc-num">02</span> System Goals & Constraints</a>
+    <a href="#s3" class="toc-item"><span class="toc-num">03</span> Technology Stack</a>
+    <a href="#s4" class="toc-item"><span class="toc-num">04</span> Database Architecture</a>
+    <a href="#diag1" class="toc-item"><span class="toc-num">▶</span> Workflow Execution Diagram</a>
+    <a href="#diag2" class="toc-item"><span class="toc-num">▶</span> Orchestration Mapping Diagram</a>
+    <a href="#s5" class="toc-item"><span class="toc-num">05</span> Phase 1 — Master Database</a>
+    <a href="#s6" class="toc-item"><span class="toc-num">06</span> Phase 2 — AB/GA Layer</a>
+    <a href="#s7" class="toc-item"><span class="toc-num">07</span> Phase 3 — Detailing & Release</a>
+    <a href="#s8" class="toc-item"><span class="toc-num">08</span> Master Orchestration Agent</a>
+    <a href="#s9" class="toc-item"><span class="toc-num">09</span> Validator & Fallback Agents</a>
+    <a href="#s10" class="toc-item"><span class="toc-num">10</span> Three-Level Learning System</a>
+    <a href="#s11" class="toc-item"><span class="toc-num">11</span> Data Extraction Layer</a>
+    <a href="#s12" class="toc-item"><span class="toc-num">12</span> UI & Live Tracking</a>
+    <a href="#s13" class="toc-item"><span class="toc-num">13</span> Output Generation</a>
+    <a href="#s14" class="toc-item"><span class="toc-num">14</span> Accuracy Expectations</a>
+    <a href="#s15" class="toc-item"><span class="toc-num">15</span> Risk Register</a>
+    <a href="#s16" class="toc-item"><span class="toc-num">16</span> Next Steps</a>
+  </div>
+</div>
+
+<!-- SECTION 1 -->
+<div class="section" id="s1">
+  <div class="section-num">Section 01</div>
+  <h1>Executive Summary</h1>
+  <p>This document defines the complete system architecture for the Infiniti Solutions Steel Detailing Multi-Agent Automation System — a local-first, desktop-based platform that reads engineering design files and produces fully validated AB drawings, GA drawings, shop/detail drawings, sheeting, shipping lists, installation drawings, and final release packages in DWG and PDF formats.</p>
+  
+  <div class="info-box green">
+    <div class="info-box-label">Governing Principle</div>
+    The design file is the absolute source of truth for all engineering values. Historical job data is used exclusively for template learning, field mapping, and pattern recognition. Historical data must never override live design file values.
+  </div>
+
+  <div class="phase-grid">
+    <div class="phase-card p1">
+      <div class="phase-code">PHASE 1 — ONE-TIME + PERIODIC</div>
+      <div class="phase-name">Master Database Creation</div>
+      <div class="phase-desc">50 reference jobs → Template library, field dictionary, source mapping rules, validation rules. Foundation for all agents.</div>
+    </div>
+    <div class="phase-card p2">
+      <div class="phase-code">PHASE 2 — PER PROJECT</div>
+      <div class="phase-name">Design Ingestion & AB/GA Layer</div>
+      <div class="phase-desc">Ingestion → Completeness check → AB generation → GA generation → AB/GA cross-validation. Sequential gate-by-gate.</div>
+    </div>
+    <div class="phase-card p3">
+      <div class="phase-code">PHASE 3 — PER PROJECT</div>
+      <div class="phase-name">Detailing & Release Layer</div>
+      <div class="phase-desc">Sheeting → Shop drawings → Shipping list → Installation → Final supervisor check → Output generation.</div>
+    </div>
+  </div>
+</div>
+
+<!-- WORKFLOW EXECUTION DIAGRAM -->
+<div class="diagram-section" id="diag1">
+  <div class="diagram-title">Steel Detailing Multi-Agent System — Workflow Execution Diagram</div>
+  <div class="diagram-subtitle">Local-First Desktop System | Design File is the Base Source of Truth | AB → GA Sequential Execution</div>
+  
+  <svg viewBox="0 0 1200 1100" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+    <defs>
+      <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" fill="#1E7A3E"/>
+      </marker>
+      <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" fill="#B91C1C"/>
+      </marker>
+      <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" fill="#1A56A0"/>
+      </marker>
+      <marker id="arrowGray" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" fill="#6B7280"/>
+      </marker>
+      <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+        <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.12"/>
+      </filter>
+    </defs>
+
+    <!-- BG -->
+    <rect width="1200" height="1100" fill="#F0F4F8" rx="12"/>
+
+    <!-- HEADER -->
+    <rect x="0" y="0" width="1200" height="52" fill="#0D1B3E" rx="12"/>
+    <rect x="0" y="38" width="1200" height="14" fill="#0D1B3E"/>
+    <text x="600" y="33" text-anchor="middle" fill="white" font-size="16" font-weight="700">STEEL DETAILING MULTI-AGENT SYSTEM — WORKFLOW EXECUTION</text>
+
+    <!-- INPUT SOURCES BOX -->
+    <rect x="20" y="68" width="160" height="200" fill="white" rx="8" filter="url(#shadow)" stroke="#D6E8F7" stroke-width="1"/>
+    <rect x="20" y="68" width="160" height="24" fill="#0D1B3E" rx="8"/>
+    <rect x="20" y="80" width="160" height="12" fill="#0D1B3E"/>
+    <text x="100" y="84" text-anchor="middle" fill="white" font-size="10" font-weight="700">INPUT SOURCES</text>
+    <text x="100" y="108" text-anchor="middle" fill="#374151" font-size="10" font-weight="600">Design Files</text>
+    <text x="100" y="122" text-anchor="middle" fill="#6B7280" font-size="9">MBS / STAAD Pro</text>
+    <text x="100" y="134" text-anchor="middle" fill="#6B7280" font-size="9">ETABS / Prota Steel</text>
+    <text x="100" y="152" text-anchor="middle" fill="#374151" font-size="10" font-weight="600">Drawings</text>
+    <text x="100" y="164" text-anchor="middle" fill="#6B7280" font-size="9">DWG / DXF / PDF</text>
+    <text x="100" y="180" text-anchor="middle" fill="#374151" font-size="10" font-weight="600">Archives</text>
+    <text x="100" y="192" text-anchor="middle" fill="#6B7280" font-size="9">ZIP / RAR</text>
+    <text x="100" y="208" text-anchor="middle" fill="#374151" font-size="10" font-weight="600">User Inputs</text>
+    <text x="100" y="220" text-anchor="middle" fill="#6B7280" font-size="9">Project ID / Name / Type</text>
+    <text x="100" y="232" text-anchor="middle" fill="#6B7280" font-size="9">Output requirements</text>
+    <text x="100" y="252" text-anchor="middle" fill="#0E7C7B" font-size="9" font-weight="600">↑ User uploads in React UI</text>
+
+    <!-- USER/ENGINEER BOX -->
+    <rect x="20" y="290" width="160" height="130" fill="white" rx="8" filter="url(#shadow)" stroke="#D6E8F7" stroke-width="1"/>
+    <rect x="20" y="290" width="160" height="24" fill="#1A56A0" rx="8"/>
+    <rect x="20" y="302" width="160" height="12" fill="#1A56A0"/>
+    <text x="100" y="306" text-anchor="middle" fill="white" font-size="10" font-weight="700">USER / ENGINEER</text>
+    <text x="100" y="328" text-anchor="middle" fill="#6B7280" font-size="9">• Create Project</text>
+    <text x="100" y="340" text-anchor="middle" fill="#6B7280" font-size="9">• Upload files</text>
+    <text x="100" y="352" text-anchor="middle" fill="#6B7280" font-size="9">• Monitor progress (live)</text>
+    <text x="100" y="364" text-anchor="middle" fill="#6B7280" font-size="9">• Approve / Reject</text>
+    <text x="100" y="376" text-anchor="middle" fill="#6B7280" font-size="9">• Resolve escalations</text>
+    <text x="100" y="390" text-anchor="middle" fill="#6B7280" font-size="9">• Review rule changes</text>
+    <text x="100" y="404" text-anchor="middle" fill="#6B7280" font-size="9">• Final release approval</text>
+
+    <!-- PHASE 1 LABEL -->
+    <rect x="200" y="68" width="980" height="24" fill="#0E7C7B" rx="6"/>
+    <text x="690" y="84" text-anchor="middle" fill="white" font-size="11" font-weight="700">STAGE 1 — MASTER DATABASE CREATION (ONE-TIME / PERIODIC AFTER EVERY 10 APPROVED PROJECTS)</text>
+
+    <!-- Phase 1 agents flow -->
+    <!-- P1-01 -->
+    <rect x="205" y="100" width="130" height="76" fill="white" rx="6" filter="url(#shadow)" stroke="#0E7C7B" stroke-width="1.5"/>
+    <rect x="205" y="100" width="130" height="20" fill="#0E7C7B" rx="6"/>
+    <rect x="205" y="110" width="130" height="10" fill="#0E7C7B"/>
+    <text x="270" y="114" text-anchor="middle" fill="white" font-size="9" font-weight="700">P1-01</text>
+    <text x="270" y="130" text-anchor="middle" fill="#374151" font-size="8.5" font-weight="600">Template Extraction</text>
+    <text x="270" y="142" text-anchor="middle" fill="#6B7280" font-size="8">Analyze 50 jobs</text>
+    <text x="270" y="153" text-anchor="middle" fill="#6B7280" font-size="8">Extract template families</text>
+    <text x="270" y="164" text-anchor="middle" fill="#6B7280" font-size="8">AB/GA/Shop/Shipping layouts</text>
+
+    <!-- Arrow P1-01 to P1-02 -->
+    <line x1="335" y1="138" x2="355" y2="138" stroke="#1E7A3E" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+
+    <!-- P1-02 -->
+    <rect x="357" y="100" width="130" height="76" fill="white" rx="6" filter="url(#shadow)" stroke="#0E7C7B" stroke-width="1.5"/>
+    <rect x="357" y="100" width="130" height="20" fill="#0E7C7B" rx="6"/>
+    <rect x="357" y="110" width="130" height="10" fill="#0E7C7B"/>
+    <text x="422" y="114" text-anchor="middle" fill="white" font-size="9" font-weight="700">P1-02</text>
+    <text x="422" y="130" text-anchor="middle" fill="#374151" font-size="8.5" font-weight="600">Field Dictionary</text>
+    <text x="422" y="142" text-anchor="middle" fill="#6B7280" font-size="8">Define all fields</text>
+    <text x="422" y="153" text-anchor="middle" fill="#6B7280" font-size="8">Type, unit, source</text>
+    <text x="422" y="164" text-anchor="middle" fill="#6B7280" font-size="8">Mandatory/optional rules</text>
+
+    <line x1="487" y1="138" x2="507" y2="138" stroke="#1E7A3E" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+
+    <!-- P1-03 -->
+    <rect x="509" y="100" width="130" height="76" fill="white" rx="6" filter="url(#shadow)" stroke="#0E7C7B" stroke-width="1.5"/>
+    <rect x="509" y="100" width="130" height="20" fill="#0E7C7B" rx="6"/>
+    <rect x="509" y="110" width="130" height="10" fill="#0E7C7B"/>
+    <text x="574" y="114" text-anchor="middle" fill="white" font-size="9" font-weight="700">P1-03</text>
+    <text x="574" y="130" text-anchor="middle" fill="#374151" font-size="8.5" font-weight="600">Source Mapping</text>
+    <text x="574" y="142" text-anchor="middle" fill="#6B7280" font-size="8">Per-field extraction logic</text>
+    <text x="574" y="153" text-anchor="middle" fill="#6B7280" font-size="8">Source authority hierarchy</text>
+    <text x="574" y="164" text-anchor="middle" fill="#6B7280" font-size="8">Fallback + block rules</text>
+
+    <line x1="639" y1="138" x2="659" y2="138" stroke="#1E7A3E" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+
+    <!-- P1-04 -->
+    <rect x="661" y="100" width="130" height="76" fill="white" rx="6" filter="url(#shadow)" stroke="#0E7C7B" stroke-width="1.5"/>
+    <rect x="661" y="100" width="130" height="20" fill="#0E7C7B" rx="6"/>
+    <rect x="661" y="110" width="130" height="10" fill="#0E7C7B"/>
+    <text x="726" y="114" text-anchor="middle" fill="white" font-size="9" font-weight="700">P1-04</text>
+    <text x="726" y="130" text-anchor="middle" fill="#374151" font-size="8.5" font-weight="600">Validation & Override</text>
+    <text x="726" y="142" text-anchor="middle" fill="#6B7280" font-size="8">All validation rules</text>
+    <text x="726" y="153" text-anchor="middle" fill="#6B7280" font-size="8">Severity + block logic</text>
+    <text x="726" y="164" text-anchor="middle" fill="#6B7280" font-size="8">Override hierarchy</text>
+
+    <line x1="791" y1="138" x2="811" y2="138" stroke="#1E7A3E" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+
+    <!-- P1-05 -->
+    <rect x="813" y="100" width="130" height="76" fill="white" rx="6" filter="url(#shadow)" stroke="#0E7C7B" stroke-width="1.5"/>
+    <rect x="813" y="100" width="130" height="20" fill="#0E7C7B" rx="6"/>
+    <rect x="813" y="110" width="130" height="10" fill="#0E7C7B"/>
+    <text x="878" y="114" text-anchor="middle" fill="white" font-size="9" font-weight="700">P1-05</text>
+    <text x="878" y="130" text-anchor="middle" fill="#374151" font-size="8.5" font-weight="600">DB Consolidator</text>
+    <text x="878" y="142" text-anchor="middle" fill="#6B7280" font-size="8">Merge all P1 outputs</text>
+    <text x="878" y="153" text-anchor="middle" fill="#6B7280" font-size="8">Implementation-ready</text>
+    <text x="878" y="164" text-anchor="middle" fill="#6B7280" font-size="8">Master DB finalized</text>
+
+    <!-- Arrow to Master DB -->
+    <line x1="943" y1="138" x2="963" y2="138" stroke="#1E7A3E" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+
+    <!-- MASTER DB -->
+    <rect x="965" y="90" width="210" height="96" fill="#E6F4EA" rx="8" filter="url(#shadow)" stroke="#1E7A3E" stroke-width="2"/>
+    <text x="1070" y="108" text-anchor="middle" fill="#1E7A3E" font-size="10" font-weight="700">MASTER DATABASE</text>
+    <text x="1070" y="122" text-anchor="middle" fill="#374151" font-size="8.5">PostgreSQL + ChromaDB</text>
+    <text x="1070" y="134" text-anchor="middle" fill="#6B7280" font-size="8">Template Library</text>
+    <text x="1070" y="145" text-anchor="middle" fill="#6B7280" font-size="8">Field Dictionary</text>
+    <text x="1070" y="156" text-anchor="middle" fill="#6B7280" font-size="8">Source Mapping Rules</text>
+    <text x="1070" y="167" text-anchor="middle" fill="#6B7280" font-size="8">Validation Rules + Overrides</text>
+
+    <!-- PHASE 2 LABEL -->
+    <rect x="200" y="204" width="980" height="20" fill="#1A56A0" rx="4"/>
+    <text x="690" y="218" text-anchor="middle" fill="white" font-size="11" font-weight="700">STAGE 2 — DESIGN INGESTION & AB/GA LAYER (PER PROJECT)</text>
+
+    <!-- P2-01 -->
+    <rect x="205" y="232" width="140" height="100" fill="white" rx="6" filter="url(#shadow)" stroke="#1A56A0" stroke-width="1.5"/>
+    <rect x="205" y="232" width="140" height="20" fill="#1A56A0" rx="6"/>
+    <rect x="205" y="242" width="140" height="10" fill="#1A56A0"/>
+    <text x="275" y="246" text-anchor="middle" fill="white" font-size="9" font-weight="700">P2-01 INGESTION AGENT</text>
+    <text x="275" y="264" text-anchor="middle" fill="#374151" font-size="8.5" font-weight="600">File Intake</text>
+    <text x="275" y="275" text-anchor="middle" fill="#6B7280" font-size="8">Unpack ZIP/RAR</text>
+    <text x="275" y="285" text-anchor="middle" fill="#6B7280" font-size="8">Classify all files</text>
+    <text x="275" y="295" text-anchor="middle" fill="#6B7280" font-size="8">Rank design candidates</text>
+    <text x="275" y="308" text-anchor="middle" fill="#B91C1C" font-size="8" font-weight="600">⚡ Human: pick if conflict</text>
+
+    <!-- Validator 1 -->
+    <rect x="218" y="342" width="114" height="24" fill="#FEF3C7" rx="4" stroke="#92400E" stroke-width="1"/>
+    <text x="275" y="358" text-anchor="middle" fill="#92400E" font-size="8" font-weight="700">VALIDATOR 1 ↓</text>
+
+    <!-- Arrow P2-01 to P2-02 -->
+    <line x1="345" y1="282" x2="368" y2="282" stroke="#1E7A3E" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+    <text x="356" y="278" text-anchor="middle" fill="#1E7A3E" font-size="8" font-weight="700">PASS</text>
+
+    <!-- P2-02 -->
+    <rect x="370" y="232" width="140" height="100" fill="white" rx="6" filter="url(#shadow)" stroke="#1A56A0" stroke-width="1.5"/>
+    <rect x="370" y="232" width="140" height="20" fill="#1A56A0" rx="6"/>
+    <rect x="370" y="242" width="140" height="10" fill="#1A56A0"/>
+    <text x="440" y="246" text-anchor="middle" fill="white" font-size="9" font-weight="700">P2-02 COMPLETENESS</text>
+    <text x="440" y="264" text-anchor="middle" fill="#374151" font-size="8.5" font-weight="600">Check Design Data</text>
+    <text x="440" y="275" text-anchor="middle" fill="#6B7280" font-size="8">Map fields vs dictionary</text>
+    <text x="440" y="285" text-anchor="middle" fill="#6B7280" font-size="8">AB readiness decision</text>
+    <text x="440" y="295" text-anchor="middle" fill="#6B7280" font-size="8">GA readiness decision</text>
+    <text x="440" y="308" text-anchor="middle" fill="#B91C1C" font-size="8" font-weight="600">⚡ Human: missing fields</text>
+
+    <rect x="383" y="342" width="114" height="24" fill="#FEF3C7" rx="4" stroke="#92400E" stroke-width="1"/>
+    <text x="440" y="358" text-anchor="middle" fill="#92400E" font-size="8" font-weight="700">VALIDATOR 2 ↓</text>
+
+    <!-- Arrow to P2-03 -->
+    <line x1="510" y1="282" x2="533" y2="282" stroke="#1E7A3E" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+    <text x="521" y="278" text-anchor="middle" fill="#1E7A3E" font-size="8" font-weight="700">PASS</text>
+
+    <!-- P2-03 -->
+    <rect x="535" y="232" width="140" height="100" fill="white" rx="6" filter="url(#shadow)" stroke="#1A56A0" stroke-width="2"/>
+    <rect x="535" y="232" width="140" height="20" fill="#1A56A0" rx="6"/>
+    <rect x="535" y="242" width="140" height="10" fill="#1A56A0"/>
+    <text x="605" y="246" text-anchor="middle" fill="white" font-size="9" font-weight="700">P2-03 AB GENERATION</text>
+    <text x="605" y="264" text-anchor="middle" fill="#374151" font-size="8.5" font-weight="600">Generate AB Data</text>
+    <text x="605" y="275" text-anchor="middle" fill="#6B7280" font-size="8">Plan + Section + Detail views</text>
+    <text x="605" y="285" text-anchor="middle" fill="#6B7280" font-size="8">Bolt size/qty/spacing</text>
+    <text x="605" y="295" text-anchor="middle" fill="#6B7280" font-size="8">Grid, base plate refs</text>
+    <text x="605" y="308" text-anchor="middle" fill="#1E7A3E" font-size="8" font-weight="600">→ AB Package output</text>
+
+    <rect x="548" y="342" width="114" height="24" fill="#FEF3C7" rx="4" stroke="#92400E" stroke-width="1"/>
+    <text x="605" y="358" text-anchor="middle" fill="#92400E" font-size="8" font-weight="700">VALIDATOR 3 ↓</text>
+
+    <!-- Arrow P2-03 to P2-04 (sequential - important!) -->
+    <line x1="675" y1="282" x2="698" y2="282" stroke="#1E7A3E" stroke-width="2" marker-end="url(#arrowGreen)"/>
+    <text x="686" y="277" text-anchor="middle" fill="#1E7A3E" font-size="8" font-weight="700">AB APPROVED</text>
+    <text x="686" y="289" text-anchor="middle" fill="#B91C1C" font-size="7" font-weight="700">SEQUENTIAL!</text>
+
+    <!-- P2-04 -->
+    <rect x="700" y="232" width="140" height="100" fill="white" rx="6" filter="url(#shadow)" stroke="#1A56A0" stroke-width="2"/>
+    <rect x="700" y="232" width="140" height="20" fill="#1A56A0" rx="6"/>
+    <rect x="700" y="242" width="140" height="10" fill="#1A56A0"/>
+    <text x="770" y="246" text-anchor="middle" fill="white" font-size="9" font-weight="700">P2-04 GA GENERATION</text>
+    <text x="770" y="264" text-anchor="middle" fill="#374151" font-size="8.5" font-weight="600">Generate GA Data</text>
+    <text x="770" y="275" text-anchor="middle" fill="#6B7280" font-size="8">Plan/Elevation/Sections</text>
+    <text x="770" y="285" text-anchor="middle" fill="#6B7280" font-size="8">Uses AB grid references</text>
+    <text x="770" y="295" text-anchor="middle" fill="#6B7280" font-size="8">Building geometry</text>
+    <text x="770" y="308" text-anchor="middle" fill="#1E7A3E" font-size="8" font-weight="600">→ GA Package output</text>
+
+    <rect x="713" y="342" width="114" height="24" fill="#FEF3C7" rx="4" stroke="#92400E" stroke-width="1"/>
+    <text x="770" y="358" text-anchor="middle" fill="#92400E" font-size="8" font-weight="700">VALIDATOR 4 ↓</text>
+
+    <!-- Arrow to P2-05 -->
+    <line x1="840" y1="282" x2="863" y2="282" stroke="#1E7A3E" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+    <text x="851" y="278" text-anchor="middle" fill="#1E7A3E" font-size="8" font-weight="700">PASS</text>
+
+    <!-- P2-05 -->
+    <rect x="865" y="232" width="140" height="100" fill="white" rx="6" filter="url(#shadow)" stroke="#1A56A0" stroke-width="2"/>
+    <rect x="865" y="232" width="140" height="20" fill="#1A56A0" rx="6"/>
+    <rect x="865" y="242" width="140" height="10" fill="#1A56A0"/>
+    <text x="935" y="246" text-anchor="middle" fill="white" font-size="9" font-weight="700">P2-05 AB/GA VALIDATOR</text>
+    <text x="935" y="264" text-anchor="middle" fill="#374151" font-size="8.5" font-weight="600">Cross-Validate</text>
+    <text x="935" y="275" text-anchor="middle" fill="#6B7280" font-size="8">AB vs Design source</text>
+    <text x="935" y="285" text-anchor="middle" fill="#6B7280" font-size="8">GA vs Design source</text>
+    <text x="935" y="295" text-anchor="middle" fill="#6B7280" font-size="8">AB/GA overlap check</text>
+    <text x="935" y="308" text-anchor="middle" fill="#B91C1C" font-size="8" font-weight="600">⚡ Human: if critical fail</text>
+
+    <rect x="878" y="342" width="114" height="24" fill="#FEF3C7" rx="4" stroke="#92400E" stroke-width="1"/>
+    <text x="935" y="358" text-anchor="middle" fill="#92400E" font-size="8" font-weight="700">VALIDATOR 5 ↓</text>
+
+    <!-- PASS GATE -->
+    <rect x="1018" y="256" width="68" height="32" fill="#1E7A3E" rx="16"/>
+    <text x="1052" y="276" text-anchor="middle" fill="white" font-size="12" font-weight="700">PASS</text>
+    <line x1="1005" y1="272" x2="1018" y2="272" stroke="#1E7A3E" stroke-width="2" marker-end="url(#arrowGreen)"/>
+
+    <!-- FAIL paths from validators -->
+    <rect x="205" y="378" width="960" height="22" fill="#FEE2E2" rx="4" stroke="#B91C1C" stroke-width="1"/>
+    <text x="685" y="393" text-anchor="middle" fill="#B91C1C" font-size="9" font-weight="700">FALLBACK AGENTS — ONE AUTO-RETRY ATTEMPT PER STAGE — SECOND FAIL → ESCALATE TO ENGINEER</text>
+
+    <!-- PHASE 3 LABEL -->
+    <rect x="200" y="412" width="980" height="20" fill="#C85A00" rx="4"/>
+    <text x="690" y="426" text-anchor="middle" fill="white" font-size="11" font-weight="700">STAGE 3 — DETAILING & RELEASE LAYER (PER PROJECT) — ONLY AFTER P2-05 PASS</text>
+
+    <!-- P3-01 -->
+    <rect x="205" y="440" width="140" height="100" fill="white" rx="6" filter="url(#shadow)" stroke="#C85A00" stroke-width="1.5"/>
+    <rect x="205" y="440" width="140" height="20" fill="#C85A00" rx="6"/>
+    <rect x="205" y="450" width="140" height="10" fill="#C85A00"/>
+    <text x="275" y="454" text-anchor="middle" fill="white" font-size="9" font-weight="700">P3-01 SHEETING</text>
+    <text x="275" y="472" text-anchor="middle" fill="#374151" font-size="8.5" font-weight="600">Generate Sheeting</text>
+    <text x="275" y="483" text-anchor="middle" fill="#6B7280" font-size="8">Roof + wall sheeting</text>
+    <text x="275" y="493" text-anchor="middle" fill="#6B7280" font-size="8">Zone tables, lengths</text>
+    <text x="275" y="503" text-anchor="middle" fill="#6B7280" font-size="8">Quantity logic</text>
+    <text x="275" y="516" text-anchor="middle" fill="#1E7A3E" font-size="8" font-weight="600">Sheeting list output</text>
+
+    <rect x="218" y="550" width="114" height="24" fill="#FEF3C7" rx="4" stroke="#92400E" stroke-width="1"/>
+    <text x="275" y="566" text-anchor="middle" fill="#92400E" font-size="8" font-weight="700">VALIDATOR 6 ↓</text>
+
+    <line x1="345" y1="490" x2="368" y2="490" stroke="#1E7A3E" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+    <text x="356" y="486" text-anchor="middle" fill="#1E7A3E" font-size="8" font-weight="700">PASS</text>
+
+    <!-- P3-02 -->
+    <rect x="370" y="440" width="140" height="100" fill="white" rx="6" filter="url(#shadow)" stroke="#C85A00" stroke-width="1.5"/>
+    <rect x="370" y="440" width="140" height="20" fill="#C85A00" rx="6"/>
+    <rect x="370" y="450" width="140" height="10" fill="#C85A00"/>
+    <text x="440" y="454" text-anchor="middle" fill="white" font-size="9" font-weight="700">P3-02 SHOP DRAWINGS</text>
+    <text x="440" y="472" text-anchor="middle" fill="#374151" font-size="8.5" font-weight="600">Generate Shop/Detail</text>
+    <text x="440" y="483" text-anchor="middle" fill="#6B7280" font-size="8">Member marks, sections</text>
+    <text x="440" y="493" text-anchor="middle" fill="#6B7280" font-size="8">Cut lengths, assemblies</text>
+    <text x="440" y="503" text-anchor="middle" fill="#6B7280" font-size="8">Mark consistency check</text>
+    <text x="440" y="516" text-anchor="middle" fill="#1E7A3E" font-size="8" font-weight="600">Shop package output</text>
+
+    <rect x="383" y="550" width="114" height="24" fill="#FEF3C7" rx="4" stroke="#92400E" stroke-width="1"/>
+    <text x="440" y="566" text-anchor="middle" fill="#92400E" font-size="8" font-weight="700">VALIDATOR 7 ↓</text>
+
+    <line x1="510" y1="490" x2="533" y2="490" stroke="#1E7A3E" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+    <text x="521" y="486" text-anchor="middle" fill="#1E7A3E" font-size="8" font-weight="700">PASS</text>
+
+    <!-- P3-03 -->
+    <rect x="535" y="440" width="140" height="100" fill="white" rx="6" filter="url(#shadow)" stroke="#C85A00" stroke-width="1.5"/>
+    <rect x="535" y="440" width="140" height="20" fill="#C85A00" rx="6"/>
+    <rect x="535" y="450" width="140" height="10" fill="#C85A00"/>
+    <text x="605" y="454" text-anchor="middle" fill="white" font-size="9" font-weight="700">P3-03 SHIPPING LIST</text>
+    <text x="605" y="472" text-anchor="middle" fill="#374151" font-size="8.5" font-weight="600">Generate Shipping</text>
+    <text x="605" y="483" text-anchor="middle" fill="#6B7280" font-size="8">Mark-wise listing</text>
+    <text x="605" y="493" text-anchor="middle" fill="#6B7280" font-size="8">Quantities, bundles</text>
+    <text x="605" y="503" text-anchor="middle" fill="#6B7280" font-size="8">Dispatch control data</text>
+    <text x="605" y="516" text-anchor="middle" fill="#1E7A3E" font-size="8" font-weight="600">Shipping package output</text>
+
+    <rect x="548" y="550" width="114" height="24" fill="#FEF3C7" rx="4" stroke="#92400E" stroke-width="1"/>
+    <text x="605" y="566" text-anchor="middle" fill="#92400E" font-size="8" font-weight="700">VALIDATOR 8 ↓</text>
+
+    <line x1="675" y1="490" x2="698" y2="490" stroke="#1E7A3E" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+    <text x="686" y="486" text-anchor="middle" fill="#1E7A3E" font-size="8" font-weight="700">PASS</text>
+
+    <!-- P3-04 -->
+    <rect x="700" y="440" width="140" height="100" fill="white" rx="6" filter="url(#shadow)" stroke="#C85A00" stroke-width="1.5"/>
+    <rect x="700" y="440" width="140" height="20" fill="#C85A00" rx="6"/>
+    <rect x="700" y="450" width="140" height="10" fill="#C85A00"/>
+    <text x="770" y="454" text-anchor="middle" fill="white" font-size="9" font-weight="700">P3-04 INSTALLATION</text>
+    <text x="770" y="472" text-anchor="middle" fill="#374151" font-size="8.5" font-weight="600">Generate Erection</text>
+    <text x="770" y="483" text-anchor="middle" fill="#6B7280" font-size="8">Erection sequence</text>
+    <text x="770" y="493" text-anchor="middle" fill="#6B7280" font-size="8">Member placement refs</text>
+    <text x="770" y="503" text-anchor="middle" fill="#6B7280" font-size="8">Level/grid references</text>
+    <text x="770" y="516" text-anchor="middle" fill="#1E7A3E" font-size="8" font-weight="600">Installation pkg output</text>
+
+    <rect x="713" y="550" width="114" height="24" fill="#FEF3C7" rx="4" stroke="#92400E" stroke-width="1"/>
+    <text x="770" y="566" text-anchor="middle" fill="#92400E" font-size="8" font-weight="700">VALIDATOR 9 ↓</text>
+
+    <line x1="840" y1="490" x2="863" y2="490" stroke="#1E7A3E" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+    <text x="851" y="486" text-anchor="middle" fill="#1E7A3E" font-size="8" font-weight="700">PASS</text>
+
+    <!-- P3-05 -->
+    <rect x="865" y="440" width="140" height="100" fill="#FFF8F0" rx="6" filter="url(#shadow)" stroke="#C85A00" stroke-width="2"/>
+    <rect x="865" y="440" width="140" height="20" fill="#C85A00" rx="6"/>
+    <rect x="865" y="450" width="140" height="10" fill="#C85A00"/>
+    <text x="935" y="454" text-anchor="middle" fill="white" font-size="9" font-weight="700">P3-05 FINAL CHECK</text>
+    <text x="935" y="472" text-anchor="middle" fill="#374151" font-size="8.5" font-weight="600">Supervisor Agent</text>
+    <text x="935" y="483" text-anchor="middle" fill="#6B7280" font-size="8">End-to-end consistency</text>
+    <text x="935" y="493" text-anchor="middle" fill="#6B7280" font-size="8">All packages cross-check</text>
+    <text x="935" y="503" text-anchor="middle" fill="#6B7280" font-size="8">Mark + qty consistency</text>
+    <text x="935" y="516" text-anchor="middle" fill="#B91C1C" font-size="8" font-weight="600">FINAL RELEASE DECISION</text>
+
+    <rect x="878" y="550" width="114" height="24" fill="#FEF3C7" rx="4" stroke="#92400E" stroke-width="1"/>
+    <text x="935" y="566" text-anchor="middle" fill="#92400E" font-size="8" font-weight="700">VALIDATOR 10 ↓</text>
+
+    <!-- Phase 3 PASS to Output -->
+    <line x1="1005" y1="490" x2="1028" y2="490" stroke="#1E7A3E" stroke-width="2" marker-end="url(#arrowGreen)"/>
+
+    <!-- FINAL PASS gate -->
+    <rect x="1030" y="462" width="68" height="32" fill="#1E7A3E" rx="16"/>
+    <text x="1064" y="482" text-anchor="middle" fill="white" font-size="11" font-weight="700">PASS</text>
+
+    <!-- Arrow to Engineer approval -->
+    <line x1="1098" y1="478" x2="1120" y2="478" stroke="#1E7A3E" stroke-width="2" marker-end="url(#arrowGreen)"/>
+
+    <!-- Engineer approval box -->
+    <rect x="1122" y="456" width="68" height="44" fill="#E6F4EA" rx="6" stroke="#1E7A3E" stroke-width="1.5"/>
+    <text x="1156" y="474" text-anchor="middle" fill="#1E7A3E" font-size="9" font-weight="700">ENGINEER</text>
+    <text x="1156" y="486" text-anchor="middle" fill="#1E7A3E" font-size="9" font-weight="700">APPROVES</text>
+
+    <!-- Phase 3 fallback row -->
+    <rect x="205" y="586" width="960" height="22" fill="#FEE2E2" rx="4" stroke="#B91C1C" stroke-width="1"/>
+    <text x="685" y="601" text-anchor="middle" fill="#B91C1C" font-size="9" font-weight="700">FALLBACK AGENTS — ONE AUTO-RETRY → SECOND FAIL → ESCALATE TO ENGINEER</text>
+
+    <!-- OUTPUT GENERATION -->
+    <rect x="200" y="620" width="980" height="140" fill="white" rx="8" filter="url(#shadow)" stroke="#1E7A3E" stroke-width="2"/>
+    <rect x="200" y="620" width="980" height="24" fill="#1E7A3E" rx="8"/>
+    <rect x="200" y="632" width="980" height="12" fill="#1E7A3E"/>
+    <text x="690" y="636" text-anchor="middle" fill="white" font-size="11" font-weight="700">OUTPUT GENERATION (ezdxf + ODA File Converter + matplotlib PDF) — ONLY AFTER FINAL PASS + ENGINEER APPROVAL</text>
+
+    <!-- Output boxes -->
+    <rect x="218" y="655" width="130" height="90" fill="#F0F9FF" rx="6" stroke="#1A56A0" stroke-width="1"/>
+    <text x="283" y="672" text-anchor="middle" fill="#1A56A0" font-size="9" font-weight="700">AB DRAWINGS</text>
+    <text x="283" y="685" text-anchor="middle" fill="#6B7280" font-size="8">ab.dxf</text>
+    <text x="283" y="696" text-anchor="middle" fill="#6B7280" font-size="8">ab.dwg (ODA)</text>
+    <text x="283" y="707" text-anchor="middle" fill="#6B7280" font-size="8">ab.pdf</text>
+    <text x="283" y="730" text-anchor="middle" fill="#6B7280" font-size="7" font-style="italic">Plan+Section+Detail</text>
+
+    <rect x="362" y="655" width="130" height="90" fill="#F0F9FF" rx="6" stroke="#1A56A0" stroke-width="1"/>
+    <text x="427" y="672" text-anchor="middle" fill="#1A56A0" font-size="9" font-weight="700">GA DRAWINGS</text>
+    <text x="427" y="685" text-anchor="middle" fill="#6B7280" font-size="8">ga.dxf / ga.dwg</text>
+    <text x="427" y="696" text-anchor="middle" fill="#6B7280" font-size="8">ga.pdf</text>
+    <text x="427" y="707" text-anchor="middle" fill="#6B7280" font-size="8">Plan+Elevation+Section</text>
+    <text x="427" y="730" text-anchor="middle" fill="#6B7280" font-size="7" font-style="italic">Uses AB grid refs</text>
+
+    <rect x="506" y="655" width="130" height="90" fill="#F0F9FF" rx="6" stroke="#1A56A0" stroke-width="1"/>
+    <text x="571" y="672" text-anchor="middle" fill="#1A56A0" font-size="9" font-weight="700">SHOP DRAWINGS</text>
+    <text x="571" y="685" text-anchor="middle" fill="#6B7280" font-size="8">shop.dxf / shop.dwg</text>
+    <text x="571" y="696" text-anchor="middle" fill="#6B7280" font-size="8">shop.pdf</text>
+    <text x="571" y="715" text-anchor="middle" fill="#6B7280" font-size="8">Member details</text>
+    <text x="571" y="728" text-anchor="middle" fill="#6B7280" font-size="7" font-style="italic">Mark-referenced</text>
+
+    <rect x="650" y="655" width="130" height="90" fill="#F0F9FF" rx="6" stroke="#1A56A0" stroke-width="1"/>
+    <text x="715" y="672" text-anchor="middle" fill="#1A56A0" font-size="9" font-weight="700">SHEETING & BOQ</text>
+    <text x="715" y="685" text-anchor="middle" fill="#6B7280" font-size="8">sheeting.dxf</text>
+    <text x="715" y="696" text-anchor="middle" fill="#6B7280" font-size="8">sheeting_list.pdf</text>
+    <text x="715" y="715" text-anchor="middle" fill="#6B7280" font-size="8">Qty + lengths</text>
+
+    <rect x="794" y="655" width="130" height="90" fill="#F0F9FF" rx="6" stroke="#1A56A0" stroke-width="1"/>
+    <text x="859" y="672" text-anchor="middle" fill="#1A56A0" font-size="9" font-weight="700">SHIPPING LIST</text>
+    <text x="859" y="685" text-anchor="middle" fill="#6B7280" font-size="8">shipping.xlsx</text>
+    <text x="859" y="696" text-anchor="middle" fill="#6B7280" font-size="8">shipping.pdf</text>
+    <text x="859" y="715" text-anchor="middle" fill="#6B7280" font-size="8">Mark-wise + bundles</text>
+
+    <rect x="938" y="655" width="130" height="90" fill="#F0F9FF" rx="6" stroke="#1A56A0" stroke-width="1"/>
+    <text x="1003" y="672" text-anchor="middle" fill="#1A56A0" font-size="9" font-weight="700">INSTALLATION</text>
+    <text x="1003" y="685" text-anchor="middle" fill="#6B7280" font-size="8">install.dxf / .dwg</text>
+    <text x="1003" y="696" text-anchor="middle" fill="#6B7280" font-size="8">install.pdf</text>
+    <text x="1003" y="715" text-anchor="middle" fill="#6B7280" font-size="8">Erection sequences</text>
+
+    <!-- ZIP PACKAGE -->
+    <rect x="200" y="772" width="980" height="30" fill="#E6F4EA" rx="6" stroke="#1E7A3E" stroke-width="1.5"/>
+    <text x="690" y="792" text-anchor="middle" fill="#1E7A3E" font-size="10" font-weight="700">📦 PACKAGE.zip — Full Release Package (Engineer selects: PDF / DWG / DXF / Full ZIP) — Stored in /Project_UUID/Outputs/</text>
+
+    <!-- THREE LEVEL LEARNING -->
+    <rect x="200" y="816" width="980" height="130" fill="white" rx="8" filter="url(#shadow)" stroke="#6B7280" stroke-width="1" stroke-dasharray="5,3"/>
+    <rect x="200" y="816" width="980" height="24" fill="#374151" rx="8"/>
+    <rect x="200" y="828" width="980" height="12" fill="#374151"/>
+    <text x="690" y="832" text-anchor="middle" fill="white" font-size="10" font-weight="700">THREE-LEVEL LEARNING SYSTEM (Background Service — Never Overrides Design Values)</text>
+
+    <rect x="218" y="848" width="298" height="82" fill="#E6F4EA" rx="6"/>
+    <text x="367" y="864" text-anchor="middle" fill="#1E7A3E" font-size="9" font-weight="700">LEVEL 1 — Rule Refinement</text>
+    <text x="367" y="876" text-anchor="middle" fill="#374151" font-size="8">Reads correction_events table</text>
+    <text x="367" y="887" text-anchor="middle" fill="#374151" font-size="8">5+ same-field errors → propose rule update</text>
+    <text x="367" y="898" text-anchor="middle" fill="#374151" font-size="8">Engineer approves before rules change</text>
+    <text x="367" y="912" text-anchor="middle" fill="#1E7A3E" font-size="8" font-weight="600">Automatic detection, Human approval</text>
+
+    <rect x="534" y="848" width="298" height="82" fill="#FEF3C7" rx="6"/>
+    <text x="683" y="864" text-anchor="middle" fill="#92400E" font-size="9" font-weight="700">LEVEL 2 — Smart Suggestions</text>
+    <text x="683" y="876" text-anchor="middle" fill="#374151" font-size="8">ChromaDB similarity search</text>
+    <text x="683" y="887" text-anchor="middle" fill="#374151" font-size="8">Missing field → suggest from similar projects</text>
+    <text x="683" y="898" text-anchor="middle" fill="#374151" font-size="8">UI popup: Accept/Reject per field</text>
+    <text x="683" y="912" text-anchor="middle" fill="#92400E" font-size="8" font-weight="600">AI suggests, Human always decides</text>
+
+    <rect x="850" y="848" width="312" height="82" fill="#EDE9FE" rx="6"/>
+    <text x="1006" y="864" text-anchor="middle" fill="#5B21B6" font-size="9" font-weight="700">LEVEL 3 — Pattern Learning</text>
+    <text x="1006" y="876" text-anchor="middle" fill="#374151" font-size="8">Approved projects → ChromaDB vectors</text>
+    <text x="1006" y="887" text-anchor="middle" fill="#374151" font-size="8">New project → find similar → suggest templates</text>
+    <text x="1006" y="898" text-anchor="middle" fill="#374151" font-size="8">GA layout, sheet structure guidance only</text>
+    <text x="1006" y="912" text-anchor="middle" fill="#5B21B6" font-size="8" font-weight="600">Layout guidance only, never value override</text>
+
+    <!-- LEGEND -->
+    <rect x="200" y="960" width="980" height="60" fill="white" rx="6" stroke="#D6E8F7" stroke-width="1"/>
+    <text x="240" y="980" fill="#374151" font-size="9" font-weight="700">LEGEND:</text>
+    <line x1="290" y1="975" x2="330" y2="975" stroke="#1E7A3E" stroke-width="2" marker-end="url(#arrowGreen)"/>
+    <text x="335" y="979" fill="#1E7A3E" font-size="9">Success Flow</text>
+    <line x1="420" y1="975" x2="460" y2="975" stroke="#B91C1C" stroke-width="2" marker-end="url(#arrowRed)"/>
+    <text x="465" y="979" fill="#B91C1C" font-size="9">Failure Flow</text>
+    <rect x="540" y="967" width="50" height="16" fill="#FEF3C7" rx="3" stroke="#92400E" stroke-width="1"/>
+    <text x="565" y="979" text-anchor="middle" fill="#92400E" font-size="8">Validator</text>
+    <text x="620" y="979" fill="#374151" font-size="9">= at every stage</text>
+    <text x="710" y="979" fill="#B91C1C" font-size="9">⚡ = Human decision point</text>
+    <text x="840" y="979" fill="#1A56A0" font-size="9">All outputs only after P3-05 PASS + Engineer approval</text>
+
+    <text x="240" y="1005" fill="#374151" font-size="8.5" font-weight="600">Design Files:</text>
+    <text x="310" y="1005" fill="#6B7280" font-size="8">MBS · STAAD Pro (.std parser) · ETABS (Excel export) · Prota Steel (DXF/PDF)</text>
+    <text x="590" y="1005" fill="#374151" font-size="8.5" font-weight="600">CAD Output:</text>
+    <text x="645" y="1005" fill="#6B7280" font-size="8">ezdxf → DXF/PDF | ODA File Converter → DWG | PostgreSQL + ChromaDB (local)</text>
+  </svg>
+</div>
+
+<!-- ORCHESTRATION DIAGRAM -->
+<div class="diagram-section" id="diag2">
+  <div class="diagram-title">Steel Detailing Multi-Agent System — Master Orchestration Mapping</div>
+  <div class="diagram-subtitle">Controller · State Manager · Dependency Manager · Escalation Manager · Re-Run Cascade Logic</div>
+
+  <svg viewBox="0 0 1200 980" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+    <defs>
+      <marker id="arr1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#1A56A0"/></marker>
+      <marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#B91C1C"/></marker>
+      <marker id="arr3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#1E7A3E"/></marker>
+      <marker id="arr4" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#6B7280"/></marker>
+      <filter id="sh2"><feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.1"/></filter>
+    </defs>
+
+    <rect width="1200" height="980" fill="#F0F4F8" rx="12"/>
+    <rect x="0" y="0" width="1200" height="48" fill="#0D1B3E" rx="12"/>
+    <rect x="0" y="34" width="1200" height="14" fill="#0D1B3E"/>
+    <text x="600" y="30" text-anchor="middle" fill="white" font-size="15" font-weight="700">MASTER ORCHESTRATION AGENT — FULL SYSTEM CONTROL MAP</text>
+
+    <!-- ORCHESTRATOR CENTER -->
+    <rect x="380" y="58" width="440" height="110" fill="#0D1B3E" rx="10" filter="url(#sh2)"/>
+    <text x="600" y="80" text-anchor="middle" fill="white" font-size="13" font-weight="700">MASTER ORCHESTRATOR AGENT</text>
+    <text x="600" y="96" text-anchor="middle" fill="#D6E8F7" font-size="9">Workflow Manager | Dependency Manager | State Manager | Decision Engine | Escalation Manager</text>
+    <rect x="392" y="104" width="416" height="56" fill="rgba(255,255,255,0.08)" rx="6"/>
+    <text x="430" y="120" fill="#D6E8F7" font-size="8.5" font-weight="600">Enforces Execution Order</text>
+    <text x="430" y="132" fill="#D6E8F7" font-size="8.5">• Validates dependencies before each stage start</text>
+    <text x="430" y="143" fill="#D6E8F7" font-size="8.5">• Manages retries, fallbacks, escalations</text>
+    <text x="650" y="120" fill="#D6E8F7" font-size="8.5" font-weight="600">Blocks Downstream on Fail</text>
+    <text x="650" y="132" fill="#D6E8F7" font-size="8.5">• Assigns PASS/FAIL/BLOCKED/ESCALATE</text>
+    <text x="650" y="143" fill="#D6E8F7" font-size="8.5">• Issues re-run cascade when upstream changes</text>
+
+    <!-- STATUS MODEL (left side) -->
+    <rect x="20" y="58" width="200" height="250" fill="white" rx="8" filter="url(#sh2)"/>
+    <rect x="20" y="58" width="200" height="24" fill="#374151" rx="8"/>
+    <rect x="20" y="70" width="200" height="12" fill="#374151"/>
+    <text x="120" y="74" text-anchor="middle" fill="white" font-size="9" font-weight="700">STAGE STATUS MODEL</text>
+    <rect x="30" y="92" width="180" height="16" fill="#E6F4EA" rx="3"/>
+    <text x="120" y="104" text-anchor="middle" fill="#1E7A3E" font-size="9" font-weight="700">PASS</text>
+    <rect x="30" y="114" width="180" height="16" fill="#F0FDF4" rx="3"/>
+    <text x="120" y="126" text-anchor="middle" fill="#1E7A3E" font-size="9">PASS WITH WARNINGS</text>
+    <rect x="30" y="136" width="180" height="16" fill="#FEE2E2" rx="3"/>
+    <text x="120" y="148" text-anchor="middle" fill="#B91C1C" font-size="9" font-weight="700">FAIL</text>
+    <rect x="30" y="158" width="180" height="16" fill="#F3F4F6" rx="3"/>
+    <text x="120" y="170" text-anchor="middle" fill="#374151" font-size="9">BLOCKED</text>
+    <rect x="30" y="180" width="180" height="16" fill="#FEF3C7" rx="3"/>
+    <text x="120" y="192" text-anchor="middle" fill="#92400E" font-size="9">ESCALATE — ENGINEERING</text>
+    <rect x="30" y="202" width="180" height="16" fill="#FEF3C7" rx="3"/>
+    <text x="120" y="214" text-anchor="middle" fill="#92400E" font-size="9">ESCALATE — IT/DATA</text>
+    <rect x="30" y="224" width="180" height="16" fill="#FEE2E2" rx="3"/>
+    <text x="120" y="236" text-anchor="middle" fill="#B91C1C" font-size="9">RE-RUN REQUIRED</text>
+    <rect x="30" y="246" width="180" height="16" fill="#FEE2E2" rx="3"/>
+    <text x="120" y="258" text-anchor="middle" fill="#B91C1C" font-size="9">REJECTED</text>
+    <!-- arrow from status to orchestrator -->
+    <line x1="220" y1="165" x2="378" y2="125" stroke="#1A56A0" stroke-width="1" stroke-dasharray="4,2" marker-end="url(#arr1)"/>
+
+    <!-- DEPENDENCY CHAIN (right side) -->
+    <rect x="980" y="58" width="200" height="250" fill="white" rx="8" filter="url(#sh2)"/>
+    <rect x="980" y="58" width="200" height="24" fill="#374151" rx="8"/>
+    <rect x="980" y="70" width="200" height="12" fill="#374151"/>
+    <text x="1080" y="74" text-anchor="middle" fill="white" font-size="9" font-weight="700">DEPENDENCY CHAIN RULES</text>
+    <text x="990" y="97" fill="#374151" font-size="8.5" font-weight="600">Hard Prerequisites:</text>
+    <text x="990" y="110" fill="#6B7280" font-size="8">P1-05 → P2-01 (unlocks per-project)</text>
+    <text x="990" y="122" fill="#6B7280" font-size="8">P2-01 → P2-02</text>
+    <text x="990" y="134" fill="#6B7280" font-size="8">P2-02 → P2-03 (AB only)</text>
+    <text x="990" y="146" fill="#B91C1C" font-size="8" font-weight="600">P2-03 PASS → P2-04 (sequential!)</text>
+    <text x="990" y="158" fill="#6B7280" font-size="8">P2-03+P2-04 → P2-05</text>
+    <text x="990" y="170" fill="#6B7280" font-size="8">P2-05 → ALL Phase 3</text>
+    <text x="990" y="182" fill="#6B7280" font-size="8">P3-01 → P3-02 → P3-03</text>
+    <text x="990" y="194" fill="#6B7280" font-size="8">P3-02+P3-03 → P3-04</text>
+    <text x="990" y="206" fill="#6B7280" font-size="8">P3-01-04 done → P3-05</text>
+    <text x="990" y="222" fill="#374151" font-size="8.5" font-weight="600">Re-run Cascade:</text>
+    <text x="990" y="235" fill="#B91C1C" font-size="8">AB change → GA re-gen required</text>
+    <text x="990" y="247" fill="#B91C1C" font-size="8">GA change → all P3 geometry invalidated</text>
+    <text x="990" y="259" fill="#B91C1C" font-size="8">P2-05 reopen → ALL P3 blocked</text>
+    <text x="990" y="271" fill="#B91C1C" font-size="8">P3-02 change → P3-03,04,05 re-run</text>
+    <!-- arrow from dep to orchestrator -->
+    <line x1="980" y1="165" x2="822" y2="125" stroke="#1A56A0" stroke-width="1" stroke-dasharray="4,2" marker-end="url(#arr1)"/>
+
+    <!-- PHASE 1 STAGES ROW -->
+    <text x="600" y="200" text-anchor="middle" fill="#0E7C7B" font-size="11" font-weight="700">PHASE 1 AGENTS</text>
+    <!-- P1 flow horizontal -->
+    <rect x="60" y="210" width="96" height="50" fill="#E6F4F4" rx="6" stroke="#0E7C7B" stroke-width="1.5"/>
+    <text x="108" y="230" text-anchor="middle" fill="#0E7C7B" font-size="9" font-weight="700">P1-01</text>
+    <text x="108" y="242" text-anchor="middle" fill="#374151" font-size="8">Template</text>
+    <text x="108" y="252" text-anchor="middle" fill="#374151" font-size="8">Extraction</text>
+    <line x1="156" y1="235" x2="174" y2="235" stroke="#0E7C7B" stroke-width="1.5" marker-end="url(#arr3)"/>
+
+    <rect x="176" y="210" width="96" height="50" fill="#E6F4F4" rx="6" stroke="#0E7C7B" stroke-width="1.5"/>
+    <text x="224" y="230" text-anchor="middle" fill="#0E7C7B" font-size="9" font-weight="700">P1-02</text>
+    <text x="224" y="242" text-anchor="middle" fill="#374151" font-size="8">Field</text>
+    <text x="224" y="252" text-anchor="middle" fill="#374151" font-size="8">Dictionary</text>
+    <line x1="272" y1="235" x2="290" y2="235" stroke="#0E7C7B" stroke-width="1.5" marker-end="url(#arr3)"/>
+
+    <rect x="292" y="210" width="96" height="50" fill="#E6F4F4" rx="6" stroke="#0E7C7B" stroke-width="1.5"/>
+    <text x="340" y="230" text-anchor="middle" fill="#0E7C7B" font-size="9" font-weight="700">P1-03</text>
+    <text x="340" y="242" text-anchor="middle" fill="#374151" font-size="8">Source</text>
+    <text x="340" y="252" text-anchor="middle" fill="#374151" font-size="8">Mapping</text>
+    <line x1="388" y1="235" x2="406" y2="235" stroke="#0E7C7B" stroke-width="1.5" marker-end="url(#arr3)"/>
+
+    <rect x="408" y="210" width="96" height="50" fill="#E6F4F4" rx="6" stroke="#0E7C7B" stroke-width="1.5"/>
+    <text x="456" y="230" text-anchor="middle" fill="#0E7C7B" font-size="9" font-weight="700">P1-04</text>
+    <text x="456" y="242" text-anchor="middle" fill="#374151" font-size="8">Validation</text>
+    <text x="456" y="252" text-anchor="middle" fill="#374151" font-size="8">& Override</text>
+    <line x1="504" y1="235" x2="522" y2="235" stroke="#0E7C7B" stroke-width="1.5" marker-end="url(#arr3)"/>
+
+    <rect x="524" y="210" width="96" height="50" fill="#E6F4F4" rx="6" stroke="#0E7C7B" stroke-width="1.5"/>
+    <text x="572" y="230" text-anchor="middle" fill="#0E7C7B" font-size="9" font-weight="700">P1-05</text>
+    <text x="572" y="242" text-anchor="middle" fill="#374151" font-size="8">DB</text>
+    <text x="572" y="252" text-anchor="middle" fill="#374151" font-size="8">Consolidator</text>
+    <line x1="620" y1="235" x2="638" y2="235" stroke="#0E7C7B" stroke-width="2.5" marker-end="url(#arr3)"/>
+
+    <!-- MASTER DB icon -->
+    <rect x="640" y="210" width="130" height="50" fill="#1E7A3E" rx="6"/>
+    <text x="705" y="232" text-anchor="middle" fill="white" font-size="10" font-weight="700">MASTER DB</text>
+    <text x="705" y="246" text-anchor="middle" fill="#D1FAE5" font-size="8">PostgreSQL + ChromaDB</text>
+
+    <!-- Arrow from Master DB down to Phase 2 orchestrator -->
+    <line x1="705" y1="260" x2="705" y2="294" stroke="#0E7C7B" stroke-width="2" stroke-dasharray="5,2" marker-end="url(#arr3)"/>
+    <text x="720" y="278" fill="#0E7C7B" font-size="8" font-weight="600">Shared Memory</text>
+
+    <!-- PHASE 2 + PHASE 3 FULL STAGE TABLE -->
+    <rect x="20" y="296" width="1160" height="360" fill="white" rx="8" filter="url(#sh2)"/>
+    <rect x="20" y="296" width="1160" height="28" fill="#1A56A0" rx="8"/>
+    <rect x="20" y="312" width="1160" height="12" fill="#1A56A0"/>
+    <text x="600" y="314" text-anchor="middle" fill="white" font-size="11" font-weight="700">PER-PROJECT EXECUTION: PHASE 2 (AB/GA) → PHASE 3 (DETAILING) — ALL STAGES CONTROLLED BY ORCHESTRATOR</text>
+
+    <!-- Column headers for stage table -->
+    <text x="50" y="342" fill="#374151" font-size="8.5" font-weight="700">STAGE</text>
+    <text x="110" y="342" fill="#374151" font-size="8.5" font-weight="700">AGENT NAME</text>
+    <text x="260" y="342" fill="#374151" font-size="8.5" font-weight="700">KEY TASKS</text>
+    <text x="500" y="342" fill="#374151" font-size="8.5" font-weight="700">VALIDATOR</text>
+    <text x="620" y="342" fill="#374151" font-size="8.5" font-weight="700">FALLBACK</text>
+    <text x="730" y="342" fill="#374151" font-size="8.5" font-weight="700">HUMAN GATE</text>
+    <text x="880" y="342" fill="#374151" font-size="8.5" font-weight="700">DOWNSTREAM BLOCK</text>
+    <text x="1070" y="342" fill="#374151" font-size="8.5" font-weight="700">PHASE</text>
+    <line x1="30" y1="346" x2="1170" y2="346" stroke="#E5E7EB" stroke-width="1"/>
+
+    <!-- P2-01 row -->
+    <rect x="26" y="348" width="1148" height="26" fill="#EFF6FF" rx="2"/>
+    <text x="50" y="365" fill="#1A56A0" font-size="8.5" font-weight="700">P2-01</text>
+    <text x="110" y="365" fill="#374151" font-size="8">Design File Ingestion</text>
+    <text x="260" y="365" fill="#6B7280" font-size="8">Scan, unpack ZIP/RAR, classify files, rank design candidates</text>
+    <text x="500" y="365" fill="#92400E" font-size="8">V1: File + Format</text>
+    <text x="620" y="365" fill="#374151" font-size="8">1 auto-retry</text>
+    <text x="730" y="365" fill="#B91C1C" font-size="8">Revision conflict</text>
+    <text x="880" y="365" fill="#374151" font-size="8">P2-02 blocked</text>
+    <text x="1070" y="365" fill="#1A56A0" font-size="8">P2</text>
+
+    <!-- P2-02 row -->
+    <text x="50" y="391" fill="#1A56A0" font-size="8.5" font-weight="700">P2-02</text>
+    <text x="110" y="391" fill="#374151" font-size="8">Completeness Check</text>
+    <text x="260" y="391" fill="#6B7280" font-size="8">Map fields vs dictionary, AB readiness, GA readiness decision</text>
+    <text x="500" y="391" fill="#92400E" font-size="8">V2: Completeness</text>
+    <text x="620" y="391" fill="#374151" font-size="8">1 auto-retry</text>
+    <text x="730" y="391" fill="#B91C1C" font-size="8">Missing critical fields</text>
+    <text x="880" y="391" fill="#374151" font-size="8">P2-03 blocked</text>
+    <text x="1070" y="391" fill="#1A56A0" font-size="8">P2</text>
+    <line x1="30" y1="398" x2="1170" y2="398" stroke="#F3F4F6" stroke-width="1"/>
+
+    <!-- P2-03 row -->
+    <rect x="26" y="400" width="1148" height="26" fill="#EFF6FF" rx="2"/>
+    <text x="50" y="417" fill="#1A56A0" font-size="8.5" font-weight="700">P2-03</text>
+    <text x="110" y="417" fill="#374151" font-size="8">AB Generation</text>
+    <text x="260" y="417" fill="#6B7280" font-size="8">Bolt sizes, qty, spacing, grid refs, base plates (plan+section+detail)</text>
+    <text x="500" y="417" fill="#92400E" font-size="8">V3: AB Data</text>
+    <text x="620" y="417" fill="#374151" font-size="8">1 auto-retry</text>
+    <text x="730" y="417" fill="#B91C1C" font-size="8">Critical AB data missing</text>
+    <text x="880" y="417" fill="#B91C1C" font-size="8" font-weight="600">P2-04 blocked until PASS</text>
+    <text x="1070" y="417" fill="#1A56A0" font-size="8">P2</text>
+
+    <!-- P2-04 row -->
+    <text x="50" y="443" fill="#1A56A0" font-size="8.5" font-weight="700">P2-04</text>
+    <text x="110" y="443" fill="#374151" font-size="8">GA Generation</text>
+    <text x="260" y="443" fill="#6B7280" font-size="8">Plan/elev/sections, uses AB grid, building geometry</text>
+    <text x="500" y="443" fill="#92400E" font-size="8">V4: GA Data</text>
+    <text x="620" y="443" fill="#374151" font-size="8">1 auto-retry</text>
+    <text x="730" y="443" fill="#B91C1C" font-size="8">Missing geometry</text>
+    <text x="880" y="443" fill="#374151" font-size="8">P2-05 blocked</text>
+    <text x="1070" y="443" fill="#1A56A0" font-size="8">P2</text>
+    <line x1="30" y1="450" x2="1170" y2="450" stroke="#F3F4F6" stroke-width="1"/>
+
+    <!-- P2-05 row -->
+    <rect x="26" y="452" width="1148" height="26" fill="#EFF6FF" rx="2"/>
+    <text x="50" y="469" fill="#1A56A0" font-size="8.5" font-weight="700">P2-05</text>
+    <text x="110" y="469" fill="#374151" font-size="8">AB/GA Validation</text>
+    <text x="260" y="469" fill="#6B7280" font-size="8">AB vs design, GA vs design, AB/GA overlap consistency</text>
+    <text x="500" y="469" fill="#92400E" font-size="8">V5: Cross-check</text>
+    <text x="620" y="469" fill="#374151" font-size="8">1 auto-retry</text>
+    <text x="730" y="469" fill="#B91C1C" font-size="8">Critical discrepancy</text>
+    <text x="880" y="469" fill="#B91C1C" font-size="8" font-weight="600">ALL Phase 3 blocked</text>
+    <text x="1070" y="469" fill="#1A56A0" font-size="8">P2 GATE</text>
+
+    <!-- Phase 3 rows -->
+    <text x="50" y="495" fill="#C85A00" font-size="8.5" font-weight="700">P3-01</text>
+    <text x="110" y="495" fill="#374151" font-size="8">Sheeting Generation</text>
+    <text x="260" y="495" fill="#6B7280" font-size="8">Roof/wall sheeting, zone tables, lengths, quantities</text>
+    <text x="500" y="495" fill="#92400E" font-size="8">V6: Sheeting</text>
+    <text x="620" y="495" fill="#374151" font-size="8">1 auto-retry</text>
+    <text x="730" y="495" fill="#374151" font-size="8">Missing geometry flags</text>
+    <text x="880" y="495" fill="#374151" font-size="8">P3-02 may be impacted</text>
+    <text x="1070" y="495" fill="#C85A00" font-size="8">P3</text>
+    <line x1="30" y1="502" x2="1170" y2="502" stroke="#F3F4F6" stroke-width="1"/>
+
+    <rect x="26" y="504" width="1148" height="26" fill="#FFF7ED" rx="2"/>
+    <text x="50" y="521" fill="#C85A00" font-size="8.5" font-weight="700">P3-02</text>
+    <text x="110" y="521" fill="#374151" font-size="8">Shop/Detail Drawing</text>
+    <text x="260" y="521" fill="#6B7280" font-size="8">Member marks, sections, cut lengths, assemblies, mark consistency</text>
+    <text x="500" y="521" fill="#92400E" font-size="8">V7: Shop data</text>
+    <text x="620" y="521" fill="#374151" font-size="8">1 auto-retry</text>
+    <text x="730" y="521" fill="#374151" font-size="8">Mark conflicts</text>
+    <text x="880" y="521" fill="#B91C1C" font-size="8" font-weight="600">P3-03, P3-04 blocked</text>
+    <text x="1070" y="521" fill="#C85A00" font-size="8">P3</text>
+
+    <text x="50" y="547" fill="#C85A00" font-size="8.5" font-weight="700">P3-03</text>
+    <text x="110" y="547" fill="#374151" font-size="8">Shipping List</text>
+    <text x="260" y="547" fill="#6B7280" font-size="8">Mark-wise listing, quantities, bundles, dispatch groups</text>
+    <text x="500" y="547" fill="#92400E" font-size="8">V8: Shipping</text>
+    <text x="620" y="547" fill="#374151" font-size="8">1 auto-retry</text>
+    <text x="730" y="547" fill="#374151" font-size="8">Qty mismatch alert</text>
+    <text x="880" y="547" fill="#374151" font-size="8">P3-04 (if seq-linked)</text>
+    <text x="1070" y="547" fill="#C85A00" font-size="8">P3</text>
+    <line x1="30" y1="554" x2="1170" y2="554" stroke="#F3F4F6" stroke-width="1"/>
+
+    <rect x="26" y="556" width="1148" height="26" fill="#FFF7ED" rx="2"/>
+    <text x="50" y="573" fill="#C85A00" font-size="8.5" font-weight="700">P3-04</text>
+    <text x="110" y="573" fill="#374151" font-size="8">Installation Drawing</text>
+    <text x="260" y="573" fill="#6B7280" font-size="8">Erection sequence, member placement, level/grid refs</text>
+    <text x="500" y="573" fill="#92400E" font-size="8">V9: Install data</text>
+    <text x="620" y="573" fill="#374151" font-size="8">1 auto-retry</text>
+    <text x="730" y="573" fill="#374151" font-size="8">Placement conflict</text>
+    <text x="880" y="573" fill="#374151" font-size="8">P3-05 blocked</text>
+    <text x="1070" y="573" fill="#C85A00" font-size="8">P3</text>
+
+    <text x="50" y="599" fill="#B91C1C" font-size="8.5" font-weight="700">P3-05</text>
+    <text x="110" y="599" fill="#374151" font-size="8">Final End-to-End Check</text>
+    <text x="260" y="599" fill="#6B7280" font-size="8">Cross-pkg validation, mark/qty consistency, FINAL RELEASE DECISION</text>
+    <text x="500" y="599" fill="#92400E" font-size="8">V10: Final</text>
+    <text x="620" y="599" fill="#374151" font-size="8">1 auto-retry</text>
+    <text x="730" y="599" fill="#B91C1C" font-size="8">Critical failures</text>
+    <text x="880" y="599" fill="#B91C1C" font-size="8" font-weight="600">Output blocked on FAIL</text>
+    <text x="1070" y="599" fill="#B91C1C" font-size="8">GATE</text>
+    <line x1="30" y1="606" x2="1170" y2="606" stroke="#E5E7EB" stroke-width="1"/>
+
+    <!-- Bottom section: Support agents -->
+    <rect x="20" y="668" width="370" height="150" fill="white" rx="8" filter="url(#sh2)"/>
+    <rect x="20" y="668" width="370" height="24" fill="#374151" rx="8"/>
+    <rect x="20" y="680" width="370" height="12" fill="#374151"/>
+    <text x="205" y="684" text-anchor="middle" fill="white" font-size="9" font-weight="700">SUPPORT AGENTS (ALWAYS RUNNING)</text>
+    <text x="40" y="706" fill="#374151" font-size="8.5" font-weight="600">Checkpoint Agent:</text>
+    <text x="40" y="718" fill="#6B7280" font-size="8">Save state after each stage. Maintain rollback points. Support resume.</text>
+    <text x="40" y="734" fill="#374151" font-size="8.5" font-weight="600">State Tracker Agent:</text>
+    <text x="40" y="746" fill="#6B7280" font-size="8">Track job/stage/agent status. Track errors and retries.</text>
+    <text x="40" y="762" fill="#374151" font-size="8.5" font-weight="600">Logging & Audit Agent:</text>
+    <text x="40" y="774" fill="#6B7280" font-size="8">Detailed logs, audit trail, change history, performance metrics.</text>
+    <text x="40" y="790" fill="#374151" font-size="8.5" font-weight="600">Notification Agent:</text>
+    <text x="40" y="802" fill="#6B7280" font-size="8">Success/failure/escalation alerts → React UI via WebSocket.</text>
+
+    <!-- Learning agents box -->
+    <rect x="406" y="668" width="380" height="150" fill="white" rx="8" filter="url(#sh2)"/>
+    <rect x="406" y="668" width="380" height="24" fill="#374151" rx="8"/>
+    <rect x="406" y="680" width="380" height="12" fill="#374151"/>
+    <text x="596" y="684" text-anchor="middle" fill="white" font-size="9" font-weight="700">LEARNING AGENT (BACKGROUND SERVICE)</text>
+    <text x="426" y="706" fill="#374151" font-size="8.5" font-weight="600">Level 1 — Correction Event Listener:</text>
+    <text x="426" y="718" fill="#6B7280" font-size="8">All Fallback events + human corrections → correction_events table</text>
+    <text x="426" y="734" fill="#374151" font-size="8.5" font-weight="600">Level 1 — Rule Analysis Runner:</text>
+    <text x="426" y="746" fill="#6B7280" font-size="8">5+ same-field errors → propose rule update → engineer approves</text>
+    <text x="426" y="762" fill="#374151" font-size="8.5" font-weight="600">Level 2 — Suggestion Engine:</text>
+    <text x="426" y="774" fill="#6B7280" font-size="8">Missing field → ChromaDB query → UI suggestion popup</text>
+    <text x="426" y="790" fill="#374151" font-size="8.5" font-weight="600">Level 3 — Vector DB Updater:</text>
+    <text x="426" y="802" fill="#6B7280" font-size="8">Approved project → profile embedding → ChromaDB index update</text>
+
+    <!-- Output & Release box -->
+    <rect x="802" y="668" width="378" height="150" fill="white" rx="8" filter="url(#sh2)"/>
+    <rect x="802" y="668" width="378" height="24" fill="#1E7A3E" rx="8"/>
+    <rect x="802" y="680" width="378" height="12" fill="#1E7A3E"/>
+    <text x="991" y="684" text-anchor="middle" fill="white" font-size="9" font-weight="700">OUTPUT GENERATOR AGENT + RELEASE GATE</text>
+    <text x="822" y="706" fill="#374151" font-size="8.5" font-weight="600">Release Control:</text>
+    <text x="822" y="718" fill="#6B7280" font-size="8">P3-05 PASS → Engineer reviews summary → Approves release</text>
+    <text x="822" y="734" fill="#374151" font-size="8.5" font-weight="600">Output Stack:</text>
+    <text x="822" y="746" fill="#6B7280" font-size="8">ezdxf → DXF | ODA Converter → DWG | matplotlib → PDF</text>
+    <text x="822" y="762" fill="#374151" font-size="8.5" font-weight="600">Engineer Selects:</text>
+    <text x="822" y="774" fill="#6B7280" font-size="8">AB / GA / Shop / Sheeting / Shipping / Installation / Full ZIP</text>
+    <text x="822" y="790" fill="#374151" font-size="8.5" font-weight="600">Storage:</text>
+    <text x="822" y="802" fill="#6B7280" font-size="8">/Project_UUID/Outputs/[AB|GA|SHOP|SHIPPING|INSTALLATION|REPORTS]/</text>
+
+    <!-- Escalation agent -->
+    <rect x="20" y="832" width="760" height="80" fill="#FEF9C3" rx="8" filter="url(#sh2)" stroke="#92400E" stroke-width="1.5"/>
+    <rect x="20" y="832" width="760" height="24" fill="#92400E" rx="8"/>
+    <rect x="20" y="844" width="760" height="12" fill="#92400E"/>
+    <text x="400" y="848" text-anchor="middle" fill="white" font-size="10" font-weight="700">ESCALATION AGENT (HUMAN IN THE LOOP)</text>
+    <text x="40" y="872" fill="#374151" font-size="8.5" font-weight="600">Engineering Escalation:</text>
+    <text x="40" y="884" fill="#6B7280" font-size="8">Missing governing field, conflicting engineering interpretations, unsupported conditions, geometry conflicts</text>
+    <text x="40" y="896" fill="#374151" font-size="8.5" font-weight="600">IT/Data Escalation:</text>
+    <text x="40" y="908" fill="#6B7280" font-size="8">File type unclassifiable, archive fails, design-file parsing fails, source mapping unresolvable, template population broken</text>
+
+    <!-- DB storage box -->
+    <rect x="796" y="832" width="384" height="80" fill="#F0FDF4" rx="8" filter="url(#sh2)" stroke="#1E7A3E" stroke-width="1.5"/>
+    <rect x="796" y="832" width="384" height="24" fill="#1E7A3E" rx="8"/>
+    <rect x="796" y="844" width="384" height="12" fill="#1E7A3E"/>
+    <text x="988" y="848" text-anchor="middle" fill="white" font-size="10" font-weight="700">POSTGRESQL + CHROMADB (LOCAL)</text>
+    <text x="816" y="868" fill="#374151" font-size="8.5" font-weight="600">PostgreSQL Tables:</text>
+    <text x="816" y="880" fill="#6B7280" font-size="8">projects · files · stages · checkpoints · validation_results · correction_events · rule_proposals · output_packages</text>
+    <text x="816" y="894" fill="#374151" font-size="8.5" font-weight="600">Master DB Tables:</text>
+    <text x="816" y="906" fill="#6B7280" font-size="8">template_library · field_dictionary · source_mapping_rules · validation_rules · override_rules</text>
+
+    <!-- LEGEND bottom -->
+    <rect x="20" y="924" width="1160" height="46" fill="white" rx="6" stroke="#E5E7EB" stroke-width="1"/>
+    <text x="40" y="942" fill="#374151" font-size="9" font-weight="700">LEGEND:</text>
+    <rect x="90" y="933" width="40" height="14" fill="#EFF6FF" rx="2" stroke="#1A56A0" stroke-width="1"/>
+    <text x="110" y="944" text-anchor="middle" fill="#1A56A0" font-size="8">Phase 2</text>
+    <rect x="145" y="933" width="40" height="14" fill="#FFF7ED" rx="2" stroke="#C85A00" stroke-width="1"/>
+    <text x="165" y="944" text-anchor="middle" fill="#C85A00" font-size="8">Phase 3</text>
+    <rect x="200" y="933" width="50" height="14" fill="#FEF3C7" rx="2" stroke="#92400E" stroke-width="1"/>
+    <text x="225" y="944" text-anchor="middle" fill="#92400E" font-size="8">Validator</text>
+    <rect x="265" y="933" width="60" height="14" fill="#FEE2E2" rx="2" stroke="#B91C1C" stroke-width="1"/>
+    <text x="295" y="944" text-anchor="middle" fill="#B91C1C" font-size="8">Fallback (1x)</text>
+    <text x="350" y="944" fill="#B91C1C" font-size="8.5" font-weight="700">⚡ Human required</text>
+    <text x="460" y="944" fill="#1E7A3E" font-size="8.5" font-weight="600">No stage starts on failed upstream</text>
+    <text x="660" y="944" fill="#374151" font-size="8.5">All output files generated ONLY after P3-05 PASS + Engineer Release Approval</text>
+
+    <text x="40" y="962" fill="#6B7280" font-size="8">Stack: Python · LangGraph · FastAPI · React · PostgreSQL · ChromaDB · ezdxf · ODA File Converter · Ollama (local LLM) · Celery + Redis · WebSocket</text>
+  </svg>
+</div>
+
+<!-- REST OF SECTIONS (condensed for HTML) -->
+<div class="section" id="s3">
+  <div class="section-num">Section 03</div>
+  <h1>Technology Stack</h1>
+  <table class="stack-table">
+    <tr><th>Layer</th><th>Technology</th><th>Notes</th></tr>
+    <tr><td>Backend API</td><td>FastAPI (Python)</td><td>REST + WebSocket endpoints</td></tr>
+    <tr><td>Agent Orchestration</td><td>LangGraph</td><td>State machine per project, each node = one agent</td></tr>
+    <tr><td>LLM Engine</td><td>Ollama + Llama 3 / Mistral</td><td>Local LLM, no API key, no cloud dependency</td></tr>
+    <tr><td>Structured Database</td><td>PostgreSQL</td><td>All project data, rules, checkpoints, learning events</td></tr>
+    <tr><td>Vector Database</td><td>ChromaDB (local embedded)</td><td>Project profile embeddings for Level 2/3 learning</td></tr>
+    <tr><td>DXF Generation</td><td>ezdxf (Python, MIT license)</td><td>Programmatic DXF creation from structured agent output</td></tr>
+    <tr><td>DWG Export</td><td>ODA File Converter (free)</td><td>DXF → DWG (R2018), Windows/Linux/Mac, one-time install</td></tr>
+    <tr><td>PDF Generation</td><td>ezdxf + matplotlib backend</td><td>DXF rendered to PDF — no extra license needed</td></tr>
+    <tr><td>DWG/DXF Reading</td><td>ezdxf + ODA File Converter</td><td>Read and parse existing DWG/DXF from project folders</td></tr>
+    <tr><td>PDF Parsing</td><td>pdfplumber + PyMuPDF + Tesseract</td><td>Text PDFs + image PDFs (OCR). Secondary source only.</td></tr>
+    <tr><td>Archive Handling</td><td>zipfile + rarfile (Python)</td><td>ZIP and RAR extraction, recursive unpacking</td></tr>
+    <tr><td>STAAD Parser</td><td>Custom Python parser</td><td>.std file format (plain text, known syntax). Highest priority parser.</td></tr>
+    <tr><td>ETABS Parser</td><td>openpyxl + pandas</td><td>Parses ETABS Excel export files</td></tr>
+    <tr><td>MBS Parser</td><td>Custom XML/text parser</td><td>MBS structured export format</td></tr>
+    <tr><td>Prota Steel Parser</td><td>ezdxf + pdfplumber</td><td>DXF exports + PDF report parsing</td></tr>
+    <tr><td>Frontend UI</td><td>React + TailwindCSS</td><td>Project creation, live tracking, approval popups</td></tr>
+    <tr><td>Live Tracking</td><td>WebSocket (FastAPI → React)</td><td>Real-time stage status, progress bar, log stream</td></tr>
+    <tr><td>Background Jobs</td><td>Celery + Redis (local)</td><td>Async agent execution, retry queue</td></tr>
+  </table>
+</div>
+
+<div class="section teal-border" id="s5">
+  <div class="section-num">Section 05</div>
+  <h1>Phase 1 — Master Database Creation</h1>
+  <div class="info-box">
+    <div class="info-box-label">Trigger Logic</div>
+    <strong>Initial:</strong> Manual one-time run by IT team on the 50 reference jobs.<br>
+    <strong>Periodic:</strong> System auto-flags after every 10 new approved projects. Engineer manually triggers re-analysis. LLM proposes rule diffs. Engineer approves or rejects before any rule update is applied.
+  </div>
+  <h2>Five Phase 1 Agents (Sequential)</h2>
+  <table>
+    <tr><th>Stage</th><th>Agent</th><th>Primary Output</th><th>Writes To</th></tr>
+    <tr><td><code>P1-01</code></td><td>Template Extraction Agent</td><td>Template families for AB, GA, sheeting, shop, shipping, installation. Title blocks, layouts, note structures.</td><td>template_library</td></tr>
+    <tr><td><code>P1-02</code></td><td>Field Dictionary Agent</td><td>All fields defined: type, unit, source, mandatory/optional, governing/derived, downstream deps.</td><td>field_dictionary</td></tr>
+    <tr><td><code>P1-03</code></td><td>Source Mapping Agent</td><td>Per-field extraction rules for MBS, STAAD, ETABS, Prota Steel, DWG, PDF, archives. Authority hierarchy.</td><td>source_mapping_rules</td></tr>
+    <tr><td><code>P1-04</code></td><td>Validation & Override Agent</td><td>Complete validation ruleset. Severity levels. Block/warn/allow decisions. Escalation paths.</td><td>validation_rules, override_rules</td></tr>
+    <tr><td><code>P1-05</code></td><td>Master DB Consolidator</td><td>Implementation-ready master DB spec. All P1 outputs merged, deduplicated, cross-referenced.</td><td>All tables finalized</td></tr>
+  </table>
+</div>
+
+<div class="section" id="s6">
+  <div class="section-num">Section 06</div>
+  <h1>Phase 2 — AB/GA Execution Detail</h1>
+  <div class="info-box orange">
+    <div class="info-box-label">Critical: AB Before GA (Sequential)</div>
+    AB drawing contains 3 views: <strong>Plan</strong> (bolt layout, grid, quantities), <strong>Section</strong> (embedment depth, base plate, grout), <strong>Detail</strong> (bolt assembly). GA plan view directly uses AB grid positions. AB approval is a hard prerequisite for GA start. If AB is re-generated, GA must regenerate too.
+  </div>
+  <table>
+    <tr><th>Stage</th><th>Agent</th><th>Human Gate</th><th>Downstream Block Condition</th></tr>
+    <tr><td><code>P2-01</code></td><td>Design File Ingestion</td><td>Revision conflict: engineer selects governing file</td><td>P2-02 blocked if not PASS</td></tr>
+    <tr><td><code>P2-02</code></td><td>Completeness Check</td><td>Missing critical fields: engineer provides or confirms alt source</td><td>P2-03 blocked if AB not ready</td></tr>
+    <tr><td><code>P2-03</code></td><td>AB Generation</td><td>Fallback escalation after 2 failures</td><td>P2-04 hard blocked until AB approved</td></tr>
+    <tr><td><code>P2-04</code></td><td>GA Generation</td><td>Fallback escalation after 2 failures</td><td>P2-05 blocked if not PASS</td></tr>
+    <tr><td><code>P2-05</code></td><td>AB/GA Validation</td><td>Critical discrepancy review</td><td>ALL Phase 3 blocked on FAIL</td></tr>
+  </table>
+</div>
+
+<div class="section orange-border" id="s10">
+  <div class="section-num">Section 10</div>
+  <h1>Three-Level Learning System</h1>
+  <table>
+    <tr><th>Level</th><th>Name</th><th>Mechanism</th><th>Human Role</th><th>Applies To</th></tr>
+    <tr><td><span class="badge badge-pass">Level 1</span></td><td>Rule Refinement</td><td>Reads correction_events. 5+ same-field errors → proposes rule update → rule_proposals table</td><td>Reviews rule diff. Approves or rejects. No auto-apply.</td><td>validation_rules table</td></tr>
+    <tr><td><span class="badge badge-warn">Level 2</span></td><td>Smart Suggestions</td><td>ChromaDB similarity search on missing fields. Suggests value from similar past jobs.</td><td>UI popup: Accept or Reject per field. Accepted = engineer-approved.</td><td>Per-project field completion</td></tr>
+    <tr><td><span class="badge badge-blue">Level 3</span></td><td>Pattern Learning</td><td>Approved project → vector embedding → ChromaDB. New project → similarity search → template suggestions.</td><td>Reviews template suggestions. Still selects final template family.</td><td>Template & layout guidance only</td></tr>
+  </table>
+  <div class="info-box red">
+    <div class="info-box-label">Hard Rule — All Three Levels</div>
+    No level of the learning system may override design file engineering values. All learning is confined to: template layout, field value suggestions (human-approved), and rule updates (human-approved).
+  </div>
+</div>
+
+<div class="section" id="s11">
+  <div class="section-num">Section 11</div>
+  <h1>Data Extraction Layer</h1>
+  <table>
+    <tr><th>Source</th><th>Parser</th><th>Key Extractions</th><th>Known Limitation</th></tr>
+    <tr><td>MBS</td><td>Custom XML/text parser</td><td>Member sizes, grid, bay spacing, anchor bolt data, roof slope</td><td>Format varies between MBS versions — needs version detection</td></tr>
+    <tr><td>STAAD Pro</td><td>Custom Python .std parser</td><td>Member geometry, section assignments, grid references</td><td><strong>Bolt table incomplete in 30%+ files</strong> — primary Level 1 target</td></tr>
+    <tr><td>ETABS</td><td>openpyxl + pandas</td><td>Story levels, column locations, member sizes from Excel export</td><td>Requires Excel export. Direct .edb not supported.</td></tr>
+    <tr><td>Prota Steel</td><td>ezdxf + pdfplumber</td><td>DXF geometry, PDF report data, member references</td><td>Image PDFs require OCR via Tesseract (low confidence)</td></tr>
+    <tr><td>DWG/DXF</td><td>ezdxf + ODA Converter</td><td>Geometry, layers, text, title block data, blocks</td><td>DWG must be converted via ODA before ezdxf can read</td></tr>
+    <tr><td>PDF (text)</td><td>pdfplumber</td><td>Schedules, notes, tables</td><td>Secondary source only. Never overrides design file data.</td></tr>
+    <tr><td>PDF (image)</td><td>PyMuPDF + Tesseract OCR</td><td>OCR text from scanned drawings</td><td>Lowest confidence. Always flagged. Human verification required.</td></tr>
+    <tr><td>ZIP / RAR</td><td>zipfile + rarfile</td><td>Archive extraction, recursive unpacking, file inventory</td><td>Nested archives must be recursively unpacked before classification</td></tr>
+  </table>
+</div>
+
+<div class="section navy-border" id="s14">
+  <div class="section-num">Section 14</div>
+  <h1>Realistic Accuracy Expectations</h1>
+  <table>
+    <tr><th>Stage / Output</th><th>Expected Accuracy</th><th>Primary Risk Factor</th></tr>
+    <tr><td>Phase 1 (Template/Field/Rule extraction)</td><td><span class="badge badge-pass">90–95%</span></td><td>Inconsistency in historical 50 jobs</td></tr>
+    <tr><td>P2-01 Design Ingestion</td><td><span class="badge badge-pass">90–96%</span></td><td>Revision confusion, ambiguous naming</td></tr>
+    <tr><td>P2-02 Completeness Check</td><td><span class="badge badge-pass">85–93%</span></td><td>Incomplete design files, missing bolt tables</td></tr>
+    <tr><td>P2-03 AB Generation</td><td><span class="badge badge-warn">78–90%</span></td><td>STAAD bolt table completeness, parser logic</td></tr>
+    <tr><td>P2-04 GA Generation</td><td><span class="badge badge-warn">75–88%</span></td><td>Geometry extraction accuracy from design files</td></tr>
+    <tr><td>P3-01 Sheeting</td><td><span class="badge badge-warn">75–88%</span></td><td>Opening/interruption data completeness</td></tr>
+    <tr><td>P3-02 Shop Drawings</td><td><span class="badge badge-fail">65–82%</span></td><td>Connection data, assembly grouping complexity</td></tr>
+    <tr><td>P3-03 Shipping List</td><td><span class="badge badge-pass">85–94%</span></td><td>Shop drawing mark consistency</td></tr>
+    <tr><td>P3-04 Installation</td><td><span class="badge badge-warn">70–85%</span></td><td>Sequence logic, placement reference completeness</td></tr>
+    <tr><td>P3-05 Final Check</td><td><span class="badge badge-pass">80–90%</span></td><td>Accumulation of upstream warnings</td></tr>
+    <tr style="background:#FEF3C7"><td><strong>First Rollout (Overall)</strong></td><td><strong><span class="badge badge-warn">70–80%</span></strong></td><td>Combined input quality + parser maturity</td></tr>
+    <tr style="background:#E6F4EA"><td><strong>After Tuning (Benchmark Jobs)</strong></td><td><strong><span class="badge badge-pass">80–88%</span></strong></td><td>Standardized projects improve faster</td></tr>
+  </table>
+</div>
+
+<div class="section green-border" id="s16">
+  <div class="section-num">Section 16</div>
+  <h1>Immediate Next Steps for IT Team</h1>
+  <ol>
+    <li>Set up PostgreSQL with full schema (projects, files, stages, checkpoints, correction_events, all master DB tables)</li>
+    <li>Install ChromaDB locally (embedded mode)</li>
+    <li>Install ODA File Converter on development desktop (free from opendesign.com)</li>
+    <li>Set up Ollama with Llama 3 or Mistral for local LLM</li>
+    <li><strong>Build STAAD .std file parser — highest priority (30%+ failure source)</strong></li>
+    <li>Build MBS XML/text parser</li>
+    <li>Build ETABS Excel export parser (openpyxl + pandas)</li>
+    <li>Compile 50 reference jobs into controlled source folder with consistent subfolder structure</li>
+    <li>Run Phase 1 prompt pack → populate master DB → engineering team validates outputs</li>
+    <li>Build P2-01 Ingestion Agent (ezdxf + ODA + rarfile + pdfplumber)</li>
+    <li>Build FastAPI backend + LangGraph orchestration state machine</li>
+    <li>Build React frontend with WebSocket live tracking</li>
+    <li>Build P2-02 through P2-05 sequentially with validators and fallback agents</li>
+    <li>Test on 3 benchmark projects before Phase 3 development</li>
+    <li>Build Phase 3 agents: P3-01 → P3-02 → P3-03 → P3-04 → P3-05</li>
+    <li>Build Output Generator Agent (ezdxf → ODA → PDF pipeline)</li>
+    <li>Integrate Learning Agent (Level 1 first, then 2, then 3)</li>
+    <li>Full end-to-end test on 5 diverse project types</li>
+    <li>Deploy to production desktop environment</li>
+  </ol>
+</div>
+
+<div class="print-note">
+  Infiniti Solutions — Steel Detailing Multi-Agent System | System Architecture Document v1.0 | April 2026 | CONFIDENTIAL — Internal Use Only
+</div>
+
+</div><!-- end page -->
+</body>
+</html>
