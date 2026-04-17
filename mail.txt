@@ -1,0 +1,23 @@
+Prepare the 50 jobs
+each job in its own ZIP
+keep PDF and DWG separated inside each ZIP
+do not mix multiple jobs in one ZIP unless the top-level folders are already clean per job
+Upload the 50 jobs
+preferably in batches
+not one file at a time unless necessary
+Run Prompt 0 first
+Prompt 0 — Historical Job Intake and Structuring
+this is the step that organizes, indexes, classifies, and QC-checks the uploaded jobs
+Then run Prompt 1 to Prompt 5
+Prompt 1: Template Extraction
+Prompt 2: Field Dictionary
+Prompt 3: Source Mapping
+Prompt 4: Validation and Override
+Prompt 5: Final Consolidation
+So the answer is:
+
+No, not directly Prompt 1 to 5.
+After uploading, you should run Prompt 0 first, then Prompt 1 to 5.
+
+Correct sequence
+Upload ZIPs → Prompt 0 → Prompt 1 → Prompt 2 → Prompt 3 → Prompt 4 → Prompt 5
