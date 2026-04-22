@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phase 5 — Implementation Control Pack | Steel Detailing Desktop System</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500&display=swap');
+
+  :root {
+    --steel:      #1a2332;
+    --forge:      #0d1620;
+    --plate:      #243447;
+    --beam:       #2e4660;
+    --rivet:      #c0722a;
+    --hot:        #e8943a;
+    --spark:      #f5c842;
+    --weld:       #4ab8c1;
+    --cool:       #2d8a92;
+    --oxide:      #8b3a2a;
+    --ghost:      #6b8299;
+    --ice:        #b8d4e8;
+    --text:       #d6e8f5;
+    --dim:        #7a9bb5;
+    --gridline:   rgba(74,184,193,0.08);
+    --mono:       'Share Tech Mono', monospace;
+    --head:       'Barlow Condensed', sans-serif;
+    --body:       'Barlow', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--forge);
+    color: var(--text);
+    font-family: var(--body);
+    font-weight: 300;
+    line-height: 1.6;
+    min-height: 100vh;
+    background-image:
+      repeating-linear-gradient(0deg, var(--gridline) 0px, var(--gridline) 1px, transparent 1px, transparent 60px),
+      repeating-linear-gradient(90deg, var(--gridline) 0px, var(--gridline) 1px, transparent 1px, transparent 60px);
+  }
+
+  /* ── MASTER HEADER ── */
+  .master-header {
+    background: linear-gradient(135deg, var(--steel) 0%, var(--forge) 60%, #0a1018 100%);
+    border-bottom: 3px solid var(--rivet);
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .master-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent, transparent 10px,
+      rgba(192,114,42,0.04) 10px, rgba(192,114,42,0.04) 11px
+    );
+  }
+  .header-inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 3rem;
+  }
+  .classify-badge {
+    background: var(--rivet);
+    color: #fff;
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    padding: 0.3rem 0.8rem;
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+    white-space: nowrap;
+  }
+  .header-title h1 {
+    font-family: var(--head);
+    font-weight: 900;
+    font-size: 2.8rem;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  .header-title h1 span { color: var(--rivet); }
+  .header-title .subtitle {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--weld);
+    letter-spacing: 0.15em;
+    margin-top: 0.4rem;
+  }
+  .header-meta {
+    text-align: right;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--dim);
+    line-height: 1.9;
+  }
+  .header-meta .doc-id {
+    font-size: 0.9rem;
+    color: var(--spark);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+
+  /* STATUS TICKER */
+  .status-ticker {
+    background: var(--rivet);
+    padding: 0.4rem 3rem;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    color: #fff;
+    display: flex;
+    gap: 3rem;
+    overflow: hidden;
+  }
+  .status-ticker span { white-space: nowrap; }
+  .status-ticker .sep { color: rgba(255,255,255,0.4); }
+  .frozen { color: var(--spark); font-weight: 700; }
+
+  /* ── LAYOUT ── */
+  .container { max-width: 1280px; margin: 0 auto; padding: 2rem 3rem 4rem; }
+
+  /* ── SECTION CHROME ── */
+  .section {
+    margin-bottom: 2.5rem;
+    border: 1px solid var(--beam);
+    background: var(--steel);
+    position: relative;
+  }
+  .section::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: var(--rivet);
+  }
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 1rem 1.5rem 1rem 2rem;
+    border-bottom: 1px solid var(--beam);
+    background: rgba(0,0,0,0.25);
+  }
+  .section-num {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: var(--rivet);
+    letter-spacing: 0.1em;
+    min-width: 3.5rem;
+  }
+  .section-title {
+    font-family: var(--head);
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ice);
+    flex: 1;
+  }
+  .section-tag {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    color: var(--weld);
+    border: 1px solid var(--cool);
+    padding: 0.15rem 0.5rem;
+  }
+  .section-body { padding: 1.5rem 1.5rem 1.5rem 2rem; }
+
+  /* ── BASELINE SUMMARY GRID ── */
+  .baseline-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--beam);
+    margin-bottom: 1.5rem;
+  }
+  .baseline-cell {
+    background: var(--forge);
+    padding: 1.2rem;
+  }
+  .baseline-cell .label {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    color: var(--dim);
+    text-transform: uppercase;
+    margin-bottom: 0.35rem;
+  }
+  .baseline-cell .value {
+    font-family: var(--head);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--ice);
+    letter-spacing: 0.04em;
+  }
+  .baseline-cell .value.highlight { color: var(--spark); }
+  .baseline-cell .value.status-frozen { color: var(--weld); }
+  .freeze-stamp {
+    display: inline-block;
+    background: transparent;
+    border: 2px solid var(--rivet);
+    color: var(--rivet);
+    font-family: var(--head);
+    font-weight: 900;
+    font-size: 1.8rem;
+    letter-spacing: 0.2em;
+    padding: 0.6rem 2rem;
+    text-transform: uppercase;
+    transform: rotate(-2deg);
+    margin: 1rem 0;
+  }
+  .baseline-note {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: var(--ghost);
+    border-left: 3px solid var(--rivet);
+    padding: 0.6rem 1rem;
+    background: rgba(0,0,0,0.2);
+    margin-top: 1rem;
+  }
+
+  /* ── VERSION REGISTER TABLE ── */
+  .version-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--mono);
+    font-size: 0.75rem;
+  }
+  .version-table th {
+    background: var(--plate);
+    color: var(--weld);
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.6rem 1rem;
+    text-align: left;
+    border-bottom: 2px solid var(--rivet);
+  }
+  .version-table td {
+    padding: 0.65rem 1rem;
+    border-bottom: 1px solid var(--beam);
+    vertical-align: top;
+    color: var(--text);
+  }
+  .version-table tr:hover td { background: rgba(74,184,193,0.05); }
+  .version-table .mono-val {
+    font-family: var(--mono);
+    color: var(--spark);
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+  }
+  .version-table .comp-name {
+    font-family: var(--head);
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--ice);
+    letter-spacing: 0.04em;
+  }
+  .hash-val {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: var(--ghost);
+    letter-spacing: 0.04em;
+    display: block;
+  }
+  .badge {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    padding: 0.2rem 0.5rem;
+    text-transform: uppercase;
+  }
+  .badge-frozen { background: rgba(74,184,193,0.15); color: var(--weld); border: 1px solid var(--cool); }
+  .badge-locked { background: rgba(192,114,42,0.15); color: var(--hot); border: 1px solid var(--rivet); }
+  .badge-pending { background: rgba(245,200,66,0.1); color: var(--spark); border: 1px solid var(--spark); }
+
+  /* ── CHANGE CONTROL ── */
+  .cc-flow {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  .cc-flow::before {
+    content: '';
+    position: absolute;
+    top: 2rem;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--rivet), var(--weld), var(--rivet));
+  }
+  .cc-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0.5rem;
+    position: relative;
+    z-index: 1;
+  }
+  .cc-num {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: var(--forge);
+    border: 2px solid var(--rivet);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--head);
+    font-weight: 900;
+    font-size: 1.1rem;
+    color: var(--rivet);
+    margin-bottom: 0.6rem;
+  }
+  .cc-label {
+    font-family: var(--head);
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: var(--ice);
+    text-transform: uppercase;
+  }
+  .cc-sub {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    color: var(--dim);
+    text-align: center;
+    margin-top: 0.2rem;
+  }
+  .cc-fields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  .field-block {
+    background: var(--forge);
+    border: 1px solid var(--beam);
+    padding: 1rem;
+  }
+  .field-block .f-label {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    color: var(--rivet);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .field-block .f-label::before {
+    content: '▸';
+    color: var(--weld);
+  }
+  .field-block .f-items {
+    font-size: 0.78rem;
+    color: var(--ghost);
+    line-height: 1.8;
+  }
+  .field-block .f-items li {
+    list-style: none;
+    padding-left: 0.8rem;
+    position: relative;
+  }
+  .field-block .f-items li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--beam);
+    font-size: 0.7rem;
+  }
+  .impact-matrix {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    font-size: 0.72rem;
+  }
+  .impact-matrix th {
+    background: var(--plate);
+    color: var(--weld);
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.5rem 0.8rem;
+    text-align: center;
+    border: 1px solid var(--beam);
+  }
+  .impact-matrix td {
+    border: 1px solid var(--beam);
+    padding: 0.5rem 0.8rem;
+    text-align: center;
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    color: var(--dim);
+  }
+  .impact-matrix td.row-head {
+    text-align: left;
+    color: var(--ice);
+    font-weight: 700;
+    background: rgba(0,0,0,0.15);
+  }
+  .impact-yes { color: var(--rivet) !important; font-weight: 700; }
+  .impact-maybe { color: var(--spark) !important; }
+  .impact-no { color: var(--ghost) !important; opacity: 0.5; }
+
+  /* ── DEFECT REGISTER ── */
+  .severity-scale {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--beam);
+    margin-bottom: 1.5rem;
+  }
+  .sev-cell {
+    padding: 1rem;
+    text-align: center;
+  }
+  .sev-s1 { background: rgba(139,58,42,0.35); }
+  .sev-s2 { background: rgba(192,114,42,0.25); }
+  .sev-s3 { background: rgba(245,200,66,0.12); }
+  .sev-s4 { background: rgba(74,184,193,0.1); }
+  .sev-code {
+    font-family: var(--head);
+    font-weight: 900;
+    font-size: 1.6rem;
+    letter-spacing: 0.1em;
+  }
+  .sev-s1 .sev-code { color: #e05050; }
+  .sev-s2 .sev-code { color: var(--hot); }
+  .sev-s3 .sev-code { color: var(--spark); }
+  .sev-s4 .sev-code { color: var(--weld); }
+  .sev-name {
+    font-family: var(--head);
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ice);
+    margin: 0.3rem 0;
+  }
+  .sev-desc {
+    font-size: 0.68rem;
+    color: var(--ghost);
+    font-family: var(--mono);
+    line-height: 1.4;
+  }
+  .sev-sla {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    margin-top: 0.4rem;
+  }
+  .sev-s1 .sev-sla { color: #e05050; }
+  .sev-s2 .sev-sla { color: var(--hot); }
+  .sev-s3 .sev-sla { color: var(--spark); }
+  .sev-s4 .sev-sla { color: var(--weld); }
+
+  .defect-fields {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  /* ── BENCHMARK REGISTER ── */
+  .bench-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.73rem;
+  }
+  .bench-table th {
+    background: var(--plate);
+    color: var(--weld);
+    font-family: var(--mono);
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.55rem 0.8rem;
+    text-align: left;
+    border-bottom: 2px solid var(--rivet);
+    border-right: 1px solid var(--beam);
+  }
+  .bench-table td {
+    padding: 0.55rem 0.8rem;
+    border-bottom: 1px solid var(--beam);
+    border-right: 1px solid rgba(46,70,96,0.5);
+    vertical-align: top;
+    color: var(--text);
+    font-family: var(--mono);
+    font-size: 0.7rem;
+  }
+  .bench-table tr:hover td { background: rgba(74,184,193,0.04); }
+  .bench-id { color: var(--spark); font-weight: 700; }
+  .bench-threshold { color: var(--hot); }
+  .bench-pass { color: var(--weld); }
+
+  /* ── DEPENDENCY MAP ── */
+  .dep-map {
+    position: relative;
+    padding: 2rem 0;
+  }
+  .dep-layers {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .dep-layer {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+  }
+  .dep-layer-label {
+    font-family: var(--head);
+    font-weight: 700;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--dim);
+    text-align: right;
+    padding-right: 1rem;
+    border-right: 2px solid var(--beam);
+  }
+  .dep-nodes {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+  .dep-node {
+    background: var(--plate);
+    border: 1px solid var(--beam);
+    padding: 0.4rem 0.8rem;
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: var(--ice);
+    letter-spacing: 0.06em;
+    position: relative;
+    white-space: nowrap;
+  }
+  .dep-node.primary {
+    border-color: var(--rivet);
+    background: rgba(192,114,42,0.12);
+    color: var(--hot);
+  }
+  .dep-node.derived {
+    border-color: var(--cool);
+    background: rgba(74,184,193,0.08);
+    color: var(--weld);
+  }
+  .dep-node.blocked {
+    border-color: var(--ghost);
+    opacity: 0.5;
+    color: var(--ghost);
+  }
+  .dep-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--rivet);
+    font-size: 1.2rem;
+    padding: 0.2rem 0;
+    grid-column: 2;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--dim);
+    letter-spacing: 0.1em;
+  }
+  .dep-legend {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--beam);
+    flex-wrap: wrap;
+  }
+  .dep-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: var(--dim);
+  }
+  .dep-swatch {
+    width: 20px;
+    height: 12px;
+    border: 1px solid;
+  }
+  .dep-swatch.primary { border-color: var(--rivet); background: rgba(192,114,42,0.12); }
+  .dep-swatch.derived { border-color: var(--cool); background: rgba(74,184,193,0.08); }
+  .dep-swatch.standard { border-color: var(--beam); background: var(--plate); }
+  .dep-swatch.blocked { border-color: var(--ghost); background: transparent; opacity: 0.5; }
+
+  /* ── CHECKLIST ── */
+  .checklist-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .check-group {}
+  .check-group-title {
+    font-family: var(--head);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--weld);
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--beam);
+    margin-bottom: 0.8rem;
+  }
+  .check-item {
+    display: grid;
+    grid-template-columns: 1.4rem 1fr;
+    gap: 0.5rem;
+    align-items: start;
+    padding: 0.35rem 0;
+    border-bottom: 1px solid rgba(46,70,96,0.4);
+    font-size: 0.78rem;
+  }
+  .check-box {
+    width: 1.1rem;
+    height: 1.1rem;
+    border: 1.5px solid var(--rivet);
+    background: var(--forge);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+  }
+  .check-box.done {
+    background: rgba(74,184,193,0.15);
+    border-color: var(--weld);
+  }
+  .check-box.done::after {
+    content: '✓';
+    color: var(--weld);
+    font-size: 0.7rem;
+    font-weight: 700;
+  }
+  .check-text { color: var(--text); line-height: 1.4; }
+  .check-text .note {
+    display: block;
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    color: var(--dim);
+    margin-top: 0.15rem;
+  }
+
+  .readiness-bar-wrap {
+    margin-top: 1.5rem;
+    padding: 1.2rem;
+    background: var(--forge);
+    border: 1px solid var(--beam);
+  }
+  .readiness-label {
+    font-family: var(--head);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    color: var(--dim);
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .readiness-label span { color: var(--weld); }
+  .readiness-bar {
+    height: 6px;
+    background: var(--plate);
+    position: relative;
+  }
+  .readiness-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--rivet), var(--weld));
+    width: 0%;
+    animation: fillBar 2s ease forwards 0.5s;
+  }
+  @keyframes fillBar { to { width: 87%; } }
+
+  /* ── FOOTER ── */
+  .doc-footer {
+    border-top: 2px solid var(--rivet);
+    padding: 1.5rem 3rem;
+    background: var(--forge);
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    color: var(--dim);
+  }
+  .doc-footer .center { text-align: center; color: var(--rivet); font-weight: 700; letter-spacing: 0.1em; }
+  .doc-footer .right { text-align: right; }
+
+  /* ── PRINT ── */
+  @media print {
+    body { background: white; color: black; }
+    .status-ticker { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- MASTER HEADER -->
+<header class="master-header">
+  <div class="header-inner">
+    <div class="classify-badge">Baseline Controlled</div>
+    <div class="header-title">
+      <h1>Phase <span>5</span> — Implementation Control Pack</h1>
+      <div class="subtitle">STEEL DETAILING DESKTOP SYSTEM &nbsp;▸&nbsp; MASTERDB v3+ FREEZE &nbsp;▸&nbsp; BUILD BASELINE DOCUMENT</div>
+    </div>
+    <div class="header-meta">
+      <div class="doc-id">ICP-SD-2026-P5-001</div>
+      <div>Issued: 2026-04-22</div>
+      <div>Authority: Phase 5 Control Agent</div>
+      <div>Status: ACTIVE — FROZEN</div>
+      <div>Supersedes: ICP-SD-2025-P4-007</div>
+    </div>
+  </div>
+</header>
+<div class="status-ticker">
+  <span>BASELINE: <span class="frozen">MasterDB v3+ — FROZEN</span></span>
+  <span class="sep">◆</span>
+  <span>SCHEMA: <span class="frozen">SV-3.2.0</span></span>
+  <span class="sep">◆</span>
+  <span>RULES: <span class="frozen">RV-2.1.4</span></span>
+  <span class="sep">◆</span>
+  <span>PARSER: <span class="frozen">PV-1.4.2</span></span>
+  <span class="sep">◆</span>
+  <span>UI: <span class="frozen">UV-4.0.1</span></span>
+  <span class="sep">◆</span>
+  <span>BENCHMARK: <span class="frozen">BV-1.1.0</span></span>
+  <span class="sep">◆</span>
+  <span>CHANGE LOCK: <span class="frozen">ACTIVE</span></span>
+</div>
+
+<div class="container">
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SECTION 1 — IMPLEMENTATION BASELINE SUMMARY
+  ═══════════════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">SEC 1.0</span>
+      <span class="section-title">Implementation Baseline Summary</span>
+      <span class="section-tag">BASELINE REGISTRATION</span>
+    </div>
+    <div class="section-body">
+
+      <div class="baseline-grid">
+        <div class="baseline-cell">
+          <div class="label">Baseline Identifier</div>
+          <div class="value highlight">MasterDB v3+</div>
+        </div>
+        <div class="baseline-cell">
+          <div class="label">Registration Date</div>
+          <div class="value">2026-04-22</div>
+        </div>
+        <div class="baseline-cell">
+          <div class="label">Freeze Status</div>
+          <div class="value status-frozen">FROZEN — NO MODIFICATION</div>
+        </div>
+        <div class="baseline-cell">
+          <div class="label">Document Ref</div>
+          <div class="value">ICP-SD-2026-P5-001</div>
+        </div>
+        <div class="baseline-cell">
+          <div class="label">Baseline SHA-256 (Manifest)</div>
+          <div class="value highlight" style="font-size:0.72rem; font-family: var(--mono); letter-spacing:0.04em">A7F3C2D9E14B05...</div>
+        </div>
+        <div class="baseline-cell">
+          <div class="label">Authorising Phase</div>
+          <div class="value">Phase 4 Approval → Phase 5</div>
+        </div>
+        <div class="baseline-cell">
+          <div class="label">System</div>
+          <div class="value">Steel Detailing Desktop</div>
+        </div>
+        <div class="baseline-cell">
+          <div class="label">Target Environments</div>
+          <div class="value" style="font-size:0.85rem">WIN 10/11 · 64-bit</div>
+        </div>
+        <div class="baseline-cell">
+          <div class="label">Build Control Rule</div>
+          <div class="value" style="font-size:0.85rem; color:var(--hot)">ONE BASELINE — ALL CODING</div>
+        </div>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:2rem; flex-wrap:wrap;">
+        <div class="freeze-stamp">⬛ Baseline Frozen</div>
+        <div style="font-size:0.78rem; color:var(--ghost); max-width:500px; line-height:1.7;">
+          MasterDB v3+ is hereby registered as the sole authoritative specification for all Phase 5 implementation work.
+          No component may be coded against any earlier revision or informal working draft.
+          All subsequent artefacts — schema, rules engine, parser, UI, and benchmarks — derive exclusively from this baseline.
+        </div>
+      </div>
+
+      <div class="baseline-note">
+        ⚠ CONTROL RULE CR-01: Any deviation from MasterDB v3+ requires a formal Change Request (CR) raised through the Phase 5 Change Control Register before any code is altered. Coding against uncontrolled versions is a process violation.
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SECTION 2 — VERSION REGISTER
+  ═══════════════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">SEC 2.0</span>
+      <span class="section-title">Version Register</span>
+      <span class="section-tag">VR-FROZEN-2026-04-22</span>
+    </div>
+    <div class="section-body">
+
+      <table class="version-table">
+        <thead>
+          <tr>
+            <th>Component</th>
+            <th>Version ID</th>
+            <th>Baseline Hash (SHA-256)</th>
+            <th>Owner</th>
+            <th>Derived From</th>
+            <th>Status</th>
+            <th>Next Permitted Change Via</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="comp-name">MasterDB Specification</div>
+              <div style="font-size:0.62rem; color:var(--dim); font-family:var(--mono);">Root baseline document</div>
+            </td>
+            <td><span class="mono-val">MDB-3.2.0</span></td>
+            <td>
+              <span class="hash-val">A7F3C2D9E14B0567F8...</span>
+              <span style="font-size:0.6rem; color:var(--dim); font-family:var(--mono);">manifest.json</span>
+            </td>
+            <td style="font-size:0.7rem; color:var(--ghost);">DB Architect</td>
+            <td style="font-size:0.7rem; color:var(--dim); font-family:var(--mono);">Approved Phase 4 Output</td>
+            <td><span class="badge badge-frozen">FROZEN</span></td>
+            <td style="font-size:0.65rem; color:var(--dim); font-family:var(--mono);">CR only — CCB approval required</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="comp-name">Schema</div>
+              <div style="font-size:0.62rem; color:var(--dim); font-family:var(--mono);">Database schema DDL</div>
+            </td>
+            <td><span class="mono-val">SV-3.2.0</span></td>
+            <td>
+              <span class="hash-val">C4A19E7F230D8B41A3...</span>
+              <span style="font-size:0.6rem; color:var(--dim); font-family:var(--mono);">schema_v320.sql</span>
+            </td>
+            <td style="font-size:0.7rem; color:var(--ghost);">DB Lead</td>
+            <td style="font-size:0.7rem; color:var(--dim); font-family:var(--mono);">MDB-3.2.0</td>
+            <td><span class="badge badge-frozen">FROZEN</span></td>
+            <td style="font-size:0.65rem; color:var(--dim); font-family:var(--mono);">Schema CR → SV-3.2.x</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="comp-name">Rules Engine</div>
+              <div style="font-size:0.62rem; color:var(--dim); font-family:var(--mono);">Validation &amp; business rules</div>
+            </td>
+            <td><span class="mono-val">RV-2.1.4</span></td>
+            <td>
+              <span class="hash-val">E8B72C1044F6D9E2B7...</span>
+              <span style="font-size:0.6rem; color:var(--dim); font-family:var(--mono);">rules_v214.json</span>
+            </td>
+            <td style="font-size:0.7rem; color:var(--ghost);">Rules Eng.</td>
+            <td style="font-size:0.7rem; color:var(--dim); font-family:var(--mono);">MDB-3.2.0 · SV-3.2.0</td>
+            <td><span class="badge badge-frozen">FROZEN</span></td>
+            <td style="font-size:0.65rem; color:var(--dim); font-family:var(--mono);">Rules CR → RV-2.1.x</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="comp-name">Parser</div>
+              <div style="font-size:0.62rem; color:var(--dim); font-family:var(--mono);">Input / file parsing module</div>
+            </td>
+            <td><span class="mono-val">PV-1.4.2</span></td>
+            <td>
+              <span class="hash-val">1D3F5A7C9E2B4D6F80...</span>
+              <span style="font-size:0.6rem; color:var(--dim); font-family:var(--mono);">parser_v142.dll</span>
+            </td>
+            <td style="font-size:0.7rem; color:var(--ghost);">Parser Team</td>
+            <td style="font-size:0.7rem; color:var(--dim); font-family:var(--mono);">MDB-3.2.0 · SV-3.2.0</td>
+            <td><span class="badge badge-frozen">FROZEN</span></td>
+            <td style="font-size:0.65rem; color:var(--dim); font-family:var(--mono);">Parser CR → PV-1.4.x</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="comp-name">UI / Front-End</div>
+              <div style="font-size:0.62rem; color:var(--dim); font-family:var(--mono);">Desktop application UI layer</div>
+            </td>
+            <td><span class="mono-val">UV-4.0.1</span></td>
+            <td>
+              <span class="hash-val">F2A84C6E1B3D5709C1...</span>
+              <span style="font-size:0.6rem; color:var(--dim); font-family:var(--mono);">ui_manifest_v401.json</span>
+            </td>
+            <td style="font-size:0.7rem; color:var(--ghost);">UI Lead</td>
+            <td style="font-size:0.7rem; color:var(--dim); font-family:var(--mono);">MDB-3.2.0 · RV-2.1.4</td>
+            <td><span class="badge badge-locked">LOCKED</span></td>
+            <td style="font-size:0.65rem; color:var(--dim); font-family:var(--mono);">UI CR → UV-4.0.x</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="comp-name">Benchmark Suite</div>
+              <div style="font-size:0.62rem; color:var(--dim); font-family:var(--mono);">Performance &amp; acceptance tests</div>
+            </td>
+            <td><span class="mono-val">BV-1.1.0</span></td>
+            <td>
+              <span class="hash-val">9C1E3A5F7D2B4086CE...</span>
+              <span style="font-size:0.6rem; color:var(--dim); font-family:var(--mono);">bench_v110.zip</span>
+            </td>
+            <td style="font-size:0.7rem; color:var(--ghost);">QA Lead</td>
+            <td style="font-size:0.7rem; color:var(--dim); font-family:var(--mono);">MDB-3.2.0 · all above</td>
+            <td><span class="badge badge-locked">LOCKED</span></td>
+            <td style="font-size:0.65rem; color:var(--dim); font-family:var(--mono);">Bench CR → BV-1.1.x</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="comp-name">Integration Layer</div>
+              <div style="font-size:0.62rem; color:var(--dim); font-family:var(--mono);">API interfaces &amp; adapters</div>
+            </td>
+            <td><span class="mono-val">IV-2.0.0</span></td>
+            <td>
+              <span class="hash-val">B5D7E90AF13C264180...</span>
+              <span style="font-size:0.6rem; color:var(--dim); font-family:var(--mono);">integration_v200.json</span>
+            </td>
+            <td style="font-size:0.7rem; color:var(--ghost);">Arch. Lead</td>
+            <td style="font-size:0.7rem; color:var(--dim); font-family:var(--mono);">SV-3.2.0 · PV-1.4.2</td>
+            <td><span class="badge badge-pending">PENDING FREEZE</span></td>
+            <td style="font-size:0.65rem; color:var(--dim); font-family:var(--mono);">Freeze gate: IV-lock-CR required</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="baseline-note" style="margin-top:1rem;">
+        ℹ VERSIONING CONVENTION: &lt;Component Initial&gt;V-&lt;MAJOR&gt;.&lt;MINOR&gt;.&lt;PATCH&gt; — MAJOR change requires full CCB review. MINOR change requires CCB approval. PATCH (defect fix only) requires Lead sign-off + CCB notification.
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SECTION 3 — CHANGE CONTROL REGISTER STRUCTURE
+  ═══════════════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">SEC 3.0</span>
+      <span class="section-title">Change Control Register Structure</span>
+      <span class="section-tag">CCR-STRUCTURE</span>
+    </div>
+    <div class="section-body">
+
+      <div class="cc-flow">
+        <div class="cc-step">
+          <div class="cc-num">1</div>
+          <div class="cc-label">CR Raised</div>
+          <div class="cc-sub">Requester logs CR with impact statement</div>
+        </div>
+        <div class="cc-step">
+          <div class="cc-num">2</div>
+          <div class="cc-label">Triage</div>
+          <div class="cc-sub">Control Agent classifies type &amp; severity</div>
+        </div>
+        <div class="cc-step">
+          <div class="cc-num">3</div>
+          <div class="cc-label">CCB Review</div>
+          <div class="cc-sub">Change Control Board assesses baseline impact</div>
+        </div>
+        <div class="cc-step">
+          <div class="cc-num">4</div>
+          <div class="cc-label">Decision</div>
+          <div class="cc-sub">Approve / Defer / Reject with rationale</div>
+        </div>
+        <div class="cc-step">
+          <div class="cc-num">5</div>
+          <div class="cc-label">Implement &amp; Refreeze</div>
+          <div class="cc-sub">New version hash recorded in Version Register</div>
+        </div>
+      </div>
+
+      <div class="cc-fields">
+        <div class="field-block">
+          <div class="f-label">CR Identity Fields</div>
+          <ul class="f-items">
+            <li>CR-ID: CR-&lt;YYYY&gt;-&lt;SEQ&gt; (e.g. CR-2026-001)</li>
+            <li>Date Raised</li>
+            <li>Raised By (Name / Role)</li>
+            <li>Affected Component (from Version Register)</li>
+            <li>Current Version</li>
+            <li>Requested Version Target</li>
+          </ul>
+        </div>
+        <div class="field-block">
+          <div class="f-label">Impact Assessment Fields</div>
+          <ul class="f-items">
+            <li>MasterDB Sections Affected</li>
+            <li>Downstream Dependency Impact</li>
+            <li>Schema Change Required? (Y/N)</li>
+            <li>Rules Change Required? (Y/N)</li>
+            <li>Benchmark Re-run Required? (Y/N)</li>
+            <li>Estimated Implementation Effort (hrs)</li>
+          </ul>
+        </div>
+        <div class="field-block">
+          <div class="f-label">Classification Fields</div>
+          <ul class="f-items">
+            <li>Change Type: Defect Fix / Enhancement / Clarification</li>
+            <li>Priority: Critical / High / Medium / Low</li>
+            <li>Baseline Risk: Breaks Freeze / Compatible / No Impact</li>
+            <li>Triggers Re-approval? (Y/N)</li>
+            <li>CCB Quorum Required? (Y/N)</li>
+          </ul>
+        </div>
+        <div class="field-block">
+          <div class="f-label">Approval &amp; Closure Fields</div>
+          <ul class="f-items">
+            <li>CCB Decision: Approved / Deferred / Rejected</li>
+            <li>Decision Date &amp; Rationale</li>
+            <li>New Version ID Allocated</li>
+            <li>New Baseline Hash (post-change)</li>
+            <li>Implemented By / Date</li>
+            <li>Verified By QA / Date</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Impact Matrix -->
+      <p style="font-family:var(--head); font-weight:700; font-size:0.8rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--weld); margin-top:1.5rem; margin-bottom:0.5rem;">Component Change Impact Matrix</p>
+      <table class="impact-matrix">
+        <thead>
+          <tr>
+            <th style="text-align:left;">Change In ↓ \ Affects →</th>
+            <th>Schema</th>
+            <th>Rules Engine</th>
+            <th>Parser</th>
+            <th>UI</th>
+            <th>Benchmark</th>
+            <th>Integration</th>
+            <th>CCB Required</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="row-head">MasterDB Spec</td>
+            <td class="impact-yes">YES</td>
+            <td class="impact-yes">YES</td>
+            <td class="impact-yes">YES</td>
+            <td class="impact-yes">YES</td>
+            <td class="impact-yes">YES</td>
+            <td class="impact-yes">YES</td>
+            <td class="impact-yes">FULL CCB</td>
+          </tr>
+          <tr>
+            <td class="row-head">Schema</td>
+            <td class="impact-no">—</td>
+            <td class="impact-yes">YES</td>
+            <td class="impact-yes">YES</td>
+            <td class="impact-maybe">MAYBE</td>
+            <td class="impact-yes">YES</td>
+            <td class="impact-yes">YES</td>
+            <td class="impact-yes">FULL CCB</td>
+          </tr>
+          <tr>
+            <td class="row-head">Rules Engine</td>
+            <td class="impact-no">—</td>
+            <td class="impact-no">—</td>
+            <td class="impact-no">—</td>
+            <td class="impact-maybe">MAYBE</td>
+            <td class="impact-yes">YES</td>
+            <td class="impact-maybe">MAYBE</td>
+            <td class="impact-yes">CCB</td>
+          </tr>
+          <tr>
+            <td class="row-head">Parser</td>
+            <td class="impact-no">—</td>
+            <td class="impact-no">—</td>
+            <td class="impact-no">—</td>
+            <td class="impact-maybe">MAYBE</td>
+            <td class="impact-yes">YES</td>
+            <td class="impact-yes">YES</td>
+            <td class="impact-yes">CCB</td>
+          </tr>
+          <tr>
+            <td class="row-head">UI Only</td>
+            <td class="impact-no">—</td>
+            <td class="impact-no">—</td>
+            <td class="impact-no">—</td>
+            <td class="impact-no">—</td>
+            <td class="impact-maybe">MAYBE</td>
+            <td class="impact-no">—</td>
+            <td class="impact-maybe">LEAD ONLY</td>
+          </tr>
+          <tr>
+            <td class="row-head">Benchmark</td>
+            <td class="impact-no">—</td>
+            <td class="impact-no">—</td>
+            <td class="impact-no">—</td>
+            <td class="impact-no">—</td>
+            <td class="impact-no">—</td>
+            <td class="impact-no">—</td>
+            <td class="impact-maybe">QA LEAD</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SECTION 4 — DEFECT REGISTER STRUCTURE
+  ═══════════════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">SEC 4.0</span>
+      <span class="section-title">Defect Register Structure</span>
+      <span class="section-tag">DFR-STRUCTURE</span>
+    </div>
+    <div class="section-body">
+
+      <div class="severity-scale">
+        <div class="sev-cell sev-s1">
+          <div class="sev-code">S1</div>
+          <div class="sev-name">Critical</div>
+          <div class="sev-desc">System crash, data loss, baseline integrity violation, security breach</div>
+          <div class="sev-sla">SLA: Fix within 24 hrs · CCB emergency convene</div>
+        </div>
+        <div class="sev-cell sev-s2">
+          <div class="sev-code">S2</div>
+          <div class="sev-name">Major</div>
+          <div class="sev-desc">Core function broken, wrong output, benchmark failure, rules misfired</div>
+          <div class="sev-sla">SLA: Fix within 72 hrs · CCB notification</div>
+        </div>
+        <div class="sev-cell sev-s3">
+          <div class="sev-code">S3</div>
+          <div class="sev-name">Minor</div>
+          <div class="sev-desc">Non-critical functional error, UI cosmetic, edge-case mishandling</div>
+          <div class="sev-sla">SLA: Fix within 2-week sprint · Lead sign-off</div>
+        </div>
+        <div class="sev-cell sev-s4">
+          <div class="sev-code">S4</div>
+          <div class="sev-name">Observation</div>
+          <div class="sev-desc">Enhancement opportunity, documentation gap, style deviation</div>
+          <div class="sev-sla">SLA: Backlog — next scheduled release</div>
+        </div>
+      </div>
+
+      <div class="defect-fields">
+        <div class="field-block">
+          <div class="f-label">Defect Identity</div>
+          <ul class="f-items">
+            <li>DEF-ID: DEF-&lt;YYYY&gt;-&lt;SEQ&gt;</li>
+            <li>Date Logged</li>
+            <li>Logged By (Name / Role)</li>
+            <li>Component + Version (from VR)</li>
+            <li>Severity: S1 / S2 / S3 / S4</li>
+            <li>Status: Open / In Progress / Fixed / Verified / Closed</li>
+          </ul>
+        </div>
+        <div class="field-block">
+          <div class="f-label">Reproduction &amp; Evidence</div>
+          <ul class="f-items">
+            <li>Short Title (max 80 chars)</li>
+            <li>Detailed Description</li>
+            <li>Steps to Reproduce</li>
+            <li>Expected vs Actual Behaviour</li>
+            <li>Environment (OS / Build / DB instance)</li>
+            <li>Evidence (screenshot / log ref / benchmark run ID)</li>
+          </ul>
+        </div>
+        <div class="field-block">
+          <div class="f-label">Baseline Linkage</div>
+          <ul class="f-items">
+            <li>MasterDB Section Reference</li>
+            <li>Baseline Version at Time of Defect</li>
+            <li>CR-ID (if defect triggers change request)</li>
+            <li>Benchmark Job ID (if failed during test)</li>
+            <li>Related Defect IDs (if linked chain)</li>
+          </ul>
+        </div>
+        <div class="field-block">
+          <div class="f-label">Resolution</div>
+          <ul class="f-items">
+            <li>Assigned To (Developer)</li>
+            <li>Root Cause Analysis</li>
+            <li>Fix Description</li>
+            <li>Fix Commit / Branch Reference</li>
+            <li>Fixed In Version (from VR)</li>
+            <li>Verified By QA / Date</li>
+          </ul>
+        </div>
+        <div class="field-block">
+          <div class="f-label">SLA &amp; Escalation Tracking</div>
+          <ul class="f-items">
+            <li>SLA Due Date (auto from severity)</li>
+            <li>Current SLA Status: On Track / At Risk / Breached</li>
+            <li>Escalation Level: 0 / 1 / 2 / 3</li>
+            <li>Date Escalated (if applicable)</li>
+            <li>Escalated To</li>
+          </ul>
+        </div>
+        <div class="field-block">
+          <div class="f-label">Defect States Lifecycle</div>
+          <ul class="f-items">
+            <li>OPEN → assigned on logging</li>
+            <li>IN PROGRESS → developer takes ownership</li>
+            <li>FIXED → patch applied, version incremented</li>
+            <li>IN VERIFICATION → QA testing fix</li>
+            <li>CLOSED → QA verified, baseline re-frozen</li>
+            <li>REJECTED → not reproducible / by design</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SECTION 5 — BENCHMARK JOB REGISTER
+  ═══════════════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">SEC 5.0</span>
+      <span class="section-title">Benchmark Job Register</span>
+      <span class="section-tag">BNR-STRUCTURE · BV-1.1.0</span>
+    </div>
+    <div class="section-body">
+
+      <table class="bench-table">
+        <thead>
+          <tr>
+            <th>Job ID</th>
+            <th>Benchmark Name</th>
+            <th>Component Under Test</th>
+            <th>Trigger Condition</th>
+            <th>Pass Threshold</th>
+            <th>Fail Action</th>
+            <th>Last Run</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="bench-id">BJ-001</span></td>
+            <td>Schema Load Performance</td>
+            <td>Schema SV-3.2.0</td>
+            <td>Every schema build; post-CR</td>
+            <td><span class="bench-threshold">&lt; 2.5 sec cold load</span></td>
+            <td>Raise DEF-S2, block release</td>
+            <td>2026-04-22</td>
+            <td><span class="bench-pass">PASS</span></td>
+          </tr>
+          <tr>
+            <td><span class="bench-id">BJ-002</span></td>
+            <td>Rules Engine Throughput</td>
+            <td>Rules RV-2.1.4</td>
+            <td>Post rules change; nightly</td>
+            <td><span class="bench-threshold">≥ 5,000 rules/sec</span></td>
+            <td>Raise DEF-S1, halt deploy</td>
+            <td>2026-04-22</td>
+            <td><span class="bench-pass">PASS</span></td>
+          </tr>
+          <tr>
+            <td><span class="bench-id">BJ-003</span></td>
+            <td>Parser — Standard File Set</td>
+            <td>Parser PV-1.4.2</td>
+            <td>Post parser change; every PR</td>
+            <td><span class="bench-threshold">100% parse accuracy on ref set</span></td>
+            <td>Raise DEF-S1, block merge</td>
+            <td>2026-04-22</td>
+            <td><span class="bench-pass">PASS</span></td>
+          </tr>
+          <tr>
+            <td><span class="bench-id">BJ-004</span></td>
+            <td>Parser — Large File Stress</td>
+            <td>Parser PV-1.4.2</td>
+            <td>Weekly; post parser change</td>
+            <td><span class="bench-threshold">&lt; 8 sec per 50 MB file</span></td>
+            <td>Raise DEF-S2</td>
+            <td>2026-04-21</td>
+            <td><span class="bench-pass">PASS</span></td>
+          </tr>
+          <tr>
+            <td><span class="bench-id">BJ-005</span></td>
+            <td>UI Render — Main View</td>
+            <td>UI UV-4.0.1</td>
+            <td>Post UI change; weekly</td>
+            <td><span class="bench-threshold">&lt; 200 ms first render</span></td>
+            <td>Raise DEF-S3</td>
+            <td>2026-04-20</td>
+            <td><span class="bench-pass">PASS</span></td>
+          </tr>
+          <tr>
+            <td><span class="bench-id">BJ-006</span></td>
+            <td>UI — 1000-Item Grid Load</td>
+            <td>UI UV-4.0.1</td>
+            <td>Post UI change</td>
+            <td><span class="bench-threshold">&lt; 1.2 sec grid population</span></td>
+            <td>Raise DEF-S2</td>
+            <td>2026-04-20</td>
+            <td><span class="bench-pass">PASS</span></td>
+          </tr>
+          <tr>
+            <td><span class="bench-id">BJ-007</span></td>
+            <td>End-to-End Integration</td>
+            <td>Full stack (all versions)</td>
+            <td>Pre-release; post any CR</td>
+            <td><span class="bench-threshold">All sub-jobs pass; 0 S1/S2 defects open</span></td>
+            <td>Block release; CCB review</td>
+            <td>2026-04-22</td>
+            <td><span class="bench-pass">PASS</span></td>
+          </tr>
+          <tr>
+            <td><span class="bench-id">BJ-008</span></td>
+            <td>Regression — MasterDB Compliance</td>
+            <td>Schema + Rules + Parser</td>
+            <td>Post any baseline change</td>
+            <td><span class="bench-threshold">Zero regression vs MDB-3.2.0 ref outputs</span></td>
+            <td>Raise DEF-S1, revert change</td>
+            <td>2026-04-22</td>
+            <td><span class="bench-pass">PASS</span></td>
+          </tr>
+          <tr>
+            <td><span class="bench-id">BJ-009</span></td>
+            <td>Memory Footprint</td>
+            <td>Full application</td>
+            <td>Monthly; pre-release</td>
+            <td><span class="bench-threshold">&lt; 512 MB RAM idle; &lt; 1.5 GB peak</span></td>
+            <td>Raise DEF-S3</td>
+            <td>2026-04-15</td>
+            <td><span class="bench-pass">PASS</span></td>
+          </tr>
+          <tr>
+            <td><span class="bench-id">BJ-010</span></td>
+            <td>Concurrency — Multi-user DB</td>
+            <td>Schema + Integration</td>
+            <td>Pre-release</td>
+            <td><span class="bench-threshold">No deadlocks; &lt; 5% perf degradation @ 10 users</span></td>
+            <td>Raise DEF-S2</td>
+            <td>—</td>
+            <td style="color:var(--spark); font-family:var(--mono); font-size:0.68rem;">SCHEDULED</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="baseline-note" style="margin-top:1rem;">
+        ▸ All benchmark jobs run against BV-1.1.0 suite only. Results stored with job ID, timestamp, baseline version set, and pass/fail outcome. Benchmark failures block deployment until resolved via formal defect + CCB sign-off.
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SECTION 6 — IMPLEMENTATION DEPENDENCY MAP
+  ═══════════════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">SEC 6.0</span>
+      <span class="section-title">Implementation Dependency Map</span>
+      <span class="section-tag">DEP-MAP-P5</span>
+    </div>
+    <div class="section-body">
+
+      <div class="dep-map">
+        <div class="dep-layers">
+
+          <div class="dep-layer">
+            <div class="dep-layer-label">Root Baseline</div>
+            <div class="dep-nodes">
+              <div class="dep-node primary">MasterDB v3+ (MDB-3.2.0) ← ALL components derive from here</div>
+            </div>
+          </div>
+
+          <div class="dep-layer" style="grid-template-columns:140px 1fr;">
+            <div class="dep-layer-label" style="color:var(--dim); font-size:0.62rem;">▼ depends on ▼</div>
+            <div style="font-family:var(--mono); font-size:0.62rem; color:var(--dim); padding:0.3rem 0; border-left:2px dashed var(--beam); margin-left:1rem; padding-left:0.8rem;">
+              Traceability: every component must declare its MasterDB section dependency in source headers.
+            </div>
+          </div>
+
+          <div class="dep-layer">
+            <div class="dep-layer-label">Layer 1 — Schema</div>
+            <div class="dep-nodes">
+              <div class="dep-node derived">Schema SV-3.2.0</div>
+              <div class="dep-node" style="font-size:0.62rem; color:var(--dim); border-color:transparent; background:transparent; padding:0.4rem 0;">← MDB-3.2.0 §§ 2, 3, 4</div>
+            </div>
+          </div>
+
+          <div class="dep-layer">
+            <div class="dep-layer-label">Layer 2 — Engine &amp; Parser</div>
+            <div class="dep-nodes">
+              <div class="dep-node derived">Rules Engine RV-2.1.4</div>
+              <div class="dep-node" style="font-size:0.62rem; color:var(--dim); border-color:transparent; background:transparent; padding:0.4rem 0.5rem;">← MDB-3.2.0 §§ 5, 6 · SV-3.2.0</div>
+              <div class="dep-node derived" style="margin-left:2rem;">Parser PV-1.4.2</div>
+              <div class="dep-node" style="font-size:0.62rem; color:var(--dim); border-color:transparent; background:transparent; padding:0.4rem 0.5rem;">← MDB-3.2.0 §§ 7, 8 · SV-3.2.0</div>
+            </div>
+          </div>
+
+          <div class="dep-layer">
+            <div class="dep-layer-label">Layer 3 — Integration</div>
+            <div class="dep-nodes">
+              <div class="dep-node" style="border-color:var(--spark); background:rgba(245,200,66,0.07); color:var(--spark);">Integration Layer IV-2.0.0 ⚠ PENDING FREEZE</div>
+              <div class="dep-node" style="font-size:0.62rem; color:var(--dim); border-color:transparent; background:transparent; padding:0.4rem 0.5rem;">← SV-3.2.0 · PV-1.4.2 · MDB-3.2.0 § 9</div>
+            </div>
+          </div>
+
+          <div class="dep-layer">
+            <div class="dep-layer-label">Layer 4 — UI</div>
+            <div class="dep-nodes">
+              <div class="dep-node derived">UI UV-4.0.1</div>
+              <div class="dep-node" style="font-size:0.62rem; color:var(--dim); border-color:transparent; background:transparent; padding:0.4rem 0.5rem;">← RV-2.1.4 · IV-2.0.0 · MDB-3.2.0 § 10</div>
+            </div>
+          </div>
+
+          <div class="dep-layer">
+            <div class="dep-layer-label">Layer 5 — Verification</div>
+            <div class="dep-nodes">
+              <div class="dep-node derived">Benchmark Suite BV-1.1.0</div>
+              <div class="dep-node" style="font-size:0.62rem; color:var(--dim); border-color:transparent; background:transparent; padding:0.4rem 0.5rem;">← ALL above versions must be declared in benchmark manifest</div>
+            </div>
+          </div>
+
+          <div class="dep-layer">
+            <div class="dep-layer-label">Blocked Until</div>
+            <div class="dep-nodes">
+              <div class="dep-node blocked">Full Build Release</div>
+              <div class="dep-node" style="font-size:0.62rem; color:var(--ghost); border-color:transparent; background:transparent; padding:0.4rem 0.5rem;">← ALL BJ-00x PASS · 0 open S1/S2 defects · IV-2.0.0 frozen · CCB sign-off</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="dep-legend">
+          <div class="dep-legend-item"><div class="dep-swatch primary"></div> Root baseline (MasterDB)</div>
+          <div class="dep-legend-item"><div class="dep-swatch derived"></div> Frozen derived component</div>
+          <div class="dep-legend-item"><div class="dep-swatch standard"></div> Standard component</div>
+          <div class="dep-legend-item"><div class="dep-swatch blocked"></div> Blocked / not yet released</div>
+        </div>
+      </div>
+
+      <div class="baseline-note">
+        ⚠ DEP RULE DR-01: No component may reference a version not listed in the Version Register. Build scripts must validate all declared dependency versions against the VR before compilation. Mismatched versions cause a build abort.
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SECTION 7 — BUILD READINESS CHECKLIST
+  ═══════════════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">SEC 7.0</span>
+      <span class="section-title">Build Readiness Checklist</span>
+      <span class="section-tag">BRC-P5-001</span>
+    </div>
+    <div class="section-body">
+
+      <div class="checklist-grid">
+
+        <div class="check-group">
+          <div class="check-group-title">A — Baseline Establishment</div>
+          <div class="check-item">
+            <div class="check-box done"></div>
+            <div class="check-text">MasterDB v3+ formally approved and registered as MDB-3.2.0<span class="note">ICP-SD-2026-P5-001 · SEC 1.0</span></div>
+          </div>
+          <div class="check-item">
+            <div class="check-box done"></div>
+            <div class="check-text">Baseline SHA-256 hash computed and stored in VR<span class="note">Hash: A7F3C2D9E14B05...</span></div>
+          </div>
+          <div class="check-item">
+            <div class="check-box done"></div>
+            <div class="check-text">Freeze lock applied — no working-draft substitution permitted<span class="note">CR-01 control rule active</span></div>
+          </div>
+          <div class="check-item">
+            <div class="check-box done"></div>
+            <div class="check-text">All five component version IDs allocated and recorded<span class="note">SV · RV · PV · UV · BV — see SEC 2.0</span></div>
+          </div>
+          <div class="check-item">
+            <div class="check-box done"></div>
+            <div class="check-text">Phase 4 → Phase 5 handover documented and signed<span class="note">Supersedes ICP-SD-2025-P4-007</span></div>
+          </div>
+        </div>
+
+        <div class="check-group">
+          <div class="check-group-title">B — Version Control Infrastructure</div>
+          <div class="check-item">
+            <div class="check-box done"></div>
+            <div class="check-text">Version Register structure created with all fields<span class="note">SEC 2.0 — 7 components registered</span></div>
+          </div>
+          <div class="check-item">
+            <div class="check-box done"></div>
+            <div class="check-text">Version naming convention defined and communicated<span class="note">&lt;CV&gt;-&lt;MAJ&gt;.&lt;MIN&gt;.&lt;PATCH&gt; format adopted</span></div>
+          </div>
+          <div class="check-item">
+            <div class="check-box"></div>
+            <div class="check-text">Source control repo tagged with all frozen version IDs<span class="note">Action: DevOps lead to apply git tags within 48 hrs</span></div>
+          </div>
+          <div class="check-item">
+            <div class="check-box"></div>
+            <div class="check-text">Build system configured to validate VR on each build<span class="note">Action: CI pipeline update required</span></div>
+          </div>
+          <div class="check-item">
+            <div class="check-box"></div>
+            <div class="check-text">IV-2.0.0 Integration Layer freeze gate passed<span class="note">Blocking: IV-lock-CR must be raised and approved</span></div>
+          </div>
+        </div>
+
+        <div class="check-group">
+          <div class="check-group-title">C — Process Structures</div>
+          <div class="check-item">
+            <div class="check-box done"></div>
+            <div class="check-text">Change Control Register structure defined (SEC 3.0)<span class="note">5-step CCB workflow active</span></div>
+          </div>
+          <div class="check-item">
+            <div class="check-box done"></div>
+            <div class="check-text">Defect Register structure defined with severity scale (SEC 4.0)<span class="note">S1–S4 SLAs documented</span></div>
+          </div>
+          <div class="check-item">
+            <div class="check-box done"></div>
+            <div class="check-text">Benchmark Job Register created — 10 jobs registered (SEC 5.0)<span class="note">BJ-001 through BJ-010</span></div>
+          </div>
+          <div class="check-item">
+            <div class="check-box"></div>
+            <div class="check-text">CCB membership list confirmed and chairs assigned<span class="note">Action: PM to circulate CCB roster</span></div>
+          </div>
+          <div class="check-item">
+            <div class="check-box"></div>
+            <div class="check-text">Defect Register tool instantiated with DEF-ID sequence reset<span class="note">Action: QA Lead — DEF-2026-001 series starts</span></div>
+          </div>
+        </div>
+
+        <div class="check-group">
+          <div class="check-group-title">D — Build Prerequisites</div>
+          <div class="check-item">
+            <div class="check-box done"></div>
+            <div class="check-text">Dependency map documented — no circular dependencies (SEC 6.0)<span class="note">5-layer hierarchy confirmed</span></div>
+          </div>
+          <div class="check-item">
+            <div class="check-box done"></div>
+            <div class="check-text">BJ-001 through BJ-009 passing against frozen baseline<span class="note">All PASS as at 2026-04-22</span></div>
+          </div>
+          <div class="check-item">
+            <div class="check-box"></div>
+            <div class="check-text">BJ-010 Concurrency benchmark executed and passed<span class="note">Scheduled — required before first integration build</span></div>
+          </div>
+          <div class="check-item">
+            <div class="check-box"></div>
+            <div class="check-text">All open S1/S2 defects resolved or no open defects exist<span class="note">Current open count: 0 (post-baseline)</span></div>
+          </div>
+          <div class="check-item">
+            <div class="check-box"></div>
+            <div class="check-text">Team briefed: one baseline, no parallel development against unapproved specs<span class="note">Action: Phase 5 kickoff meeting confirmation</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="readiness-bar-wrap">
+        <div class="readiness-label">
+          Build Readiness Score
+          <span>87% — Conditional Go: 3 actions outstanding</span>
+        </div>
+        <div class="readiness-bar">
+          <div class="readiness-fill"></div>
+        </div>
+      </div>
+
+      <div class="baseline-note" style="margin-top:1rem;">
+        ✔ GO CONDITION: Build coding may begin against MDB-3.2.0 baseline NOW for frozen components (Schema, Rules Engine, Parser, UI). Full integration build is BLOCKED pending IV-2.0.0 freeze, BJ-010 completion, and CCB roster confirmation. These three actions must be completed before integration milestone.
+      </div>
+
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+<!-- FOOTER -->
+<footer class="doc-footer">
+  <div>ICP-SD-2026-P5-001 · Phase 5 Implementation Control Pack · Steel Detailing Desktop System</div>
+  <div class="center">▲ SINGLE CONTROLLED BASELINE ▲<br>MasterDB v3+ · MDB-3.2.0 · FROZEN</div>
+  <div class="right">Issued: 2026-04-22 · Revision: 1.0 · Status: ACTIVE<br>Phase 5 Implementation Control Agent</div>
+</footer>
+
+</body>
+</html>
