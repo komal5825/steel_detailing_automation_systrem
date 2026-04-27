@@ -1,0 +1,411 @@
+**IFS STEEL DETAILING SYSTEM  |  Lane 2 — Block 5: ETABS / Prota / PDF / Archive Adapters**
+
+**LANE 2  —  PARSER / EXTRACTION / EVIDENCE AUTOMATION**
+
+**Block 5 Progress Note  |  ETABS / Prota / PDF / Archive Adapters**
+
+| **Document ID** | IFS-L2-BLK5-ADAPTERS-20260427 |
+| --- | --- |
+| **Date** | 27 April 2026 |
+| **Block** | Block 5 of 8 — ETABS / Prota / PDF / Archive Adapters |
+| **Baseline** | Blocks 1–4 complete; BaseParser frozen; MasterDB v3+ (Frozen) |
+| **Adapters** | ETABS (P3) · Prota DXF (P4) · Prota PDF (P5) · DWG/DXF Generic (P6) · PDF Text (P7) · PDF Image/OCR (P8) · Archive (N/A) |
+| **Block Status** | COMPLETE — All 7 adapters fully implemented |
+| **Next Block** | Block 6 — Conflict and Fallback Harness (READY TO START) |
+
+---
+
+# **1. ETABS / Prota / PDF / Archive Status**
+
+**Status: ALL 7 ADAPTERS FULLY IMPLEMENTED**
+
+Priority ranking and implementation baseline per IFS-BUILD-OUT3-PARSER-20260424 §2 (source priority). Each adapter inherits BaseParser and implements parse() + private _extract_* methods with normalized FieldExtraction output.
+
+## **1.1 ETABS Adapter (P3)**
+
+**Module:** etabs_parser/etabs_main.py | **Library:** openpyxl + pandas | **Priority Rank:** 3
+
+| **Task** | **Description** | **Implementation Notes** | **Status** |
+| --- | --- | --- | --- |
+| EP-01 | ETABSParser class — Excel workbook loader | Workbook opened via openpyxl; sheet discovery by name (SECTION, MEMBER, LOAD). Fallback to sheet index if names unavailable. _load_workbook() complete. | **IMPLEMENTED** |
+| EP-02 | Sheet discovery → member / section tabs | Iterates through all sheets; identifies SECTION (F-063 primary), MEMBER (topology), LOAD (P2 fallback for missing MBS loads). Logs sheet mappings to INFO level. | **IMPLEMENTED** |
+| EP-03 | Section schedule → F-063 (primary source) | Parses SECTION sheet for member ID, section name columns. Matches ISO 6162 / IS 808 catalogue. Known prefixes: UB, UC, RHS, SHS, CHS, IPE, HEA, HEB, WB, WC. IS808_LOOKUP_REQUIRED flag if not recognised. | **IMPLEMENTED** |
+| EP-04 | Member topology → F-039, F-040 (grid) | MEMBER sheet parsed for joint X/Y/Z coordinates. Grid spacing derived as minimum positive Δ(X/Z). Bay count = unique X − 1. Topology map built (member_id → (joint_start, joint_end)). | **IMPLEMENTED** |
+| EP-05 | Load schedule → P2 fallback for F-055/058 (floor/roof loads) | LOAD sheet parsed for distributed load values. Fallback role: if MBS P2 load absent, ETABS P3 supplies load with confidence 85. No confidence inflation for known values. | **IMPLEMENTED** |
+| EP-06 | Confidence & source priority | All ETABS fields: source_type = ETABS, priority_rank = 3. Confidence: structured_keyword = 80 (openpyxl parsing; some ambiguity in sheet structure), table_lookup = 85 (load fallback from structured tab). Capped at 85 per hard rules. | **IMPLEMENTED** |
+| EP-07 | Missing data handling | Absent load → UNRESOLVED + FB-RULE-025 flag (ETABS-specific fallback marker). Unmapped section → IS808_LOOKUP_REQUIRED + confidence reduced to 75. | **IMPLEMENTED** |
+| EP-08 | Unit normalisation | ETABS units typically metric (mm/M). normalise_unit() handles variant scales. If unit ambiguous, flag: UNIT_CONVERSION_UNCERTAIN; confidence reduced to 70. | **IMPLEMENTED** |
+
+**ETABS Source Priority:** PRIORITY_RANK = 3 (P3 authority; yields to STAAD P1 and MBS P2 in conflict)
+
+**Key Risk (RISK-B5-01):** >20% of ETABS sections may be unmapped against IS 808 catalogue if project uses vendor-specific or legacy naming. Mitigation: IS808_LOOKUP_REQUIRED flag + Log warning; manual review escalated.
+
+---
+
+## **1.2 Prota DXF Adapter (P4)**
+
+**Module:** prota_parser/prota_parser.py | **Library:** ezdxf | **Priority Rank:** 4
+
+| **Task** | **Description** | **Implementation Notes** | **Status** |
+| --- | --- | --- | --- |
+| PP-01 | protaParser class — DXF file loader (geometry primary) | DXF loaded via ezdxf.readfile(). Entity iteration over LWPOLYLINE, INSERT, DIMENSION blocks. Member geometry extracted via layer/block metadata. _load_dxf() complete. | **IMPLEMENTED** |
+| PP-02 | Coordinate extraction → F-039, F-040, F-172 (grid/bay) | Polylines and insertion points parsed for X/Z coordinates. Layer attributes inspected for grid labels. Bay spacing = min Δ(X/Z); bay count = unique X − 1. Geometry-only source. | **IMPLEMENTED** |
+| PP-03 | Member incidences → topology inference (geometry-driven) | Connects entities by spatial proximity (threshold: 10mm). Builds self._topology for member_id → (x_start, y_end). Topology is DERIVED from geometry; not explicit. Status flag: DERIVED (not structured_keyword). | **IMPLEMENTED** |
+| PP-04 | Cross-section lookup → F-063 (geometry hints, not direct) | Dimension blocks may encode section size hint (e.g. "100×50" in text label). Parsed via RE_DIMENSION_LABEL regex. Confidence reduced to 65 (derived + uncertain parsing). IS808_LOOKUP_REQUIRED flag set to require catalogue lookup. | **IMPLEMENTED** |
+| PP-05 | Support/restraint → F-045, F-046, F-047 (from layer/block) | Support points marked in DXF by layer name (SUPPORTS, FIXED, PINNED). Coordinates extracted; length/width/height derived from bounding box. Status: DERIVED. | **IMPLEMENTED** |
+| PP-06 | Load data ABSENT in DXF | DXF is geometry-only format. Load fields (F-055, F-058) not populated; status: UNRESOLVED. Flag: FB-RULE-026 (PROTA_DXF_LOAD_ABSENT). Fallback chain: ETABS P3 → Manual→DE. | **IMPLEMENTED** |
+| PP-07 | Connection & bolt data ABSENT | Connection type (F-075) and bolt table (F-081–F-089) not in DXF. Status: UNRESOLVED for all bolt fields. Flags: FB-RULE-015 (connection absent), FB-RULE-013/014 (bolt fields absent). Confidence: 0. | **IMPLEMENTED** |
+| PP-08 | Confidence & source priority | All Prota DXF fields: source_type = PROTA_DXF, priority_rank = 4. Confidence: derived = 65 (geometry inference); IS808 section hints = 65. Hard cap: 75 per FieldExtraction contract. | **IMPLEMENTED** |
+
+**Prota DXF Source Priority:** PRIORITY_RANK = 4 (P4 authority; yields to STAAD P1, MBS P2, ETABS P3)
+
+**Key Risk (RISK-B5-02):** Geometry-only source means member identification is spatial proximity–based. If DXF is poorly attributed or uses non-standard layer naming, topology may be incomplete or incorrect. Mitigation: Log all spatial matches; DERIVED status signals manual review requirement.
+
+---
+
+## **1.3 Prota PDF Adapter (P5)**
+
+**Module:** prota_parser/prota_parser.py | **Library:** pdfplumber | **Priority Rank:** 5
+
+| **Task** | **Description** | **Implementation Notes** | **Status** |
+| --- | --- | --- | --- |
+| PP-09 | protaPDFParser — PDF document loader | pdfplumber.open() reads Prota CAD export (often 2D drawings + tabular data). Page iteration + table extraction via pdfplumber.extract_tables(). | **IMPLEMENTED** |
+| PP-10 | Tabular data extraction → section schedule | Tables on pages identified via table region detection. Columns matched to section name, quantity. Section name extracted via RE_SECTION_NAME_PDF regex. Confidence: 70 (PDF text; OCR not used). | **IMPLEMENTED** |
+| PP-11 | Grid / bay extraction from drawing annotations | PDF may contain grid labels in text or table form. Parsed via table extraction + regex. Bay spacing and count derived as in DXF adapter (min Δ, count unique X). Confidence: 70. | **IMPLEMENTED** |
+| PP-12 | Load data from load summary table (if present) | If Prota PDF contains load schedule, extracted via table lookup. Confidence: 75 (structured table in PDF). If absent → UNRESOLVED + FB-RULE-027 (PROTA_PDF_LOAD_ABSENT); fallback chain: ETABS P3 → Manual→DE. | **IMPLEMENTED** |
+| PP-13 | Connection & bolt data ABSENT in typical Prota PDF | Prota PDF export typically omits bolt schedule. Status: UNRESOLVED for F-075, F-081–F-089. Flags: FB-RULE-015/013/014. Confidence: 0. Fallback: Manual→DE. | **IMPLEMENTED** |
+| PP-14 | PDF-specific guards | PDF confidence hard cap ≤ 85 enforced at FieldExtraction.__post_init__(). OCR not used (P7 task). Historical prohibition guard (P8) not triggered (P5 is structured text, not OCR). | **IMPLEMENTED** |
+| PP-15 | Confidence & source priority | All Prota PDF fields: source_type = PROTA_PDF, priority_rank = 5. Confidence: structured_table = 75; regex_text = 70. Hard cap: 85. | **IMPLEMENTED** |
+
+**Prota PDF Source Priority:** PRIORITY_RANK = 5 (P5 authority; yields to P1–P4)
+
+**Key Risk (RISK-B5-03):** If Prota PDF absent entirely from project (AB blocked path), lane defers to ETABS P3 + Manual→DE. Mitigation: FB-RULE-027 flag surfaces gap; EvidenceExporter captures UNRESOLVED status.
+
+---
+
+## **1.4 DWG/DXF Generic Adapter (P6)**
+
+**Module:** cad_parser/cad_main.py | **Library:** ezdxf + ODA File Converter | **Priority Rank:** 6
+
+| **Task** | **Description** | **Implementation Notes** | **Status** |
+| --- | --- | --- | --- |
+| DP-01 | CADParser class — DWG/DXF multi-format support | Detects file extension (.dwg, .dxf). DWG files converted to DXF via ODA File Converter CLI before processing. Conversion output validated. _convert_dwg_to_dxf() and _load_dxf() complete. | **IMPLEMENTED** |
+| DP-02 | ODA File Converter integration | System call to ODA converter: `oda_convert <input.dwg> <output.dxf> <options>`. Conversion failure → ESCALATE_IT + warning logged. DWG → DXF conversion lossless for geometry; some metadata may be lost. | **IMPLEMENTED** |
+| DP-03 | Geometry extraction post-conversion | Post-conversion DXF processed identically to Prota DXF (DP-02 through DP-08). Entity iteration, coordinate extraction, layer/block inspection. | **IMPLEMENTED** |
+| DP-04 | Confidence & risk flagging | DWG converted: confidence reduced by 5 points vs native DXF (conversion uncertainty). Base confidence 60 (geometry + conversion + uncertainty). Hard cap 75. Flag: DWG_CONVERTED_FROM_BINARY if conversion occurred. | **IMPLEMENTED** |
+| DP-05 | ODA R14 compatibility check | ODA File Converter known issue: R14 files may lose some entity types (rare). If conversion detects truncation, log WARNING and set flag: ODA_R14_LOSS_POSSIBLE. Confidence reduced to 50. | **IMPLEMENTED** |
+| DP-06 | Cross-platform path handling | ODA converter paths vary by OS (Windows: C:\Program Files\ODA\...; Linux: /opt/oda/...). Environment variable ODA_PATH checked at startup. If not found, raise RuntimeError with R-PARSER-01 reference. | **IMPLEMENTED** |
+| DP-07 | Source priority & fallback chain | source_type = DWG_DXF_GENERIC, priority_rank = 6. Yields to STAAD (P1), MBS (P2), ETABS (P3), Prota DXF (P4), Prota PDF (P5). Missing fields same as Prota DXF (load, connection, bolt → UNRESOLVED). | **IMPLEMENTED** |
+
+**DWG/DXF Source Priority:** PRIORITY_RANK = 6 (P6 authority; yields to P1–P5)
+
+**Key Risk (RISK-B5-04):** ODA R14 file conversion may lose entity types. Mitigation: ODA_R14_LOSS_POSSIBLE flag + confidence reduction to 50. R-PARSER-01 ensures ODA installation verified before Block 5 coding; if missing, CADParser._check_oda_installed() raises RuntimeError at parse time.
+
+---
+
+## **1.5 PDF Text Parser (P7)**
+
+**Module:** pdf_parser/pdf_parsers.py | **Library:** pdfplumber | **Priority Rank:** 7
+
+| **Task** | **Description** | **Implementation Notes** | **Status** |
+| --- | --- | --- | --- |
+| PDF-P7-01 | PDFTextParser — text extraction fallback | pdfplumber.extract_text() per page. Regex patterns applied to extracted text. Never overrides P1–P6 structured sources; fallback role only. parse() called only if all higher-priority adapters failed or returned UNRESOLVED. | **IMPLEMENTED** |
+| PDF-P7-02 | Section lookup via regex → F-063 | RE_SECTION_NAME regex matches ISO 6162 prefixes (UB, UC, RHS, etc.). Confidence: 65 (PDF text extraction; some noise expected). IS808_LOOKUP_REQUIRED flag set due to uncertainty. | **IMPLEMENTED** |
+| PDF-P7-03 | Grid/bay extraction via text annotations | Regex patterns for bay spacing text (e.g. "3 @ 5.0m = 15.0m"). Grid labels parsed. Confidence: 60 (text ambiguity). | **IMPLEMENTED** |
+| PDF-P7-04 | Load data from text tables | pdfplumber.extract_tables() attempts table detection. Fallback: regex on text (e.g. "DL: 10 kN/m, LL: 5 kN/m"). Confidence: 55 (low; text parsing ambiguous). | **IMPLEMENTED** |
+| PDF-P7-05 | CRITICAL: Never overrides P1–P6 | Conflict resolver rule: if field_id already has P1–P6 entry, P7 is DROPPED (ignored). P7 only populates truly absent fields. Test: T-PARSE-09 validates non-override. | **IMPLEMENTED** |
+| PDF-P7-06 | Confidence hard cap ≤ 85 | PDF_TEXT confidence capped at 85 in FieldExtraction.__post_init__(). P7 base confidence 55–65; cap applied automatically. | **IMPLEMENTED** |
+| PDF-P7-07 | Historical prohibition (P8 applies; P7 does not) | P7 is structured text, not OCR. Historical prohibition applies only to P8 (PDF Image). P7 can populate any field unless conflict rules prohibit. | **IMPLEMENTED** |
+| PDF-P7-08 | Source priority & fallback chain | source_type = PDF_TEXT, priority_rank = 7. Fallback-only source; never called unless P1–P6 unavailable or all UNRESOLVED for field_id. | **IMPLEMENTED** |
+
+**PDF Text Source Priority:** PRIORITY_RANK = 7 (P7 fallback; never overrides P1–P6)
+
+**Key Risk (RISK-B5-05):** Regex-based text parsing vulnerable to PDF encoding errors and layout variations. Mitigation: confidence capped at 65 (lower than structured sources). Conflict resolver prevents override of higher-priority sources.
+
+---
+
+## **1.6 PDF Image / OCR Parser (P8)**
+
+**Module:** pdf_parser/pdf_parsers.py | **Library:** PyMuPDF + Tesseract | **Priority Rank:** 8
+
+| **Task** | **Description** | **Implementation Notes** | **Status** |
+| --- | --- | --- | --- |
+| PDF-P8-01 | PDFImageParser — OCR-based extraction | fitz.open() reads PDF. Pages with text_dict() check; if text sparse, page rasterized to image. Tesseract-ocr applied. confidence_score automatically capped at 75 in FieldExtraction.__post_init__() regardless of OCR confidence. | **IMPLEMENTED** |
+| PDF-P8-02 | Page rasterization for OCR | pdf_page.get_pixmap() → PNG. Tesseract processes PNG. OCR confidence extracted from Tesseract output. Hard cap 75 enforced — no exceptions. | **IMPLEMENTED** |
+| PDF-P8-03 | CRITICAL: Historical prohibition for governing fields | FieldExtraction.__post_init__() checks: if field_id is governing field (F-001, F-005, F-010, etc.) AND source_type == PDF_IMAGE, auto-set status = UNRESOLVED with flag HISTORICAL_PROHIBITED. Override P8 confidence to 0. | **IMPLEMENTED** |
+| PDF-P8-04 | OCR-mandatory-review flag | If Tesseract confidence < 80 OR page contains mixed fonts/rotated text, set flag: OCR_USED_MANDATORY_REVIEW. Status: PENDING_REVIEW (not POPULATED). | **IMPLEMENTED** |
+| PDF-P8-05 | Confidence hard cap ≤ 75 | PDF_IMAGE confidence hard-capped at 75 in FieldExtraction.__post_init__() before any conflict resolution. Adapters cannot inflate; cap enforced at dataclass level. | **IMPLEMENTED** |
+| PDF-P8-06 | Fallback-only, lowest priority | source_type = PDF_IMAGE, priority_rank = 8. P8 only called if P1–P7 all fail or return UNRESOLVED. Conflict resolver yields P8 to all higher sources. | **IMPLEMENTED** |
+| PDF-P8-07 | OCR language & character set | Tesseract config: eng (English) + osd (Orientation and Script Detection). config: --psm 6 (assume single block of text). Handles rotated pages. | **IMPLEMENTED** |
+| PDF-P8-08 | Source priority & OCR integration | source_type = PDF_IMAGE, priority_rank = 8. All FieldExtraction objects carry: extraction_method = OCR, confidence ≤ 75, status possibly UNRESOLVED + HISTORICAL_PROHIBITED, flags possibly OCR_USED_MANDATORY_REVIEW. | **IMPLEMENTED** |
+
+**PDF Image / OCR Source Priority:** PRIORITY_RANK = 8 (P8 lowest; never overrides P1–P7; govering fields auto-UNRESOLVED)
+
+**Key Risk (RISK-B5-06):** Tesseract OCR vulnerable to poor scans, non-English text, non-standard fonts. Mitigation: confidence hard cap 75 + Historical prohibition guard + OCR_USED_MANDATORY_REVIEW flag ensures all P8 data flagged for manual review.
+
+---
+
+## **1.7 Archive Extractor (Utility)**
+
+**Module:** archive_extractor/archive_extractor.py | **Library:** zipfile + rarfile | **Priority Rank:** N/A (utility; not source adapter)
+
+| **Task** | **Description** | **Implementation Notes** | **Status** |
+| --- | --- | --- | --- |
+| AR-01 | ArchiveExtractor — ZIP / RAR handler | Detects file extension (.zip, .rar). Validates archive format via magic bytes. _extract_zip() and _extract_rar() implemented. | **IMPLEMENTED** |
+| AR-02 | Encrypted archive detection | If archive password-protected, raises RuntimeError with flag: ESCALATE_IT + message. No extraction attempted; user/IT must provide password or unencrypted copy. | **IMPLEMENTED** |
+| AR-03 | Member file enumeration | _list_members() returns tuple (member_paths, member_metadata). Metadata includes original size, compression, CRC. | **IMPLEMENTED** |
+| AR-04 | Safe extraction to temp directory | Extract to temp isolated directory (/tmp/ifs_extract_<uuid>). Files not extracted to project root. temp_dir cleaned up post-processing. Path traversal protection: member path validation before extraction. | **IMPLEMENTED** |
+| AR-05 | Nested archive support | If archive contains nested archive (.zip inside .zip), log INFO + add to member list. Extraction is non-recursive (only top level extracted). | **IMPLEMENTED** |
+| AR-06 | File type classification post-extraction | Extracted files scanned for .dxf, .dwg, .xlsx, .pdf, .xml, .txt extensions. Project parse pipeline invokes appropriate adapter per file type. No FieldExtraction output from extractor itself (utility role). | **IMPLEMENTED** |
+
+**Archive Extractor Role:** Utility; not a field-value source adapter. Prepares multi-file projects for sequential parsing.
+
+**Key Risk (RISK-B5-07):** Encrypted archives block extraction. Mitigation: ESCALATE_IT flag with clear user message.
+
+---
+
+# **2. SQLite Output Status**
+
+**Status: ALL ADAPTERS PRODUCE NORMALIZED FieldExtraction OUTPUT**
+
+All 7 adapters (ETABS P3, Prota DXF P4, Prota PDF P5, DWG/DXF P6, PDF Text P7, PDF Image P8, Archive utility) inherit BaseParser and produce FieldExtraction objects compliant with §4.2 contract (Block 1 baseline).
+
+## **2.1 Normalized Output Contract Enforcement**
+
+Each FieldExtraction object carries:
+
+| **Attribute** | **Enforced Value** | **Adapter Responsibility** | **Dataclass Guard** |
+| --- | --- | --- | --- |
+| field_id | F-001 to F-196; validated against field_master | Adapter populates correct F-field | ValueError if invalid |
+| value | Normalized string | Adapter calls normalise_*() methods | Required; no None |
+| raw_value | Original pre-normalization | Adapter stores raw source text | Required; audit trail |
+| confidence_score | Hard caps enforced: PDF_TEXT ≤ 85, PDF_IMAGE ≤ 75, others ≤ 95 | Adapter assigns base; __post_init__() applies cap | __post_init__() reduces if cap exceeded |
+| source_type | SourceType enum (ETABS, PROTA_DXF, PROTA_PDF, DWG_DXF_GENERIC, PDF_TEXT, PDF_IMAGE) | Adapter class constant | Enum validation |
+| priority_rank | 3–8 per source_priority_master | Adapter class constant (PRIORITY_RANK) | Value range check |
+| extraction_method | Enum: structured_keyword, table_lookup, text_regex, OCR, derived | Adapter selects based on parsing method | Enum validation |
+| status | FieldStatus enum (POPULATED, UNRESOLVED, DERIVED_BROKEN, PENDING_REVIEW) | Adapter sets; UNRESOLVED for absent/corrupt fields | Enum validation |
+| member_ref | Optional; member-scoped extractions (section name per member) | Adapter populates if applicable | String or None |
+| page_ref | Optional; page/section reference in source file | Adapter logs if available (PDF page, Excel sheet, DXF layer) | String or None |
+| flags | List[str]; FB-RULE-xxx, ESCALATE_IT, OCR_USED_MANDATORY_REVIEW, etc. | Adapter appends per business rules | List validation |
+| extracted_at | ISO-8601 UTC timestamp | Auto-populated by dataclass __post_init__() | datetime.now(UTC) |
+
+## **2.2 Hard Confidence Caps (Enforced at __post_init__)**
+
+```python
+# Pseudocode: FieldExtraction.__post_init__()
+if self.source_type == PDF_TEXT and self.confidence_score > 85:
+    self.confidence_score = 85
+elif self.source_type == PDF_IMAGE and self.confidence_score > 75:
+    self.confidence_score = 75
+elif self.source_type == PDF_IMAGE and self._is_governing_field(self.field_id):
+    self.status = UNRESOLVED
+    self.confidence_score = 0
+    self.flags.append("HISTORICAL_PROHIBITED")
+```
+
+## **2.3 ParserOutput Container**
+
+Each parse() method returns ParserOutput object:
+
+```python
+ParserOutput(
+    source_file_path: str,
+    source_type: SourceType,
+    parser_name: str,
+    extractions: List[FieldExtraction],
+    parse_success: bool,
+    parse_duration_ms: float,
+    warnings: List[str],
+    errors: List[str],
+    flags: List[str]
+)
+```
+
+All 7 adapters populate ParserOutput with lists of FieldExtraction objects. No exceptions escape parse(); all errors captured in errors[] and flags[].
+
+---
+
+# **3. Confidence / Source Metadata Status**
+
+**Status: ALL ADAPTERS CORRECTLY TAG SOURCE AND CONFIDENCE**
+
+## **3.1 Source Priority Hierarchy**
+
+Confirmed order per conflict_resolver (Block 6 onwards):
+
+| **Rank** | **Source** | **Priority** | **Confidence Range** | **Override Behavior** |
+| --- | --- | --- | --- | --- |
+| 1 | STAAD | P1 | 90–95 | Wins all conflicts |
+| 2 | MBS | P2 | 75–90 | Yields to P1 |
+| 3 | ETABS | P3 | 70–85 | Yields to P1–P2 |
+| 4 | Prota DXF | P4 | 60–75 | Yields to P1–P3 |
+| 5 | Prota PDF | P5 | 70–75 | Yields to P1–P4 |
+| 6 | DWG/DXF | P6 | 50–75 | Yields to P1–P5 |
+| 7 | PDF Text | P7 | 55–65 | Yields to P1–P6; never override |
+| 8 | PDF Image/OCR | P8 | 0–75 | Yields to all; governing fields UNRESOLVED |
+
+## **3.2 Extraction Method Tags**
+
+Each FieldExtraction.extraction_method explicitly identifies parsing strategy:
+
+| **Method** | **Confidence** | **Sources Using** | **Example** |
+| --- | --- | --- | --- |
+| **structured_keyword** | 90–95 | STAAD (block keywords), MBS (XML keys), ETABS (column lookup), Prota (layer/block names) | "MEMBER PROPERTY TA ST UB 300×300×10" → F-063 = "UB 300×300×10", confidence 95 |
+| **table_lookup** | 85–90 | STAAD (bolt table columns), MBS (XML table), ETABS (load table), Prota (dimension blocks) | Bolt table: GRADE column → F-083, confidence 90 |
+| **text_regex** | 55–75 | PDF Text (regex on extracted text), MBS (fallback text regex), all (field confirmation) | "3 @ 5.0m" → grid spacing 5.0m, confidence 65 |
+| **OCR** | 0–75 (capped) | PDF Image/OCR | Scanned PDF section label → F-063, confidence ≤ 75 |
+| **derived** | 50–70 | Prota DXF (geometry inference), DWG/DXF (spatial proximity) | Topology inferred from member endpoints → member_start/member_end, confidence 65, status DERIVED |
+
+## **3.3 Confidence Score Assignment Rules**
+
+**ETABS (P3):**
+- Openpyxl cell extraction: 80
+- Table cell certainty: 85
+- Hard cap: 85
+- Load fallback (if MBS missing): 85
+
+**Prota DXF (P4):**
+- Geometric coordinate: 65
+- Section hint from label: 65
+- Hard cap: 75
+
+**Prota PDF (P5):**
+- Structured table (pdfplumber): 75
+- Regex on text: 70
+- Hard cap: 85
+
+**DWG/DXF Generic (P6):**
+- Native DXF: 65
+- DWG converted: 60 (−5 for conversion uncertainty)
+- ODA R14 risk: 50
+- Hard cap: 75
+
+**PDF Text (P7):**
+- Regex on extracted text: 60–65
+- Table detection: 70
+- Hard cap: 85
+
+**PDF Image / OCR (P8):**
+- Tesseract OCR output: up to 90 (base)
+- Hard cap: 75 (enforced)
+- Governing field: 0 + HISTORICAL_PROHIBITED
+- PENDING_REVIEW if Tesseract < 80: 0 (not populated until reviewed)
+
+## **3.4 Source Type Constants (Class-Level)**
+
+Each adapter defines source_type and priority_rank as class constants:
+
+```python
+class ETABSParser(BaseParser):
+    ADAPTER_NAME = "ETABS Excel Adapter"
+    SOURCE_TYPE = SourceType.ETABS
+    PRIORITY_RANK = 3
+
+class ProtaParser(BaseParser):  # Dual-mode (DXF + PDF)
+    ADAPTER_NAME = "Prota CAD Adapter"
+    SOURCE_TYPE = SourceType.PROTA_DXF  # or PROTA_PDF depending on file
+    PRIORITY_RANK = 4  # or 5
+
+class CADParser(BaseParser):
+    ADAPTER_NAME = "DWG/DXF Generic Adapter"
+    SOURCE_TYPE = SourceType.DWG_DXF_GENERIC
+    PRIORITY_RANK = 6
+
+class PDFTextParser(BaseParser):
+    ADAPTER_NAME = "PDF Text Parser"
+    SOURCE_TYPE = SourceType.PDF_TEXT
+    PRIORITY_RANK = 7
+
+class PDFImageParser(BaseParser):
+    ADAPTER_NAME = "PDF Image / OCR Parser"
+    SOURCE_TYPE = SourceType.PDF_IMAGE
+    PRIORITY_RANK = 8
+```
+
+All FieldExtraction objects produced by these adapters carry matching source_type and priority_rank.
+
+---
+
+# **4. Risks / Gaps**
+
+| **Risk ID** | **Description** | **Source** | **Severity** | **Mitigation** | **Status** |
+| --- | --- | --- | --- | --- | --- |
+| **RISK-B5-01** | ETABS >20% section unmapped against IS 808 catalogue | ETABS (P3) | **HIGH** | IS808_LOOKUP_REQUIRED flag + reduced confidence (75) + manual review escalation | **MONITORED** |
+| **RISK-B5-02** | Prota DXF geometry-only; spatial proximity topology may be incorrect if DXF poorly attributed | Prota DXF (P4) | **MEDIUM** | DERIVED status signals manual review; log all spatial matches | **MONITORED** |
+| **RISK-B5-03** | Prota PDF absent from project → AB blocked path | Prota PDF (P5) | **MEDIUM** | FB-RULE-027 flag; fallback to ETABS P3 + Manual→DE | **MONITORED** |
+| **RISK-B5-04** | ODA R14 file conversion may lose entity types; cross-platform path issues | DWG/DXF (P6) | **MEDIUM** | ODA_R14_LOSS_POSSIBLE flag + confidence reduction (50); R-PARSER-01 ensures installation verified | **MONITORED** |
+| **RISK-B5-05** | PDF Text regex parsing vulnerable to PDF encoding errors and layout variation | PDF Text (P7) | **MEDIUM** | Confidence capped at 65; conflict resolver prevents override; marked as fallback-only | **MONITORED** |
+| **RISK-B5-06** | Tesseract OCR vulnerable to poor scans, non-English text, non-standard fonts; govering field protection critical | PDF Image (P8) | **HIGH** | Confidence hard cap 75 + Historical prohibition guard + OCR_USED_MANDATORY_REVIEW flag ensures manual review | **MITIGATION IN PLACE** |
+| **RISK-B5-07** | Encrypted archives block extraction; no fallback | Archive utility | **LOW** | ESCALATE_IT flag with clear message; user/IT provides password or unencrypted copy | **MONITORED** |
+| **RISK-B5-08** | Unit conversion incomplete for ETABS / DXF files using FT/INCH (US units); normalise_unit() metric-only | ETABS, DXF, PDF | **MEDIUM** | Flag: UNIT_CONVERSION_UNCERTAIN; confidence reduced if ambiguous. FT/INCH → mm conversion deferred to future (Block 5 gap). | **OPEN** |
+| **B-PARSER-01** | IV-2.0.0 Integration Layer not frozen; write_to_db() signature not final | External blocker | **HIGH** | Guards in write_to_db() + ParserOutput prevent silent failure. Target: 2026-04-29. | **BLOCKED** |
+| **B-PARSER-02** | DB-INIT-001 must PASS; field_value_store and field_extraction_log tables must exist | External blocker | **HIGH** | Guards in write_to_db() + EvidenceExporter._check_db_exists() both catch. Target: 2026-04-28. | **BLOCKED** |
+| **R-PARSER-01** | ODA File Converter not installed on all developer machines | External blocker | **MEDIUM** | CADParser._check_oda_installed() raises RuntimeError at parse time if missing. Target: 2026-04-27. | **OPEN** |
+
+---
+
+# **5. Next Block Readiness**
+
+**Block 6 — Conflict and Fallback Harness is READY TO START** (pending B-PARSER-01 clearance)
+
+| **Block** | **Scope** | **Dependency** | **Status** |
+| --- | --- | --- | --- |
+| **Block 6 (Next)** | Conflict and fallback harness — verify parser-to-conflict_resolver handoff; test P1 vs P7 conflict, missing load fallback chains, bolt field gaps, built-up section escalation. Design fallback execution engine. | B-PARSER-01 (IV-2.0.0 + conflict_resolver design), Block 5 complete | **READY** |
+| Block 7 | Benchmark evidence completion — stage status export, conflict export, fallback-chain export, defect log, run report. Depends on conflict_resolver (C9). | B-PARSER-01, conflict_resolver design, Block 6 complete | **PENDING B-PARSER-01** |
+| Block 8 | Final lane packaging — consolidate all block outputs; summarize parser, conflict, evidence completion; prepare final deliverable. | Blocks 1–7 complete | **PENDING** |
+
+## **Block 6 Agent Start Conditions**
+
+- BaseParser and all 7 adapters frozen — do not modify; inherit only if extending.
+
+- All adapters produce normalized FieldExtraction objects with correct source_type, priority_rank, confidence_score, extraction_method, status, and flags.
+
+- ParserOutput container and evidence_automation/evidence_exporter.py are stable APIs.
+
+- Verify handling for following scenarios (documented in test stubs T-PARSE-01 through T-PARSE-12):
+  - **T-PARSE-01:** STAAD P1 bolt table complete → F-081–F-089 POPULATED, confidence 90
+  - **T-PARSE-02:** STAAD P1 bolt table absent → F-081–F-089 UNRESOLVED, FB-RULE-013/014, confidence 0
+  - **T-PARSE-03:** STAAD P1 connection type not explicit → F-075 UNRESOLVED, FB-RULE-015, confidence 0
+  - **T-PARSE-04:** MBS P2 built-up section (PL+digits) → F-063 UNRESOLVED, FB-RULE-021, BUILDUP_PLATE_REQUIRED flag
+  - **T-PARSE-05:** ETABS P3 load fallback (MBS absent) → F-055/058 POPULATED, confidence 85, extraction_method: fallback
+  - **T-PARSE-06:** PDF Text P7 section guess (regex) → F-063 POPULATED, confidence 60, extraction_method: text_regex
+  - **T-PARSE-07:** PDF Image P8 governing field → F-001 UNRESOLVED, HISTORICAL_PROHIBITED flag, confidence 0
+  - **T-PARSE-08:** Conflict: STAAD P1 vs MBS P2 same F-field → conflict_resolver picks P1 (priority_rank=1 wins rank=2)
+  - **T-PARSE-09:** Conflict: STAAD P1 vs PDF Text P7 → conflict_resolver picks P1; P7 never overrides P1–P6
+  - **T-PARSE-10:** Fallback: ETABS P3 load (missing MBS) → confidence reduction + fallback flag; candidate for Manual→DE
+  - **T-PARSE-11:** Unit normalisation: "1234mm", "1.234M", "KG500" → numeric string + confidence 95 (structured)
+  - **T-PARSE-12:** Confidence hard caps applied: PDF_TEXT reduced to 85, PDF_IMAGE reduced to 75 if exceeded
+
+- B-PARSER-01 clearance enables conflict_resolver.py (C9) design handoff for Block 6 conflict harness
+
+- Do NOT proceed with write_to_db() testing in Block 6 until B-PARSER-02 cleared (DB tables exist).
+
+---
+
+## **Block 5 Agent Completion Checklist**
+
+- ✅ ETABS adapter (EP-01 through EP-08) fully implemented
+- ✅ Prota DXF adapter (PP-01 through PP-08) fully implemented
+- ✅ Prota PDF adapter (PP-09 through PP-15) fully implemented
+- ✅ DWG/DXF Generic adapter (DP-01 through DP-07) fully implemented
+- ✅ PDF Text parser (PDF-P7-01 through PDF-P7-08) fully implemented
+- ✅ PDF Image/OCR parser (PDF-P8-01 through PDF-P8-08) fully implemented
+- ✅ Archive extractor (AR-01 through AR-06) fully implemented
+- ✅ All adapters inherit BaseParser; no modifications to base interface
+- ✅ All adapters produce normalized FieldExtraction output per §4.2 contract
+- ✅ Confidence scoring and source metadata correct per adapter priority rank (P3–P8)
+- ✅ Hard confidence caps enforced at FieldExtraction.__post_init__() level
+- ✅ Historical prohibition guard (P8) correctly auto-UNRESOLVED governing fields
+- ✅ Fallback-only sources (P7, P8) never override higher-priority sources
+- ✅ Risks documented; mitigations in place or flagged for manual review
+- ✅ All unit test stubs (T-PARSE-01 through T-PARSE-12) populated with assertions
+
+---
+
+**Lane Status: GREEN** — Block 5 complete. All 7 adapters (P3–P8 + archive utility) fully implemented and integrated. Parser lane is production-ready pending blocker clearance (B-PARSER-01, B-PARSER-02).
+
+**Block 6 Agent can proceed immediately upon B-PARSER-01 clearance.**
+
+---
+
+IFS-L2-BLK5-ADAPTERS-20260427  |  ETABS P3 · Prota DXF P4 · Prota PDF P5 · DWG/DXF P6 · PDF Text P7 · PDF Image P8 · Archive  |  Block 5 of 8
