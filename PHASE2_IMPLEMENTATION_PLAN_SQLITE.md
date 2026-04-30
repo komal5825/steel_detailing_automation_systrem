@@ -218,11 +218,11 @@ DATABASE_URL=sqlite:///./app/db/steel_detailing.db
 
 ### Hard Gate 3 - Parser And Normalization Gate
 
-- [ ] At least one real sample file parses successfully.
-- [ ] Extracted values are saved in SQLite.
-- [ ] Field traceability is stored.
-- [ ] Normalized field values are available by `project_uuid`.
-- [ ] Parser failures are logged without crashing the whole project.
+- [x] At least one real sample file parses successfully.
+- [x] Extracted values are saved in SQLite.
+- [x] Field traceability is stored.
+- [x] Normalized field values are available by `project_uuid`.
+- [x] Parser failures are logged without crashing the whole project.
 
 **Gate meaning:** Do not start Phase D until raw project files become normalized project data.
 
@@ -234,10 +234,10 @@ DATABASE_URL=sqlite:///./app/db/steel_detailing.db
 
 ## Step 13 - Implement Completeness Checker
 
-- [ ] Load mandatory Phase 2 fields from SQLite.
-- [ ] Check missing, null, invalid, and unresolved fields.
-- [ ] Mark fields as complete, warning, blocker, or manual review.
-- [ ] Store completeness results in SQLite.
+- [x] Load mandatory Phase 2 fields from SQLite.
+- [x] Check missing, null, invalid, and unresolved fields.
+- [x] Mark fields as complete, warning, blocker, or manual review.
+- [x] Store completeness results in SQLite.
 
 **What this does:** Identifies whether the project is ready for AB/GA generation.  
 **Progress it creates:** Prevents drawing generation from starting with missing governing data.
@@ -293,22 +293,22 @@ DATABASE_URL=sqlite:///./app/db/steel_detailing.db
 
 ## Step 17 - Implement AB Generation Agent
 
-- [ ] Load validated field values from SQLite.
-- [ ] Generate anchor bolt layout data.
+- [x] Load validated field values from SQLite.
+- [x] Generate anchor bolt layout data.
 - [ ] Apply template and title block rules.
-- [ ] Save AB output metadata in SQLite.
-- [ ] Save generated files under `data/projects/{project_uuid}/outputs/ab`.
+- [x] Save AB output metadata in SQLite.
+- [x] Save generated files under `data/projects/{project_uuid}/outputs/ab`.
 
 **What this does:** Produces the first controlled Phase 2 drawing output.  
 **Progress it creates:** The project now has a generated AB package ready for validation.
 
 ## Step 18 - Implement GA Generation Agent
 
-- [ ] Load validated field values from SQLite.
-- [ ] Generate GA layout data.
+- [x] Load validated field values from SQLite.
+- [x] Generate GA layout data.
 - [ ] Apply grid, geometry, member, and title block rules.
-- [ ] Save GA output metadata in SQLite.
-- [ ] Save generated files under `data/projects/{project_uuid}/outputs/ga`.
+- [x] Save GA output metadata in SQLite.
+- [x] Save generated files under `data/projects/{project_uuid}/outputs/ga`.
 
 **What this does:** Produces the controlled GA output.  
 **Progress it creates:** Phase 2 now covers both required AB and GA deliverables.
@@ -332,18 +332,18 @@ DATABASE_URL=sqlite:///./app/db/steel_detailing.db
 
 ## Step 20 - Implement AB/GA Validation Agent
 
-- [ ] Validate AB output against rules.
-- [ ] Validate GA output against rules.
+- [x] Validate AB output against rules.
+- [x] Validate GA output against rules.
 - [ ] Run geometry reconciliation checks.
 - [ ] Run cross-output checks between AB and GA.
-- [ ] Store validation pass/fail rows in SQLite.
+- [x] Store validation pass/fail rows in SQLite.
 
 **What this does:** Checks whether generated drawings match the rule database and source project data.  
 **Progress it creates:** Phase 2 can distinguish approved outputs from drafts needing correction.
 
 ## Step 21 - Implement Frontend Stage Status Updates
 
-- [ ] Expose Phase 2 stage statuses through API.
+- [x] Expose Phase 2 stage statuses through API.
 - [ ] Broadcast live status through WebSocket.
 - [ ] Show statuses:
   - pending
@@ -359,11 +359,11 @@ DATABASE_URL=sqlite:///./app/db/steel_detailing.db
 
 ## Step 22 - Implement Final Handoff Package
 
-- [ ] Create Phase 2 handoff summary.
-- [ ] Include AB and GA output links.
-- [ ] Include validation summary.
-- [ ] Include unresolved blockers or manual approvals.
-- [ ] Mark Phase 3 eligibility in SQLite.
+- [x] Create Phase 2 handoff summary.
+- [x] Include AB and GA output links.
+- [x] Include validation summary.
+- [x] Include unresolved blockers or manual approvals.
+- [x] Mark Phase 3 eligibility in SQLite.
 
 **What this does:** Closes Phase 2 with a controlled release package.  
 **Progress it creates:** Phase 3 can start only when AB/GA outputs are valid and traceable.

@@ -40,12 +40,15 @@ class HandoffManager:
             }
             for stage in stages
         ]
-        phase2_complete = any(stage.stage_code == "P2-05" and stage.status == StageStatus.PASSED for stage in stages)
+        stage_status = {stage.stage_code: stage.status for stage in stages}
+        required_phase2_stages = ["P2-01", "P2-02", "P2-03", "P2-04", "P2-05"]
+        phase2_complete = all(stage_status.get(stage_code) == StageStatus.PASSED for stage_code in required_phase2_stages)
         package = {
             "project_id": str(project_id),
             "from_stage": source_stage,
             "to_stage": target_stage,
             "phase3_eligible": phase2_complete,
+            "required_phase2_stages": required_phase2_stages,
             "stages": stage_summary,
             "ab_output_dir": str(project_output_dir(project_id, "ab")),
             "ga_output_dir": str(project_output_dir(project_id, "ga")),

@@ -2,7 +2,7 @@
 
 **Purpose:** Track exactly where each Phase 2 step lives in the project.  
 **How to use:** Mark the status column as done only after code, DB behavior, and verification are complete.  
-**Current position:** Phase C implementation steps are complete. We are now at **Hard Gate 3 / Phase D - Step 13**.
+**Current position:** Parser normalization and MVP downstream agents are implemented. We are now at **Phase D governance hardening**.
 
 Status legend:
 
@@ -26,7 +26,11 @@ Status legend:
 | STAAD parser adapter | Complete |
 | ETABS / Prota / PDF parser adapters | Complete |
 | Field normalization | Complete |
-| Completeness/rules engine | Next |
+| Completeness checker | Complete |
+| AB/GA JSON draft generation | Complete |
+| AB/GA validation shell | Complete |
+| Handoff eligibility guard | Complete |
+| Source conflict/fallback/ODA output hardening | Pending |
 | Completeness/rules engine | Pending |
 | AB/GA generation | Pending |
 | Validation and handoff | Pending |
@@ -47,10 +51,10 @@ GET /api/stages/dependencies/readiness
 ```
 
 **Where we are exactly:**  
-We have completed **Step 1 to Step 12**, passed **Hard Gate 1** and **Hard Gate 2**, and the next implementation task is:
+We have fully completed **Steps 1-13**, plus MVP implementations for **Steps 17, 18, 20, 21, and 22**. Hard Gates 1-3 are functionally satisfied for parser flow, but Phase 2 release is still blocked until governance and true CAD output are hardened.
 
 ```text
-Hard Gate 3 verification, then Phase D - Step 13 - Implement Completeness Checker
+Phase D - Step 14 - Implement Source Priority And Conflict Rules
 ```
 
 ---
@@ -227,13 +231,13 @@ Hard Gate 3 verification, then Phase D - Step 13 - Implement Completeness Checke
 
 | Status | Gate Item | Location |
 |---|---|---|
-| [ ] | At least one real sample parses | `backend/app/parsers/` |
-| [ ] | Extracted values saved | SQLite field value storage |
-| [ ] | Field traceability stored | `backend/app/utils/traceability.py` |
-| [ ] | Normalized values available by project | API/CRUD layer under `backend/app/` |
-| [ ] | Parser failures logged safely | `backend/app/utils/audit_logger.py` |
+| [x] | At least one real sample parses | `backend/app/parsers/` |
+| [x] | Extracted values saved | SQLite field value storage |
+| [x] | Field traceability stored | `backend/app/utils/traceability.py` |
+| [x] | Normalized values available by project | `backend/app/utils/field_dictionary.py`, `backend/app/agents/phase2/p2_01_ingestion.py` |
+| [x] | Parser failures logged safely | `backend/app/agents/phase2/p2_01_ingestion.py` |
 
-**Gate result:** Pending. This is the next gate to work toward.
+**Gate result:** Passed for parser/normalization flow.
 
 ---
 
@@ -243,7 +247,7 @@ Hard Gate 3 verification, then Phase D - Step 13 - Implement Completeness Checke
 
 | Status | Location |
 |---|---|
-| [ ] | `backend/app/agents/phase2/p2_02_completeness.py` |
+| [x] | `backend/app/agents/phase2/p2_02_completeness.py` |
 | [ ] | `backend/app/db/crud/validation.py` |
 | [ ] | `backend/app/schemas/validation.py` |
 
@@ -286,15 +290,15 @@ Hard Gate 3 verification, then Phase D - Step 13 - Implement Completeness Checke
 
 | Status | Location |
 |---|---|
-| [ ] | `backend/app/agents/phase2/p2_03_ab_generation.py` |
-| [ ] | output folder `data/projects/{project_uuid}/outputs/ab/` |
+| [x] | `backend/app/agents/phase2/p2_03_ab_generation.py` |
+| [x] | output folder `data/projects/{project_uuid}/outputs/ab/` |
 
 ## Step 18 - Implement GA Generation Agent
 
 | Status | Location |
 |---|---|
-| [ ] | `backend/app/agents/phase2/p2_04_ga_generation.py` |
-| [ ] | output folder `data/projects/{project_uuid}/outputs/ga/` |
+| [x] | `backend/app/agents/phase2/p2_04_ga_generation.py` |
+| [x] | output folder `data/projects/{project_uuid}/outputs/ga/` |
 
 ## Step 19 - Implement DXF / PDF / DWG Output Flow
 
@@ -312,7 +316,7 @@ Hard Gate 3 verification, then Phase D - Step 13 - Implement Completeness Checke
 
 | Status | Location |
 |---|---|
-| [ ] | `backend/app/agents/phase2/p2_05_abga_validation.py` |
+| [x] | `backend/app/agents/phase2/p2_05_abga_validation.py` |
 | [ ] | `backend/app/agents/support/validator.py` |
 | [ ] | `backend/app/db/crud/validation.py` |
 
@@ -320,7 +324,7 @@ Hard Gate 3 verification, then Phase D - Step 13 - Implement Completeness Checke
 
 | Status | Location |
 |---|---|
-| [ ] | `backend/app/api/stages.py` |
+| [x] | `backend/app/api/stages.py` |
 | [ ] | `backend/app/api/ws.py` |
 | [ ] | frontend status UI under `frontend/` |
 
@@ -328,8 +332,8 @@ Hard Gate 3 verification, then Phase D - Step 13 - Implement Completeness Checke
 
 | Status | Location |
 |---|---|
-| [ ] | `backend/app/orchestrator/handoff_manager.py` |
-| [ ] | `backend/app/api/handoffs.py` |
+| [x] | `backend/app/orchestrator/handoff_manager.py` |
+| [x] | `backend/app/api/handoffs.py` |
 | [ ] | `backend/app/db/crud/handoffs.py` |
 | [ ] | SQLite handoff/release status records |
 
@@ -350,10 +354,11 @@ Hard Gate 3 verification, then Phase D - Step 13 - Implement Completeness Checke
 | Progress Item | Count |
 |---|---:|
 | Total implementation steps | 22 |
-| Completed steps | 12 |
-| Pending steps | 10 |
+| Fully completed steps | 13 |
+| MVP-coded but not release-complete steps | 5 |
+| Pending steps | 4 |
 | Total hard gates | 5 |
 | Passed hard gates | 2 |
 | Pending hard gates | 3 |
 
-**Next exact task:** verify Hard Gate 3, then implement `backend/app/agents/phase2/p2_02_completeness.py`.
+**Next exact task:** implement source priority/conflict resolution and fallback governance before treating generated outputs as releasable.

@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 
 from app.db.crud.field_values import create_extracted_field_values, create_parser_run
 from app.db.crud.stages import update_stage_result
-from app.db.models import FileProcessingStatus, ParserRunStatus, ProjectFile
+from app.db.models import FileProcessingStatus, ParserRunStatus, ProjectFile, StageStatus
 from app.db.session import SessionLocal
 from app.parsers.etabs_parser import EtabsParser
 from app.parsers.mbs_parser import MBSParser
