@@ -176,42 +176,42 @@ DATABASE_URL=sqlite:///./app/db/steel_detailing.db
 
 ## Step 9 - Implement MBS Parser Adapter
 
-- [ ] Parse MBS exports.
-- [ ] Extract building geometry, grids, bays, member data, and project metadata where available.
-- [ ] Save extracted values to SQLite.
-- [ ] Log source traceability for every field.
+- [x] Parse MBS exports.
+- [x] Extract building geometry, grids, bays, member data, and project metadata where available.
+- [x] Save extracted values to SQLite.
+- [x] Log source traceability for every field.
 
 **What this does:** Turns MBS project data into normalized Phase 2 records.  
 **Progress it creates:** MBS projects can feed AB and GA generation.
 
 ## Step 10 - Implement STAAD Parser Adapter
 
-- [ ] Parse `.std` files.
-- [ ] Extract nodes, members, sections, material references, supports, and loads where available.
-- [ ] Save extracted values to SQLite.
-- [ ] Log parser confidence.
+- [x] Parse `.std` files.
+- [x] Extract nodes, members, sections, material references, supports, and loads where available.
+- [x] Save extracted values to SQLite.
+- [x] Log parser confidence.
 
 **What this does:** Reads STAAD model data as a high-priority engineering source.  
 **Progress it creates:** Phase 2 can use structural model data for validation and generation.
 
 ## Step 11 - Implement ETABS / Prota / PDF Parser Adapters
 
-- [ ] Parse ETABS Excel exports.
-- [ ] Parse Prota/DXF/PDF sources where available.
-- [ ] Extract text/table data from PDFs.
-- [ ] Route scanned PDFs to OCR if required.
-- [ ] Save extracted values and confidence in SQLite.
+- [x] Parse ETABS Excel exports.
+- [x] Parse Prota/DXF/PDF sources where available.
+- [x] Extract text/table data from PDFs.
+- [x] Route scanned PDFs to OCR if required.
+- [x] Save extracted values and confidence in SQLite.
 
 **What this does:** Adds support for secondary and alternate project sources.  
 **Progress it creates:** Phase 2 becomes source-flexible instead of depending on one software format.
 
 ## Step 12 - Implement Field Normalization Layer
 
-- [ ] Map parser outputs to standard field codes.
-- [ ] Normalize units.
-- [ ] Normalize controlled vocabulary values.
-- [ ] Resolve aliases using the alias/field dictionary tables.
-- [ ] Store normalized results in SQLite.
+- [x] Map parser outputs to standard field codes.
+- [x] Normalize units.
+- [x] Normalize controlled vocabulary values.
+- [x] Resolve aliases using the alias/field dictionary tables.
+- [x] Store normalized results in SQLite.
 
 **What this does:** Converts raw parser values into standard project fields.  
 **Progress it creates:** Downstream completeness checks and drawing generation can use consistent data.

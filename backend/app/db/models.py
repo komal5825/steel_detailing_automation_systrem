@@ -53,8 +53,14 @@ class StageStatus(str, enum.Enum):
 
 class FileProcessingStatus(str, enum.Enum):
     PENDING = "PENDING"
+    PARSED = "PARSED"
     EXTRACTED = "EXTRACTED"
     UNSUPPORTED = "UNSUPPORTED"
+    FAILED = "FAILED"
+
+
+class ParserRunStatus(str, enum.Enum):
+    SUCCESS = "SUCCESS"
     FAILED = "FAILED"
 
 class Project(Base):
@@ -102,6 +108,36 @@ class ProjectFile(Base):
     created_at = Column(DateTime, default=datetime.utcnow)
 
     project = relationship("Project", back_populates="files")
+
+
+class ParserRun(Base):
+    __tablename__ = "parser_runs"
+
+    id = Column(GUID(), primary_key=True, default=uuid.uuid4)
+    project_id = Column(GUID(), ForeignKey("projects.id"), nullable=False)
+    project_file_id = Column(GUID(), ForeignKey("project_files.id"), nullable=False)
+    parser_name = Column(String(100), nullable=False)
+    status = Column(SAEnum(ParserRunStatus), nullable=False)
+    confidence = Column(Integer, nullable=False, default=0)
+    message = Column(Text)
+    created_at = Column(DateTime, default=datetime.utcnow)
+
+
+class ExtractedFieldValue(Base):
+    __tablename__ = "extracted_field_values"
+
+    id = Column(GUID(), primary_key=True, default=uuid.uuid4)
+    project_id = Column(GUID(), ForeignKey("projects.id"), nullable=False)
+    project_file_id = Column(GUID(), ForeignKey("project_files.id"), nullable=False)
+    parser_run_id = Column(GUID(), ForeignKey("parser_runs.id"), nullable=False)
+    field_code = Column(String(100), nullable=False)
+    field_name = Column(String(255), nullable=False)
+    raw_value = Column(Text, nullable=False)
+    normalized_value = Column(Text, nullable=False)
+    unit = Column(String(50))
+    source_path = Column(String(1000), nullable=False)
+    confidence = Column(Integer, nullable=False, default=0)
+    created_at = Column(DateTime, default=datetime.utcnow)
 
 class Handoff(Base):
     __tablename__ = "handoffs"

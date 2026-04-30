@@ -8,9 +8,12 @@ class Settings(BaseSettings):
     chroma_path: str = "./data/chromadb"
     temp_path: str = "./data/temp"
     log_base_path: str = "./data/logs"
+    master_db_path: str = "../DB/master_db.db"
 
     # CAD Tools
     oda_path: str = r"C:\Program Files\ODA\ODAFileConverter\ODAFileConverter.exe"
+    unrar_path: str = r"C:\Program Files\WinRAR\UnRAR.exe"
+    tesseract_path: str = ""
 
     # Database
     database_url: str = "sqlite:///./app/db/steel_detailing.db"
