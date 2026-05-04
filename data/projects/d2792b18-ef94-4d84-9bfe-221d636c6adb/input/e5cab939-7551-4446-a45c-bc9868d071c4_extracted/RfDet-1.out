@@ -1,0 +1,1619 @@
+*===============================================================================
+*C08-033             Rigid Frame Detailing Input            23/APR/2026  3:18pm
+*===============================================================================
+ 
+*( 1)JOBID:
+    'C08-033                                 '
+ 
+*( 2)FRAME OPTIONS:
+* -----Frame----     Col     Raf   Design
+* Id  Type  Quan    Shape   Shape   Code
+   1  'RFE'   2      'T'     'H '   'WS'
+ 
+*( 3)BUILDING LAYOUT:
+*                               Left_Endwall    Right_Endwall     Wall
+* Type     Width      Length   Exp     Offset   Exp    Offset    Angle
+ 'FF-'   61000.0     45500.0  'Y-:-'   380.00  'Y-:-'  380.00   0.0000
+ 
+*( 4)SURFACE SHAPE:
+*No.    X_Coord   Y_Coord   Offset  Opt
+   4        0.0    7000.0   150.00  '-'
+        30500.0   10050.0   200.00  '-'
+        61000.0    7000.0   200.00  '-'
+        61000.0       0.0   150.00  '-'
+ 
+*( 5)MEMBER DEPTHS:
+*Surf  -----Depth----  --Interior_Depths--
+* Id    Start     End  No.  Locate   Depth
+   1   250.00  400.00   0
+   2   500.00 1041.40   5   3636.1  600.00
+                            9652.1  750.00
+                           15652.1  700.00
+                           21597.5  500.00
+                           27613.5  750.00
+   3  1041.40  500.00   5   3038.6  750.00
+                            9054.6  500.00
+                           15000.0  700.00
+                           21000.0  750.00
+                           27016.0  600.00
+   4   400.00  250.00   0
+ 
+*( 6)SEGMENT PLATES:
+*    Surf Mem Seg      Seg   Member    Flange     Plate_Thickness
+*No.  Id   Id  Id   Length   Part       Width     Web  OS_Flg  IS_Flg
+  14   1    1   1      0.0  '--------'  140.0    4.00    5.00    8.00
+       2    2   2      0.0  '--------'  160.0    5.00    5.00    5.00
+       2    3   3      0.0  '--------'  160.0    5.00    6.00    5.00
+       2    4   4      0.0  '--------'  140.0    5.00    8.00    5.00
+       2    5   5      0.0  '--------'  185.0    5.00    8.00    6.00
+       2    6   6      0.0  '--------'  185.0    5.00    6.00    8.00
+       2    7   7      0.0  '--------'  225.0    6.00    8.00    8.00
+       3    8   8      0.0  '--------'  225.0    6.00    8.00    8.00
+       3    9   9      0.0  '--------'  185.0    5.00    6.00    8.00
+       3   10  10      0.0  '--------'  185.0    5.00    8.00    6.00
+       3   11  11      0.0  '--------'  140.0    5.00    8.00    5.00
+       3   12  12      0.0  '--------'  160.0    5.00    6.00    5.00
+       3   13  13      0.0  '--------'  160.0    5.00    5.00    5.00
+       4   14  14      0.0  '--------'  140.0    4.00    5.00    8.00
+ 
+*( 7)INTERIOR COLUMNS:
+*No. Col Col  Col       Col       Col ------Cap_Plate------ ----------Cap_Bolt---------  Rafter
+*Col Id  Typ  Part      Rot    Locate Type Opt  Width Thick   Dia Row Space  Gage Gage2    Opt
+  1   1  'S' '--------' 'N'   30500.0 'FS' '2'  200.0 16.00 20.00  4  100.0 100.0   0.0    '-'
+ 
+*( 8)TAPERED INTERIOR COLUMNS
+*Col   Col   No.    Start   Depth   Depth    Web   Flange  OS_Flg  IS_Flg
+* Id  Shape  Mem   Locate   Start    End    Thick  Width   Thick    Thick
+   1   'C'    1       0.0  203.20  203.20    5.00 200.00    12.00   12.00
+ 
+*( 9)SPLICES:
+*Surf     --------Splice-------   ---Plate----  ---------Bolt---------
+* Id  No. Id   Locate Type  Opt   Width  Thick    Dia Row Space   Gage
+   1   0
+   2   4   1      0.0 'HSS' '-'  200.00   16.0  20.00  2 100.00 100.00
+                                                20.00  2 100.00 100.00
+           2   9652.1 '-SS' '-'  200.00   16.0  20.00  2 100.00 100.00
+                                                20.00  2 100.00 100.00
+           3  15652.1 '-SS' '-'  200.00   16.0  20.00  2 100.00 100.00
+                                                20.00  2 100.00 100.00
+           4  27613.5 '-SS' '-'  225.00   16.0  20.00  2 100.00 100.00
+                                                20.00  2 100.00 100.00
+   3   3   5   3038.6 '-SS' '-'  225.00   16.0  20.00  2 100.00 100.00
+                                                20.00  2 100.00 100.00
+           6  15000.0 '-SS' '-'  200.00   16.0  20.00  2 100.00 100.00
+                                                20.00  2 100.00 100.00
+           7  21000.0 '-SS' '-'  200.00   16.0  20.00  2 100.00 100.00
+                                                20.00  2 100.00 100.00
+   4   1   8      0.0 'HSS' '-'  200.00   16.0  20.00  2 100.00 100.00
+                                                20.00  2 100.00 100.00
+ 
+*(10)BASE PLATE:
+*                                            --------------Bolts--------------
+*               -----------Plate-----------          Row       Space
+*Id  Type  Opt  Width Length  Thick    Elev     Dia In Out   Flg    Out   Gage
+  1  'P '  '-'    200  300.0  16.00     0.0   20.00  2  0  100.0    0.0  100.0
+  2  'P '  '-'    200  300.0  16.00     0.0   20.00  2  0  100.0    0.0  100.0
+  3  'P '  '-'    200  300.0  16.00     0.0   20.00  2  0  100.0    0.0  100.0
+ 
+*(11)SIDEWALL GIRTS:
+*Surf                              Bay  No.
+* Id  Type  Offset Project     Lap  Id Girt  Locate Project Type Rot Opt  Part
+   1  'ZB'    0.00    0.00   660.0   1   2   3680.0    0.00 'ZB' 'D' '-' '150Z15  '
+                                             5180.0    0.00 'ZB' 'D' '-' '150Z15  '
+   1  'ZB'    0.00    0.00   660.0   6   2   3680.0    0.00 'ZB' 'D' '-' '150Z15  '
+                                             5180.0    0.00 'ZB' 'D' '-' '150Z15  '
+   4  'ZB'    0.00    0.00   660.0   6   2   3680.0    0.00 'ZB' 'D' '-' '150Z15  '
+                                             5180.0    0.00 'ZB' 'D' '-' '150Z15  '
+   4  'ZB'    0.00    0.00   660.0   1   2   3680.0    0.00 'ZB' 'D' '-' '150Z15  '
+                                             5180.0    0.00 'ZB' 'D' '-' '150Z15  '
+ 
+*(12)ENDWALL/PARTITION GIRTS:
+*Wall                        No.   Bay  No.
+* Id  Type  Offset Project   Bay    Id Girt  Locate Project Type Rot Opt  Part
+   1  'ZB'    0.00    0.00    8      1   3   3680.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             5180.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             6680.0    0.00 'ZB' 'D' '-' '200Z15  '
+ 
+                                     2   3   3680.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             5180.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             6680.0    0.00 'ZB' 'D' '-' '200Z15  '
+ 
+                                     3   4   3680.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             4550.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             5180.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             6680.0    0.00 'ZB' 'D' '-' '200Z15  '
+ 
+                                     4   5   3680.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             4550.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             5180.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             6680.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             8180.0    0.00 'ZB' 'D' '-' '200Z15  '
+ 
+                                     5   5   3680.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             4550.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             5180.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             6680.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             8180.0    0.00 'ZB' 'D' '-' '200Z15  '
+ 
+                                     6   4   3680.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             4550.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             5180.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             6680.0    0.00 'ZB' 'D' '-' '200Z15  '
+ 
+                                     7   3   3680.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             5180.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             6680.0    0.00 'ZB' 'D' '-' '200Z15  '
+ 
+                                     8   3   3680.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             5180.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             6680.0    0.00 'ZB' 'D' '-' '200Z15  '
+ 
+   3  'ZB'    0.00    0.00    8      1   3   3680.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             5180.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             6680.0    0.00 'ZB' 'D' '-' '200Z15  '
+ 
+                                     2   3   3680.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             5180.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             6680.0    0.00 'ZB' 'D' '-' '200Z15  '
+ 
+                                     3   4   3680.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             4550.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             5180.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             6680.0    0.00 'ZB' 'D' '-' '200Z15  '
+ 
+                                     4   5   3680.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             4550.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             5180.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             6680.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             8180.0    0.00 'ZB' 'D' '-' '200Z15  '
+ 
+                                     5   5   3680.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             4550.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             5180.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             6680.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             8180.0    0.00 'ZB' 'D' '-' '200Z15  '
+ 
+                                     6   4   3680.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             4550.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             5180.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             6680.0    0.00 'ZB' 'D' '-' '200Z15  '
+ 
+                                     7   3   3680.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             5180.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             6680.0    0.00 'ZB' 'D' '-' '200Z15  '
+ 
+                                     8   3   3680.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             5180.0    0.00 'ZB' 'D' '-' '200Z15  '
+                                             6680.0    0.00 'ZB' 'D' '-' '200Z15  '
+ 
+ 
+*(13)PURLINS:
+*Surf
+* Id   Type  Part       Offset  Project     Lap
+   2   'ZB' '200Z18'      0.00     0.00   330.0
+   2   'ZB' '200Z18'      0.00     0.00   330.0
+   3   'ZB' '200Z18'      0.00     0.00   330.0
+   3   'ZB' '200Z18'      0.00     0.00   330.0
+ 
+*(14)PURLIN LOCATION:
+*Surf    Peak
+* Id    Space  No.  Locate
+   2    300.0   21   352.1   1852.1   3352.1   4852.1   6352.1   7852.1   9352.1
+                   10852.1  12352.1  13852.1  15352.1  16852.1  18352.1  19852.1
+                   21352.1  22852.1  24352.1  25852.1  27352.1  28852.1  30352.1
+   2    300.0   21   352.1   1852.1   3352.1   4852.1   6352.1   7852.1   9352.1
+                   10852.1  12352.1  13852.1  15352.1  16852.1  18352.1  19852.1
+                   21352.1  22852.1  24352.1  25852.1  27352.1  28852.1  30352.1
+   3    300.0   21   300.0   1800.0   3300.0   4800.0   6300.0   7800.0   9300.0
+                   10800.0  12300.0  13800.0  15300.0  16800.0  18300.0  19800.0
+                   21300.0  22800.0  24300.0  25800.0  27300.0  28800.0  30300.0
+   3    300.0   21   300.0   1800.0   3300.0   4800.0   6300.0   7800.0   9300.0
+                   10800.0  12300.0  13800.0  15300.0  16800.0  18300.0  19800.0
+                   21300.0  22800.0  24300.0  25800.0  27300.0  28800.0  30300.0
+ 
+*(15)EAVE STRUT, GUTTER, PANEL:
+*Surf  Eave   Eave       Bolt  Bolt  ---Gutter--  SSeam
+* Id   Type   Part        Dia   Row  Type  Width  Roof   DtBolt
+   2   'ZB' '200Z18'    12.00    4   'Y'    0.00   'N'      77
+   3   'ZB' '200Z18'    12.00    4   'Y'    0.00   'N'      77
+ 
+*(16)PARTIAL WALL:
+*Surf  Base        Top
+* Id   Part        Part         Height  Use
+   1  '--------'  '--------'       0.0  '-'
+   4  '--------'  '--------'       0.0  '-'
+ 
+*(17)FLANGE BRACES:
+*Surf
+* Id   No.  Loc  Type  Offset  Opt  Ref
+   1    0
+   1    1     1   'A'  330.00  '-' '-----'
+   2    0
+   2   13     2   'A'  660.00  '-' '-----'
+              4   'A'  660.00  '-' '-----'
+              5   'A'  660.00  '-' '-----'
+              6   'A'  660.00  '-' '-----'
+              8   'A'  660.00  '-' '-----'
+             10   'A'  660.00  '-' '-----'
+             11   'A'  660.00  '-' '-----'
+             13   'A'  660.00  '-' '-----'
+             15   'A'  660.00  '-' '-----'
+             16   'A'  660.00  '-' '-----'
+             18   'A'  660.00  '-' '-----'
+             20   'A'  660.00  '-' '-----'
+             21   'B'  960.00  '-' '-----'
+   3    0
+   3   13     1   'B'  960.00  '-' '-----'
+              2   'A'  660.00  '-' '-----'
+              4   'A'  660.00  '-' '-----'
+              6   'A'  660.00  '-' '-----'
+              7   'A'  660.00  '-' '-----'
+              9   'A'  660.00  '-' '-----'
+             11   'A'  660.00  '-' '-----'
+             12   'A'  660.00  '-' '-----'
+             14   'A'  660.00  '-' '-----'
+             16   'A'  660.00  '-' '-----'
+             17   'A'  660.00  '-' '-----'
+             18   'A'  660.00  '-' '-----'
+             20   'A'  660.00  '-' '-----'
+   4    0
+   4    1     1   'A'  330.00  '-' '-----'
+ 
+*(18)PURLIN ANTI-ROLL:
+*      Line  Surf           Roll      No.
+* No.   Id    Id  Opt  Rot   Id     Purlin  Purlin_Id
+   0
+ 
+*(19)ROOF DIAGONAL BRACING:
+*     Wall  Bay    Adj     Max    No.   Attach  Brace  Brace      Connect   Brace
+*No.   Id    Id   Bays     Bay  Attach  Offset  Type   Part       Opt  Id   Force
+  1     1     6     1   6970.0     8       0.0  'R'   'ROD20   '  '-'   1   19.13
+                                        7813.1  'R'   'ROD20   '  '-'   2   15.32
+                                       15275.9  'R'   'ROD20   '  '-'   3   10.24
+                                       22738.7  'R'   'ROD20   '  '-'   4    3.58
+                                       30500.0  'R'   'ROD20   '  '-'   5    3.58
+                                       38261.3  'R'   'ROD20   '  '-'   6   10.24
+                                       45724.1  'R'   'ROD20   '  '-'   7   15.32
+                                       53186.9  'R'   'ROD20   '  '-'   8   19.13
+ 
+*(20)WALL DIAGONAL BRACING:
+*Wall No.   Attach Bay   Adj     Max   No.  Level   Level  Brace  Brace      Connect  Brace
+* Id  Bay   Offset  Id   Bay     Bay  Level Type   Height  Type   Part       Opt  Id  Force
+   2    1      0.0   1    1   6970.0    1    'B'   7000.0  'R'   'ROD20   '  '-'   9  21.55
+   4    1      0.0   1    1   6970.0    1    'B'   7000.0  'R'   'ROD20   '  '-'  10  21.55
+   5    0
+ 
+*(21)WIND BENT:
+*     Wall Roof Frame
+*No.   Id   Bay  Side   Offset    Elev   Height   Part
+   0
+ 
+*(22)WIND COLUMN:
+*     Wall Roof  Roof
+*No.   Id   Bay  Side   Offset    Elev   Height   Part
+   0
+ 
+*(23)ENDWALL/PARTITION COLUMNS & RAFTERS:
+*       Column   ----------Column-----------   -------Rafter------
+*No.    Locate   Part       Rot  Opt    Elev   Part       Rot  Opt
+  9      150.0  '--------'  'N'  '-'     0.0  '--------'  '-'  '-'
+        7400.0  'MB225'     'N'  '-'     0.0  '--------'  '-'  '-'
+       15100.0  'MB225'     'N'  '-'     0.0  '--------'  '-'  '-'
+       22800.0  'MB225'     'N'  '-'     0.0  '--------'  '-'  '-'
+       30500.0  'MB225'     'N'  '-'     0.0  '--------'  '-'  '-'
+       38200.0  'MB225'     'N'  '-'     0.0  '--------'  '-'  '-'
+       45900.0  'MB225'     'N'  '-'     0.0  '--------'  '-'  '-'
+       53600.0  'MB225'     'N'  '-'     0.0  '--------'  '-'  '-'
+       60850.0  '--------'  'N'  '-'     0.0  '--------'  '-'  '-'
+  9      150.0  '--------'  'N'  '-'     0.0  '--------'  '-'  '-'
+        7400.0  'MB225'     'N'  '-'     0.0  '--------'  '-'  '-'
+       15100.0  'MB225'     'N'  '-'     0.0  '--------'  '-'  '-'
+       22800.0  'MB225'     'N'  '-'     0.0  '--------'  '-'  '-'
+       30500.0  'MB225'     'N'  '-'     0.0  '--------'  '-'  '-'
+       38200.0  'MB225'     'N'  '-'     0.0  '--------'  '-'  '-'
+       45900.0  'MB225'     'N'  '-'     0.0  '--------'  '-'  '-'
+       53600.0  'MB225'     'N'  '-'     0.0  '--------'  '-'  '-'
+       60850.0  '--------'  'N'  '-'     0.0  '--------'  '-'  '-'
+ 
+*(24)BEARING STIFFENERS:
+*        --Locate--                                       Min
+*No. Id  Use     Id   Offset  Opt  Qty  Width   Thick  Length
+  3   1 'CORNER'  1      0.0  '-'   1    70.0    8.00    0.00
+      2 'CORNER'  2  61000.0  '-'   1    70.0    8.00    0.00
+      3 'COLUMN'  1  30500.0  '-'   2   100.0   10.00    0.00
+ 
+*(25)TRANSVERSE STIFFENERS:
+*   Surf   No.    Stiff   Stiff   Stiff  Stiff
+*    Id   Stiff    Loc     Quan   Width  Thick
+      1      0
+      2      0
+      3      0
+      4      0
+ 
+*(26)CRANE LAYOUT:
+*         Bay_Id  Crane  ------------Runway_Location------------  ---Rail---
+*No.  Id  Lt  Rt   Type  Orn   Height  OffsetL     Span  OffsetR  Type Depth
+  0
+ 
+*(27)CRANE RUNWAY/SUPPORT COLUMN:
+*     ---------Runway---------   ------------Support_Column-----------
+*Id   Type  Depth WidthT WidthB  Type  Rot  Depth   Dia   Space   Gage
+ 
+*(28)CRANE BRACKET:
+*Crane  Bracket     -----Web---- -Top_Flange-  -Bot_Flange-  ---Flange_Bolts---
+*  Id     Part      Depth  Thick  Width Thick   Width Thick   Dia   Space  Gage
+ 
+*(29)CRANE STIFFENER:
+*Crane  ---Web_Bot--  --Web_Diag--  ---Web_Top--  --Web_Beam--   Bracket_Web  Brace  Bracket
+*  Id   Width  Thick  Width  Thick  Width  Thick  Width  Thick  Width  Thick  Type   Option
+ 
+*(30)CRANE BRACING/SUPPORT COLUMN ANGLES:
+*Crane  -------Bracing------   Long_Brace  Lateral    Column_Angle
+*  Id   Type  Part      Conn   Type   Dia  Angle      No. Location
+ 
+*(31)EXTENSION LAYOUT
+*    Ext  Wall                   --Bay_Id-   -Edge_Extend-
+*No.  Id   Id  Type  Opt  Mount  Start End    Left   Right
+  0
+ 
+*(32)EXTENSION SIZE:
+*Ext  ----Horizontal_Size---  ---------Vertical_Size---------  --Orient--
+* Id    Elev   Width   Slope     Elev  Height   Slope Project  Beam Panel
+ 
+*(33)EXTENSION BEAM:
+*    Ext  Frame            Beam      Beam  ---------Web-------- ------Flange-------   Use    Use   --Connect-
+*No.  Id   Line  Use       Part      Shape Depth1  Depth2 Thick Width  Thick  Thick Bracket Stiff  Id  Height
+  0
+ 
+*(34)EXTENSION SPLICE:
+*Ext Frame                 -----Plate_Size-----  -------------------Bolts-------------------  --Connect-
+* Id  Line  Use      Type  Width  Thick  Length    Dia   Gage RowT RowB SpaceT SpaceB DtBolt  Id  Height
+ 
+*(35)EXTENSION PURLINS:
+*Ext                Peak      Set
+* Id  Type  Row    Space    Space    Part
+ 
+*(36)WALL/ROOF STRUTS:
+*---Strut-- Surf Bay_Id   Attach Opt                        ---------------End_Plate--------------         Brace
+*No Id Type Wall St End   Locate Id   Part       Rot Offset Type Thick  Width  Dia  Row Quan  Gage Dt_Bolt  Opt
+  0
+ 
+*(37)STRUT BOLTS:
+*     Bolt Strut  Wall Frame  Attach  Option  Bolt_Size   Dt_Bolt
+*No.   Id  Type   Surf  Id    Locate    Id      Dia Quan    Line
+   2    1   'E'     2    1     61000     1    12.00   4       77
+        2   'E'     4    7         0     1    12.00   4       77
+ 
+ 
+*(38)WELDS:
+*     -------Plate------   ---OS_Flange---  ---IS_Flange---  ------Web------
+*No.  Type        Id Loc    Size Type Note   Size Type Note   Size Type Note
+  38  'CAP     '   1   1    8.00 'F2' '--'   8.00 'F2' '--'   4.00 'F2' '--'
+      'BASE    '   1   1    4.00 'F2' '--'   4.00 'F2' '--'   4.00 'F2' '--'
+      'BASE    '   2   1    4.00 'F2' '--'   4.00 'F2' '--'   4.00 'F2' '--'
+      'BASE    '   3   1    5.00 'F2' '--'   5.00 'F2' '--'   4.00 'F2' '--'
+      'SPLICE  '   1   1    5.00 'G1' '--'   5.00 'F2' '--'   4.00 'F2' '--'
+      'SPLICE  '   1   2    5.00 'G1' '--'   4.00 'G1' '--'   4.00 'F2' '--'
+      'SPLICE  '   2   1    4.00 'F2' '--'   4.00 'F2' '--'   4.00 'F2' '--'
+      'SPLICE  '   2   2    4.00 'F2' '--'   4.00 'F2' '--'   4.00 'F2' '--'
+      'SPLICE  '   3   1    4.00 'F2' '--'   5.00 'F2' '--'   4.00 'F2' '--'
+      'SPLICE  '   3   2    4.00 'F2' '--'   5.00 'F2' '--'   4.00 'F2' '--'
+      'SPLICE  '   4   1    5.00 'F2' '--'   4.00 'F2' '--'   4.00 'F2' '--'
+      'SPLICE  '   4   2    5.00 'F2' '--'   4.00 'F2' '--'   4.00 'F2' '--'
+      'SPLICE  '   5   1    5.00 'F2' '--'   4.00 'F2' '--'   4.00 'F2' '--'
+      'SPLICE  '   5   2    5.00 'F2' '--'   4.00 'F2' '--'   4.00 'F2' '--'
+      'SPLICE  '   6   1    4.00 'F2' '--'   5.00 'F2' '--'   4.00 'F2' '--'
+      'SPLICE  '   6   2    4.00 'F2' '--'   5.00 'F2' '--'   4.00 'F2' '--'
+      'SPLICE  '   7   1    4.00 'F2' '--'   4.00 'F2' '--'   4.00 'F2' '--'
+      'SPLICE  '   7   2    4.00 'F2' '--'   4.00 'F2' '--'   4.00 'F2' '--'
+      'SPLICE  '   8   1    5.00 'G1' '--'   4.00 'G1' '--'   4.00 'F2' '--'
+      'SPLICE  '   8   2    5.00 'G1' '--'   5.00 'F2' '--'   4.00 'F2' '--'
+      'STIFF_B '   1   1    8.00 'F2' '--'   8.00 'F2' '--'   4.00 'F2' '--'
+      'STIFF_B '   2   1    8.00 'F2' '--'   8.00 'F2' '--'   4.00 'F2' '--'
+      'STIFF_B '   3   1   10.00 'F2' '--'  10.00 'F2' '--'   4.00 'F2' '--'
+      'SEGMENT '   1   1    4.00 'F1' '--'   4.00 'F1' '--'   0.00 '-1' '--'
+      'SEGMENT '   2   1    4.00 'F1' '--'   4.00 'F1' '--'   0.00 '-1' '--'
+      'SEGMENT '   3   1    4.00 'F1' '--'   4.00 'F1' '--'   0.00 '-1' '--'
+      'SEGMENT '   4   1    4.00 'F1' '--'   4.00 'F1' '--'   0.00 '-1' '--'
+      'SEGMENT '   5   1    4.00 'F1' '--'   4.00 'F1' '--'   0.00 '-1' '--'
+      'SEGMENT '   6   1    4.00 'F1' '--'   4.00 'F1' '--'   0.00 '-1' '--'
+      'SEGMENT '   7   1    4.00 'F1' '--'   4.00 'F1' '--'   0.00 '-1' '--'
+      'SEGMENT '   8   1    4.00 'F1' '--'   4.00 'F1' '--'   0.00 '-1' '--'
+      'SEGMENT '   9   1    4.00 'F1' '--'   4.00 'F1' '--'   0.00 '-1' '--'
+      'SEGMENT '  10   1    4.00 'F1' '--'   4.00 'F1' '--'   0.00 '-1' '--'
+      'SEGMENT '  11   1    4.00 'F1' '--'   4.00 'F1' '--'   0.00 '-1' '--'
+      'SEGMENT '  12   1    4.00 'F1' '--'   4.00 'F1' '--'   0.00 '-1' '--'
+      'SEGMENT '  13   1    4.00 'F1' '--'   4.00 'F1' '--'   0.00 '-1' '--'
+      'SEGMENT '  14   1    4.00 'F1' '--'   4.00 'F1' '--'   0.00 '-1' '--'
+      'COLUMN  '   1   1    4.00 'F1' '--'   4.00 'F1' '--'   0.00 '-1' '--'
+ 
+ 
+*(39)SOLDIER COLUMNS:
+*    Wall  Column     ----Rafter---  ---Splice--   --------Brace-------                   Max
+*No.  Id   Part       Part      Opt  Type    Dia   Type  Part      Conn  Attach  Opt     Girt
+  0
+ 
+*(40)SPECIAL FAB DATA
+*      Piece  Piece
+* No.   Id     Key
+   0
+ 
+*(41)FRAME LINES:
+*   Build  Total    No.   Line
+*  Length   Line   Line    Id     Offset
+  45500.0     7      2      1      380.0
+                            7    45120.0
+ 
+ 
+*(42)GIRT STRAPS:
+*Ew         Strap  Strap
+*Id   No.    Dia   Location
+  1     0    0.00
+  3     0    0.00
+ 
+*(43)WELDED CONNECTION PLATES:
+*       Col    Col      Beam    Beam  ---Plate----  ---------Bolts---------
+* No.    Id  Attach   Height  Offset  Width  Thick    Dia Row SpaceV SpaceH
+   0
+ 
+*(44)COLUMN HOLES:
+*    Line Col                                                         ----Hole---
+*No.  Id   Id  Use    Height  Orn    Dia  Length   Gage  Ref  Offset  No.  Locate
+   0
+ 
+*(45)RAFTER HOLES:
+*    Line                                                             ----Hole---
+*No.  Id       Use    Locate  Orn    Dia  Length   Gage  Ref  Offset  No.  Locate
+   0
+ 
+*(46)JACK BEAM LAYOUT:
+*      Jack  --Bay_Id-      Beam    Beam  Beam
+* No.   Id   Start End    Offset  Height  Type
+   0
+ 
+*(47)JACK BEAM CONNECTIONS:
+*Jack  --Left_EP-  -Right_EP-  Stub  ---L_FlgBrc--  ---R_FlgBrc--
+* Id   Type  Conn  Type  Conn  Conn   Width    Dia   Width    Dia
+ 
+*(48)ADDITIONAL COLUMNS:
+*                                              Conn_Id
+*No.  Id  Type  Rot  Opt  Part           Elev  Bot Top
+  0
+ 
+*(49)ROOF OPENING LAYOUT:
+*   Open  -Location-     Frame --Surface-- ----Bay----                     Ref
+*No. Id   Use     Id Opt  Type Id   Offset Id   Offset    Width   Length   Id
+   0
+ 
+*(50)ROOF OPENING FRAMING:
+*    Mem Open     Bay  --Surface--  ---------Member--------  Frame_Opt   Frame_Id  Connect_Id
+*No.  Id  Id  Use  Id  Id   Offset  Type Opt  Rot  Part      Start End  Start End  Start  End
+   0
+ 
+*(51)ADDITIONAL PURLINS:
+*         Surf Bay Purl                                   ---Extension---   Frame_Opt -Frame_Id-  Connect_Id
+*No.  Id   Id   Id  Id    Offset  Type Rot Opt  Part         Left   Right  Left Right Left Right  Left Right
+   0
+ 
+*(52)CONNECTIONS:
+*       ---------Plate---------   -----Plate_Size----- ----------------------Bolts---------------------- ---Holes---
+*No. Id Type  Use        Id Loc   Width  Length  Thick    Dia Row1 Row2 Space1 Space2  Gage Gage2 DtBolt No.  Locate
+ 10   1 '--' 'BRACE_R '   1   2    0.00    0.00   0.00   0.00   0    1    0.00   0.00   0.0   0.0    0    0
+      2 '--' 'BRACE_R '   1   2    0.00    0.00   0.00   0.00   0    1    0.00   0.00   0.0   0.0    0    0
+      3 '--' 'BRACE_R '   1   2    0.00    0.00   0.00   0.00   0    1    0.00   0.00   0.0   0.0    0    0
+      4 '--' 'BRACE_R '   1   2    0.00    0.00   0.00   0.00   0    1    0.00   0.00   0.0   0.0    0    0
+      5 '--' 'BRACE_R '   1   2    0.00    0.00   0.00   0.00   0    1    0.00   0.00   0.0   0.0    0    0
+      6 '--' 'BRACE_R '   1   2    0.00    0.00   0.00   0.00   0    1    0.00   0.00   0.0   0.0    0    0
+      7 '--' 'BRACE_R '   1   2    0.00    0.00   0.00   0.00   0    1    0.00   0.00   0.0   0.0    0    0
+      8 '--' 'BRACE_R '   1   2    0.00    0.00   0.00   0.00   0    1    0.00   0.00   0.0   0.0    0    0
+      9 '--' 'BRACE_W '   2   1    0.00    0.00   0.00   0.00   0    1    0.00   0.00   0.0   0.0    0    0
+     10 '--' 'BRACE_W '   4   1    0.00    0.00   0.00   0.00   0    1    0.00   0.00   0.0   0.0    0    0
+ 
+ 
+*(53)WELDED PLATES:
+*    Line  -Locate-                                            -------Plate-------  ---------Bolts--------  Bolt_Holes
+*No.  Id   Use   Id  Opt Att    Locate  Offset Orn Rot   Angle  Width Thick Length    Dia Row Space DtBolt  No. Locate
+   0
+ 
+*(54)FLANGE BRACE SIDE:
+*     Line  Surf  Loc   Web
+*No.   Id    Id    Id  Side
+  0
+ 
+ 
+*DEPTH ADJUSTMENTS:
+* Surf  -Depth_Locations-
+*  Id   Original  Revised  Adjustment
+* ----  --------  -------  ------------------
+*   2     3632.1   3636.1  Fab Length
+*   2     9632.1   9652.1  Purlin
+*   2    15632.1  15652.1  Purlin
+*   2    21632.1  21597.5  Fab Length
+*   2    27632.1  27613.5  Flat Bottom Rafter
+*   3     3020.0   3038.6  Flat Bottom Rafter
+*   3     9020.0   9054.6  Fab Length
+*   3    15020.0  15000.0  Purlin
+*   3    21020.0  21000.0  Purlin
+*   3    27020.0  27016.0  Fab Length
+
+================================================================================
+ C08-033             Frame  1 (Column RF1-1)                23/APR/2026  3:18pm
+================================================================================
+  Qty:   4                         Mark: RF1-1       
+-------------------------------------------------------------------------------
+
+ PLATES:
+ -------
+ Qty  Mark Part     Description     Width   Thick    Length   UnitWt  TotalWt Opt
+ ---  ---- -------- -----------   -------   -----  --------   ------  ------- ---
+   4  WB1           Web            400.00    4.00   6307.92    65.60   262.41   
+   8  BC1           Brace Clip      75.00    5.00     75.00     0.22     1.80   
+   8  GC21          Girt Clip      150.00    5.00    352.50     2.12    16.92   
+   8  GC26          Girt Clip      150.00    5.00    352.50     2.12    16.92   
+   4  OF1           OS Flange      140.00    5.00   6307.92    35.32   141.30   
+   8  GC1           Girt Clip      150.00    5.00    145.00     0.87     6.96   
+   4  IF1           IS Flange      140.00    8.00   6309.51    56.53   226.13   
+   4  EP1           End Plate      200.00   16.00    300.00     7.68    30.72   
+   4  EP2           End Plate      200.00   16.00    600.38    15.37    61.48   
+   4  SS3           EP Stiffener   120.00    5.00     95.00     0.46     1.82   
+   4  SS4           EP Stiffener   120.00    5.00     95.24     0.46     1.83   
+                                                                      -------
+                                                                       768.29
+
+ MEMBER CUTS:
+ ------------
+   Plate   Cut  -------Left-------  -------Right------
+    Mark  Type      Cut       Le       Cut       Re
+   -----  ----  --------- --------  --------- --------
+    WB1    PP     250.00                              
+
+ PLATE CUTS:
+ -----------
+  Plate  Cut   Cut    Cut     Cut
+  Mark   Loc   Typ  Width  Length
+  -----  ---   ---  -----  ------
+  BC1     4     C   15.00   15.00 
+  SS3     1     C  120.00   95.00 
+  SS4     3     C  120.00    2.85 
+  SS4     1     C  120.00   95.24 
+
+ HOLE LOCATIONS:
+ ---------------
+  Plate                    Slot/        Bolt
+  Mark    Dia Offset  Gage Gage2  Angle  Ref Locate
+  ----- ----- ------ ----- ----- ------ ---- --------------------------------------
+  WB1   24.00  75.00  0.00 50.00  0.000    0    250.00 
+  BC1   14.00  50.00  0.00  0.00  0.000   12     25.00 
+  GC21  14.00   0.00 100.0  0.00  0.000    9     25.00    125.00 
+  GC26  14.00   0.00 100.0  0.00  0.000    9     25.00    125.00 
+  GC1   14.00   0.00 100.0  0.00  0.000    9     25.00    105.00 
+  EP1   26.00   0.00 100.0  0.00  0.000   21    100.00    200.00 
+  EP2   22.00   0.00 100.0  0.00  0.000   23     50.00    150.00    450.00    550.00 
+
+ PLATE LOCATIONS:
+ ----------------
+  Plate
+  Mark  Attach  Offset  Angle  Side  Rot  Location
+  ----- ------  ------ ------  ----  ---  --------------------------------------
+  BC1   WB1       0.00  0.000   F     R   3664.00 
+  BC1   WB1       0.00  0.000   B     R   3664.00 
+  GC21  WB1      145.0  0.000   F     L   3664.00   5164.00 
+  GC26  WB1      145.0  0.000   B     L   3664.00   5164.00 
+  GC1   OF1       0.00  0.000   -     L   3664.00   5164.00 
+  EP1            15.00  0.000   -     -
+  EP2            95.00  0.000   -     -
+
+ WELDS:
+ ------
+  Plate           Weld   Weld  Weld    Weld
+  Mark    Plate2  Type   Size  Note  Length  Opt
+  -----   ------  ----  -----  ----  ------  ---
+  WB1      OF      F1    4.00    -   6307.9     
+  WB1      IF      F1    4.00    -   6309.7     
+  EP1      OF1     F2    4.00    -   140.00     
+  EP1      IF1     F2    4.00    -   140.00     
+  EP1      WB1     F2    4.00    -   250.00     
+  EP2      OF1     G1    5.00    -   140.00     
+  EP2      IF1     F2    5.00    -   140.00     
+  EP2      WB1     F2    4.00    -   400.00     
+  BC1      WB      F1    4.00    -    75.00     
+  BC1      IF      F1    4.00    -    75.00     
+  GC21     WB      F1    4.00    -   150.00     
+  GC26     WB      F1    4.00    -   150.00     
+  GC1      OF      F1    4.00    -   150.00     
+  SS3      EP      F1    4.00    -   120.00     
+  SS3      OF      F1    4.00    -    95.00     
+  SS4      EP      F1    4.00    -   120.00     
+  SS4      IF      F1    4.00    -    95.24     
+
+ FINISH DIMENSIONS:
+ ------------------
+   Outside Flange Total=  6307.92 
+   Inside  Flange Total=  6309.51 
+   Outside Overall     =  6339.92 
+   Top     Overall     =  6339.92 
+   Inside  Overall     =  6341.71 
+   Left    Overall     =   262.62 
+   Right   Overall     =   413.38 
+
+ CLIP DETAILING:
+ ---------------
+   Mark   Typ Thick Ang      A      B      C      D      E      F      G      H
+   ------ --- ----- --- ------ ------ ------ ------ ------ ------ ------ ------
+   BC1     x   0.00   0  50.00   0.00  25.00  50.00   0.00   0.00   0.00   0.00
+   GC21    y   0.00   0  25.00 100.00  25.00 100.00 227.50   0.00   0.00   0.00
+   GC26    y   0.00   0  25.00 100.00  25.00 100.00 227.50   0.00   0.00   0.00
+   GC1     y   0.00   0  25.00 100.00  25.00  80.00  40.00   0.00   0.00   0.00
+   EP1     z  16.00   0  50.00 100.00 100.00 100.00 100.00  26.00   0.00   0.00
+   EP2     z  16.00   0  50.00 100.00  50.00 100.00 300.00 100.00  50.38  22.00
+   SS3     w   0.00   0 120.00  95.00   0.00  95.00   0.00   0.00   0.00   0.00
+   SS4     w   0.00   0 120.00  95.24   0.00  95.24   2.85   0.00   0.00   0.00
+
+================================================================================
+ C08-033             Frame  1 (Rafter RF1-2)                23/APR/2026  3:18pm
+================================================================================
+  Qty:   4                         Mark: RF1-2       
+-------------------------------------------------------------------------------
+
+ PLATES:
+ -------
+ Qty  Mark Part     Description     Width   Thick    Length   UnitWt  TotalWt Opt
+ ---  ---- -------- -----------   -------   -----  --------   ------  ------- ---
+   4  WB1           Web            749.60    5.00   6000.00   161.95   647.81   
+   4  WB2           Web            600.00    5.00   3545.96    76.14   304.55   
+  32  BC1           Brace Clip      75.00    5.00     75.00     0.22     7.20   
+   8  ST1           Stiffener       70.00    8.00    460.00     2.06    16.49   
+   4  OF1           OS Flange      160.00    6.00   6300.00    48.38   193.54   
+   4  OF2           OS Flange      160.00    5.00   3346.15    21.42    85.66   
+   4  OF3           OS Flange      160.00    5.00    452.06     2.89    11.57   
+  28  PC1           Purl Clip      150.00    5.00    175.00     1.05    29.40   
+   4  GB1           Girt Clip      150.00    5.00    175.40     1.05     4.21   
+   4  ES1           Eave Stiff     150.00    5.00     75.00     0.45     1.80   
+   4  IF1           IS Flange      160.00    5.00   6001.87    38.41   153.65   
+   4  IF2           IS Flange      160.00    5.00   3045.70    19.49    77.97   
+   4  IC3           IS Clip        150.00   10.00    216.00     2.59    10.37   
+   4  EP1           End Plate      200.00   16.00    950.00    24.32    97.28   
+   4  EP2           End Plate      200.00   16.00    600.38    15.37    61.48   
+   4  SS1           EP Stiffener   120.00    5.00     94.00     0.45     1.80   
+   4  SS2           EP Stiffener   120.00    5.00     98.39     0.47     1.89   
+   4  SS3           EP Stiffener   120.00    5.00     95.00     0.46     1.82   
+                                                                      -------
+                                                                      1708.49
+
+ MEMBER CUTS:
+ ------------
+ Plate  Cut  ---------------Left-------------  -------------Right--------------
+  Mark Type     Cut      Ls      Li      Le       Cut      Rs      Ri      Re
+ ----- ----  -------- ------- ------- -------  -------- ------- ------- -------
+  WB1   PP                                      600.00                         
+  WB2    D    600.00                                    450.31  502.15  45.03 T
+
+ PLATE CUTS:
+ -----------
+  Plate  Cut   Cut    Cut     Cut
+  Mark   Loc   Typ  Width  Length
+  -----  ---   ---  -----  ------
+  BC1     4     C   15.00   15.00 
+  ST1     4     C   15.00   15.00 
+  ES1     1     C  150.00   15.00 
+  ES1     4     C  150.00   60.00 
+  SS1     1     C  120.00   94.00 
+  SS2     3     C  120.00    2.99 
+  SS2     1     C  120.00   98.39 
+  SS3     1     C  120.00   95.00 
+
+ HOLE LOCATIONS:
+ ---------------
+  Plate                    Slot/        Bolt
+  Mark    Dia Offset  Gage Gage2  Angle  Ref Locate
+  ----- ----- ------ ----- ----- ------ ---- --------------------------------------
+  WB1   24.00  75.00  0.00 50.00  0.000    0   1634.00   1934.00   9325.93 
+  WB1   14.00  109.7  0.00 100.0  0.100    0   9337.66 
+  WB2   24.00  75.00  0.00 50.00  0.000    0    250.00 
+  WB2   14.00  145.0 100.0  0.00  0.000    9     93.47 
+  BC1   14.00  50.00  0.00  0.00  0.000   12     25.00 
+  PC1   14.00   0.00 100.0  0.00  0.000   10     25.00    125.00 
+  GB1   14.00   0.00 100.0  0.00  0.000   77     25.40    125.40 
+  IC3   18.00   0.00 100.0 100.0  0.000    3     66.00 
+  EP1   22.00   0.00 100.0  0.00  0.000   23     50.00    150.00    475.00    800.00    900.00 
+  EP2   22.00   0.00 100.0  0.00  0.000   23     50.00    150.00    450.00    550.00 
+
+ PLATE LOCATIONS:
+ ----------------
+  Plate
+  Mark  Attach  Offset  Angle  Side  Rot  Location
+  ----- ------  ------ ------  ----  ---  --------------------------------------
+  BC1   WB1       0.00  0.000   F     R   1784.00   3284.00   4784.00   7784.00 
+  BC1   WB1       0.00  0.000   B     R   1784.00   3284.00   4784.00   7784.00 
+  ST1   WB1       0.00 -0.100   -     -   9143.58 
+  PC1   OF1       0.00  0.000   -     L    284.00   1784.00   3284.00   4784.00   6284.00   7784.00 
+                                          9284.00 
+  GB1   OF1       0.00  0.000   -     R   9556.10 
+  IC3   IF1       0.00  0.075   -     L   2290.13 
+  EP1            94.00  0.000   -     -
+  EP2            95.00  0.000   -     -
+
+ WELDS:
+ ------
+  Plate           Weld   Weld  Weld    Weld
+  Mark    Plate2  Type   Size  Note  Length  Opt
+  -----   ------  ----  -----  ----  ------  ---
+  WB1      OF      F1    4.00    -   6000.0     
+  WB2      OF      F1    4.00    -   3500.9     
+  WB1      IF      F1    4.00    -   6001.9     
+  WB2      IF      F1    4.00    -   3045.7     
+  WB2      OF3     F2    4.00    -   452.56     
+  EP1      OF1     F2    4.00    -   160.00     
+  EP1      IF1     F2    4.00    -   160.00     
+  EP1      WB1     F2    4.00    -   749.60     
+  EP2      OF3     G1    5.00    -   160.00     
+  EP2      WB2     F2    4.00    -   504.38     
+  EP2      IF2     G1    4.00    -   160.00     
+  WB1      WB2     B1    4.00    -   600.00     
+  ST1      WB      F2    4.00    -   460.00     
+  ST1      EP      F2    8.00    -    70.00     
+  BC1      WB      F1    4.00    -    75.00     
+  BC1      IF      F1    4.00    -    75.00     
+  PC1      OF      F1    4.00    -   150.00     
+  GB1      OF      F1    4.00    -   150.00     
+  ES1      OF3     F1    4.00    -   150.00     
+  ES1      OF2     F1    4.00    -    75.00     
+  IC3      IF      F1    4.00    -   150.00     
+  SS1      EP      F1    4.00    -   120.00     
+  SS1      OF      F1    4.00    -    94.00     
+  SS2      EP      F1    4.00    -   120.00     
+  SS2      IF      F1    4.00    -    98.39     
+  SS3      EP      F1    4.00    -   120.00     
+  SS3      OF      F1    4.00    -    95.00     
+
+ FINISH DIMENSIONS:
+ ------------------
+   Outside Flange Total=  9646.15     452.06 
+   Inside  Flange Total=  6001.87    3045.70 
+   Outside Overall     =  9521.45 
+   Inside  Overall     =  9068.80 
+   Left    Overall     =   761.00 
+   Right   Overall     =   505.38 
+   Right Extension     =    47.12 
+
+ CLIP DETAILING:
+ ---------------
+   Mark   Typ Thick Ang      A      B      C      D      E      F      G      H
+   ------ --- ----- --- ------ ------ ------ ------ ------ ------ ------ ------
+   BC1     x   0.00   0  50.00   0.00  25.00  50.00   0.00   0.00   0.00   0.00
+   ST1     w   8.00   0  70.00 460.00   0.00   0.00   0.00   0.00   0.00   0.00
+   PC1     y   0.00   0  25.00 100.00  25.00 100.00  50.00   0.00   0.00   0.00
+   GB1     y   0.00   0  25.00 100.00  25.40 100.00  50.00   0.00   0.00   0.00
+   ES1     w   0.00   0 150.00  75.00  15.00  60.00   0.00   0.00   0.00   0.00
+   IC3     y   0.00   0  25.00 100.00  66.00 150.00   0.00   0.00   0.00   0.00
+   EP1     z  16.00   0  50.00 100.00  50.00 100.00 325.00 325.00 100.00  22.00
+   EP2     z  16.00   0  50.00 100.00  50.00 100.00 300.00 100.00  50.38  22.00
+   SS1     w   0.00   0 120.00  94.00   0.00  94.00   0.00   0.00   0.00   0.00
+   SS2     w   0.00   0 120.00  98.39   0.00  98.39   2.99   0.00   0.00   0.00
+   SS3     w   0.00   0 120.00  95.00   0.00  95.00   0.00   0.00   0.00   0.00
+
+================================================================================
+ C08-033             Frame  1 (Rafter RF1-3)                23/APR/2026  3:18pm
+================================================================================
+  Qty:   4                         Mark: RF1-3       
+-------------------------------------------------------------------------------
+
+ PLATES:
+ -------
+ Qty  Mark Part     Description     Width   Thick    Length   UnitWt  TotalWt Opt
+ ---  ---- -------- -----------   -------   -----  --------   ------  ------- ---
+   4  WB1           Web            749.87    5.00   5968.00   173.07   692.29   
+  24  BC1           Brace Clip      75.00    5.00     75.00     0.22     5.40   
+   4  OF1           OS Flange      140.00    8.00   5968.00    53.47   213.89   
+  16  PC1           Purl Clip      150.00    5.00    175.00     1.05    16.80   
+   4  IF1           IS Flange      140.00    5.00   5968.17    33.42   133.69   
+   4  IC3           IS Clip        150.00   10.00    216.00     2.59    10.37   
+   4  EP1           End Plate      200.00   16.00    900.00    23.04    92.16   
+   4  EP2           End Plate      200.00   16.00    950.00    24.32    97.28   
+   4  SS1           EP Stiffener   120.00    5.00     92.00     0.44     1.77   
+   4  SS2           EP Stiffener   120.00    5.00     94.87     0.46     1.82   
+   4  SS3           EP Stiffener   120.00    5.00     92.00     0.44     1.77   
+   4  SS4           EP Stiffener   120.00    5.00     95.13     0.46     1.83   
+                                                                      -------
+                                                                      1269.06
+
+ MEMBER CUTS:
+ ------------
+   Plate   Cut  -------Left-------  -------Right------
+    Mark  Type      Cut       Le       Cut       Re
+   -----  ----  --------- --------  --------- --------
+    WB1    PP     700.13                              
+
+ PLATE CUTS:
+ -----------
+  Plate  Cut   Cut    Cut     Cut
+  Mark   Loc   Typ  Width  Length
+  -----  ---   ---  -----  ------
+  BC1     4     C   15.00   15.00 
+  SS1     1     C  120.00   92.00 
+  SS2     1     C  120.00   93.87 
+  SS3     1     C  120.00   92.00 
+  SS4     1     C  120.00   95.13 
+
+ HOLE LOCATIONS:
+ ---------------
+  Plate                    Slot/        Bolt
+  Mark    Dia Offset  Gage Gage2  Angle  Ref Locate
+  ----- ----- ------ ----- ----- ------ ---- --------------------------------------
+  WB1   24.00  75.00  0.00 50.00  0.000    0    284.00    584.00 
+  BC1   14.00  50.00  0.00  0.00  0.000   12     25.00 
+  PC1   14.00   0.00 100.0  0.00  0.000   10     25.00    125.00 
+  IC3   18.00   0.00 100.0 100.0  0.000    3     66.00 
+  EP1   22.00   0.00 100.0  0.00  0.000   23     50.00    150.00    450.00    750.00    850.00 
+  EP2   22.00   0.00 100.0  0.00  0.000   23     50.00    150.00    475.00    800.00    900.00 
+
+ PLATE LOCATIONS:
+ ----------------
+  Plate
+  Mark  Attach  Offset  Angle  Side  Rot  Location
+  ----- ------  ------ ------  ----  ---  --------------------------------------
+  BC1   WB1       0.00  0.000   F     R    284.00   1784.00   4784.00 
+  BC1   WB1       0.00  0.000   B     R    284.00   1784.00   4784.00 
+  PC1   OF1       0.00  0.000   -     L    284.00   1784.00   3284.00   4784.00 
+  IC3   IF1       0.00  0.108   -     L    552.38 
+  EP1            92.00  0.000   -     -
+  EP2            92.00  0.000   -     -
+
+ WELDS:
+ ------
+  Plate           Weld   Weld  Weld    Weld
+  Mark    Plate2  Type   Size  Note  Length  Opt
+  -----   ------  ----  -----  ----  ------  ---
+  WB1      OF      F1    4.00    -   5968.0     
+  WB1      IF      F1    4.00    -   5968.2     
+  EP1      OF1     F2    4.00    -   140.00     
+  EP1      IF1     F2    5.00    -   140.00     
+  EP1      WB1     F2    4.00    -   700.13     
+  EP2      OF1     F2    4.00    -   140.00     
+  EP2      IF1     F2    4.00    -   140.00     
+  EP2      WB1     F2    4.00    -   749.87     
+  BC1      WB      F1    4.00    -    75.00     
+  BC1      IF      F1    4.00    -    75.00     
+  PC1      OF      F1    4.00    -   150.00     
+  IC3      IF      F1    4.00    -   150.00     
+  SS1      EP      F1    4.00    -   120.00     
+  SS1      OF      F1    4.00    -    92.00     
+  SS2      EP      F1    4.00    -   120.00     
+  SS2      IF      F1    4.00    -    94.87     
+  SS3      EP      F1    4.00    -   120.00     
+  SS3      OF      F1    4.00    -    92.00     
+  SS4      EP      F1    4.00    -   120.00     
+  SS4      IF      F1    4.00    -    95.13     
+
+ FINISH DIMENSIONS:
+ ------------------
+   Outside Flange Total=  5968.00 
+   Inside  Flange Total=  5968.17 
+   Outside Overall     =  6000.00 
+   Inside  Overall     =  6000.21 
+   Left    Overall     =   713.00 
+   Right   Overall     =   763.00 
+
+ CLIP DETAILING:
+ ---------------
+   Mark   Typ Thick Ang      A      B      C      D      E      F      G      H
+   ------ --- ----- --- ------ ------ ------ ------ ------ ------ ------ ------
+   BC1     x   0.00   0  50.00   0.00  25.00  50.00   0.00   0.00   0.00   0.00
+   PC1     y   0.00   0  25.00 100.00  25.00 100.00  50.00   0.00   0.00   0.00
+   IC3     y   0.00   0  25.00 100.00  66.00 150.00   0.00   0.00   0.00   0.00
+   EP1     z  16.00   0  50.00 100.00  50.00 100.00 300.00 300.00 100.00  22.00
+   EP2     z  16.00   0  50.00 100.00  50.00 100.00 325.00 325.00 100.00  22.00
+   SS1     w   0.00   0 120.00  92.00   0.00  92.00   0.00   0.00   0.00   0.00
+   SS2     w   0.00   0 120.00  94.87   0.00  94.87   0.00   0.00   0.00   0.00
+   SS3     w   0.00   0 120.00  92.00   0.00  92.00   0.00   0.00   0.00   0.00
+   SS4     w   0.00   0 120.00  95.13   0.00  95.13   0.00   0.00   0.00   0.00
+
+================================================================================
+ C08-033             Frame  1 (Rafter RF1-4)                23/APR/2026  3:18pm
+================================================================================
+  Qty:   4                         Mark: RF1-4       
+-------------------------------------------------------------------------------
+
+ PLATES:
+ -------
+ Qty  Mark Part     Description     Width   Thick    Length   UnitWt  TotalWt Opt
+ ---  ---- -------- -----------   -------   -----  --------   ------  ------- ---
+   4  WB1           Web            749.33    5.00   6000.00   149.92   599.68   
+   4  WB2           Web            699.46    5.00   5929.40   142.24   568.97   
+  32  BC1           Brace Clip      75.00    5.00     75.00     0.22     7.20   
+   4  OF1           OS Flange      185.00    6.00   5700.00    50.62   202.46   
+   4  OF2           OS Flange      185.00    8.00   6229.40    73.76   295.02   
+  32  PC1           Purl Clip      150.00    5.00    175.00     1.05    33.60   
+   4  IF1           IS Flange      185.00    8.00   6004.88    71.10   284.39   
+   4  IF2           IS Flange      185.00    6.00   5932.53    52.68   210.72   
+   4  IC3           IS Clip        150.00   10.00    216.00     2.59    10.37   
+   4  EP1           End Plate      225.00   16.00    950.00    27.36   109.44   
+   4  EP2           End Plate      200.00   16.00    900.00    23.04    92.16   
+   4  SS1           EP Stiffener   120.00    5.00     94.00     0.45     1.80   
+   4  SS2           EP Stiffener   120.00    5.00     97.66     0.47     1.88   
+   4  SS3           EP Stiffener   120.00    5.00     92.00     0.44     1.77   
+   4  SS4           EP Stiffener   120.00    5.00     98.58     0.47     1.89   
+                                                                      -------
+                                                                      2421.36
+
+ MEMBER CUTS:
+ ------------
+   Plate   Cut  -------Left-------  -------Right------
+    Mark  Type      Cut       Le       Cut       Re
+   -----  ----  --------- --------  --------- --------
+    WB1    PP                         500.00          
+    WB2    PP     500.00                              
+
+ PLATE CUTS:
+ -----------
+  Plate  Cut   Cut    Cut     Cut
+  Mark   Loc   Typ  Width  Length
+  -----  ---   ---  -----  ------
+  BC1     4     C   15.00   15.00 
+  SS1     1     C  120.00   94.00 
+  SS2     3     C  120.00    4.99 
+  SS2     1     C  120.00   97.66 
+  SS3     1     C  120.00   92.00 
+  SS4     3     C  120.00    4.04 
+  SS4     1     C  120.00   98.58 
+
+ HOLE LOCATIONS:
+ ---------------
+  Plate                    Slot/        Bolt
+  Mark    Dia Offset  Gage Gage2  Angle  Ref Locate
+  ----- ----- ------ ----- ----- ------ ---- --------------------------------------
+  WB1   24.00  75.00  0.00 50.00  0.000    0   4595.40   4895.40 
+  BC1   14.00  50.00  0.00  0.00  0.000   12     25.00 
+  PC1   14.00   0.00 100.0  0.00  0.000   10     25.00    125.00 
+  IC3   18.00   0.00 100.0 100.0  0.000    3     66.00 
+  EP1   22.00   0.00 100.0  0.00  0.000   23     50.00    150.00    475.00    800.00    900.00 
+  EP2   22.00   0.00 100.0  0.00  0.000   23     50.00    150.00    450.00    750.00    850.00 
+
+ PLATE LOCATIONS:
+ ----------------
+  Plate
+  Mark  Attach  Offset  Angle  Side  Rot  Location
+  ----- ------  ------ ------  ----  ---  --------------------------------------
+  BC1   WB1       0.00  0.000   F     R   1745.40   4745.40   6245.40   9245.40 
+  BC1   WB1       0.00  0.000   B     R   1745.40   4745.40   6245.40   9245.40 
+  PC1   OF1       0.00  0.000   -     L    245.40   1745.40   3245.40   4745.40   6245.40   7745.40 
+                                          9245.40  10745.40 
+  IC3   IF1       0.00  0.058   -     L   4764.11 
+  EP1            94.00  0.000   -     -
+  EP2            92.00  0.000   -     -
+
+ WELDS:
+ ------
+  Plate           Weld   Weld  Weld    Weld
+  Mark    Plate2  Type   Size  Note  Length  Opt
+  -----   ------  ----  -----  ----  ------  ---
+  WB1      OF      F1    4.00    -   6000.0     
+  WB2      OF      F1    4.00    -   5929.4     
+  WB1      IF      F1    4.00    -   6005.2     
+  WB2      IF      F1    4.00    -   5932.8     
+  EP1      OF1     F2    5.00    -   185.00     
+  EP1      IF1     F2    4.00    -   185.00     
+  EP1      WB1     F2    4.00    -   749.33     
+  EP2      OF2     F2    4.00    -   185.00     
+  EP2      IF2     F2    5.00    -   185.00     
+  EP2      WB2     F2    4.00    -   699.46     
+  WB1      WB2     B1    4.00    -   500.00     
+  OF1      OF2     B1    6.00    -   185.00     
+  IF1      IF2     B1    6.00    -   185.00     
+  BC1      WB      F1    4.00    -    75.00     
+  BC1      IF      F1    4.00    -    75.00     
+  PC1      OF      F1    4.00    -   150.00     
+  IC3      IF      F1    4.00    -   150.00     
+  SS1      EP      F1    4.00    -   120.00     
+  SS1      OF      F1    4.00    -    94.00     
+  SS2      EP      F1    4.00    -   120.00     
+  SS2      IF      F1    4.00    -    97.66     
+  SS3      EP      F1    4.00    -   120.00     
+  SS3      OF      F1    4.00    -    92.00     
+  SS4      EP      F1    4.00    -   120.00     
+  SS4      IF      F1    4.00    -    98.58     
+
+ FINISH DIMENSIONS:
+ ------------------
+   Outside Flange Total= 11929.40 
+   Inside  Flange Total=  6004.88    5932.53 
+   Outside Overall     = 11961.40 
+   Inside  Overall     = 11961.51 
+   Left    Overall     =   764.01 
+   Right   Overall     =   714.00 
+
+ CLIP DETAILING:
+ ---------------
+   Mark   Typ Thick Ang      A      B      C      D      E      F      G      H
+   ------ --- ----- --- ------ ------ ------ ------ ------ ------ ------ ------
+   BC1     x   0.00   0  50.00   0.00  25.00  50.00   0.00   0.00   0.00   0.00
+   PC1     y   0.00   0  25.00 100.00  25.00 100.00  50.00   0.00   0.00   0.00
+   IC3     y   0.00   0  25.00 100.00  66.00 150.00   0.00   0.00   0.00   0.00
+   EP1     z  16.00   0  62.50 100.00  50.00 100.00 325.00 325.00 100.00  22.00
+   EP2     z  16.00   0  50.00 100.00  50.00 100.00 300.00 300.00 100.00  22.00
+   SS1     w   0.00   0 120.00  94.00   0.00  94.00   0.00   0.00   0.00   0.00
+   SS2     w   0.00   0 120.00  97.66   0.00  97.66   4.99   0.00   0.00   0.00
+   SS3     w   0.00   0 120.00  92.00   0.00  92.00   0.00   0.00   0.00   0.00
+   SS4     w   0.00   0 120.00  98.58   0.00  98.58   4.04   0.00   0.00   0.00
+
+================================================================================
+ C08-033             Frame  1 (Rafter RF1-5)                23/APR/2026  3:18pm
+================================================================================
+  Qty:   2                         Mark: RF1-5       
+-------------------------------------------------------------------------------
+
+ PLATES:
+ -------
+ Qty  Mark Part     Description     Width   Thick    Length   UnitWt  TotalWt Opt
+ ---  ---- -------- -----------   -------   -----  --------   ------  ------- ---
+   2  WB1           Web           1046.58    6.00   5974.22   254.61   509.21  B
+   8  BC1           Brace Clip      75.00    5.00     75.00     0.22     1.80   
+   8  BC2           Brace Clip      75.00    5.00     75.00     0.22     1.80   
+   2  OF1           OS Flange      225.00    8.00   3002.02    43.23    86.46   
+   2  OF2           OS Flange      225.00    8.00   3002.00    43.23    86.46   
+   4  PC1           Purl Clip      150.00    5.00    175.00     1.05     4.20   
+   4  PC2           Purl Clip      150.00    5.00    175.00     1.05     4.20   
+   2  IF1           IS Flange      225.00    8.00   2697.94    38.85    77.70   
+   2  IF2           IS Flange      225.00    8.00   2697.92    38.85    77.70   
+   8  ST2           Stiffener      100.00   10.00    930.00     7.44    59.52   
+   2  IC3           IS Clip        150.00   10.00    216.00     2.59     5.18   
+   2  EP1           End Plate      225.00   16.00    950.00    27.36    54.72   
+   2  EP2           End Plate      225.00   16.00    950.00    27.36    54.72   
+   2  SS1           EP Stiffener   120.00    5.00     92.00     0.44     0.88   
+   2  SS2           EP Stiffener   120.00    5.00     90.36     0.43     0.87   
+   2  SS3           EP Stiffener   120.00    5.00     92.00     0.44     0.88   
+   2  SS4           EP Stiffener   120.00    5.00     90.36     0.43     0.87   
+   2  EP11          End Plate      225.00   16.00    427.20    12.30    24.61   
+                                                                      -------
+                                                                      1051.78
+
+ MEMBER CUTS:
+ ------------
+ Plate  Cut  ---------------Left-------------  -------------Right--------------
+  Mark Type     Cut      Ls      Li      Le       Cut      Rs      Ri      Re
+ ----- ----  -------- ------- ------- -------  -------- ------- ------- -------
+  WB1   BC            747.87  2987.1  74.79 T  1046.58  747.87  2987.1  74.79 T
+
+ PLATE CUTS:
+ -----------
+  Plate  Cut   Cut    Cut     Cut
+  Mark   Loc   Typ  Width  Length
+  -----  ---   ---  -----  ------
+  BC1     4     C   15.00   15.00 
+  BC2     4     C   15.00   15.00 
+  ST2     4     C   15.00   15.00 
+  SS1     1     C  120.00   92.00 
+  SS2     4     C  120.00   12.00 
+  SS2     1     C  120.00   78.36 
+  SS3     1     C  120.00   92.00 
+  SS4     4     C  120.00   12.00 
+  SS4     1     C  120.00   78.36 
+
+ HOLE LOCATIONS:
+ ---------------
+  Plate                    Slot/        Bolt
+  Mark    Dia Offset  Gage Gage2  Angle  Ref Locate
+  ----- ----- ------ ----- ----- ------ ---- --------------------------------------
+  WB1   24.00  75.00  0.00 50.00  0.000    0   2802.02 
+  WB1   24.00  75.00  0.00 50.00  0.000    0    200.00 
+  BC1   14.00  50.00  0.00  0.00  0.000   12     25.00 
+  BC2   14.00  50.00  0.00  0.00  0.000   12     25.00 
+  PC1   14.00   0.00 100.0  0.00  0.000   10     25.00    125.00 
+  PC2   14.00   0.00 100.0  0.00  0.000   10     25.00    125.00 
+  IC3   18.00   0.00 100.0 100.0  0.000    3     66.00 
+  EP1   22.00   0.00 100.0  0.00  0.000   23     50.00    150.00    475.00    800.00    900.00 
+  EP2   22.00   0.00 100.0  0.00  0.000   23     50.00    150.00    475.00    800.00    900.00 
+  EP11  22.00   0.00 100.0  0.00  0.000    0     50.00    150.00    277.20    377.20 
+
+ PLATE LOCATIONS:
+ ----------------
+  Plate
+  Mark  Attach  Offset  Angle  Side  Rot  Location
+  ----- ------  ------ ------  ----  ---  --------------------------------------
+  BC1   WB1       0.00  0.000   F     L   1222.60   2722.60 
+  BC1   WB1       0.00  0.000   B     L   1222.60   2722.60 
+  BC2   WB1  t    0.00  0.000   F     R    279.40   1779.40 
+  BC2   WB1  t    0.00  0.000   B     R    279.40   1779.40 
+  PC1   OF1       0.00  0.000   -     R   1222.60   2722.60 
+  PC2   OF2       0.00  0.000   -     L    279.40   1779.40 
+  IC3   IF1       0.00  0.000   -     L   2911.54 
+  ST2   EP11      0.00  0.000   -     R    100.00 
+  ST2   EP11      0.00  0.000   -     L    327.20 
+  EP1            92.00  0.000   -     -
+  EP2            92.00  0.000   -     -
+
+ WELDS:
+ ------
+  Plate           Weld   Weld  Weld    Weld
+  Mark    Plate2  Type   Size  Note  Length  Opt
+  -----   ------  ----  -----  ----  ------  ---
+  WB1      OF      F1    4.00    -   6004.0     
+  WB1      IF      F1    4.00    -   5824.7     
+  EP1      OF1     F2    5.00    -   225.00     
+  EP1      IF1     F2    4.00    -   225.00     
+  EP1      WB1     F2    4.00    -   751.60     
+  EP2      OF2     F2    5.00    -   225.00     
+  EP2      IF2     F2    4.00    -   225.00     
+  EP2      WB1     F2    4.00    -   751.60     
+  OF1      OF2     B1    6.00    -   225.00     
+  IF1      IF2     B1    6.00    -   225.00     
+  ST2      WB      F2    4.00    -   930.00     
+  ST2      EP      F2   10.00    -   100.00     
+  EP11     IF      G1    4.00    -   450.00     
+  EP11     WB      F1    4.00    -   427.20     
+  BC1      WB      F1    4.00    -    75.00     
+  BC1      IF      F1    4.00    -    75.00     
+  BC2      WB      F1    4.00    -    75.00     
+  BC2      IF      F1    4.00    -    75.00     
+  PC1      OF      F1    4.00    -   150.00     
+  PC2      OF      F1    4.00    -   150.00     
+  IC3      IF      F1    4.00    -   150.00     
+  SS1      EP      F1    4.00    -   120.00     
+  SS1      OF      F1    4.00    -    92.00     
+  SS2      EP      F1    4.00    -   120.00     
+  SS2      IF      F1    4.00    -    90.36     
+  SS3      EP      F1    4.00    -   120.00     
+  SS3      OF      F1    4.00    -    92.00     
+  SS4      EP      F1    4.00    -   120.00     
+  SS4      IF      F1    4.00    -    90.36     
+
+ FINISH DIMENSIONS:
+ ------------------
+   Outside Flange Total=  3002.02    3002.00 
+   Inside  Flange Total=  2911.54    2911.52 
+   Outside Overall     =  6007.66 
+   Inside  Overall     =  5855.21 
+   Left    Overall     =   766.04 
+   Right   Overall     =   766.04 
+   Left  Extension     =   -76.22 
+   Right Extension     =   -76.23 
+
+ CLIP DETAILING:
+ ---------------
+   Mark   Typ Thick Ang      A      B      C      D      E      F      G      H
+   ------ --- ----- --- ------ ------ ------ ------ ------ ------ ------ ------
+   BC1     x   0.00   0  50.00   0.00  25.00  50.00   0.00   0.00   0.00   0.00
+   BC2     x   0.00   0  50.00   0.00  25.00  50.00   0.00   0.00   0.00   0.00
+   PC1     y   0.00   0  25.00 100.00  25.00 100.00  50.00   0.00   0.00   0.00
+   PC2     y   0.00   0  25.00 100.00  25.00 100.00  50.00   0.00   0.00   0.00
+   ST2     w  10.00   0 100.00 930.00   0.00   0.00   0.00   0.00   0.00   0.00
+   IC3     y   0.00   0  25.00 100.00  66.00 150.00   0.00   0.00   0.00   0.00
+   EP1     z  16.00   0  62.50 100.00  50.00 100.00 325.00 325.00 100.00  22.00
+   EP2     z  16.00   0  62.50 100.00  50.00 100.00 325.00 325.00 100.00  22.00
+   SS1     w   0.00   0 120.00  92.00   0.00  92.00   0.00   0.00   0.00   0.00
+   SS2     w   0.00   0 120.00  90.36  12.00  78.36   0.00   0.00   0.00   0.00
+   SS3     w   0.00   0 120.00  92.00   0.00  92.00   0.00   0.00   0.00   0.00
+   SS4     w   0.00   0 120.00  90.36  12.00  78.36   0.00   0.00   0.00   0.00
+
+================================================================================
+ C08-033             Frame  1 (Interior Column RF1-6)       23/APR/2026  3:18pm
+================================================================================
+  Qty:   2                         Mark: RF1-6       
+-------------------------------------------------------------------------------
+
+ PLATES:
+ -------
+ Qty  Mark Part     Description     Width   Thick    Length   UnitWt  TotalWt Opt
+ ---  ---- -------- -----------   -------   -----  --------   ------  ------- ---
+   2  WB1           Web            203.20    5.00   8748.39    71.11   142.21   
+   2  OF1           OS Flange      200.00   12.00   8748.39   167.97   335.94   
+   2  IF1           IS Flange      200.00   12.00   8748.39   167.97   335.94   
+   2  EP1           End Plate      200.00   16.00    300.00     7.68    15.36   
+   2  EP2           End Plate      200.00   16.00    427.20    10.94    21.87   
+   2  SS3           EP Stiffener   120.00    5.00    120.00     0.58     1.15   
+   2  SS4           EP Stiffener   120.00    5.00    120.00     0.58     1.15   
+                                                                      -------
+                                                                       853.63
+
+ MEMBER CUTS:
+ ------------
+   Plate      LCut    Off     RCut
+   -----    ------- ------- -------
+    Web                            
+
+ PLATE CUTS:
+ -----------
+  Plate  Cut   Cut    Cut     Cut
+  Mark   Loc   Typ  Width  Length
+  -----  ---   ---  -----  ------
+  SS3     1     C  120.00  120.00 
+  SS4     1     C  120.00  120.00 
+
+ HOLE LOCATIONS:
+ ---------------
+  Plate                    Slot/        Bolt
+  Mark    Dia Offset  Gage Gage2  Angle  Ref Locate
+  ----- ----- ------ ----- ----- ------ ---- --------------------------------------
+  EP1   26.00   0.00 100.0  0.00  0.000   21    100.00    200.00 
+  EP2   22.00   0.00 100.0  0.00  0.000   23     50.00    150.00    277.20    377.20 
+
+ PLATE LOCATIONS:
+ ----------------
+  Plate
+  Mark  Attach  Offset  Angle  Side  Rot  Location
+  ----- ------  ------ ------  ----  ---  --------------------------------------
+  EP1            36.40  0.000   -     -
+  EP2            100.0  0.000   -     -
+
+ WELDS:
+ ------
+  Plate           Weld   Weld  Weld    Weld
+  Mark    Plate2  Type   Size  Note  Length  Opt
+  -----   ------  ----  -----  ----  ------  ---
+  WB1      OF      F1    4.00    -   8748.4     
+  WB1      IF      F1    4.00    -   8748.4     
+  EP1      OF1     F2    5.00    -   200.00     
+  EP1      IF1     F2    5.00    -   200.00     
+  EP1      WB1     F2    4.00    -   203.20     
+  EP2      OF1     F2    8.00    -   200.00     
+  EP2      IF1     F2    8.00    -   200.00     
+  EP2      WB1     F2    4.00    -   203.20     
+  SS3      EP      F1    4.00    -   120.00     
+  SS3      OF      F1    4.00    -   120.00     
+  SS4      EP      F1    4.00    -   120.00     
+  SS4      IF      F1    4.00    -   120.00     
+
+ FINISH DIMENSIONS:
+ ------------------
+   Left    Overall     =  8780.39 
+   Right   Overall     =  8780.39 
+   Max     Overall     =  8780.39 
+
+ CLIP DETAILING:
+ ---------------
+   Mark   Typ Thick Ang      A      B      C      D      E      F      G      H
+   ------ --- ----- --- ------ ------ ------ ------ ------ ------ ------ ------
+   EP1     z  16.00   0  50.00 100.00 100.00 100.00 100.00  26.00   0.00   0.00
+   EP2     z  16.00   0  50.00 100.00  50.00 100.00 127.20 100.00  50.00  22.00
+   SS3     w   0.00   0 120.00 120.00   0.00 120.00   0.00   0.00   0.00   0.00
+   SS4     w   0.00   0 120.00 120.00   0.00 120.00   0.00   0.00   0.00   0.00
+
+================================================================================
+ C08-033             Flange Braces                          23/APR/2026  3:18pm
+================================================================================
+
+ FLANGE BRACES:
+ --------------
+  Surf            Web  Brace                          --Attachment-
+   Id   Locate  Depth Offset  Length  Qty   Part      Frame  Purlin Ref
+  ----  ------  ----- ------  ------  ---   --------  ------ ------ -----
+    1      1   337.13  330.0  480.00    1   L40X40X4  Clip   Web         
+    2      2   541.69  660.0  864.00    1   L40X40X4  Clip   Web         
+           4   630.32  660.0  928.00    1   L40X40X4  Clip   Web         
+           5   667.72  660.0  960.00    1   L40X40X4  Clip   Web         
+           6   705.12  660.0  984.00    1   L40X40X4  Clip   Web         
+           8   740.00  660.0  1016.0    1   L40X40X4  Clip   Web         
+          10   715.00  660.0  992.00    1   L40X40X4  Clip   Web         
+          11   702.50  660.0  984.00    1   L40X40X4  Clip   Web         
+          13   609.17  660.0  920.00    1   L40X40X4  Clip   Web         
+          15   508.25  660.0  848.00    1   L40X40X4  Clip   Web         
+          16   552.14  660.0  872.00    1   L40X40X4  Clip   Web         
+          18   676.80  660.0  960.00    1   L40X40X4  Clip   Web         
+          20   873.86  660.0  1120.0    1   L40X40X4  Clip   Web         
+          21   1023.9  960.0  1424.0    1   L50X50X5  Clip   Web         
+    3      1   1023.9  960.0  1424.0    1   L50X50X5  Clip   Web         
+           2   873.86  660.0  1120.0    1   L40X40X4  Clip   Web         
+           4   676.80  660.0  960.00    1   L40X40X4  Clip   Web         
+           6   552.14  660.0  872.00    1   L40X40X4  Clip   Web         
+           7   508.26  660.0  848.00    1   L40X40X4  Clip   Web         
+           9   609.17  660.0  920.00    1   L40X40X4  Clip   Web         
+          11   702.50  660.0  984.00    1   L40X40X4  Clip   Web         
+          12   715.00  660.0  992.00    1   L40X40X4  Clip   Web         
+          14   740.00  660.0  1016.0    1   L40X40X4  Clip   Web         
+          16   705.12  660.0  984.00    1   L40X40X4  Clip   Web         
+          17   667.72  660.0  960.00    1   L40X40X4  Clip   Web         
+          18   630.32  660.0  928.00    1   L40X40X4  Clip   Web         
+          20   541.69  660.0  864.00    1   L40X40X4  Clip   Web         
+    4      1   337.13  330.0  480.00    1   L40X40X4  Clip   Web         
+
+================================================================================
+ C08-033             Connection Bolts                       23/APR/2026  3:18pm
+================================================================================
+
+ BOLTS:
+ ------
+   Locate   Plate   Qty  Type     Dia  Length  Part      DtBolt  TotalWt
+   -------  -----   ---  -----  -----  ------  --------  ------  -------
+   Frame    Spl-1    16  Gr8.8  20.00   90.00  H20X90      23        5.4
+   Frame    Spl-2    20  Gr8.8  20.00   90.00  H20X90      23        6.7
+   Frame    Spl-3    20  Gr8.8  20.00   90.00  H20X90      23        6.7
+   Frame    Spl-4    20  Gr8.8  20.00   90.00  H20X90      23        6.7
+   Frame    Spl-5    20  Gr8.8  20.00   90.00  H20X90      23        6.7
+   Frame    Spl-6    20  Gr8.8  20.00   90.00  H20X90      23        6.7
+   Frame    Spl-7    20  Gr8.8  20.00   90.00  H20X90      23        6.7
+   Frame    Spl-8    16  Gr8.8  20.00   90.00  H20X90      23        5.4
+   Col1     Cap      16  Gr8.8  20.00   90.00  H20X90      23        5.4
+                                                                 -------
+                                                                    56.6   
+
+================================================================================
+ C08-033             Rigid Frame Clearances                 23/APR/2026  3:18pm
+================================================================================
+
+ FRAME VERTICAL CLEARANCE:
+ -------------------------
+   Location                        Span   X_Coord   Y_Coord
+   ------------------------     -------  --------  --------
+   Left_Col                     6350.93    659.72   6350.93 
+   Right_Col                    6350.93  60340.30   6350.93 
+   Midspan                      8788.39  30500.00   8788.39 
+   Int_Col  1                   8780.39  30500.00   8780.39 
+
+ FRAME HORIZONTAL CLEARANCE:
+ ---------------------------
+   Location                        Span  X_Coord1  X_Coord2
+   ------------------------     -------  --------  --------
+   Left_Col     - Int_Col  1   29937.01    563.00  30500.00 
+   Int_Col  1   - Right_Col    29937.01  30500.00  60437.01 
+
+ EAVE STRUT OFFSET:
+  Wall
+   Id   Type  Offset
+    4    ZB    80.00
+    2    ZB    80.00
+
+================================================================================
+ C08-033             Weld Lengths                           23/APR/2026  3:18pm
+================================================================================
+
+        Piece    Size    Web-Flange    ------Hand_Weld(mm)-----
+  Qty   Mark     (mm)    Fillet(mm)     Fillet   Groove    Butt
+  ---   -----   -----    ----------    -------  -------  ------
+    4   RF1-1    4.00     50470.5      13960.9     0.00    0.00
+                 5.00        0.00      1120.00   560.00    0.00
+ 
+    4   RF1-2    4.00     74194.0      37261.9   640.00 2400.00
+                 5.00        0.00         0.00   640.00    0.00
+                 8.00        0.00      1120.00     0.00    0.00
+ 
+    4   RF1-3    4.00     47744.8      24976.0     0.00    0.00
+                 5.00        0.00      1120.00     0.00    0.00
+ 
+    4   RF1-4    4.00     95469.3      28199.3     0.00 2000.00
+                 5.00        0.00      2960.00     0.00    0.00
+                 6.00        0.00         0.00     0.00 1480.00
+ 
+    2   RF1-5    4.00     23657.3      21696.6   900.00    0.00
+                 5.00        0.00      1800.00     0.00    0.00
+                 6.00        0.00         0.00     0.00  900.00
+                10.00        0.00       800.00     0.00    0.00
+ 
+    2   RF1-6    4.00     34993.6      2585.60     0.00    0.00
+                 5.00        0.00      1600.00     0.00    0.00
+                 8.00        0.00      1600.00     0.00    0.00
+
+================================================================================
+ C08-033             Bracing Attachments                    23/APR/2026  3:18pm
+================================================================================
+
+  WALL BRACING:
+  -------------
+    Wall        -------Start------  --------End-------                   Bay
+     Id   Level Surf Locate Offset  Surf Locate Offset   Gage  Space   Width   Angle
+    ----  ----- ---- ------ ------  ---- ------ ------  ----- ------  ------  ------
+      4      1    1  266.00 230.00    1  6558.5 230.00   0.00 6292.5  6970.0  0.7344
+      2      1    4  266.00 230.00    4  6558.5 230.00   0.00 6292.5  6970.0  0.7344
+
+  ROOF BRACING:
+  -------------
+    Roof        -------Start------  --------End-------                   Bay
+     Id   Level Surf Locate Offset  Surf Locate Offset   Gage  Space   Width   Angle
+    ----  ----- ---- ------ ------  ---- ------ ------  ----- ------  ------  ------
+      2      1    2  310.17 281.00    2  7702.1 281.00   0.00 7391.9  6970.0  0.8148
+      2      2    2  8002.1 281.00    2   15052 281.00   0.00 7050.0  6970.0  0.8016
+      2      3    2   15352 281.00    2   22702 281.00   0.00 7350.0  6970.0  0.8016
+      2      4    2   23002 281.00    2   30432 281.00   0.00 7429.4  6970.0  0.8173
+      3      5    3  220.60 281.00    3  7650.0 281.00   0.00 7429.4  6970.0  0.8173
+      3      6    3  7950.0 281.00    3   15300 281.00   0.00 7350.0  6970.0  0.8016
+      3      7    3   15600 281.00    3   22650 281.00   0.00 7050.0  6970.0  0.8016
+      3      8    3   22950 281.00    3   30342 281.00   0.00 7391.9  6970.0  0.8148
+
+================================================================================
+ C08-033             Bracing Slot Relocation                23/APR/2026  3:18pm
+================================================================================
+
+    Surf       Old         New
+     Id       Locate      Locate    Change    Adjust
+    ----    --------    --------    ------    -------
+      2     15066.93    14916.93    -150.0 
+      2     15366.93    15216.93    -150.0 
+      3     15129.40    15279.40    150.00 
+      3     15429.40    15579.40    150.00 
+
+================================================================================
+ C08-033             Frame Layout                           23/APR/2026  3:18pm
+================================================================================
+
+
+    Frame
+   Line_Id  Locate  Piece Mark
+   -------  ------  ---------------------------------------------------------
+      1     Surf 1  RF1-1    
+            Surf 2  RF1-2     RF1-3     RF1-4     RF1-5    
+            Surf 3  RF1-4     RF1-3     RF1-2    
+            Surf 4  RF1-1    
+            Col  1  RF1-6    
+   -------  ------  ---------------------------------------------------------
+      7     Surf 1  RF1-1    
+            Surf 2  RF1-2     RF1-3     RF1-4     RF1-5    
+            Surf 3  RF1-4     RF1-3     RF1-2    
+            Surf 4  RF1-1    
+            Col  1  RF1-6    
+
+================================================================================
+ C08-033             Weight Summary                         23/APR/2026  3:18pm
+================================================================================
+       Piece                Out      In    End   Clip     Unit     Total
+  Qty  Mark         Web  Flange  Flange  Plate  Plate   Weight    Weight
+  ---  -------   ------  ------  ------  -----  -----   ------  --------
+    4  RF1-1       65.6    35.3    56.5   23.0   11.6   192.07    768.29  
+    4  RF1-2      238.1    72.7    57.9   39.7   18.7   427.12   1708.49  
+    4  RF1-3      173.1    53.5    33.4   47.4    9.9   317.26   1269.06  
+    4  RF1-4      292.2   124.4   123.8   50.4   14.6   605.34   2421.36  
+    2  RF1-5      254.6    86.5    77.7   67.0   40.1   525.89   1051.78  
+    2  RF1-6       71.1   168.0   168.0   18.6    1.2   426.81    853.63  
+  ----------------------------------------------------------------------
+
+                   Total Frame Weight = 8072.60  
+                   Total Brace Weight =  136.94  
+                   Total Bolt  Weight =   56.62  
+                                       ----------
+                                        8266.16  
+
+================================================================================
+ C08-033             Cost Summary                           23/APR/2026  3:18pm
+================================================================================
+
+       Piece                    End   Clip  Stiff         Surf   Set   Unit   Total
+  Qty  Mark    Flange    Web  Plate  Plate  Plate  Weld  Treat    Up   Cost    Cost
+  ---  ------  ------  -----  -----  -----  -----  ----  -----  ----  -----  ------
+    4  RF1-1   
+       Matrl:       0      0      0      0      0     0      0            0       0
+       Labor:       0      0      0      0      0     0      0     0      0       0
+               ------  -----  -----  -----  -----  ----  -----  ----  -----  ------
+                    0      0      0      0      0     0      0     0      0       0
+    4  RF1-2   
+       Matrl:       0      0      0      0      0     0      0            0       0
+       Labor:       0      0      0      0      0     0      0     0      0       0
+               ------  -----  -----  -----  -----  ----  -----  ----  -----  ------
+                    0      0      0      0      0     0      0     0      0       0
+    4  RF1-3   
+       Matrl:       0      0      0      0      0     0      0            0       0
+       Labor:       0      0      0      0      0     0      0     0      0       0
+               ------  -----  -----  -----  -----  ----  -----  ----  -----  ------
+                    0      0      0      0      0     0      0     0      0       0
+    4  RF1-4   
+       Matrl:       0      0      0      0      0     0      0            0       0
+       Labor:       0      0      0      0      0     0      0     0      0       0
+               ------  -----  -----  -----  -----  ----  -----  ----  -----  ------
+                    0      0      0      0      0     0      0     0      0       0
+    2  RF1-5   
+       Matrl:       0      0      0      0      0     0      0            0       0
+       Labor:       0      0      0      0      0     0      0     0      0       0
+               ------  -----  -----  -----  -----  ----  -----  ----  -----  ------
+                    0      0      0      0      0     0      0     0      0       0
+    2  RF1-6   
+       Matrl:       0      0      0      0      0     0      0            0       0
+       Labor:       0      0      0      0      0     0      0     0      0       0
+               ------  -----  -----  -----  -----  ----  -----  ----  -----  ------
+                    0      0      0      0      0     0      0     0      0       0
+  -----------------------------------------------------------------------------
+
+  Cost Per Frame: Material =       0.40
+                  Labor    =       0.00
+                  --------    --------
+                  Total    =       0.40
+
+  Total Cost Of  2 Frames  =       0.81
+
+
+ PLATE COST:
+ -----------
+  Piece   -------------Plate------------        Material    Labor   Surface
+  Mark    Mark  Part      Length  Weight  Qty       Cost     Cost  Treatment  File     Record    Adjust
+  -----   ----  --------  ------  ------  ---   --------  -------  ---------  -------  --------  --------
+  RF1-1   WB1             6307.9   65.60    1       0.01     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-1   BC1               75.0    0.22    2       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-1   GC21             352.5    2.12    2       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-1   GC26             352.5    2.12    2       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-1   OF1             6307.9   35.32    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-1   GC1              145.0    0.87    2       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-1   IF1             6309.5   56.53    1       0.01     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-1   EP1              300.0    7.68    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-1   EP2              600.4   15.37    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-1   SS3               95.0    0.46    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-1   SS4               95.2    0.46    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-2   WB1             6000.0  161.95    1       0.02     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-2   WB2             3546.0   76.14    1       0.01     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-2   BC1               75.0    0.22    8       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-2   ST1              460.0    2.06    2       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-2   OF1             6300.0   48.38    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-2   OF2             3346.2   21.42    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-2   OF3              452.1    2.89    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-2   PC1              175.0    1.05    7       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-2   GB1              175.4    1.05    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-2   ES1               75.0    0.45    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-2   IF1             6001.9   38.41    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-2   IF2             3045.7   19.49    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-2   IC3              216.0    2.59    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-2   EP1              950.0   24.32    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-2   EP2              600.4   15.37    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-2   SS1               94.0    0.45    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-2   SS2               98.4    0.47    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-2   SS3               95.0    0.46    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-3   WB1             5968.0  173.07    1       0.02     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-3   BC1               75.0    0.22    6       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-3   OF1             5968.0   53.47    1       0.01     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-3   PC1              175.0    1.05    4       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-3   IF1             5968.2   33.42    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-3   IC3              216.0    2.59    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-3   EP1              900.0   23.04    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-3   EP2              950.0   24.32    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-3   SS1               92.0    0.44    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-3   SS2               94.9    0.46    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-3   SS3               92.0    0.44    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-3   SS4               95.1    0.46    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-4   WB1             6000.0  149.92    1       0.01     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-4   WB2             5929.4  142.24    1       0.01     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-4   BC1               75.0    0.22    8       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-4   OF1             5700.0   50.62    1       0.01     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-4   OF2             6229.4   73.76    1       0.01     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-4   PC1              175.0    1.05    8       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-4   IF1             6004.9   71.10    1       0.01     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-4   IF2             5932.5   52.68    1       0.01     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-4   IC3              216.0    2.59    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-4   EP1              950.0   27.36    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-4   EP2              900.0   23.04    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-4   SS1               94.0    0.45    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-4   SS2               97.7    0.47    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-4   SS3               92.0    0.44    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-4   SS4               98.6    0.47    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-5   WB1             5974.2  254.61    1       0.03     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-5   BC1               75.0    0.22    4       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-5   BC2               75.0    0.22    4       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-5   OF1             3002.0   43.23    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-5   OF2             3002.0   43.23    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-5   PC1              175.0    1.05    2       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-5   PC2              175.0    1.05    2       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-5   IF1             2697.9   38.85    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-5   IF2             2697.9   38.85    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-5   ST2              930.0    7.44    4       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-5   IC3              216.0    2.59    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-5   EP1              950.0   27.36    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-5   EP2              950.0   27.36    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-5   SS1               92.0    0.44    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-5   SS2               90.4    0.43    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-5   SS3               92.0    0.44    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-5   SS4               90.4    0.43    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-5   EP11             427.2   12.30    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-6   WB1             8748.4   71.11    1       0.01     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-6   OF1             8748.4  167.97    1       0.02     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-6   IF1             8748.4  167.97    1       0.02     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-6   EP1              300.0    7.68    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-6   EP2              427.2   10.94    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-6   SS3              120.0    0.58    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+  RF1-6   SS4              120.0    0.58    1       0.00     0.00      0.00   RF_Cost  FRAME     @$W/L(F)
+
+================================================================================
+ C08-033             Framing Conflicts                      23/APR/2026  3:18pm
+================================================================================
+
+  SPLICE-PURLIN/GIRT:
+          -Splice-  --Member--          ----Offset----
+    Surf  Id  Type  Type    Id  Locate  Actual    Reqd
+    ----  --  ----  ------ ---  ------  ------  ------
+*     2    2   -SS  Purlin   7  Left      -300   336.0
+*     2    3   -SS  Purlin  11  Left      -300   336.0
+*     2    4   -SS  Purlin  19  Left      -261   336.0
+*     3    5   -SS  Purlin   3  Right    261.4   336.0
+*     3    6   -SS  Purlin  11  Right    300.0   336.0
+*     3    7   -SS  Purlin  15  Right    300.0   336.0
+*WRN(RFD-001) Purlin\Girt Near Splice
+
+================================================================================
+ C08-033             Warning Summary                        23/APR/2026  3:18pm
+================================================================================
+
+  CONFLICT
+    SPLICE
+      WRN(RFD-001): Purlin\Girt Near Splice

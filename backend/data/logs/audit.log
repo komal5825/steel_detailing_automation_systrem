@@ -1,0 +1,11 @@
+2026-05-04 15:10:08,164 - audit.app.agents.support.fallback - INFO - Applying default value for F-002: ''
+2026-05-04 15:10:08,193 - audit.app.agents.support.fallback - INFO - Applying default value for F-020: ''
+2026-05-04 15:10:08,550 - audit.app.agents.support.checkpoint - INFO - Checkpoint [P2-02] Completeness Hard Gate → FAIL
+2026-05-04 15:10:08,551 - audit.app.agents.phase2.p2_02_completeness - INFO - P2-02 completeness: 128 mandatory, 0 present, 2 fallback-resolved, 126 still missing — gate=FAIL
+2026-05-04 15:15:43,787 - audit.app.orchestrator.controller - INFO - Starting stage P2-02
+2026-05-04 15:15:43,807 - audit.app.agents.support.fallback - INFO - Applying default value for F-002: ''
+2026-05-04 15:15:43,845 - audit.app.agents.support.fallback - INFO - Applying default value for F-020: ''
+2026-05-04 15:15:44,199 - audit.app.agents.support.checkpoint - INFO - Checkpoint [P2-02] Completeness Hard Gate → FAIL
+2026-05-04 15:15:44,200 - audit.app.agents.phase2.p2_02_completeness - INFO - P2-02 completeness: 128 mandatory, 0 present, 2 fallback-resolved, 126 still missing — gate=FAIL
+2026-05-04 15:15:44,213 - audit.app.orchestrator.controller - WARNING - Stage P2-02 → BLOCKED — pipeline paused
+2026-05-04 15:15:44,221 - audit.app.agents.support.checkpoint - INFO - Checkpoint [P2-05] Hard Gate 5 — Phase 2 Release Gate → FAIL

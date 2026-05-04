@@ -1,0 +1,396 @@
+ 
+ 
+ 
+ 
+                          Sivoko Steel Structures Ltd.
+                                  Comm.7,Tema
+                              Ghana (West Africa)
+ 
+ 
+ 
+ 
+                    REACTIONS, ANCHOR BOLTS, & BASE PLATES
+                                      FOR
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                               Proposed Warehouse
+                               Proposed Warehouse
+ 
+                                    C08-033
+ 
+ 
+ 
+ 
+                                 BUILDING LAYOUT
+                        Width              (mm)=  61000
+                        Length             (mm)=  45500
+                        Eave Height        (mm)=   7000/  7000
+                        Roof Slope   (rise/100)= 10.00/10.00
+ 
+                                 BUILDING LOADS
+                        Roof Dead Load  (kN/m2)=  0.10
+                        Wall Dead Load
+                          Left  Endwall (kN/m2)=  0.10
+                          Right Endwall (kN/m2)=  0.10
+                          Front Sidewall(kN/m2)=  0.10
+                          Back  Sidewall(kN/m2)=  0.10
+                        Live Load       (kN/m2)=  0.57
+                        Collateral Load (kN/m2)=  0.05
+                        Wind Speed       (m/s )=  39.0
+                        Wind Code              = MBMA10
+                        Exposure               = B
+                        Closure                = Enclosed
+                        Internal Wind Coeff    = -0.18, +0.18
+                        Risk Category          = -
+                        Importance - Wind      =  1.00
+                        Importance - Seismic   =  1.00
+                        Seismic Design Category= B
+                        Seismic Coeff (Sms)    =  0.33
+                        Temperature Change     =   20
+                        -------------------------------
+                        Designer : VVJ
+                        Detailer :
+ 
+ 
+ 
+ 
+                                     23/APR/2026
+
+
+
+================================================================================
+ C08-033             Reactions, Anchor Bolts, & Base Plates:23/APR/2026  3:18pm
+================================================================================
+
+ -----  -----   -----Foundation_Loads(kN)-----   ---------   -----------------
+ Frame  Col      Max_Pos_Val     Max_Neg_Val     Anc._Bolt      Base_Plate 
+ Line   Line    Id  Horz  Vert  Id  Horz  Vert   No.  Diam   Width   Len Thick
+ -----  ------  -- ----- -----  -- ----- -----   --- -----   ----- ----- -----
+ 1      H       11   3.1   1.3  12  -2.8   1.3    4   16.0   200.0 300.0  16.0 
+                13   0.0   2.1                                                 
+ 1      G       11   5.2  -1.2   1  -3.7  14.8    4   16.0   200.0 300.0  16.0 
+                 1  -3.7  14.8  12   0.6 -11.9                                 
+ 1      F       11   7.6  -3.6   1  -6.6  27.6    4   16.0   200.0 300.0  16.0 
+                 1  -6.6  27.6  12   3.1 -25.0                                 
+ 1      E       11   8.0  -3.5   1  -6.4  27.7    4   16.0   200.0 300.0  16.0 
+                 1  -6.4  27.7  12   2.5 -24.9                                 
+ 1      D       11   7.6  -3.6   1  -6.6  27.6    4   16.0   200.0 300.0  16.0 
+                 1  -6.6  27.6  12   3.1 -25.0                                 
+ 1      C       11   5.2  -1.2   1  -3.7  14.8    4   16.0   200.0 300.0  16.0 
+                 1  -3.7  14.8  12   0.6 -11.9                                 
+ 1      B       11   3.1   1.3  12  -2.8   1.3    4   16.0   200.0 300.0  16.0 
+                13   0.0   2.1                                                 
+ -----  ------  -- ----- -----  -- ----- -----   --- -----   ----- ----- -----
+ 7      B       11   3.1   1.3  12  -2.8   1.3    4   16.0   200.0 300.0  16.0 
+                13   0.0   2.1                                                 
+ 7      C       11   5.2  -1.2   1  -3.7  14.8    4   16.0   200.0 300.0  16.0 
+                 1  -3.7  14.8  12   0.6 -11.9                                 
+ 7      D       11   7.6  -3.6   1  -6.6  27.6    4   16.0   200.0 300.0  16.0 
+                 1  -6.6  27.6  12   3.1 -25.0                                 
+ 7      E       11   8.0  -3.5   1  -6.4  27.7    4   16.0   200.0 300.0  16.0 
+                 1  -6.4  27.7  12   2.5 -24.9                                 
+ 7      F       11   7.6  -3.6   1  -6.6  27.6    4   16.0   200.0 300.0  16.0 
+                 1  -6.6  27.6  12   3.1 -25.0                                 
+ 7      G       11   5.2  -1.2   1  -3.7  14.8    4   16.0   200.0 300.0  16.0 
+                 1  -3.7  14.8  12   0.6 -11.9                                 
+ 7      H       11   3.1   1.3  12  -2.8   1.3    4   16.0   200.0 300.0  16.0 
+                13   0.0   2.1                                                 
+ -----  ------  -- ----- -----  -- ----- -----   --- -----   ----- ----- -----
+ 1*     I        1  13.1  42.3   2 -10.9 -27.1    4   20.0   200.0 300.0  16.0 
+                 3  12.3  45.3   4  -5.3 -40.9                                 
+ 1*     A        5  11.0 -27.1   1 -13.1  42.3    4   20.0   200.0 300.0  16.0 
+                 6 -12.4  45.3   7   5.3 -40.9                                 
+ 1*     E        6   7.5  79.7   3  -7.5  79.7    4   20.0   200.0 300.0  16.0 
+                 1   0.0 119.2  10  -0.3 -45.4                                 
+ -----  ------  -- ----- -----  -- ----- -----   --- -----   ----- ----- -----
+ 2*     I        8  50.1  89.8   2 -25.0 -38.7    4   20.0   200.0 400.0  16.0 
+                                 4 -21.5 -67.2                                 
+ 2*     A        5  25.0 -38.7   9 -50.1  89.8    4   20.0   200.0 400.0  16.0 
+                 9 -50.1  89.8   7  21.5 -67.2                                 
+ 2*     E        9  42.7 140.3   8 -42.7 140.3    4   20.0   250.0 850.0  16.0 
+                 1   0.0 214.8  10  -1.7 -91.9                                 
+ -----  ------  -- ----- -----  -- ----- -----   --- -----   ----- ----- -----
+
+
+ -----------------------------------------------------------------------------
+ 1*   Frame Lines:1 7  
+ 2*   Frame Lines:2 3 4 5 6  
+
+ LOAD COMBINATIONS:
+ ------------------
+     Id   Combination
+   ----   ------------------------------
+      1   Dead+Collateral+Live
+      2   0.6Dead+Wind_Left1
+      3   Dead+Collateral+F1PAT_LL_1
+      4   0.6Dead+Wind_Long1L+LWIND1_L2E
+      5   0.6Dead+Wind_Right1
+      6   Dead+Collateral+F1PAT_LL_2
+      7   0.6Dead+Wind_Long1L+LWIND1_R2E
+      8   Dead+Collateral+F2PAT_LL_1
+      9   Dead+Collateral+F2PAT_LL_2
+     10   0.6Dead+Wind_Long1R+LWIND1_R2E
+     11   0.6Dead+Wind_Right2+Wind_Suction
+     12   0.6Dead+Wind_Pressure+Wind_Long2L
+     13   1.02Dead+1.02Collateral+0.52Seismic_Right+0.75Floor_Live
+
+
+================================================================================
+ C08-033             Bracing Reactions Report:              23/APR/2026  3:18pm
+================================================================================
+
+
+
+ BUILDING BRACING REACTIONS:
+ ---------------------------
+                        ----Reactions(+/-)(kN)----
+  ----Wall---  Col      ----Wind----  --Seismic---  Panel_Shear(N/m  )
+  Loc  Line    Line      Horz   Vert   Horz   Vert     Wind  Seismic    Notes
+  ---- ------  -------  -----  -----  -----  -----   ------  -------    -----
+  L_EW 1                                                                 (h)
+ 
+  F_SW A       1  ,2    21.55  19.64  12.69  11.56                           
+               6  ,7    21.55  19.64  12.69  11.56                           
+ 
+  R_EW 7                                                                 (h)
+ 
+  B_SW I       7  ,6    21.55  19.64  12.69  11.56                           
+               2  ,1    21.55  19.64  12.69  11.56                           
+ 
+  ---- ------  -------  -----  -----  -----  -----   ------  -------    -----
+ 
+  (h)Rigid frame at endwall
+
+  Reaction values for seismic shear force, Eh
+  Reaction values shown are unfactored
+  Maximum load combination factors are:
+    Wind   : 1.00
+    Seismic: 0.70
+
+
+================================================================================
+ C08-033             Additional Reactions Report:           23/APR/2026  3:18pm
+================================================================================
+
+
+
+                    Rigid Frame Column Reactions(kN)
+                    --------------------------------
+
+ Frame  Col     ----Dead---   Collateral  ----Live---   Wind_Left1  Wind_Right1
+ Line   Line     Horz  Vert   Horz  Vert   Horz  Vert   Horz  Vert   Horz  Vert
+ -----  ------  ----- -----  ----- -----  ----- -----  ----- -----  ----- -----
+ 1*     I         3.4  12.0    0.8   2.5    8.9  27.9  -13.0 -34.3   -3.3 -18.6
+ 1*     A        -3.4  12.0   -0.8   2.5   -8.9  27.9    3.3 -18.6   13.0 -34.3
+ 1*     E         0.0  33.4    0.0   6.9    0.0  78.8    0.6 -61.0   -0.6 -61.0
+ 
+ Frame  Col      Wind_Left2  Wind_Right2   Wind_Long1   Wind_Long2  -Seis_Left-
+ Line   Line     Horz  Vert   Horz  Vert   Horz  Vert   Horz  Vert   Horz  Vert
+ -----  ------  ----- -----  ----- -----  ----- -----  ----- -----  ----- -----
+ 1*     I       -10.3 -24.0   -0.6  -8.3   -7.0 -43.9   -4.2 -33.8   -3.3  -0.9
+ 1*     A         0.6  -8.3   10.3 -24.0    7.0 -43.9    4.2 -33.8   -3.4   1.0
+ 1*     E         0.6 -34.4   -0.6 -34.4    0.0 -65.2    0.0 -38.4   -2.0  -0.2
+ 
+ Frame  Col     -Seis_Right   Seis_Long1   Seis_Long2  ----Temp---  LWIND1_L2E 
+ Line   Line     Horz  Vert   Horz  Vert   Horz  Vert   Horz  Vert   Horz  Vert
+ -----  ------  ----- -----  ----- -----  ----- -----  ----- -----  ----- -----
+ 1*     I         3.4   1.0    0.0 -11.6    0.0  11.6    0.6   0.3   -0.3  -4.1
+ 1*     A         3.3  -0.9    0.0 -11.6    0.0  11.6   -0.6   0.3    0.4  -0.1
+ 1*     E         2.0  -0.1    0.0   0.0    0.0   0.0    0.0  -0.5    0.3  -0.3
+ 
+ Frame  Col     LWIND1_R2E   LWIND2_L2E   LWIND2_R2E   F1PAT_LL_1   F1PAT_LL_2 
+ Line   Line     Horz  Vert   Horz  Vert   Horz  Vert   Horz  Vert   Horz  Vert
+ -----  ------  ----- -----  ----- -----  ----- -----  ----- -----  ----- -----
+ 1*     I        -0.4  -0.1   -0.3  -4.1   -0.4  -0.1    8.2  30.8    0.7  -3.0
+ 1*     A         0.3  -4.1    0.4  -0.1    0.3  -4.1   -0.7  -3.0   -8.2  30.8
+ 1*     E        -0.3  -0.3    0.3  -0.3   -0.3  -0.3   -7.5  39.3    7.5  39.3
+ 
+ ------------------------------------------------------------------------------
+
+ Frame  Col     ----Dead---   Collateral  ----Live---   Wind_Left1  Wind_Right1
+ Line   Line     Horz  Vert   Horz  Vert   Horz  Vert   Horz  Vert   Horz  Vert
+ -----  ------  ----- -----  ----- -----  ----- -----  ----- -----  ----- -----
+ 2*     I         9.8  20.9    2.8   5.3   32.2  59.6  -30.8 -51.2  -11.7 -31.7
+ 2*     A        -9.8  20.9   -2.8   5.3  -32.2  59.6   11.7 -31.7   30.8 -51.2
+ 2*     E         0.0  52.7    0.0  13.1    0.0 148.9    1.5 -85.7   -1.5 -85.7
+ 
+ Frame  Col      Wind_Left2  Wind_Right2   Wind_Long1   Wind_Long2  -Seis_Left-
+ Line   Line     Horz  Vert   Horz  Vert   Horz  Vert   Horz  Vert   Horz  Vert
+ -----  ------  ----- -----  ----- -----  ----- -----  ----- -----  ----- -----
+ 2*     I       -21.3 -29.3   -2.1  -9.7  -25.8 -71.3  -15.4 -49.8   -2.7  -1.1
+ 2*     A         2.1  -9.7   21.3 -29.3   25.8 -71.3   15.4 -49.8   -2.7   1.1
+ 2*     E         1.4 -35.9   -1.4 -35.9    0.0-123.4    0.0 -72.6   -4.6   0.0
+ 
+ Frame  Col     -Seis_Right   Seis_Long1   Seis_Long2  ----Temp---  LWIND1_L2E 
+ Line   Line     Horz  Vert   Horz  Vert   Horz  Vert   Horz  Vert   Horz  Vert
+ -----  ------  ----- -----  ----- -----  ----- -----  ----- -----  ----- -----
+ 2*     I         2.7   1.1    0.0 -11.6    0.0  11.6    1.1   0.5   -1.5  -8.5
+ 2*     A         2.7  -1.1    0.0 -11.6    0.0  11.6   -1.1   0.5    0.7  -0.4
+ 2*     E         4.6   0.0    0.0   0.0    0.0   0.0    0.0  -1.0    1.7  -0.1
+ 
+ Frame  Col     LWIND1_R2E   LWIND2_L2E   LWIND2_R2E   F2PAT_LL_1   F2PAT_LL_2 
+ Line   Line     Horz  Vert   Horz  Vert   Horz  Vert   Horz  Vert   Horz  Vert
+ -----  ------  ----- -----  ----- -----  ----- -----  ----- -----  ----- -----
+ 2*     I        -0.7  -0.4   -1.5  -8.5   -0.7  -0.4   37.5  63.6   -5.3  -4.0
+ 2*     A         1.5  -8.5    0.7  -0.4    1.5  -8.5    5.3  -4.0  -37.5  63.6
+ 2*     E        -1.7  -0.1    1.7  -0.1   -1.7  -0.1  -42.7  74.5   42.7  74.5
+ 
+ ------------------------------------------------------------------------------
+
+ 
+ Wind    bracing vertical reactions included with longitudinal reactions
+ Seismic bracing Vertical reactions included with longitudinal reactions
+ 
+ 1*   Frame Lines:1 7  
+ 2*   Frame Lines:2 3 4 5 6  
+
+
+                      Endwall Column Reactions(kN)
+                      -----------------------------
+
+
+ Frame  Col   ----Dead----  -Collateral-  ----Live----  Wind_Pressure
+ Line   Line   Horz   Vert   Horz   Vert   Horz   Vert   Horz   Vert
+ -----  ----  -----  -----  -----  -----  -----  -----  -----  -----
+ 1      H       0.0    2.1    0.0    0.0    0.0    0.0   -2.8    0.0
+ 1      G      -0.5    4.1   -0.3    0.9   -2.9    9.9    1.0  -14.3
+ 1      F      -0.9    6.1   -0.5    1.7   -5.2   19.8    3.7  -28.6
+ 1      E      -0.9    6.2   -0.4    1.7   -5.1   19.8    3.1  -28.6
+ 1      D      -0.9    6.1   -0.5    1.7   -5.2   19.8    3.7  -28.6
+ 1      C      -0.5    4.1   -0.3    0.9   -2.9    9.9    1.0  -14.3
+ 1      B       0.0    2.1    0.0    0.0    0.0    0.0   -2.8    0.0
+
+                            Seismic
+ Frame  Col   Wind_Suction   Long
+ Line   Line   Horz   Vert   Horz
+ -----  ----  -----  -----  -----
+ 1      H       3.1    0.0   0.02
+ 1      G       5.5   -3.6   0.03
+ 1      F       8.1   -7.2   0.05
+ 1      E       8.5   -7.2   0.05
+ 1      D       8.1   -7.2   0.05
+ 1      C       5.5   -3.6   0.03
+ 1      B       3.1    0.0   0.02
+ ------------------------------------------------------------------------------
+
+ Frame  Col   ----Dead----  -Collateral-  ----Live----  Wind_Pressure
+ Line   Line   Horz   Vert   Horz   Vert   Horz   Vert   Horz   Vert
+ -----  ----  -----  -----  -----  -----  -----  -----  -----  -----
+ 7      B       0.0    2.1    0.0    0.0    0.0    0.0   -2.8    0.0
+ 7      C      -0.5    4.1   -0.3    0.9   -2.9    9.9    1.0  -14.3
+ 7      D      -0.9    6.1   -0.5    1.7   -5.2   19.8    3.7  -28.6
+ 7      E      -0.9    6.2   -0.4    1.7   -5.1   19.8    3.1  -28.6
+ 7      F      -0.9    6.1   -0.5    1.7   -5.2   19.8    3.7  -28.6
+ 7      G      -0.5    4.1   -0.3    0.9   -2.9    9.9    1.0  -14.3
+ 7      H       0.0    2.1    0.0    0.0    0.0    0.0   -2.8    0.0
+
+                            Seismic
+ Frame  Col   Wind_Suction   Long
+ Line   Line   Horz   Vert   Horz
+ -----  ----  -----  -----  -----
+ 7      B       3.1    0.0   0.02
+ 7      C       5.5   -3.6   0.03
+ 7      D       8.1   -7.2   0.05
+ 7      E       8.5   -7.2   0.05
+ 7      F       8.1   -7.2   0.05
+ 7      G       5.5   -3.6   0.03
+ 7      H       3.1    0.0   0.02
+ ------------------------------------------------------------------------------
+
+
+================================================================================
+ C08-033             Seismic Design Report:                 23/APR/2026  3:18pm
+================================================================================
+
+
+      Building Data
+      -------------
+        Code                =MBMA 10
+        Length              =   45500
+        Width               =   61000
+        Left  Eave Height   =    7000
+        Right Eave Height   =    7000
+
+      Seismic Formula
+      ---------------
+        Equivalent Lateral Force, Section 12.8
+
+        Base  Shear V       = 0.667*Ie*Sms*W/R                        
+
+
+        Shear Force Eh      = Rho*V                                   
+         (Rigid frame, endwall frame, wind bent, wind column & base reactions)
+
+        Shear Force Em      = Omega*V                                 
+         (Wall diagonal bracing, splice at rigid frame & wind bent knee)
+
+
+        Note: Applied load is seismic force multiplied by load combination
+
+        Sms                 =   0.330
+        Zone/Design Category=   B  
+        Ie                  =   1.000
+
+      Seismic Dead Load, W
+      --------------------
+        Frame    Dead       =   0.096 (kN/m2)
+        Roof     Dead       =   0.100 (kN/m2)
+        Collateral          =   0.050 (kN/m2)
+        Roof     Total      =   0.246 (kN/m2)    , Weight= 682.67 (kN)
+        Left  EW Dead       =   0.096 (kN/m2)    , Weight=  24.99 (kN)
+        Front SW Dead       =   0.096 (kN/m2)    , Weight=  15.30 (kN)
+        Right EW Dead       =   0.096 (kN/m2)    , Weight=  24.99 (kN)
+        Back  SW Dead       =   0.096 (kN/m2)    , Weight=  15.30 (kN)
+        Extensions
+          Left  EW Total    =   0.150 (kN/m2)    , Weight=  20.81 (kN)
+          Right EW Total    =   0.150 (kN/m2)    , Weight=  20.81 (kN)
+                                                          -------
+                                                   Total = 804.88 (kN)
+
+      Seismic Forces
+      --------------
+
+        Roof Bracing
+                       R  =   5.00, Rho=   1.50                              
+                      Cs  =   0.0440
+                       W  = 732.65 (kN)
+                Force  V  =  32.24 (kN)        
+                Force  Eh =  48.35 (kN)
+
+        Sidewall Bracing
+          Front SW     R  =   5.00, Rho=   1.50, Omega=   2.00               
+                      Cs  =   0.0440
+                       W  = 384.44 (kN)
+                Force  V  =  16.92 (kN)        
+                Force  Em =  33.83 (kN)
+                Force  Eh =  25.37 (kN)
+          Back  SW     R  =   5.00, Rho=   1.50, Omega=   2.00               
+                      Cs  =   0.0440
+                       W  = 384.44 (kN)
+                Force  V  =  16.92 (kN)        
+                Force  Em =  33.83 (kN)
+                Force  Eh =  25.37 (kN)
+
+        Rigid Frames
+                       R  =   3.50, Rho=   1.31                              
+                      Cs  =   0.0629
+          Frame  1     W  =  85.58 (kN)
+                Force  V  =   5.38 (kN)        
+                Force  Eh =   7.06 (kN)
+          Frame  2     W  = 120.73 (kN)
+                Force  V  =   7.59 (kN)        
+                Force  Eh =   9.96 (kN)
+
+        End Plates
+          Frame        R  =   3.50, Omega=   3.00                            
+
+        Total Base Shear
+          Longitudinal
+                Force  V  =  33.83 (kN)
+          Transverse
+                Force  V  =  48.73 (kN)

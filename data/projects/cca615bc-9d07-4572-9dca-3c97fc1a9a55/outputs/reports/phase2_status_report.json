@@ -1,0 +1,74 @@
+{
+  "generated_at": "2026-05-04T09:38:28.510241",
+  "project": {
+    "id": "cca615bc-9d07-4572-9dca-3c97fc1a9a55",
+    "proposal_id": "CA-",
+    "name": "Infiniti",
+    "location": "pune",
+    "project_type": "Industrial Building",
+    "status": "CREATED"
+  },
+  "files": [
+    {
+      "id": "418ef65e-23f4-4eca-8143-7777a773578f",
+      "original_filename": "C08-033-3d.dwg",
+      "file_type": "DWG",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PENDING"
+    }
+  ],
+  "stages": [
+    {
+      "stage_code": "P2-01",
+      "status": "PASSED",
+      "started_at": "2026-05-04T09:38:09.242785",
+      "completed_at": "2026-05-04T09:38:09.255624",
+      "error_message": null,
+      "result": {
+        "status": "success",
+        "project_id": "cca615bc-9d07-4572-9dca-3c97fc1a9a55",
+        "files_found": 0,
+        "parsed_files": 0,
+        "failed_files": 0,
+        "extracted_fields": 0,
+        "normalized_fields": 0
+      }
+    },
+    {
+      "stage_code": "P2-02",
+      "status": "PENDING",
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null,
+      "result": {}
+    },
+    {
+      "stage_code": "P2-03",
+      "status": "PENDING",
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null,
+      "result": {}
+    },
+    {
+      "stage_code": "P2-04",
+      "status": "PENDING",
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null,
+      "result": {}
+    },
+    {
+      "stage_code": "P2-05",
+      "status": "PENDING",
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null,
+      "result": {}
+    }
+  ],
+  "outputs": []
+}

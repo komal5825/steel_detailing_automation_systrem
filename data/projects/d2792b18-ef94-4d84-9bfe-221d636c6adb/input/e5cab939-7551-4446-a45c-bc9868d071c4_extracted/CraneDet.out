@@ -1,0 +1,236 @@
+*===============================================================================
+*C08-033             Crane Detail Input                     23/APR/2026  3:19pm
+*===============================================================================
+ 
+*( 1)JOBID:
+    'C08-033'
+ 
+*( 2)BUILDING LAYOUT:
+*                           L_Expand_EW  R_Expand_EW  Build
+* Type     Width    Length  Use  Offset  Use  Offset  Slope
+  'FF-'  61000.0   45500.0 'Y '  380.00 'Y '  380.00  10.00
+ 
+*( 3)WALL LAYOUT:
+*                           -------Wall-------    Wall
+* No. Id  Use     Type Opt     Start    Length  Offset
+   5  1  'LEFT  ' '-'  '-'         0     61000  200.00
+      2  'FRONT ' '-'  '-'         0     45500  150.00
+      3  'RIGHT ' '-'  '-'         0     61000  200.00
+      4  'BACK  ' '-'  '-'         0     45500  150.00
+      5  'ROOF  ' '-'  '-'         0     45500    0.00
+ 
+*( 4)SURFACE SHAPE:
+*                            ---Offset---
+*  No.   X_Coord   Y_Coord   Left   Right
+    4        0.0    7000.0  150.00 150.00
+         30500.0   10050.0  200.00 200.00
+         61000.0    7000.0  200.00 200.00
+         61000.0       0.0  150.00 150.00
+ 
+*( 5)BAY SPACING:
+* Wall   --Offset---     No.   ---Bay_Set---
+*  Id    Left  Right    Sets     Width  Quan
+    1  150.00 150.00      3     7400.0    1
+                                7700.0    6
+                                7400.0    1
+    2  380.00 380.00      3     7350.0    1
+                                7700.0    4
+                                7350.0    1
+    3  150.00 150.00      3     7400.0    1
+                                7700.0    6
+                                7400.0    1
+    4  380.00 380.00      3     7350.0    1
+                                7700.0    4
+                                7350.0    1
+    5  380.00 380.00      3     7350.0    1
+                                7700.0    4
+                                7350.0    1
+ 
+*( 6)WALL COLUMNS:
+*Wall                                    Base  Base   Flange    Web
+* Id   No.  Id    Part       Rot  Opt    Elev  Thick   Thick  Thick
+   1    9    1   '--------'  'N'  '-'    0.00  16.00    0.00   0.00
+             2   'MB225'     'N'  '-'    0.00  16.00  299.72   0.00
+             3   'MB225'     'N'  '-'    0.00  16.00  299.72   0.00
+             4   'MB225'     'N'  '-'    0.00  16.00  299.72   0.00
+             5   'MB225'     'N'  '-'    0.00  16.00  299.72   0.00
+             6   'MB225'     'N'  '-'    0.00  16.00  299.72   0.00
+             7   'MB225'     'N'  '-'    0.00  16.00  299.72   0.00
+             8   'MB225'     'N'  '-'    0.00   0.00  299.72   0.00
+             9   '--------'  'N'  '-'    0.00   0.00    0.00   0.00
+   2    7    1   '--------'  'N'  '-'    0.00   0.00    5.00   4.00
+             2   '--------'  'N'  '-'    0.00   0.00    6.00   5.00
+             3   '--------'  'N'  '-'    0.00   0.00    6.00   5.00
+             4   '--------'  'N'  '-'    0.00   0.00    6.00   5.00
+             5   '--------'  'N'  '-'    0.00   0.00    6.00   5.00
+             6   '--------'  'N'  '-'    0.00   0.00    6.00   5.00
+             7   '--------'  'N'  '-'    0.00   0.00    5.00   4.00
+   3    9    1   '--------'  'N'  '-'    0.00  16.00    0.00   0.00
+             2   'MB225'     'N'  '-'    0.00  16.00  299.72   0.00
+             3   'MB225'     'N'  '-'    0.00  16.00  299.72   0.00
+             4   'MB225'     'N'  '-'    0.00  16.00  299.72   0.00
+             5   'MB225'     'N'  '-'    0.00  16.00  299.72   0.00
+             6   'MB225'     'N'  '-'    0.00  16.00  299.72   0.00
+             7   'MB225'     'N'  '-'    0.00  16.00  299.72   0.00
+             8   'MB225'     'N'  '-'    0.00   0.00  299.72   0.00
+             9   '--------'  'N'  '-'    0.00   0.00    0.00   0.00
+   4    7    1   '--------'  'N'  '-'    0.00   0.00    5.00   4.00
+             2   '--------'  'N'  '-'    0.00   0.00    6.00   5.00
+             3   '--------'  'N'  '-'    0.00   0.00    6.00   5.00
+             4   '--------'  'N'  '-'    0.00   0.00    6.00   5.00
+             5   '--------'  'N'  '-'    0.00   0.00    6.00   5.00
+             6   '--------'  'N'  '-'    0.00   0.00    6.00   5.00
+             7   '--------'  'N'  '-'    0.00   0.00    5.00   4.00
+ 
+*( 7)RIGID FRAMES/INTERIOR COLUMNS:
+* No.   Frame  Frame  Frame                                                 Web ----Flange---
+*Frame  Line     Id    Type  No.  Id    Part       Rot   Locate    Elev   Depth OS_Flg IS_Flg
+   7      1       1    'RF'   1    1   '--------'  'N'  30500.0    0.00  203.20  12.00  12.00
+          2       2    'RF'   1    1   '--------'  'N'  30500.0    0.00  787.40  16.00  16.00
+          3       2    'RF'   1    1   '--------'  'N'  30500.0    0.00  787.40  16.00  16.00
+          4       2    'RF'   1    1   '--------'  'N'  30500.0    0.00  787.40  16.00  16.00
+          5       2    'RF'   1    1   '--------'  'N'  30500.0    0.00  787.40  16.00  16.00
+          6       2    'RF'   1    1   '--------'  'N'  30500.0    0.00  787.40  16.00  16.00
+          7       1    'RF'   1    1   '--------'  'N'  30500.0    0.00  203.20  12.00  12.00
+ 
+*( 8)CRANE RUNWAY LAYOUT:
+*No. Sys Crane Runway -----------------Runway_Location----------------
+*Sys Id  Type  Orn      Elev    Offset      Span      Start        End
+  0
+ 
+*( 9)CRANES OPTIONS:
+*System Runway ---Support---         -------Angles-------
+* Id     Beam  Beam   Column  Stops  Lat  Long  Beam  Col
+ 
+*(10)RUNWAY BEAM:
+*    Sys Mem Rnwy                                                       Conn_Id   Stiff  ---Weld_Id--
+* No. Id  Id Side   Locate Type Opt   Part       Beam       Channel   Left  Right   Id   Beam Channel
+   0
+ 
+*(11)CRANE SUPPORT BEAM:
+*    Sys Member Rnwy                              Conn_Id   Stiff  Weld
+* No. Id   Id   Side   Locate Opt    Part       Left  Right   Id    Id
+   0
+ 
+*(12)CRANE SUPPORT COLUMN:
+*    Sys Member Rnwy                                 Base  Base Cap Stiff  Weld
+*No.  Id   Id   Side   Locate Rot Opt   Part         Elev   Id   Id   Id    Id
+   0
+ 
+*(13)CRANE BRACKET:
+*        Sys Member Rnwy                           Stiff  Weld
+*  No.    Id   Id   Side   Locate Opt   Part         Id    Id
+    0
+ 
+*(14)CRANE STOP:
+*    Sys Member Rnwy                           Conn  Stiff  Weld
+* No. Id   Id   Side   Locate Opt   Part        Id     Id    Id
+   0
+ 
+*(15)CRANE ANGLES:
+*        Sys  Rnwy                                            ---Conn_Id---
+*  No.   Id   Side   Locate  Use     Offset  Opt   Part       Frame   Crane
+    0
+ 
+*(16)INDEPENDENT DIAGONAL BRACING:
+*      System  Rnwy    -----Locate-----       No.   Level                          Conn
+* No.    Id    Side    Start        End Dir  Level  Height  Type   Part       Opt   Id
+   0
+ 
+*(17)CONNECTION TABLE:
+*      Table            ------------Plate-----------    --------------------Bolt-------------------  Bolt  Weld
+* No.   Id   Type  Opt  Part       Width Length Thick   Type     Dia Row1 Row2 Space1 Space2   Gage   Ref   Id
+   0
+ 
+*(18)WELDS:
+*    Table      ---OS_Flange---  ---IS_Flange---  ------Web------  ----Stitch----
+*No.  Id   Opt   Size Type Note   Size Type Note   Size Type Note  Length   Space
+   0
+ 
+*(19)CRANE STRUT:
+*    Sys Member Rnwy                            --Conn_Id--  Weld
+* No. Id   Id   Side  Locate  Opt    Part       Left  Right   Id
+   0
+ 
+*(20)RIGID FRAME COORDINATES:
+*                  No.
+*No.   Id   Type  Coord  X_Y_Coordinates
+  2     1   'RF-'   32      413          0
+                            563       6340
+                            556       6335
+                            660       6351
+                            660       6351
+                           3699       6555
+                           3699       6555
+                           9700       7004
+                           9700       7004
+                          15665       7651
+                          15665       7650
+                          21561       8441
+                          21561       8439
+                          27572       8788
+                          27572       8788
+                          30500       8788
+                          30500       8788
+                          33428       8788
+                          33428       8788
+                          39439       8439
+                          39439       8441
+                          45335       7650
+                          45335       7651
+                          51300       7004
+                          51300       7004
+                          57301       6555
+                          57301       6555
+                          60340       6351
+                          60340       6351
+                          60444       6335
+                          60437       6340
+                          60587          0
+        2   'RF-'   36      517         -1
+                            869       6456
+                            860       6441
+                            966       6461
+                            965       6461
+                            965       6461
+                            965       6461
+                           3681       6733
+                           3680       6741
+                           9681       7190
+                           9681       7192
+                          15651       7789
+                          15652       7787
+                          21587       8532
+                          21586       8530
+                          27548       8623
+                          27547       8623
+                          30500       8623
+                          30500       8623
+                          33453       8623
+                          33453       8623
+                          39414       8530
+                          39413       8532
+                          45348       7787
+                          45349       7789
+                          51319       7192
+                          51319       7190
+                          57320       6741
+                          57319       6733
+                          60035       6461
+                          60035       6461
+                          60035       6461
+                          60034       6461
+                          60140       6441
+                          60131       6456
+                          60483         -1
+ 
+*(21)ADDED HOLES:
+*    Sys  Mem         Bolt    Slot                      ----Hole---
+*No.  Id   Id  Use     Dia  Length   Gage  Offset  Row  No.  Locate
+  0
+ 
+*(22)ADDED PLATES:
+*    Sys  Mem                                            --------Plate-------- ----Bolts---- Bolt_Holes
+*No.  Id   Id  Opt  Att  Side  Locate  Offset  Orn  Rot   Width  Thick  Length    Dia   Gage No. Locate
+  0
+ 

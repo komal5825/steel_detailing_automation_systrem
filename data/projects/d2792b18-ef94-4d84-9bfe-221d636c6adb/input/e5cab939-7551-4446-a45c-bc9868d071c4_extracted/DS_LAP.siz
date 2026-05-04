@@ -1,0 +1,20 @@
+*                        FILE: DS_LAP.SIZ
+*  Example Laps
+*        LAP AND BRACE DISTANCES FOR PURLINS AND GIRTS, SI UNITS
+*
+*     Lap distance (mm) is measured from the center of the interior
+*         support to the lap bolt line.
+*          
+*
+* AVAILABLE   AVAILABLE        No.  
+*   LAPS      BRACE DIST.    Brace Loc.  Brace Locations 
+*   mm           mm                      mm         
+     0.0       660.0         3           330.0 660.0 960.0        
+    50.0       660.0         3           330.0 660.0 960.0        
+   330.0       660.0         3           330.0 660.0 960.0              
+   660.0       660.0         3           330.0 660.0 960.0               
+   960.0       660.0         3           330.0 660.0 960.0           
+ 
+
+
+

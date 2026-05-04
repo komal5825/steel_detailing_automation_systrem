@@ -1,0 +1,126 @@
+ 
+[EWDET:MEMBER1]
+Type=FRAME_WALL
+Id=1
+Mark=EC-1
+Wall=1
+Part=MB225
+X=      0.00
+Y=  53600.00
+ 
+[EWDET:MEMBER2]
+Type=FRAME_WALL
+Id=2
+Mark=EC-2
+Wall=1
+Part=MB225
+X=      0.00
+Y=  45900.00
+ 
+[EWDET:MEMBER3]
+Type=FRAME_WALL
+Id=3
+Mark=EC-3
+Wall=1
+Part=MB225
+X=      0.00
+Y=  38200.01
+ 
+[EWDET:MEMBER4]
+Type=FRAME_WALL
+Id=4
+Mark=EC-4
+Wall=1
+Part=MB225
+X=      0.00
+Y=  30500.00
+ 
+[EWDET:MEMBER5]
+Type=FRAME_WALL
+Id=5
+Mark=EC-5
+Wall=1
+Part=MB225
+X=      0.00
+Y=  22800.01
+ 
+[EWDET:MEMBER6]
+Type=FRAME_WALL
+Id=6
+Mark=EC-6
+Wall=1
+Part=MB225
+X=      0.00
+Y=  15100.00
+ 
+[EWDET:MEMBER7]
+Type=FRAME_WALL
+Id=7
+Mark=EC-1
+Wall=1
+Part=MB225
+X=      0.00
+Y=   7400.00
+ 
+[EWDET:MEMBER8]
+Type=FRAME_WALL
+Id=8
+Mark=EC-1
+Wall=3
+Part=MB225
+X=  45500.00
+Y=   7400.00
+ 
+[EWDET:MEMBER9]
+Type=FRAME_WALL
+Id=9
+Mark=EC-2
+Wall=3
+Part=MB225
+X=  45500.00
+Y=  15100.00
+ 
+[EWDET:MEMBER10]
+Type=FRAME_WALL
+Id=10
+Mark=EC-3
+Wall=3
+Part=MB225
+X=  45500.00
+Y=  22800.00
+ 
+[EWDET:MEMBER11]
+Type=FRAME_WALL
+Id=11
+Mark=EC-4
+Wall=3
+Part=MB225
+X=  45500.00
+Y=  30500.00
+ 
+[EWDET:MEMBER12]
+Type=FRAME_WALL
+Id=12
+Mark=EC-5
+Wall=3
+Part=MB225
+X=  45500.00
+Y=  38200.00
+ 
+[EWDET:MEMBER13]
+Type=FRAME_WALL
+Id=13
+Mark=EC-6
+Wall=3
+Part=MB225
+X=  45500.00
+Y=  45900.00
+ 
+[EWDET:MEMBER14]
+Type=FRAME_WALL
+Id=14
+Mark=EC-1
+Wall=3
+Part=MB225
+X=  45500.00
+Y=  53600.00

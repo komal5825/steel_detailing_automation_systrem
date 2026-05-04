@@ -25,6 +25,15 @@ def get_project(db: Session, project_id: UUID) -> Project | None:
     return db.query(Project).filter(Project.id == project_id).first()
 
 
+def list_project_files(db: Session, project_id: UUID) -> list[ProjectFile]:
+    return (
+        db.query(ProjectFile)
+        .filter(ProjectFile.project_id == project_id)
+        .order_by(ProjectFile.created_at.asc(), ProjectFile.original_filename.asc())
+        .all()
+    )
+
+
 def create_project(db: Session, payload: ProjectCreate) -> Project:
     project = Project(
         proposal_id=payload.proposal_id,

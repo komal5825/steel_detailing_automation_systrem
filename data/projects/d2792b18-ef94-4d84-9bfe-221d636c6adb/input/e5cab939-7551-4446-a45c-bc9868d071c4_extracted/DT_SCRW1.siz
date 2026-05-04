@@ -1,0 +1,633 @@
+*
+* METRIC UNITS USED
+*                               DT_SCRW1.SIZ
+*
+*
+*
+* LOC  -----------------QUALIFIERS------------------         ----QUANTITY--- -----SIZE-------        ---------IDENTIFICATION----------
+* [1]    [2   [3]  [4]   [5]      [6]   [7] [8]  [9]  [10]  [11] [12] [13]  [14]  [15]  [16]    [17]  [18]     [19]        [20]
+**
+**            -Screw--  Screw    - Panel-              Max
+**--Trim----  Len  Fin   Use               Min   Max  Start  Det.              Weight Length          Part
+**Type Style                     Type   Ga Pitch Pitch  Dim.  #  Ext. Unit  Qty   (kg)   (mm)   Color  Name     Mark      Description
+**---- -----  ---  ---- -------- ------ -- ----- ----- ----- --- ---  ---- ----- ------ ------  -----  -------  -------- ----------------------
+'@EAVE'
+'ST'   '-'   '-' '--' 'PANEL_R' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  55.0   '@R'  '14x55SDS' '      ' 'No. 12-14x55 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_R ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@E'  '12x20SDS' '      ' 'No. 10-12X20 SDS    '
+'ST'   '-'   '-' '--' 'PANEL_W' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  20.0   '@W'  '14x20SDS' '      ' 'No. 12-14x20 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_W ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@E'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+'ST1'  '-'   '-' '--' 'TRIM_R ' '--'    0  0.0   0.0   0.00  1   0   'LP' 6.00  0.0070  11.0   '--'  'Rivet   ' 'Rivet ' 'Pop Rivet           '
+
+
+'@EAVE_GUTTER'
+'ST'   '-'   '-' '--' 'PANEL_R' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  55.0   '@R'  '14x55SDS' '      ' 'No. 12-14x55 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_R ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@E'  '12x20SDS' '      ' 'No. 10-12X20 SDS    '
+'ST'   '-'   '-' '--' 'PANEL_W' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  20.0   '@W'  '14x20SDS' '      ' 'No. 12-14x20 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_W ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@E'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+'ST1'  '-'   '-' '--' 'TRIM_R ' '--'    0  0.0   0.0   0.00  1   0   'LP' 6.00  0.0070  11.0   '--'  'Rivet   ' 'Rivet ' 'Pop Rivet           '
+
+
+'@EAVE_EXTEND'
+'ST'   '-'   '-' '--' 'PANEL_R' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  55.0   '@R'  '14x55SDS' '      ' 'No. 12-14x55 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_R ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@E'  '12x20SDS' '      ' 'No. 10-12X20 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_W ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@E'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+'ST1'  '-'   '-' '--' 'TRIM_R ' '--'    0  0.0   0.0   0.00  1   0   'LP' 6.00  0.0070  11.0   '--'  'Rivet   ' 'Rivet ' 'Pop Rivet           '
+'ST1'  '-'   '-' '--' 'TRIM_W ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@E'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+
+
+'@EAVE_BUILD_EXTEND'
+'ST'   '-'   '-' '--' 'PANEL_W' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  20.0   '@W'  '14x20SDS' '      ' 'No. 12-14x20 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_W ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@W'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+
+
+'@EAVE_BUILD_CANOPY'
+'ST'   '-'   '-' '--' 'PANEL_R' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  55.0   '@R'  '14x55SDS' '      ' 'No. 12-14x55 SDS    '
+'ST'   '-'   '-' '--' 'PANEL_W' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  20.0   '@W'  '14x20SDS' '      ' 'No. 12-14x20 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_W ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@W'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+
+
+'@EAVE_OPEN'
+'ST'   '-'   '-' '--' 'PANEL_R' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  55.0   '@R'  '14x55SDS' '      ' 'No. 12-14x55 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_R ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@E'  '12x20SDS' '      ' 'No. 10-12X20 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_W ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@E'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+'ST1'  '-'   '-' '--' 'TRIM_R ' '--'    0  0.0   0.0   0.00  1   0   'LP' 6.00  0.0070  11.0   '--'  'Rivet   ' 'Rivet ' 'Pop Rivet           '
+
+
+'@EAVE_OPEN_GUTTER'
+'ST'   '-'   '-' '--' 'PANEL_R' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  55.0   '@R'  '14x55SDS' '      ' 'No. 12-14x55 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_R ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@E'  '12x20SDS' '      ' 'No. 10-12X20 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_W ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@E'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+'ST1'  '-'   '-' '--' 'TRIM_R ' '--'    0  0.0   0.0   0.00  1   0   'LP' 6.00  0.0070  11.0   '--'  'Rivet   ' 'Rivet ' 'Pop Rivet           '
+
+
+'@EAVE_OPEN_HI'
+'ST'   '-'   '-' '--' 'PANEL_R' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  55.0   '@R'  '14x55SDS' '      ' 'No. 12-14x55 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_R ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@E'  '12x20SDS' '      ' 'No. 10-12X20 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_W ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@E'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+'ST1'  '-'   '-' '--' 'TRIM_R ' '--'    0  0.0   0.0   0.00  1   0   'LP' 6.00  0.0070  11.0   '--'  'Rivet   ' 'Rivet ' 'Pop Rivet           '
+
+
+'@EAVE_SINGLE_HI'
+'ST'   '-'   '-' '--' 'PANEL_R' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  55.0   '@R'  '14x55SDS' '      ' 'No. 12-14x55 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_R ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@E'  '12x20SDS' '      ' 'No. 10-12X20 SDS    '
+'ST'   '-'   '-' '--' 'PANEL_W' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  20.0   '@W'  '14x20SDS' '      ' 'No. 12-14x20 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_W ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@E'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+'ST1'  '-'   '-' '--' 'TRIM_R ' '--'    0  0.0   0.0   0.00  1   0   'LP' 6.00  0.0070  11.0   '--'  'Rivet   ' 'Rivet ' 'Pop Rivet           '
+
+
+'@EAVE_LEAN_HI'
+'ST'   '-'   '-' '--' 'PANEL_R' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  55.0   '@R'  '14x55SDS' '      ' 'No. 12-14x55 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_R ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@E'  '12x20SDS' '      ' 'No. 10-12X20 SDS    '
+'ST1'  '-'   '-' '--' 'TRIM_R ' '--'    0  0.0   0.0   0.00  1   0   'LP' 6.00  0.0070  11.0   '--'  'Rivet   ' 'Rivet ' 'Pop Rivet           '
+
+
+'@EAVE_GABLE'
+'ST'   '-'   '-' '--' 'PANEL_R' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  55.0   '@R'  '14x55SDS' '      ' 'No. 12-14x55 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_R ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@E'  '12x20SDS' '      ' 'No. 10-12X20 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_W ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@E'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+'ST1'  '-'   '-' '--' 'TRIM_R ' '--'    0  0.0   0.0   0.00  1   0   'LP' 6.00  0.0070  11.0   '--'  'Rivet   ' 'Rivet ' 'Pop Rivet           '
+
+
+'@EAVE_GABLE_HI'
+'ST'   '-'   '-' '--' 'PANEL_R' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  55.0   '@R'  '14x55SDS' '      ' 'No. 12-14x55 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_R ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@E'  '12x20SDS' '      ' 'No. 10-12X20 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_W ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@E'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+'ST1'  '-'   '-' '--' 'TRIM_R ' '--'    0  0.0   0.0   0.00  1   0   'LP' 6.00  0.0070  11.0   '--'  'Rivet   ' 'Rivet ' 'Pop Rivet           '
+
+
+'@GABLE'
+'ST'   '-'   '-' '--' 'PANEL_R' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  55.0   '@R'  '14x55SDS' '      ' 'No. 12-14x55 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_R ' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  20.0   '@G'  '12x20SDS' '      ' 'No. 10-12X20 SDS    '
+'ST'   '-'   '-' '--' 'PANEL_W' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  20.0   '@W'  '14x20SDS' '      ' 'No. 12-14x20 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_W ' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  20.0   '@G'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+'ST1'  '-'   '-' '--' 'TRIM_R ' '--'    0  0.0   0.0   0.00  1   0   'LP' 6.00  0.0070  11.0   '--'  'Rivet   ' 'Rivet ' 'Pop Rivet           '
+
+
+'@GUTTER'
+'ST'   '-'   '-' '--' 'TRIM_R ' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  20.0   '@T'  '12x20SDS' '      ' 'No. 10-12X20 SDS    '
+'ST1'  '-'   '-' '--' 'TRIM_R ' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  20.0   '@R'  '12x20SDS' '      ' 'No. 10-12X20 SDS    '
+'ST2'  '-'   '-' '--' 'TRIM_R ' '--'    0  0.0   0.0   0.00  1   0   'LP' 6.00  0.0070  11.0   '--'  'Rivet   ' 'Rivet ' 'Pop Rivet           '
+
+
+'@DOWNSPOUT'
+'ST'   '-'   '-' '--' 'TRIM_W ' '--'    0  0.0   0.0   0.00  1   0   'EA' 4.00  0.0070  20.0   '@W'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+'ST2'  '-'   '-' '--' 'TRIM_R ' '--'    0  0.0   0.0   0.00  1   0   'LP' 6.00  0.0070  11.0   '--'  'Rivet   ' 'Rivet ' 'Pop Rivet           '
+
+
+'@RIDGE_OUT'
+'ST'   '-'   '-' '--' 'TRIM_R ' '--'    0  0.0   0.0   0.00  1   0   'LE' 8.00  0.0070  20.0   '@R'  '12x20SDS' '      ' 'No. 10-12X20 SDS    '
+'ST2'  '-'   '-' '--' 'TRIM_R ' '--'    0  0.0   0.0   0.00  1   0   'LP' 6.00  0.0070  11.0   '--'  'Rivet   ' 'Rivet ' 'Pop Rivet           '
+
+
+'@BASE_SEAL'
+'ST'   '-'   '-' '--' 'PANEL_W' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  20.0   '@W'  '14x20SDS' '      ' 'No. 12-14x20 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_W ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@B'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+
+
+'@BASE_LINER'
+'ST'   '-'   '-' '--' 'PANEL_W' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  20.0   '@W'  '14x20SDS' '      ' 'No. 12-14x20 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_W ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@B'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+
+
+'@BASE_PART'
+'ST'   '-'   '-' '--' 'PANEL_W' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  20.0   '@W'  '14x20SDS' '      ' 'No. 12-14x20 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_W ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@B'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+
+
+'@BASE_CHANNEL'
+'ST'   '-'   '-' '--' 'PANEL_W' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  20.0   '@W'  '14x20SDS' '      ' 'No. 12-14x20 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_W ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@B'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+
+
+'@BASE_ANGLE'
+'ST'   '-'   '-' '--' 'PANEL_W' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  20.0   '@W'  '14x20SDS' '      ' 'No. 12-14x20 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_W ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@B'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+
+
+'@BASE_DELUXE'
+'ST'   '-'   '-' '--' 'PANEL_W' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  20.0   '@W'  '14x20SDS' '      ' 'No. 12-14x20 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_W ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@B'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+
+
+'@CORNER_OUT'
+'ST'   '-'   '-' '--' 'TRIM_W ' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  20.0   '@C'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+
+
+'@CORNER_OUT_OPEN'
+
+
+'@CORNER_OUT_FACIA'
+
+
+'@CORNER_OUT_FACIA_END'
+
+
+'@CORNER_OUT_BACK_END'
+
+
+'@CORNER_IN'
+
+
+'@CORNER_IN_OPEN'
+
+
+'@CORNER_IN_LINER'
+
+
+'@CORNER_IN_FACIA'
+
+
+'@CORNER_IN_BACK'
+
+
+'@FILLER_JAMB'
+
+
+'@JAMB'
+'ST'   '-'   '-' '--' 'TRIM_W ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@J'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+
+
+'@JAMB_OPEN'
+
+
+'@JAMB_TYPE1'
+
+
+'@JAMB_TYPE2'
+
+
+'@JAMB_TYPE3'
+
+
+'@JAMB_TYPE4'
+
+
+'@JAMB_TYPE5'
+
+
+'@JAMB_TYPE6'
+
+
+'@JAMB_TYPE7'
+
+
+'@JAMB_COVER'
+
+
+'@JAMB_COVER_TYPE1'
+
+
+'@JAMB_COVER_TYPE2'
+
+
+'@JAMB_COVER_TYPE3'
+
+
+'@JAMB_COVER_TYPE4'
+
+
+'@JAMB_COVER_TYPE5'
+
+
+'@JAMB_COVER_TYPE6'
+
+
+'@JAMB_COVER_TYPE7'
+
+
+'@JAMB_LINER'
+
+
+'@JAMB_LINER_OPEN'
+
+
+'@JAMB_LINER_TYPE1'
+
+
+'@JAMB_LINER_TYPE2'
+
+
+'@JAMB_LINER_TYPE3'
+
+
+'@JAMB_LINER_TYPE4'
+
+
+'@JAMB_LINER_TYPE5'
+
+
+'@JAMB_LINER_TYPE6'
+
+
+'@JAMB_LINER_TYPE7'
+
+
+'@HEADER'
+'ST'   '-'   '-' '--' 'PANEL_W' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  20.0   '@W'  '14x20SDS' '      ' 'No. 12-14x20 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_W ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@J'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+
+
+'@HEADER_TYPE1'
+
+
+'@HEADER_TYPE2'
+
+
+'@HEADER_TYPE3'
+
+
+'@HEADER_TYPE4'
+
+
+'@HEADER_TYPE5'
+
+
+'@HEADER_TYPE6'
+
+
+'@HEADER_TYPE7'
+
+
+'@HEADER_COVER'
+
+
+'@HEADER_COVER_TYPE1'
+
+
+'@HEADER_COVER_TYPE2'
+
+
+'@HEADER_COVER_TYPE3'
+
+
+'@HEADER_COVER_TYPE4'
+
+
+'@HEADER_COVER_TYPE5'
+
+
+'@HEADER_COVER_TYPE6'
+
+
+'@HEADER_COVER_TYPE7'
+
+
+'@HEADER_LINER'
+
+
+'@HEADER_LINER_TYPE1'
+
+
+'@HEADER_LINER_TYPE2'
+
+
+'@HEADER_LINER_TYPE3'
+
+
+'@HEADER_LINER_TYPE4'
+
+
+'@HEADER_LINER_TYPE5'
+
+
+'@HEADER_LINER_TYPE6'
+
+
+'@HEADER_LINER_TYPE7'
+
+
+'@SILL'
+'ST'   '-'   '-' '--' 'PANEL_W' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  20.0   '@W'  '14x20SDS' '      ' 'No. 12-14x20 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_W ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@J'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+
+
+'@SILL_TYPE1'
+
+
+'@SILL_TYPE2'
+
+
+'@SILL_TYPE3'
+
+
+'@SILL_TYPE4'
+
+
+'@SILL_TYPE5'
+
+
+'@SILL_TYPE6'
+
+
+'@SILL_TYPE7'
+
+
+'@SILL_LINER'
+
+
+'@SILL_LINER_TYPE1'
+
+
+'@SILL_LINER_TYPE2'
+
+
+'@SILL_LINER_TYPE3'
+
+
+'@SILL_LINER_TYPE4'
+
+
+'@SILL_LINER_TYPE5'
+
+
+'@SILL_LINER_TYPE6'
+
+
+'@SILL_LINER_TYPE7'
+
+
+'@SILL_COVER'
+
+
+'@SILL_COVER_TYPE1'
+
+
+'@SILL_COVER_TYPE2'
+
+
+'@SILL_COVER_TYPE3'
+
+
+'@SILL_COVER_TYPE4'
+
+
+'@SILL_COVER_TYPE5'
+
+
+'@SILL_COVER_TYPE6'
+
+
+'@SILL_COVER_TYPE7'
+
+
+'@SOFFIT_IN'
+'ST'   '-'   '-' '--' 'PANEL_W' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  20.0   '@W'  '14x20SDS' '      ' 'No. 12-14x20 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_W ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@S'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+
+
+'@SOFFIT_IN_GABLE'
+
+
+'@SOFFIT_IN_CANOPY'
+
+
+'@SOFFIT_IN_EXTEND'
+
+
+'@SOFFIT_IN_FACIA'
+
+
+'@SOFFIT_OUT'
+'ST'   '-'   '-' '--' 'TRIM_W ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@S'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+
+
+'@SOFFIT_OUT_GABLE'
+
+
+'@SOFFIT_OUT_CANOPY'
+
+
+'@SOFFIT_OUT_EXTEND'
+
+
+'@SOFFIT_OUT_FACIA'
+
+
+'@SOFFIT_OUT_EXTEND_HI'
+
+
+'@SOFFIT_OUT_GABLE_EAVE'
+
+
+'@SOFFIT_OUT_GABLE_EAVE_HI'
+
+
+'@SOFFIT_RIDGE'
+
+
+'@NO_SOFFIT_GABLE'
+
+
+'@NO_SOFFIT_CANOPY'
+
+
+'@NO_SOFFIT_EXTEND'
+
+
+'@NO_SOFFIT_FACIA'
+
+
+'@NO_SOFFIT_OUT_EXTEND_HI'
+
+
+'@NO_SOFFIT_OUT_GABLE_EAVE'
+
+
+'@NO_SOFFIT_OUT_GABLE_EAVE_HI'
+
+
+'@LINER_COVER'
+
+
+'@LINER_GABLE'
+
+
+'@LINER_EAVE'
+
+
+'@LINER_EAVE_HI'
+
+
+'@LINER_COLUMN'
+
+
+'@LINER_COLUMN_BYPASS'
+
+
+'@LINER_COLUMN_FLUSH'
+
+
+'@LINER_END'
+
+
+'@SKYLIGHT_SIDE'
+
+
+'@ACCESS0'
+
+
+'@ACCESS1'
+
+
+'@ACCESS2'
+
+
+'@ACCESS3'
+
+
+'@ACCESS4'
+
+
+'@ACCESS5'
+
+
+'@ACCESS6'
+
+
+'@ACCESS7'
+
+
+'@ACCESS8'
+
+
+'@ACCESS9'
+
+
+'@FACIA_CAP'
+'ST'   '-'   '-' '--' 'PANEL_W' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  20.0   '--'  '14x20SDS' '      ' 'No. 12-14x20 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_W ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '--'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+
+
+'@FACIA_CAP_BACK'
+'ST'   '-'   '-' '--' 'PANEL_W' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  20.0   '--'  '14x20SDS' '      ' 'No. 12-14x20 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_W ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '--'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+
+
+'@FACIA_CAP_NO_BACK'
+'ST'   '-'   '-' '--' 'TRIM_W ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '--'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+
+
+'@FACIA_BACK_BOTTOM'
+'ST'   '-'   '-' '--' 'TRIM_R ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '--'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+'ST'   '-'   '-' '--' 'PANEL_W' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  20.0   '--'  '14x20SDS' '      ' 'No. 12-14x20 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_W ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '--'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+
+
+'@FACIA_BACK_BOTTOM_VALLEY'
+
+
+'@FACIA_BACK_BOTTOM_EW'
+'ST'   '-'   '-' '--' 'TRIM_R ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '--'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+'ST'   '-'   '-' '--' 'PANEL_W' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  20.0   '--'  '14x20SDS' '      ' 'No. 12-14x20 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_W ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '--'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+
+
+'@FACIA_BACK_BOTTOM_HI'
+'ST'   '-'   '-' '--' 'TRIM_R ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '--'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+'ST'   '-'   '-' '--' 'PANEL_W' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  20.0   '--'  '14x20SDS' '      ' 'No. 12-14x20 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_W ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '--'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+
+
+'@WALL_PANEL_LAP'
+'ST'   '-'   '-' '--' 'PANEL_W' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@W'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+
+
+'@WALL_PANEL_END'
+'ST'   '-'   '-' '--' 'PANEL_W' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  20.0   '@W'  '14x20SDS' '      ' 'No. 12-14x20 SDS    '
+
+
+'@GIRT'
+'ST'   '-'   '-' '--' 'PANEL_W' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  20.0   '@W'  '14x20SDS' '      ' 'No. 12-14x20 SDS    '
+
+
+'@ROOF_PANEL_LAP'
+'ST'   '-'   '-' '--' 'PANEL_R' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@R'  '12x20SDS' '      ' 'No. 10-12X20 SDS    '
+
+
+'@ROOF_PANEL_END'
+'ST'   '-'   '-' '--' 'PANEL_R' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  55.0   '@R'  '14x55SDS' '      ' 'No. 12-14x55 SDS    '
+
+
+'@PURLIN'
+'ST'   '-'   '-' '--' 'PANEL_R' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  55.0   '@R'  '14x55SDS' '      ' 'No. 12-14x55 SDS    '
+
+
+'@LINER_GIRT'
+'ST'   '-'   '-' '--' 'PANEL_W' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  20.0   '@L'  '14x20SDS' '      ' 'No. 12-14x20 SDS    '
+
+
+'@WALL_LINER_LAP'
+'ST'   '-'   '-' '--' 'PANEL_W' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@l'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+
+
+'@WALL_LINER_END'
+'ST'   '-'   '-' '--' 'PANEL_W' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  20.0   '@L'  '14x20SDS' '      ' 'No. 12-14x20 SDS    '
+
+
+'@LINER_PURLIN'
+'ST'   '-'   '-' '--' 'PANEL_R' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  55.0   '@L'  '14x55SDS' '      ' 'No. 12-14x55 SDS    '
+
+
+'@ROOF_LINER_LAP'
+'ST'   '-'   '-' '--' 'PANEL_R' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '@L'  '12x20SDS' '      ' 'No. 10-12X20 SDS    '
+
+
+'@ROOF_LINER_END'
+'ST'   '-'   '-' '--' 'PANEL_R' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  55.0   '@L'  '14x55SDS' '      ' 'No. 12-14x55 SDS    '
+
+
+'@LINER_EAVE'
+'ST'   '-'   '-' '--' 'PANEL_R' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  55.0   '@L'  '14x55SDS' '      ' 'No. 12-14x55 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_R ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '--'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+'ST'   '-'   '-' '--' 'PANEL_W' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  20.0   '@L'  '14x20SDS' '      ' 'No. 12-14x20 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_W ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '--'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+
+
+'@LINER_EAVE_HI'
+'ST'   '-'   '-' '--' 'PANEL_R' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  55.0   '@L'  '14x55SDS' '      ' 'No. 12-14x55 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_R ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '--'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+'ST'   '-'   '-' '--' 'PANEL_W' '--'    0  0.0   0.0   0.00  1   0   'LE' 4.00  0.0070  20.0   '@L'  '14x20SDS' '      ' 'No. 12-14x20 SDS    '
+'ST'   '-'   '-' '--' 'TRIM_W ' '--'    0  0.0   0.0   0.00  1   0   'LE' 2.00  0.0070  20.0   '--'  '12x20SDS' '      ' 'No. 10-12x20 SDS    '
+
+
+STOP

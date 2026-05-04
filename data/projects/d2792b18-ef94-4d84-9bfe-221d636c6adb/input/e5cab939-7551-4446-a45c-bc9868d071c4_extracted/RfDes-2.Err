@@ -1,0 +1,2 @@
+/LFRAME RAFTER /CEnd Plate /ERFE-413 /TW /MWeld Size < Required /P-
+/LINTERIOR COLUMN /CMember /ECIM-204 /TW /MAxial + Moment > Limit /V1.11 

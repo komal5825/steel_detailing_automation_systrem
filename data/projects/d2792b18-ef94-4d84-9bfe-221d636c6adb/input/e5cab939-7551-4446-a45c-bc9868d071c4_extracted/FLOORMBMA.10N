@@ -1,0 +1,89 @@
+*FILE:FLOORMBMA.10n             UNIT:ENGLISH                     8/9/11  11:10am
+* Revisions:
+*  1.00.01    4/11/13  CJS Increased Max No of design loads to 200
+*  1.00.02   9/22/2021 SPF Added deflections factors for partial loads on line 7 
+*
+*=============================================================================== 
+*
+* For additional information, see code file help
+*
+*=============================================================================== 
+* VERSION
+* NUMBER
+   1.00
+
+*( 1)CODE IDENTIFICATION:
+*  Name   Year   Code_Type   Extra    Extra
+  'MBMA'  '10'     'WS'       '-'      '-'
+
+*( 2)JOIST/BEAM/COLUMN DESIGN LOADS FOR STRENGTH:        
+*                                            
+* No. Load Load                                 
+*Load  Id  Type        Factor Dead Collat Live  Seis
+  12    1   '-'         0.00  1.00  1.00  0.00  0.00  
+        2   '-'         0.00  0.00  0.00  1.00  0.00  
+        3   '-'         0.00  1.00  1.00  1.00  0.00  
+        4   'SEIS:A'    0.00  1.00  1.00  0.00  0.70  
+        5   'SEIS:A'    0.00  0.60  0.00  0.00  0.70  
+        6   'SEIS:A'    0.00  1.00  1.00  0.75  0.525 
+        7   'SEIS:BC'   0.14  1.00  1.00  0.00  0.70  
+        8   'SEIS:BC'  -0.14  0.60  0.00  0.00  0.70  
+        9   'SEIS:BC'   0.105 1.00  1.00  0.75  0.525 
+       10   'SEIS:DEF'  0.14  1.00  1.00  0.00  0.70  
+       11   'SEIS:DEF' -0.14  0.60  0.00  0.00  0.70  
+       12   'SEIS:DEF'  0.105 1.00  1.00  0.75  0.525 
+
+*( 3)JOIST/BEAM/COLUMN DESIGN LOADS FOR DEFLECTION:           
+*                                            
+* No. Load Load                                 
+*Load  Id  Type        Factor Dead Collat Live  Seis
+   0 
+
+*( 4)PANEL DESIGN LOADS FOR STRENGTH:         
+*                                             
+* No. Load Load                              
+*Load  Id  Type       Factor Dead Collat Live
+   3    1   '-'        0.00  1.00  1.00  0.00
+        2   '-'        0.00  0.00  0.00  1.00
+        3   '-'        0.00  1.00  1.00  1.00
+
+*( 5)PANEL DESIGN LOADS FOR DEFLECTION:       
+*                                             
+* No. Load Load                              
+*Load  Id  Type       Factor Dead Collat Live
+   0      
+
+*( 6)LOAD COEFFICIENTS FOR PATTERN OR PARTIAL LOADS FOR STRENGTH:
+*        
+*       Do not use
+* No.   on Live if:             --------Live---------
+*Step  Live >   Dead   Collat   Full  Reduced Pattern
+   1   19.99    1.00    1.00    1.00   0.00     'E'
+
+*( 7)LOAD COEFFICIENTS FOR PATTERN OR PARTIAL LOADS FOR DEFLECTION:
+*        
+*       Do not use
+* No.   on Live if:             --------Live---------
+*Step  Live >   Dead   Collat   Full  Reduced Pattern
+   1   19.99    1.00    1.00    1.00   0.00     'E'
+
+*( 8)AMOUNT OF FLOOR LIVE TO BE INCLUDED WITH SEISMIC MASS IN DESIGN LOADS:
+*
+* No.             --Live_Load-- 
+*Loads  Use  Opt     Min    Max Percent
+   3    'S'  '-'    0.00   200.00    0.25
+        'A'  '-'    0.00   200.00    0.00
+        '-'  '-'    0.00   200.00    0.00
+
+*( 9)MAXIMUM NUMBER OF DESIGN LOADS:
+*
+*Max No. Of     Increase in Live/snow Load 
+*Design Loads    without pattern loads
+    200                0.21
+
+
+        
+
+ 
+ 
+ 

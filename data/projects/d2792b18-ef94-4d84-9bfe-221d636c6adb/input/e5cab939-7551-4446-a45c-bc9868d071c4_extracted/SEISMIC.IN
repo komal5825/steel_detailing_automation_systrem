@@ -1,0 +1,209 @@
+[DESIGN]
+Descript=MBMA10              
+Refer=IBC   
+Method=Equivalent Lateral Force, Section 12.8            
+ShearV=0.667*Ie*Sms*W/R                        
+ShearF=Rho*V                                   
+ShearB=Omega*V                                 
+CombB=  1.0000
+Zone=B  
+Complex=2
+Snow%=  0.0000
+Collateral%=  1.0000
+Snowmin= 1.43541  
+SnowMin%=  0.2000
+[PARAMETER]
+DS_BUILD(roof96)  =  3.0000
+[LABEL]
+Factor1=0.667 
+CoeffV=Cs          
+Coeff=Sms           
+Import=Ie 
+W=W 
+R=R 
+Omega=Omega 
+Rho=Rho   
+ShearV=V 
+ShearF=Eh
+ShearB=Emh
+[VALUE]
+Factor1=  0.6670
+Coeff=  0.3300
+Import=  1.0000
+[BRACE_R]
+Class=F
+System=B
+R=  5.0000
+Rho1 =  1.5000
+Rho2 =  1.5000
+Rho3 =  1.3057
+Rho4 =  1.0743
+Rho5 =  1.0000
+Rho=  1.0000
+CoeffV=  0.0440
+Coeff1 =  0.0660
+Coeff2 =  0.0660
+Coeff3 =  0.0575
+Coeff4 =  0.0473
+Coeff5 =  0.0440
+Coeff=  0.0440
+[BRACE_SW]
+Class=B
+System=B
+R=  5.0000
+Omega=  2.0000
+CoeffV=  0.0440
+Coeff1 =  0.0880
+Coeff=  0.0880
+[BRACE_EW]
+Class=B
+System=B
+R=  5.0000
+Omega=  2.0000
+CoeffV=  0.0440
+Coeff1 =  0.0880
+Coeff=  0.0880
+[BASE_SW]
+Class=F
+System=B
+R=  5.0000
+Rho1 =  1.5000
+Rho2 =  1.5000
+Rho3 =  1.3057
+Rho4 =  1.0743
+Rho5 =  1.0000
+Rho=  1.0000
+CoeffV=  0.0440
+Coeff1 =  0.0660
+Coeff2 =  0.0660
+Coeff3 =  0.0575
+Coeff4 =  0.0473
+Coeff5 =  0.0440
+Coeff=  0.0440
+[BASE_EW]
+Class=F
+System=B
+R=  5.0000
+Rho=  1.0000
+CoeffV=  0.0440
+Coeff1 =  0.0440
+Coeff=  0.0440
+[PANEL]
+Class=B
+System=B
+R=  5.0000
+Omega=  2.0000
+CoeffV=  0.0440
+Coeff1 =  0.0880
+Coeff=  0.0880
+[WEAK_AXIS]
+Class=F
+System=M
+R=  5.6000
+Rho=  1.5000
+CoeffV=  0.0393
+Coeff1 =  0.0590
+Coeff=  0.0590
+[WIND_B_SW]
+Class=F
+System=M
+R=  3.5000
+Rho1 =  1.5000
+Rho2 =  1.5000
+Rho3 =  1.3057
+Rho4 =  1.0743
+Rho5 =  1.0000
+Rho=  1.0000
+CoeffV=  0.0629
+Coeff1 =  0.0943
+Coeff2 =  0.0943
+Coeff3 =  0.0821
+Coeff4 =  0.0676
+Coeff5 =  0.0629
+Coeff=  0.0629
+[WIND_C_SW]
+Class=F
+System=M
+R=  3.5000
+Rho1 =  1.5000
+Rho2 =  1.5000
+Rho3 =  1.3057
+Rho4 =  1.0743
+Rho5 =  1.0000
+Rho=  1.0000
+CoeffV=  0.0629
+Coeff1 =  0.0943
+Coeff2 =  0.0943
+Coeff3 =  0.0821
+Coeff4 =  0.0676
+Coeff5 =  0.0629
+Coeff=  0.0629
+[WIND_BASE_SW]
+Class=B
+System=M
+R=  3.5000
+Omega=  1.0000
+CoeffV=  0.0629
+Coeff1 =  0.0629
+Coeff=  0.0629
+[WIND_SPLICE_SW]
+Class=B
+System=M
+R=  3.5000
+Omega=  1.0000
+CoeffV=  0.0629
+Coeff1 =  0.0629
+Coeff=  0.0629
+[FRAME]
+Class=F
+System=M
+R=  3.5000
+Rho=  1.3120
+CoeffV=  0.0629
+Coeff1 =  0.0825
+Coeff=  0.0825
+[FRAME_BASE]
+Class=B
+System=M
+R=  3.5000
+Omega=  1.0000
+CoeffV=  0.0629
+Coeff1 =  0.0629
+Coeff=  0.0629
+[FRAME_SPLICE]
+Class=B
+System=M
+R=  3.5000
+Omega=  3.0000
+CoeffV=  0.0629
+Coeff1 =  0.1887
+Coeff=  0.1887
+[PANEL_EW]
+Class=B
+System=B
+R=  5.0000
+Omega=  2.0000
+CoeffV=  0.0440
+Coeff1 =  0.0880
+Coeff=  0.0880
+[PANEL_SW]
+Class=B
+System=B
+R=  5.0000
+Omega=  2.0000
+CoeffV=  0.0440
+Coeff1 =  0.0880
+Coeff=  0.0880
+[PANEL_ROOF]
+Class=B
+System=B
+R=  5.0000
+Omega=  2.0000
+CoeffV=  0.0440
+Coeff1 =  0.0880
+Coeff=  0.0880
+[GIRT]
+Class=C
+Coeff=  0.0000
+[P_DELTA]
+Cd=  3.0000

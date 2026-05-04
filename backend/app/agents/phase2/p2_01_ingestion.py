@@ -4,6 +4,7 @@ from uuid import UUID
 
 from sqlalchemy.orm import Session
 
+from app.agents.phase2.output_utils import write_processed_json
 from app.db.crud.field_values import create_extracted_field_values, create_parser_run
 from app.db.crud.stages import update_stage_result
 from app.db.models import FileProcessingStatus, ParserRunStatus, ProjectFile, StageStatus
@@ -25,6 +26,15 @@ PARSER_BY_FILE_TYPE = {
     "PDF": PDFParser,
     "PROTASTEEL": ProtaSteelParser,
     "STAAD": StaadParser,
+}
+
+# Source priority for governing file selection (lower = higher priority)
+_SOURCE_PRIORITY: dict[str, int] = {
+    "MBS": 1,
+    "STAAD": 2,
+    "ETABS": 3,
+    "PROTASTEEL": 4,
+    "PDF": 5,
 }
 
 
@@ -116,6 +126,89 @@ def _run_ingestion(project_id: UUID, db: Session) -> dict:
                 },
             )
 
+    # --- Write file_inventory.json ---
+    all_files = (
+        db.query(ProjectFile)
+        .filter(ProjectFile.project_id == project_id)
+        .all()
+    )
+    file_inventory = {
+        "project_id": str(project_id),
+        "total_files": len(all_files),
+        "parsed_files": parsed_files,
+        "failed_files": failed_files,
+        "files": [
+            {
+                "file_id": str(f.id),
+                "original_filename": f.original_filename,
+                "file_type": f.file_type,
+                "file_category": f.file_category,
+                "source_application": f.source_application,
+                "likely_role": f.likely_role,
+                "classification_confidence": f.classification_confidence,
+                "processing_status": f.processing_status.value
+                if hasattr(f.processing_status, "value")
+                else str(f.processing_status),
+            }
+            for f in all_files
+        ],
+    }
+    write_processed_json(project_id, "file_inventory.json", file_inventory)
+
+    # --- Write governing_source.json ---
+    # Select the governing design file: highest classification_confidence among parseable
+    # files, with source priority (MBS > STAAD > ETABS > PROTASTEEL > PDF) as tiebreaker.
+    candidates = [f for f in all_files if f.file_type in PARSER_BY_FILE_TYPE]
+    governing_file = None
+    if candidates:
+        governing_file = max(
+            candidates,
+            key=lambda f: (
+                f.classification_confidence,
+                -_SOURCE_PRIORITY.get(f.file_type, 99),
+            ),
+        )
+
+    governing_payload: dict = {
+        "project_id": str(project_id),
+        "governing_file": (
+            {
+                "file_id": str(governing_file.id),
+                "original_filename": governing_file.original_filename,
+                "file_type": governing_file.file_type,
+                "source_application": governing_file.source_application,
+                "likely_role": governing_file.likely_role,
+                "classification_confidence": governing_file.classification_confidence,
+            }
+            if governing_file
+            else None
+        ),
+        "selection_method": "HIGHEST_CONFIDENCE_WITH_SOURCE_PRIORITY",
+        "rationale": (
+            f"Selected '{governing_file.original_filename}' "
+            f"(type={governing_file.file_type}, "
+            f"confidence={governing_file.classification_confidence})"
+            if governing_file
+            else "No parseable files found"
+        ),
+        "candidates": [
+            {
+                "file_id": str(f.id),
+                "original_filename": f.original_filename,
+                "file_type": f.file_type,
+                "classification_confidence": f.classification_confidence,
+            }
+            for f in sorted(
+                candidates,
+                key=lambda f: (
+                    -f.classification_confidence,
+                    _SOURCE_PRIORITY.get(f.file_type, 99),
+                ),
+            )
+        ],
+    }
+    write_processed_json(project_id, "governing_source.json", governing_payload)
+
     result = {
         "status": "success" if failed_files == 0 else "partial_success",
         "project_id": str(project_id),
@@ -124,6 +217,7 @@ def _run_ingestion(project_id: UUID, db: Session) -> dict:
         "failed_files": failed_files,
         "extracted_fields": extracted_fields,
         "normalized_fields": normalized_fields,
+        "governing_file": governing_payload["governing_file"],
     }
     update_stage_result(
         db,

@@ -1,0 +1,143 @@
+*( 1)JOB IDENTIFICATION:
+*   Job Id
+  'C08-033-20180720-Jalgoan'
+
+*( 5)STEEL YIELD:
+*  -------------Steel_Yield--------------    Max
+*                Wall  Roof  Flange   Web    Stress
+*  Hot   Cold   Panel  Panel  Plate  Plate   Ratio
+   235.0 345.0  250.0  250.0  345.0  345.0   1.00
+
+*( 8)BUILDING LOADS:
+*  Dead    Live    Snow   Colat.  Wind     Load
+*  Load    Load    Load    Load   Speed    Reduce Wind10  Wind30   Sa02   Sa05   Sa10   Sa20  Temp
+   0.100   0.570   0.000   0.050  140.400    'N'   0.000   0.000  0.0000 0.3300 0.0000 1.0000   20
+
+*( 9)BUILDING SHAPE:
+* Build   Build     Build    L_Eave   R_Eave   Peak     L_Roof
+* Type    Width    Length    Height   Height   Offset   Slope
+ 'FF-'      61000    45500      7000     7000    30500  1.2000
+
+*(10)EXPANDABLE ENDWALL/FLUSH WALL:
+* -L_Expand_EW-    -R_Expand_EW-  Flush_Wall
+* Use     Offset   Use    Offset  Use   Depth
+  'Y :-'     380  'Y :-'     380  'N'       0
+
+*(12)WALL BAY SPACING:
+*  Wall   Sets     Bay     No.
+*   Id    Bays    Width    Bays
+     1      3       7400     1
+                    7700     6
+                    7400     1
+     2      3       7350     1
+                    7700     4
+                    7350     1
+     3      3       7400     1
+                    7700     6
+                    7400     1
+
+*(13)WALL OPENINGS:
+* Wall   No.   Bay                                       Sill      Base  Panel
+*  Id   Open   Id     Width   Height   Offset   Type   Height      Elev   Opt
+    1     0 
+    2     0 
+    3     0 
+    4     0 
+
+*(14)ENDWALL FRAMING:
+* Wall     Corner_Column     Interior_Column   ----Rafter---     Splice
+*  Id   Type  Rot    Depth    Type    Depth    Type    Depth      Type
+    1   'RW  :-:-'        0   'RW  '        0  'RW  '          0   'M :M '
+    3   'RW  :-:-'        0   'RW  '        0  'RW  '          0   'M :M '
+
+*(17)WALL GIRTS:
+* Wall  Girt  Flange_Brace                      Set      Set
+*  Id   Type   Use  Supply   Offset   Project   Depth    Lap
+    1   'ZB'   'Y'    'Y'         0        0        0        0
+    2   'ZB'   'Y'    'Y'         0        0        0        0
+    3   'ZB'   'Y'    'Y'         0        0        0        0
+    4   'ZB'   'Y'    'Y'         0        0        0        0
+
+*(18)WALL GIRT LOCATION:
+* Wall    Low    Set   No.    Girt
+*  Id     Girt   Loc  Girts   Location
+    1         0  'I'    2       3680       1500 
+    2         0  'I'    2       3680       1500 
+    3         0  'I'    2       3680       1500 
+    4         0  'I'    2       3680       1500 
+
+*(20)ROOF PURLIN SPACING:
+* Surf   Peak     Max      Set     ------Surface_Ext------
+*  Id    Space   Space    Space    Left     Right   Soffit
+    2      300     1500     1500        0        0  '------------'
+    3      300     1500     1500        0        0  '------------'
+
+*(22)ROOF PANEL DATA:
+*                   Roof     Gable  Screw  -----Insulation-----  -------------Standing_Seam-------------
+* Part        Thk   Color    Color  Type   Use Type  Thick Wire  Use  Type  Clip   Seam Type       Clamp
+  '45250 .5'  0.50  'A3--'   'HA--' 'M--'  'N' '--'   0.00  'N'  'N'  '--'  0.00  '---------------' 'N'
+
+*(23)RIGID FRAMES:
+* No_Diff  Frame  Frame  Load     --Frame_Shape--  Frame  Frame  Frame_Line
+* Frames    Id    Type   Width    Col/ConL:R  Raf   Symm    Quan     Id_No.
+     2       1    'HP-'     3865  'T:P :P '   'T '   'Y'      2      1   7 
+             2    'HP-'     7700  'T:P :P '   'T '   'Y'      5      2   3   4   5   6 
+
+*(24)RIGID FRAME INTERIOR COLUMNS:
+* Frame  Column  Column  Column   No.       Column
+*  Id    Typ/Con Rot/Shp  Elev   Columns   Location
+    1     'SPF'    'NC'         0   1         30500
+    2     'SPF'    'NC'         0   1         30500
+
+*(25)WIND FRAMING:
+* Wall  Panel  Diagonal  Wind   Wind   Weak_Axis  Brace
+*  Id   Shear  Bracing   Bent  Column   Bending   Option    Height
+    1    'N'     'N'     'N'     'N'     'N'      '--'         0
+    2    'N'     'R'     'N'     'N'     'N'      '--'         0
+    3    'N'     'N'     'N'     'N'     'N'      '--'         0
+    4    'N'     'R'     'N'     'N'     'N'      '--'         0
+    5    'N'     'R:N'   'N'     'N'     'N'      '--'         0
+
+*(26)WIND BRACING LOCATION:
+* Wall  No.    Bay
+*  Id   Bays   Id
+    1     0   
+    2     2    1  6 
+    3     0   
+    4     2    1  6 
+    5     2    1  6 
+
+*(30)GUTTERS & DOWNSPOUTS:
+*    Gutter_Length      No. Downspouts    ------Color-----
+*  Front_SW  Back_SW   Front_SW  Back_SW  Gutter Downspout
+     45500     45500     8         8      '----E'   '----'
+
+*(38)LINER PANELS:
+*     Loc          -----Location-----  ---------------Panel----------------  Liner_Trim
+* No.  Id   Use      Start        End   Part         Thick    Yield   Color  Use  Color   Opt    Height
+    0
+
+*(44)CANOPY:
+*Wall No. Bay_Id                             Purl_Extend       Purl  -Member--   ------Soffit------  --------Roof-------  -End_Option-  Screw   -Standing_Seam-  -----Space-----
+* Id  Ext St End  Width    Height   Slope    Start    End      Type  Typ Shape   Part         Color  Part          Color  Left   Right  Type    Use  Type  Clip  Peak        Set
+   1   1   3   6     4500     4500  10.0000        0        0  'ZBZB' 'W'  'C'   '--------'  '----'  '45250 .5'   'A3--'  ' '      ' '  'M--'   'N'  '--'   0.00     200     1200
+   2   0 
+   3   1   3   6     4500     4500  10.0000        0        0  'ZBZB' 'W'  'C'   '--------'  '----'  '45250 .5'   'A3--'  ' '      ' '  'M--'   'N'  '--'   0.00     200     1200
+   4   0 
+
+*(79)PARTIAL WALL LAYOUT:
+*        Wall      --Bay_Id--  ---Offset---  -----Height-----   --Attach_Type--  ---Jamb--    Full  Deflect_Limit
+* No. Id  Id  Use  Start  End  Start    End   Bottom      Top   Bottom      Top  Type  Opt    Load   Girt   Panel
+   4   1   1  'PO'   1     8       0      0        0     3600   '-:---' '-:1--'  '-'   '-'    'NN'      0      0
+       2   2  'PO'   1     6       0      0        0     3600   '-:---' '-:1--'  '-'   '-'    'NN'      0      0
+       3   3  'PO'   1     8       0      0        0     3600   '-:---' '-:1--'  '-'   '-'    'NN'      0      0
+       4   4  'PO'   1     6       0      0        0     3600   '-:---' '-:1--'  '-'   '-'    'NN'      0      0
+
+*(80)PARTIAL WALL PANEL & TRIM:
+*    --------Panel-----------   -----------Trim----------   Screw  ----Insulation-----
+*Id  Part        Color    Opt   Base   LeftRghtJamb   Top   Type   Use Type Thick Wire
+  1 '--------'  '----'   '-Y'  '----' '------------' '----' '---'  '-' '--'     0  '-'
+  2 '--------'  '----'   '-Y'  '----' '------------' '----' '---'  '-' '--'     0  '-'
+  3 '--------'  '----'   '-Y'  '----' '------------' '----' '---'  '-' '--'     0  '-'
+  4 '--------'  '----'   '-Y'  '----' '------------' '----' '---'  '-' '--'     0  '-'
+

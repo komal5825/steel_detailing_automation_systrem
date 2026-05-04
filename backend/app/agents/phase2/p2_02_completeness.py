@@ -1,14 +1,48 @@
+"""
+P2-02 Completeness Checker — Phase 2 Step 13.
+
+Workflow:
+  1. Build conflict-resolved field map from all extracted values (Step 14).
+  2. Compare resolved codes against AB-required and GA-required field codes.
+  3. Run fallback policy for missing codes (Step 15).
+  4. Persist per-field ValidationResult records (Step 13 CRUD).
+  5. Write completeness_matrix.json to Processed/ (Step 16 file output).
+  6. Write a Hard-Gate checkpoint via CheckpointManager (Step 16).
+  7. Emit audit events and update the Stage record.
+
+Returns a dict summary that downstream agents and API endpoints can consume.
+Gate blocks if any AB-required OR GA-required mandatory field is still missing.
+"""
 from __future__ import annotations
 
 from uuid import UUID
 
 from sqlalchemy.orm import Session
 
+from app.agents.phase2.output_utils import write_processed_json
+from app.agents.support.checkpoint import CheckpointManager
+from app.agents.support.fallback import FallbackManager
 from app.db.crud.stages import update_stage_result
-from app.db.models import ExtractedFieldValue, StageStatus
+from app.db.crud.validation import log_audit_event, save_validation_items
+from app.db.models import StageStatus
 from app.db.session import SessionLocal
-from app.utils.master_db import fetch_mandatory_field_codes
+from app.utils.audit_logger import get_logger
+from app.utils.master_db import (
+    fetch_ab_required_field_codes,
+    fetch_ga_required_field_codes,
+    fetch_mandatory_field_codes,
+)
+from app.utils.source_priority import build_resolved_field_map
 
+logger = get_logger(__name__)
+
+_CHECKPOINT_MGR = CheckpointManager()
+_FALLBACK_MGR = FallbackManager()
+
+
+# ---------------------------------------------------------------------------
+# Public entry point
+# ---------------------------------------------------------------------------
 
 def check_completeness(project_id: str, db: Session | None = None) -> dict:
     owns_session = db is None
@@ -22,33 +56,262 @@ def check_completeness(project_id: str, db: Session | None = None) -> dict:
             session.close()
 
 
-def _check_completeness(project_id: UUID, db: Session) -> dict:
-    mandatory_codes = set(fetch_mandatory_field_codes())
-    present_codes = {
-        row[0]
-        for row in db.query(ExtractedFieldValue.field_code)
-        .filter(ExtractedFieldValue.project_id == project_id)
-        .distinct()
-        .all()
-    }
-    missing_codes = sorted(mandatory_codes - present_codes)
-    present_mandatory = sorted(mandatory_codes & present_codes)
-    blocker_count = len(missing_codes)
+# ---------------------------------------------------------------------------
+# Core implementation
+# ---------------------------------------------------------------------------
 
+def _check_completeness(project_id: UUID, db: Session) -> dict:
+    log_audit_event(db, "STAGE_STARTED", project_id=project_id, stage_code="P2-02")
+    update_stage_result(db, project_id=project_id, stage_code="P2-02",
+                        status=StageStatus.RUNNING)
+
+    # ---- 1. Build conflict-resolved field map ----
+    resolved_map = build_resolved_field_map(db, project_id)
+    resolved_codes = set(resolved_map.keys())
+
+    # ---- 2. Load AB, GA, and overall mandatory code sets ----
+    all_mandatory_codes = set(fetch_mandatory_field_codes())
+    ab_required_codes = set(fetch_ab_required_field_codes())
+    ga_required_codes = set(fetch_ga_required_field_codes())
+
+    # Fields missing from resolved extraction
+    ab_missing_raw = sorted(ab_required_codes - resolved_codes)
+    ga_missing_raw = sorted(ga_required_codes - resolved_codes)
+    all_missing_raw = sorted(all_mandatory_codes - resolved_codes)
+
+    # ---- 3. Fallback for ALL missing mandatory codes (deduped union) ----
+    union_missing = sorted(set(all_missing_raw) | set(ab_missing_raw) | set(ga_missing_raw))
+    fallback_report = _FALLBACK_MGR.apply_fallbacks(
+        project_id=project_id,
+        missing_codes=union_missing,
+        db=db,
+    )
+
+    unresolved_set = set(
+        fallback_report.unresolved_human_fields + fallback_report.unresolved_skip_fields
+    )
+    fallback_resolved_set = set(union_missing) - unresolved_set
+
+    # ---- 4. Per-output-class still-missing sets ----
+    ab_still_missing = sorted(c for c in ab_missing_raw if c in unresolved_set)
+    ga_still_missing = sorted(c for c in ga_missing_raw if c in unresolved_set)
+
+    # ---- 5. Persist ValidationResult rows ----
+    validation_items: list[dict] = []
+
+    # Present mandatory fields
+    for fc in sorted(all_mandatory_codes & resolved_codes):
+        cr = resolved_map[fc]
+        item = {
+            "field_code": fc,
+            "status": "PRESENT",
+            "severity": "MINOR",
+            "source": cr.winning_source,
+            "value": cr.winning_value,
+            "note": f"strategy={cr.resolution_strategy}",
+        }
+        if cr.conflict_detected and not cr.requires_human:
+            item["status"] = "SUSPICIOUS"
+            item["note"] = (
+                f"Conflict auto-resolved via {cr.resolution_strategy}. "
+                f"Candidates: {cr.candidates}"
+            )
+        validation_items.append(item)
+
+    # Fallback-resolved fields
+    for fc in sorted(fallback_resolved_set):
+        outcome = next((o for o in fallback_report.applied if o.field_code == fc), None)
+        validation_items.append({
+            "field_code": fc,
+            "status": "PRESENT",
+            "severity": "MINOR",
+            "source": outcome.resolved_source if outcome else "FALLBACK",
+            "value": outcome.resolved_value if outcome else "",
+            "note": outcome.note if outcome else "Resolved via fallback",
+        })
+
+    # Still-missing mandatory fields
+    for fc in sorted(unresolved_set & all_mandatory_codes):
+        outcome = next((o for o in fallback_report.applied if o.field_code == fc), None)
+        validation_items.append({
+            "field_code": fc,
+            "status": "MISSING",
+            "severity": "CRITICAL",
+            "source": None,
+            "value": None,
+            "note": outcome.note if outcome else "Not found in any source",
+        })
+
+    # Non-blocking warnings: fields in resolved_map that have conflict but aren't mandatory
+    non_blocking_warnings = []
+    for fc, cr in resolved_map.items():
+        if fc not in all_mandatory_codes and cr.conflict_detected:
+            non_blocking_warnings.append({
+                "field_code": fc,
+                "note": (
+                    f"Non-mandatory conflict auto-resolved via {cr.resolution_strategy}. "
+                    f"Candidates: {cr.candidates}"
+                ),
+            })
+
+    save_validation_items(db, project_id, "P2-02", validation_items)
+
+    # ---- 6. Build AB/GA readiness matrices ----
+    ab_readiness = _build_readiness_matrix(
+        label="AB",
+        required_codes=ab_required_codes,
+        resolved_codes=resolved_codes,
+        fallback_resolved_set=fallback_resolved_set,
+        still_missing=ab_still_missing,
+        resolved_map=resolved_map,
+        fallback_report=fallback_report,
+    )
+    ga_readiness = _build_readiness_matrix(
+        label="GA",
+        required_codes=ga_required_codes,
+        resolved_codes=resolved_codes,
+        fallback_resolved_set=fallback_resolved_set,
+        still_missing=ga_still_missing,
+        resolved_map=resolved_map,
+        fallback_report=fallback_report,
+    )
+
+    # ---- 7. Gate decision ----
+    # Deduplicate: a field missing for both AB and GA counts once for the gate
+    unique_blockers = sorted(set(ab_still_missing) | set(ga_still_missing))
+    is_complete = len(unique_blockers) == 0
+    gate_status = "PASS" if is_complete else "FAIL"
+
+    # ---- 8. Write completeness_matrix.json to Processed/ ----
+    matrix_payload: dict = {
+        "project_id": str(project_id),
+        "ab_readiness": ab_readiness,
+        "ga_readiness": ga_readiness,
+        "blocking_issues": [
+            {
+                "field_code": fc,
+                "affects": _which_outputs(fc, ab_still_missing, ga_still_missing),
+                "severity": "CRITICAL",
+                "note": next(
+                    (i["note"] for i in validation_items if i["field_code"] == fc), ""
+                ),
+            }
+            for fc in unique_blockers
+        ],
+        "non_blocking_warnings": non_blocking_warnings,
+        "human_review_required": fallback_report.unresolved_human_fields,
+        "gate_status": gate_status,
+        "overall": "PASS" if is_complete else "BLOCKED",
+    }
+    write_processed_json(project_id, "completeness_matrix.json", matrix_payload)
+
+    # ---- 9. Hard-gate checkpoint ----
+    _CHECKPOINT_MGR.record(
+        db,
+        project_id=project_id,
+        stage_code="P2-02",
+        label="Completeness Hard Gate",
+        gate_status=gate_status,
+        gate_data={
+            "ab_missing": ab_still_missing,
+            "ga_missing": ga_still_missing,
+            "fallback_resolved_count": len(fallback_resolved_set),
+            "non_blocking_warnings_count": len(non_blocking_warnings),
+        },
+    )
+
+    # ---- 10. Stage result + audit ----
     result = {
         "project_id": str(project_id),
-        "mandatory_count": len(mandatory_codes),
-        "present_mandatory_count": len(present_mandatory),
-        "missing_mandatory_count": blocker_count,
-        "missing_mandatory_codes": missing_codes,
-        "is_complete": blocker_count == 0,
-        "overall": "PASS" if blocker_count == 0 else "BLOCKED",
+        "ab_readiness": ab_readiness,
+        "ga_readiness": ga_readiness,
+        "blocking_issues_count": len(unique_blockers),
+        "blocking_issues": unique_blockers,
+        "non_blocking_warnings_count": len(non_blocking_warnings),
+        "human_review_required": fallback_report.unresolved_human_fields,
+        "is_complete": is_complete,
+        "overall": "PASS" if is_complete else "BLOCKED",
     }
+
+    stage_status = StageStatus.PASSED if is_complete else StageStatus.AWAITING_INPUT
     update_stage_result(
         db,
         project_id=project_id,
         stage_code="P2-02",
-        status=StageStatus.PASSED if blocker_count == 0 else StageStatus.AWAITING_INPUT,
+        status=stage_status,
         result=result,
     )
+    log_audit_event(
+        db,
+        "STAGE_PASSED" if is_complete else "STAGE_AWAITING_INPUT",
+        project_id=project_id,
+        stage_code="P2-02",
+        detail={
+            "ab_missing_count": len(ab_still_missing),
+            "ga_missing_count": len(ga_still_missing),
+            "gate_status": gate_status,
+        },
+    )
+    logger.info(
+        "P2-02 completeness: AB missing=%d, GA missing=%d, "
+        "fallback_resolved=%d, warnings=%d — gate=%s",
+        len(ab_still_missing), len(ga_still_missing),
+        len(fallback_resolved_set), len(non_blocking_warnings), gate_status,
+    )
     return result
+
+
+# ---------------------------------------------------------------------------
+# Helpers
+# ---------------------------------------------------------------------------
+
+def _build_readiness_matrix(
+    label: str,
+    required_codes: set[str],
+    resolved_codes: set[str],
+    fallback_resolved_set: set[str],
+    still_missing: list[str],
+    resolved_map: dict,
+    fallback_report,
+) -> dict:
+    present = sorted(
+        (required_codes & resolved_codes)
+        | (required_codes & fallback_resolved_set)
+    )
+    fields_detail: dict[str, dict] = {}
+    for fc in present:
+        if fc in resolved_map:
+            cr = resolved_map[fc]
+            fields_detail[fc] = {
+                "status": "SUSPICIOUS" if cr.conflict_detected else "PRESENT",
+                "source": cr.winning_source,
+                "value": cr.winning_value,
+            }
+        else:
+            outcome = next((o for o in fallback_report.applied if o.field_code == fc), None)
+            fields_detail[fc] = {
+                "status": "PRESENT",
+                "source": outcome.resolved_source if outcome else "FALLBACK",
+                "value": outcome.resolved_value if outcome else "",
+            }
+    for fc in still_missing:
+        fields_detail[fc] = {"status": "MISSING", "source": None, "value": None}
+
+    return {
+        "output": label,
+        "required_count": len(required_codes),
+        "present_count": len(present),
+        "missing_count": len(still_missing),
+        "missing_codes": still_missing,
+        "status": "READY" if not still_missing else "BLOCKED",
+        "fields": fields_detail,
+    }
+
+
+def _which_outputs(fc: str, ab_missing: list[str], ga_missing: list[str]) -> list[str]:
+    outputs = []
+    if fc in ab_missing:
+        outputs.append("AB")
+    if fc in ga_missing:
+        outputs.append("GA")
+    return outputs

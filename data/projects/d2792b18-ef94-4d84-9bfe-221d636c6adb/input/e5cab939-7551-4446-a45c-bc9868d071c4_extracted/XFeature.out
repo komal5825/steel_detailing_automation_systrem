@@ -1,0 +1,55 @@
+====================================================================================================
+ C08-033                               FEATURE CHECK SUMMARY                    23/APR/2026  3:15pm
+====================================================================================================
+
+    Status  Description
+    ------  ----------------------------------------------------------------------------------------
+    OK      Wainscot panels
+
+
+====================================================================================================
+ C08-033                                  Wainscot panels                       23/APR/2026  3:15pm
+====================================================================================================
+
+    DS_BUILD
+    --------
+      Status  Id               Value  Description
+      ------  ----------  ----------  --------------------------------------------------------------
+      WALL58
+      OK      Wall58          0.0000  Offset of C top Wainscot girt from the Wainscot height
+
+      WALL62
+      OK      Wall62          0.0000  Offset of Z top Wainscot girt from the Wainscot height
+
+      WALL63
+      OK      Wall63          0.0000  Offset of U top Wainscot girt from the Wainscot height
+
+    DT_BUILD
+    --------
+      Status  Id               Value  Description
+      ------  ----------  ----------  --------------------------------------------------------------
+      PL35
+      OK      lib             5.0000  Wall panel offset from Wainscot girt location when the panels are not lapped.
+      OK      lic             5.0000  Wainscot panel offset from Wainscot girt location when the panels are not lapped.
+
+      PL36
+      OK      lid           100.0000  Wainscot panel offset from Wainscot girt location when the panels are lapped.
+      OK      lie           100.0000  Wall panel offset from Wainscot girt location when the panels are lapped.
+
+    DT_METHD
+    --------
+      Status  Id               Value  Description
+      ------  ----------  ----------  --------------------------------------------------------------
+      GN42
+      OK      546                '4'  Wainscot: Option for detailing of Wainscot panels when the start/end of the Wainscot panels do not align with the wall panels.
+
+
+====================================================================================================
+ C08-033                            Wainscot panels Enhancements                23/APR/2026  3:15pm
+====================================================================================================
+
+      Id          Description
+      ----------  ----------------------------------------------------------------------------------
+      PE3-10-1    Wainscot: The Building Input Editor now allows data to be entered for wainscot on exterior walls
+      PE3-10-2    Wainscot: Design of Wainscot
+      PE3-10-4    Wainscot: Wainscot is shown on building drawings

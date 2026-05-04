@@ -10,6 +10,20 @@ from app.config.settings import settings
 from app.db.models import ExtractedFieldValue
 
 
+def project_processed_dir(project_id: UUID) -> Path:
+    """Returns the Processed/ directory for a project, creating it if needed."""
+    path = Path(settings.project_data_root) / str(project_id) / "Processed"
+    path.mkdir(parents=True, exist_ok=True)
+    return path
+
+
+def write_processed_json(project_id: UUID, filename: str, payload: dict) -> Path:
+    """Write a JSON file to the project's Processed/ directory."""
+    output_path = project_processed_dir(project_id) / filename
+    output_path.write_text(json.dumps(payload, indent=2, default=str), encoding="utf-8")
+    return output_path
+
+
 def project_output_dir(project_id: UUID, output_type: str) -> Path:
     root = Path(settings.project_data_root)
     path = root / str(project_id) / "outputs" / output_type

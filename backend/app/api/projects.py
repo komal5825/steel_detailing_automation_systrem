@@ -56,9 +56,25 @@ async def list_projects(db: Session = Depends(get_db)) -> List[ProjectRead]:
     return project_crud.list_projects(db)
 
 
+@router.get("/{project_id}", response_model=ProjectRead, summary="Get a project")
+async def get_project(project_id: UUID, db: Session = Depends(get_db)) -> ProjectRead:
+    project = project_crud.get_project(db, project_id)
+    if project is None:
+        raise HTTPException(status_code=404, detail="Project not found")
+    return project
+
+
 @router.post("/", response_model=ProjectRead, status_code=status.HTTP_201_CREATED, summary="Create a new project")
 async def create_project(project: ProjectCreate, db: Session = Depends(get_db)) -> ProjectRead:
     return project_crud.create_project(db, project)
+
+
+@router.get("/{project_id}/files", response_model=List[ProjectFileRead], summary="List project files")
+async def list_project_files(project_id: UUID, db: Session = Depends(get_db)) -> List[ProjectFileRead]:
+    project = project_crud.get_project(db, project_id)
+    if project is None:
+        raise HTTPException(status_code=404, detail="Project not found")
+    return project_crud.list_project_files(db, project_id)
 
 
 @router.post(
@@ -90,6 +106,7 @@ async def upload_project_files(
         if parent_file.file_category == "archive":
             extract_dir = input_dir / f"{stored_path.stem}_extracted"
             extracted_paths = ArchiveHandler.extract(str(stored_path), str(extract_dir))
+            parent_file.processing_status = FileProcessingStatus.EXTRACTED
             for extracted_path in extracted_paths:
                 extracted_file = Path(extracted_path)
                 if extracted_file.is_file():
@@ -103,4 +120,5 @@ async def upload_project_files(
                         )
                     )
 
+    db.commit()
     return registered_files

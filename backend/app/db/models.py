@@ -183,3 +183,43 @@ class RuleProposal(Base):
     status = Column(String(20), default="PENDING")  # PENDING / APPROVED / REJECTED
     created_at = Column(DateTime, default=datetime.utcnow)
     reviewed_at = Column(DateTime)
+
+
+class ValidationResult(Base):
+    """Per-field validation record produced by the completeness checker."""
+    __tablename__ = "validation_results"
+    id = Column(GUID(), primary_key=True, default=uuid.uuid4)
+    project_id = Column(GUID(), ForeignKey("projects.id"), nullable=False)
+    stage_code = Column(String(10), nullable=False)
+    field_code = Column(String(100), nullable=False)
+    status = Column(String(20), nullable=False)    # PRESENT / MISSING / SUSPICIOUS
+    severity = Column(String(20), nullable=False)  # CRITICAL / MAJOR / MINOR
+    source = Column(String(100))
+    value = Column(Text)
+    note = Column(Text)
+    created_at = Column(DateTime, default=datetime.utcnow)
+
+
+class StageCheckpoint(Base):
+    """Hard-gate checkpoint record written by CheckpointManager."""
+    __tablename__ = "stage_checkpoints"
+    id = Column(GUID(), primary_key=True, default=uuid.uuid4)
+    project_id = Column(GUID(), ForeignKey("projects.id"), nullable=False)
+    stage_code = Column(String(10), nullable=False)
+    checkpoint_label = Column(String(200), nullable=False)
+    gate_status = Column(String(20), nullable=False)   # PASS / FAIL / PENDING
+    gate_data = Column(Text)                           # JSON-serialised evidence
+    created_at = Column(DateTime, default=datetime.utcnow)
+
+
+class AuditEventLog(Base):
+    """Immutable audit trail for every significant system action."""
+    __tablename__ = "audit_event_log"
+    id = Column(GUID(), primary_key=True, default=uuid.uuid4)
+    project_id = Column(GUID(), ForeignKey("projects.id"), nullable=True)
+    event_type = Column(String(100), nullable=False)
+    actor = Column(String(100))
+    stage_code = Column(String(10))
+    field_code = Column(String(100))
+    detail = Column(Text)   # JSON
+    created_at = Column(DateTime, default=datetime.utcnow)
