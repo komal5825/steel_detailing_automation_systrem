@@ -1,0 +1,4642 @@
+{
+  "generated_at": "2026-05-04T11:11:05.353864",
+  "project": {
+    "id": "6899dc4b-3a4a-4e13-9449-c7f82bae9d5b",
+    "proposal_id": "C08-033-20180720",
+    "name": "SHED",
+    "location": "Jalgoan",
+    "project_type": "Other",
+    "status": "CREATED"
+  },
+  "files": [
+    {
+      "id": "82f1a98b-3cc6-4e77-9a19-8486329e394c",
+      "original_filename": "C08-033.zip",
+      "file_type": "ARCHIVE",
+      "file_category": "archive",
+      "source_application": "ARCHIVE",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "EXTRACTED"
+    },
+    {
+      "id": "8708c1ff-9b7d-4949-8a12-a351656b4b27",
+      "original_filename": "BldCtrl.log",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "1cdd1da2-e12d-4aa1-9d80-c831327e0811",
+      "original_filename": "CellViews.INI",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "79c0dd7e-3269-4b7f-83c1-6751b76c2ad1",
+      "original_filename": "CZE_DWG.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "8d5a8644-d678-4cc6-8bcc-80d69e4240e7",
+      "original_filename": "D2-4 Use.CFG",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "6e4f5661-7137-48c4-b5fe-1cbbb707412b",
+      "original_filename": "DesCtrl.Dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "20444c79-8ad5-4476-9a42-2b592330a4bb",
+      "original_filename": "DesCtrl.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "98a0e0a8-5cb8-460c-a2f9-3fe73a3a1d56",
+      "original_filename": "DesCtrl.GTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "502c110c-0ce0-4e90-8f49-57a03e345484",
+      "original_filename": "Desctrl.In",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "75d5fe2b-8181-4af9-8f68-564b7373c151",
+      "original_filename": "DS_ANGLE.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "274ad228-f350-4d73-b884-26dce6374c17",
+      "original_filename": "DS_AROLL.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "261224db-271d-4def-a5aa-16ce9e8010de",
+      "original_filename": "DS_BUILD.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "d8e94f05-c83f-48d0-bbae-8b43ebf7a1f0",
+      "original_filename": "DS_CABLE.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "ea422df2-0fcb-4491-8ca9-f7061254fb40",
+      "original_filename": "DS_CCOL.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "9edc1e88-be69-410d-b18a-22ad2c12588f",
+      "original_filename": "DS_CGIRT.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "3d67837f-fa04-41d7-9649-5462ff60b687",
+      "original_filename": "DS_CONN.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "f2c7e203-31f4-4d52-a974-73ee0fb90583",
+      "original_filename": "DS_CONST.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "f645dfc4-770e-4222-a0e9-c570ae6e8d8d",
+      "original_filename": "DS_CRANE.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "649667dd-9316-4c8d-9e9a-bf247d786abf",
+      "original_filename": "DS_CRNBM.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "71863d6a-f2bf-435a-86ec-6cca1e4a8bff",
+      "original_filename": "DS_DCOL.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "f82a8a1b-5d6b-407d-aede-0980f0d0d2dc",
+      "original_filename": "DS_DGIRT.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "66112cae-fc90-4562-9d84-6a44995f3911",
+      "original_filename": "DS_EAVE.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "b01eeebb-8bc4-4d90-9be4-36ae4c00b05e",
+      "original_filename": "DS_EAVE1.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "c6514362-4a03-4376-8f3e-ce22e72c4c54",
+      "original_filename": "DS_FACIA.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "5aa6a89c-0b63-4155-bc87-7359a0fc80fc",
+      "original_filename": "DS_FLGBR.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "f2bffc15-c285-470c-be02-3cf62d7f6b0c",
+      "original_filename": "DS_GUTTR.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "ec93098e-bfe6-47e7-81e7-0b1d83e69a99",
+      "original_filename": "DS_JAMB.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "d86cdac1-4255-4e64-ae7d-ad6339a5d831",
+      "original_filename": "DS_JGIRT.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "291535f7-7ed8-425c-ae32-ea30dbb9e8b2",
+      "original_filename": "DS_LAP.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "439e0a0c-8805-4dfe-8a72-5f8744690e5b",
+      "original_filename": "DS_OCOL.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "81eeab80-c5b2-464d-92cf-9484c1fe6603",
+      "original_filename": "DS_PANEL.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "9b943ebc-1bf3-4773-af35-8524dc7e5197",
+      "original_filename": "DS_PFRM.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "905a6308-38d6-4d74-85c3-fb85440b34b9",
+      "original_filename": "DS_PLATE.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "088e2442-88a6-436a-9569-93f0c2c18188",
+      "original_filename": "DS_RCOL.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "5b2800ec-be7a-4899-b754-fc7b3f83e864",
+      "original_filename": "DS_RFDEP.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "cf0c11fc-e58e-4163-b9c1-ed302989d154",
+      "original_filename": "DS_RFPLT.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "5849a6f5-4263-423b-8ba5-10eb62fb6054",
+      "original_filename": "DS_RFRM.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "dc87cbf1-8e63-45f9-bc7e-fe9122f8489b",
+      "original_filename": "DS_RGIRT.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "429e2f5f-af30-45ca-8e47-bd76b67856ff",
+      "original_filename": "DS_TFRM.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "4c601b05-1dbc-4922-be19-0a2d6ae0015f",
+      "original_filename": "DS_UCOL.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "3074e6b2-de79-4616-9807-b116e1a92265",
+      "original_filename": "DS_UGIRT.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "223af0be-9b11-4f14-bf5d-02341f8f89e8",
+      "original_filename": "DS_UJAMB.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "0f85d302-c3dd-42be-a9fb-d7b5a1251517",
+      "original_filename": "DS_WCOL.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "e64bc91c-acbe-4d0f-8e8f-4d7510c752b1",
+      "original_filename": "DS_WELD.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "45c1d61e-4368-422c-8686-daae5ad80f70",
+      "original_filename": "DS_WFRM.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "4ffa248d-819b-42d7-91a8-afbe0129a765",
+      "original_filename": "DS_WGIRT.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "6450e033-e73d-4231-bca0-f44bb4d0ff35",
+      "original_filename": "DS_WRPLT.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "cab0ffef-daab-4617-97b8-fbd5c1c04590",
+      "original_filename": "DS_ZCOL.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "1e821e6f-0a19-4797-be92-232210e90a25",
+      "original_filename": "DS_ZGIRT.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "c5c916f5-ef8c-4f94-8be0-268bc6b32fa2",
+      "original_filename": "DT_ABOLT.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "46c07028-2f02-4136-9436-8165a74c7b59",
+      "original_filename": "DT_ACC.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "5837bfd3-c774-4cda-8842-7463fb1c48f6",
+      "original_filename": "DT_ADD.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "c0bd1f6c-067c-42ca-9d52-45c199062434",
+      "original_filename": "DT_ANGL1.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "635de65c-808f-450e-9d46-6b08e2194ede",
+      "original_filename": "DT_ANGLE.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "2ee661cf-79e9-4a64-8e7d-9595e4e08866",
+      "original_filename": "DT_BOLT.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "1558ba91-5d03-4c51-8d73-b1588378c58e",
+      "original_filename": "DT_BUILD.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "5e6298de-7368-4bd3-9403-adde3b8e8136",
+      "original_filename": "DT_CLIP.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "73de33b5-be38-4b3d-98b8-0de27a01068d",
+      "original_filename": "DT_CODE.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "607faf2f-f79b-46fd-a190-397d23cc79ca",
+      "original_filename": "DT_COLOR.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "2c1ea33c-0b3f-432b-8ce2-2780e5b15e28",
+      "original_filename": "DT_COST.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "68c228c3-df16-40b0-8f99-d330b6862eea",
+      "original_filename": "DT_DOOR.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "159e47bb-f8c1-4aa2-bdf5-3c0a50546063",
+      "original_filename": "DT_INSUL.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "a05e4ba9-c95c-4ada-981d-3c7831352d33",
+      "original_filename": "DT_MARK.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "f766baa8-abb0-48de-82ab-a4e1c65f3f15",
+      "original_filename": "DT_MASTC.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "a39c9021-4e91-4cc4-af37-c2593c3bf0a9",
+      "original_filename": "DT_MEMBR.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "006e4ac8-d141-473d-b466-fefe7f070a29",
+      "original_filename": "DT_METHD.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "312d4dde-053c-4a8a-a723-d925f0bcd555",
+      "original_filename": "DT_PRICE.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "4edac7f8-c64f-4ec6-9d96-68a7d56c0dc4",
+      "original_filename": "DT_PROFILE.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "6764cd9d-ba0e-4ba7-9e1e-43791fd5d8e0",
+      "original_filename": "DT_PUNCH.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "0b81e7c8-a642-48bc-bda9-8743071664e9",
+      "original_filename": "DT_SCRW1.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "0becc1b2-383f-40cc-92b3-4c19cfdf195c",
+      "original_filename": "DT_SKYLT.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "7db1f743-0898-4d8e-b8d8-a2d7eb62ba02",
+      "original_filename": "DT_SUPLY.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "046119d2-11cb-48da-81bc-38f6a3c2582f",
+      "original_filename": "DT_TRIM.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "6a8f6b13-03bc-41f2-a02b-9e4f4409e021",
+      "original_filename": "DwgCtrl.In",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "3945d346-8118-45fa-9661-8ba556cb64ad",
+      "original_filename": "EW_COST.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "c0009321-8f3b-4e15-81e8-1ff04604c641",
+      "original_filename": "FRM_DWG.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "9ad55403-8d4e-46a8-b4ba-fb92a3662902",
+      "original_filename": "mbs.cfg",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "85ddabf7-89ed-42ff-a91c-7aa20ff9a878",
+      "original_filename": "MBS.FRM",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "84ad14d3-1952-44b7-b9a8-c7b42740e868",
+      "original_filename": "MBS.IN",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "f75fe74d-7597-40e0-bf8a-165e58969ace",
+      "original_filename": "MBS_JOB.DEF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "167cd47f-5070-4529-808a-47c15810d464",
+      "original_filename": "Metric.Unt",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "7c1a93ca-7796-4b82-a74b-f195c114d3f1",
+      "original_filename": "PRICE.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "2021b19a-7d4d-43e1-8ea5-d8830868b34c",
+      "original_filename": "REPORT.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "fcfde016-e470-463a-a488-ec60439356bd",
+      "original_filename": "RF_COST.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "a43e987b-11ec-465a-b645-70da7e837a83",
+      "original_filename": "3DBuild.dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "4c7532d8-474d-4d08-9e16-146b5fe3e9dd",
+      "original_filename": "3DBuild.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "71dc2eb7-1517-4178-85de-3e331fa22c76",
+      "original_filename": "3DBuild.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "373654a0-552c-4613-b113-2d0fef31ba73",
+      "original_filename": "AB_BOLT.OUT",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "bda1b5d0-67c3-460f-9c3a-931e79e7c967",
+      "original_filename": "AnDwg-1.dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "a86f9a75-fea4-4295-9ef2-cc048bcf4d46",
+      "original_filename": "AnDwg-1.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "7492a1d1-d2c1-4e29-bf80-b204a84308d6",
+      "original_filename": "AnDwg-1.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "b0699816-c5aa-4782-9858-be4f7dd8a25c",
+      "original_filename": "AnDwg-2.dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "c9813e1b-5c37-405f-9532-91b389f1ea99",
+      "original_filename": "AnDwg-2.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "570f4001-87fd-4aab-a239-548765640b14",
+      "original_filename": "AnDwg-2.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "55896a4a-f8e8-4f3d-9eef-7d89ed1abc93",
+      "original_filename": "AnDwg-3.dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "8e3bf818-4bde-4c7d-a019-c2f5cf2958b9",
+      "original_filename": "AnDwg-3.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "8fb0a18f-6d68-4c0d-9a09-0fff1e09bb63",
+      "original_filename": "AnDwg-3.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "3b2b0f40-27b5-4d75-97e4-2552784c0f1d",
+      "original_filename": "angle.ctf",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "ee16c86d-ff39-4fd0-8a67-c0688e5b0b01",
+      "original_filename": "ANGLE.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "0b712d0f-b444-432a-885c-0a36a62f8316",
+      "original_filename": "BLOCK.IN",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "58f57015-2a69-4453-adbb-a5362c87c480",
+      "original_filename": "bolt.dtf",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "48053fa7-fb7e-4a96-ab11-552fe53f17a2",
+      "original_filename": "bom.cst",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "24381bf6-ea16-453d-a038-2ae6177a6aeb",
+      "original_filename": "bom.ctf",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "dd8a2eef-8f30-4d6a-9360-dc36f4b29498",
+      "original_filename": "bom.dtf",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "7e94f06e-3e5c-48b6-972a-fbe15da541f1",
+      "original_filename": "BOM.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "920bd669-1d4b-4b45-82a4-df56c7b636ee",
+      "original_filename": "BOM.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "216d60f2-e5fd-4c37-8aee-868bec7a4751",
+      "original_filename": "BOM.MTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "17d1bc09-11d4-4250-9e2f-147ee8e0bb7d",
+      "original_filename": "BOM.out",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "5c34f5c6-f9b6-4e46-b243-74dc91aec0e0",
+      "original_filename": "bom.ptf",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "f3b1ba2a-8a21-4697-9cdf-3c5d044f86c7",
+      "original_filename": "bom.shp",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "99aa1d9f-c0dd-4973-8705-6e34a8e69ec5",
+      "original_filename": "BOM.xtf",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "5a11fe5b-481d-4106-b3e1-777095a26cac",
+      "original_filename": "bom2.dtf",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "a11a3324-ccbd-4bbc-ba4f-86115b5ab7fa",
+      "original_filename": "Bom3.dtf",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "f9d19d80-f170-41f1-8bc4-33764b142045",
+      "original_filename": "BOMext1.DXF",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "5d148101-b1a3-425d-a1cf-c181449591c7",
+      "original_filename": "BOMext2.DXF",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "f8d47428-14f7-4848-9809-f27250ed5a5b",
+      "original_filename": "BomMH.dtf",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "a53c2f3b-ddab-4fe0-950d-6f4f70ea0d6a",
+      "original_filename": "clip.ctf",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "3865cfb5-bfcf-47e7-a0a5-80f2a83fb050",
+      "original_filename": "clip2.dtf",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "b0a0bb7a-8e5d-49f0-9db1-de2864ac67c8",
+      "original_filename": "CompDes.Dtf",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "3afcbdff-43ae-4041-bc16-065671bb97d4",
+      "original_filename": "CompDes.Dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "f063ed5e-07c6-44ac-b626-306f92c7f552",
+      "original_filename": "CompDes.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "b3ddb9e2-fc49-41e8-b35d-cdda18c2917f",
+      "original_filename": "CompDes.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "b43dd934-9a44-4479-ae89-84032c46a814",
+      "original_filename": "CompDes.out",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "0fbb97bb-a0b4-4fad-a545-fc6d9187e93c",
+      "original_filename": "CompDes.Rtf",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "14f7135c-412f-4465-b264-f1d7420ad2a3",
+      "original_filename": "COMPDET.CTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "8652997e-2437-44ac-b56a-4ac9477f2de9",
+      "original_filename": "CompDet.Dtf",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "7c3bc7af-5a4f-4ebd-b0b8-8ef8bb54756f",
+      "original_filename": "COMPDET.Dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "3a1579c7-f16e-4bca-b224-d7a318ac035c",
+      "original_filename": "CompDet.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "c94b0822-7665-4d55-9f4a-bf6ec42cec7b",
+      "original_filename": "CompDet.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "382bbd7b-5255-4c68-8277-eca11264a8ea",
+      "original_filename": "CompDet.Mtf",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "5062f266-61ba-4696-9ace-cc4f5a4e35cf",
+      "original_filename": "CompDet.out",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "927d501e-8f90-4073-82df-596551ae9214",
+      "original_filename": "CompDet.PTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "d261f6d9-5915-46df-91f1-9dcdf1cb3b65",
+      "original_filename": "CompDet.xtf",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "49c5d6b5-e78f-4da2-8109-6851a8a078a8",
+      "original_filename": "COMPDET2.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "6c4c1905-8428-42ec-9f97-efaa5daaa0f0",
+      "original_filename": "COMPDETR.CTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "5230a68f-8d26-4aa6-9519-d30757c3c96a",
+      "original_filename": "COMPMBMA.10N",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "4e731076-742a-46b4-a826-5cbea3b4052c",
+      "original_filename": "Contract.out",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "7d27f484-a235-4b3d-8b6b-9a5632c2f564",
+      "original_filename": "COST.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "f971d580-f16c-4f0e-9267-a2993087a010",
+      "original_filename": "Cost.out",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "8340a51c-3f7d-42fa-949d-cd5e62bb389d",
+      "original_filename": "CRANECLIP.CTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "42e1ecc0-a75e-46cc-b8a7-f2d68dc5a42d",
+      "original_filename": "CraneDes.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "079d52bc-925b-45bb-938e-3cd8141436e1",
+      "original_filename": "CraneDes.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "b65ad019-e5ab-4711-902d-9fa80ee4bcb0",
+      "original_filename": "CRANEDET.CTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "f4286cf4-78c3-4b34-a685-4b547d29ff3e",
+      "original_filename": "CRANEDET.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "4f9e70d2-2949-4379-ab44-35defbe98b9a",
+      "original_filename": "CraneDet.Dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "c53e9bc6-778f-4d79-b08f-6f35b73bce66",
+      "original_filename": "CRANEDET.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "8b789580-a2b2-42a1-8472-264d5ba67781",
+      "original_filename": "CraneDet.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "2c0bad9f-1b9f-4e73-9bbb-955df4b52c41",
+      "original_filename": "CRANEDET.MTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "3f93122b-b5ff-464c-92dc-f93842c05f8d",
+      "original_filename": "CraneDet.out",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "65aaa3a7-fe5b-4884-a175-14383d2e28ad",
+      "original_filename": "CRANEDET.PTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "f06d1686-53de-4497-9155-d07f27ef36ce",
+      "original_filename": "CraneDet.XTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "40354877-1858-474a-9f11-a16a2b42813b",
+      "original_filename": "CRANEDETA.CTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "c4902aee-7bd7-48b2-a58b-e4a59dd791ed",
+      "original_filename": "CZE_DET.OUT",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "827b6273-93cd-465b-ab78-1ab28292c067",
+      "original_filename": "DB_User.siz",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "bd5dd166-ac78-4048-a038-0b788e299e3c",
+      "original_filename": "DesCalc.Dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "808d1817-d84c-4dba-a93a-bcea45d8ae50",
+      "original_filename": "DesCalc.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "fe4939cb-9520-41a6-a64a-c569017a6f7c",
+      "original_filename": "DesCalc.Out",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "e4fa42a3-ae32-41c0-adc9-e0e9c98a2146",
+      "original_filename": "DesCalc.Txt",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "a3b7e660-bed1-43f7-9a5c-ca05597016b2",
+      "original_filename": "DesCalc2.Dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "d2ef1166-a9ef-4243-ac5a-831aff6ffba3",
+      "original_filename": "DesCalc3.Dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "b046020c-aa51-44f8-9763-6c7324f50aa3",
+      "original_filename": "DesCtrl.in~~",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "2ffac2ef-65ec-46e0-b050-2777431efdf5",
+      "original_filename": "DesCtrl.pgf",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "caa63349-cfa8-4230-805f-45d631a30f1b",
+      "original_filename": "DESED.ERR",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "3e69052d-7b40-4148-9f3d-b01858bdb1b5",
+      "original_filename": "DesWarn.Out",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "a3cf5a99-5b45-4f89-9823-9937905dc37b",
+      "original_filename": "DetWarn.Out",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "34aeece9-fc13-4087-8f10-406ed7a40477",
+      "original_filename": "DE_COL.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "11fd620f-9aea-4ec3-bc27-6c0941d08e06",
+      "original_filename": "DE_ROPEN.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "061824b6-1df6-42ef-82d4-fa7f9cf95c5d",
+      "original_filename": "DS_BUILD.err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "6b637279-ee8c-4276-a663-f15177e154ce",
+      "original_filename": "DS_ROPEN.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "62e19317-8b97-4cc9-b879-aa76166f38c5",
+      "original_filename": "DT_BUILD.err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "fdd60b32-a34f-46ef-b4b4-366f0813e7ab",
+      "original_filename": "DT_METHD.err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "7ee5b1cf-206f-4f1b-814f-a704d89e464f",
+      "original_filename": "DwgCtrl.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "ee794b7f-51bc-41c5-882a-23192be98b92",
+      "original_filename": "DXF_LOG.INI",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "93f0c806-24ea-4f22-8f4d-0576c2b730d5",
+      "original_filename": "EwDes-L.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "479797ae-0ed8-4d79-891a-17cebb9c0b95",
+      "original_filename": "EwDes-L.Dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "13877b6e-60b3-44de-920f-33ec2883fdba",
+      "original_filename": "EwDes-L.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "6ef8cd1b-e72c-4e05-b63f-124ff5a631b6",
+      "original_filename": "EwDes-L.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "80bf6bb0-c503-4520-917f-d5149b263b53",
+      "original_filename": "EwDes-L.LTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "beff7fd3-e1a6-4e8e-880c-4b5440665777",
+      "original_filename": "EwDes-L.out",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "2503e692-6463-47fc-a50f-3d6357663675",
+      "original_filename": "EwDes-L.RTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "0fee4e09-4dd7-4148-9896-41a35c58a3ed",
+      "original_filename": "EwDes-R.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "5b3a74fb-c12e-48fd-99a9-394a8cb9d59a",
+      "original_filename": "EwDes-R.Dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "a299d534-c7ce-443c-8cfc-7effdf26b79b",
+      "original_filename": "EwDes-R.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "2ded386a-4fdf-4193-9d8d-b1dba71dad91",
+      "original_filename": "EwDes-R.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "2e3ae18d-9472-4466-9f3d-5459aef0cef7",
+      "original_filename": "EwDes-R.LTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "a68a474d-ba61-4ce2-9216-67c0069dee8d",
+      "original_filename": "EwDes-R.out",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "78dc705c-0ca5-4dd5-8f1c-5508ff85dc70",
+      "original_filename": "EwDes-R.RTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "5715448e-71d1-45aa-b6c5-3f75dd0c3158",
+      "original_filename": "EWDET-L.BLK",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "bd0c9153-8230-4e13-a240-8006fdb0684e",
+      "original_filename": "EWDET-R.BLK",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "1bda9ce5-69d7-4334-83ad-49d6d8695ea6",
+      "original_filename": "EWDET.CTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "b1a8be12-59e7-46a5-b86e-c7ca906900d9",
+      "original_filename": "EWDET.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "41ddbc61-1860-498f-bb4c-f4629d911e98",
+      "original_filename": "EWDET.Dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "05ac12d2-0fd8-4ffa-8537-04c44d8eb027",
+      "original_filename": "EwDet.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "e5303a33-f9f2-414e-9f06-a66067eb0185",
+      "original_filename": "EwDet.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "d63e6eac-4ce5-42bd-b1f8-c351039c537b",
+      "original_filename": "EWDET.MTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "2c9bc3dc-2bc4-4855-9f3f-34ca7b831a93",
+      "original_filename": "EwDet.out",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "7caafed0-e982-4658-9435-12f4752a02b7",
+      "original_filename": "EWDET.PTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "b5fb34ae-25ed-42ab-a742-d5f8b7e15cd6",
+      "original_filename": "EwDet.XTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "51190163-5458-415d-9838-bd8e18af4703",
+      "original_filename": "EwDwg-L.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "98f8026e-b8c3-472c-bf7c-89650ef602c5",
+      "original_filename": "EwDwg-L.dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "4ed73863-173f-4896-b6fb-48c807e5a145",
+      "original_filename": "EwDwg-L.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "6e3752d6-341a-482a-a4fe-4edec9a53e94",
+      "original_filename": "EwDwg-L.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "bbfbcef1-16d5-4e96-9371-1bb723e42a52",
+      "original_filename": "EwDwg-R.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "42bd4a8c-0b19-47ae-ab5a-4b36ed0a7cd9",
+      "original_filename": "EwDwg-R.dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "6815ba63-9aee-4fad-8be4-fd52820f4f2b",
+      "original_filename": "EwDwg-R.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "f77a0a24-564e-4f83-8610-651bf69b3bce",
+      "original_filename": "EwDwg-R.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "89bdc182-4d28-4063-9076-b166696895b2",
+      "original_filename": "EW_MBMA.10N",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "22f5cf23-8ca8-49da-8d36-ea2d7bb881f7",
+      "original_filename": "Floor.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "39e2001a-8161-4e37-b6c3-bc99411fafaa",
+      "original_filename": "FLOORCLIP.CTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "1de61214-3d11-4058-902e-6b664863d926",
+      "original_filename": "FloorDes.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "bc1a0378-7bd2-4f6d-86d4-43afec8186e5",
+      "original_filename": "FLOORDES.IN",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "e05cc762-1feb-4583-a5b0-9b49389bf0be",
+      "original_filename": "FLOORDET.CTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "a1395381-35fe-4eb6-a777-dd4354605d22",
+      "original_filename": "FLOORDET.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "99044ec7-03ac-44c8-9b39-2a934b0f14a9",
+      "original_filename": "FLOORDET.Dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "623b03f6-c5a2-44c1-a505-9cd6a88d997f",
+      "original_filename": "FLOORDET.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "5f0cebd8-8a8c-4f2b-babf-8f975f8eef6b",
+      "original_filename": "FLOORDET.IN",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "057dbd45-adea-470e-af74-aaa15ec2463e",
+      "original_filename": "FLOORDET.MTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "5c811280-212d-4daa-87e3-6c6f86507122",
+      "original_filename": "FloorDet.out",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "c2633822-36ce-40b3-9fde-af1f9d8f6db0",
+      "original_filename": "FLOORDET.PTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "8dc9519d-8a12-4455-94d3-0ae2f64e324b",
+      "original_filename": "FLOORMBMA.10N",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "cc76f8da-8002-4e6b-9f78-f207ba5f7bb2",
+      "original_filename": "FramSum.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "74127ebe-d7c1-4d6b-988a-56ef35432241",
+      "original_filename": "FramSum.DTF.TXT",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "f8d45212-2f55-463f-980a-c1c370418f56",
+      "original_filename": "FramSum.Dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "b02afb2d-4349-4be5-b3f3-f587f8e1bd15",
+      "original_filename": "FRAMSUM.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "2e035528-928b-4f56-b39d-1c0f3f365ad2",
+      "original_filename": "FRAMSUM.OUT",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "e033f547-e0ed-46b8-9202-dc7740dff2a6",
+      "original_filename": "JackDes.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "170884d9-c490-47ac-a5c3-994e46aceb0e",
+      "original_filename": "JackDes.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "3615626f-bd72-429a-96a5-a541e4aaa383",
+      "original_filename": "JackDet.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "be511095-a280-45d8-8d79-f1b6315144d7",
+      "original_filename": "JACKDET.Dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "FAILED"
+    },
+    {
+      "id": "70046c73-880b-4a5f-bb44-6498d9b4f8e6",
+      "original_filename": "JACKDET.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "060b39fd-e57a-4b72-8c7b-9988f27daca0",
+      "original_filename": "JackDet.In",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "5e7dc13f-b347-4eae-8c75-efb1b6624d37",
+      "original_filename": "JackDet.MTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "b05572ab-c6ee-4606-a8a7-39b1bcc03b04",
+      "original_filename": "JackDet.out",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "1ba82a63-ad5e-4e0d-b583-3c0642c2e83c",
+      "original_filename": "JackDet.PTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "8942f03a-8e57-47f9-b43d-c81cbcf71de1",
+      "original_filename": "JOB_PROP.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "a06cdb9c-551e-4274-af2d-1fa0246e11f7",
+      "original_filename": "LayOut.Dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "02371385-49ab-4e69-817b-af96215bfad0",
+      "original_filename": "Letter.out",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "87a6e0eb-435e-4abd-8f63-04373ade5ca9",
+      "original_filename": "LOAD.IN",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "3a1d3643-aa77-4cce-bcd7-b20f3166ad0d",
+      "original_filename": "MAnDwg-1.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "a09465f1-fc47-4d42-b4f2-305208413fa2",
+      "original_filename": "MAnDwg-2.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "edc7f554-a6ca-4f10-8f6b-ec437861556c",
+      "original_filename": "MAnDwg-3.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "884928e2-6a7e-4fb0-831b-89a83078cbac",
+      "original_filename": "MARK.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "b5af7949-9afc-4250-b416-5ee4f4a53d67",
+      "original_filename": "MASTC.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "1578ce30-89ec-441f-9466-ae1823933948",
+      "original_filename": "MBMA.10N",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "31a62d66-f1bc-482d-acc9-0048e2927b94",
+      "original_filename": "MBOM.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "4eb06697-5b6e-4e01-86de-7ead8f99e80b",
+      "original_filename": "MBSCOVER.DOC",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "c33b2f69-8010-4486-b4dd-71a3d26a3f82",
+      "original_filename": "MbsRun.Log",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "cf822dfe-e8f6-423c-b091-36db7d5296b0",
+      "original_filename": "MBS_AUTO.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "4016f0b3-9cac-469e-b68d-b340874635a1",
+      "original_filename": "MBS_AUTO.TXT",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "e7b02c00-2186-4d5c-8596-940ba0a59dcb",
+      "original_filename": "MCompDes.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "a1cf77f1-e026-41a9-a800-cbf8e50a6c68",
+      "original_filename": "MCOMPDET.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "67e97b25-2fb4-486e-ac8f-4d6c3063dce0",
+      "original_filename": "MCRANEDES.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "5c841d81-95ed-4a90-9111-7ba79757bef9",
+      "original_filename": "MCRANEDET.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "d91cf805-89e2-4722-9512-8d3ebf8334e3",
+      "original_filename": "Message.Log",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "dcf5e432-1cdb-470a-a533-7a7ca00f98aa",
+      "original_filename": "MEwDes-L.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "e79fc8d5-4a2e-4ae3-98d0-e31597743247",
+      "original_filename": "MEwDes-R.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "f1a51fde-088e-444d-8c5e-c222fb3cdd05",
+      "original_filename": "MEWDET.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "ff475ff8-deb8-4066-87b2-c0af0a50aeb3",
+      "original_filename": "MEwDwg-L.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "4d8f3e64-e4e5-4152-97c1-46929b81da87",
+      "original_filename": "MEwDwg-R.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "35f75cc1-ac61-4fda-9761-e02618c3ddfc",
+      "original_filename": "MFLOORDES.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "41d0bc00-4aa2-4039-b311-8c654a600d3c",
+      "original_filename": "MFLOORDET.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "c65fac73-9265-426c-a782-1a004938ab8d",
+      "original_filename": "MJackDes.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "ce061505-85e4-4430-9040-5bac3cd9f75a",
+      "original_filename": "MJackDet.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "117a9acf-d2bc-4e6e-98d9-51c5461ec17e",
+      "original_filename": "MPARTDES.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "5e35d385-0a09-48bc-bee0-9a22f8065600",
+      "original_filename": "MPARTDET.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "c438a838-4789-4050-8777-09a01a429196",
+      "original_filename": "MRfDes-1.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "a1a54390-6f03-486b-84a8-c94cd25a34b6",
+      "original_filename": "MRfDes-2.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "c26a72ec-515a-44c2-98ed-7b0b25b3c532",
+      "original_filename": "MRfDet-1.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "f9fffba0-6634-458c-b2c0-89827a40512f",
+      "original_filename": "MRfDet-2.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "1a4c870c-2b0e-4c86-beda-467e29d2466f",
+      "original_filename": "MRfDwg-1.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "50d4a863-32af-4e86-a3ff-ecb83469d82e",
+      "original_filename": "MRfDwg-2.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "987a20a3-f31f-4a77-b365-fda4f5f59c31",
+      "original_filename": "MRoofDes.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "bce88eed-1cdf-4cb1-945d-852e3d7c5581",
+      "original_filename": "MRoofDwg.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "0d85536e-96d3-4b3f-a672-9017bb68996f",
+      "original_filename": "MRoofDwg2.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "fb511261-807d-435f-ac7e-cfd8a1476dc3",
+      "original_filename": "MRoofDwg3.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "e75d54ce-71ed-4766-a05c-42a52f520dc6",
+      "original_filename": "MSCDES.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "c85915d4-c5aa-41ae-84b5-67c96489c026",
+      "original_filename": "MSwDes-B.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "7763f2da-6ce4-4017-b16a-aff90ec7b796",
+      "original_filename": "MSwDes-F.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "b4c7ba00-b394-432f-8677-22b77f7f199a",
+      "original_filename": "MSwDwg-B.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "7590a600-87f7-468b-8aba-2089abc16356",
+      "original_filename": "MSwDwg-F.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "3dedccfe-0243-4688-b602-0f485c5786ea",
+      "original_filename": "MWallDes6.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "e44c9548-85d1-48fb-a468-c3ea89e2cadf",
+      "original_filename": "MWallDes7.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "841ef31d-3fb8-4c00-bba3-6c239215c660",
+      "original_filename": "MWindFrm.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "bd37fb1b-219f-4e90-85fa-85d9339d182a",
+      "original_filename": "panel.dtf",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "67a8777a-bdd3-4e04-bc29-5377493adc36",
+      "original_filename": "PartDes.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "cccf9d39-552b-488e-9c6a-6ab46437355f",
+      "original_filename": "PartDes.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "af841262-b31e-469f-a149-f75d5cfd4d6b",
+      "original_filename": "PARTDET.CTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "b68df771-6390-4b4a-9c8b-0290775c1545",
+      "original_filename": "PARTDET.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "10fd779e-b9a7-48e9-a0ad-1e20b95fe44b",
+      "original_filename": "PARTDET.Dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "da5dccf9-e4f3-4493-b999-8904d1d30aa9",
+      "original_filename": "PARTDET.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "a7482643-864b-4281-ba48-a2b3e688eaa0",
+      "original_filename": "PartDet.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "667b1625-c463-4cc4-a958-989eb5dda04f",
+      "original_filename": "PARTDET.MTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "0485d12d-7aa5-4f6f-b316-2b18032b4d03",
+      "original_filename": "PartDet.Out",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "6ad7430d-2802-46ed-b7a3-ce8905528b33",
+      "original_filename": "PARTDET.PTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "7dfa695e-4eb6-421d-aa6c-ce4e3513f32b",
+      "original_filename": "PltSum.out",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "0abe347c-5155-4997-a91a-2665b1202700",
+      "original_filename": "PltSum.TXT",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "d70a1fea-1ace-4132-803d-63bb64903ed8",
+      "original_filename": "React.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "4d91815a-29fa-48e7-83ca-bcfa423cf8ee",
+      "original_filename": "React.Out",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "becbc12f-ab25-4f0b-846c-a35a6bd7264e",
+      "original_filename": "REACT.RTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "baddec07-8fdd-4910-ba7c-b1c4755f86aa",
+      "original_filename": "report.fld",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "d5a2977b-327b-48d3-b4b6-ab44b09195f9",
+      "original_filename": "RfDes-1.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "bc873501-2491-4d47-b493-7fa4a550ce4f",
+      "original_filename": "RfDes-1.Dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "34c0ff2c-0a96-4cde-b08b-f4af77df1886",
+      "original_filename": "RfDes-1.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "b340c535-4bc6-4c73-b9a4-0117c6f3ce61",
+      "original_filename": "RfDes-1.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "4816d7a4-c193-4a34-afd5-5be1f35fe310",
+      "original_filename": "RfDes-1.LTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "a9b79aad-7766-409b-a716-374f30948ae4",
+      "original_filename": "RfDes-1.out",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "3355e786-6d41-4e7c-a5db-d5e1d2c63f8f",
+      "original_filename": "RfDes-1.RTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "0f79b46d-d11b-4ce2-9716-ada6e7b8a15e",
+      "original_filename": "RfDes-2.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "fcfc3e15-8d9f-4170-babf-17548abcace2",
+      "original_filename": "RfDes-2.Dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "24f81d5d-514b-4103-af77-078c5c0bb292",
+      "original_filename": "RfDes-2.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "f341fa28-094b-4973-915d-ab4897902dd3",
+      "original_filename": "RfDes-2.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "5e4bb1cf-e5eb-4183-9881-213e6553d5a5",
+      "original_filename": "RfDes-2.LTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "43e57043-5108-47dc-8802-fe4e23da3b23",
+      "original_filename": "RfDes-2.out",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "bfa1a739-7307-4c53-9526-a141b109b00f",
+      "original_filename": "RfDes-2.RTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "167ad46c-7112-436e-81fe-f27a9500b34b",
+      "original_filename": "RfDet-1.BLK",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "f945d93c-1480-4f51-9c00-d0b373af8e7a",
+      "original_filename": "RfDet-1.CTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "6dfdca51-ae2b-4a2a-8362-e81262e36c87",
+      "original_filename": "RfDet-1.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "d1b77499-d9f9-4f28-bf7d-25d8f2895f6a",
+      "original_filename": "RfDet-1.Dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "9f19c624-36a3-42bf-a244-a9b9288e2e00",
+      "original_filename": "RfDet-1.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "15ad469c-37bd-4c4e-9b41-5d1cb6f0fff7",
+      "original_filename": "RfDet-1.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "aa002dfd-d593-47b5-a67f-de91c89ba25f",
+      "original_filename": "RfDet-1.ITF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "8397f033-6175-4d49-938f-2a07816b3e75",
+      "original_filename": "RfDet-1.MTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "c4ca1106-e6ae-4829-905d-4bea9522bd05",
+      "original_filename": "RfDet-1.out",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "8854c101-6402-4d05-830c-3c84ecf66279",
+      "original_filename": "RfDet-1.PTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "d625bda6-08e3-435d-846f-c643902e524f",
+      "original_filename": "RfDet-1.XTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "6831e6ca-01e4-4fd5-bcff-e66a0cf039f6",
+      "original_filename": "RfDet-2.BLK",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "78cd8200-46ea-4a69-aad9-89cdf2d96a93",
+      "original_filename": "RfDet-2.CTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "8a85e294-de7b-47f3-b88a-d02bd975b4d3",
+      "original_filename": "RfDet-2.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "d040d8f7-d318-46c6-9034-6045d1c453c8",
+      "original_filename": "RfDet-2.Dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "643f41b2-4836-4c86-9059-709c2ae884bb",
+      "original_filename": "RfDet-2.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "5d5fca37-06a9-44a4-bdda-e179f1ac2ff4",
+      "original_filename": "RfDet-2.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "e0d233e2-d729-4ca5-a2eb-e6b16e6b45e8",
+      "original_filename": "RfDet-2.ITF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "c5ba56e4-0d84-4a57-bee7-f762e58c941c",
+      "original_filename": "RfDet-2.MTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "4db30147-a403-42cc-bd24-941becfe4d35",
+      "original_filename": "RfDet-2.out",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "2c8ea6eb-4d9c-4769-a184-b82130ad4bf7",
+      "original_filename": "RfDet-2.PTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "3ddd6948-331a-47c0-a58b-72c4be6b3070",
+      "original_filename": "RfDet-2.XTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "f93b601e-72cc-4502-8d82-7ae7419aa2ce",
+      "original_filename": "RfDwg-1.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "aee74014-75b0-432f-b0c3-427149b2cae8",
+      "original_filename": "RfDwg-1.dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "6b74e4e0-830a-4530-aa53-2be6e6a6f109",
+      "original_filename": "RfDwg-1.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "9a087ee3-ceb4-4c2b-b1dd-2fab402b3160",
+      "original_filename": "RfDwg-1.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "c7c512ff-ce97-4120-9a89-cdbba1e510b6",
+      "original_filename": "RfDwg-2.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "07a4fd32-f2f8-4aee-a5d9-a843d6970685",
+      "original_filename": "RfDwg-2.dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "42e1cbdf-647d-4df8-9467-7e74ef44500b",
+      "original_filename": "RfDwg-2.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "8422f8d0-4128-486f-b33b-c6dcbad97188",
+      "original_filename": "RfDwg-2.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "ae07e06b-0f27-4a48-af87-c57f5ad2292a",
+      "original_filename": "RF_MBMA.10N",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "ec201a1b-b170-4919-8e60-ff1da7b76ebc",
+      "original_filename": "RoofDes.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "be05624f-7ec4-494a-84c6-95d6886a78bb",
+      "original_filename": "RoofDes.Dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "9bc71af3-5efc-40ba-9845-b99ff55d241a",
+      "original_filename": "RoofDes.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "8d0e900d-48e3-4828-b7c2-f8f30e08752e",
+      "original_filename": "RoofDes.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "a42ab258-eb4c-4d4c-ad45-962c0dc1557b",
+      "original_filename": "RoofDes.out",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "2302d3ba-14e1-4f05-b144-9201d0f2079b",
+      "original_filename": "RoofDes.RTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "194e0dd4-23cb-44e7-a389-77e46c947d43",
+      "original_filename": "RoofDwg.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "363ba2fa-ce31-4a8a-b84e-a0045e0b1923",
+      "original_filename": "RoofDwg.dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "22259bc2-e0bb-49ad-a70d-4df186ed54c0",
+      "original_filename": "RoofDwg.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "2bf1faae-4a04-43a1-868e-59aca8a00751",
+      "original_filename": "RoofDwg.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "851e830e-5df8-4ffb-a033-7a793ba8d437",
+      "original_filename": "RoofDwg2.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "841903b1-286b-453e-9d43-f126d656d91d",
+      "original_filename": "RoofDwg2.dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "ffc37278-c881-48b9-b529-94ef8d77604c",
+      "original_filename": "RoofDwg2.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "f54f33e6-1160-43fa-8221-b9fa93f0c741",
+      "original_filename": "RoofDwg2.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "fe15e9d9-e96e-4009-87c3-e0d5e1b4bab4",
+      "original_filename": "RoofDwg3.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "13eaba4e-f6fd-4c3c-b9f0-fdf7a3d16d30",
+      "original_filename": "RoofDwg3.dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "a99580f7-b170-4262-87cd-6cd8e60aa074",
+      "original_filename": "RoofDwg3.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "e72268b5-fafd-40fb-bc15-e99d7807f5fe",
+      "original_filename": "RoofDwg3.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "7f8bc5f7-599f-40ac-bd1f-e8188f6872f9",
+      "original_filename": "ROOFMBMA.10N",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "aff79517-5e6a-483a-a9a5-2c5ba2946bef",
+      "original_filename": "RoofZone1.Dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "612cc1a9-f888-466a-aea2-a935312d8798",
+      "original_filename": "RoofZone2.Dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "4bacb716-32af-4408-89f9-022081e0f991",
+      "original_filename": "ScDes.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "cef39dc2-97cb-45f7-9f96-ad52bcb0bc90",
+      "original_filename": "ScDes.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "81843a27-0ae0-4421-8c2b-57abd38cf1a2",
+      "original_filename": "ScDes.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "1e1c657f-6dba-4a99-9695-050d665c3ae1",
+      "original_filename": "ScDes.RTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "d0870d3f-45b7-4c70-ac4c-c851b1953da4",
+      "original_filename": "SCREW.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "a7641595-95fe-4a84-b2d6-46909db2f76e",
+      "original_filename": "SCREW2.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "cdd39433-e59a-4a25-ab7a-71db92603572",
+      "original_filename": "ScrewDwg.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "afaebd13-d816-4df2-a6fc-aa8a256a67c4",
+      "original_filename": "SC_MBMA.10N",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "1a9ed0dc-8509-41ac-a1d5-4a3f53b6841a",
+      "original_filename": "SEISMIC.IN",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "79ec192a-9931-40e2-937e-e98ee11e6608",
+      "original_filename": "SHIP.OUT",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "74ec084b-82b9-4d1a-b6ad-a63abf8b2155",
+      "original_filename": "SHIP.Txt",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "7a1373a9-e7a8-48b1-b53d-9f2305715231",
+      "original_filename": "SHIP.XLS",
+      "file_type": "EXCEL",
+      "file_category": "spreadsheet",
+      "source_application": "EXCEL",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "FAILED"
+    },
+    {
+      "id": "f3e28127-a159-44e9-8213-4601da41150a",
+      "original_filename": "SNOW_DRIFT.OUT",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "3fcb8df4-1c3e-460c-b51f-55add6836b7b",
+      "original_filename": "SwDes-B.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "4d59025d-a43d-4be7-af38-4ee60a187843",
+      "original_filename": "SwDes-B.Dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "c2b57658-2e3d-4706-a188-9cfdf4a8e4ed",
+      "original_filename": "SwDes-B.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "8085a718-0b46-4ecf-8a11-6058a4a7090e",
+      "original_filename": "SwDes-B.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "9c23ac98-7d47-4e7d-a60c-cffb2e75c5fc",
+      "original_filename": "SwDes-B.out",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "10d839de-fd7a-4f38-bceb-0adeccbb8972",
+      "original_filename": "SwDes-B.RTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "fdabc529-026e-4a25-83e5-5ec6489a7eeb",
+      "original_filename": "SwDes-F.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "16f4f278-0978-436f-a8df-3b08e02b72cf",
+      "original_filename": "SwDes-F.Dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "43025d1a-a8e2-432f-a502-091030fedfd4",
+      "original_filename": "SwDes-F.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "d35a37b3-eb50-4a1e-9392-df08996c046f",
+      "original_filename": "SwDes-F.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "465c3bf0-c41a-4037-897b-9a062addf82d",
+      "original_filename": "SwDes-F.out",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "e947d44c-4fc6-44d5-afb5-cee7e0c9a139",
+      "original_filename": "SwDes-F.RTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "9ff97807-11c7-4fb1-9ca7-41380ad69a1e",
+      "original_filename": "SwDwg-B.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "a49e93fc-e1f9-4408-9288-9d5f96447796",
+      "original_filename": "SwDwg-B.dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "1d3fe002-e377-46fd-b11f-2272e6169ed9",
+      "original_filename": "SwDwg-B.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "a3f28ab2-964b-4665-98df-94b1f2cd2da7",
+      "original_filename": "SwDwg-B.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "1247b492-3251-439a-9936-3eacbb51df59",
+      "original_filename": "SwDwg-F.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "82929db1-686a-4ba3-90f0-64d1581de51a",
+      "original_filename": "SwDwg-F.dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "a9564e6e-e007-4574-be4c-7162ad3c638d",
+      "original_filename": "SwDwg-F.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "4a1fd591-e5a5-45b8-832f-aad28b3019df",
+      "original_filename": "SwDwg-F.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "5be7cea1-5c05-4b3a-9628-2c17e20d4150",
+      "original_filename": "TRIM.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "30955949-c01d-4425-80dc-1234d9d1e20b",
+      "original_filename": "User 2.CFG",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "73ab2a63-e222-4497-80d0-50fdf65b7eb9",
+      "original_filename": "WallDes6.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "cceba549-a48a-4317-9283-b8581df5111e",
+      "original_filename": "WallDes6.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "8b33bad0-06a2-437c-9264-b19e2e3cd468",
+      "original_filename": "WallDes7.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "770db163-16b3-451c-b30a-11770d26fd8f",
+      "original_filename": "WallDes7.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "c057a821-3a14-4151-94c2-1163214e0d6d",
+      "original_filename": "Wind.In",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "6d910d8f-75f5-49e0-a1f4-e95dcbb445b9",
+      "original_filename": "WinDesEd.gtf",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "03a65dcf-b060-4d71-8ff8-603a60a85074",
+      "original_filename": "WINDFRM.DTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "84e54800-8e95-4d2e-a749-12ca0adb5d30",
+      "original_filename": "WINDFRM.Dxf",
+      "file_type": "DXF",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "id": "e75cface-1aa1-4831-8519-64d7cbc6b0cd",
+      "original_filename": "WINDFRM.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "e955ad25-438c-4ccb-bf5a-ebe75fa931fd",
+      "original_filename": "WindFrm.in",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "ee9ed8b3-2efe-4368-b017-5f2a46543420",
+      "original_filename": "WINDFRM.MTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "569e6fad-0472-4975-b46f-d31746f13e37",
+      "original_filename": "WindFrm.out",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "4204de95-583e-4545-be90-b5bd1ff10fbf",
+      "original_filename": "WindFrm.PTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "9cb0c565-1bb2-4c71-9b77-8e6b9176279d",
+      "original_filename": "WindFrm.xtf",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "48b0a4e1-4b8a-4a10-911e-efc477d1e8f8",
+      "original_filename": "WINDFRM2.CTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "76366715-7696-40c6-b2dc-ddf6ee8e951d",
+      "original_filename": "WINDFRMA.CTF",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "035f2b65-5f4f-46fa-95be-96beb1cef34a",
+      "original_filename": "X1.BLK",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "f8333732-6e9b-405e-a4d9-879a6e6a312d",
+      "original_filename": "X2.BLK",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "908a9273-671f-44b3-a900-4f48585ec80b",
+      "original_filename": "X3.BLK",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "497e9954-eff6-42a1-aa8e-c4e6dbd37881",
+      "original_filename": "X4.BLK",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "48a36f57-9faa-460d-8b0c-3b988dd172f4",
+      "original_filename": "XAnDwg-1.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "726e3c3f-8060-4d5d-ab4f-9bc1f8f026e6",
+      "original_filename": "XAnDwg-2.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "e14302c0-ba5c-45ea-be60-6c40f53642b9",
+      "original_filename": "XAnDwg-3.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "5644be50-13cf-4d6c-afe3-e642f1340185",
+      "original_filename": "XBOM.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "389d1133-cbc0-49f9-a1c4-3ce23cb2b08b",
+      "original_filename": "XCOMPDES.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "0d6de6b0-e4ab-4547-affd-2043957f1510",
+      "original_filename": "XCOMPDET.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "b3eeeb6d-30d5-4b75-9c2d-97aa2f49046a",
+      "original_filename": "XCraneDes.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "99d301bf-6cbc-46de-bb4e-b9ab5212a55f",
+      "original_filename": "XCRANEDET.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "a585fe39-799f-41b3-a127-95e2d6948615",
+      "original_filename": "XDwgCtrl.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "0cd51845-b746-4c22-982c-06cd7133bbca",
+      "original_filename": "XEwDes-L.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "459f9b36-af26-4700-9ddd-a4e33dacc223",
+      "original_filename": "XEwDes-R.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "092fc592-486f-476e-82ac-c30b5b2a2512",
+      "original_filename": "XEWDET.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "6d0b731a-4011-488d-a185-bd8a6c1670a5",
+      "original_filename": "XEwDwg-L.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "bbfb03be-87dc-46ed-9354-3e7827c1f9f5",
+      "original_filename": "XEwDwg-R.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "b4618d3e-297a-474f-8145-d24c64960043",
+      "original_filename": "XFeature.out",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "8c186503-82f2-4e70-9a5a-8fb310ffeb96",
+      "original_filename": "XPartDes.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "158f42c2-b9df-4cf5-831d-ff24c61bef9f",
+      "original_filename": "XPartdet.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "ecc2fcc5-b275-4a34-82cb-c48d1442b44b",
+      "original_filename": "XRfDes-1.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "ac909b42-bda9-4585-b43f-61923d208fc0",
+      "original_filename": "XRfDes-2.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "bb72951d-c3bc-473f-9eb6-123886a6b931",
+      "original_filename": "XRfDet-1.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "9b872ced-7f85-420d-a383-e84054710049",
+      "original_filename": "XRfDet-2.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "4d0c7fc3-e830-488a-9a92-827c59156576",
+      "original_filename": "XRfDwg-1.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "1dd222cb-f3d2-4da2-bb47-c73fb76d58d5",
+      "original_filename": "XRfDwg-2.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "f74278bb-c33f-4320-80c6-e1d270c754c6",
+      "original_filename": "XRoofDes.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "8f1b2de5-3ac3-4dfc-9316-d40ebf61f5e3",
+      "original_filename": "XRoofDwg.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "9e5014ad-b578-4ec5-85d0-de3d48f2b08f",
+      "original_filename": "XRoofDwg2.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "97ded299-c566-4662-9cca-721078c0c3d7",
+      "original_filename": "XRoofDwg3.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "0ff30172-0c0e-4acd-a9f9-1d66f455807c",
+      "original_filename": "XScDes.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "35caf28b-6fb2-4995-b4fb-8c2654198fcf",
+      "original_filename": "XSwDes-B.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "2ae8b217-11a4-462a-be62-725b7602c233",
+      "original_filename": "XSwDes-F.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "47701315-4a62-4549-9351-b32cbfd99c6d",
+      "original_filename": "XSwDwg-B.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "785a7605-ae40-4d38-b0d2-b068ed7091d3",
+      "original_filename": "XSwDwg-F.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "7c690ec3-30b5-44ee-886c-71a3ea2297f0",
+      "original_filename": "XWallDes6.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "1383cfff-3555-42f8-b7db-b7e4cf8ec3da",
+      "original_filename": "XWallDes7.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "0dea4961-f4db-4ffd-883e-2664fcff083c",
+      "original_filename": "XWindFrm.Err",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    },
+    {
+      "id": "d85d0680-7d6a-4d2d-8732-a05363bab7d4",
+      "original_filename": "C08-033-Proposal drawing.dwg",
+      "file_type": "DWG",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PENDING"
+    }
+  ],
+  "stages": [
+    {
+      "stage_code": "P2-01",
+      "status": "FAILED",
+      "started_at": "2026-05-04T11:06:59.272957",
+      "completed_at": "2026-05-04T11:09:22.293625",
+      "error_message": null,
+      "result": {
+        "status": "partial_success",
+        "project_id": "6899dc4b-3a4a-4e13-9449-c7f82bae9d5b",
+        "files_found": 41,
+        "parsed_files": 39,
+        "failed_files": 2,
+        "extracted_fields": 193,
+        "normalized_fields": 0,
+        "governing_file": {
+          "file_id": "6e4f5661-7137-48c4-b5fe-1cbbb707412b",
+          "original_filename": "DesCtrl.Dxf",
+          "file_type": "DXF",
+          "source_application": "CAD",
+          "likely_role": "supporting",
+          "classification_confidence": 90
+        }
+      }
+    },
+    {
+      "stage_code": "P2-02",
+      "status": "PENDING",
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null,
+      "result": {}
+    },
+    {
+      "stage_code": "P2-03",
+      "status": "PENDING",
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null,
+      "result": {}
+    },
+    {
+      "stage_code": "P2-04",
+      "status": "PENDING",
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null,
+      "result": {}
+    },
+    {
+      "stage_code": "P2-05",
+      "status": "PENDING",
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null,
+      "result": {}
+    }
+  ],
+  "outputs": []
+}

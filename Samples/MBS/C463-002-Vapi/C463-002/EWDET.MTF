@@ -1,0 +1,50 @@
+ 
+[EWDET:MEMBER1]
+Type=FRAME_WALL
+Id=1
+Mark=EC-1
+Wall=1
+Part=W30a158
+X=      0.00
+Y=   5115.00
+ 
+[EWDET:MEMBER2]
+Type=FRAME_WALL
+Id=2
+Mark=EC-2
+Wall=3
+Part=W30a158
+X=  30500.00
+Y=   5115.00
+ 
+[EWDET:MEMBER3]
+Type=FRAME_WALL
+Id=3
+Mark=BB-0
+Wall=2
+Part=T125x32
+BayId=1
+ 
+[EWDET:MEMBER4]
+Type=FRAME_WALL
+Id=4
+Mark=BB-0
+Wall=2
+Part=T92x36
+BayId=4
+ 
+[EWDET:MEMBER5]
+Type=FRAME_WALL
+Id=5
+Mark=BB-0
+Wall=4
+Part=T92x36
+BayId=1
+ 
+[EWDET:MEMBER6]
+Type=FRAME_WALL
+Id=6
+Mark=BB-0
+Wall=4
+Part=T125x32
+BayId=4

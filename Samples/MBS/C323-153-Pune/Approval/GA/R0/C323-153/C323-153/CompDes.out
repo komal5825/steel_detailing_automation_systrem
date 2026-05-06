@@ -1,0 +1,526 @@
+*===============================================================================
+*C323-153            Component Design Input                 23/JUL/2025 11:18am
+*===============================================================================
+ 
+*( 1)JOBID:
+    'C323-153'
+ 
+*( 2)DESIGN CODE:
+*        ---Steel_Code---             ---Build---            Seismic
+* Code   Cold       Hot      Country  Code   Year   Label     Zone
+  'WS'  'NAUS07  ' 'AISC05'  '    '  'MBMA'  '10'  'MBMA 10 ' 'B  '
+ 
+*( 3)DESIGN CONSTANTS:
+* -----------------------Steel_Yield-----------------------  Stress  Strength_Factor
+* Web   Flg C_Sec W_Sec R_Sec P_Sec T_Sec U_Sec    EP    BP   Ratio    Wind  Seismic
+  345   345   345   345   235   345   317   235   345   345    1.00  1.0000   1.0000
+ 
+*( 4)DEFLECTION LIMITS:
+* ---Eave_Extension--   ------Canopy-------   ----Horiz_Beam----- Vert_Facia
+* Live   Wind   Total   Live   Wind   Total   Live   Wind   Total    Beam
+  180.0  180.0  120.0   180.0  180.0  120.0   180.0  180.0  120.0   120.0
+ 
+*( 5)REPORTS:
+* Input  Ext   End  Flange
+* Echo   Beam Plate Brace
+  'I'    'Y'   'Y'   'Y'
+ 
+*( 6)BUILDING LAYOUT:
+*                          -------Left_Endwall------   ------Right_Endwall------
+*  Type    Width   Length  Exp  Opt  Offset  Project   Exp  Opt  Offset  Project
+  'FF-'    22470    36270  'Y ' 'E'   440.0    230.0   'Y ' 'E'   440.0    230.0
+ 
+*( 7)WALL LAYOUT:
+*                          -------Wall-------    Base    Wall
+* No. Id  Use     Type Opt    Start    Length    Elev  Offset
+   5  1  'LEFT  ' '-'  '-'      0.0   22470.0    0.00    0.00
+      2  'FRONT ' '-'  '-'      0.0   36270.0    0.00    0.00
+      3  'RIGHT ' '-'  '-'      0.0   22470.0    0.00    0.00
+      4  'BACK  ' '-'  '-'      0.0   36270.0    0.00    0.00
+      5  'ROOF  ' '-'  '-'      0.0   36270.0    0.00    0.00
+ 
+*( 8)SURFACE SHAPE:
+* No.   X_Coord  Y_Coord  Offset  Opt
+   4        0.0   8170.0  230.00  '-'
+        11235.0   9293.5  200.00  '-'
+        22470.0   8170.0  200.00  '-'
+        22470.0      0.0  230.00  '-'
+ 
+*( 9)BAY SPACING:
+*Wall  ----Offset---   No.   ---Bay_Set---
+* Id    Left   Right  Sets     Width  Quan
+   1  230.00  230.00    1    11235.0    2
+   2  440.00  440.00    6     6200.0    1
+                              5990.0    1
+                              5730.0    1
+                              6230.0    1
+                              5870.0    1
+                              6250.0    1
+   3  230.00  230.00    1    11235.0    2
+   4  440.00  440.00    6     6250.0    1
+                              5870.0    1
+                              6230.0    1
+                              5730.0    1
+                              5990.0    1
+                              6200.0    1
+   5  440.00  440.00    6     6200.0    1
+                              5990.0    1
+                              5730.0    1
+                              6230.0    1
+                              5870.0    1
+                              6250.0    1
+ 
+*(10)WALL COLUMNS:
+*Wall                                         ---Flange---          ---Clearance--    Bolt Frame
+* Id  No.  Id   Part       Rot  Opt   Height  Width  Thick  Splice    Roof    Wall  Offset   Id
+  1    3    1  '--------'  'N'  '-'      0.0   0.00   0.00   '-'      0.00    0.00    0.00    0
+            2  'W40b155 '  'N'  '-'   8534.7 150.00   5.00   '-'      0.00    0.00    0.00    0
+            3  '--------'  'N'  '-'      0.0   0.00   0.00   '-'      0.00    0.00    0.00    0
+  2    7    1  '--------'  'N'  '-'      0.0 150.00   6.00   'H'   1481.25  988.40    0.00    1
+            2  '--------'  'N'  '-'      0.0 150.00   6.00   'H'   1481.25  632.39    0.00    2
+            3  '--------'  'N'  '-'      0.0 150.00   6.00   'H'   1481.25  632.39    0.00    2
+            4  '--------'  'N'  '-'      0.0 150.00   6.00   'H'   1481.25  632.39    0.00    2
+            5  '--------'  'N'  '-'      0.0 150.00   6.00   'H'   1481.25  632.39    0.00    2
+            6  '--------'  'N'  '-'      0.0 150.00   6.00   'H'   1481.25  632.39    0.00    2
+            7  '--------'  'N'  '-'      0.0 150.00   6.00   'H'   1481.25  988.40    0.00    1
+  3    3    1  '--------'  'N'  '-'      0.0   0.00   0.00   '-'      0.00    0.00    0.00    0
+            2  'W40b155 '  'N'  '-'   8534.7 150.00   5.00   '-'      0.00    0.00    0.00    0
+            3  '--------'  'N'  '-'      0.0   0.00   0.00   '-'      0.00    0.00    0.00    0
+  4    7    1  '--------'  'N'  '-'      0.0 150.00   6.00   'H'   1481.25  988.40    0.00    1
+            2  '--------'  'N'  '-'      0.0 150.00   6.00   'H'   1481.25  632.39    0.00    2
+            3  '--------'  'N'  '-'      0.0 150.00   6.00   'H'   1481.25  632.39    0.00    2
+            4  '--------'  'N'  '-'      0.0 150.00   6.00   'H'   1481.25  632.39    0.00    2
+            5  '--------'  'N'  '-'      0.0 150.00   6.00   'H'   1481.25  632.39    0.00    2
+            6  '--------'  'N'  '-'      0.0 150.00   6.00   'H'   1481.25  632.39    0.00    2
+            7  '--------'  'N'  '-'      0.0 150.00   6.00   'H'   1481.25  988.40    0.00    1
+ 
+*(11)WALL RAFTERS:
+* Wall             Surf
+*  Id   No.  Id     Id   Part      Rotate  Option
+    1    2    1      2  '--------'   '-'     '-'
+              2      3  '--------'   '-'     '-'
+    2    0
+    3    2    1      2  '--------'   '-'     '-'
+              2      3  '--------'   '-'     '-'
+    4    0
+ 
+*(12)PURLIN LOCATION:
+*Surf         Peak
+* Id  Type   Space  No.  Locate
+   2  'ZB'   300.0    7  1570.1   3140.3   4710.4   6280.6   7850.7   9420.9  10991.0
+   3  'ZB'   300.0    7   300.0   1870.1   3440.3   5010.4   6580.6   8150.7   9720.9
+ 
+*(13)EAVE STRUTS:
+*Wall        Bays_With_Bending
+* Id   Type  No.  Bay_Id
+   2   'ZB'   6   1   2   3   4   5   6
+   4   'ZB'   6   1   2   3   4   5   6
+ 
+*(14)SPECIAL GIRT:
+* Wall   No.    ---Bay---
+*  Id   Sets    Start End   Height Type
+    1     0
+    2     0
+    3     0
+    4     0
+ 
+*(15)EXTENSION LAYOUT:
+*        Wall                ---Bay---   -Edge_Extend-  End_Option  End_Support Frame
+* No. Id  Id  Type Opt Mount Start End    Left   Right  Left Right   Left Right  Opt
+   1   1   3  'EC' '-'  'B'    1     1     0.0     0.0  '-'  '-'     '-'   '-'   '-'
+ 
+*(16)EXTENSION SIZE:
+*      ----Horizontal_Size---   ---------Vertical_Size--------- --Orient--  ---Support_Column--- ---Concrete---
+* Id     Elev   Width   Slope     Elev   Height   Slope Project Beam Panel  Offset   Elev Splice Extend    Elev
+   1   5700.0  2000.0   10.00      0.0     0.0     0.00    0.00  '-'  '-'     0.00   0.00   '-'    0.00    0.00
+ 
+*(17)EXTENSION BEAMS:
+*     Ext Line                                                   Load  ------Depth------ Splice_Type
+*No.   Id  Id   Use       Orn   Part       Type Shape Rot Opt    Width Set   Min    Max  Start   End Bracket
+   3    1   1  'ATTACH  ' 'H'  '--------'  'S'   'H'  '-' '-'   5617.5 'N' 200.00   0.00  'SS'  '--'   'N'
+        1   1  'ATT_SUPP' 'H'  'W30b155'  'W'   'H'  '-' '-'   5617.5 'N' 200.00   0.00  'SS'  'S3'   'N'
+        1   2  'ATTACH  ' 'H'  '--------'  'S'   'H'  '-' '-'   5617.5 'N' 200.00   0.00  'SS'  '--'   'Y'
+ 
+*(18)EXTENSION PURLINS:
+*    Ext
+*No.  Id  Use        Type  Rot  Row     Peak   Space   Part       Brace
+  1    1 'ROOF    '  'ZB'  'U'    2    300.0     0.0  '250Z25  '   'Y'
+ 
+*(19)EXTENSION EAVE STRUTS:
+* Ext
+* Id  Type  Rot  Opt  Part
+   1  'ZB'  'U'  '-' '250Z18  '
+ 
+*(20)LOAD GROUPS:
+*    Group
+*No.   Id   Description
+   1  '-'  'Standard            '
+ 
+*(21)BASIC LOADS:
+*                                                   Deflection
+*Group Ext                                   Basic  Load_Ratio
+*  Id   Id  Dead  Coll   Live   Snow   Rain   Wind  Snow  Wind
+  '-'    1 0.100 0.000  0.570  0.000  0.000  0.554  1.00  1.00
+ 
+*(22)BASIC WIND LOADS:
+*              -----Wind_Press-----    ------Wind_Suct-----
+*Group Ext     Horz    Vert  Soffit    Horz    Vert  Soffit
+*  Id   Id     Beam    Beam    Beam    Beam    Beam    Beam
+  '-'    1   -0.926   0.000   0.000   0.479   0.000   0.000
+ 
+*(23)EAVE STRUT BASIC LOADS:
+*Group Wall                                   -----Wind----
+*  Id   Id  Dead  Coll   Live   Snow   Rain   Press    Suct
+  '-'    2 0.100 0.050  0.570  0.000  0.000  -0.926   0.479
+  '-'    4 0.100 0.050  0.570  0.000  0.000  -0.926   0.479
+ 
+*(24)LOAD COMBINATIONS - STRENGTH:
+*    Load Group                                          Wind  Wind
+*No.   Id   Id Dead  Coll  Live  Snow Drift Slide  Rain Press  Suct
+  18    1  '-' 1.00  1.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00
+        2  '-' 1.00  1.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+        3  '-' 1.00  1.00  0.00  1.00  1.00  0.00  0.00  0.00  0.00
+        4  '-' 1.00  1.00  0.00  1.00  0.00  1.00  0.00  0.00  0.00
+        5  '-' 1.00  1.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00
+        6  '-' 1.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+        7  '-' 1.00  1.00  0.75  0.00  0.00  0.00  0.00  0.75  0.00
+        8  '-' 1.00  1.00  0.75  0.00  0.00  0.00  0.00  0.00  0.75
+        9  '-' 1.00  1.00  0.00  0.75  0.00  0.00  0.00  0.75  0.00
+       10  '-' 1.00  1.00  0.00  0.75  0.00  0.00  0.00  0.00  0.75
+       11  '-' 1.00  1.00  0.00  0.75  0.75  0.00  0.00  0.75  0.00
+       12  '-' 1.00  1.00  0.00  0.75  0.75  0.00  0.00  0.00  0.75
+       13  '-' 1.00  1.00  0.00  0.75  0.00  0.75  0.00  0.75  0.00
+       14  '-' 1.00  1.00  0.00  0.75  0.00  0.75  0.00  0.00  0.75
+       15  '-' 1.00  1.00  0.00  0.00  0.00  0.00  0.75  0.75  0.00
+       16  '-' 1.00  1.00  0.00  0.00  0.00  0.00  0.75  0.00  0.75
+       17  '-' 0.60  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00
+       18  '-' 0.60  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00
+ 
+*(25)LOAD COMBINATIONS - DEFLECTION:
+*    Load Group                                          Wind  Wind
+*No.   Id   Id Dead  Coll  Live  Snow Drift Slide  Rain Press  Suct
+   0
+ 
+*(26)ADDITIONAL LOADS:
+*    Add  Group Ext  Basic    Load       Fx       Fy        Dx       Dy  .. Conc
+*No.  Id    Id   Id  Load     Type       W1       W2        D1       D2  .. Dist
+  0
+ 
+*(27)DESIGN CODE OPTIONS:
+*No.   Event                         Condition
+  0
+ 
+*(28)DESIGN PLATES:
+*    Ext                    End  --Plate_Size--  -------Bolt------
+*No.  Id  Line   Use        Loc   Width   Thick     Dia   Gage Row
+  0
+ 
+* Code files used:
+*   MBMA.10N
+*   COMPMBMA.10N Version 4.0
+================================================================================
+ C323-153            Extension Design Code                  23/JUL/2025 11:20am
+================================================================================
+
+    STRUCTURAL CODE:
+    ----------------
+      Design Basis      : WS - Working Stress
+      Hot  Rolled Steel : AISC05
+      Cold Formed Steel : NAUS07
+
+    BUILDING CODE:
+    --------------
+      Wind Code         : MBMA 10 
+      Seismic Zone      : B 
+
+    MODULUS OF ELASTICITY:
+    ----------------------
+      Hot  Rolled Steel : 199955 (MN/m2)
+      Cold Rolled Steel : 203403 (MN/m2)
+
+
+================================================================================
+ C323-153            Canopy  1                              23/JUL/2025 11:20am
+================================================================================
+
+
+ EXTENSION LAYOUT:
+ -----------------
+          Wall  --Bay_Id-  ---Horizontal_Size---   ----Vertical_Size---        
+  Id Type  Id   Start End  Height   Width  Slope    Elev  Height  Slope        
+  -- ---- ----  ----- ---  ------  ------  -----   -----  ------  -----        
+   1  EC    3     1    1   5700.0  2000.0  10.00     0.0     0.0   0.00        
+
+ BEAM SIZE:
+ ----------
+          Line                      -Web_Depth-   Web Flange Flange_Thick         ----Max_Load----
+  Id       Id  Use     Orn Part     Start   End Thick  Width   Top Bottom  Weight  Id   UC Report
+  ------- ---- ------  --- -------- ----- ----- ----- ------ ----- ------  ------ --- ---- -------
+  Beam1     1  ATTACH   H  BuiltUp  396.4 196.4  4.00  125.0  5.00   5.00    38.5   8 0.15 Moment 
+  Beam2     1  ATT_SUPP H  W30b155  300.0 300.0  5.00  150.0  5.00   5.00   137.1   8 0.56 Mom+Axl
+  Beam3     2  ATTACH   H  BuiltUp  396.4 196.4  4.00  125.0  5.00   5.00    38.5   8 0.15 Moment 
+
+ DESIGN PROPERTIES:
+ ------------------
+                                  ---Top_Flange---  --Bottom_Flange-
+             Load   Major  Minor  Minor  Mom1       Minor  Mom1       ----KL/R---
+   Id       Width      KL  Axial   Bend /Mom2   Cb   Bend /Mom2   Cb  Major Minor
+   -------  -----  ------  -----  ----- ----- ----  ----- ----- ----  ----- -----
+   Beam1   5617.5  4020.0  855.0  855.0  1.00 1.00  855.0  1.00 1.00     25    35
+   Beam2   5617.5  5810.0 5810.0 5810.0  1.00 1.00 5810.0  1.00 1.00     46   189
+   Beam3   5617.5  4020.0  855.0  855.0  1.00 1.00  855.0  1.00 1.00     25    35
+
+ PLATE LIMITS:
+ -------------
+            -----Web----  -----Flange----
+             Depth/Thick  Width/(2xThick)
+   Id        Calc  Limit    Calc  Limit
+   -------  -----  -----   -----  -----
+  Beam1      99.1  180.0    12.5   16.5
+  Beam2      60.0  180.0    15.0   16.5
+  Beam3      99.1  180.0    12.5   16.5
+
+ STRENGTH:              
+ ---------
+                --Axial(kN)-  --Shear(kN)-  -----Moment(kN-m)-----  Axial+  Shear+
+          Load                                         Top     Bot  Moment  Moment   Max
+  Id       Id    Calc  Limit   Calc  Limit    Calc   Limit   Limit      UC      UC    UC
+  ------- ----  ----- ------  ----- ------  ------  ------  ------  ------  ------  ----
+  Beam1     1   -0.79 586.01   7.88  89.81    7.90   84.30   69.20    0.11    0.00  0.11 
+  Beam1     2   -0.15 586.01   1.50  89.81    1.49   84.30   69.20    0.02    0.00  0.02 
+  Beam1     3   -0.15 586.01   1.50  89.81    1.49   84.30   69.20    0.02    0.00  0.02 
+  Beam1     4   -0.15 586.01   1.50  89.81    1.49   84.30   69.20    0.02    0.00  0.02 
+  Beam1     5   -0.15 586.01   1.50  89.81    1.49   84.30   69.20    0.02    0.00  0.02 
+  Beam1     6   -0.15 586.01   1.50  89.81    1.49   84.30   69.20    0.02    0.00  0.02 
+  Beam1     7   -0.63 586.01  -1.56  89.81   -1.59   69.20   84.30    0.02    0.00  0.02 
+  Beam1     8   -0.63 586.01  10.35  89.81   10.37   84.30   69.20    0.15    0.00  0.15 
+  Beam1     9   -0.15 586.01  -6.35  89.81   -6.40   69.20   84.30    0.09    0.00  0.09 
+  Beam1    10   -0.15 586.01   5.56  89.81    5.57   84.30   69.20    0.08    0.00  0.08 
+  Beam1    11   -0.15 586.01  -6.35  89.81   -6.40   69.20   84.30    0.09    0.00  0.09 
+  Beam1    12   -0.15 586.01   5.56  89.81    5.57   84.30   69.20    0.08    0.00  0.08 
+  Beam1    13   -0.15 586.01  -6.35  89.81   -6.40   69.20   84.30    0.09    0.00  0.09 
+  Beam1    14   -0.15 586.01   5.56  89.81    5.57   84.30   69.20    0.08    0.00  0.08 
+  Beam1    15   -0.15 586.01  -6.35  89.81   -6.40   69.20   84.30    0.09    0.00  0.09 
+  Beam1    16   -0.15 586.01   5.56  89.81    5.57   84.30   69.20    0.08    0.00  0.08 
+  Beam1    17   -0.09 586.01  -9.57  89.81   -9.62   69.20   84.30    0.14    0.00  0.14 
+  Beam1    18   -0.09 586.01   6.32  89.81    6.33   84.30   69.20    0.09    0.00  0.09 
+  Beam2     1    0.00  86.27   1.36 189.68    7.90   70.50   18.45    0.43    0.00  0.43 
+  Beam2     2    0.00  86.27   0.26 189.68    1.49   70.50   18.45    0.08    0.00  0.08 
+  Beam2     3    0.00  86.27   0.26 189.68    1.49   70.50   18.45    0.08    0.00  0.08 
+  Beam2     4    0.00  86.27   0.26 189.68    1.49   70.50   18.45    0.08    0.00  0.08 
+  Beam2     5    0.00  86.27   0.26 189.68    1.49   70.50   18.45    0.08    0.00  0.08 
+  Beam2     6    0.00  86.27   0.26 189.68    1.49   70.50   18.45    0.08    0.00  0.08 
+  Beam2     7    0.00  86.27  -0.27 189.68   -1.59   18.45   70.50    0.09    0.00  0.09 
+  Beam2     8    0.00  86.27   1.79 189.68   10.37   70.50   18.45    0.56    0.00  0.56 
+  Beam2     9    0.00  86.27  -1.10 189.68   -6.40   18.45   70.50    0.35    0.00  0.35 
+  Beam2    10    0.00  86.27   0.96 189.68    5.57   70.50   18.45    0.30    0.00  0.30 
+  Beam2    11    0.00  86.27  -1.10 189.68   -6.40   18.45   70.50    0.35    0.00  0.35 
+  Beam2    12    0.00  86.27   0.96 189.68    5.57   70.50   18.45    0.30    0.00  0.30 
+  Beam2    13    0.00  86.27  -1.10 189.68   -6.40   18.45   70.50    0.35    0.00  0.35 
+  Beam2    14    0.00  86.27   0.96 189.68    5.57   70.50   18.45    0.30    0.00  0.30 
+  Beam2    15    0.00  86.27  -1.10 189.68   -6.40   18.45   70.50    0.35    0.00  0.35 
+  Beam2    16    0.00  86.27   0.96 189.68    5.57   70.50   18.45    0.30    0.00  0.30 
+  Beam2    17    0.00  86.27  -1.66 189.68   -9.62   18.45   70.50    0.52    0.00  0.52 
+  Beam2    18    0.00  86.27   1.09 189.68    6.33   70.50   18.45    0.34    0.00  0.34 
+  Beam3     1   -0.79 586.01   7.88  89.81    7.90   84.30   69.20    0.11    0.00  0.11 
+  Beam3     2   -0.15 586.01   1.50  89.81    1.49   84.30   69.20    0.02    0.00  0.02 
+  Beam3     3   -0.15 586.01   1.50  89.81    1.49   84.30   69.20    0.02    0.00  0.02 
+  Beam3     4   -0.15 586.01   1.50  89.81    1.49   84.30   69.20    0.02    0.00  0.02 
+  Beam3     5   -0.15 586.01   1.50  89.81    1.49   84.30   69.20    0.02    0.00  0.02 
+  Beam3     6   -0.15 586.01   1.50  89.81    1.49   84.30   69.20    0.02    0.00  0.02 
+  Beam3     7   -0.63 586.01  -1.56  89.81   -1.59   69.20   84.30    0.02    0.00  0.02 
+  Beam3     8   -0.63 586.01  10.35  89.81   10.37   84.30   69.20    0.15    0.00  0.15 
+  Beam3     9   -0.15 586.01  -6.35  89.81   -6.40   69.20   84.30    0.09    0.00  0.09 
+  Beam3    10   -0.15 586.01   5.56  89.81    5.57   84.30   69.20    0.08    0.00  0.08 
+  Beam3    11   -0.15 586.01  -6.35  89.81   -6.40   69.20   84.30    0.09    0.00  0.09 
+  Beam3    12   -0.15 586.01   5.56  89.81    5.57   84.30   69.20    0.08    0.00  0.08 
+  Beam3    13   -0.15 586.01  -6.35  89.81   -6.40   69.20   84.30    0.09    0.00  0.09 
+  Beam3    14   -0.15 586.01   5.56  89.81    5.57   84.30   69.20    0.08    0.00  0.08 
+  Beam3    15   -0.15 586.01  -6.35  89.81   -6.40   69.20   84.30    0.09    0.00  0.09 
+  Beam3    16   -0.15 586.01   5.56  89.81    5.57   84.30   69.20    0.08    0.00  0.08 
+  Beam3    17   -0.09 586.01  -9.57  89.81   -9.62   69.20   84.30    0.14    0.00  0.14 
+  Beam3    18   -0.09 586.01   6.32  89.81    6.33   84.30   69.20    0.09    0.00  0.09 
+
+ DEFLECTION:             
+ -----------
+          Load  --Deflection(mm)--
+  Id       Id     Calc  Limit   UC
+  ------- ----  ------ ------ ----
+  Beam1     1     -0.9   16.7 0.05 
+  Beam1     2     -0.2   16.7 0.01 
+  Beam1     3     -0.2   16.7 0.01 
+  Beam1     4     -0.2   16.7 0.01 
+  Beam1     5     -0.2   16.7 0.01 
+  Beam1     6     -0.2   16.7 0.01 
+  Beam1     7      0.1   16.7 0.00 
+  Beam1     8     -1.1   16.7 0.07 
+  Beam1     9      0.5   16.7 0.03 
+  Beam1    10     -0.6   16.7 0.04 
+  Beam1    11      0.5   16.7 0.03 
+  Beam1    12     -0.6   16.7 0.04 
+  Beam1    13      0.5   16.7 0.03 
+  Beam1    14     -0.6   16.7 0.04 
+  Beam1    15      0.5   16.7 0.03 
+  Beam1    16     -0.6   16.7 0.04 
+  Beam1    17      0.9   11.1 0.08 
+  Beam1    18     -0.7   11.1 0.07 
+  Beam2     1      1.9   16.7 0.11 
+  Beam2     2      0.3   16.7 0.02 
+  Beam2     3      0.3   16.7 0.02 
+  Beam2     4      0.3   16.7 0.02 
+  Beam2     5      0.3   16.7 0.02 
+  Beam2     6      0.3   16.7 0.02 
+  Beam2     7      0.4   16.7 0.02 
+  Beam2     8      2.4   16.7 0.15 
+  Beam2     9      1.5   16.7 0.09 
+  Beam2    10      1.3   16.7 0.08 
+  Beam2    11      1.5   16.7 0.09 
+  Beam2    12      1.3   16.7 0.08 
+  Beam2    13      1.5   16.7 0.09 
+  Beam2    14      1.3   16.7 0.08 
+  Beam2    15      1.5   16.7 0.09 
+  Beam2    16      1.3   16.7 0.08 
+  Beam2    17      2.3   11.1 0.20 
+  Beam2    18      1.5   11.1 0.13 
+  Beam3     1     -0.9   16.7 0.05 
+  Beam3     2     -0.2   16.7 0.01 
+  Beam3     3     -0.2   16.7 0.01 
+  Beam3     4     -0.2   16.7 0.01 
+  Beam3     5     -0.2   16.7 0.01 
+  Beam3     6     -0.2   16.7 0.01 
+  Beam3     7      0.1   16.7 0.00 
+  Beam3     8     -1.1   16.7 0.07 
+  Beam3     9      0.5   16.7 0.03 
+  Beam3    10     -0.6   16.7 0.04 
+  Beam3    11      0.5   16.7 0.03 
+  Beam3    12     -0.6   16.7 0.04 
+  Beam3    13      0.5   16.7 0.03 
+  Beam3    14     -0.6   16.7 0.04 
+  Beam3    15      0.5   16.7 0.03 
+  Beam3    16     -0.6   16.7 0.04 
+  Beam3    17      0.9   11.1 0.08 
+  Beam3    18     -0.7   11.1 0.07 
+
+ DESIGN CONSTANTS:
+ -----------------
+  Base Plate Yield     = 345.0 (MN/m2)
+  End  Plate Yield     =2378.8 (MN/m2)
+  Concrete Bearing     =   7.6 (MN/m2)                                    
+
+ CONNECTION LAYOUT:
+ ------------------
+          --Splice--  -----Plate(mm)-----  -----------------Bolt(mm)---------------    Req   Req
+  Id      Loc   Type   Width Length Thick  Type    Dia Row1 Space1 Row2 Space2 Gage  Thick   Dia
+  ------- ----  ----  ------ ------ -----  ----- ----- ---- ------ ---- ------ ----  ----- -----
+  Beam1   Start  SS      200    0.0 16.00  Gr8.8 20.00   2   100.0   2   100.0  100  14.35  5.22
+  Beam2   Start  SS      200    0.0 16.00  Gr8.8 20.00   2   100.0   2   100.0  100  14.37  5.99
+  Beam2   End    S3      150    0.0 10.00  Gr8.8 16.00   2   100.0   2    75.0 75.0   0.04  1.88
+  Beam3   Start  SS      200    0.0 16.00  Gr8.8 20.00   2   100.0   2   100.0  100  14.95  5.22
+
+                 S3 - Welded End Plate
+
+ MOMENT CONNECTION REACTIONS:
+ ----------------------------
+          --Splice--  ------Top(kN,kN-m)------  ------Bot(kN,kN-m)------
+  Id      Loc   Type  Load Axial  Shear Moment  Load Axial  Shear Moment
+  ------- ----- ----  ---- -----  ----- ------  ---- -----  ----- ------
+  Beam1   Start  SS     8  -0.63  10.35  10.37   17  -0.09  -9.57  -9.62
+  Beam2   Start  SS     8   0.00  10.35  10.37   17   0.00  -9.57  -9.62
+  Beam3   Start  SS     8  -0.63  10.35  10.37   17  -0.09  -9.57  -9.62
+
+ SHEAR CONNECTION REACTIONS:
+ ---------------------------
+          --Splice--  --Max_Comp(kN)--  --Max_Tens(kN)--  --Max_Shear(kN)- Max_Shear+Tens(kN)
+  Id      Loc   Type  Load Axial Shear  Load Axial Shear  Load Axial Shear  Load Axial Shear
+  ------- ----- ----  ---- ----- -----  ---- ----- -----  ---- ----- -----  ---- ----- -----
+  Beam2   End    S3    18   0.00  1.09   18   0.00  1.09    8   0.00  1.79    8   0.00  1.79    
+
+ WELDS:
+ ------
+                 -Out_Flange_To_Plate-   --In_Flange_To_Plate-   -----Web_To_Plate----
+                           Shear(kN/mm)            Shear(kN/mm)            Shear(kN/mm)
+  Id      Loc     Size Typ  Calc Limit    Size Typ  Calc Limit    Size Typ  Calc Limit
+  ------- -----  ----- --- ----- -----   ----- --- ----- -----   ----- --- ----- -----
+  Beam1   Start   4.00  F2 0.074 0.410    4.00  F2 0.069 0.410    4.00  F1 0.026 0.410
+  Beam2   Start   4.00  F2 0.087 0.410    4.00  F2 0.081 0.410    4.00  F1 0.034 0.410
+  Beam2   End     4.00  F1 0.000 0.410    4.00  F1 0.000 0.410    4.00  F1 0.006 0.410
+  Beam3   Start   4.00  F2 0.074 0.410    4.00  F2 0.069 0.410    4.00  F1 0.026 0.410
+
+ WEB TO FLANGE WELD:
+ -------------------
+                                        ----Web_To_Flange----
+            Load  Shear      Q     Ixx            Shear(kN/mm)
+  Id         Id    (kN)  (cm3)   (cm4)   Size Typ  Calc Limit
+  --------  ----  -----  -----  ------  ----- --- ----- -----
+  Beam1      18    10.3    125    7112   4.00 F1  0.018 0.410
+  Beam2      18     1.8     94    4614   4.00 F1  0.004 0.410
+  Beam3      18    10.3    125    7112   4.00 F1  0.018 0.410
+ 
+ 
+================================================================================
+ C323-153            Load Combinations                      23/JUL/2025 11:20am
+================================================================================
+
+
+ LOAD COMBINATIONS:
+ ------------------
+  Strength       
+     1   Dead+Collateral+Live
+     2   Dead+Collateral+Snow
+     3   Dead+Collateral+Snow+Snow_Drift
+     4   Dead+Collateral+Snow+Slide_Snow
+     5   Dead+Collateral+Rain
+     6   Dead+Collateral
+     7   Dead+Collateral+0.75Live+0.75Wind_Pressure
+     8   Dead+Collateral+0.75Live+0.75Wind_Suction
+     9   Dead+Collateral+0.75Snow+0.75Wind_Pressure
+    10   Dead+Collateral+0.75Snow+0.75Wind_Suction
+    11   Dead+Collateral+0.75Snow+0.75Wind_Pressure+0.75Snow_Drift
+    12   Dead+Collateral+0.75Snow+0.75Wind_Suction+0.75Snow_Drift
+    13   Dead+Collateral+0.75Snow+0.75Wind_Pressure+0.75Slide_Snow
+    14   Dead+Collateral+0.75Snow+0.75Wind_Suction+0.75Slide_Snow
+    15   Dead+Collateral+0.75Wind_Pressure+0.75Rain
+    16   Dead+Collateral+0.75Wind_Suction+0.75Rain
+    17   0.6Dead+Wind_Pressure
+    18   0.6Dead+Wind_Suction
+  
+  Deflection     
+     1   Dead+Collateral+Live
+     2   Dead+Collateral+Snow
+     3   Dead+Collateral+Snow+Snow_Drift
+     4   Dead+Collateral+Snow+Slide_Snow
+     5   Dead+Collateral+Rain
+     6   Dead+Collateral
+     7   Dead+Collateral+0.75Live+0.75Wind_Pressure
+     8   Dead+Collateral+0.75Live+0.75Wind_Suction
+     9   Dead+Collateral+0.75Snow+0.75Wind_Pressure
+    10   Dead+Collateral+0.75Snow+0.75Wind_Suction
+    11   Dead+Collateral+0.75Snow+0.75Wind_Pressure+0.75Snow_Drift
+    12   Dead+Collateral+0.75Snow+0.75Wind_Suction+0.75Snow_Drift
+    13   Dead+Collateral+0.75Snow+0.75Wind_Pressure+0.75Slide_Snow
+    14   Dead+Collateral+0.75Snow+0.75Wind_Suction+0.75Slide_Snow
+    15   Dead+Collateral+0.75Wind_Pressure+0.75Rain
+    16   Dead+Collateral+0.75Wind_Suction+0.75Rain
+    17   0.6Dead+Wind_Pressure
+    18   0.6Dead+Wind_Suction
+  
+
+================================================================================
+ C323-153            Weight Summary                         23/JUL/2025 11:20am
+================================================================================
+
+
+              EXTENSION  1
+                                            Weight
+                 Description                  (kg)
+                 -----------             ---------
+                 Beam                  =    214.03
+                                         ----------
+                 Total                 =    214.03
+
+
+================================================================================
+ C323-153            Warning Report                         23/JUL/2025 11:20am
+================================================================================
+
+                   .. No Warnings

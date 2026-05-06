@@ -1,0 +1,30 @@
+*( 1)DRAWING:WELDED CLIP  CELL:CLIP
+* Name               Title
+ 'CLF5           '  'Weld Clip Drawing'             'N'
+
+*( 2)PLATE SIZE:
+*     Plate  Plate  Plate  Plate         ---------------Plate_Size---------------
+*No.  Type     Id    Quan  Mark               Width   Thick    Length   Offset   Weight  Opt
+   1  'IC'      5       2 'CLF5           ' 150.000  10.0000   211.000   0.0000  2.5300  '-'
+
+*( 3)PLATE COORDINATES:
+* No.
+*Coord  X-Coord  Y-Coord
+   0
+
+*( 4)HOLE LOCATION:
+* No.  Hole  Hole    Hole    Hole    Hole    Hole    Hole  No.
+*Hole  Type   Id      Dia    Slot  Offset    Gage   Angle  Loc  Location
+   1   'IC'    5   18.000  100.00  0.0000  100.00  0.0000   1    66.0000
+    
+
+*( 5)CUTS:
+*No.  --Plate-  Cut  Cut     Cut     Cut
+*Cut  Type  Id  Loc  Type  Width  Length
+  0
+
+*( 6)PLATE MEMBER:
+*No.   Plate           Member
+  2   'CLF5        '   'RF1-3     '
+      'CLF5        '   'RF5-3     '
+   

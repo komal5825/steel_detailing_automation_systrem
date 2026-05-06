@@ -1,0 +1,36 @@
+ENTER MAIN
+    [MAIN] D:\MBS_JOBS\INDIAN\C163-027
+    [MAIN] C:\MBS\UTIL\DESUSER.EXE 
+    ENTER InitDirectory
+        [InitDirectory] Runmode = 0
+        [InitDirectory] WorkPath = ?
+    EXIT InitDirectory
+    ENTER SetFileNames
+    EXIT SetFileNames
+    ENTER ProcessControlIni
+        [ProcessContorlIni] DB_USER = ?
+        [ProcessContorlIni] DESUSER = ?
+        [ProcessContorlIni] DESERROR = ?
+    EXIT ProcessControlIni
+    ENTER RunMbsIni
+        ENTER MyExecAndWait
+            [MyExecAndWait] Running exePath=C:\MBS\UTIL\MBS_INI.EXE, dir=D:\MBS_JOBS\INDIAN\C163-027, command=2 D:\MBS_JOBS\INDIAN\C163-027\DESCTRL.IN D:\MBS_JOBS\INDIAN\C163-027\DesTemp.INI
+        EXIT MyExecAndWait
+        [RunMbsIni] OutputFile not found D:\MBS_JOBS\INDIAN\C163-027\DesTemp.INI
+    EXIT RunMbsIni
+    ENTER ProcessDesTempIni
+    EXIT ProcessDesTempIni
+    ENTER ProcessSeismicIni
+    EXIT ProcessSeismicIni
+    ENTER ProcessWindIn
+    EXIT ProcessWindIn
+    ENTER ProcessDesUser
+    EXIT ProcessDesUser
+    ENTER ProcessDesWarn
+    EXIT ProcessDesWarn
+    ENTER ProcessDbUser
+        [ProcessDbUser] input=C:\MBS\SYSTEM\DB_User.ini output=DB_User.siz
+        [ProcessDbUser] ErrCode=MissingDesTempIni
+    EXIT ProcessDbUser
+EXIT MAIN
+ErrCode=MissingDesTempIni

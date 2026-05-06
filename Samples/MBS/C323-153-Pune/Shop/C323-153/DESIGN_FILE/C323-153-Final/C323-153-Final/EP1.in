@@ -1,0 +1,40 @@
+*DRAWING: RIGID FRAME END PLATES  CELL:RF_BEP
+*
+*( 1)DRAWING:
+*  Name          Title             Orient
+  'EP1'        'RIGID FRAME END PLATES'  'L'
+
+*( 2)PLATE SIZES:
+*No. Type    Id     Qty   Part           Width   Thick    Length    Offset  Weight Opt
+  1   'EP'    1     14   'EP1'           200.000  16.000   704.808     0.00     18.0 '-'
+
+*( 3)PLATE COORDINATES:
+*  No.
+* Coord  X-Coord  Y-Coord
+     0
+
+*( 4)HOLE LOCATION:
+*  No.   Hole  Hole   Hole    Hole    Hole    Hole   Hole  No.  Location
+* Holes  Type   Id    Dia     Slot    Off     Gage   Ang   Loc          
+    1    'EP'    1  26.000   0.000    0.00  100.00  0.0000   4     75.000
+                                                  225.000
+                                                  479.808
+                                                  629.808
+     
+
+*( 5)PLATE CUTS:
+* No.  Plate  Plate  Cut  Cut     Cut      Cut
+* Cut  Type     Id   Loc  Type  Width   Length
+    0
+
+*( 6)PLATE MEMBER:
+*No.   Plate        Member
+  7   'EP1     '   'CL1-1       '
+      'EP1     '   'CL1-5       '
+      'EP1     '   'CL2-1       '
+      'EP1     '   'CL3-1       '
+      'EP1     '   'CL4-1       '
+      'EP1     '   'CL5-1       '
+      'EP1     '   'CL5-5       '
+
+   

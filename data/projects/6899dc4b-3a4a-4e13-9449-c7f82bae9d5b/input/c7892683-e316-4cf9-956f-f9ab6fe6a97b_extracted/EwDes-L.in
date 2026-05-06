@@ -1,0 +1,578 @@
+*===============================================================================
+*C08-033             Endwall Design Input                   23/APR/2026  3:18pm
+*===============================================================================
+
+*( 1)JOBID:
+    'C08-033'
+
+*( 2)PROGRAM OPTIONS:
+* -Wall-   Run    Run  Run   Run
+* Loc Id  Col/Raf Girt Brace Panel
+  'L'  1    'Y'    'Y'  'N'   'Y'
+
+*( 3)DESIGN CODE:
+*Design  ---Steel_Code---             ---Build---   Code     Seismic
+* Code   Cold       Hot      Country  Code   Year   Label     Zone
+  'WS'  'NAUS07  ' 'AISC05'  '    '  'MBMA'  '10'  'MBMA 10 ' 'B  '
+
+*( 4)DESIGN CONSTANTS:
+*                     ---Strength_Factors--
+* ---Stress_Ratio---          ---Seismic---
+* Col/Raf Girt Panel    Wind   Frame  Brace
+    1.00  1.00  1.00  1.0000  1.0000 1.0000
+
+*( 5)STEEL YIELDS:
+* Web   Flg  C_Sec  W_Sec  R_Sec  P_Sec  T_Sec  U_Sec    EP     BP
+  345   345    345    345    235    345    317    235   345    345
+
+*( 6)DEFLECTION LIMITS:
+* -----Rafter-----          ---Girt---  --Panel---
+* Live  Wind Total  Column  Wall Facia  Wall Facia  Brace
+  180.  150.    0.   120.    90.  120.   90.  120.    60.
+
+*( 7)REPORTS:
+*   Input  Column  Wall  Door  Wall   Cable
+*   Echo   Rafter  Girt  Jamb  Panel  Brace
+    'Y'     'Y'    'Y'   'Y'    'Y'    'Y'
+
+*( 8)BUILDING LAYOUT:
+*                               ---------------Expand_EW---------------
+* Type      Width     Length    Use Opt  Extend Offset Flange LoadWidth
+ 'FF-'    61000.0    45500.0   'Y ' '-'    0.00 380.00 225.00   3865.0
+
+*( 9)WALL LAYOUT:
+* Id  Use     Type Opt     Start   Length
+   1 'LEFT  '  '-' '-'       0.0  61000.0
+
+*(10)SURFACE SHAPE:
+* No.    X_Coord  Y_Coord  Offset  Opt
+   4         0.0   7000.0  150.00  '-'
+         30500.0  10050.0  200.00  '-'
+         61000.0   7000.0  200.00  '-'
+         61000.0      0.0  150.00  '-'
+
+
+*(11)BAY SPACING:
+* No.   ---Bay_Set---
+*Sets     Width  Quan
+   3     7400.0    1
+         7700.0    6
+         7400.0    1
+
+*(12)ROOF & SIDEWALL BAY:
+* --Roof_Bay--   Frame    Left_SW_Bay   Right_SW_Bay
+* No.    Width  Recess     Width Open     Width Open
+   6    7350.0   380.0    7350.0  'N'    7350.0  'N'
+
+*(13)WALL OPENINGS:
+*         ----Bay---                            Sill   Base    Set  Panel  JambL/JambR/Header/Sill
+*No.  Id  Id  Offset  Type    Width   Height  Height   Elev  Depth   Opt    Type    Part
+  4    1   3  1850.0   51    4000.0   4000.0     0.0   0.00   0.00   'Y'    'C '   '--------'
+                                                                            'C '   '--------'
+                                                                            'C '   '--------'
+                                                                            'C '   '--------'
+       2   4  1850.0   51    4000.0   4000.0     0.0   0.00   0.00   'Y'    'C '   '--------'
+                                                                            'C '   '--------'
+                                                                            'C '   '--------'
+                                                                            'C '   '--------'
+       3   5  1850.0   51    4000.0   4000.0     0.0   0.00   0.00   'Y'    'C '   '--------'
+                                                                            'C '   '--------'
+                                                                            'C '   '--------'
+                                                                            'C '   '--------'
+       4   6  1850.0   51    4000.0   4000.0     0.0   0.00   0.00   'Y'    'C '   '--------'
+                                                                            'C '   '--------'
+                                                                            'C '   '--------'
+                                                                            'C '   '--------'
+
+*(14)WIDE OPENING LAYOUT:
+*----Open--- Bay_Id  --Clear_Opening--   Wedge     Stub    Column  Total
+*No. Id Type St End  Width      Height   Height    Elev     Mount  Weight
+ 0
+
+*(15)WIDE OPENING & STRUT FRAMING:
+*-Open- ------Door_Jamb------ Stub   Head Back_Brace Strut -Header_Beam- Deflection
+*No. Id Type   FlgWid  FlgThk Type   Type Type  Loc  Type  Type Max_Spc  Horz  Vert
+ 0
+
+*(16)WIDE OPENING HEADER LOCATION:
+*-Open-    No.        Column
+*No. Id    Location   Location
+ 0
+
+*(17)PARTIAL WALLS:
+*                --Bay_Id-  ----Offset----          Jamb Base  Top Full_Load  ------Panel------  Deflect_Limit
+*No. Id  Use Opt Start End   Start     End   Height Type Type Type Girt  Col  Part      Opt Rot   Girt   Panel
+  1   1  'P' 'O'    1    8     0.0     0.0   3600.0  '-'  '-'  '-'  'N'  'N' '--------' '-' '-'   90.0    90.0
+
+*(18)COLUMNS:
+*          Max
+*Same  UnBrace
+*Depth  Length
+  'Y'    12000
+
+*(19)COLUMN PART & ELEVATION:
+*                                              ---Base---  Rafter
+*No. Id  Type    Part       Opt  Rot   Depth    Elev  Opt  Attach
+  9   1  '-   ' '--------'  '-'  'N'    0.00    0.00  '-'   'F'
+      2  'RW  ' '--------'  '-'  '-'    0.00    0.00  '-'   'F'
+      3  'RW  ' '--------'  '-'  '-'    0.00    0.00  '-'   'F'
+      4  'RW  ' '--------'  '-'  '-'    0.00    0.00  '-'   'F'
+      5  'RW  ' '--------'  '-'  '-'    0.00    0.00  '-'   'F'
+      6  'RW  ' '--------'  '-'  '-'    0.00    0.00  '-'   'F'
+      7  'RW  ' '--------'  '-'  '-'    0.00    0.00  '-'   'F'
+      8  'RW  ' '--------'  '-'  '-'    0.00    0.00  '-'   'F'
+      9  '-   ' '--------'  '-'  'N'    0.00    0.00  '-'   'F'
+
+*(20)COLUMN SPLICES:
+*     Col
+* No.  Id    Locate  Type
+   0
+
+*(21)RAFTERS:
+*Rafter  Flange
+* Same    Brace
+   'Y'     'Y'
+
+*(22)RAFTER PART:
+*    Surf
+*No.  Id   Type    Part       Opt  Rot  Depth
+  2    2  'RW  '  '--------'  '-'  '-'   0.00
+       3  'RW  '  '--------'  '-'  '-'   0.00
+
+*(23)RAFTER SPLICES:
+*     Surf
+* No.  Id    Locate  Type  Opt
+   3    2       0.0  '--'  '-'
+        3       0.0  'M '  '-'
+        3   30652.1  '--'  '-'
+
+*(24)GIRT DESIGN:
+*Girt  --Flange_Strap--                   --Depth--     Set     Max  Rafter
+*Type  Out  In    Space  Offset  Project    Set Opt     Lap   Space  Attach
+ 'ZB'  'C'  'Y'  2250.0    0.00     0.00   0.00 'W'     0.0  1500.0    'N'
+
+*(25)GIRT LOCATION:
+* Set
+* Loc   No.   Location
+  'Y'    5     3680.0   5180.0   6680.0   8180.0   9680.0
+
+*(26)SPECIAL GIRT:
+*     --Bay_Id--
+*No.  Start  End   Height  Type  Rot  Part       Use
+  1      3     6   4550.0  'ZB'  'D' '--------'  'C'
+
+*(27)SIDEWALL GIRT:
+*Wall
+* Id   Type  Depth Offset Project   No.   Location
+   2   'ZB' 150.00   0.00    0.00    2     3680.0   5180.0
+   4   'ZB' 150.00   0.00    0.00    2     3680.0   5180.0
+
+*(28)ROOF PURLINS:
+*Surf   Surf     Peak
+* Id     Ext     Space  No.  Locate
+   2       0     300.0  21    352.1   1852.1   3352.1   4852.1   6352.1   7852.1 
+                             9352.1  10852.1  12352.1  13852.1  15352.1  16852.1 
+                            18352.1  19852.1  21352.1  22852.1  24352.1  25852.1 
+                            27352.1  28852.1  30352.1 
+   3       0     300.0  21    300.0   1800.0   3300.0   4800.0   6300.0   7800.0 
+                             9300.0  10800.0  12300.0  13800.0  15300.0  16800.0 
+                            18300.0  19800.0  21300.0  22800.0  24300.0  25800.0 
+                            27300.0  28800.0  30300.0 
+
+*(29)WALL PANELS:
+*----Wall_Panel----  ------Insulation-----
+* Part      Opt Rot  Use  Thick  Part
+ '45250 .5' '-' '-'  'N'   0.00 '--------'
+
+*(30)LINER PANELS: 
+*      --Bay_Id-                       Flange
+*No.   Start End    Height   Part       Opt
+  0
+
+*(31)RIGID FRAME:
+*Frame Interior_Column
+*Type  Type  No.  Locate
+ 'HP ' '-'    0
+
+*(32)WALL FRAMING OPTIONS:
+*Panel  Diagonal  Brace            EW_Brace_To_Frame
+*Shear  Bracing   Option  Height      Left     Right
+  'N'     'N'      '--'      0.0    7813.1   53186.9
+
+*(33)WALL BRACING:
+*   Wind   Brace     No._Bay   Specified
+*  Shear   Type     Specified  Bays_For_Bracing
+   820.5    'R  '       0
+
+*(34)WALL BRACING ATTACHMENT:
+*                 --Bay_Id--            No.
+* No.      Id     Start  End     Elev  Level         Level_Height
+    1       1       1     8      0.00    0
+
+*(35)EXTENSION LAYOUT:
+*    Ext  Wall                   --Bay_Id-   --Edge_Extend--     Beam
+*No.  Id   Id   Type  Opt  Mount Start End     Left    Right      Lap  Attach
+   1   1    1   'EC'  '-'   'B'     3    6      0.0      0.0   100.00   'C'
+
+*(36)EXTENSION SIZE:
+*Ext  -----Horizontal_Size-----   ---------Vertical_Size--------
+* Id    Height    Width   Slope      Elev  Height  Slope Project
+   1    4500.0   4500.0   10.00       0.0     0.0   0.00    0.00
+
+*(37)EXTENSION GIRTS:
+*    Ext
+*No.  Id   Use        Type  Rot  Depth
+  0
+
+*(38)EXTENSION PANELS:
+*     Ext                               Angle
+*No.  Id   Use        Part       Rot  Spacing
+  0
+
+*(39)LOAD GROUPS:
+*    Group
+*No.   Id   Description
+   1  '-'  'Standard            '
+
+*(40)BASIC LOADS:
+*                                                                 ------Girts/Panels-----
+*                                              ---Deflection---   --Strength-  Deflection
+*Group  Dead  Coll   Live   Snow  Rain  Basic     Load_Ratio      Load_Factor  Load_Ratio
+*  Id   Load  Load   Load   Load  Load   Wind  Snow  Wind  Seis   Wind   Seis  Wind  Seis
+  '-'  0.100 0.050  0.570  0.000 0.000  0.554  1.00  1.00  1.00   1.00   1.00  1.00  1.00
+
+*(41)EDGE ZONE:
+*      ----------Endwall----------  ---------Sidewall----------  --------Ratio--------
+*Group -Left_Corner-  Right_Corner  -Left_Corner-  Right_Corner   Girt/
+*  Id   Width   Base   Width  Base   Width   Base  Width   Base   Jamb   Panel  Column
+  '-'    2800      0   2800      0    2800      0   2800      0   1.07    1.00   1.07
+
+*(42)BASIC LOADS AT EAVE:
+*Group  Seis    Seis   Seis   --Torsion--   --Extension--   -Additional-
+*  Id   Dead    Girt   Load   Wind   Seis     Wind   Seis    Wind   Seis
+  '-'  0.096  0.0000   3.76   0.00   0.00     0.35   0.91    0.00   0.00
+
+*(43)LONGITUDINAL BRACING LOADS:
+*Group   ----Wind-----   ---Seismic---
+*  Id    Horz    Vert    Horz    Vert
+  '-'    0.00    0.00    0.00    0.00  .. Left  Column
+  '-'    0.00    0.00    0.00    0.00  .. Right Column
+
+*(44)WIND PRESSURE/SUCTION:
+*Group   Wind     Wind
+*  Id   Press     Suct
+  '-'   0.484   -0.534    .. Column
+  '-'   0.484   -0.534    .. Girt/Header
+  '-'   0.484   -0.534    .. Jamb
+  '-'   0.599   -0.649    .. Panel
+  '-'   0.484   -0.534    .. Parapet Column
+  '-'   0.994   -0.819    .. Parapet Girt
+  '-'   0.831   -0.554    .. Transv Bracing, Facia/Parapet
+
+*(45)WIND COEFFICIENTS:
+*Group Surf  ---Wind_1--   ---Wind_2--     Long_Wind  Surface
+*  Id   Id   Left  Right   Left  Right      1      2  Friction
+  '-'    1   0.85  -1.22   1.57  -0.50  -0.63  -0.27    0.00
+  '-'    2  -1.23  -0.71  -0.87  -0.35  -0.87  -0.51    0.00
+  '-'    3  -0.71  -1.23  -0.35  -0.87  -0.87  -0.51    0.00
+  '-'    4  -1.22   0.85  -0.50   1.57  -0.63  -0.27    0.00
+
+*(46)COLUMN, RAFTER, BRACING LOAD COMBINATIONS - STRENGTH:
+*    Load Group            ---Live---        -Add_Snow-        --Wind_1--  --Wind_2--   Long_Wind Column_Wind  -Seismic--  Aux_Load
+*No.  Id    Id Dead  Coll  Roof Floor  Snow Drift Slide  Rain  Left Right  Left Right     1     2 Press  Suct  Long  Tran  Id  Coef
+  72   1   '-' 1.00  1.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00   0  0.00
+       2   '-' 1.00  1.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00   0  0.00
+       3   '-' 1.00  1.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00   0  0.00
+       4   '-' 1.00  1.00  0.00  0.00  1.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00   0  0.00
+       5   '-' 1.00  1.00  0.00  0.00  1.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00   0  0.00
+       6   '-' 1.00  1.00  0.75  0.75  0.00  0.00  0.00  0.00  0.00  0.00  0.75  0.00  0.00  0.00  0.00  0.75  0.00  0.00   0  0.00
+       7   '-' 1.00  1.00  0.75  0.75  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.75  0.00  0.00  0.00  0.75  0.00  0.00   0  0.00
+       8   '-' 1.00  1.00  0.75  0.75  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.75  0.00  0.00  0.75  0.00  0.00   0  0.00
+       9   '-' 1.00  1.00  0.75  0.75  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.75  0.00  0.75  0.00  0.00   0  0.00
+      10   '-' 1.00  1.00  0.00  0.75  0.75  0.00  0.00  0.00  0.00  0.00  0.75  0.00  0.00  0.00  0.00  0.75  0.00  0.00   0  0.00
+      11   '-' 1.00  1.00  0.00  0.75  0.75  0.00  0.00  0.00  0.00  0.00  0.00  0.75  0.00  0.00  0.00  0.75  0.00  0.00   0  0.00
+      12   '-' 1.00  1.00  0.00  0.75  0.75  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.75  0.00  0.00  0.75  0.00  0.00   0  0.00
+      13   '-' 1.00  1.00  0.00  0.75  0.75  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.75  0.00  0.75  0.00  0.00   0  0.00
+      14   '-' 1.00  1.00  0.00  0.75  0.75  0.75  0.00  0.00  0.00  0.00  0.75  0.00  0.00  0.00  0.00  0.75  0.00  0.00   0  0.00
+      15   '-' 1.00  1.00  0.00  0.75  0.75  0.75  0.00  0.00  0.00  0.00  0.00  0.75  0.00  0.00  0.00  0.75  0.00  0.00   0  0.00
+      16   '-' 1.00  1.00  0.00  0.75  0.75  0.75  0.00  0.00  0.00  0.00  0.00  0.00  0.75  0.00  0.00  0.75  0.00  0.00   0  0.00
+      17   '-' 1.00  1.00  0.00  0.75  0.75  0.75  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.75  0.00  0.75  0.00  0.00   0  0.00
+      18   '-' 1.00  1.00  0.00  0.75  0.75  0.00  0.75  0.00  0.00  0.00  0.75  0.00  0.00  0.00  0.00  0.75  0.00  0.00   0  0.00
+      19   '-' 1.00  1.00  0.00  0.75  0.75  0.00  0.75  0.00  0.00  0.00  0.00  0.75  0.00  0.00  0.00  0.75  0.00  0.00   0  0.00
+      20   '-' 1.00  1.00  0.00  0.75  0.75  0.00  0.75  0.00  0.00  0.00  0.00  0.00  0.75  0.00  0.00  0.75  0.00  0.00   0  0.00
+      21   '-' 1.00  1.00  0.00  0.75  0.75  0.00  0.75  0.00  0.00  0.00  0.00  0.00  0.00  0.75  0.00  0.75  0.00  0.00   0  0.00
+      22   '-' 0.60  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  1.00  0.00  0.00  0.00   0  0.00
+      23   '-' 0.60  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  1.00  0.00  0.00  0.00   0  0.00
+      24   '-' 0.60  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  1.00  0.00  0.00   0  0.00
+      25   '-' 0.60  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  1.00  0.00  0.00   0  0.00
+      26   '-' 0.60  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00   0  0.00
+      27   '-' 0.60  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00   0  0.00
+      28   '-' 0.60  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00   0  0.00
+      29   '-' 0.60  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00  0.00   0  0.00
+      30   '-' 1.03  1.03  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.70   0  0.00
+      31   '-' 1.03  1.03  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00 -0.70   0  0.00
+      32   '-' 1.02  1.02  0.75  0.75  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.52   0  0.00
+      33   '-' 1.02  1.02  0.75  0.75  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00 -0.52   0  0.00
+      34   '-' 1.02  1.02  0.00  0.75  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.52   0  0.00
+      35   '-' 1.02  1.02  0.00  0.75  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00 -0.52   0  0.00
+      36   '-' 0.57  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.70   0  0.00
+      37   '-' 0.57  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00 -0.70   0  0.00
+      38   '-' 0.60  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00   0  0.00
+      39   '-' 0.60  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00   0  0.00
+      40   '-' 0.60  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00   0  0.00
+      41   '-' 0.60  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00   0  0.00
+      42   '-' 0.60  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  10  1.00
+      43   '-' 0.60  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00  11  1.00
+      44   '-' 0.60  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  12  1.00
+      45   '-' 0.60  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  13  1.00
+      46   '-' 1.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.70   0  0.00
+      47   '-' 1.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00 -0.70   0  0.00
+      48   '-' 1.00  1.00  0.75  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.70   0  0.00
+      49   '-' 1.00  1.00  0.75  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00 -0.70   0  0.00
+      50   '-' 1.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.52   0  0.00
+      51   '-' 1.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00 -0.52   0  0.00
+      52   '-' 0.60  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.70   0  0.00
+      53   '-' 0.60  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00 -0.70   0  0.00
+      54   '-' 1.00  1.00  0.01  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00   1  1.00
+      55   '-' 1.00  1.00  0.01  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00   2  1.00
+      56   '-' 1.00  1.00  0.01  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00   3  1.00
+      57   '-' 1.00  1.00  0.01  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00   4  1.00
+      58   '-' 1.00  1.00  0.01  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00   5  1.00
+      59   '-' 1.00  1.00  0.01  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00   6  1.00
+      60   '-' 1.00  1.00  0.01  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00   7  1.00
+      61   '-' 1.00  1.00  0.01  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00   8  1.00
+      62   '-' 1.00  1.00  0.01  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00   9  1.00
+      63   '-' 1.00  1.00  0.00  0.00  0.75  0.00  0.00  0.00  0.00  0.00  0.75  0.00  0.00  0.00  0.00  0.75  0.00  0.00   0  0.00
+      64   '-' 1.00  1.00  0.00  0.00  0.75  0.00  0.00  0.00  0.00  0.00  0.00  0.75  0.00  0.00  0.00  0.75  0.00  0.00   0  0.00
+      65   '-' 1.00  1.00  0.00  0.00  0.75  0.75  0.00  0.00  0.00  0.00  0.75  0.00  0.00  0.00  0.00  0.75  0.00  0.00   0  0.00
+      66   '-' 1.00  1.00  0.00  0.00  0.75  0.75  0.00  0.00  0.00  0.00  0.00  0.75  0.00  0.00  0.00  0.75  0.00  0.00   0  0.00
+      67   '-' 1.00  1.00  0.00  0.00  0.75  0.75  0.00  0.00  0.00  0.00  0.00  0.00  0.75  0.00  0.00  0.75  0.00  0.00   0  0.00
+      68   '-' 1.00  1.00  0.00  0.00  0.75  0.75  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.75  0.00  0.75  0.00  0.00   0  0.00
+      69   '-' 1.00  1.00  0.00  0.00  0.75  0.00  0.75  0.00  0.00  0.00  0.75  0.00  0.00  0.00  0.00  0.75  0.00  0.00   0  0.00
+      70   '-' 1.00  1.00  0.00  0.00  0.75  0.00  0.75  0.00  0.00  0.00  0.00  0.75  0.00  0.00  0.00  0.75  0.00  0.00   0  0.00
+      71   '-' 1.00  1.00  0.00  0.00  0.75  0.00  0.75  0.00  0.00  0.00  0.00  0.00  0.75  0.00  0.00  0.75  0.00  0.00   0  0.00
+      72   '-' 1.00  1.00  0.00  0.00  0.75  0.00  0.75  0.00  0.00  0.00  0.00  0.00  0.00  0.75  0.00  0.75  0.00  0.00   0  0.00
+
+*(47)COLUMN, RAFTER, BRACING LOAD COMBINATIONS - DEFLECTION:
+*    Load Group            ---Live---        -Add_Snow-        --Wind_1--  --Wind_2--   Long_Wind Column_Wind  -Seismic--  Aux_Load
+*No.  Id    Id Dead  Coll  Roof Floor  Snow Drift Slide  Rain  Left Right  Left Right     1     2 Press  Suct  Long  Tran  Id  Coef
+   0
+
+*(48)AUXILIARY LOADS:
+*                        No._Add   Add_Load
+* No.   Id   Name         Combs   Id    Coef
+  13     1   'E1PAT_LL_1'   2      1    1.00
+                                   2    1.00
+         2   'E1PAT_LL_2'   2      2    1.00
+                                   3    1.00
+         3   'E1PAT_LL_3'   2      3    1.00
+                                   4    1.00
+         4   'E1PAT_LL_4'   2      4    1.00
+                                   5    1.00
+         5   'E1PAT_LL_5'   2      5    1.00
+                                   6    1.00
+         6   'E1PAT_LL_6'   2      6    1.00
+                                   7    1.00
+         7   'E1PAT_LL_7'   2      7    1.00
+                                   8    1.00
+         8   'E1PAT_LL_8'   4      1    1.00
+                                   3    1.00
+                                   5    1.00
+                                   7    1.00
+         9   'E1PAT_LL_9'   4      2    1.00
+                                   4    1.00
+                                   6    1.00
+                                   8    1.00
+        10   'LWIND1_L  '   1      9    1.00
+        11   'LWIND1_R  '   1     10    1.00
+        12   'LWIND2_L  '   1      9    1.00
+        13   'LWIND2_R  '   1     10    1.00
+
+*(49)ADDITIONAL LOADS:
+*    Add  Group Loc  Basic        Load       Fx        Fy      Mom        Dx        Dy  .. Conc
+*No.  Id    Id   Id  Load         Type       W1        W2       Co       Dl1       Dl2  .. Dist
+  35   1   '-'    2 'U_LIVE    '  'D '    -2.19     -2.19    0.100       0.0    7436.9
+       2   '-'    2 'U_LIVE    '  'D '    -2.19     -2.19    0.100    7436.9   15175.3
+       3   '-'    2 'U_LIVE    '  'D '    -2.19     -2.19    0.100   15175.3   22913.7
+       4   '-'    2 'U_LIVE    '  'D '    -2.19     -2.19    0.100   22913.7   30652.1
+       5   '-'    3 'U_LIVE    '  'D '    -2.19     -2.19   -0.100       0.0    7738.4
+       6   '-'    3 'U_LIVE    '  'D '    -2.19     -2.19   -0.100    7738.4   15476.8
+       7   '-'    3 'U_LIVE    '  'D '    -2.19     -2.19   -0.100   15476.8   23215.2
+       8   '-'    3 'U_LIVE    '  'D '    -2.19     -2.19   -0.100   23215.2   30652.1
+       9   '-'    2 'U_WIND    '  'D '     0.81      0.81    0.000       0.0    5600.0
+      10   '-'    3 'U_WIND    '  'D '     0.81      0.81    0.000   25052.1   30652.1
+      11   '-'    3 'DEAD      '  'I '    0.000    -1.741    3.921       0.0    4500.0
+      12   '-'    3 'COLLAT    '  'I '    0.000    -0.871    1.960       0.0    4500.0
+      13   '-'    3 'LIVE      '  'I '    0.000    -9.875   22.238       0.0    4500.0
+      14   '-'    3 'WINDP     '  'I '   -1.431    14.307  -32.540       0.0    4500.0
+      15   '-'    3 'WINDS     '  'I '   -0.360     3.604   -8.196       0.0    4500.0
+      16   '-'    4 'DEAD      '  'I '    0.000    -3.482    7.842       0.0    4500.0
+      17   '-'    4 'COLLAT    '  'I '    0.000    -1.741    3.921       0.0    4500.0
+      18   '-'    4 'LIVE      '  'I '    0.000   -19.750   44.476       0.0    4500.0
+      19   '-'    4 'WINDP     '  'I '   -2.861    28.613  -65.079       0.0    4500.0
+      20   '-'    4 'WINDS     '  'I '   -0.721     7.207  -16.392       0.0    4500.0
+      21   '-'    5 'DEAD      '  'I '    0.000    -3.482    7.842       0.0    4500.0
+      22   '-'    5 'COLLAT    '  'I '    0.000    -1.741    3.921       0.0    4500.0
+      23   '-'    5 'LIVE      '  'I '    0.000   -19.750   44.476       0.0    4500.0
+      24   '-'    5 'WINDP     '  'I '   -2.861    28.613  -65.079       0.0    4500.0
+      25   '-'    5 'WINDS     '  'I '   -0.721     7.207  -16.392       0.0    4500.0
+      26   '-'    6 'DEAD      '  'I '    0.000    -3.482    7.842       0.0    4500.0
+      27   '-'    6 'COLLAT    '  'I '    0.000    -1.741    3.921       0.0    4500.0
+      28   '-'    6 'LIVE      '  'I '    0.000   -19.750   44.476       0.0    4500.0
+      29   '-'    6 'WINDP     '  'I '   -2.861    28.613  -65.079       0.0    4500.0
+      30   '-'    6 'WINDS     '  'I '   -0.721     7.207  -16.392       0.0    4500.0
+      31   '-'    7 'DEAD      '  'I '    0.000    -1.741    3.921       0.0    4500.0
+      32   '-'    7 'COLLAT    '  'I '    0.000    -0.871    1.960       0.0    4500.0
+      33   '-'    7 'LIVE      '  'I '    0.000    -9.875   22.238       0.0    4500.0
+      34   '-'    7 'WINDP     '  'I '   -1.431    14.307  -32.540       0.0    4500.0
+      35   '-'    7 'WINDS     '  'I '   -0.360     3.604   -8.196       0.0    4500.0
+
+*(50)GIRT LAPS:
+*      Data  ------Set_1-------  ------Set_2-------  ------Set_3-------
+* Opt  Sets  Left    Right Quan  Left    Right Quan  Left    Right Quan
+  '-'   0
+
+*(51)GIRT STRAPS: 
+*     Data  ---Set_1---  ---Set_2---  ---Set_3---  ---Set_4---
+*Opt  Sets  Strap  Quan  Strap  Quan  Strap  Quan  Strap  Quan
+ '-'   0
+
+*(52)PANEL SCREWS: 
+* No.                                    Washer
+*Zone Zone   Part          Dia    Limit     Dia  -------Spacing------
+   3 'INT ' '14x20SDS'    4.80   13.700   19.00  250.00 125.00  83.33
+     'EDGE' '14x20SDS'    4.80   13.700   19.00  250.00 125.00  83.33
+     'BASE' '14x20SDS'    4.80   13.700   19.00  250.00 125.00  83.33
+
+*(53)BEAMS:
+*     Bay
+*No.   Id Use    Height   Offset  Locate1  Locate2
+  0
+
+*(54)STEPPED LOAD COEFFICIENTS:
+*    Group Basic    Location   No.  ----Step_1---   ----Step_2---   ----Step_3---
+*No.   Id  Load      Use  Id  Step  Locate   Coef   Locate   Coef   Locate   Coef
+  4   '-' 'WINDL1'   'R'   2    2  17500.0  1.000  30652.1  0.577
+      '-' 'WINDR1'   'R'   3    2  13152.1  0.577  30652.1  1.000
+      '-' 'WINDL2'   'R'   2    2  17500.0  1.000  30652.1  0.401
+      '-' 'WINDR2'   'R'   3    2  13152.1  0.401  30652.1  1.000
+
+*(55)ADDITIONAL COLUMNS:
+*No.  Id   Locate  Type  Rot  Opt  Part           Elev
+  0
+
+*(56)RIGID FRAME COORDINATES:
+*Frame Frame                           Flange
+*  Id   Type  No.  X_Coord    Y_Coord   Width
+    1   'HP'  28     405.0        0.0   140.0
+                     555.0     6344.0   140.0
+                     555.0     6344.0   160.0
+                    3694.5     6557.4   160.0
+                    3694.5     6557.4   160.0
+                    9679.6     7005.2   160.0
+                    9679.6     7005.2   140.0
+                   15644.9     7652.0   140.0
+                   15644.9     7652.0   185.0
+                   21595.2     8448.0   185.0
+                   21595.2     8448.0   185.0
+                   27590.3     8796.3   185.0
+                   27590.3     8796.3   225.0
+                   30500.0     8794.4   225.0
+                   30500.0     8794.4   225.0
+                   33409.7     8796.3   225.0
+                   33409.7     8796.3   185.0
+                   39404.8     8448.0   185.0
+                   39404.8     8448.0   185.0
+                   45355.1     7652.0   185.0
+                   45355.1     7652.0   140.0
+                   51320.4     7005.2   140.0
+                   51320.4     7005.2   160.0
+                   57305.5     6557.4   160.0
+                   57305.5     6557.4   160.0
+                   60445.0     6344.0   160.0
+                   60445.0     6344.0   140.0
+                   60595.0        0.0   140.0
+
+*(57)DESIGN CODE OPTIONS:
+*No.   Event                         Condition
+  0
+
+*(58)DESIGN PLATES:
+*     ----Plate---   --Plate_Size-   Bolt   Bolt  ----Top---  --Bottom--   Plate  Bolt
+*No.  Type      Id   Width   Thick    Dia   Gage  Row  Space  Row  Space  Offset  Edge
+  0
+
+*(59)GIRT LAYOUT:
+*      Bay                                    -----Extend----   Frame_Opt  -Frame_Id-
+*  No.  Id   Locate  Type  Rot Opt  Part         Left   Right  Left Right  Left Right
+    0
+
+*(60)COLUMN FLANGE BRACE:
+*      Col
+*No.   Id   Girt   Side  Opt
+  0
+ 
+*AUXILIARY LOAD DESCRIPTIONS:
+* Aux
+*  Id  Description
+*   1  Pattern live load                                 
+*   2  Pattern live load                                 
+*   3  Pattern live load                                 
+*   4  Pattern live load                                 
+*   5  Pattern live load                                 
+*   6  Pattern live load                                 
+*   7  Pattern live load                                 
+*   8  Pattern live load                                 
+*   9  Pattern live load                                 
+*  10  Longitudinal wind load, case 1 zone 2             
+*  11  Longitudinal wind load, case 1 zone 3             
+*  12  Longitudinal wind load, case 2 zone 2             
+*  13  Longitudinal wind load, case 2 zone 3             
+*
+*ADDITIONAL LOAD DESCRIPTIONS:
+* Add
+*  Id  Description
+*   1  Pattern live load bay 1                                                                             
+*   2  Pattern live load bay 2                                                                             
+*   3  Pattern live load bay 3                                                                             
+*   4  Pattern live load bay 4                                                                             
+*   5  Pattern live load bay 5                                                                             
+*   6  Pattern live load bay 6                                                                             
+*   7  Pattern live load bay 7                                                                             
+*   8  Pattern live load bay 8                                                                             
+*   9  Longitudinal wind load zone 2                                                                       
+*  10  Longitudinal wind load zone 3                                                                       
+*  11  Extension Id 1, Column Id 3, Dead =  0.100                                                          
+*  12  Extension Id 1, Column Id 3, Collateral =  0.050                                                    
+*  13  Extension Id 1, Column Id 3, Live =  0.570                                                          
+*  14  Extension Id 1, Column Id 3, Wind =  -0.826                                                         
+*  15  Extension Id 1, Column Id 3, Wind =  -0.208                                                         
+*  16  Extension Id 1, Column Id 4, Dead =  0.100                                                          
+*  17  Extension Id 1, Column Id 4, Collateral =  0.050                                                    
+*  18  Extension Id 1, Column Id 4, Live =  0.570                                                          
+*  19  Extension Id 1, Column Id 4, Wind =  -0.826                                                         
+*  20  Extension Id 1, Column Id 4, Wind =  -0.208                                                         
+*  21  Extension Id 1, Column Id 5, Dead =  0.100                                                          
+*  22  Extension Id 1, Column Id 5, Collateral =  0.050                                                    
+*  23  Extension Id 1, Column Id 5, Live =  0.570                                                          
+*  24  Extension Id 1, Column Id 5, Wind =  -0.826                                                         
+*  25  Extension Id 1, Column Id 5, Wind =  -0.208                                                         
+*  26  Extension Id 1, Column Id 6, Dead =  0.100                                                          
+*  27  Extension Id 1, Column Id 6, Collateral =  0.050                                                    
+*  28  Extension Id 1, Column Id 6, Live =  0.570                                                          
+*  29  Extension Id 1, Column Id 6, Wind =  -0.826                                                         
+*  30  Extension Id 1, Column Id 6, Wind =  -0.208                                                         
+*  31  Extension Id 1, Column Id 7, Dead =  0.100                                                          
+*  32  Extension Id 1, Column Id 7, Collateral =  0.050                                                    
+*  33  Extension Id 1, Column Id 7, Live =  0.570                                                          
+*  34  Extension Id 1, Column Id 7, Wind =  -0.826                                                         
+*  35  Extension Id 1, Column Id 7, Wind =  -0.208                                                         
+*
+* Code files used:
+*   MBMA.10N                                                                        
+*   EW_MBMA.10N Version 4.0                                                         
+*
+*BASIC LOADS AT EAVE - Extension_Brace
+* Ext
+*  Id   Wind    Seismic
+*   1   0.35      0.91

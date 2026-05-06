@@ -1,0 +1,36 @@
+*===============================================================================
+*C463-002            Detail Sheet # 2 Input                  18/DEC/2025 2:52pm
+*===============================================================================
+
+*( 1)TITLE BLOCK:
+  'INFINITI SOLUTIONS                      '    .. Manufacturer
+  '                                        '    .. Builder
+  'Proposed Warehouse                      '    .. Project
+  'Warehouse                               '    .. Project Site
+  'Vapi                                    '    .. Project Site
+  'C463-002                                '    .. Project ID
+
+*( 2)DRAWING OPTIONS:
+* Drawing_Size     Drawing_Offset       Detail  Title               Page_Number
+* Width   Height  Lt    Rt    Top  Bot   Size   Scale    Logo        Id   Total
+    420     297     5     5     5    40    75   0.7000 'N       ' '----' '----'
+
+*( 3)PROGRAM SELECTED DETAILS:
+*  No.    Detail            --Insert_Point---    ---Detail_Size---
+* Detail   Name             X_Coord   Y_Coord     Width     Height     Scale
+   11     'L6'                  5.0     217.0      75.0       75.0    2.0833 .. EwDwg-L     
+          'M1'                 80.0     217.0      75.0       75.0    2.0833 .. EwDwg-R     
+          'M6'                155.0     217.0      75.0       75.0    2.0833 .. EwDwg-L     
+          'Q3'                230.0     217.0      75.0       75.0    2.0833 .. SwDwg-F     
+          'R10'               305.0     217.0      75.0       75.0    2.0833 .. RfDwg-1     
+          'U2'                  5.0     142.0      75.0       75.0    2.0833 .. RfDwg-1     
+          'U5'                 80.0     142.0      75.0       75.0    2.0833 .. RfDwg-1     
+          'X1'                155.0     142.0      75.0       75.0    2.0833 .. EwDwg-L     
+          'X2'                230.0     142.0      75.0       75.0    2.0833 .. EwDwg-L     
+          'X3'                305.0     142.0      75.0       75.0    2.0833 .. EwDwg-R     
+          'X4'                  5.0      67.0      75.0       75.0    2.0833 .. EwDwg-R     
+
+*( 4)USER SELECTED DETAILS:
+*  No.    Detail            --Insert_Point---    ---Detail_Size---
+* Detail   Name             X_Coord   Y_Coord     Width     Height     Scale
+    0

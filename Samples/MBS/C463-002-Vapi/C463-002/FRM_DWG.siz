@@ -1,0 +1,302 @@
+*                          FILE: FRM_DWG.SIZ
+*============================================================================
+*    mbs                      Metric file   
+*   This file provides options for preparing the rigid frame shop 
+*   drawings. The file is read by the rigid frame detailing program and 
+*   each of the rigid frame shop drawings. To change the appearance of 
+*   the shop drawing, the user needs to edit this file. 
+*
+*   The file starts with those items that apply to all drawings then has 
+*   a section on each of the four types of drawings: web, interior 
+*   columns, plates, and assembly. Each drawing section starts with a 
+*   drawing layout, user details, and concludes with drawing options. 
+*   There are a number of additional lines for each type of drawing for 
+*   future drawing options. The remainder of this help file describes 
+*   the input data.
+*
+*   In this description the job Id is taken as 12345. Some name options 
+*   use all 5 numbers, others use the last 3 numbers.
+*
+*(1) GENERAL OPTIONS:
+*   Id
+*   1 to 4  Select options 1 to 5 for each item based on the table shown 
+*           below. The names are illustrated for the outside flange, OF.
+*
+*           Option     Fabricated piece 1    Fabricated piece 2 
+*              1        OF1       OF2         OF1       OF2
+*              2        OF1-RF1-1             OF1-RF1-1
+*              3        OF1       OF2         OF3       OF4
+*              4        OF1-456   OF2-456     OF3-456   OF4-456
+*              5        12345OF1  12345OF2    12345OF3  12345OF4
+*
+*   5             These names are used to identify the fabricated piece 
+*                 and will be used in all references to that piece.
+*
+*(2) (5) (8) (11) DRAWING LAYOUT:
+*      PAGE SIZE: Enter the size of the page for the shop drawing.
+*      OFFSET: Enter the distance from the four sides of the drawing to 
+*              the plan view of the fabricated piece.
+*      SCALE FACTORS: Enter scale factors for the piece, text, tables, 
+*              dimension line offset, and title block. The piece scale 
+*              factor can range from 1 to 5. At 1, the horizontal and 
+*              vertical scales are equal. At 5, the vertical scale is 5 
+*              times the horizontal scale. 
+*      LOGO: Enter Y if a customized logo is to be used. The logo for 
+*              different drawings must be stored in the C:\MBS\BLK 
+*              subdirectory and stored under the following names: 
+*              ASM_LOGO.BLK, WEB_LOGO.BLK, and INT_LOGO.BLK
+*
+*
+*(3) (6) (9) (12) USER DETAILS:
+*      NUMBER OF DETAILS: Enter the number of user prepared details which 
+*              will appear on the drawing.
+*      DETAIL ID: Enter the name of the detail, for example 'WEBA'. The 
+*              detail must be stored in the C:\MBS\BLK subdirectory under 
+*              the name WEBA.BLK.
+*      LOCATION: Enter the x and y coordinates for the insert point on 
+*              the detail. The origin for the coordinates is at the lower 
+*              left corner of the drawing.
+*      SCALE: Enter the scale factor used to adjust the size of the 
+*              detail. For example if the detail was drawn as 3" by 4" 
+*              and you want to show the detail as 1.5" by 2", enter a 
+*              scale factor of 0.50.
+*      THIS FEATURE CAN BE USED TO MOVE PROGRAM GENERATED BLOCKS:
+*           1. Use the block names shown on drawings, ASM and WEB.
+*           2. Use the location coordinates to place the block insert 
+*              point at the desired location on the drawing.
+*
+*
+*(1)GENERAL OPTIONS:
+*
+*Option  Id  DWG  Description
+*------  --  ---  --------------------------------------------------------------
+  '3'     1       Web Part: See above.
+  '3'     2       Flg Part: See above.
+  '3'     3       EP  Part: See above.
+  '3'     4       ST EC Part: See above.
+  '1'     5       Piece Id: (1)=RF1-1, (2)RF1-1-345 (3)12345-RF1-1
+  '3'     6       Web Part: See above, Rigid Frame fully scaled drawings.(3-5)
+  '3'     7       Flg Part: See above, Rigid Frame fully scaled drawings.(3-5)
+  '3'     8       EP  Part: See above, Rigid Frame fully scaled drawings.(3-5)
+  '3'     9       ST EC Part: See above, Rigid Frame fully scaled drawings.(3-5)
+  '-'    10       Open
+  '3'    11       Web Part: See above,   CWI fully scaled drawings, (3-5)
+  '3'    12       Flg Part: See above, CWI fully scaled drawings, (3-5)
+  '3'    13       EP  Part: See above, CWI fully scaled drawings, (3-5)
+  '3'    14       ST EC Part: See above, CWI fully scaled drawings, (3-5)
+  '-'    15
+  '-'    16
+  '-'    17
+  '-'    18
+  '-'    19
+  '-'    20
+
+
+*(2)WEB DRAWING LAYOUT:
+*
+* --Page_Size--  -------Offset------  -----------Scale_Factors---------
+* Width  Height   Lt   Rt   Top  Bot  Piece   Text  Table  Dimen  Title  Logo
+* -----  ------  ---- ---- ---- ----  -----  -----  -----  -----  -----  ----
+  841.0  594.0   10.0 10.0  0.0 35.0  1.00    1.5  1.50   1.30   1.50   'N'
+
+*(3)WEB DRAWING USER DETAILS:
+*
+*  No      Detail   Location
+* Detail    Id       X     Y    Scale
+* ------   ------  ----  ----   -----
+    0
+
+*(4)WEB DRAWING OPTIONS:
+*
+*Option  Id  DWG   Description
+*------  --  ---  -----------
+  '-'     1       Not used.
+  '8'     2       Dimensions on dwgs: 1=in.dec, 2=ft-in-frc, 3=ft.dec, 4=in-frc
+  '8'     3       Units on thickness: same as 2.
+  '2'     4       Thickness: (1)=gage, (2)=normal thickness 
+  '1'     5       Dimensioning: (1)=Arrows, (2)=Tick Marks
+  '1'     6       Show double web piece (1), single web piece(2)
+  '2'     7 WEB1  Hor dim to inside cor of col web:(1)=No,(2)=Hor,(3)=Hor
+  '2'     8 WEB1  Ver dim to inside cor of col web:(1)=Ver,(2)=Diag&Ver,(3)=Ver
+  '1'     9 WEB1  web assm:(1)web pieces only,(2)show flg size @ edge of web
+  '1'    10 WEB1  Show slot/hole&dim(1),show slots(2&4),no slots(3),sho&Lbl(5)
+  '3'    11 WEB2  show rise per foot on cutline:(1)=Yes, (2)=No 
+  '1'    12 WEB2  Web hole/slot dim start at:(1)=Fab web, (2)=Individual web
+  '2'    13 WEB2  To show on drawing:1=jobId & WB1, 2=WB1 only.
+  '5'    14 WEB2  Horizontal cut dimensions:1=show on bottom, 2=show on top
+  '-'    15 
+  '-'    16 WEB2  '2' if a detail of the web holes id shown on the WEB dwg.
+  '-'    17
+  '2'    18 ASM3  Draw end slopes (1)=yes, (2)=no,(3)=end slope with degrees 
+  '-'    19
+  '-'    20
+
+*(5)INTERIOR COLUMN DRAWING LAYOUT:
+*
+* --Page_Size--  -------Offset------  -----------Scale_Factors---------
+* Width  Height   Lt   Rt   Top  Bot  Piece   Text  Table  Det    Title  Logo
+* -----  ------  ---- ---- ---- ----  -----  -----  -----  -----  -----  ----
+  841.0  594.0    0.0  0.0  0.0  0.0  1.20    1.40  1.600  75.0   1.25   'N'
+
+*(6)INTERIOR COLUMN DRAWING USER DETAILS:
+*
+*  No      Detail   Location
+* Detail    Id       X     Y    Scale
+* ------   ------  ----  ----   -----
+    0
+
+
+*(7)INTERIOR COLUMN DRAWING OPTIONS:
+*
+*Option  Id   DWG   Description
+*------  --  -----  -----------
+  '8'     1         Dimensions on dw: 1=in.dec, 2=ft-in-frc, 3=ft.dec, 4=in-frc
+  '8'     2         Dimensions in material list table: as in 1.
+  '2'     3         Plate table wts. and quantities:(1)=by bldg,(2)by fab piece
+  '2'     4         Use material codes:(1)=yes (2)=no
+  '1'     5  INT1   Plate location dimensioned to:(1)=end of pl,(2)=cen of hole
+  '_'     6  INT1   Length of tube: (1)=w/ outside dim., (2)=decimal feet
+  '2'     7         Plate thickness as: (1)=gage, (2)=fraction
+  '1'     8  INT1   Cut at top reported as: (1)=cut, (2)=angle
+  '1'     9         Arrows or Tick Marks: 1=Arrows, else=Tick Marks
+  '2'    10  INT1   Report weight by building(1) or by part(2)
+  '2'    11         '2' places FAB LEN in title block, else CUT LEN.
+  '2'    12         '2' to draw and lablel CUT LEN, else not given.
+  '2'    13         To add TAPE(2) or TAIL(3) label for dim along either flange.
+  '2'    14         Hor lines in member table: '2' = use, else do not use.
+  '-'    15         Hole loc on outside flange measured from:1= Fab end, 2=stock end 
+  '-'    16         Len dim on column IS flg and BEP:1=none,2=indiv dim,3=combined
+  '2'     17  INT1     '1'= end plate dimensioned in detail, '2'= end plate dimensioned on member
+  '1'     18           Remove std details when clip sub is used (1) show all, (2) remove std details
+  '1'     19       '2' = display weld symbols(need weld sizes in DS_WELD file, see PE 11-01-2),'3' Weld Table
+  '-'    20
+
+
+*(8)PLATES DRAWING LAYOUT (EP/OF/IF/ST):
+*
+* --Page_Size--  -------Offset------  -----------Scale_Factors---------
+* Width  Height   Lt   Rt   Top  Bot  Piece   Text  Table  Dimen  Title  Logo
+* -----  ------  ---- ---- ---- ----  -----  -----  -----  -----  -----  ----
+  297.0  210.0    0.0  0.0  0.0  0.0  1.00    1.50  1.50   1.50   1.50   'N'
+
+*(9)PLATES DRAWING USER DETAILS:
+*
+*  No      Detail   Location
+* Detail    Id       X     Y    Scale
+* ------   ------  ----  ----   -----
+    0
+
+*(10)PLATES DRAWING OPTIONS (EP/OF/IF/ST):
+*
+*Option  Id   DWG   Description
+*------  --  -----  -----------
+  '-'     1         
+  '8'     2       Dimensions on dwgs: 1=in.dec, 2=ft-in-frc, 3=ft.dec, 4=in-frc
+  '8'     3       Units on thickness: same as 2.
+  '2'     4       Use gage(1), 
+  '1'     5       Dimensioning: (1)=Arrows, (2)=Tick Marks
+  '1'     6       Dimension: Full (1), Cumm. Only (2), Spacing Only (3)
+  '-'     7         Flange and stiffener dimensions '1', '2', '3', or '4'
+  '1'     8         Quantity of plates per drawing, end plate
+  '1'     9         Quantity of plates per drawing, flanges
+  '1'    10         Quantity of plates per drawing, stiffeners
+  '0'    11         Flange and BEP assembly marking, '0'= no label, '2'= label
+  '1'    12     Shop dwgs for std clips to be in the job:1 = No, 2 = MBS name, 3 = plate name (PE 10-00-8)
+  '0'    13     Make shop dwg only if it has holes:0, 1 = all, 2 = flg, 3 = stiff, 4 = flg & stiff
+  '1'    14
+ '-'    15
+ '-'    16
+ '-'    17
+ '-'    18
+ '-'    19
+ '-'    20
+
+
+*(11)ASSEMBLY DRAWING LAYOUT:
+*
+* --Page_Size--  -------Offset------  -----------Scale_Factors---------
+* Width  Height   Lt   Rt   Top  Bot  Piece   Text  Table  Dimen  Title  Logo
+* -----  ------  ---- ---- ---- ----  -----  -----  -----  -----  -----  ----
+  841.0  594.0    0.0  0.0  0.0  0.0  1.00    1.40   1.50  1.00  1.50   'N'
+
+*(12)ASSEMBLY DRAWING USER DETAILS:
+*
+*  No      Detail               Location
+* Detail    Id               X        Y       Scale
+* ------ --------------  --------  -------   -------
+    7    'ASMSECTN    '   225.000  430.000    35.000
+         'ASMBOLT     '   385.000   40.000    25.000
+         'ASMSLOT     '   445.000    0.000    25.000
+         'ASMPIECE    '    43.000  292.000    25.000
+         'WEBHOLE1    '   363.000  100.000    25.000
+         'ASM_WELD    '   764.269  594.000    25.000
+         'ASMVIEW     '   225.000  385.000    25.000
+
+
+*(13)ASSEMBLY DRAWING OPTIONS:
+*
+*Option  Id  DWG  Description
+*------  --  ---  -----------
+  '-'     1       Not Used.
+  '8'     2       Dimensions on dwgs: 1=in.dec, 2=ft-in-frc, 3=ft.dec, 4=in-frc
+  '8'     3       Units on thickness: same as 2.
+  '2'     4       Use gage(1), do not use gage(2)
+  '2'     5       Dimensioning: (1)=Arrows, (2)=Tick Marks
+  '1'     6       Show slot/hole&dim(1),show slots(2&4),no slots(3),Sho&Lbl(5)
+  '1'     7       Show section through member:(1)=Yes,(2)=No
+  '1'     8  ASM1 EP Drawing :(1)=magnify len & offset holes, (2)=to scale
+  '2'     9  ASM1 EP Loc  Dim:(1)=Detail, (2)=Drawing
+  '2'    10  ASM1 EP Loc  Dim:(1)=End Of Plate, (2)=center of hole
+  '1'    11  ASM1 EP Hole Dim:(1)=Cumm dim,(2)=spacing dim,(3)no dim.[NA]
+  '1'    12       Plate Table:(1)=Full ,(2)=No Webs,(3)=None 
+  '2'    13       Plate Table Quantity & Weight:By building(1),By Fab Piece(2)
+  '3'    14  ASM1 Control OF  Dim: (1)=yes, (2)=none
+  '2'    15  ASM1 Control IF  Dim: (1)=yes, (2)=none
+  '2'    16  ASM1 Control EP  Dim: (1)=yes, (2)=none
+  '2'    17  ASM1 Control Ext Dim: (1)=yes, (2)=none
+  '2'    18  ASM1 OF len Dim: (1)=individual, (2)=combined, (3)=None
+  '2'    19  ASM1 IF len Dim: (1)=individual, (2)=combined, (3)=None
+  '1'    20  ASM2 OF,IF,EP,ST Label:(1)=Mark,(2)=Part,(3)=Plate
+  '1'    21  ASM2 Web         Label:(1)=Mark,(2)=Part
+  '2'    22  RFA  Hole loc on web meas'd from end    :(1)=fab,(2)web 
+  '2'    23  RFA  Hole loc on out flg meas'd from end:(1)=fab,(2)flg
+  '2'    24  RFA  piece & hole loc on in flg meas'd from end :(1)=fab,(2)flg
+  '2'    25       Material Codes: (1)=Use, (2)=No
+  '2'    26       welded clips:(1)=label each clip,(2)=label 1 & call (Typ)
+  '2'    27  ASM2 Dim to flg brc clips:(1)=none,(2)=top of flg to flg br hole
+  '1'    28  ASM2 Web Clip (1)=Rect, (2)=Sloped Top,(3)=T type
+  '2'    29  ASM2 Const dep col w/ V splice, dim flg + spl pl:(1)=N,(2)=Y [NA]
+  '2'    30  ASM2 Label plate insert points: (1)=Yes, (2)=No [for automatic fab]
+  '2'    31  ASM3 Draw end slopes (1)=yes, (2)=no,  (3)=end slope with degrees
+  '3'    32  ASM3 EP Weld Options (1)=On Drawing, (2)=None
+  '3'    33  ASM3 Web-Flange Weld (1)=On Drawing, (2)=None
+  '3'    34  ASM3 Web Butt Welds  (1)=On Drawing, (2)=None
+  '3'    35  ASM3 Flg Butt Welds  (1)=On Drawing, (2)=None
+  '2'    36  ASM3 Place letter for weld note on drawing: (1)=Yes,  (2)=No
+  '1'    37       OF flange hole dim: (1)=from end of flg, (2) dim across bend
+  '1'    38       IF flange hole dim: (1)=from end of flg, (2) dim across bend
+  '2'    39  RFA  Loc of welded plate on web meas'd from end    :(1)=fab,(2)web 
+  '2'    40  RFA  Loc of welded plate on out flg meas'd from end:(1)=fab,(2)flg
+  '1'    41       Combine flange lengths at depth change: (1)=No, (2)=Yes
+  '1'    42  ASM3 Show dimensions for stiffener at col-raf splice:1=yes,2=no
+  '1'    43       Member table to be "Thick x wid"(1), "Wid x Thick" (2).
+  '2'    44       Member table to include horizontal lines? 1=no, 2=yes
+  '2'    45 ASM3  Clips called out with "NS/FS" ? 1=no, 2=yes
+  '1'    46 ASM3  Location of flush clips measured from plate: hole(1), edge(2).
+  '2'    47 ASM4  To add the TAPE or TAIL label for dim along either flange.
+  '1'    48 ASM4  Shape of stiffener between bolted end plate and flange: 1=std
+  '2'    49 ASM4  '2' use circle to show dimension location for clips.
+  '1'    50 ASM4  '2' if a detail of web holes is shown on the ASM dwg.
+  '2'    51 ASM3  Qty of extra blank lines to add to the ass'ly dwg member table
+  '2'    52 ASM3  '2' to ref the web clips from the center of the web on cross section 
+  '1'    53       '2' dimension all web slot offsets 
+  '-'    54       '1' show vertical maximum dimensions 
+  '-'    55       '2' dim on each end of the mem that are perpendicular to outside flange 
+  '-'    56       '2' vertical dimensions on front face of member
+  '1'    57       '2' spacing dim for welded clips on top flange 
+  '3'    58 ASM5  Option to report Hot Rolled member cut length at Outside Flange
+  '-'    59       Open 
+  '2'    60       sloped flange clip, label angle by (1)pitch symbol,(2) length across clip
+  '-'    61
+  '-'    62
+  'N'    63

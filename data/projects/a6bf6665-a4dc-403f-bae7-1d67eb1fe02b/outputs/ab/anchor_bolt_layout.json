@@ -1,0 +1,9 @@
+{
+  "project_id": "a6bf6665-a4dc-403f-bae7-1d67eb1fe02b",
+  "output_type": "AB",
+  "anchor_bolt_fields": {
+    "F-006": "METER KN"
+  },
+  "source_field_count": 6,
+  "status": "generated"
+}

@@ -1,0 +1,172 @@
+*===============================================================================
+*C463-002            Liner Panel Drawing Input              18/DEC/2025  2:51pm
+*===============================================================================
+
+*( 1)TITLE BLOCK:
+  'INFINITI SOLUTIONS                      ' .. Manufacturer
+  '                                        ' .. Builder
+  'Proposed Warehouse                      ' .. Project
+  'Warehouse                               ' .. Project Address
+  'Vapi                                    ' .. Project Address
+  'C463-002                                ' .. Project ID
+
+*( 2)DRAWING SIZE FACTORS:
+*  Drawing_Size     ----Object_Offset----  --------Scale_Factor-------------
+*  Width  Height    Lt    Rt    Top   Bot   Text  Table  Dim    Build  Title
+   420.0   297.0    25.0  10.0  15.0  40.0  0.55   0.55  0.55 -1.0000   0.70
+
+*( 3)DRAWING OPTIONS:
+* ---------Draw----------------    Member Trim    Gen                Page_Number
+* L_EW  F_SW  R_EW  B_SW   Roof    Table  Table  Notes    Logo       Id     Total
+   'N'   'N'   'N'   'N'   'N'      'Y'    '6'    'Y '   'N       '  '----' '----'
+
+*( 4)BUILDING LAYOUT:
+*Build                    ------L_Expand_EW------  ------R_Expand_EW------     Floor
+* Type    Width   Length  Use  Opt Extend  Offset  Use  Opt Extend  Offset      Elev
+  'FF'    12800    30500  'Y-' '-'      0     390  'Y-' '-'      0     390         0
+
+*( 5)WALL LAYOUT:
+*                            -------Wall-------   Line     Base    Wall  Sheet
+*No.  Id   Use     Type  Opt    Start    Length   Id       Elev  Offset  Notch
+  5    1  'LEFT '  '-'   '-'        0     12800  '1 '         0  5842.0   0.00
+       2  'FRONT'  '-'   '-'        0     30500  'A '         0  5842.0   0.00
+       3  'RIGHT'  '-'   '-'        0     12800  '5 '         0  5842.0   0.00
+       4  'BACK '  '-'   '-'        0     30500  'C '         0  5842.0   0.00
+       5  'ROOF '  '-'   '-'        0     30500  '- '         0    0.00   0.00
+
+*( 6)SURFACE SHAPE:
+*   No.    X_Coord   Y_Coord
+*   Surf     (mm)      (mm)
+      4          0      9100
+              6400      9740
+             12800      9100
+             12800         0
+
+*( 7)BAY SPACING:
+*  Wall  ---Offset---    No.   ---Bay_Set---
+*   Id   Left   Right   Sets     Width  Quan
+     1  230.00 230.00     2       7685    1
+                                  5115    1
+     2  390.00 390.00     4       8535    1
+                                  8210    1
+                                  6715    1
+                                  7040    1
+     3  230.00 230.00     2       5115    1
+                                  7685    1
+     4  390.00 390.00     4       7040    1
+                                  6715    1
+                                  8210    1
+                                  8535    1
+     5  390.00 390.00     4       8535    1
+                                  8210    1
+                                  6715    1
+                                  7040    1
+
+*( 8)WALL OPENINGS:
+* Wall  No.  Bay                                     Sill      Base Panel
+*  Id  Open   Id    Width   Height   Offset  Type  Height      Elev  Opt
+    1    1     1     6000     7000      843    1        0      0.00  'Y'
+    2    1     3     4000     4000     1358    1        0      0.00  'Y'
+    3    1     2     4000     4000     1843    1        0      0.00  'Y'
+    4    0
+
+*( 9)ROOF OPENINGS:
+*   Open  -Location-     Frame --Surface-- ----Bay----
+*No.  Id  Use     Id Opt  Type Id   Offset Id   Offset    Width   Length
+   0
+
+*(10)PARTIAL WALLS:
+* Wall             Bay_Id     ----Offset-----           -Angle_Id- -Trim_Id--
+*  Id  No.  Opt  Start End    Start       End    Height Base Lt Rt Base Lt Rt
+    1    1  '-'    1    2         0         0      3000   0   0  0   0   0  0
+    2    1  '-'    1    4         0         0      3000   0   0  0   0   0  0
+    3    1  '-'    1    2         0         0      3000   0   0  0   0   0  0
+    4    1  '-'    1    4         0         0      3000   0   0  0   0   0  0
+
+*(11)WALL GIRTS:
+*  Wall  Girt  No.   Bay  No.   Girt
+*   Id   Type  Bays   Id  Girt   Loc
+     1   'ZB'    2    1    5    3080    4280    5780    7280    8280
+                      2    5    3080    4280    5780    7280    8280
+     2   'ZB'    4    1    5    3080    4280    5780    7280    8280
+                      2    5    3080    4280    5780    7280    8280
+                      3    5    4280    5280    5780    7280    8280
+                      4    5    3080    4280    5780    7280    8280
+     3   'ZB'    2    1    5    3080    4280    5780    7280    8280
+                      2    6    3080    4280    5250    5780    7280    8280
+     4   'ZB'    4    1    5    3080    4280    5780    7280    8280
+                      2    5    3080    4280    5780    7280    8280
+                      3    5    3080    4280    5780    7280    8280
+                      4    5    3080    4280    5780    7280    8280
+
+*(12)WALL OPENING TRIM:
+* Wall  No.   Bay   Left   Right
+*  Id  Open   Id    Jamb   Jamb   Header  Sill
+    1    1     1      0      0      0       0
+    2    1     3      0      0      0       0
+    3    1     2      0      0      0       0
+    4    0
+    5    0
+
+*(13)LINER PANELS:
+*        Wall  -----Location-----            -----Panel-----
+*No. Id   Id     Start       End   Height    Part      Color  Opt     Base
+  0
+
+*(14)LINER TRIM:
+*       Base  Left  Left    Left          Right  Right  Right
+*  Id    Id   Side   End   Rafter  Peak  Rafter   End   Side   Common
+
+*(15)LINER COLUMN TRIM:
+* No.   Liner Frame  -----Id-----
+*Entry   Id    Line  Side1  Side2
+    0
+
+*(16)TRIM TABLE:
+* No.  Trim       Trim          Trim      Trim      Detail
+* Trim  Id    Opt  Mark          Part     Length      Id     Quan  Color Use
+   0
+
+*(17)DRAWING REVISIONS:
+* No.
+* Lines  Revision
+    0
+
+*(18)USER DETAILS:
+*  No.    Detail       ---Location---
+* Detail   Name          X        Y     Scale
+    0
+
+*(19)USER TEXT ADJUST:
+*  No.    -----Adjust------
+*Adjust    X     Y   Rotate   Text
+   0
+
+*(20)WIDE OPENING LAYOUT:
+*Wall  -Open-  Bay_Id  ---Clear Opening--  Wedge    Stub
+* Id   No. Id  St End  Width     Height    Height   Elev
+ 1      0
+ 2      0
+ 3      0
+ 4      0
+
+*(21)TRIM/ANGLE PIECES:
+* No.   -Component-  Loc  Pos   Table    Use
+*Pieces Type      Id       Id     Id
+  0
+
+*(22)HORIZONTAL GRID LINE:
+*         L_EW   Line  Wall
+*No.    Offset   Id      Id
+  5          0  '1   '   1
+          8535  '2   '   0
+         16745  '3   '   0
+         23460  '4   '   0
+         30500  '5   '   3
+
+*(23)VERTICAL GRID LINE:
+*         B_SW   Line  Wall
+*No.    Offset   Id      Id
+  3          0  'C   '   4
+          7685  'B   '   0
+         12800  'A   '   2

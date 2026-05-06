@@ -1,0 +1,202 @@
+====================================================================================================
+ C463-002                              FEATURE CHECK SUMMARY                   18/DEC/2025  10:14am
+====================================================================================================
+
+    Status  Description
+    ------  ----------------------------------------------------------------------------------------
+    ERROR   Top Run Crane
+    OK      Wainscot panels
+
+
+====================================================================================================
+ C463-002                                  Top Run Crane                       18/DEC/2025  10:14am
+====================================================================================================
+
+    DS_BUILD
+    --------
+      Status  Id               Value  Description
+      ------  ----------  ----------  --------------------------------------------------------------
+      OK      bep45           3.0000  Bolt type for non-moment connections for soldier column/rafter
+      OK      frame125        0.0000  Minimum horizontal clearance from crane TG runway beam centerline to frame inside flange
+      OK      frame126        0.0000  Minimum vertical clearance from crane TG runway beam to underside of frame
+      OK      frame135        0.0000  Minimum horizontal clearance from the runway beam flange or the runway beam channel to the frame flange
+      OK      frame44         0.0200  Design flange brace for this percent of force in flange
+      OK      frame70       150.0000  Default crane beam flange width for calc need for stiffener in crane bracket under the crane beam
+      OK      frame71       150.0000  Maximum distance that the crane bracket flange width can exceed the column flange width
+      OK      sidewall25    500.0000  
+      OK      sidewall51      2.0000  
+      OK      sidewall52      0.0000  
+      OK      sidewall53      1.0000  
+      OK      sidewall54      0.0000  
+      OK      sidewall55      1.0000  
+      OK      sidewall67      0.0000  
+      OK      sidewall68      1.0000  
+      OK      sidewall70     60.0000  
+      OK      sidewall71     45.0000  
+      OK      sidewall72      1.0000  
+      OK      sidewall73    600.0000  
+      OK      sidewall74     45.0000  
+      OK      sidewall75      0.0000  
+      OK      sidewall76      1.0000  
+      OK      sidewall77      1.0000  
+      OK      sidewall88      0.0000  
+      OK      sidewall89      0.0000  
+      OK      sidewall91      0.0000  
+
+    DT_BUILD
+    --------
+      Status  Id               Value  Description
+      ------  ----------  ----------  --------------------------------------------------------------
+      OK      gff             2.0000  Increment between hole diameter and bolt diameter for all bolts in rigid frames and clips except: BEP, interior column cap plates, and base plate for anchor bolt with diameter > 0.50" and <= 0.625" (15.88 mm)
+
+      EC20
+      OK      lbb            60.0000  Clip angle size for flush endwall girts to endwall column
+
+      ER12
+      OK      fyy           100.0000  Constant reduction in length of web stiffeners
+
+      PE5
+      OK      taa             3.0000  If > 0, it is used to account for web thickness in detailing connection plates.  For loose plates on the following members web thickness is 2*taa: all endwall columns, all door jambs, sidewall columns, rigid frame web, and eave extension beams.  For weld
+
+      PE76
+      OK      frr           100.0000  Minimum length of rigid frame web plates (Not used for special segments)
+      OK      fss           100.0000  Minimum length of rigid frame flange plates
+
+      PE76
+      OK      efa         12000.0000  Maximum length of ‘W’ endwall column and rafter webs
+      OK      efb         12000.0000  Maximum length of ‘W’ endwall column and rafter flanges
+
+      PF14
+      OK      fem            10.0000  Space between crane beam at support bracket or column
+      OK      fer           100.0000  Connection bolt offset from leg on rigid frame column inside flange clip for lateral support angle connection
+      OK      fet            80.0000  Hole offset from rigid frame web for the Longitudinal brace angle near rigid frame outside flange
+      OK      few           100.0000  Hole offset in crane beam stiffener for lateral brace angle connection
+      ERROR   fez           200.0000  Width of support column brace clip
+
+      PF14
+      OK      fbh           200.0000  Crane beam bracket: minimum distance from crane beam web to end of bracket
+      OK      fbi            50.0000  Crane beam bracket: minimum distance from outside edge of crane beam flange to end of bracket
+      OK      fga            50.0000  Clip and stiffener edge distance for Longitudinal crane angle attachment to rigid frame
+      OK      fgd           100.0000  Longitudinal crane angle length increase (edge distance * 2)
+      ERROR   fgw            56.0000  Slot length for bracket that supports crane beams, PE2-07-10
+      ERROR   fgw            56.0000  Slot length for bracket that supports crane beams, PE2-07-10
+      OK      fjr             0.0000  Offset of crane lateral brace angle hole on the rigid frame column flange
+      OK      fjs             0.0000  Decimal value multiplied by the web depth to determine the runway beam stiffener length
+      OK      fjt             0.0000  Decimal value multiplied by the web depth to determine the crane bracket stiffener length
+      OK      fju             0.0000  Decimal value multiplied by the web depth to determine the rigid frame stiffener length at the crane bracket flanges.
+      OK      fjv             0.0000  Decimal value multiplied by the web depth to determine the rigid frame stiffener length at the longitudinal brace angle.
+
+      PF32
+      OK      fck           300.0000  Offset of web and flange splices in detailing rigid frame welded plate members
+
+      PL1
+      OK      lc             35.0000  Wall girt to door jamb above framed opening
+      OK      lc             35.0000  Wall girt to door jamb above framed opening
+
+      PS35
+      OK      gee             2.0000  Increment between hole diameter and bolt diameter for all bolts in rigid frames and clips except: BEP, interior column cap plates, and base plate for anchor bolt with diameter <= 0.50" (12.7 mm)
+      OK      ggg             2.0000  Increment between hole diameter and bolt diameter for all bolts in rigid frames and clips except: BEP, interior column cap plates, and base plate for anchor bolt with diameter > 0.625" and <= 0.75" (19.05 mm)
+      OK      scl             0.0000  Distance from the top of the support column to the lateral bracing when bracket is not used
+
+      RF27
+      OK      scm            30.0000  Offset from the top of the support column for longitudinal bracing connection
+      OK      scn            30.0000  Offset from the bottom of the support column for longitudinal bracing connection
+
+      RF58
+      OK      tjj             5.0000  Thickness of welded and loose clips on runway beam to connect lateral angles
+
+    DT_METHD
+    --------
+      Status  Id               Value  Description
+      ------  ----------  ----------  --------------------------------------------------------------
+      RF22
+      OK      454                '2'  Lateral tie back to crane runway beam connection. 1= clip to web (bolted), 2= plate welded to web, 3= clip welded to web, 4= direct bolt to stiffener, N= none
+
+      RF23
+      OK      455                '2'  Longitudinal brace angle to crane runway beam connection: 1= clip to web (bolt), 2= plate weld to web, 3= clip to web (weld), 5= angle to beam bot flg, 9= angle weld to web, N= none
+
+      RF27
+      OK      458                '1'  Crane longitudinal diagonal bracing to support column flange
+
+      RF28
+      OK      456                '4'  Longitudinal brace angle to rigid frame connection; '2'- tab, '4'-web stiffener
+
+      RF58
+      OK      452                '2'  Crane runway beam lateral tie back to rigid frame column connection. 1= bolted angle, 2= welded plate, 3= angle welded to web, 4= welded stiffener
+      OK      453                '2'  Support column lateral brace angle to rigid frame column connection. 1= bolted angle, 2= welded plate, 3= angle welded to web, 4= welded stiffener
+      OK      457                '2'  Lateral brace angle to support column connection. 1= bolted angle, 2= welded plate, 3= angle welded to web, 4= welded stiffener
+
+      RF68
+      OK      451                '2'  Crane runway beam lateral brace angle to support beam connection; 1- bolted, 2-welded
+
+
+====================================================================================================
+ C463-002                            Top Run Crane Enhancements                18/DEC/2025  10:14am
+====================================================================================================
+
+      Id          Description
+      ----------  ----------------------------------------------------------------------------------
+      PE7-00-25   Program to design the crane bracket and stiffeners for top running crane.
+      PE2-01-1    Maximum length of available web and flanges on W member type can provide multiple plates for endwall columns and rafters, rigid frame interior columns, and wind framing members.
+      PE7-02-7    Multiple crane system layout can be entered as part of the building data entry.
+      PE7-02-8    Program to design all crane runway beams, support beams, and support columns in a building.
+      PE7-02-9    Program to detail and cost all crane runway beams, support beams, and support columns in a building.
+      PE7-02-10   Building drawing is available for crane runway layout and identification of crane support members.
+      PE7-05-2    Option to indicate the horizontal and vertical clearance requirements for crane systems in rigid frame design and detailing
+      PE2-07-10   Option for slots in the bracket that supports the runway beams
+      PE4-07-2    Rigid frame column web stiffener is detailed with a minimum width and hole for the attachment of crane runway beam longitudinal angle
+      PE6-07-8    Crane drawing can show the part name for the individual parts used to make the combined runway beam sections
+      PE8-11-2    Crane runway beam and cap channel can be specified by the user in the crane design input file
+      PE5-12-4    Crane and runway beam weights are included in the total seismic weight for rigid frame design
+      PE7-13-1    Crane beam stiffeners and lateral support angle detailing parameters may be separate from endwall parameters
+      PE8-14-2    Crane runway beam lateral and longitudinal angle shop drawings are now provided
+      PE5-20-3    Crane system members now have designed welds.  Also, runway beam channel can provide designed intermittent (stitch) welds.
+      PE5-22-1    Crane support beam may be designed to support two crane runway beams.
+
+
+====================================================================================================
+ C463-002                                 Wainscot panels                      18/DEC/2025  10:14am
+====================================================================================================
+
+    DS_BUILD
+    --------
+      Status  Id               Value  Description
+      ------  ----------  ----------  --------------------------------------------------------------
+      WALL58
+      OK      Wall58          0.0000  Offset of C top Wainscot girt from the Wainscot height
+
+      WALL62
+      OK      Wall62          0.0000  Offset of Z top Wainscot girt from the Wainscot height
+
+      WALL63
+      OK      Wall63          0.0000  Offset of U top Wainscot girt from the Wainscot height
+
+    DT_BUILD
+    --------
+      Status  Id               Value  Description
+      ------  ----------  ----------  --------------------------------------------------------------
+      PL35
+      OK      lib             5.0000  Wall panel offset from Wainscot girt location when the panels are not lapped.
+      OK      lic             5.0000  Wainscot panel offset from Wainscot girt location when the panels are not lapped.
+
+      PL36
+      OK      lid           100.0000  Wainscot panel offset from Wainscot girt location when the panels are lapped.
+      OK      lie           100.0000  Wall panel offset from Wainscot girt location when the panels are lapped.
+
+    DT_METHD
+    --------
+      Status  Id               Value  Description
+      ------  ----------  ----------  --------------------------------------------------------------
+      GN42
+      OK      546                '4'  Wainscot: Option for detailing of Wainscot panels when the start/end of the Wainscot panels do not align with the wall panels.
+
+
+====================================================================================================
+ C463-002                           Wainscot panels Enhancements               18/DEC/2025  10:14am
+====================================================================================================
+
+      Id          Description
+      ----------  ----------------------------------------------------------------------------------
+      PE3-10-1    Wainscot: The Building Input Editor now allows data to be entered for wainscot on exterior walls
+      PE3-10-2    Wainscot: Design of Wainscot
+      PE3-10-4    Wainscot: Wainscot is shown on building drawings

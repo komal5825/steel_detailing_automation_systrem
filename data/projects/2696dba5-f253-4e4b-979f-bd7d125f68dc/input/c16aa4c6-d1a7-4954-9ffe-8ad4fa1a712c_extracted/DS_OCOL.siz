@@ -1,0 +1,20 @@
+*                                             FILE: ds_ocol.siz
+*
+* Automotive Springs Channel Examples
+*  Channel based on coil for C-Sections.
+*  
+*    This file contains the names, sizes, and section properties of the CEE 
+*      sections without lips. These members are used as eave extension rafters
+*      as rake ends, partition columns and partition rafters.
+*
+** Name    Depth  W   Thk  Lip   Rad   Area   Wt    Ixx    Sxx   Rxx   Iyy   Syy   Ryy     J     Cw   Ro     Xo
+**          mm   mm   mm    mm    mm     cm2  kg/m   cm4    cm3   mm    cm4   cm3   mm     cm4   cm6   mm     mm
+**-------- ----- --- ----- ---- ------ ----- ----- ------ ----- ----- ----- ----- ----- ------- ---- ----- ------
+'125CH20 '   125  68 2.00   0    2.4  5.10  4.01  130.8 20.94 50.65 24.68  4.97  22.0 0.0680  658  70.4  -43.7
+'205CH15 '   205  73 1.50   0    2.4  5.18  4.07  325.1 31.72 79.26 25.73  4.51  22.3 0.0388 1901  91.4  -39.6
+'205CH18 '   205  73 1.80   0    2.4  6.21  4.88  389.4 37.99 79.18 31.10  5.44  22.4 0.0671 2292  91.4  -39.8
+'205CH20 '   205  73 2.00   0    2.4  6.90  5.42  432.0 42.15 79.13 34.73  6.07  22.4 0.0920 2554  91.4  -39.9
+'205CH25 '   205  74 2.50   0    2.4  8.63  6.78  538.2 52.51 79.00 43.96  7.65  22.6 0.1797 3216  91.5  -40.3
+'255CH20 '   255  73 2.00   0    2.4  7.88  6.19  721.3 56.57 95.67 36.06  6.13  21.4 0.1051 4190 104.4  -35.8
+'255CH25 '   255  74 2.50   0    2.4  9.85  7.74  899.4 70.54 95.55 45.66  7.73  21.5 0.2052 5283 104.4  -36.1
+stop

@@ -1,0 +1,26 @@
+*===============================================================================
+*111                 Detail Sheet # 3 Input                  19/JAN/202610:58am
+*===============================================================================
+
+*( 1)TITLE BLOCK:
+  'Sivoko Steel Structures Ltd.            '    .. Manufacturer
+  '                                        '    .. Builder
+  'Proposed Warehouse                      '    .. Project
+  'Proposed Warehouse                      '    .. Project Site
+  '                                        '    .. Project Site
+  '111                                     '    .. Project ID
+
+*( 2)DRAWING OPTIONS:
+* Drawing_Size     Drawing_Offset       Detail  Title               Page_Number
+* Width   Height  Lt    Rt    Top  Bot   Size   Scale    Logo        Id   Total
+    420     297     5     5     5    40    75   0.7000 'N       ' '----' '----'
+
+*( 3)PROGRAM SELECTED DETAILS:
+*  No.    Detail            --Insert_Point---    ---Detail_Size---
+* Detail   Name             X_Coord   Y_Coord     Width     Height     Scale
+    0
+
+*( 4)USER SELECTED DETAILS:
+*  No.    Detail            --Insert_Point---    ---Detail_Size---
+* Detail   Name             X_Coord   Y_Coord     Width     Height     Scale
+    0

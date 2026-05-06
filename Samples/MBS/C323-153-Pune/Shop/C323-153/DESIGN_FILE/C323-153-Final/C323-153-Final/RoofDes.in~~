@@ -1,0 +1,8 @@
+*(35)WALL BRACING ATTACHMENT:
+*Wall                    --Bay_Id--                            No.   ----Level----
+* Id     No.      Id     Start  End     Elev  Connect Option  Level  Height  Strut
+   2       1       1       1     6      0.00    'F'     0       2    6280.0   'S'
+                                                                     8420.0   'E'
+   4       1       2       1     6      0.00    'F'     0       2    6280.0   'S'
+                                                                     8420.0   'E'
+

@@ -1,0 +1,44 @@
+*                         FILE: PRICE.SIZ
+*
+* (1) SALES COMMISSION AND OTHER PRICE ADJUSTMENTS
+* JI_ID = Job information screen identification number, nnn in the @Jnnn.
+*                                                  (ECON0MY)    (BUILDER)      (REGION)
+* No. Of                APPLY    SALES COMMISSION ADJUSTMENT_1  ADJUSTMENT_2  ADJUSTMENT_3
+* Entries  ---LABEL---  COMPLEX  JI_ID   VALUE    JI_ID  VALUE  JI_ID  VALUE  JI-ID  VALUE
+    1     'Holiday Discount '     'N'   '@J036'    0     '@J037'   0   '@J038'   0   '@J039'   0
+
+* (2)  FREIGHT CALCULATIONS                                                                               
+* No_Of                          Use      LBS/TRK     |  NO.   |  Minimum                      |DELIVERY| LOADING
+* Entries  -LABEL-         TAX  JI_ID  WEIGHT   JI_ID |  TRK   |  Cost/Truck  or  Cost/Mile    | MILES  |  COST
+   1  'Freight (# Trucks)' 'N' '@J055' 40000.  '@J056' '@J059'    0.00 '-----'     1.75 '-----'  '@J058'  485 '-----'
+
+
+* (3)  ADJUSTED FEES BASED ON ENGINEEERING COMPLEXITY FACTOR
+* No. Of  Building                      IS  |SET FEE|-QTY-|  -------ENGINEERING COMPLEXITY FACTOR---------------
+* Entries  Complex  -----LABEL-----     TAX                    1    2    3   4    5     6     7     8     9    10
+    6      '@J040' 'Engineering Fee'    'Y'  '@J042' '-----' 500. 1200. 1200. 1200. 1200.  400.  550.  700. 1000. 1400.
+           '@J040' 'Detail/Draft Fee'   'Y'  '@J043' '-----' 750. 1000. 1150. 1550. 1850. 2000. 2550. 3600. 4400. 5200.
+           '@J040' 'Approval Plan Sets' 'Y'  '@J046' '@J045' 015. 020. 025. 030. 035.  000.  000.  000.  000.  000.
+           '@J040' 'Final Plan Sets'    'Y'  '@J048' '@J047' 025. 060. 060. 060. 050.  000.  000.  000.  000.  000.
+           '@J040' 'Design Calc. Sets'  'Y'  '@J050' '@J049' 200. 200. 200. 200. 200.  000.  000.  000.  000.  000.
+           '@J040' 'Foundation Plan'    'Y'  '@J067' '-----' 000. 000. 000. 000. 000.  000.  000.  000.  000.  000.
+           
+* (4) TAXES
+* No. Of                       ---------TAX RATE----------
+* Entries  --Label--    USE    MIN   MAX  SET AMT   JI_ID    
+    1     'State Tax'   'Y'    0.0   0.0    0.0    '@J051' 
+
+*(5)  PRICE ADJUSTMENT DUE TO FABRICATION COMPLEXITY
+* BUILDING
+* N0. Of    WEIGHT/  Building_COMPLEX  WEIGHT    --------------FABRICATION COMPLEXITY FACTOR--------------
+* Entries    COST              LABEL   OR COST     1     2      3      4      5     6    7    8    9   10
+     4       'W'     '@J041'  'ADJUST'  20000    1.00  1.00   1.00   1.00   1.00    0.0  0.0  0.0  0.0  0.0
+                                        40000    1.00  1.00   1.00   1.00   1.00    0.0  0.0  0.0  0.0  0.0
+                                        80000    1.00  1.00   1.00   1.00   1.00    0.0  0.0  0.0  0.0  0.0
+                                       120000    1.00  1.00   1.00   1.00   1.00    0.0  0.0  0.0  0.0  0.0
+
+* (6)  PACKING CHARGES
+*   ------PACKING PANELS---------------
+*                 IS                  SEPARATE
+*  ----LABEL----  TAX   WEIGHT  COST  BY WALL
+  'PANEL PACKING' 'Y'    4000.    0.   'Y'

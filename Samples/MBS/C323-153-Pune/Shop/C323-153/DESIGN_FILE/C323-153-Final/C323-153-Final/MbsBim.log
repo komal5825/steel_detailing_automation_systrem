@@ -1,0 +1,20 @@
+07-08-2025 15:50:31
+1
+1.A:D:\MBS_JOBS\INDIAN\C323-153-Final
+1.B:/B,/SMBS.INI,/PCOUFBDPWHIEFGVJEUUALIQWDHMELDSAJBAOYLWUJ
+IsMini=False
+IsDealer=False
+2
+SC:0
+SC:1
+lockType=MBS, Lib=C:\MBS\LIB\, mbsIniPath=c:\mbs\system\MBS.INI
+dllPath=C:\MBS\LIB\SpecialL.DLL
+mbsLock: Status=1 Platform=MBS Features=8 LaserId=E1 00 00 80 0E E0 1F CC
+GER: ER=4
+3
+4
+(C323-153-Final/bom/RC-01:1022/MB1:2028) Plate passed with no coordinates
+(C323-153-Final/bom/RC-01:1022) Piece passed with no plates
+5
+6
+7

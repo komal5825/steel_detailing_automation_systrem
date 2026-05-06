@@ -1,0 +1,237 @@
+ 
+ 
+ 
+ 
+                               INFINITI SOLUTION
+ 
+ 
+ 
+ 
+ 
+ 
+                       BUILDING WEIGHT & PRICE SUMMARY
+                                      FOR
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                               Proposed Warehouse
+                               Proposed Warehouse
+ 
+                                 C323-153-Final
+ 
+ 
+ 
+ 
+                                 BUILDING LAYOUT
+                        Width              (mm)=  22470
+                        Length             (mm)=  36285
+                        Eave Height        (mm)=   8420/  8420
+                        Roof Slope   (rise/100)= 10.00/10.00
+ 
+                                 BUILDING LOADS
+                        Roof Dead Load  (kN/m2)=  0.10
+                        Wall Dead Load
+                          Left  Endwall (kN/m2)=  0.10
+                          Right Endwall (kN/m2)=  0.10
+                          Front Sidewall(kN/m2)=  0.10
+                          Back  Sidewall(kN/m2)=  0.10
+                        Live Load       (kN/m2)=  0.57
+                        Collateral Load (kN/m2)=  0.05
+                        Wind Speed       (m/s )=  39.0
+                        Wind Code              = MBMA10
+                        Exposure               = B
+                        Closure                = Enclosed
+                        Internal Wind Coeff    = -0.18, +0.18
+                        Risk Category          = -
+                        Importance - Wind      =  1.00
+                        Importance - Seismic   =  1.00
+                        Seismic Design Category= B
+                        Seismic Coeff (Sms)    =  0.16
+                        Temperature Change     =   20
+                        -------------------------------
+                        Designer : VVJ
+                        Detailer :
+ 
+ 
+ 
+ 
+                                     11/AUG/2025
+
+
+
+                        BUILDING WEIGHT & PRICE SUMMARY
+             ====================================================
+             Description                   Weight(kg)      Price
+             ====================================================
+             Rigid Frames & Endwall Frames    11876.7      761.84
+             Door Jambs & Headers                48.6        0.04
+             Purlins, Girts & Eave Struts      6391.4      153.00
+             Roof & Wall Sheeting              7873.4        6.28
+             Connection Plates                   19.1        0.42
+             Angles                            1232.6       12.24
+             Trim                              1197.5        4.76
+             Cables & Sealant                   954.1        7.32
+             Accessories                         28.0        1.92
+             Fasteners                          558.6      311.19
+             ----------------------------------------------------
+                                   Total:     30179.9     1259.01
+
+             ----------------------------------------------------
+             PRICE PER WEIGHT(kg)                            0.04
+             PRICE PER FLOOR AREA(m2 )                       1.54
+             WEIGHT PER FLOOR AREA(m2 )                     37.02
+             ----------------------------------------------------
+
+
+                             PRICE DISCOUNT SUMMARY
+             ====================================================
+             Desc.                 Qty                    Amount
+             ====================================================
+             Building Components                          1259.01
+
+             ----------------------------------------------------
+             ADJUSTED PRICE                               1259.01
+
+             ----------------------------------------------------
+             TAXABLE TOTAL                                1259.01
+
+             ----------------------------------------------------
+             FINAL PRICE                                  1259.01
+
+
+
+
+                                  LEFT ENDWALL
+             ====================================================
+             Description                   Weight(kg)      Price
+             ====================================================
+             Columns                            272.3      201.50
+             Girts                              828.8        0.24
+             Sheeting                           721.0        0.46
+             Connection Plates                    5.2        0.12
+             ----------------------------------------------------
+             TOTAL:                            1827.3      202.32
+
+
+
+                                 FRONT SIDEWALL
+             ====================================================
+             Description                   Weight(kg)      Price
+             ====================================================
+             Eave Struts                        138.9        0.00
+             Girts                              812.5        0.60
+             Sheeting                          1066.9        0.74
+             Cable                              145.6        0.08
+             ----------------------------------------------------
+             TOTAL:                            2163.9        1.42
+
+
+
+                                 RIGHT ENDWALL
+             ====================================================
+             Description                   Weight(kg)      Price
+             ====================================================
+             Columns                            295.2      218.48
+             Door Jambs                          48.6        0.04
+             Eave Struts                        155.4        0.02
+             Girts                              930.4        0.32
+             Sheeting                           889.0        1.38
+             Connection Plates                   13.9        0.40
+             ----------------------------------------------------
+             TOTAL:                            2332.6      220.64
+
+
+
+                                 BACK SIDEWALL
+             ====================================================
+             Description                   Weight(kg)      Price
+             ====================================================
+             Eave Struts                        138.9        0.00
+             Girts                              812.5        0.60
+             Sheeting                          1066.9        0.74
+             Cable                              145.6        0.08
+             ----------------------------------------------------
+             TOTAL:                            2163.9        1.42
+
+
+
+                                      ROOF
+             ====================================================
+             Description                   Weight(kg)      Price
+             ====================================================
+             Purlins                           2377.6        0.02
+             Sheeting                          4129.5        2.96
+             Cable                              312.8        0.16
+             ----------------------------------------------------
+             TOTAL:                            6819.8        3.14
+
+
+
+                                  RIGID FRAMES
+             ====================================================
+             Description                   Weight(kg)      Price
+             ====================================================
+             Rigid Frame 1                     1540.2        0.14
+             Rigid Frame 2                     4664.4        0.48
+             Rigid Frame 3                     1549.0        0.16
+             Rigid Frame 4                     1554.8        0.16
+             Rigid Frame 5                     1540.2        0.14
+             Ext Beams                          460.6      340.78
+             Crane Supports                     417.6        0.72
+             ----------------------------------------------------
+             TOTAL:                           11726.8      342.58
+
+
+
+                                  ACCESSORIES
+             ====================================================
+             Description                   Weight(kg)      Price
+             ====================================================
+             Gutters & Downspouts               528.0        2.30
+             ----------------------------------------------------
+             TOTAL:                             528.0        2.30
+                  NOTE: Gutter is included as part of the trim
+                        category from the summary.
+
+
+
+                                     OTHER
+             ====================================================
+             Description                   Weight(kg)      Price
+             ====================================================
+             Purlins, Girts & Eave Struts       196.4      151.20
+             Angles                             815.0       11.52
+             Trim                               669.5        2.46
+             Cables & Sealant                   350.1        7.00
+             Accessories                         28.0        1.92
+             Fasteners                          558.6      311.19
+             ----------------------------------------------------
+             TOTAL:                            2617.6      485.29
+
+===============================================================================
+ C323-153-Final       Cost Error Summary                    11/AUG/2025  1:05pm
+===============================================================================
+
+    *WARNING: Cost could not be computed for the following parts!
+         Quan  Mark/Part           Description
+         ----  ----------------    -----------------
+            8   P-1  (150Z15  )    Roof Purlin         
+           16   P-2  (150Z15  )    Roof Purlin         
+           16   P-3  (150Z15  )    Roof Purlin         
+           16   P-4  (150Z15  )    Roof Purlin         
+           16   P-5  (150Z15  )    Roof Purlin         
+            8   P-6  (150Z15  )    Roof Purlin         
+            8   P-7  (150Z15  )    Roof Purlin         
+            8   P-8  (150Z15  )    Roof Purlin         
+            1   E-1  (150Z15  )    Eave Strut          
+            2   E-2  (150Z15  )    Eave Strut          
+            2   E-3  (150Z15  )    Eave Strut          
+            2   E-4  (150Z15  )    Eave Strut          
+            2   E-5  (150Z15  )    Eave Strut          
+            1   E-6  (150Z15  )    Eave Strut          
+            1   E-7  (150Z15  )    Eave Strut          
+            1   E-8  (150Z15  )    Eave Strut          

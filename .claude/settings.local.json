@@ -1,7 +1,13 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python)"
+      "Bash(python)",
+      "Bash(python3 -c ' *)",
+      "Bash(xargs ls *)",
+      "Bash(python -m py_compile backend/app/agents/phase2/p2_03_ab_generation.py)",
+      "Bash(python -m py_compile backend/app/agents/support/fallback.py)",
+      "Bash(python -m py_compile backend/app/parsers/mbs_parser.py)",
+      "Bash(python -c ' *)"
     ]
   }
 }

@@ -1,0 +1,115 @@
+*===============================================================================
+*C163-027            Partition Design Input                 19/JAN/2026 10:57am
+*===============================================================================
+
+*( 1)JOBID:
+    'C163-027'
+
+*( 2)DESIGN CODE:
+*Design  ---Steel_Code---             ---Build---   Code     Seismic
+* Code   Cold       Hot      Country  Code   Year   Label     Zone
+  'WS'  'NAUS07  ' 'AISC05'  '    '  'MBMA'  '10'  'MBMA 10 ' 'B  '
+
+*( 3)DESIGN CONSTANTS:
+*                                                                   Wind
+* ------------Steel_Yield-------------  ---Stress_Ratio---   Lap  Strength
+* Web   Flg  C_Sec W_Sec R_Sec  U_Sec   Col/Raf Girt Panel  Stiff  Factor
+  340   340    350   340   250    250     1.00  1.00  1.00   0.50  1.0000
+
+*( 4)DEFLECTION LIMITS:
+*-------Deflect_Limit-------
+*   Col  Girt   Panel  PartW
+    90.    90.    90.    90.
+
+*( 5)REPORTS:
+*   Input  Column  Wall  Door  Wall
+*   Echo   Rafter  Girt  Jamb  Panel
+    'I'     'Y'    'Y'   'Y'    'Y'
+
+*( 6)BUILDING LAYOUT:
+* ---------Build---------   --Left_EW--   --Right_EW-
+* Type    Width    Length   Exp  Offset   Exp  Offset
+ 'FF-'  12200.0   45730.0  'Y '  415.00  'Y '  415.00
+
+*( 7)SURFACE SHAPE:
+*   No.   X_Coord   Y_Coord  Offset
+     4        0.0    9600.0  200.00
+           6100.0   10210.0  200.00
+          12200.0    9600.0  200.00
+          12200.0       0.0  200.00
+
+*( 8)PARTITION WALL LOCATION:
+*                         -----------Start------------  ------------End-------------
+*Sets_Of     Orient Wall                    Adj Tie_in                   Adj Tie_in  --Location--
+*Walls  Id   (L/T)  Dir.   Offset   Extend Wall Option   Offset   Extend Wall Option No.   Offset
+   0
+
+*( 9)PARTITION BAY SPACING
+*        No.   ---Bay_Set---
+*  Id   Sets     Width  Quan
+
+*(10)PARTITION WALL OPENINGS:
+*Part       Bay                                Sill   Base    Set  Panel  JambL/JambR/Header/Sill
+* Id   No.  Id    Width  Height  Offset Type Height   Elev  Depth   Opt    Type    Part
+
+*(11)PARTITION PARTIAL WALLS:
+*Part Set_Of  Base  Full_Load   --Bay_Id--    Wall    Wall
+* Id   Bays   Type  Girt  Col   Start  End   Height  Option
+
+*(12)PARTITION COLUMNS:
+*                   Max_UnBr
+*Part  Set   Same    Length
+* Id  Depth  Depth    (mm)
+
+
+*(13)PARTITION COLUMN SIZE:
+*Part                              Base
+* Id   No.   Id  Type  Rot  Opt    Elev   Part
+
+*(14)COLUMN SPLICES:
+*     Part  Col
+*No.   Id    Id    Locate  Type
+  0
+
+*(15)PARTITION RAFTER SIZE:
+*Partn                                                  Set
+* Id   No.   Id   Offset  Type  Part       Rot  Opt   Depth
+
+*(16)PARTITION GIRTS:
+*Part       Top   --Flange_Strap--                   --Depth--     Set     Max  Rafter
+* Id   Type Type  Out  In    Space  Offset  Project    Set Opt     Lap   Space  Attach
+
+*(17)PARTITION GIRT LOCATION:
+*Part  Set
+* Id   Loc   No.   Location
+
+*(18)PARTITION SPECIAL GIRT:
+* Part Sets_Of  --Bay_Id--
+*  Id   Girts   Start  End  Height Type  Rotate
+
+*(19)PARTITION PANELS:
+*Part  ----Front_Panel---   ----Back_Panel----   ------Insulation-----
+* Id   Size        Height   Size        Height   Use  Thick  Part
+
+*(20)ROOF PURLINS:
+*   Surf  Purl   Purl     Purl     Purl
+*    Id   Type   Depth   Offset  Project
+      2   'ZB'  200.00        0        0
+      3   'ZB'  200.00        0        0
+
+*(21)BASIC LOADS:
+*        Deflection    Wind
+* Basic  Load_Ratio    Load
+* Wind      Wind     Factor
+ 0.561      1.00       1.00
+
+*(22)WIND PRESSURE/SUCTION:
+*Part  --Column---   Girt/Header   ---Jamb----   ---Panel---
+* Id   Press  Suct   Press  Suct   Press  Suct   Press  Suct
+
+*(23)DESIGN CODE OPTIONS:
+*No.   Event                         Condition
+  0
+
+* Code file used:
+*   MBMA.10N                                                                        

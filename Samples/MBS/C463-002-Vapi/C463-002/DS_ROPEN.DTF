@@ -1,0 +1,35 @@
+*   VERSION:0.50
+*
+*(1)HEADER:
+* No.    No.     No.    No_Add   No.
+*Open  Member  Connect  Purlin Purlin
+   0       0       0         0     8
+
+*(2)ROOF OPENING LAYOUT:
+* Open  -Location-      Frame --Surface1-- --Surface2--  ----Bay1---  ----Bay2---                      Ref
+*  Id   Use      Id Opt  Type Id    Offset Id    Offset  Id   Offset  Id   Offset     Width    Length   Id       Load
+
+*(3)ROOF OPENING FRAMING:
+*        Open     Bay           ---------Member--------  Frame_Opt   Frame_Id  Connect_Id Surf
+*     Id  Id  Use  Id   Offset  Type Opt  Rot  Part      Start End  Start End  Start  End  Id
+
+*(4)CONNECTION TABLE:
+*                ---------Plate---------  --------------------------Bolt-------------------------
+*Id   Type  Opt  Part       Width  Thick  Type     Dia  Row1  Row2  Space1  Space2   Gage DtBolt
+
+*(5)ADDITIONAL PURLINS:
+*    Surf Bay Purl                                   ----Extension----   Frame_Opt -Frame_Id-  Connect_Id  Ext
+*  Id Id   Id  Id    Offset  Type Rot Opt  Part          Left    Right  Left Right Left Right  Left Right   Id  Use
+
+*(6)PURLIN LAYOUT:
+* -Location-
+* Use     Id  Id     Offset  Rot
+ 'ROOF'    2   1    52.5559 'F'      1334.920
+ 'ROOF'    2   2   115.5087 'F'      2933.920
+ 'ROOF'    2   3   178.4614 'F'      4532.920
+ 'ROOF'    2   4   241.4142 'F'      6131.919
+ 'ROOF'    3   1    11.8110 'B'       300.000
+ 'ROOF'    3   2    74.7638 'B'      1899.000
+ 'ROOF'    3   3   137.7166 'B'      3498.000
+ 'ROOF'    3   4   200.6693 'B'      5097.000
+ 

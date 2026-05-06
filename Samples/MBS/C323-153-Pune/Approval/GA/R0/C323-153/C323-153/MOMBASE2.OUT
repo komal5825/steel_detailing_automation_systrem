@@ -1,0 +1,1464 @@
+ -------------------------------------------------------------------------------
+ 
+ LOADING 1        
+ 
+ INPUT
+ 
+   M, Moment                                                         =     71.59 kN-m
+   P, Axial                                                          =     54.47 kN
+   V, Shear                                                          =     31.45 kN
+   CF, Code Factor for AISC05                                        =      0.90
+   Fy, Splice Yield                                                  =     345.0
+   Fyg, Gusset Yield                                                 =     345.0
+   fp, Allowable Bearing                                             =       7.0 MN/m2
+   MaxUC, Max Unity Check                                            =      1.00
+   Ptlen, Plate Length                                               =     706.0 mm
+   t, Plate Thickness                                                =      16.0 mm
+   d, Member Depth                                                   =     412.0 mm
+   WebDep, Member web depth                                          =     400.0 mm
+   WebThk, Member web thick                                          =       5.0 mm
+   FlgWid, Member Flange width                                       =     150.0 mm
+   FlgThk, Member Flange thick                                       =       6.0 mm
+   B, Plate Width                                                    =     200.0 mm
+   G, Bolt Gage                                                      =     100.0 mm
+   D, Bolt Dia                                                       =      20.0 mm
+   Edge, distance from end of plate to last bolt                     =      75.0 mm
+   Flange gusset slope                                               =      1.00
+   Flange gusset outside height                                      =      50.0 mm
+   Space1, spacing between bolts on each side of flange              =     150.0 mm
+   Space2, space between bolt rows on outside of flange              =     150.0 mm
+   Flange gusset thick                                               =      10.0 mm
+   NOut, number of outside rows of bolts                             =         1
+   NRow, number rows of bolts                                        =         2
+ 
+ DETERMINE BASE PLATE BENDING (BOLTS)
+ 
+   eccentricty e = M/P                                               =    1314.6 mm
+   Since e > Pltlen/2, eccentricity is large.                        =
+   Max Bearing, MaxBr = fp                                           =       7.0 MN/m2
+   L2, Distance from center of web to center of bolts on side 1      =     203.0 mm
+   L1, Distance from end of plate to center of bolts on side 1       =     556.0 mm
+   J = fp*B*L1/2.0                                                   =    389.34 kN
+   Bearing length, A = J - (J^2-4*(fp*B/6)*(P*L2+M))^0.5/(fp*B/3)    =     249.7 mm
+   L3                                                                =     406.0 mm
+   MinLd = MIN(0,P/2+M/L3)                                           =     -5.87 kN/mm
+   MaxLd = MAX(0,P/2-M/L3)                                           =      8.02 kN/mm
+   A < L1
+   Tension per bolt, Ten=(fp*A*B/2-P)/Nrow/2                         =     30.10 kN
+   a, distance from flange to edge of plate                          =     157.3 mm
+   A >= a, therefore M=fp*(a^2/2-a^3/6/A)                            =      1.74 kN-m
+   a2, distance from flange to nearest bolt + 0.025*d                =      82.3 mm
+   perf, percentage of force to flange = (G/2)^3/ ((G/2)^3+(a2)^3)   =      0.18
+   gwid, flange gusset width = (pltlen-d)/2                          =     147.0 mm
+   Bolt head dia, HeadDia                                            =      33.0 mm
+   xbar1 = distance from center of flange to farthest bolt           =       0.0 mm
+   Percentage of force to flange, Perf=(G/2)^3/(xbar1^3 + (G/2)^3)   =      0.00 mm
+   xbar=xbar1-headdia/2-(flgthk)/2                                   =      55.5 mm
+   ybar=G/2-Headdia-(Flg gusset thick)/2                             =      28.5 mm
+   M1=Perf*Ten*xbar/(MIN(HeadDia+2*xbar , B/2-(flg gusset thick)/2)) =    0.1021 kN-m
+   wid = MIN(HeadDia+2*ybar , (pltlen-d)/2)                          =      90.0 mm
+   M2=(1-Perf)*Ten*Ybar/Wid                                          =    0.1867 kN-m
+   M3=MAX(M1,M2)                                                     =    0.1867 kN-m
+   Required plate thickness=(6*M3/CF/Fy/MaxUc)^0.5                   =      11.9 mm
+   Base plate bending on bolts = 6*M3/t^2                            =      2.82 kN-m
+ 
+ DETERMINE BASE PLATE BENDING (BEARING)
+ 
+   From mombase.out report:
+ 
+   M                                                                 =      1.08 kN-m
+   required thickness based on bearing, (6*M/CF/Fy/Maxuc)^0.5        =      10.9 mm
+   maximum of both required thicknesses                              =      11.9 mm
+ 
+ FLANGE GUSSET DESIGN
+ 
+   For 1 bolt row, D1=Edge/2.0+(PltLen-d)/4.0                        =     111.0 mm
+   D1<A so C=(1.0-D1/AA/2.0)*MaxBr*D1*B                              =    120.90 kN
+   b=(pltlen-d)/2.0                                                  =     147.0 mm
+   0<Gusset slope <1 so min gusset thickness=b/(Gusset Slope)/250*(Fy=       4.2 mm
+   Selected gusset thickness, tg                                     =      10.0 mm
+   h1 = (gusset slope)*b+(gusset height)                             =     197.0 mm
+   Ang = ATAN(h1/b)                                                  =      0.93 mm
+   Side gusset not used, so h2=h1-D1/2*TAN(Ang)                      =     122.6 mm
+   ht=(h2^2+(b-d1/2)^2)^0.5                                          =     153.0 mm
+   klr=0.75*ht/tg*3.464                                              =     39.75
+   cc=(2*Pi^2*29000/Fy)^0.5                                          =    106.96
+   klr < cc, therefore
+   Allowable compression in gusset =
+     Fyg*(1-(klr/cc)^2/2)/(5/3+3/8*klr/cc-(klr/cc)^3/8)              =       0.0 MN/m2
+   Actual compression in gusset = C/tg/D1/sin(ang)^2                 =     169.5 MN/m2
+   Allowable tension in gusset = 0.6*Fyg                             =     207.0 MN/m2
+   TenAct=Ten*2*(1-Perf)                                             =     46.44 kN
+   Actual tension in gusset = TenAct/tg/D1/SIN(Ang)^2                =      65.1 MN/m2
+ 
+ WELDS TO FLANGE GUSSET
+ 
+   Perf, percentage of force to flange = (G/2)^3/((G/2)^3+a^3)       =      0.18
+   Actual shear in weld, flange gusset to base plate
+     = 2*Ten/(PltLen-d) * (1-Perf)                                   =      0.17 kN/mm
+   Calculations for flange gusset to flange weld
+     F = Ten/h1 * (1-perf)                                           =      0.12 kN/mm
+     D1<A so C=(1.0-D1/AA/2.0)*MaxBr*D1*B/2                          =     60.45 kN
+     Actual shear in weld, flange gusset to flange
+     = MAX(F,C/(2*h1))                                               =      0.15 kN/mm
+ 
+ FLANGE WELD TO BASE PLATE
+   Fo, space from flange to first outside row                        =      72.0 mm
+   Beff, effective width = (FlgWid-G)/2+Fo                           =      97.0 mm
+   Compression in bolts, so F2=Ten*2                                 =     60.19 kN
+   Flange gusset used, so F=F2/2
+   Splice type not FA, so F=F/2
+   Splice type FI, so F=F+F2/4
+   Actual shear in weld, =F/beff                                     =      0.31 kN/mm
+ 
+ WEB WELD TO BASE PLATE
+   With DM 194=3 or 4, Actual shear in weld = V/Webdep/2             =      0.04 kN/mm
+ 
+ WEB WELD TO BASE PLATE AT BOLTS
+   F1 = V/Webdep/2                                                   =      0.04 kN/mm
+   fw = G/2 - WebThk/2                                               =      47.5 mm
+   fo = space from outside of flange to first bolt                   =      72.0 mm
+   F2 = Ten/2/(fo+fw)                                                =      0.04 kN/mm
+    Actual shear in weld = SQRT(F1^2+F2^2)                           =      0.13 kN/mm
+ -------------------------------------------------------------------------------
+ 
+ LOADING 2        
+ 
+ INPUT
+ 
+   M, Moment                                                         =     60.75 kN-m
+   P, Axial                                                          =    -24.16 kN
+   V, Shear                                                          =     23.38 kN
+   CF, Code Factor for AISC05                                        =      0.90
+   Fy, Splice Yield                                                  =     345.0
+   Fyg, Gusset Yield                                                 =     345.0
+   fp, Allowable Bearing                                             =       7.0 MN/m2
+   MaxUC, Max Unity Check                                            =      1.00
+   Ptlen, Plate Length                                               =     706.0 mm
+   t, Plate Thickness                                                =      16.0 mm
+   d, Member Depth                                                   =     412.0 mm
+   WebDep, Member web depth                                          =     400.0 mm
+   WebThk, Member web thick                                          =       5.0 mm
+   FlgWid, Member Flange width                                       =       0.0 mm
+   FlgThk, Member Flange thick                                       =       6.0 mm
+   B, Plate Width                                                    =     200.0 mm
+   G, Bolt Gage                                                      =     100.0 mm
+   D, Bolt Dia                                                       =      20.0 mm
+   Edge, distance from end of plate to last bolt                     =      75.0 mm
+   Flange gusset slope                                               =      1.00
+   Flange gusset outside height                                      =      50.0 mm
+   Space1, spacing between bolts on each side of flange              =     150.0 mm
+   Space2, space between bolt rows on outside of flange              =     150.0 mm
+   Flange gusset thick                                               =      10.0 mm
+   NOut, number of outside rows of bolts                             =         1
+   NRow, number rows of bolts                                        =         2
+ 
+ DETERMINE BASE PLATE BENDING (BOLTS)
+ 
+   eccentricty e = M/P                                               =    2515.2 mm
+   Axial <= 0 so eccentricity is large.
+   Set MaxBr equal to fp                                             =       7.0 MN/m2
+   L2, Distance from center of web to center of bolts on side 2      =     203.0 mm
+   L1, Distance from end of plate to center of bolts on side 2       =     556.0 mm
+   J = fp*B*L1/2.0                                                   =    389.34 kN
+   Bearing length, A = J - (J^2-4*(fp*B/6)*(P*L2+M))^0.5/(fp*B/3)    =     158.5 mm
+   L3                                                                =     406.0 mm
+   MinLd = MIN(0,P/2+M/L3)                                           =     -6.37 kN/mm
+   MaxLd = MAX(0,P/2-M/L3)                                           =      5.42 kN/mm
+   A < L1
+   Tension per bolt, Ten=(fp*A*B/2-P)/Nrow/2                         =     33.79 kN
+   a, distance from flange to edge of plate                          =     157.3 mm
+   A >= a, therefore M=fp*(a^2/2-a^3/6/A)                            =      1.47 kN-m
+   a2, distance from flange to nearest bolt + 0.025*d                =      82.3 mm
+   perf, percentage of force to flange = (G/2)^3/ ((G/2)^3+(a2)^3)   =      0.18
+   gwid, flange gusset width = (pltlen-d)/2                          =     147.0 mm
+   Bolt head dia, HeadDia                                            =      33.0 mm
+   xbar1 = distance from center of flange to farthest bolt           =       0.0 mm
+   Percentage of force to flange, Perf=(G/2)^3/(xbar1^3 + (G/2)^3)   =      0.00 mm
+   xbar=xbar1-headdia/2-(flgthk)/2                                   =      55.5 mm
+   ybar=G/2-Headdia-(Flg gusset thick)/2                             =      28.5 mm
+   M1=Perf*Ten*xbar/(MIN(HeadDia+2*xbar , B/2-(flg gusset thick)/2)) =    0.1146 kN-m
+   wid = MIN(HeadDia+2*ybar , (pltlen-d)/2)                          =      90.0 mm
+   M2=(1-Perf)*Ten*Ybar/Wid                                          =    0.2096 kN-m
+   M3=MAX(M1,M2)                                                     =    0.2096 kN-m
+   Required plate thickness=(6*M3/CF/Fy/MaxUc)^0.5                   =      12.6 mm
+   Base plate bending on bolts = 6*M3/t^2                            =      3.17 kN-m
+ 
+ DETERMINE BASE PLATE BENDING (BEARING)
+ 
+   From mombase.out report:
+ 
+   M                                                                 =      0.97 kN-m
+   required thickness based on bearing, (6*M/CF/Fy/Maxuc)^0.5        =      10.3 mm
+   maximum of both required thicknesses                              =      12.6 mm
+ 
+ FLANGE GUSSET DESIGN
+ 
+   For 1 bolt row, D1=Edge/2.0+(PltLen-d)/4.0                        =     111.0 mm
+   D1<A so C=(1.0-D1/AA/2.0)*MaxBr*D1*B                              =    101.04 kN
+   b=(pltlen-d)/2.0                                                  =     147.0 mm
+   0<Gusset slope <1 so min gusset thickness=b/(Gusset Slope)/250*(Fy=       4.2 mm
+   Selected gusset thickness, tg                                     =      10.0 mm
+   h1 = (gusset slope)*b+(gusset height)                             =     197.0 mm
+   Ang = ATAN(h1/b)                                                  =      0.93 mm
+   Side gusset not used, so h2=h1-D1/2*TAN(Ang)                      =     122.6 mm
+   ht=(h2^2+(b-d1/2)^2)^0.5                                          =     153.0 mm
+   klr=0.75*ht/tg*3.464                                              =     39.75
+   cc=(2*Pi^2*29000/Fy)^0.5                                          =    106.96
+   klr < cc, therefore
+   Allowable compression in gusset =
+     Fyg*(1-(klr/cc)^2/2)/(5/3+3/8*klr/cc-(klr/cc)^3/8)              =       0.0 MN/m2
+   Actual compression in gusset = C/tg/D1/sin(ang)^2                 =     141.7 MN/m2
+   Allowable tension in gusset = 0.6*Fyg                             =     207.0 MN/m2
+   TenAct=Ten*2*(1-Perf)                                             =     52.14 kN
+   Actual tension in gusset = TenAct/tg/D1/SIN(Ang)^2                =      73.1 MN/m2
+ 
+ WELDS TO FLANGE GUSSET
+ 
+   Perf, percentage of force to flange = (G/2)^3/((G/2)^3+a^3)       =      0.18
+   Actual shear in weld, flange gusset to base plate
+     = 2*Ten/(PltLen-d) * (1-Perf)                                   =      0.19 kN/mm
+   Calculations for flange gusset to flange weld
+     F = Ten/h1 * (1-perf)                                           =      0.14 kN/mm
+     D1<A so C=(1.0-D1/AA/2.0)*MaxBr*D1*B/2                          =     50.52 kN
+     Actual shear in weld, flange gusset to flange
+     = MAX(F,C/(2*h1))                                               =      0.14 kN/mm
+ 
+ FLANGE WELD TO BASE PLATE
+   Fo, space from flange to first outside row                        =      72.0 mm
+   Beff, effective width = (FlgWid-G)/2+Fo                           =      97.0 mm
+   Compression in bolts, so F2=Ten*2                                 =     67.59 kN
+   Flange gusset used, so F=F2/2
+   Splice type not FA, so F=F/2
+   Splice type FI, so F=F+F2/4
+   Actual shear in weld, =F/beff                                     =      0.35 kN/mm
+ 
+ WEB WELD TO BASE PLATE
+   With DM 194=3 or 4, Actual shear in weld = V/Webdep/2             =      0.03 kN/mm
+ 
+ WEB WELD TO BASE PLATE AT BOLTS
+   F1 = V/Webdep/2                                                   =      0.03 kN/mm
+   fw = G/2 - WebThk/2                                               =      47.5 mm
+   fo = space from outside of flange to first bolt                   =      72.0 mm
+   F2 = Ten/2/(fo+fw)                                                =      0.03 kN/mm
+    Actual shear in weld = SQRT(F1^2+F2^2)                           =      0.14 kN/mm
+ -------------------------------------------------------------------------------
+ 
+ LOADING 1        
+ 
+ INPUT
+ 
+   M, Moment                                                         =     72.47 kN-m
+   P, Axial                                                          =     54.39 kN
+   V, Shear                                                          =     31.45 kN
+   CF, Code Factor for AISC05                                        =      0.90
+   Fy, Splice Yield                                                  =     345.0
+   Fyg, Gusset Yield                                                 =     345.0
+   fp, Allowable Bearing                                             =       7.0 MN/m2
+   MaxUC, Max Unity Check                                            =      1.00
+   Ptlen, Plate Length                                               =     706.0 mm
+   t, Plate Thickness                                                =      16.0 mm
+   d, Member Depth                                                   =     412.0 mm
+   WebDep, Member web depth                                          =     400.0 mm
+   WebThk, Member web thick                                          =       5.0 mm
+   FlgWid, Member Flange width                                       =     150.0 mm
+   FlgThk, Member Flange thick                                       =       6.0 mm
+   B, Plate Width                                                    =     200.0 mm
+   G, Bolt Gage                                                      =     100.0 mm
+   D, Bolt Dia                                                       =      20.0 mm
+   Edge, distance from end of plate to last bolt                     =      75.0 mm
+   Flange gusset slope                                               =      1.00
+   Flange gusset outside height                                      =      50.0 mm
+   Space1, spacing between bolts on each side of flange              =     150.0 mm
+   Space2, space between bolt rows on outside of flange              =     150.0 mm
+   Flange gusset thick                                               =      10.0 mm
+   NOut, number of outside rows of bolts                             =         1
+   NRow, number rows of bolts                                        =         2
+ 
+ DETERMINE BASE PLATE BENDING (BOLTS)
+ 
+   eccentricty e = M/P                                               =    1332.8 mm
+   Since e > Pltlen/2, eccentricity is large.                        =
+   Max Bearing, MaxBr = fp                                           =       7.0 MN/m2
+   L2, Distance from center of web to center of bolts on side 1      =     203.0 mm
+   L1, Distance from end of plate to center of bolts on side 1       =     556.0 mm
+   J = fp*B*L1/2.0                                                   =    389.34 kN
+   Bearing length, A = J - (J^2-4*(fp*B/6)*(P*L2+M))^0.5/(fp*B/3)    =     252.9 mm
+   L3                                                                =     406.0 mm
+   MinLd = MIN(0,P/2+M/L3)                                           =     -5.96 kN/mm
+   MaxLd = MAX(0,P/2-M/L3)                                           =      8.10 kN/mm
+   A < L1
+   Tension per bolt, Ten=(fp*A*B/2-P)/Nrow/2                         =     30.67 kN
+   a, distance from flange to edge of plate                          =     157.3 mm
+   A >= a, therefore M=fp*(a^2/2-a^3/6/A)                            =      1.74 kN-m
+   a2, distance from flange to nearest bolt + 0.025*d                =      82.3 mm
+   perf, percentage of force to flange = (G/2)^3/ ((G/2)^3+(a2)^3)   =      0.18
+   gwid, flange gusset width = (pltlen-d)/2                          =     147.0 mm
+   Bolt head dia, HeadDia                                            =      33.0 mm
+   xbar1 = distance from center of flange to farthest bolt           =       0.0 mm
+   Percentage of force to flange, Perf=(G/2)^3/(xbar1^3 + (G/2)^3)   =      0.00 mm
+   xbar=xbar1-headdia/2-(flgthk)/2                                   =      55.5 mm
+   ybar=G/2-Headdia-(Flg gusset thick)/2                             =      28.5 mm
+   M1=Perf*Ten*xbar/(MIN(HeadDia+2*xbar , B/2-(flg gusset thick)/2)) =    0.1040 kN-m
+   wid = MIN(HeadDia+2*ybar , (pltlen-d)/2)                          =      90.0 mm
+   M2=(1-Perf)*Ten*Ybar/Wid                                          =    0.1903 kN-m
+   M3=MAX(M1,M2)                                                     =    0.1903 kN-m
+   Required plate thickness=(6*M3/CF/Fy/MaxUc)^0.5                   =      12.0 mm
+   Base plate bending on bolts = 6*M3/t^2                            =      2.88 kN-m
+ 
+ DETERMINE BASE PLATE BENDING (BEARING)
+ 
+   From mombase.out report:
+ 
+   M                                                                 =      1.08 kN-m
+   required thickness based on bearing, (6*M/CF/Fy/Maxuc)^0.5        =      10.9 mm
+   maximum of both required thicknesses                              =      12.0 mm
+ 
+ FLANGE GUSSET DESIGN
+ 
+   For 1 bolt row, D1=Edge/2.0+(PltLen-d)/4.0                        =     111.0 mm
+   D1<A so C=(1.0-D1/AA/2.0)*MaxBr*D1*B                              =    121.34 kN
+   b=(pltlen-d)/2.0                                                  =     147.0 mm
+   0<Gusset slope <1 so min gusset thickness=b/(Gusset Slope)/250*(Fy=       4.2 mm
+   Selected gusset thickness, tg                                     =      10.0 mm
+   h1 = (gusset slope)*b+(gusset height)                             =     197.0 mm
+   Ang = ATAN(h1/b)                                                  =      0.93 mm
+   Side gusset not used, so h2=h1-D1/2*TAN(Ang)                      =     122.6 mm
+   ht=(h2^2+(b-d1/2)^2)^0.5                                          =     153.0 mm
+   klr=0.75*ht/tg*3.464                                              =     39.75
+   cc=(2*Pi^2*29000/Fy)^0.5                                          =    106.96
+   klr < cc, therefore
+   Allowable compression in gusset =
+     Fyg*(1-(klr/cc)^2/2)/(5/3+3/8*klr/cc-(klr/cc)^3/8)              =       0.0 MN/m2
+   Actual compression in gusset = C/tg/D1/sin(ang)^2                 =     170.1 MN/m2
+   Allowable tension in gusset = 0.6*Fyg                             =     207.0 MN/m2
+   TenAct=Ten*2*(1-Perf)                                             =     47.33 kN
+   Actual tension in gusset = TenAct/tg/D1/SIN(Ang)^2                =      66.4 MN/m2
+ 
+ WELDS TO FLANGE GUSSET
+ 
+   Perf, percentage of force to flange = (G/2)^3/((G/2)^3+a^3)       =      0.18
+   Actual shear in weld, flange gusset to base plate
+     = 2*Ten/(PltLen-d) * (1-Perf)                                   =      0.17 kN/mm
+   Calculations for flange gusset to flange weld
+     F = Ten/h1 * (1-perf)                                           =      0.13 kN/mm
+     D1<A so C=(1.0-D1/AA/2.0)*MaxBr*D1*B/2                          =     60.67 kN
+     Actual shear in weld, flange gusset to flange
+     = MAX(F,C/(2*h1))                                               =      0.15 kN/mm
+ 
+ FLANGE WELD TO BASE PLATE
+   Fo, space from flange to first outside row                        =      72.0 mm
+   Beff, effective width = (FlgWid-G)/2+Fo                           =      97.0 mm
+   Compression in bolts, so F2=Ten*2                                 =     61.35 kN
+   Flange gusset used, so F=F2/2
+   Splice type not FA, so F=F/2
+   Splice type FI, so F=F+F2/4
+   Actual shear in weld, =F/beff                                     =      0.32 kN/mm
+ 
+ WEB WELD TO BASE PLATE
+   With DM 194=3 or 4, Actual shear in weld = V/Webdep/2             =      0.04 kN/mm
+ 
+ WEB WELD TO BASE PLATE AT BOLTS
+   F1 = V/Webdep/2                                                   =      0.04 kN/mm
+   fw = G/2 - WebThk/2                                               =      47.5 mm
+   fo = space from outside of flange to first bolt                   =      72.0 mm
+   F2 = Ten/2/(fo+fw)                                                =      0.04 kN/mm
+    Actual shear in weld = SQRT(F1^2+F2^2)                           =      0.13 kN/mm
+ -------------------------------------------------------------------------------
+ 
+ LOADING 2        
+ 
+ INPUT
+ 
+   M, Moment                                                         =     61.08 kN-m
+   P, Axial                                                          =    -24.13 kN
+   V, Shear                                                          =     23.37 kN
+   CF, Code Factor for AISC05                                        =      0.90
+   Fy, Splice Yield                                                  =     345.0
+   Fyg, Gusset Yield                                                 =     345.0
+   fp, Allowable Bearing                                             =       7.0 MN/m2
+   MaxUC, Max Unity Check                                            =      1.00
+   Ptlen, Plate Length                                               =     706.0 mm
+   t, Plate Thickness                                                =      16.0 mm
+   d, Member Depth                                                   =     412.0 mm
+   WebDep, Member web depth                                          =     400.0 mm
+   WebThk, Member web thick                                          =       5.0 mm
+   FlgWid, Member Flange width                                       =       0.0 mm
+   FlgThk, Member Flange thick                                       =       6.0 mm
+   B, Plate Width                                                    =     200.0 mm
+   G, Bolt Gage                                                      =     100.0 mm
+   D, Bolt Dia                                                       =      20.0 mm
+   Edge, distance from end of plate to last bolt                     =      75.0 mm
+   Flange gusset slope                                               =      1.00
+   Flange gusset outside height                                      =      50.0 mm
+   Space1, spacing between bolts on each side of flange              =     150.0 mm
+   Space2, space between bolt rows on outside of flange              =     150.0 mm
+   Flange gusset thick                                               =      10.0 mm
+   NOut, number of outside rows of bolts                             =         1
+   NRow, number rows of bolts                                        =         2
+ 
+ DETERMINE BASE PLATE BENDING (BOLTS)
+ 
+   eccentricty e = M/P                                               =    2532.2 mm
+   Axial <= 0 so eccentricity is large.
+   Set MaxBr equal to fp                                             =       7.0 MN/m2
+   L2, Distance from center of web to center of bolts on side 2      =     203.0 mm
+   L1, Distance from end of plate to center of bolts on side 2       =     556.0 mm
+   J = fp*B*L1/2.0                                                   =    389.34 kN
+   Bearing length, A = J - (J^2-4*(fp*B/6)*(P*L2+M))^0.5/(fp*B/3)    =     159.6 mm
+   L3                                                                =     406.0 mm
+   MinLd = MIN(0,P/2+M/L3)                                           =     -6.40 kN/mm
+   MaxLd = MAX(0,P/2-M/L3)                                           =      5.45 kN/mm
+   A < L1
+   Tension per bolt, Ten=(fp*A*B/2-P)/Nrow/2                         =     33.98 kN
+   a, distance from flange to edge of plate                          =     157.3 mm
+   A >= a, therefore M=fp*(a^2/2-a^3/6/A)                            =      1.48 kN-m
+   a2, distance from flange to nearest bolt + 0.025*d                =      82.3 mm
+   perf, percentage of force to flange = (G/2)^3/ ((G/2)^3+(a2)^3)   =      0.18
+   gwid, flange gusset width = (pltlen-d)/2                          =     147.0 mm
+   Bolt head dia, HeadDia                                            =      33.0 mm
+   xbar1 = distance from center of flange to farthest bolt           =       0.0 mm
+   Percentage of force to flange, Perf=(G/2)^3/(xbar1^3 + (G/2)^3)   =      0.00 mm
+   xbar=xbar1-headdia/2-(flgthk)/2                                   =      55.5 mm
+   ybar=G/2-Headdia-(Flg gusset thick)/2                             =      28.5 mm
+   M1=Perf*Ten*xbar/(MIN(HeadDia+2*xbar , B/2-(flg gusset thick)/2)) =    0.1152 kN-m
+   wid = MIN(HeadDia+2*ybar , (pltlen-d)/2)                          =      90.0 mm
+   M2=(1-Perf)*Ten*Ybar/Wid                                          =    0.2108 kN-m
+   M3=MAX(M1,M2)                                                     =    0.2108 kN-m
+   Required plate thickness=(6*M3/CF/Fy/MaxUc)^0.5                   =      12.6 mm
+   Base plate bending on bolts = 6*M3/t^2                            =      3.19 kN-m
+ 
+ DETERMINE BASE PLATE BENDING (BEARING)
+ 
+   From mombase.out report:
+ 
+   M                                                                 =      0.97 kN-m
+   required thickness based on bearing, (6*M/CF/Fy/Maxuc)^0.5        =      10.3 mm
+   maximum of both required thicknesses                              =      12.6 mm
+ 
+ FLANGE GUSSET DESIGN
+ 
+   For 1 bolt row, D1=Edge/2.0+(PltLen-d)/4.0                        =     111.0 mm
+   D1<A so C=(1.0-D1/AA/2.0)*MaxBr*D1*B                              =    101.41 kN
+   b=(pltlen-d)/2.0                                                  =     147.0 mm
+   0<Gusset slope <1 so min gusset thickness=b/(Gusset Slope)/250*(Fy=       4.2 mm
+   Selected gusset thickness, tg                                     =      10.0 mm
+   h1 = (gusset slope)*b+(gusset height)                             =     197.0 mm
+   Ang = ATAN(h1/b)                                                  =      0.93 mm
+   Side gusset not used, so h2=h1-D1/2*TAN(Ang)                      =     122.6 mm
+   ht=(h2^2+(b-d1/2)^2)^0.5                                          =     153.0 mm
+   klr=0.75*ht/tg*3.464                                              =     39.75
+   cc=(2*Pi^2*29000/Fy)^0.5                                          =    106.96
+   klr < cc, therefore
+   Allowable compression in gusset =
+     Fyg*(1-(klr/cc)^2/2)/(5/3+3/8*klr/cc-(klr/cc)^3/8)              =       0.0 MN/m2
+   Actual compression in gusset = C/tg/D1/sin(ang)^2                 =     142.2 MN/m2
+   Allowable tension in gusset = 0.6*Fyg                             =     207.0 MN/m2
+   TenAct=Ten*2*(1-Perf)                                             =     52.42 kN
+   Actual tension in gusset = TenAct/tg/D1/SIN(Ang)^2                =      73.5 MN/m2
+ 
+ WELDS TO FLANGE GUSSET
+ 
+   Perf, percentage of force to flange = (G/2)^3/((G/2)^3+a^3)       =      0.18
+   Actual shear in weld, flange gusset to base plate
+     = 2*Ten/(PltLen-d) * (1-Perf)                                   =      0.19 kN/mm
+   Calculations for flange gusset to flange weld
+     F = Ten/h1 * (1-perf)                                           =      0.14 kN/mm
+     D1<A so C=(1.0-D1/AA/2.0)*MaxBr*D1*B/2                          =     50.70 kN
+     Actual shear in weld, flange gusset to flange
+     = MAX(F,C/(2*h1))                                               =      0.14 kN/mm
+ 
+ FLANGE WELD TO BASE PLATE
+   Fo, space from flange to first outside row                        =      72.0 mm
+   Beff, effective width = (FlgWid-G)/2+Fo                           =      97.0 mm
+   Compression in bolts, so F2=Ten*2                                 =     67.95 kN
+   Flange gusset used, so F=F2/2
+   Splice type not FA, so F=F/2
+   Splice type FI, so F=F+F2/4
+   Actual shear in weld, =F/beff                                     =      0.35 kN/mm
+ 
+ WEB WELD TO BASE PLATE
+   With DM 194=3 or 4, Actual shear in weld = V/Webdep/2             =      0.03 kN/mm
+ 
+ WEB WELD TO BASE PLATE AT BOLTS
+   F1 = V/Webdep/2                                                   =      0.03 kN/mm
+   fw = G/2 - WebThk/2                                               =      47.5 mm
+   fo = space from outside of flange to first bolt                   =      72.0 mm
+   F2 = Ten/2/(fo+fw)                                                =      0.03 kN/mm
+    Actual shear in weld = SQRT(F1^2+F2^2)                           =      0.15 kN/mm
+ -------------------------------------------------------------------------------
+ 
+ LOADING 1        
+ 
+ INPUT
+ 
+   M, Moment                                                         =     71.59 kN-m
+   P, Axial                                                          =     54.47 kN
+   V, Shear                                                          =     31.45 kN
+   CF, Code Factor for AISC05                                        =      0.90
+   Fy, Splice Yield                                                  =     345.0
+   Fyg, Gusset Yield                                                 =     345.0
+   fp, Allowable Bearing                                             =       7.0 MN/m2
+   MaxUC, Max Unity Check                                            =      1.00
+   Ptlen, Plate Length                                               =     706.0 mm
+   t, Plate Thickness                                                =      16.0 mm
+   d, Member Depth                                                   =     412.0 mm
+   WebDep, Member web depth                                          =     400.0 mm
+   WebThk, Member web thick                                          =       5.0 mm
+   FlgWid, Member Flange width                                       =     150.0 mm
+   FlgThk, Member Flange thick                                       =       6.0 mm
+   B, Plate Width                                                    =     200.0 mm
+   G, Bolt Gage                                                      =     100.0 mm
+   D, Bolt Dia                                                       =      20.0 mm
+   Edge, distance from end of plate to last bolt                     =      75.0 mm
+   Flange gusset slope                                               =      1.00
+   Flange gusset outside height                                      =      50.0 mm
+   Space1, spacing between bolts on each side of flange              =     150.0 mm
+   Space2, space between bolt rows on outside of flange              =     150.0 mm
+   Flange gusset thick                                               =      10.0 mm
+   NOut, number of outside rows of bolts                             =         1
+   NRow, number rows of bolts                                        =         2
+ 
+ DETERMINE BASE PLATE BENDING (BOLTS)
+ 
+   eccentricty e = M/P                                               =    1314.6 mm
+   Since e > Pltlen/2, eccentricity is large.                        =
+   Max Bearing, MaxBr = fp                                           =       7.0 MN/m2
+   L2, Distance from center of web to center of bolts on side 1      =     203.0 mm
+   L1, Distance from end of plate to center of bolts on side 1       =     556.0 mm
+   J = fp*B*L1/2.0                                                   =    389.34 kN
+   Bearing length, A = J - (J^2-4*(fp*B/6)*(P*L2+M))^0.5/(fp*B/3)    =     249.7 mm
+   L3                                                                =     406.0 mm
+   MinLd = MIN(0,P/2+M/L3)                                           =     -5.87 kN/mm
+   MaxLd = MAX(0,P/2-M/L3)                                           =      8.02 kN/mm
+   A < L1
+   Tension per bolt, Ten=(fp*A*B/2-P)/Nrow/2                         =     30.10 kN
+   a, distance from flange to edge of plate                          =     157.3 mm
+   A >= a, therefore M=fp*(a^2/2-a^3/6/A)                            =      1.74 kN-m
+   a2, distance from flange to nearest bolt + 0.025*d                =      82.3 mm
+   perf, percentage of force to flange = (G/2)^3/ ((G/2)^3+(a2)^3)   =      0.18
+   gwid, flange gusset width = (pltlen-d)/2                          =     147.0 mm
+   Bolt head dia, HeadDia                                            =      33.0 mm
+   xbar1 = distance from center of flange to farthest bolt           =       0.0 mm
+   Percentage of force to flange, Perf=(G/2)^3/(xbar1^3 + (G/2)^3)   =      0.00 mm
+   xbar=xbar1-headdia/2-(flgthk)/2                                   =      55.5 mm
+   ybar=G/2-Headdia-(Flg gusset thick)/2                             =      28.5 mm
+   M1=Perf*Ten*xbar/(MIN(HeadDia+2*xbar , B/2-(flg gusset thick)/2)) =    0.1021 kN-m
+   wid = MIN(HeadDia+2*ybar , (pltlen-d)/2)                          =      90.0 mm
+   M2=(1-Perf)*Ten*Ybar/Wid                                          =    0.1867 kN-m
+   M3=MAX(M1,M2)                                                     =    0.1867 kN-m
+   Required plate thickness=(6*M3/CF/Fy/MaxUc)^0.5                   =      11.9 mm
+   Base plate bending on bolts = 6*M3/t^2                            =      2.82 kN-m
+ 
+ DETERMINE BASE PLATE BENDING (BEARING)
+ 
+   From mombase.out report:
+ 
+   M                                                                 =      1.08 kN-m
+   required thickness based on bearing, (6*M/CF/Fy/Maxuc)^0.5        =      10.9 mm
+   maximum of both required thicknesses                              =      11.9 mm
+ 
+ FLANGE GUSSET DESIGN
+ 
+   For 1 bolt row, D1=Edge/2.0+(PltLen-d)/4.0                        =     111.0 mm
+   D1<A so C=(1.0-D1/AA/2.0)*MaxBr*D1*B                              =    120.90 kN
+   b=(pltlen-d)/2.0                                                  =     147.0 mm
+   0<Gusset slope <1 so min gusset thickness=b/(Gusset Slope)/250*(Fy=       4.2 mm
+   Selected gusset thickness, tg                                     =      10.0 mm
+   h1 = (gusset slope)*b+(gusset height)                             =     197.0 mm
+   Ang = ATAN(h1/b)                                                  =      0.93 mm
+   Side gusset not used, so h2=h1-D1/2*TAN(Ang)                      =     122.6 mm
+   ht=(h2^2+(b-d1/2)^2)^0.5                                          =     153.0 mm
+   klr=0.75*ht/tg*3.464                                              =     39.75
+   cc=(2*Pi^2*29000/Fy)^0.5                                          =    106.96
+   klr < cc, therefore
+   Allowable compression in gusset =
+     Fyg*(1-(klr/cc)^2/2)/(5/3+3/8*klr/cc-(klr/cc)^3/8)              =       0.0 MN/m2
+   Actual compression in gusset = C/tg/D1/sin(ang)^2                 =     169.5 MN/m2
+   Allowable tension in gusset = 0.6*Fyg                             =     207.0 MN/m2
+   TenAct=Ten*2*(1-Perf)                                             =     46.44 kN
+   Actual tension in gusset = TenAct/tg/D1/SIN(Ang)^2                =      65.1 MN/m2
+ 
+ WELDS TO FLANGE GUSSET
+ 
+   Perf, percentage of force to flange = (G/2)^3/((G/2)^3+a^3)       =      0.18
+   Actual shear in weld, flange gusset to base plate
+     = 2*Ten/(PltLen-d) * (1-Perf)                                   =      0.17 kN/mm
+   Calculations for flange gusset to flange weld
+     F = Ten/h1 * (1-perf)                                           =      0.12 kN/mm
+     D1<A so C=(1.0-D1/AA/2.0)*MaxBr*D1*B/2                          =     60.45 kN
+     Actual shear in weld, flange gusset to flange
+     = MAX(F,C/(2*h1))                                               =      0.15 kN/mm
+ 
+ FLANGE WELD TO BASE PLATE
+   Fo, space from flange to first outside row                        =      72.0 mm
+   Beff, effective width = (FlgWid-G)/2+Fo                           =      97.0 mm
+   Compression in bolts, so F2=Ten*2                                 =     60.19 kN
+   Flange gusset used, so F=F2/2
+   Splice type not FA, so F=F/2
+   Splice type FI, so F=F+F2/4
+   Actual shear in weld, =F/beff                                     =      0.31 kN/mm
+ 
+ WEB WELD TO BASE PLATE
+   With DM 194=3 or 4, Actual shear in weld = V/Webdep/2             =      0.04 kN/mm
+ 
+ WEB WELD TO BASE PLATE AT BOLTS
+   F1 = V/Webdep/2                                                   =      0.04 kN/mm
+   fw = G/2 - WebThk/2                                               =      47.5 mm
+   fo = space from outside of flange to first bolt                   =      72.0 mm
+   F2 = Ten/2/(fo+fw)                                                =      0.04 kN/mm
+    Actual shear in weld = SQRT(F1^2+F2^2)                           =      0.13 kN/mm
+ -------------------------------------------------------------------------------
+ 
+ LOADING 2        
+ 
+ INPUT
+ 
+   M, Moment                                                         =     60.75 kN-m
+   P, Axial                                                          =    -24.16 kN
+   V, Shear                                                          =     23.38 kN
+   CF, Code Factor for AISC05                                        =      0.90
+   Fy, Splice Yield                                                  =     345.0
+   Fyg, Gusset Yield                                                 =     345.0
+   fp, Allowable Bearing                                             =       7.0 MN/m2
+   MaxUC, Max Unity Check                                            =      1.00
+   Ptlen, Plate Length                                               =     706.0 mm
+   t, Plate Thickness                                                =      16.0 mm
+   d, Member Depth                                                   =     412.0 mm
+   WebDep, Member web depth                                          =     400.0 mm
+   WebThk, Member web thick                                          =       5.0 mm
+   FlgWid, Member Flange width                                       =       0.0 mm
+   FlgThk, Member Flange thick                                       =       6.0 mm
+   B, Plate Width                                                    =     200.0 mm
+   G, Bolt Gage                                                      =     100.0 mm
+   D, Bolt Dia                                                       =      20.0 mm
+   Edge, distance from end of plate to last bolt                     =      75.0 mm
+   Flange gusset slope                                               =      1.00
+   Flange gusset outside height                                      =      50.0 mm
+   Space1, spacing between bolts on each side of flange              =     150.0 mm
+   Space2, space between bolt rows on outside of flange              =     150.0 mm
+   Flange gusset thick                                               =      10.0 mm
+   NOut, number of outside rows of bolts                             =         1
+   NRow, number rows of bolts                                        =         2
+ 
+ DETERMINE BASE PLATE BENDING (BOLTS)
+ 
+   eccentricty e = M/P                                               =    2515.2 mm
+   Axial <= 0 so eccentricity is large.
+   Set MaxBr equal to fp                                             =       7.0 MN/m2
+   L2, Distance from center of web to center of bolts on side 2      =     203.0 mm
+   L1, Distance from end of plate to center of bolts on side 2       =     556.0 mm
+   J = fp*B*L1/2.0                                                   =    389.34 kN
+   Bearing length, A = J - (J^2-4*(fp*B/6)*(P*L2+M))^0.5/(fp*B/3)    =     158.5 mm
+   L3                                                                =     406.0 mm
+   MinLd = MIN(0,P/2+M/L3)                                           =     -6.37 kN/mm
+   MaxLd = MAX(0,P/2-M/L3)                                           =      5.42 kN/mm
+   A < L1
+   Tension per bolt, Ten=(fp*A*B/2-P)/Nrow/2                         =     33.79 kN
+   a, distance from flange to edge of plate                          =     157.3 mm
+   A >= a, therefore M=fp*(a^2/2-a^3/6/A)                            =      1.47 kN-m
+   a2, distance from flange to nearest bolt + 0.025*d                =      82.3 mm
+   perf, percentage of force to flange = (G/2)^3/ ((G/2)^3+(a2)^3)   =      0.18
+   gwid, flange gusset width = (pltlen-d)/2                          =     147.0 mm
+   Bolt head dia, HeadDia                                            =      33.0 mm
+   xbar1 = distance from center of flange to farthest bolt           =       0.0 mm
+   Percentage of force to flange, Perf=(G/2)^3/(xbar1^3 + (G/2)^3)   =      0.00 mm
+   xbar=xbar1-headdia/2-(flgthk)/2                                   =      55.5 mm
+   ybar=G/2-Headdia-(Flg gusset thick)/2                             =      28.5 mm
+   M1=Perf*Ten*xbar/(MIN(HeadDia+2*xbar , B/2-(flg gusset thick)/2)) =    0.1146 kN-m
+   wid = MIN(HeadDia+2*ybar , (pltlen-d)/2)                          =      90.0 mm
+   M2=(1-Perf)*Ten*Ybar/Wid                                          =    0.2096 kN-m
+   M3=MAX(M1,M2)                                                     =    0.2096 kN-m
+   Required plate thickness=(6*M3/CF/Fy/MaxUc)^0.5                   =      12.6 mm
+   Base plate bending on bolts = 6*M3/t^2                            =      3.17 kN-m
+ 
+ DETERMINE BASE PLATE BENDING (BEARING)
+ 
+   From mombase.out report:
+ 
+   M                                                                 =      0.97 kN-m
+   required thickness based on bearing, (6*M/CF/Fy/Maxuc)^0.5        =      10.3 mm
+   maximum of both required thicknesses                              =      12.6 mm
+ 
+ FLANGE GUSSET DESIGN
+ 
+   For 1 bolt row, D1=Edge/2.0+(PltLen-d)/4.0                        =     111.0 mm
+   D1<A so C=(1.0-D1/AA/2.0)*MaxBr*D1*B                              =    101.04 kN
+   b=(pltlen-d)/2.0                                                  =     147.0 mm
+   0<Gusset slope <1 so min gusset thickness=b/(Gusset Slope)/250*(Fy=       4.2 mm
+   Selected gusset thickness, tg                                     =      10.0 mm
+   h1 = (gusset slope)*b+(gusset height)                             =     197.0 mm
+   Ang = ATAN(h1/b)                                                  =      0.93 mm
+   Side gusset not used, so h2=h1-D1/2*TAN(Ang)                      =     122.6 mm
+   ht=(h2^2+(b-d1/2)^2)^0.5                                          =     153.0 mm
+   klr=0.75*ht/tg*3.464                                              =     39.75
+   cc=(2*Pi^2*29000/Fy)^0.5                                          =    106.96
+   klr < cc, therefore
+   Allowable compression in gusset =
+     Fyg*(1-(klr/cc)^2/2)/(5/3+3/8*klr/cc-(klr/cc)^3/8)              =       0.0 MN/m2
+   Actual compression in gusset = C/tg/D1/sin(ang)^2                 =     141.7 MN/m2
+   Allowable tension in gusset = 0.6*Fyg                             =     207.0 MN/m2
+   TenAct=Ten*2*(1-Perf)                                             =     52.14 kN
+   Actual tension in gusset = TenAct/tg/D1/SIN(Ang)^2                =      73.1 MN/m2
+ 
+ WELDS TO FLANGE GUSSET
+ 
+   Perf, percentage of force to flange = (G/2)^3/((G/2)^3+a^3)       =      0.18
+   Actual shear in weld, flange gusset to base plate
+     = 2*Ten/(PltLen-d) * (1-Perf)                                   =      0.19 kN/mm
+   Calculations for flange gusset to flange weld
+     F = Ten/h1 * (1-perf)                                           =      0.14 kN/mm
+     D1<A so C=(1.0-D1/AA/2.0)*MaxBr*D1*B/2                          =     50.52 kN
+     Actual shear in weld, flange gusset to flange
+     = MAX(F,C/(2*h1))                                               =      0.14 kN/mm
+ 
+ FLANGE WELD TO BASE PLATE
+   Fo, space from flange to first outside row                        =      72.0 mm
+   Beff, effective width = (FlgWid-G)/2+Fo                           =      97.0 mm
+   Compression in bolts, so F2=Ten*2                                 =     67.59 kN
+   Flange gusset used, so F=F2/2
+   Splice type not FA, so F=F/2
+   Splice type FI, so F=F+F2/4
+   Actual shear in weld, =F/beff                                     =      0.35 kN/mm
+ 
+ WEB WELD TO BASE PLATE
+   With DM 194=3 or 4, Actual shear in weld = V/Webdep/2             =      0.03 kN/mm
+ 
+ WEB WELD TO BASE PLATE AT BOLTS
+   F1 = V/Webdep/2                                                   =      0.03 kN/mm
+   fw = G/2 - WebThk/2                                               =      47.5 mm
+   fo = space from outside of flange to first bolt                   =      72.0 mm
+   F2 = Ten/2/(fo+fw)                                                =      0.03 kN/mm
+    Actual shear in weld = SQRT(F1^2+F2^2)                           =      0.14 kN/mm
+ -------------------------------------------------------------------------------
+ 
+ LOADING 1        
+ 
+ INPUT
+ 
+   M, Moment                                                         =     72.47 kN-m
+   P, Axial                                                          =     54.39 kN
+   V, Shear                                                          =     31.45 kN
+   CF, Code Factor for AISC05                                        =      0.90
+   Fy, Splice Yield                                                  =     345.0
+   Fyg, Gusset Yield                                                 =     345.0
+   fp, Allowable Bearing                                             =       7.0 MN/m2
+   MaxUC, Max Unity Check                                            =      1.00
+   Ptlen, Plate Length                                               =     706.0 mm
+   t, Plate Thickness                                                =      16.0 mm
+   d, Member Depth                                                   =     412.0 mm
+   WebDep, Member web depth                                          =     400.0 mm
+   WebThk, Member web thick                                          =       5.0 mm
+   FlgWid, Member Flange width                                       =     150.0 mm
+   FlgThk, Member Flange thick                                       =       6.0 mm
+   B, Plate Width                                                    =     200.0 mm
+   G, Bolt Gage                                                      =     100.0 mm
+   D, Bolt Dia                                                       =      20.0 mm
+   Edge, distance from end of plate to last bolt                     =      75.0 mm
+   Flange gusset slope                                               =      1.00
+   Flange gusset outside height                                      =      50.0 mm
+   Space1, spacing between bolts on each side of flange              =     150.0 mm
+   Space2, space between bolt rows on outside of flange              =     150.0 mm
+   Flange gusset thick                                               =      10.0 mm
+   NOut, number of outside rows of bolts                             =         1
+   NRow, number rows of bolts                                        =         2
+ 
+ DETERMINE BASE PLATE BENDING (BOLTS)
+ 
+   eccentricty e = M/P                                               =    1332.8 mm
+   Since e > Pltlen/2, eccentricity is large.                        =
+   Max Bearing, MaxBr = fp                                           =       7.0 MN/m2
+   L2, Distance from center of web to center of bolts on side 1      =     203.0 mm
+   L1, Distance from end of plate to center of bolts on side 1       =     556.0 mm
+   J = fp*B*L1/2.0                                                   =    389.34 kN
+   Bearing length, A = J - (J^2-4*(fp*B/6)*(P*L2+M))^0.5/(fp*B/3)    =     252.9 mm
+   L3                                                                =     406.0 mm
+   MinLd = MIN(0,P/2+M/L3)                                           =     -5.96 kN/mm
+   MaxLd = MAX(0,P/2-M/L3)                                           =      8.10 kN/mm
+   A < L1
+   Tension per bolt, Ten=(fp*A*B/2-P)/Nrow/2                         =     30.67 kN
+   a, distance from flange to edge of plate                          =     157.3 mm
+   A >= a, therefore M=fp*(a^2/2-a^3/6/A)                            =      1.74 kN-m
+   a2, distance from flange to nearest bolt + 0.025*d                =      82.3 mm
+   perf, percentage of force to flange = (G/2)^3/ ((G/2)^3+(a2)^3)   =      0.18
+   gwid, flange gusset width = (pltlen-d)/2                          =     147.0 mm
+   Bolt head dia, HeadDia                                            =      33.0 mm
+   xbar1 = distance from center of flange to farthest bolt           =       0.0 mm
+   Percentage of force to flange, Perf=(G/2)^3/(xbar1^3 + (G/2)^3)   =      0.00 mm
+   xbar=xbar1-headdia/2-(flgthk)/2                                   =      55.5 mm
+   ybar=G/2-Headdia-(Flg gusset thick)/2                             =      28.5 mm
+   M1=Perf*Ten*xbar/(MIN(HeadDia+2*xbar , B/2-(flg gusset thick)/2)) =    0.1040 kN-m
+   wid = MIN(HeadDia+2*ybar , (pltlen-d)/2)                          =      90.0 mm
+   M2=(1-Perf)*Ten*Ybar/Wid                                          =    0.1903 kN-m
+   M3=MAX(M1,M2)                                                     =    0.1903 kN-m
+   Required plate thickness=(6*M3/CF/Fy/MaxUc)^0.5                   =      12.0 mm
+   Base plate bending on bolts = 6*M3/t^2                            =      2.88 kN-m
+ 
+ DETERMINE BASE PLATE BENDING (BEARING)
+ 
+   From mombase.out report:
+ 
+   M                                                                 =      1.08 kN-m
+   required thickness based on bearing, (6*M/CF/Fy/Maxuc)^0.5        =      10.9 mm
+   maximum of both required thicknesses                              =      12.0 mm
+ 
+ FLANGE GUSSET DESIGN
+ 
+   For 1 bolt row, D1=Edge/2.0+(PltLen-d)/4.0                        =     111.0 mm
+   D1<A so C=(1.0-D1/AA/2.0)*MaxBr*D1*B                              =    121.34 kN
+   b=(pltlen-d)/2.0                                                  =     147.0 mm
+   0<Gusset slope <1 so min gusset thickness=b/(Gusset Slope)/250*(Fy=       4.2 mm
+   Selected gusset thickness, tg                                     =      10.0 mm
+   h1 = (gusset slope)*b+(gusset height)                             =     197.0 mm
+   Ang = ATAN(h1/b)                                                  =      0.93 mm
+   Side gusset not used, so h2=h1-D1/2*TAN(Ang)                      =     122.6 mm
+   ht=(h2^2+(b-d1/2)^2)^0.5                                          =     153.0 mm
+   klr=0.75*ht/tg*3.464                                              =     39.75
+   cc=(2*Pi^2*29000/Fy)^0.5                                          =    106.96
+   klr < cc, therefore
+   Allowable compression in gusset =
+     Fyg*(1-(klr/cc)^2/2)/(5/3+3/8*klr/cc-(klr/cc)^3/8)              =       0.0 MN/m2
+   Actual compression in gusset = C/tg/D1/sin(ang)^2                 =     170.1 MN/m2
+   Allowable tension in gusset = 0.6*Fyg                             =     207.0 MN/m2
+   TenAct=Ten*2*(1-Perf)                                             =     47.33 kN
+   Actual tension in gusset = TenAct/tg/D1/SIN(Ang)^2                =      66.4 MN/m2
+ 
+ WELDS TO FLANGE GUSSET
+ 
+   Perf, percentage of force to flange = (G/2)^3/((G/2)^3+a^3)       =      0.18
+   Actual shear in weld, flange gusset to base plate
+     = 2*Ten/(PltLen-d) * (1-Perf)                                   =      0.17 kN/mm
+   Calculations for flange gusset to flange weld
+     F = Ten/h1 * (1-perf)                                           =      0.13 kN/mm
+     D1<A so C=(1.0-D1/AA/2.0)*MaxBr*D1*B/2                          =     60.67 kN
+     Actual shear in weld, flange gusset to flange
+     = MAX(F,C/(2*h1))                                               =      0.15 kN/mm
+ 
+ FLANGE WELD TO BASE PLATE
+   Fo, space from flange to first outside row                        =      72.0 mm
+   Beff, effective width = (FlgWid-G)/2+Fo                           =      97.0 mm
+   Compression in bolts, so F2=Ten*2                                 =     61.35 kN
+   Flange gusset used, so F=F2/2
+   Splice type not FA, so F=F/2
+   Splice type FI, so F=F+F2/4
+   Actual shear in weld, =F/beff                                     =      0.32 kN/mm
+ 
+ WEB WELD TO BASE PLATE
+   With DM 194=3 or 4, Actual shear in weld = V/Webdep/2             =      0.04 kN/mm
+ 
+ WEB WELD TO BASE PLATE AT BOLTS
+   F1 = V/Webdep/2                                                   =      0.04 kN/mm
+   fw = G/2 - WebThk/2                                               =      47.5 mm
+   fo = space from outside of flange to first bolt                   =      72.0 mm
+   F2 = Ten/2/(fo+fw)                                                =      0.04 kN/mm
+    Actual shear in weld = SQRT(F1^2+F2^2)                           =      0.13 kN/mm
+ -------------------------------------------------------------------------------
+ 
+ LOADING 2        
+ 
+ INPUT
+ 
+   M, Moment                                                         =     61.08 kN-m
+   P, Axial                                                          =    -24.13 kN
+   V, Shear                                                          =     23.37 kN
+   CF, Code Factor for AISC05                                        =      0.90
+   Fy, Splice Yield                                                  =     345.0
+   Fyg, Gusset Yield                                                 =     345.0
+   fp, Allowable Bearing                                             =       7.0 MN/m2
+   MaxUC, Max Unity Check                                            =      1.00
+   Ptlen, Plate Length                                               =     706.0 mm
+   t, Plate Thickness                                                =      16.0 mm
+   d, Member Depth                                                   =     412.0 mm
+   WebDep, Member web depth                                          =     400.0 mm
+   WebThk, Member web thick                                          =       5.0 mm
+   FlgWid, Member Flange width                                       =       0.0 mm
+   FlgThk, Member Flange thick                                       =       6.0 mm
+   B, Plate Width                                                    =     200.0 mm
+   G, Bolt Gage                                                      =     100.0 mm
+   D, Bolt Dia                                                       =      20.0 mm
+   Edge, distance from end of plate to last bolt                     =      75.0 mm
+   Flange gusset slope                                               =      1.00
+   Flange gusset outside height                                      =      50.0 mm
+   Space1, spacing between bolts on each side of flange              =     150.0 mm
+   Space2, space between bolt rows on outside of flange              =     150.0 mm
+   Flange gusset thick                                               =      10.0 mm
+   NOut, number of outside rows of bolts                             =         1
+   NRow, number rows of bolts                                        =         2
+ 
+ DETERMINE BASE PLATE BENDING (BOLTS)
+ 
+   eccentricty e = M/P                                               =    2532.2 mm
+   Axial <= 0 so eccentricity is large.
+   Set MaxBr equal to fp                                             =       7.0 MN/m2
+   L2, Distance from center of web to center of bolts on side 2      =     203.0 mm
+   L1, Distance from end of plate to center of bolts on side 2       =     556.0 mm
+   J = fp*B*L1/2.0                                                   =    389.34 kN
+   Bearing length, A = J - (J^2-4*(fp*B/6)*(P*L2+M))^0.5/(fp*B/3)    =     159.6 mm
+   L3                                                                =     406.0 mm
+   MinLd = MIN(0,P/2+M/L3)                                           =     -6.40 kN/mm
+   MaxLd = MAX(0,P/2-M/L3)                                           =      5.45 kN/mm
+   A < L1
+   Tension per bolt, Ten=(fp*A*B/2-P)/Nrow/2                         =     33.98 kN
+   a, distance from flange to edge of plate                          =     157.3 mm
+   A >= a, therefore M=fp*(a^2/2-a^3/6/A)                            =      1.48 kN-m
+   a2, distance from flange to nearest bolt + 0.025*d                =      82.3 mm
+   perf, percentage of force to flange = (G/2)^3/ ((G/2)^3+(a2)^3)   =      0.18
+   gwid, flange gusset width = (pltlen-d)/2                          =     147.0 mm
+   Bolt head dia, HeadDia                                            =      33.0 mm
+   xbar1 = distance from center of flange to farthest bolt           =       0.0 mm
+   Percentage of force to flange, Perf=(G/2)^3/(xbar1^3 + (G/2)^3)   =      0.00 mm
+   xbar=xbar1-headdia/2-(flgthk)/2                                   =      55.5 mm
+   ybar=G/2-Headdia-(Flg gusset thick)/2                             =      28.5 mm
+   M1=Perf*Ten*xbar/(MIN(HeadDia+2*xbar , B/2-(flg gusset thick)/2)) =    0.1152 kN-m
+   wid = MIN(HeadDia+2*ybar , (pltlen-d)/2)                          =      90.0 mm
+   M2=(1-Perf)*Ten*Ybar/Wid                                          =    0.2108 kN-m
+   M3=MAX(M1,M2)                                                     =    0.2108 kN-m
+   Required plate thickness=(6*M3/CF/Fy/MaxUc)^0.5                   =      12.6 mm
+   Base plate bending on bolts = 6*M3/t^2                            =      3.19 kN-m
+ 
+ DETERMINE BASE PLATE BENDING (BEARING)
+ 
+   From mombase.out report:
+ 
+   M                                                                 =      0.97 kN-m
+   required thickness based on bearing, (6*M/CF/Fy/Maxuc)^0.5        =      10.3 mm
+   maximum of both required thicknesses                              =      12.6 mm
+ 
+ FLANGE GUSSET DESIGN
+ 
+   For 1 bolt row, D1=Edge/2.0+(PltLen-d)/4.0                        =     111.0 mm
+   D1<A so C=(1.0-D1/AA/2.0)*MaxBr*D1*B                              =    101.41 kN
+   b=(pltlen-d)/2.0                                                  =     147.0 mm
+   0<Gusset slope <1 so min gusset thickness=b/(Gusset Slope)/250*(Fy=       4.2 mm
+   Selected gusset thickness, tg                                     =      10.0 mm
+   h1 = (gusset slope)*b+(gusset height)                             =     197.0 mm
+   Ang = ATAN(h1/b)                                                  =      0.93 mm
+   Side gusset not used, so h2=h1-D1/2*TAN(Ang)                      =     122.6 mm
+   ht=(h2^2+(b-d1/2)^2)^0.5                                          =     153.0 mm
+   klr=0.75*ht/tg*3.464                                              =     39.75
+   cc=(2*Pi^2*29000/Fy)^0.5                                          =    106.96
+   klr < cc, therefore
+   Allowable compression in gusset =
+     Fyg*(1-(klr/cc)^2/2)/(5/3+3/8*klr/cc-(klr/cc)^3/8)              =       0.0 MN/m2
+   Actual compression in gusset = C/tg/D1/sin(ang)^2                 =     142.2 MN/m2
+   Allowable tension in gusset = 0.6*Fyg                             =     207.0 MN/m2
+   TenAct=Ten*2*(1-Perf)                                             =     52.42 kN
+   Actual tension in gusset = TenAct/tg/D1/SIN(Ang)^2                =      73.5 MN/m2
+ 
+ WELDS TO FLANGE GUSSET
+ 
+   Perf, percentage of force to flange = (G/2)^3/((G/2)^3+a^3)       =      0.18
+   Actual shear in weld, flange gusset to base plate
+     = 2*Ten/(PltLen-d) * (1-Perf)                                   =      0.19 kN/mm
+   Calculations for flange gusset to flange weld
+     F = Ten/h1 * (1-perf)                                           =      0.14 kN/mm
+     D1<A so C=(1.0-D1/AA/2.0)*MaxBr*D1*B/2                          =     50.70 kN
+     Actual shear in weld, flange gusset to flange
+     = MAX(F,C/(2*h1))                                               =      0.14 kN/mm
+ 
+ FLANGE WELD TO BASE PLATE
+   Fo, space from flange to first outside row                        =      72.0 mm
+   Beff, effective width = (FlgWid-G)/2+Fo                           =      97.0 mm
+   Compression in bolts, so F2=Ten*2                                 =     67.95 kN
+   Flange gusset used, so F=F2/2
+   Splice type not FA, so F=F/2
+   Splice type FI, so F=F+F2/4
+   Actual shear in weld, =F/beff                                     =      0.35 kN/mm
+ 
+ WEB WELD TO BASE PLATE
+   With DM 194=3 or 4, Actual shear in weld = V/Webdep/2             =      0.03 kN/mm
+ 
+ WEB WELD TO BASE PLATE AT BOLTS
+   F1 = V/Webdep/2                                                   =      0.03 kN/mm
+   fw = G/2 - WebThk/2                                               =      47.5 mm
+   fo = space from outside of flange to first bolt                   =      72.0 mm
+   F2 = Ten/2/(fo+fw)                                                =      0.03 kN/mm
+    Actual shear in weld = SQRT(F1^2+F2^2)                           =      0.15 kN/mm
+ -------------------------------------------------------------------------------
+ 
+ LOADING 1        
+ 
+ INPUT
+ 
+   M, Moment                                                         =     71.59 kN-m
+   P, Axial                                                          =     54.47 kN
+   V, Shear                                                          =     31.45 kN
+   CF, Code Factor for AISC05                                        =      0.90
+   Fy, Splice Yield                                                  =     345.0
+   Fyg, Gusset Yield                                                 =     345.0
+   fp, Allowable Bearing                                             =       7.0 MN/m2
+   MaxUC, Max Unity Check                                            =      1.00
+   Ptlen, Plate Length                                               =     706.0 mm
+   t, Plate Thickness                                                =      16.0 mm
+   d, Member Depth                                                   =     412.0 mm
+   WebDep, Member web depth                                          =     400.0 mm
+   WebThk, Member web thick                                          =       5.0 mm
+   FlgWid, Member Flange width                                       =     150.0 mm
+   FlgThk, Member Flange thick                                       =       6.0 mm
+   B, Plate Width                                                    =     200.0 mm
+   G, Bolt Gage                                                      =     100.0 mm
+   D, Bolt Dia                                                       =      20.0 mm
+   Edge, distance from end of plate to last bolt                     =      75.0 mm
+   Flange gusset slope                                               =      1.00
+   Flange gusset outside height                                      =      50.0 mm
+   Space1, spacing between bolts on each side of flange              =     150.0 mm
+   Space2, space between bolt rows on outside of flange              =     150.0 mm
+   Flange gusset thick                                               =      10.0 mm
+   NOut, number of outside rows of bolts                             =         1
+   NRow, number rows of bolts                                        =         2
+ 
+ DETERMINE BASE PLATE BENDING (BOLTS)
+ 
+   eccentricty e = M/P                                               =    1314.6 mm
+   Since e > Pltlen/2, eccentricity is large.                        =
+   Max Bearing, MaxBr = fp                                           =       7.0 MN/m2
+   L2, Distance from center of web to center of bolts on side 1      =     203.0 mm
+   L1, Distance from end of plate to center of bolts on side 1       =     556.0 mm
+   J = fp*B*L1/2.0                                                   =    389.34 kN
+   Bearing length, A = J - (J^2-4*(fp*B/6)*(P*L2+M))^0.5/(fp*B/3)    =     249.7 mm
+   L3                                                                =     406.0 mm
+   MinLd = MIN(0,P/2+M/L3)                                           =     -5.87 kN/mm
+   MaxLd = MAX(0,P/2-M/L3)                                           =      8.02 kN/mm
+   A < L1
+   Tension per bolt, Ten=(fp*A*B/2-P)/Nrow/2                         =     30.10 kN
+   a, distance from flange to edge of plate                          =     157.3 mm
+   A >= a, therefore M=fp*(a^2/2-a^3/6/A)                            =      1.74 kN-m
+   a2, distance from flange to nearest bolt + 0.025*d                =      82.3 mm
+   perf, percentage of force to flange = (G/2)^3/ ((G/2)^3+(a2)^3)   =      0.18
+   gwid, flange gusset width = (pltlen-d)/2                          =     147.0 mm
+   Bolt head dia, HeadDia                                            =      33.0 mm
+   xbar1 = distance from center of flange to farthest bolt           =       0.0 mm
+   Percentage of force to flange, Perf=(G/2)^3/(xbar1^3 + (G/2)^3)   =      0.00 mm
+   xbar=xbar1-headdia/2-(flgthk)/2                                   =      55.5 mm
+   ybar=G/2-Headdia-(Flg gusset thick)/2                             =      28.5 mm
+   M1=Perf*Ten*xbar/(MIN(HeadDia+2*xbar , B/2-(flg gusset thick)/2)) =    0.1021 kN-m
+   wid = MIN(HeadDia+2*ybar , (pltlen-d)/2)                          =      90.0 mm
+   M2=(1-Perf)*Ten*Ybar/Wid                                          =    0.1867 kN-m
+   M3=MAX(M1,M2)                                                     =    0.1867 kN-m
+   Required plate thickness=(6*M3/CF/Fy/MaxUc)^0.5                   =      11.9 mm
+   Base plate bending on bolts = 6*M3/t^2                            =      2.82 kN-m
+ 
+ DETERMINE BASE PLATE BENDING (BEARING)
+ 
+   From mombase.out report:
+ 
+   M                                                                 =      1.08 kN-m
+   required thickness based on bearing, (6*M/CF/Fy/Maxuc)^0.5        =      10.9 mm
+   maximum of both required thicknesses                              =      11.9 mm
+ 
+ FLANGE GUSSET DESIGN
+ 
+   For 1 bolt row, D1=Edge/2.0+(PltLen-d)/4.0                        =     111.0 mm
+   D1<A so C=(1.0-D1/AA/2.0)*MaxBr*D1*B                              =    120.90 kN
+   b=(pltlen-d)/2.0                                                  =     147.0 mm
+   0<Gusset slope <1 so min gusset thickness=b/(Gusset Slope)/250*(Fy=       4.2 mm
+   Selected gusset thickness, tg                                     =      10.0 mm
+   h1 = (gusset slope)*b+(gusset height)                             =     197.0 mm
+   Ang = ATAN(h1/b)                                                  =      0.93 mm
+   Side gusset not used, so h2=h1-D1/2*TAN(Ang)                      =     122.6 mm
+   ht=(h2^2+(b-d1/2)^2)^0.5                                          =     153.0 mm
+   klr=0.75*ht/tg*3.464                                              =     39.75
+   cc=(2*Pi^2*29000/Fy)^0.5                                          =    106.96
+   klr < cc, therefore
+   Allowable compression in gusset =
+     Fyg*(1-(klr/cc)^2/2)/(5/3+3/8*klr/cc-(klr/cc)^3/8)              =       0.0 MN/m2
+   Actual compression in gusset = C/tg/D1/sin(ang)^2                 =     169.5 MN/m2
+   Allowable tension in gusset = 0.6*Fyg                             =     207.0 MN/m2
+   TenAct=Ten*2*(1-Perf)                                             =     46.44 kN
+   Actual tension in gusset = TenAct/tg/D1/SIN(Ang)^2                =      65.1 MN/m2
+ 
+ WELDS TO FLANGE GUSSET
+ 
+   Perf, percentage of force to flange = (G/2)^3/((G/2)^3+a^3)       =      0.18
+   Actual shear in weld, flange gusset to base plate
+     = 2*Ten/(PltLen-d) * (1-Perf)                                   =      0.17 kN/mm
+   Calculations for flange gusset to flange weld
+     F = Ten/h1 * (1-perf)                                           =      0.12 kN/mm
+     D1<A so C=(1.0-D1/AA/2.0)*MaxBr*D1*B/2                          =     60.45 kN
+     Actual shear in weld, flange gusset to flange
+     = MAX(F,C/(2*h1))                                               =      0.15 kN/mm
+ 
+ FLANGE WELD TO BASE PLATE
+   Fo, space from flange to first outside row                        =      72.0 mm
+   Beff, effective width = (FlgWid-G)/2+Fo                           =      97.0 mm
+   Compression in bolts, so F2=Ten*2                                 =     60.19 kN
+   Flange gusset used, so F=F2/2
+   Splice type not FA, so F=F/2
+   Splice type FI, so F=F+F2/4
+   Actual shear in weld, =F/beff                                     =      0.31 kN/mm
+ 
+ WEB WELD TO BASE PLATE
+   With DM 194=3 or 4, Actual shear in weld = V/Webdep/2             =      0.04 kN/mm
+ 
+ WEB WELD TO BASE PLATE AT BOLTS
+   F1 = V/Webdep/2                                                   =      0.04 kN/mm
+   fw = G/2 - WebThk/2                                               =      47.5 mm
+   fo = space from outside of flange to first bolt                   =      72.0 mm
+   F2 = Ten/2/(fo+fw)                                                =      0.04 kN/mm
+    Actual shear in weld = SQRT(F1^2+F2^2)                           =      0.13 kN/mm
+ -------------------------------------------------------------------------------
+ 
+ LOADING 2        
+ 
+ INPUT
+ 
+   M, Moment                                                         =     60.75 kN-m
+   P, Axial                                                          =    -24.16 kN
+   V, Shear                                                          =     23.38 kN
+   CF, Code Factor for AISC05                                        =      0.90
+   Fy, Splice Yield                                                  =     345.0
+   Fyg, Gusset Yield                                                 =     345.0
+   fp, Allowable Bearing                                             =       7.0 MN/m2
+   MaxUC, Max Unity Check                                            =      1.00
+   Ptlen, Plate Length                                               =     706.0 mm
+   t, Plate Thickness                                                =      16.0 mm
+   d, Member Depth                                                   =     412.0 mm
+   WebDep, Member web depth                                          =     400.0 mm
+   WebThk, Member web thick                                          =       5.0 mm
+   FlgWid, Member Flange width                                       =       0.0 mm
+   FlgThk, Member Flange thick                                       =       6.0 mm
+   B, Plate Width                                                    =     200.0 mm
+   G, Bolt Gage                                                      =     100.0 mm
+   D, Bolt Dia                                                       =      20.0 mm
+   Edge, distance from end of plate to last bolt                     =      75.0 mm
+   Flange gusset slope                                               =      1.00
+   Flange gusset outside height                                      =      50.0 mm
+   Space1, spacing between bolts on each side of flange              =     150.0 mm
+   Space2, space between bolt rows on outside of flange              =     150.0 mm
+   Flange gusset thick                                               =      10.0 mm
+   NOut, number of outside rows of bolts                             =         1
+   NRow, number rows of bolts                                        =         2
+ 
+ DETERMINE BASE PLATE BENDING (BOLTS)
+ 
+   eccentricty e = M/P                                               =    2515.2 mm
+   Axial <= 0 so eccentricity is large.
+   Set MaxBr equal to fp                                             =       7.0 MN/m2
+   L2, Distance from center of web to center of bolts on side 2      =     203.0 mm
+   L1, Distance from end of plate to center of bolts on side 2       =     556.0 mm
+   J = fp*B*L1/2.0                                                   =    389.34 kN
+   Bearing length, A = J - (J^2-4*(fp*B/6)*(P*L2+M))^0.5/(fp*B/3)    =     158.5 mm
+   L3                                                                =     406.0 mm
+   MinLd = MIN(0,P/2+M/L3)                                           =     -6.37 kN/mm
+   MaxLd = MAX(0,P/2-M/L3)                                           =      5.42 kN/mm
+   A < L1
+   Tension per bolt, Ten=(fp*A*B/2-P)/Nrow/2                         =     33.79 kN
+   a, distance from flange to edge of plate                          =     157.3 mm
+   A >= a, therefore M=fp*(a^2/2-a^3/6/A)                            =      1.47 kN-m
+   a2, distance from flange to nearest bolt + 0.025*d                =      82.3 mm
+   perf, percentage of force to flange = (G/2)^3/ ((G/2)^3+(a2)^3)   =      0.18
+   gwid, flange gusset width = (pltlen-d)/2                          =     147.0 mm
+   Bolt head dia, HeadDia                                            =      33.0 mm
+   xbar1 = distance from center of flange to farthest bolt           =       0.0 mm
+   Percentage of force to flange, Perf=(G/2)^3/(xbar1^3 + (G/2)^3)   =      0.00 mm
+   xbar=xbar1-headdia/2-(flgthk)/2                                   =      55.5 mm
+   ybar=G/2-Headdia-(Flg gusset thick)/2                             =      28.5 mm
+   M1=Perf*Ten*xbar/(MIN(HeadDia+2*xbar , B/2-(flg gusset thick)/2)) =    0.1146 kN-m
+   wid = MIN(HeadDia+2*ybar , (pltlen-d)/2)                          =      90.0 mm
+   M2=(1-Perf)*Ten*Ybar/Wid                                          =    0.2096 kN-m
+   M3=MAX(M1,M2)                                                     =    0.2096 kN-m
+   Required plate thickness=(6*M3/CF/Fy/MaxUc)^0.5                   =      12.6 mm
+   Base plate bending on bolts = 6*M3/t^2                            =      3.17 kN-m
+ 
+ DETERMINE BASE PLATE BENDING (BEARING)
+ 
+   From mombase.out report:
+ 
+   M                                                                 =      0.97 kN-m
+   required thickness based on bearing, (6*M/CF/Fy/Maxuc)^0.5        =      10.3 mm
+   maximum of both required thicknesses                              =      12.6 mm
+ 
+ FLANGE GUSSET DESIGN
+ 
+   For 1 bolt row, D1=Edge/2.0+(PltLen-d)/4.0                        =     111.0 mm
+   D1<A so C=(1.0-D1/AA/2.0)*MaxBr*D1*B                              =    101.04 kN
+   b=(pltlen-d)/2.0                                                  =     147.0 mm
+   0<Gusset slope <1 so min gusset thickness=b/(Gusset Slope)/250*(Fy=       4.2 mm
+   Selected gusset thickness, tg                                     =      10.0 mm
+   h1 = (gusset slope)*b+(gusset height)                             =     197.0 mm
+   Ang = ATAN(h1/b)                                                  =      0.93 mm
+   Side gusset not used, so h2=h1-D1/2*TAN(Ang)                      =     122.6 mm
+   ht=(h2^2+(b-d1/2)^2)^0.5                                          =     153.0 mm
+   klr=0.75*ht/tg*3.464                                              =     39.75
+   cc=(2*Pi^2*29000/Fy)^0.5                                          =    106.96
+   klr < cc, therefore
+   Allowable compression in gusset =
+     Fyg*(1-(klr/cc)^2/2)/(5/3+3/8*klr/cc-(klr/cc)^3/8)              =       0.0 MN/m2
+   Actual compression in gusset = C/tg/D1/sin(ang)^2                 =     141.7 MN/m2
+   Allowable tension in gusset = 0.6*Fyg                             =     207.0 MN/m2
+   TenAct=Ten*2*(1-Perf)                                             =     52.14 kN
+   Actual tension in gusset = TenAct/tg/D1/SIN(Ang)^2                =      73.1 MN/m2
+ 
+ WELDS TO FLANGE GUSSET
+ 
+   Perf, percentage of force to flange = (G/2)^3/((G/2)^3+a^3)       =      0.18
+   Actual shear in weld, flange gusset to base plate
+     = 2*Ten/(PltLen-d) * (1-Perf)                                   =      0.19 kN/mm
+   Calculations for flange gusset to flange weld
+     F = Ten/h1 * (1-perf)                                           =      0.14 kN/mm
+     D1<A so C=(1.0-D1/AA/2.0)*MaxBr*D1*B/2                          =     50.52 kN
+     Actual shear in weld, flange gusset to flange
+     = MAX(F,C/(2*h1))                                               =      0.14 kN/mm
+ 
+ FLANGE WELD TO BASE PLATE
+   Fo, space from flange to first outside row                        =      72.0 mm
+   Beff, effective width = (FlgWid-G)/2+Fo                           =      97.0 mm
+   Compression in bolts, so F2=Ten*2                                 =     67.59 kN
+   Flange gusset used, so F=F2/2
+   Splice type not FA, so F=F/2
+   Splice type FI, so F=F+F2/4
+   Actual shear in weld, =F/beff                                     =      0.35 kN/mm
+ 
+ WEB WELD TO BASE PLATE
+   With DM 194=3 or 4, Actual shear in weld = V/Webdep/2             =      0.03 kN/mm
+ 
+ WEB WELD TO BASE PLATE AT BOLTS
+   F1 = V/Webdep/2                                                   =      0.03 kN/mm
+   fw = G/2 - WebThk/2                                               =      47.5 mm
+   fo = space from outside of flange to first bolt                   =      72.0 mm
+   F2 = Ten/2/(fo+fw)                                                =      0.03 kN/mm
+    Actual shear in weld = SQRT(F1^2+F2^2)                           =      0.14 kN/mm
+ -------------------------------------------------------------------------------
+ 
+ LOADING 1        
+ 
+ INPUT
+ 
+   M, Moment                                                         =     72.47 kN-m
+   P, Axial                                                          =     54.39 kN
+   V, Shear                                                          =     31.45 kN
+   CF, Code Factor for AISC05                                        =      0.90
+   Fy, Splice Yield                                                  =     345.0
+   Fyg, Gusset Yield                                                 =     345.0
+   fp, Allowable Bearing                                             =       7.0 MN/m2
+   MaxUC, Max Unity Check                                            =      1.00
+   Ptlen, Plate Length                                               =     706.0 mm
+   t, Plate Thickness                                                =      16.0 mm
+   d, Member Depth                                                   =     412.0 mm
+   WebDep, Member web depth                                          =     400.0 mm
+   WebThk, Member web thick                                          =       5.0 mm
+   FlgWid, Member Flange width                                       =     150.0 mm
+   FlgThk, Member Flange thick                                       =       6.0 mm
+   B, Plate Width                                                    =     200.0 mm
+   G, Bolt Gage                                                      =     100.0 mm
+   D, Bolt Dia                                                       =      20.0 mm
+   Edge, distance from end of plate to last bolt                     =      75.0 mm
+   Flange gusset slope                                               =      1.00
+   Flange gusset outside height                                      =      50.0 mm
+   Space1, spacing between bolts on each side of flange              =     150.0 mm
+   Space2, space between bolt rows on outside of flange              =     150.0 mm
+   Flange gusset thick                                               =      10.0 mm
+   NOut, number of outside rows of bolts                             =         1
+   NRow, number rows of bolts                                        =         2
+ 
+ DETERMINE BASE PLATE BENDING (BOLTS)
+ 
+   eccentricty e = M/P                                               =    1332.8 mm
+   Since e > Pltlen/2, eccentricity is large.                        =
+   Max Bearing, MaxBr = fp                                           =       7.0 MN/m2
+   L2, Distance from center of web to center of bolts on side 1      =     203.0 mm
+   L1, Distance from end of plate to center of bolts on side 1       =     556.0 mm
+   J = fp*B*L1/2.0                                                   =    389.34 kN
+   Bearing length, A = J - (J^2-4*(fp*B/6)*(P*L2+M))^0.5/(fp*B/3)    =     252.9 mm
+   L3                                                                =     406.0 mm
+   MinLd = MIN(0,P/2+M/L3)                                           =     -5.96 kN/mm
+   MaxLd = MAX(0,P/2-M/L3)                                           =      8.10 kN/mm
+   A < L1
+   Tension per bolt, Ten=(fp*A*B/2-P)/Nrow/2                         =     30.67 kN
+   a, distance from flange to edge of plate                          =     157.3 mm
+   A >= a, therefore M=fp*(a^2/2-a^3/6/A)                            =      1.74 kN-m
+   a2, distance from flange to nearest bolt + 0.025*d                =      82.3 mm
+   perf, percentage of force to flange = (G/2)^3/ ((G/2)^3+(a2)^3)   =      0.18
+   gwid, flange gusset width = (pltlen-d)/2                          =     147.0 mm
+   Bolt head dia, HeadDia                                            =      33.0 mm
+   xbar1 = distance from center of flange to farthest bolt           =       0.0 mm
+   Percentage of force to flange, Perf=(G/2)^3/(xbar1^3 + (G/2)^3)   =      0.00 mm
+   xbar=xbar1-headdia/2-(flgthk)/2                                   =      55.5 mm
+   ybar=G/2-Headdia-(Flg gusset thick)/2                             =      28.5 mm
+   M1=Perf*Ten*xbar/(MIN(HeadDia+2*xbar , B/2-(flg gusset thick)/2)) =    0.1040 kN-m
+   wid = MIN(HeadDia+2*ybar , (pltlen-d)/2)                          =      90.0 mm
+   M2=(1-Perf)*Ten*Ybar/Wid                                          =    0.1903 kN-m
+   M3=MAX(M1,M2)                                                     =    0.1903 kN-m
+   Required plate thickness=(6*M3/CF/Fy/MaxUc)^0.5                   =      12.0 mm
+   Base plate bending on bolts = 6*M3/t^2                            =      2.88 kN-m
+ 
+ DETERMINE BASE PLATE BENDING (BEARING)
+ 
+   From mombase.out report:
+ 
+   M                                                                 =      1.08 kN-m
+   required thickness based on bearing, (6*M/CF/Fy/Maxuc)^0.5        =      10.9 mm
+   maximum of both required thicknesses                              =      12.0 mm
+ 
+ FLANGE GUSSET DESIGN
+ 
+   For 1 bolt row, D1=Edge/2.0+(PltLen-d)/4.0                        =     111.0 mm
+   D1<A so C=(1.0-D1/AA/2.0)*MaxBr*D1*B                              =    121.34 kN
+   b=(pltlen-d)/2.0                                                  =     147.0 mm
+   0<Gusset slope <1 so min gusset thickness=b/(Gusset Slope)/250*(Fy=       4.2 mm
+   Selected gusset thickness, tg                                     =      10.0 mm
+   h1 = (gusset slope)*b+(gusset height)                             =     197.0 mm
+   Ang = ATAN(h1/b)                                                  =      0.93 mm
+   Side gusset not used, so h2=h1-D1/2*TAN(Ang)                      =     122.6 mm
+   ht=(h2^2+(b-d1/2)^2)^0.5                                          =     153.0 mm
+   klr=0.75*ht/tg*3.464                                              =     39.75
+   cc=(2*Pi^2*29000/Fy)^0.5                                          =    106.96
+   klr < cc, therefore
+   Allowable compression in gusset =
+     Fyg*(1-(klr/cc)^2/2)/(5/3+3/8*klr/cc-(klr/cc)^3/8)              =       0.0 MN/m2
+   Actual compression in gusset = C/tg/D1/sin(ang)^2                 =     170.1 MN/m2
+   Allowable tension in gusset = 0.6*Fyg                             =     207.0 MN/m2
+   TenAct=Ten*2*(1-Perf)                                             =     47.33 kN
+   Actual tension in gusset = TenAct/tg/D1/SIN(Ang)^2                =      66.4 MN/m2
+ 
+ WELDS TO FLANGE GUSSET
+ 
+   Perf, percentage of force to flange = (G/2)^3/((G/2)^3+a^3)       =      0.18
+   Actual shear in weld, flange gusset to base plate
+     = 2*Ten/(PltLen-d) * (1-Perf)                                   =      0.17 kN/mm
+   Calculations for flange gusset to flange weld
+     F = Ten/h1 * (1-perf)                                           =      0.13 kN/mm
+     D1<A so C=(1.0-D1/AA/2.0)*MaxBr*D1*B/2                          =     60.67 kN
+     Actual shear in weld, flange gusset to flange
+     = MAX(F,C/(2*h1))                                               =      0.15 kN/mm
+ 
+ FLANGE WELD TO BASE PLATE
+   Fo, space from flange to first outside row                        =      72.0 mm
+   Beff, effective width = (FlgWid-G)/2+Fo                           =      97.0 mm
+   Compression in bolts, so F2=Ten*2                                 =     61.35 kN
+   Flange gusset used, so F=F2/2
+   Splice type not FA, so F=F/2
+   Splice type FI, so F=F+F2/4
+   Actual shear in weld, =F/beff                                     =      0.32 kN/mm
+ 
+ WEB WELD TO BASE PLATE
+   With DM 194=3 or 4, Actual shear in weld = V/Webdep/2             =      0.04 kN/mm
+ 
+ WEB WELD TO BASE PLATE AT BOLTS
+   F1 = V/Webdep/2                                                   =      0.04 kN/mm
+   fw = G/2 - WebThk/2                                               =      47.5 mm
+   fo = space from outside of flange to first bolt                   =      72.0 mm
+   F2 = Ten/2/(fo+fw)                                                =      0.04 kN/mm
+    Actual shear in weld = SQRT(F1^2+F2^2)                           =      0.13 kN/mm
+ -------------------------------------------------------------------------------
+ 
+ LOADING 2        
+ 
+ INPUT
+ 
+   M, Moment                                                         =     61.08 kN-m
+   P, Axial                                                          =    -24.13 kN
+   V, Shear                                                          =     23.37 kN
+   CF, Code Factor for AISC05                                        =      0.90
+   Fy, Splice Yield                                                  =     345.0
+   Fyg, Gusset Yield                                                 =     345.0
+   fp, Allowable Bearing                                             =       7.0 MN/m2
+   MaxUC, Max Unity Check                                            =      1.00
+   Ptlen, Plate Length                                               =     706.0 mm
+   t, Plate Thickness                                                =      16.0 mm
+   d, Member Depth                                                   =     412.0 mm
+   WebDep, Member web depth                                          =     400.0 mm
+   WebThk, Member web thick                                          =       5.0 mm
+   FlgWid, Member Flange width                                       =       0.0 mm
+   FlgThk, Member Flange thick                                       =       6.0 mm
+   B, Plate Width                                                    =     200.0 mm
+   G, Bolt Gage                                                      =     100.0 mm
+   D, Bolt Dia                                                       =      20.0 mm
+   Edge, distance from end of plate to last bolt                     =      75.0 mm
+   Flange gusset slope                                               =      1.00
+   Flange gusset outside height                                      =      50.0 mm
+   Space1, spacing between bolts on each side of flange              =     150.0 mm
+   Space2, space between bolt rows on outside of flange              =     150.0 mm
+   Flange gusset thick                                               =      10.0 mm
+   NOut, number of outside rows of bolts                             =         1
+   NRow, number rows of bolts                                        =         2
+ 
+ DETERMINE BASE PLATE BENDING (BOLTS)
+ 
+   eccentricty e = M/P                                               =    2532.2 mm
+   Axial <= 0 so eccentricity is large.
+   Set MaxBr equal to fp                                             =       7.0 MN/m2
+   L2, Distance from center of web to center of bolts on side 2      =     203.0 mm
+   L1, Distance from end of plate to center of bolts on side 2       =     556.0 mm
+   J = fp*B*L1/2.0                                                   =    389.34 kN
+   Bearing length, A = J - (J^2-4*(fp*B/6)*(P*L2+M))^0.5/(fp*B/3)    =     159.6 mm
+   L3                                                                =     406.0 mm
+   MinLd = MIN(0,P/2+M/L3)                                           =     -6.40 kN/mm
+   MaxLd = MAX(0,P/2-M/L3)                                           =      5.45 kN/mm
+   A < L1
+   Tension per bolt, Ten=(fp*A*B/2-P)/Nrow/2                         =     33.98 kN
+   a, distance from flange to edge of plate                          =     157.3 mm
+   A >= a, therefore M=fp*(a^2/2-a^3/6/A)                            =      1.48 kN-m
+   a2, distance from flange to nearest bolt + 0.025*d                =      82.3 mm
+   perf, percentage of force to flange = (G/2)^3/ ((G/2)^3+(a2)^3)   =      0.18
+   gwid, flange gusset width = (pltlen-d)/2                          =     147.0 mm
+   Bolt head dia, HeadDia                                            =      33.0 mm
+   xbar1 = distance from center of flange to farthest bolt           =       0.0 mm
+   Percentage of force to flange, Perf=(G/2)^3/(xbar1^3 + (G/2)^3)   =      0.00 mm
+   xbar=xbar1-headdia/2-(flgthk)/2                                   =      55.5 mm
+   ybar=G/2-Headdia-(Flg gusset thick)/2                             =      28.5 mm
+   M1=Perf*Ten*xbar/(MIN(HeadDia+2*xbar , B/2-(flg gusset thick)/2)) =    0.1152 kN-m
+   wid = MIN(HeadDia+2*ybar , (pltlen-d)/2)                          =      90.0 mm
+   M2=(1-Perf)*Ten*Ybar/Wid                                          =    0.2108 kN-m
+   M3=MAX(M1,M2)                                                     =    0.2108 kN-m
+   Required plate thickness=(6*M3/CF/Fy/MaxUc)^0.5                   =      12.6 mm
+   Base plate bending on bolts = 6*M3/t^2                            =      3.19 kN-m
+ 
+ DETERMINE BASE PLATE BENDING (BEARING)
+ 
+   From mombase.out report:
+ 
+   M                                                                 =      0.97 kN-m
+   required thickness based on bearing, (6*M/CF/Fy/Maxuc)^0.5        =      10.3 mm
+   maximum of both required thicknesses                              =      12.6 mm
+ 
+ FLANGE GUSSET DESIGN
+ 
+   For 1 bolt row, D1=Edge/2.0+(PltLen-d)/4.0                        =     111.0 mm
+   D1<A so C=(1.0-D1/AA/2.0)*MaxBr*D1*B                              =    101.41 kN
+   b=(pltlen-d)/2.0                                                  =     147.0 mm
+   0<Gusset slope <1 so min gusset thickness=b/(Gusset Slope)/250*(Fy=       4.2 mm
+   Selected gusset thickness, tg                                     =      10.0 mm
+   h1 = (gusset slope)*b+(gusset height)                             =     197.0 mm
+   Ang = ATAN(h1/b)                                                  =      0.93 mm
+   Side gusset not used, so h2=h1-D1/2*TAN(Ang)                      =     122.6 mm
+   ht=(h2^2+(b-d1/2)^2)^0.5                                          =     153.0 mm
+   klr=0.75*ht/tg*3.464                                              =     39.75
+   cc=(2*Pi^2*29000/Fy)^0.5                                          =    106.96
+   klr < cc, therefore
+   Allowable compression in gusset =
+     Fyg*(1-(klr/cc)^2/2)/(5/3+3/8*klr/cc-(klr/cc)^3/8)              =       0.0 MN/m2
+   Actual compression in gusset = C/tg/D1/sin(ang)^2                 =     142.2 MN/m2
+   Allowable tension in gusset = 0.6*Fyg                             =     207.0 MN/m2
+   TenAct=Ten*2*(1-Perf)                                             =     52.42 kN
+   Actual tension in gusset = TenAct/tg/D1/SIN(Ang)^2                =      73.5 MN/m2
+ 
+ WELDS TO FLANGE GUSSET
+ 
+   Perf, percentage of force to flange = (G/2)^3/((G/2)^3+a^3)       =      0.18
+   Actual shear in weld, flange gusset to base plate
+     = 2*Ten/(PltLen-d) * (1-Perf)                                   =      0.19 kN/mm
+   Calculations for flange gusset to flange weld
+     F = Ten/h1 * (1-perf)                                           =      0.14 kN/mm
+     D1<A so C=(1.0-D1/AA/2.0)*MaxBr*D1*B/2                          =     50.70 kN
+     Actual shear in weld, flange gusset to flange
+     = MAX(F,C/(2*h1))                                               =      0.14 kN/mm
+ 
+ FLANGE WELD TO BASE PLATE
+   Fo, space from flange to first outside row                        =      72.0 mm
+   Beff, effective width = (FlgWid-G)/2+Fo                           =      97.0 mm
+   Compression in bolts, so F2=Ten*2                                 =     67.95 kN
+   Flange gusset used, so F=F2/2
+   Splice type not FA, so F=F/2
+   Splice type FI, so F=F+F2/4
+   Actual shear in weld, =F/beff                                     =      0.35 kN/mm
+ 
+ WEB WELD TO BASE PLATE
+   With DM 194=3 or 4, Actual shear in weld = V/Webdep/2             =      0.03 kN/mm
+ 
+ WEB WELD TO BASE PLATE AT BOLTS
+   F1 = V/Webdep/2                                                   =      0.03 kN/mm
+   fw = G/2 - WebThk/2                                               =      47.5 mm
+   fo = space from outside of flange to first bolt                   =      72.0 mm
+   F2 = Ten/2/(fo+fw)                                                =      0.03 kN/mm
+    Actual shear in weld = SQRT(F1^2+F2^2)                           =      0.15 kN/mm

@@ -1,0 +1,36 @@
+
+*(12)MEMBER DEPTHS:
+*Surf   ----Depth----  No.   --Interior_Depth-
+* Id    Start     End  Dep    Locate     Depth
+   1   400.00  700.00   1     4000.0    700.00
+   2   400.00  550.00   2     4500.0    300.00
+                              8691.0    300.00
+   3   550.00  400.00   2     2600.0    300.00
+                              6791.0    300.00
+   4   700.00  400.00   1     4170.0    700.00
+
+
+*(13)MEMBER SPLICES:
+*Surf    No.    Splice Splice
+* Id   Splice   Locate  Type
+   1      0
+   2      3        0.0  'HSS'
+                4500.0  '-SS'
+                8691.0  '-SS'
+   3      2     2600.0  '-SS'
+                6791.0  '-SS'
+   4      1        0.0  'HSS'
+
+*(15)INTERIOR COLUMNS:
+*      --------Column-------  Cap   Rafter   Unbrace_Length  ----Column---
+* No.  Id  Typ  Rot   Locate  Conn   Opt     Major    Minor  Set  Part
+   1    1  'W'  'Y'  11235.0  'P '   '-'    9092.0   9092.0  'Y' 'W40b155 '
+ 
+
+*(41)DESIGN PLATES:
+*     ----Plate---   --Plate_Size-   Bolt   Bolt  ----Top---  --Bottom--   Bolt
+*No.  Type      Id   Width   Thick    Dia   Gage  Row  Space  Row  Space  Gage2
+  3  'COL_BASE'  1  200.00   16.00  20.00  100.0   2    0.00   0    0.00   0.00
+     'BASE'      1    0.00    0.00   0.00   0.00   1    0.00   1    0.00   0.00
+     'BASE'      2    0.00    0.00   0.00   0.00   1    0.00   1    0.00   0.00
+ 

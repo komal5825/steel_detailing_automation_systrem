@@ -1,0 +1,34 @@
+*DRAWING: CWI FLANGE PLATES  CELL:CWI_FLG
+*
+*( 1)DRAWING:
+*  Name          Title             Orient
+  'OFE1'        'CWI FLANGE PLATES'  'N'
+
+*( 2)PLATE SIZES:
+*No. Type    Id     Qty   Part           Width   Thick    Length    Offset  Weight Opt
+  1   'OF'    1      2   'OFE1'          150.000   8.000  8960.200     0.00     84.5 '-'
+
+*( 3)PLATE COORDINATES:
+*  No.
+* Coord  X-Coord  Y-Coord
+     4      0.000     0.000
+            0.000  -150.000
+         8960.200  -150.000
+         8960.200     0.000
+
+*( 4)HOLE LOCATION:
+*  No.   Hole  Hole   Hole    Hole    Hole    Hole   Hole  No.  Location
+* Holes  Type   Id    Dia     Slot    Off     Gage   Ang   Loc          
+    0
+
+*( 5)PLATE CUTS:
+* No.  Plate  Plate  Cut  Cut     Cut      Cut
+* Cut  Type     Id   Loc  Type  Width   Length
+    0
+
+*( 6)PLATE MEMBER:
+*No.   Plate        Member
+  2   'OFE1    '   'EC-1        '
+      'OFE1    '   'EC-2        '
+
+   

@@ -1,0 +1,33 @@
+*===============================================================================
+*C323-153            Detail Sheet # 2 Input                  23/JUL/202511:23am
+*===============================================================================
+
+*( 1)TITLE BLOCK:
+  'Sivoko Steel Structures Ltd.            '    .. Manufacturer
+  '                                        '    .. Builder
+  'Proposed Warehouse                      '    .. Project
+  'Proposed Warehouse                      '    .. Project Site
+  '                                        '    .. Project Site
+  'C323-153                                '    .. Project ID
+
+*( 2)DRAWING OPTIONS:
+* Drawing_Size     Drawing_Offset       Detail  Title               Page_Number
+* Width   Height  Lt    Rt    Top  Bot   Size   Scale    Logo        Id   Total
+    420     297     5     5     5    40    75   0.7000 'N       ' '----' '----'
+
+*( 3)PROGRAM SELECTED DETAILS:
+*  No.    Detail            --Insert_Point---    ---Detail_Size---
+* Detail   Name             X_Coord   Y_Coord     Width     Height     Scale
+    8     'S2'                  5.0     217.0      75.0       75.0    2.0833 .. RfDwg-1     
+          'U1'                 80.0     217.0      75.0       75.0    2.0833 .. RfDwg-1     
+          'U2'                155.0     217.0      75.0       75.0    2.0833 .. RfDwg-2     
+          'U5'                230.0     217.0      75.0       75.0    2.0833 .. RfDwg-1     
+          'V2'                305.0     217.0      75.0       75.0    2.0833 .. RfDwg-1     
+          'W8'                  5.0     142.0      75.0       75.0    2.0833 .. EwDwg-L     
+          'X1'                 80.0     142.0      75.0       75.0    2.0833 .. EwDwg-R     
+          'X2'                155.0     142.0      75.0       75.0    2.0833 .. EwDwg-R     
+
+*( 4)USER SELECTED DETAILS:
+*  No.    Detail            --Insert_Point---    ---Detail_Size---
+* Detail   Name             X_Coord   Y_Coord     Width     Height     Scale
+    0

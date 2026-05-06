@@ -1,0 +1,35 @@
+*DRAWING: RIGID FRAME WEB PLATES  CELL:RF_WEB
+*
+*( 1)DRAWING:
+*  Name          Title             Orient
+  'WB4'        'RIGID FRAME WEB PLATES'  'R'
+
+*( 2)PLATE SIZES:
+*No. Type    Id     Qty   Part           Width   Thick    Length    Offset  Weight Opt
+  1   'WB'    4      4   'WB4'           300.000   4.000  4000.000     0.00     38.4 '-'
+
+*( 3)PLATE COORDINATES:
+*  No.
+* Coord  X-Coord  Y-Coord
+     5   8676.725  9131.900
+         8706.576  8833.389
+         4726.427  8435.373
+         4726.427  8435.373
+         4696.576  8733.885
+
+*( 4)HOLE LOCATION:
+*  No.   Hole  Hole   Hole    Hole    Hole    Hole   Hole  No.  Location
+* Holes  Type   Id    Dia     Slot    Off     Gage   Ang   Loc          
+    0
+
+*( 5)PLATE CUTS:
+* No.  Plate  Plate  Cut  Cut     Cut      Cut
+* Cut  Type     Id   Loc  Type  Width   Length
+    0
+
+*( 6)PLATE MEMBER:
+*No.   Plate        Member
+  2   'WB4     '   'RF1-3       '
+      'WB4     '   'RF5-3       '
+
+   

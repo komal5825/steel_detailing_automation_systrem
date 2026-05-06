@@ -1,0 +1,53 @@
+================================================================================
+ C323-153-Final      Design Warning Summary                 11/AUG/2025  1:05pm
+================================================================================
+
+ LEFT ENDWALL
+ ------------
+     No Warnings!
+
+ RIGHT ENDWALL
+ -------------
+     No Warnings!
+
+ FRONT SIDEWALL
+ --------------
+     No Warnings!
+
+ BACK SIDEWALL
+ -------------
+     No Warnings!
+
+ ROOF
+ ----
+     WIND BENT
+       Member
+         WRN(WBM-413): Weld Size < Required
+
+ EXTENSIONS
+ ----------
+     No Warnings!
+
+ RIGID FRAME #1
+ --------------
+     No Warnings!
+
+ RIGID FRAME #2
+ --------------
+     No Warnings!
+
+ RIGID FRAME #3
+ --------------
+     No Warnings!
+
+ RIGID FRAME #4
+ --------------
+     No Warnings!
+
+ RIGID FRAME #5
+ --------------
+     No Warnings!
+
+ CRANE SYSTEM
+ ------------
+     No Warnings!

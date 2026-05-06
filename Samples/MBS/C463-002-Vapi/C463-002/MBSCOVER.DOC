@@ -1,0 +1,62 @@
+
+
+
+
+                               INFINITI SOLUTIONS
+                                                            
+                                      PUNE
+
+
+
+
+                                    @TITLE:C
+                                      FOR
+                                                            
+                                                            
+                                                            
+
+
+
+
+                               Proposed Warehouse
+                                   Warehouse
+                                      Vapi
+                                    C463-002
+
+
+
+
+                                 BUILDING LAYOUT
+                        Width              (mm)=  12800
+                        Length             (mm)=  30500
+                        Eave Height        (mm)=   9100/  9100
+                        Roof Slope   (rise/100)= 10.00/10.00
+
+                                 BUILDING LOADS
+                        Roof Dead Load  (kN/m2)=  0.10 
+                        Wall Dead Load
+                          Left  Endwall (kN/m2)=  0.10 
+                          Right Endwall (kN/m2)=  0.10 
+                          Front Sidewall(kN/m2)=  0.10 
+                          Back  Sidewall(kN/m2)=  0.10 
+                        Live Load       (kN/m2)=  0.57 
+                        Collateral Load (kN/m2)=  0.05 
+                        Wind Speed       (m/s )=  44.0 
+                        Wind Code              = MBMA10              
+                        Exposure               = C     
+                        Closure                = Enclosed            
+                        Internal Wind Coeff    = -0.18, +0.18
+                        Risk Category          = -                                                           
+                        Importance - Wind      =  1.00
+                        Importance - Seismic   =  1.00
+                        Seismic Design Category= C  
+                        Seismic Coeff (Sms)    =  0.16
+                        Temperature Change     =   20 
+                        -------------------------------
+                        Designer : VVJ
+                        Detailer :  
+
+
+
+
+                                     @DATE

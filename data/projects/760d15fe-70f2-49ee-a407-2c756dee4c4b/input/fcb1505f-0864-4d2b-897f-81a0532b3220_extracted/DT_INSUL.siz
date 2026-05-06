@@ -1,0 +1,25 @@
+*                                  DT_INSUL.SIZ
+*
+*
+*   
+* List of available wall and roof insulation.
+*
+*Each item in the insulation file must be unique from the other entries, except that 
+*there can be a starter roll to give the same insulation twice with the first item being 
+*the starter and the second item being used a the interior locations. 
+*Each item is classified by the Type and Thickness. There cannot be multiple Types of 
+*the same thickness, except for the starter roll scenario. 
+*
+*                                                        --Wall--   --Roof---
+*Type   Description               Part      Width  Thick Top  Bot   Eave Peak Lap  Length  Weight
+*                                 Name       (mm)   (mm) (mm) (mm)  (mm) (mm) (mm)  (mm)  (kg/m2)
+*----- ----------------------   ----------  ------ ----- ---- ----  ---- ---- ---- ------ -------
+ 'GW'  'GlassWool 25 NoFoil '   'GW25    '   1200    25     0    0  150   150  0   30000.  1.20
+ 'GW'  'GlassWool 50 NoFoil '   'GW50    '   1200    50     0    0  150   150  0   15000.  1.20
+ 'GW'  'GlassWool 75 W/Foil '   'GW75 F  '   1200    75     0    0  150   150  0    8000.  1.20
+ 'GW'  'GlassWool 50 Local  '   'GW50 LM '   1200    50     0    0  150   150  0   15000.  1.20
+ 'BB'  'Bubble Insul        '   'BBINSUL '   1200    12     0    0  150   150  0   50000.  0.40
+
+
+stop
+ 

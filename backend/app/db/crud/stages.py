@@ -45,3 +45,15 @@ def list_project_stages(db: Session, project_id: UUID) -> list[Stage]:
         .order_by(Stage.stage_code)
         .all()
     )
+
+
+def reset_all_stages(db: Session, project_id: UUID):
+    """Reset all stages for a project to PENDING status."""
+    stages = db.query(Stage).filter(Stage.project_id == project_id).all()
+    for stage in stages:
+        stage.status = StageStatus.PENDING
+        stage.result_json = "{}"
+        stage.error_message = None
+        stage.started_at = None
+        stage.completed_at = None
+    db.flush()

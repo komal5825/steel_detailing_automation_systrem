@@ -20,6 +20,7 @@ from app.agents.phase2.output_utils import (
     load_project_field_map,
     project_output_dir,
     write_json_output,
+    write_processed_json,
 )
 from app.agents.support.checkpoint import CheckpointManager
 from app.agents.support.validator import Validator
@@ -112,7 +113,9 @@ def _validate(project_id: UUID, db: Session) -> dict:
             "blocking_failures": rule_report.blocking_failures,
             "rules_evaluated": len(rule_report.results),
         },
+        "main_output": "reports/p2-05_summary.json",
     }
+    write_processed_json(project_id, "p2-05_summary.json", result)
 
     # ---- 5. Checkpoint ----
     _CHECKPOINT_MGR.record(

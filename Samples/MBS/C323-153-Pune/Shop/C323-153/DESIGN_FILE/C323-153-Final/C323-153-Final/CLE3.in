@@ -1,0 +1,28 @@
+*( 1)DRAWING:WELDED CLIP  CELL:CLIP
+* Name               Title
+ 'CLE3           '  'Weld Clip Drawing'             'N'
+
+*( 2)PLATE SIZE:
+*     Plate  Plate  Plate  Plate         ---------------Plate_Size---------------
+*No.  Type     Id    Quan  Mark               Width   Thick    Length   Offset   Weight  Opt
+   1  'SB'     10       2 'CLE3           ' 120.000   5.0000   120.000   0.0000  0.2800  '-'
+
+*( 3)PLATE COORDINATES:
+* No.
+*Coord  X-Coord  Y-Coord
+   0
+
+*( 4)HOLE LOCATION:
+* No.  Hole  Hole    Hole    Hole    Hole    Hole    Hole  No.
+*Hole  Type   Id      Dia    Slot  Offset    Gage   Angle  Loc  Location
+   0
+
+*( 5)CUTS:
+*No.  --Plate-  Cut  Cut     Cut     Cut
+*Cut  Type  Id  Loc  Type  Width  Length
+  0
+
+*( 6)PLATE MEMBER:
+*No.   Plate           Member
+  1   'CLE3        '   'EC-2      '
+   

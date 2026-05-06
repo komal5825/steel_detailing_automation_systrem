@@ -1,0 +1,19 @@
+{
+  "status": "partial_success",
+  "project_id": "2696dba5-f253-4e4b-979f-bd7d125f68dc",
+  "files_found": 106,
+  "parsed_files": 102,
+  "failed_files": 4,
+  "extracted_fields": 506,
+  "normalized_fields": 0,
+  "governing_file": {
+    "file_id": "7f20ca3e-cc52-4feb-aeaf-4a9648849fb7",
+    "original_filename": "3DBuild.dxf",
+    "file_type": "DXF",
+    "source_application": "CAD",
+    "likely_role": "supporting",
+    "classification_confidence": 90
+  },
+  "governing_details": {},
+  "main_output": "reports/p2-01_summary.json"
+}

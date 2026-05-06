@@ -1,0 +1,333 @@
+{
+  "project_id": "760d15fe-70f2-49ee-a407-2c756dee4c4b",
+  "governing_file": {
+    "file_id": "0d2654aa-3676-46b4-b652-cd19c25bbf13",
+    "original_filename": "BOMext1.DXF",
+    "file_type": "DXF",
+    "source_application": "CAD",
+    "likely_role": "supporting",
+    "classification_confidence": 90
+  },
+  "selection_method": "HIGHEST_CONFIDENCE_WITH_SOURCE_PRIORITY",
+  "rationale": "Selected 'BOMext1.DXF' (type=DXF, confidence=90)",
+  "candidates": [
+    {
+      "file_id": "0d2654aa-3676-46b4-b652-cd19c25bbf13",
+      "original_filename": "BOMext1.DXF",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "6839b883-48d9-452e-80ac-6a97848b0638",
+      "original_filename": "BOMext2.DXF",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "20f03232-97c7-4ab3-897e-b41a9d7e4eea",
+      "original_filename": "CompDes.Dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "a7e24a99-0a28-46b7-95f6-50ffbacf36d3",
+      "original_filename": "COMPDET.Dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "3aea9c44-cfe3-492d-bbdb-c7cb7c492b09",
+      "original_filename": "CraneDes.Dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "4078635d-da61-4eb4-9f0e-969c7d2731ce",
+      "original_filename": "CraneDet.Dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "11b512dc-4ee5-4f1e-96bc-0e1b6879e650",
+      "original_filename": "DesCalc.Dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "11a2b084-8265-46a3-94d2-bbef50b1b173",
+      "original_filename": "DesCalc2.Dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "efd80795-ea75-4f30-862d-2f32b69b89f2",
+      "original_filename": "DesCalc3.Dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "ec36d094-5dbd-453f-8d83-2b0d6faa5d1d",
+      "original_filename": "DesCtrl.Dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "c6527d39-1e56-4bf3-b521-0b376e530a34",
+      "original_filename": "EwDes-L.Dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "4e5a7f24-42d1-47d0-a592-5ccc4fe19b76",
+      "original_filename": "EwDes-R.Dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "b1b24381-d093-4d4b-9246-43c3e5d7f44c",
+      "original_filename": "EWDET.Dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "4f676182-ccda-4a35-b8a1-69a2f13d9015",
+      "original_filename": "FLOORDET.Dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "9af80b70-6833-4a4a-b994-dc63869c170e",
+      "original_filename": "FramSum.Dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "d7a14ab0-3c01-4b42-8d85-156e83c45e5c",
+      "original_filename": "JACKDET.Dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "5ce0cf26-5ec6-4fa7-8233-99d4f735836c",
+      "original_filename": "PARTDET.Dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "6ed78fc7-cbf5-4282-826a-77ce326f149b",
+      "original_filename": "RfDes-1.Dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "314d1b4c-4544-4ae0-be87-bfaf0a87209b",
+      "original_filename": "RfDes-2.Dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "121756dc-8042-43fa-8334-17410af14084",
+      "original_filename": "RfDet-1.Dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "188e32d7-9844-4249-9eec-1a1f37e118f9",
+      "original_filename": "RfDet-2.Dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "e3bb2fb6-b4a9-4580-9e2a-53a9e76455c5",
+      "original_filename": "RoofDes.Dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "a8ffe336-7c93-470c-b6b7-ae56cff4b6c9",
+      "original_filename": "SHIP.XLS",
+      "file_type": "EXCEL",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "f41e1cca-09cb-4e39-b947-e6acf684e83d",
+      "original_filename": "SwDes-B.Dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "44702fa9-d96d-49ed-abf0-ea6018ed0ca5",
+      "original_filename": "SwDes-F.Dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "fd2764a2-2ef9-4787-b596-a580dbf2edb7",
+      "original_filename": "WINDFRM.Dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "496a086e-e653-4b29-a6ec-51f005b849e7",
+      "original_filename": "RfDes-3.Dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "a1f7c624-3546-401c-859f-98fb7676a0f4",
+      "original_filename": "3DBuild.dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "2ccc7bfc-3418-4764-9355-4e162ea20f41",
+      "original_filename": "AnDwg-1.dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "29ba8e90-d7f7-4973-b82c-939dda773728",
+      "original_filename": "AnDwg-2.dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "9435e535-85e9-4aac-a537-cb2f23d6f7f6",
+      "original_filename": "AnDwg-3.dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "aece54d5-53a6-4f35-8324-251fd80996b1",
+      "original_filename": "BrcDwg.dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "7049e24f-ef31-419c-a98a-32ec6119f233",
+      "original_filename": "DtDwg-1.dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "af7d8e99-aa5f-4c5a-a2c2-a0fe19c3d6b8",
+      "original_filename": "DtDwg-2.dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "63b9b9d7-e817-406b-b5a8-2d39e4a06641",
+      "original_filename": "EwDwg-L.dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "3336d649-7dc6-4726-9209-4556750c952d",
+      "original_filename": "EwDwg-R.dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "70868c5d-b871-45ea-9ac2-9d91f55b70ef",
+      "original_filename": "LayOut.Dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "30281b01-1940-47b3-9ffe-f1d44cb57c0c",
+      "original_filename": "RfDwg-1.dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "33957ebd-2a63-4688-8925-eb45f70acd99",
+      "original_filename": "RfDwg-1A.dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "1412f301-776c-409e-8fec-34278178d4bc",
+      "original_filename": "RfDwg-1B.dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "8ee4836a-0ccc-456e-96ed-835d9dfac23e",
+      "original_filename": "RfDwg-2.dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "5538be57-8f25-411a-89ed-d196c3bcef82",
+      "original_filename": "RfDwg-2A.dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "6caa22e3-d9d6-40fa-8db8-2c5fb1c22c4d",
+      "original_filename": "RfDwg-2B.dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "af2c8796-a0ad-4ed0-bd4b-a98fa7ff9394",
+      "original_filename": "RfDwg-2C.dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "f9dff645-3d33-4041-8201-280d2c3cc85a",
+      "original_filename": "RoofDwg.dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "01b9a880-3da8-4edf-8785-27f1f93324fa",
+      "original_filename": "RoofDwg2.dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "da52e754-f56c-435c-bc5c-9ad5079aaea4",
+      "original_filename": "RoofDwg3.dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "cf0835f9-e3ec-489f-b6c4-3aa5f75f2bfe",
+      "original_filename": "RoofZone1.Dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "41263311-5aba-48a2-ad6e-6a0e03eadddb",
+      "original_filename": "RoofZone2.Dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "5a13f645-1b48-4d01-b484-8dabed1803aa",
+      "original_filename": "SwDwg-B.dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "8bb7ee6d-33c1-4451-8bad-a9ef071889c9",
+      "original_filename": "SwDwg-F.dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "c2af999b-9099-428a-9cba-216f302134e5",
+      "original_filename": "ZoneDwg.dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "709eb21c-bde3-4cdd-8c77-4b9faae0ff0f",
+      "original_filename": "ZoneWind.dxf",
+      "file_type": "DXF",
+      "classification_confidence": 90
+    }
+  ]
+}

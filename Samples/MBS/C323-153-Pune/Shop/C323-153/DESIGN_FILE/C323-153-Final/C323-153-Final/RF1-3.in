@@ -1,0 +1,214 @@
+* SHOP DRAWING: RIGID FRAME ASSEMBLY   CELL:Asm_Dwg
+*( 1)PAGE LAYOUT:
+*---Page_Size---  ---------Offset-------  ----------Scale_Factors--------- Detail
+* Width   Height   Lt    Rt    Top   Bot  Piece  Text  Table  Dimen  Title   Size  Logo
+ 841.00   594.00  0.00  0.00  0.00  0.00   1.00  1.40   1.00   1.00   1.50  75.00 'N'
+
+*( 2)PIECE TYPE:
+* Piece  Piece  Piece  Drawing  
+* Type    Orn    Qnt   Name     Mark      Part
+   'R'    'R'      2   'RF1-3'  'RF1-3'     '--------'
+
+*( 3)WEB PLATE COORDINATES:
+*  No.   Plate  Plate   No.   X-Coord   Y-Coord
+* Plate  Type    Id    Coord    (mm)      (mm)
+    1    'WB'     1      5   8676.725  9131.900
+                             8706.576  8833.389
+                             4726.427  8435.373
+                             4726.427  8435.373
+                             4696.576  8733.885
+
+*( 4)WEB CUTS:
+*No.   Plt  Plt Cut   -----------Left(mm)-----------  ------------Right(mm)---------
+*Cuts  Type Id  Type      Cut      Ls      Li      Le     Cut      Rs      Ri      Re
+  1    'WB'  1  'PP'   300.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00
+
+*( 5)OUTSIDE FLANGE PLATE COORDINATES:
+*  No.   Plate  Plate   No.   X-Coord   Y-Coord
+* Plate  Type    Id    Coord    (mm)      (mm)
+    1    'OF'     1      2   8676.725  9131.900
+                             4696.576  8733.885
+
+*( 6)INSIDE FLANGE PLATE COORDINATES:
+*  No.   Plate  Plate   No.   X-Coord   Y-Coord
+* Plate  Type    Id    Coord    (mm)      (mm)
+    1    'IF'     1      2   8706.576  8833.389
+                             4726.427  8435.374
+
+*( 7)END PLATES COORDINATES:
+*  No.   Plate  Plate   No.   X-Coord   Y-Coord
+* Plate  Type    Id    Coord    (mm)      (mm)
+    2    'EP'     1      2   8666.774  9231.404
+                             8716.526  8733.885
+         'EP'     2      2   4686.626  8833.389
+                             4736.378  8335.869
+     
+
+*( 8)PLATE SIZES:
+* No.   -------Plate-----------                 ----------Plate_Size(mm)----------
+*Plate  Type  Id   Qnt  Part                     Width   Thick    Length  Len(2)   Weight  Opt
+  11    'WB'   1    1  'WB4                 '  300.000   4.000  4000.000   0.000    38.40  '-'
+        'BC'   1    2  'CLF1                '   75.000   5.000    75.000   0.000     0.22  '-'
+        'OF'   1    1  'OF4                 '  125.000   5.000  4000.000   0.000    20.00  '-'
+        'PC'   1    3  'CLF4                '  150.000   5.000   145.000   0.000     0.87  '-'
+        'IF'   1    1  'IF4                 '  125.000   5.000  3999.999   0.000    20.00  '-'
+        'EP'   1    1  'EP3                 '  200.000  16.000   500.001   0.000    12.80  '-'
+        'EP'   2    1  'EP3                 '  200.000  16.000   500.001   0.000    12.80  '-'
+        'SS'   1    1  'SS5                 '  120.000   5.000    95.001   0.000     0.46  '-'
+        'SS'   2    1  'SS5                 '  120.000   5.000    95.001   0.000     0.46  '-'
+        'SS'   3    1  'SS5                 '  120.000   5.000    95.001   0.000     0.46  '-'
+        'SS'   4    1  'SS5                 '  120.000   5.000    95.001   0.000     0.46  '-'
+    
+
+*( 9)PLATE LOCATION:
+* No.   Plate  Plate  2nd_Plate -Plate--    Loc  Plate  No.  Location
+*Plate  Type    Id    Type  Id  Side Rot    Off  Angle  Loc     (mm)
+   5     'BC'    1    'WB'   1  'F'  'R'   0.00  0.0000  1   1835.100
+         'BC'    1    'WB'   1  'B'  'R'   0.00  0.0000  1   1835.100
+         'PC'    1    'OF'   1  '-'  'L'   0.00  0.0000  3    461.201
+                                                             1835.100
+                                                             3209.000
+         'EP'    1    '  '   0  '-'  '-'  95.00  0.0000  0
+         'EP'    2    '  '   0  '-'  '-'  95.00  0.0000  0
+    
+
+*(10)HOLE LOCATION:
+* No.  Plate Plate  Hole   Hole   Slot/    Hole   Hole  No.  Location
+*Holes  Type   Id   Dia    Gage   Gage2     Off   Angle Loc     (mm)
+   4    'BC '    1  14.00    0.0    0.00   50.00  0.0000   1    25.0000
+        'PC '    1  14.00  100.0    0.00    0.00  0.0000   2    25.0000
+                                                             105.0000
+        'EP '    1  22.00  100.0    0.00    0.00  0.0000   4    50.0000
+                                                             150.0000
+                                                             350.0000
+                                                             450.0000
+        'EP '    2  22.00  100.0    0.00    0.00  0.0000   4    50.0000
+                                                             150.0000
+                                                             350.0000
+                                                             450.0000
+    
+
+*(11)FINISH COORDINATES:
+*  No.   X-Coord   Y-Coord
+* Coord    (mm)      (mm)
+    4   8692.148  9138.467
+        8722.994  8830.006
+        4711.004  8428.806
+        4680.158  8737.267
+
+*(12)WELDS:
+*  No.  Plate  Plate 2nd   Weld  Weld  Weld
+* Welds  Type   Id   Plate Type  Size  Note
+   19    'WB'    1   'OF'  'F1'   4.00  '-'
+         'WB'    1   'IF'  'F1'   4.00  '-'
+         'EP'    1   'OF'  'F2'   4.00  '-'
+         'EP'    1   'IF'  'F2'   4.00  '-'
+         'EP'    1   'WB'  'F2'   4.00  '-'
+         'EP'    2   'OF'  'F2'   4.00  '-'
+         'EP'    2   'IF'  'F2'   4.00  '-'
+         'EP'    2   'WB'  'F2'   4.00  '-'
+         'BC'    1   'WB'  'F1'   4.00  '-'
+         'BC'    1   'IF'  'F1'   4.00  '-'
+         'PC'    1   'OF'  'F1'   4.00  '-'
+         'SS'    1   'EP'  'F1'   4.00  '-'
+         'SS'    1   'OF'  'F1'   4.00  '-'
+         'SS'    2   'EP'  'F1'   4.00  '-'
+         'SS'    2   'IF'  'F1'   4.00  '-'
+         'SS'    3   'EP'  'F1'   4.00  '-'
+         'SS'    3   'OF'  'F1'   4.00  '-'
+         'SS'    4   'EP'  'F1'   4.00  '-'
+         'SS'    4   'IF'  'F1'   4.00  '-'
+     
+
+*(13)USER DETAILS:
+*  No.    Detail            Location
+* Detail    Id              X        Y       Scale
+    7    'ASMSECTN    '   225.000  430.000    35.000
+         'ASMBOLT     '   385.000   40.000    25.000
+         'ASMSLOT     '   445.000    0.000    25.000
+         'ASMPIECE    '    43.000  292.000    25.000
+         'WEBHOLE1    '   363.000  100.000    25.000
+         'ASM_WELD    '   764.269  594.000    25.000
+         'ASMVIEW     '   225.000  385.000    25.000
+     
+
+*(14)OPTIONS:
+* Option
+  '-' .. 1
+  '8' .. 2
+  '8' .. 3
+  '2' .. 4
+  '2' .. 5
+  '1' .. 6
+  '1' .. 7
+  '1' .. 8
+  '2' .. 9
+  '2' .. 10
+  '1' .. 11
+  '1' .. 12
+  '2' .. 13
+  '3' .. 14
+  '2' .. 15
+  '2' .. 16
+  '2' .. 17
+  '2' .. 18
+  '2' .. 19
+  '1' .. 20
+  '1' .. 21
+  '2' .. 22
+  '2' .. 23
+  '2' .. 24
+  '2' .. 25
+  '2' .. 26
+  '2' .. 27
+  '1' .. 28
+  '2' .. 29
+  '2' .. 30
+  '2' .. 31
+  '3' .. 32
+  '3' .. 33
+  '3' .. 34
+  '3' .. 35
+  '2' .. 36
+  '1' .. 37
+  '1' .. 38
+  '2' .. 39
+  '2' .. 40
+  '1' .. 41
+  '1' .. 42
+  '1' .. 43
+  '2' .. 44
+  '2' .. 45
+  '1' .. 46
+  '2' .. 47
+  '1' .. 48
+  '2' .. 49
+  '1' .. 50
+  '2' .. 51
+  '2' .. 52
+  '1' .. 53
+  '-' .. 54
+  '-' .. 55
+  '-' .. 56
+  '1' .. 57
+  '3' .. 58
+  '-' .. 59
+  '2' .. 60
+  '-' .. 61
+  '-' .. 62
+  'N' .. 63
+
+*(15)PIECE TABLE:
+* No.
+*Piece  Mark          Quan    Weight   Description
+    0
+
+*(16)PLATE CUTS:
+* No.  Plate  Plate  Cut  Cut     Cut     Cut
+* Cut  Type     Id   Loc  Type  Width  Length
+    5  'BC'      1    4   'C'  15.000  15.000
+       'SS'      1    1   'C' 120.000  95.001
+       'SS'      2    1   'C' 120.000  95.001
+       'SS'      3    1   'C' 120.000  95.001
+       'SS'      4    1   'C' 120.000  95.000
+     

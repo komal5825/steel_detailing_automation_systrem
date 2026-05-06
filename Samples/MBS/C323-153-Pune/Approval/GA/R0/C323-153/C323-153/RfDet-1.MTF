@@ -1,0 +1,98 @@
+[RFDET-1:MEMBER1  ]
+Type=FRAME_RIGID
+Id=  1
+Mark=RF1-1       
+Wall=5
+LineId=1
+[RFDET-1:MEMBER2  ]
+Type=FRAME_RIGID
+Id=  2
+Mark=RF1-2       
+Wall=5
+LineId=1
+[RFDET-1:MEMBER3  ]
+Type=FRAME_RIGID
+Id=  3
+Mark=RF1-3       
+Wall=5
+LineId=1
+[RFDET-1:MEMBER4  ]
+Type=FRAME_RIGID
+Id=  4
+Mark=RF1-4       
+Wall=5
+LineId=1
+[RFDET-1:MEMBER5  ]
+Type=FRAME_RIGID
+Id=  5
+Mark=RF1-3       
+Wall=5
+LineId=1
+[RFDET-1:MEMBER6  ]
+Type=FRAME_RIGID
+Id=  6
+Mark=RF1-2       
+Wall=5
+LineId=1
+[RFDET-1:MEMBER7  ]
+Type=FRAME_RIGID
+Id=  7
+Mark=RF1-5       
+Wall=5
+LineId=1
+[RFDET-1:MEMBER8  ]
+Type=FRAME_RIGID
+Id=  8
+Mark=--------    
+Wall=5
+LineId=1
+Part=W40b155 
+[RFDET-1:MEMBER9  ]
+Type=FRAME_RIGID
+Id=  9
+Mark=RF1-1       
+Wall=5
+LineId=7
+[RFDET-1:MEMBER10 ]
+Type=FRAME_RIGID
+Id= 10
+Mark=RF1-2       
+Wall=5
+LineId=7
+[RFDET-1:MEMBER11 ]
+Type=FRAME_RIGID
+Id= 11
+Mark=RF1-3       
+Wall=5
+LineId=7
+[RFDET-1:MEMBER12 ]
+Type=FRAME_RIGID
+Id= 12
+Mark=RF1-4       
+Wall=5
+LineId=7
+[RFDET-1:MEMBER13 ]
+Type=FRAME_RIGID
+Id= 13
+Mark=RF1-3       
+Wall=5
+LineId=7
+[RFDET-1:MEMBER14 ]
+Type=FRAME_RIGID
+Id= 14
+Mark=RF1-2       
+Wall=5
+LineId=7
+[RFDET-1:MEMBER15 ]
+Type=FRAME_RIGID
+Id= 15
+Mark=RF1-6       
+Wall=5
+LineId=7
+[RFDET-1:MEMBER16 ]
+Type=FRAME_RIGID
+Id= 16
+Mark=--------    
+Wall=5
+LineId=7
+Part=W40b155 

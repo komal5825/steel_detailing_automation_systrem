@@ -206,7 +206,9 @@ def _generate_ab(project_id: UUID, db: Session) -> dict:
         },
         "field_summary": ab_package["field_summary"],
         "overall": "PASS",
+        "main_output": "reports/p2-03_summary.json",
     }
+    write_processed_json(project_id, "p2-03_summary.json", result)
     update_stage_result(db, project_id=project_id, stage_code="P2-03",
                         status=StageStatus.PASSED, result=result)
     log_audit_event(db, "STAGE_PASSED", project_id=project_id, stage_code="P2-03",
@@ -224,43 +226,62 @@ def _generate_ab(project_id: UUID, db: Session) -> dict:
 def _build_grid_references(fm: dict[str, str]) -> dict:
     labels_x = _split_labels(fm.get("F-041"), default=["A", "B"])
     labels_y = _split_labels(fm.get("F-042"), default=["1", "2"])
-    spacing_x = _to_float(fm.get("F-039"), 6000.0)
-    spacing_y = _to_float(fm.get("F-040"), 6000.0)
     origin_x = _to_float(fm.get("F-043"), 0.0)
     origin_y = _to_float(fm.get("F-044"), 0.0)
-    bay_dim = _to_float(fm.get("F-172"), spacing_x)
+    bay_dim   = _to_float(fm.get("F-172"), 6000.0)
+
+    # F-039 / F-040 may be CSV strings: "6200.0,5990.0,5730.0,…"
+    n_bays_x = max(len(labels_x) - 1, 1)
+    n_bays_y = max(len(labels_y) - 1, 1)
+    spacings_x = _parse_spacing_list(fm.get("F-039"), n_bays_x, 6000.0)
+    spacings_y = _parse_spacing_list(fm.get("F-040"), n_bays_y, 6000.0)
+
+    # Primary (first) spacing used for legacy single-value consumers
+    spacing_x = spacings_x[0] if spacings_x else 6000.0
+    spacing_y = spacings_y[0] if spacings_y else 6000.0
 
     return {
-        "grid_lines_x": labels_x,
-        "grid_lines_y": labels_y,
-        "grid_spacing_x_mm": spacing_x,
-        "grid_spacing_y_mm": spacing_y,
-        "grid_origin_x_mm": origin_x,
-        "grid_origin_y_mm": origin_y,
-        "total_span_x_mm": spacing_x * max(len(labels_x) - 1, 1),
-        "total_span_y_mm": spacing_y * max(len(labels_y) - 1, 1),
-        "bay_dimension_mm": bay_dim,
+        "grid_lines_x":       labels_x,
+        "grid_lines_y":       labels_y,
+        "spacings_x_mm":      spacings_x,   # per-bay list
+        "spacings_y_mm":      spacings_y,   # per-bay list
+        "grid_spacing_x_mm":  spacing_x,    # first bay (legacy)
+        "grid_spacing_y_mm":  spacing_y,    # first bay (legacy)
+        "grid_origin_x_mm":   origin_x,
+        "grid_origin_y_mm":   origin_y,
+        "total_span_x_mm":    sum(spacings_x),
+        "total_span_y_mm":    sum(spacings_y),
+        "bay_dimension_mm":   bay_dim,
     }
 
 
 def _build_column_locations(grid: dict) -> list[dict]:
-    labels_x = grid["grid_lines_x"]
-    labels_y = grid["grid_lines_y"]
-    sx = grid["grid_spacing_x_mm"]
-    sy = grid["grid_spacing_y_mm"]
+    labels_x  = grid["grid_lines_x"]
+    labels_y  = grid["grid_lines_y"]
+    spacings_x = grid["spacings_x_mm"]
+    spacings_y = grid["spacings_y_mm"]
     ox = grid["grid_origin_x_mm"]
     oy = grid["grid_origin_y_mm"]
     nx, ny = len(labels_x), len(labels_y)
+
+    # Cumulative positions along each axis
+    x_pos: list[float] = [ox]
+    for s in spacings_x:
+        x_pos.append(x_pos[-1] + s)
+
+    y_pos: list[float] = [oy]
+    for s in spacings_y:
+        y_pos.append(y_pos[-1] + s)
 
     locations = []
     for i, lx in enumerate(labels_x):
         for j, ly in enumerate(labels_y):
             is_corner = (i in (0, nx - 1)) and (j in (0, ny - 1))
-            is_edge = not is_corner and (i in (0, nx - 1) or j in (0, ny - 1))
+            is_edge   = not is_corner and (i in (0, nx - 1) or j in (0, ny - 1))
             locations.append({
-                "grid_ref": f"{lx}{ly}",
-                "x_mm": ox + i * sx,
-                "y_mm": oy + j * sy,
+                "grid_ref":    f"{lx}{ly}",
+                "x_mm":        x_pos[i],
+                "y_mm":        y_pos[j],
                 "column_type": "CORNER" if is_corner else ("EDGE" if is_edge else "INTERNAL"),
             })
     return locations
@@ -270,7 +291,12 @@ def _build_bolt_specification(fm: dict[str, str]) -> dict:
     diam = fm.get("F-081", "M20")
     grade = fm.get("F-082", "8.8")
     embedment = _to_float(fm.get("F-086"), 450.0)
-    projection = _to_float(fm.get("F-087") or fm.get("F-192"), 75.0)
+    # F-087 = bolt projection above base plate; F-193 = grout pad thickness
+    # F-192 = total above-plate length = F-087 + F-193 (derived if not explicit)
+    bolt_proj = _to_float(fm.get("F-087"), 75.0)
+    grout_pad = _to_float(fm.get("F-193"), 50.0)
+    f192_raw = fm.get("F-192", "")
+    projection = _to_float(f192_raw, bolt_proj + grout_pad) if f192_raw else bolt_proj + grout_pad
     return {
         "diameter": diam,
         "diameter_mm": _parse_bolt_mm(diam),
@@ -278,6 +304,8 @@ def _build_bolt_specification(fm: dict[str, str]) -> dict:
         "standard": "AS 1252 / ISO 4016",
         "anchor_code": fm.get("F-089", ""),
         "embedment_depth_mm": embedment,
+        "bolt_projection_mm": bolt_proj,
+        "grout_pad_mm": grout_pad,
         "projection_mm": projection,
         "total_length_mm": embedment + projection,
         "connection_type": fm.get("F-075", "Bolted"),
@@ -405,17 +433,25 @@ def _write_plan_view_dxf(pkg: dict, path: Path) -> None:
     bolt_pat = pkg["bolt_pattern"]
     base_plate = pkg["base_plate"]
 
-    sx = grid["grid_spacing_x_mm"]
-    sy = grid["grid_spacing_y_mm"]
     lx = grid["grid_lines_x"]
     ly = grid["grid_lines_y"]
-    total_x = sx * max(len(lx) - 1, 1)
-    total_y = sy * max(len(ly) - 1, 1)
+    spacings_x = grid["spacings_x_mm"]
+    spacings_y = grid["spacings_y_mm"]
+    total_x = grid["total_span_x_mm"]
+    total_y = grid["total_span_y_mm"]
     ext = 800.0
+
+    # Cumulative grid line positions
+    x_pos: list[float] = [0.0]
+    for s in spacings_x:
+        x_pos.append(x_pos[-1] + s)
+    y_pos: list[float] = [0.0]
+    for s in spacings_y:
+        y_pos.append(y_pos[-1] + s)
 
     # Grid lines
     for i, label in enumerate(lx):
-        x = i * sx
+        x = x_pos[i]
         msp.add_line((x, -ext), (x, total_y + ext),
                      dxfattribs={"layer": "GRID"})
         msp.add_text(label, dxfattribs={"height": 200, "layer": "TEXT",
@@ -424,7 +460,7 @@ def _write_plan_view_dxf(pkg: dict, path: Path) -> None:
                                          "insert": (x - 100, total_y + ext + 100)})
 
     for j, label in enumerate(ly):
-        y = j * sy
+        y = y_pos[j]
         msp.add_line((-ext, y), (total_x + ext, y),
                      dxfattribs={"layer": "GRID"})
         msp.add_text(label, dxfattribs={"height": 200, "layer": "TEXT",
@@ -434,21 +470,21 @@ def _write_plan_view_dxf(pkg: dict, path: Path) -> None:
 
     # Bay spacing dimensions
     for i in range(len(lx) - 1):
-        x1, x2 = i * sx, (i + 1) * sx
+        x1, x2 = x_pos[i], x_pos[i + 1]
         dy = -ext - 600
         msp.add_line((x1, dy), (x2, dy), dxfattribs={"layer": "DIM"})
         msp.add_line((x1, dy - 100), (x1, dy + 100), dxfattribs={"layer": "DIM"})
         msp.add_line((x2, dy - 100), (x2, dy + 100), dxfattribs={"layer": "DIM"})
-        msp.add_text(f"{sx:.0f}", dxfattribs={"height": 150, "layer": "DIM",
+        msp.add_text(f"{spacings_x[i]:.0f}", dxfattribs={"height": 150, "layer": "DIM",
                                                "insert": ((x1 + x2) / 2 - 100, dy - 250)})
 
     for j in range(len(ly) - 1):
-        y1, y2 = j * sy, (j + 1) * sy
+        y1, y2 = y_pos[j], y_pos[j + 1]
         dx = total_x + ext + 600
         msp.add_line((dx, y1), (dx, y2), dxfattribs={"layer": "DIM"})
         msp.add_line((dx - 100, y1), (dx + 100, y1), dxfattribs={"layer": "DIM"})
         msp.add_line((dx - 100, y2), (dx + 100, y2), dxfattribs={"layer": "DIM"})
-        msp.add_text(f"{sy:.0f}", dxfattribs={"height": 150, "layer": "DIM",
+        msp.add_text(f"{spacings_y[j]:.0f}", dxfattribs={"height": 150, "layer": "DIM",
                                                "insert": (dx + 50, (y1 + y2) / 2 - 75)})
 
     # Columns: base plate + bolt pattern
@@ -793,43 +829,51 @@ def _pdf_draw_plan(page, pkg: dict, W: float, H: float) -> None:
     cols = pkg["column_locations"]
     bolt_pat = pkg["bolt_pattern"]
     base_plate = pkg["base_plate"]
-    bolt_spec = pkg["bolt_specification"]
-
     # Drawing area (leave title block space)
     draw_x0, draw_y0 = 40.0, 40.0
     draw_w = W - 80
     draw_h = H - 150
 
-    sx_mm = grid["grid_spacing_x_mm"]
-    sy_mm = grid["grid_spacing_y_mm"]
     lx = grid["grid_lines_x"]
     ly = grid["grid_lines_y"]
-    total_x_mm = sx_mm * max(len(lx) - 1, 1)
-    total_y_mm = sy_mm * max(len(ly) - 1, 1)
+    spacings_x_mm = grid["spacings_x_mm"]
+    spacings_y_mm = grid["spacings_y_mm"]
+    total_x_mm = grid["total_span_x_mm"]
+    total_y_mm = grid["total_span_y_mm"]
+
+    # Cumulative grid positions
+    x_pos_mm: list[float] = [0.0]
+    for s in spacings_x_mm:
+        x_pos_mm.append(x_pos_mm[-1] + s)
+    y_pos_mm: list[float] = [0.0]
+    for s in spacings_y_mm:
+        y_pos_mm.append(y_pos_mm[-1] + s)
 
     # Scale to fit drawing area
     scale = min(draw_w / max(total_x_mm, 1) * 0.75,
                 draw_h / max(total_y_mm, 1) * 0.75)
     off_x = draw_x0 + (draw_w - total_x_mm * scale) / 2
     off_y = draw_y0 + draw_h * 0.1
+    margin_x = (spacings_x_mm[0] if spacings_x_mm else 6000.0) * 0.1
+    margin_y = (spacings_y_mm[0] if spacings_y_mm else 6000.0) * 0.1
 
     def mm2pt(x_mm: float, y_mm: float):
         return (off_x + x_mm * scale, off_y + y_mm * scale)
 
     # Grid lines
     for i, label in enumerate(lx):
-        x_mm = i * sx_mm
-        p1 = mm2pt(x_mm, -sy_mm * 0.1)
-        p2 = mm2pt(x_mm, total_y_mm + sy_mm * 0.1)
+        x_mm = x_pos_mm[i]
+        p1 = mm2pt(x_mm, -margin_y)
+        p2 = mm2pt(x_mm, total_y_mm + margin_y)
         page.draw_line(fitz.Point(*p1), fitz.Point(*p2),
                        color=(0.6, 0.6, 0.6), width=0.5, dashes="[4 2]")
         page.insert_text(fitz.Point(p2[0] - 5, p2[1] + 12),
                          label, fontsize=8, color=(0, 0, 0.6))
 
     for j, label in enumerate(ly):
-        y_mm = j * sy_mm
-        p1 = mm2pt(-sx_mm * 0.1, y_mm)
-        p2 = mm2pt(total_x_mm + sx_mm * 0.1, y_mm)
+        y_mm = y_pos_mm[j]
+        p1 = mm2pt(-margin_x, y_mm)
+        p2 = mm2pt(total_x_mm + margin_x, y_mm)
         page.draw_line(fitz.Point(*p1), fitz.Point(*p2),
                        color=(0.6, 0.6, 0.6), width=0.5, dashes="[4 2]")
         page.insert_text(fitz.Point(p1[0] - 14, p1[1] + 3),
@@ -1111,3 +1155,34 @@ def _split_labels(label_str: str | None, default: list[str]) -> list[str]:
         return default
     parts = [p.strip() for p in str(label_str).replace(";", ",").split(",")]
     return [p for p in parts if p] or default
+
+
+def _parse_spacing_list(
+    spacing_str: str | None,
+    n_bays: int,
+    default_spacing: float,
+) -> list[float]:
+    """
+    Parse F-039/F-040 which may be either a single float or a CSV of per-bay spacings.
+
+    Returns a list of length *n_bays*. If the CSV has fewer entries than n_bays,
+    the last value is repeated to fill. If there's no valid value, *default_spacing*
+    fills all bays.
+    """
+    if not spacing_str:
+        return [default_spacing] * n_bays
+    raw = str(spacing_str).strip()
+    parts = [p.strip() for p in raw.replace(";", ",").split(",") if p.strip()]
+    spacings: list[float] = []
+    for p in parts:
+        try:
+            v = float(p.replace("mm", "").replace("m", "").strip())
+            spacings.append(v)
+        except ValueError:
+            pass
+    if not spacings:
+        return [default_spacing] * n_bays
+    # Pad or truncate to exactly n_bays
+    while len(spacings) < n_bays:
+        spacings.append(spacings[-1])
+    return spacings[:n_bays]

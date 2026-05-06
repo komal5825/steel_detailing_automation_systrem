@@ -1,0 +1,62 @@
+*                          FILE: REPORT.SIZ      
+*
+  '2'  1 SHIP       Type 1,2,3,4 See program enhancement 8-93-1 for description.
+  'N'  2 SHIP       Report complexity: Y=same data as BOM, N=only shipping data
+  '0'  3 SHIP       Cost options.
+  '1'  4 SHIP       Name for shop drawing to be like Z1 or P-1.
+  'N'  5 BOM        Input echo (Yes, No, or Input file)
+  'Y'  6 BOM        Costing information included (Yes, or No)
+  '-'  7 BOM
+  '-'  8
+  '-'  9
+  '-'  10
+
+*(11)Endwall Design Reports
+* Input  Column  Wall  Door   Wall   Cable
+* Echo   Rafter  Girt  Jamb   Panel  Brace
+  'Y'    'Y'     'Y'   'Y'    'Y'   'Y'
+
+*(12)Sidewall Design Reports
+* Input  Wall   Door  Wall
+* Echo   Girt   Jamb  Panel
+  'Y'    'Y'    'Y'   'Y'
+
+*(13)Roof Design Reports
+* Input  Purlin   Purlin    Eave   Roof   Cable
+* Echo   Design   Summary   Strut  Panel  Brace
+  'Y'    'Y'       'Y'      'Y'    'Y'     'Y'
+
+*(14)Rigid Frame Design Reports
+* Input Design   End  Base  Revise Action Sec  Flange Segment Unbrc Floor Cable
+* Echo  Summary Plate Plate Input  Stress Prop Brace  Displ.   Len  React React
+  'Y'    'Y'     'Y'   'Y'   'Y'    'N'   'N'   'Y'     'N'    'N'   'N'   'N'
+
+*(15)Component Design Reports
+* Input  Ext   End  Flange 
+* Echo   Beam Plate Brace  Future  Future
+  'I'    'Y'   'Y'   'Y'    '-'     '-'
+
+*(16)Partition Design Reports
+* Input  Column  Wall   Door  Wall
+* Echo   Rafter  Girt   Jamb  Panel  Future
+  'I'     'Y'     'Y'   'Y'    'Y'    '-'
+
+*(17)Soldier Column Design Reports
+* Input  Column  
+* Echo   Rafter  Cable  Future  Future
+  'I'     '3'     'Y'    '-'     '-'
+
+*(18)Crane Design Reports
+* Input  Runway   Aux     Aux    Cable
+* Echo    Beam    Beam   Column  Brace  Future
+  'I'     'Y'     'Y'     'Y'     'Y'     '-'
+
+*(19)Jack Beam Design Reports:
+* Input Design   End   Action   Sec  Segment Unbrc 
+* Echo  Summary Plate Strength Prop   Displ.  Len   Future
+  'I'    'Y'     'Y'     'N'    'N'    'N'    'N'     '-'
+
+*(20)Floor Design Reports:
+*Input  ---Beam/Columns---  ------Joists------  ----Panel---
+*Echo   Design Conn  Extra  Design Conn  Extra  Design Extra  Brace
+  'Y'     'M'   'Y'  'UA  '    'M'   'Y'  'N  '    'Y'  'N  '   'Y'

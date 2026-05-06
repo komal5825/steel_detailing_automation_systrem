@@ -7,10 +7,14 @@ export const projectsApi = {
 
   getOne: (uuid) => client.get(`/projects/${uuid}`),
 
-  uploadFiles: (uuid, formData) =>
+  uploadFiles: (uuid, formData, config = {}) =>
     client.post(`/projects/${uuid}/files`, formData, {
       timeout: 120000,
+      ...config
     }),
 
+
   getFiles: (uuid) => client.get(`/projects/${uuid}/files`),
+  
+  deleteFile: (uuid, fileUuid) => client.delete(`/projects/${uuid}/files/${fileUuid}`),
 };

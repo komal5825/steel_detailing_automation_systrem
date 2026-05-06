@@ -1,0 +1,19 @@
+*                        FILE:  DS_JGIRT.SIZ
+* MBS Example
+*              TABLE OF AVAILABLE OPEN WEB STEEL JOISTS.
+*             
+*      Member size comes from the Load Tables of the Steel Joist
+*      Institute 1988 for the K series joists.  SI Units.
+*
+*                                    Max       Max
+* Member   Weight   Depth  Offset   Moment    Shear     Ixx 
+*  Size    (kg/m)   (mm)    (mm)    (N-m)      (kN)    (cm4)
+*--------  -------  -----  ------  --------  -------  ------
+STOP
+ '20K3'     10.0     500.    60.    2823.      22.6    4454. 
+ '22K4'     11.9     550.    60.    3756.      26.5    6372. 
+ '24K4'     12.5     600.    60.    4113.      27.4    7584. 
+ '26K5'     14.6     650.    60.    5038.      30.9   10068. 
+ '28K6'     17.0     700.    60.    5915.      33.7   12728. 
+ '30K7'     18.3     750.    60.    7093.      36.3   16279. 
+

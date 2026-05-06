@@ -1,0 +1,127 @@
+*===========================================================================
+*
+*  DS_FACIA.SIZ          
+*
+*===========================================================================
+*(1 ) FACIA FRAMING STYLES
+*
+*        Framing
+* Number Style_Id    Description
+   3        1       'R BEAMS'
+            2       'W BEAMS'
+            3       'D BEAMS'
+
+
+
+*(2 ) ATTACHMENT BEAMS AND FACIA ARMS                                      
+*Framing  ----Attachment Beam---  ------Facia Arm--------         Facia
+*         --Type--  Depth  Depth  --Type--  Depth   Depth  Brkt   Girt
+*Style_Id End  Int   Min    Max   End  Int  Start    End   (Y,N)  Proj.
+    1     'R'  'R'   0.0    0.0  'R'  'R'    0.0     0.0   'Y'   0.00 
+    2     'W'  'W'   0.0    0.0  'W'  'W'    0.0     0.0   'Y'   0.00 
+    3     'D'  'D'   0.0    0.0  'D'  'D'    0.0     0.0   'Y'   0.00 
+
+
+*(3 ) FACIA CONNECTIONS
+*        ----------Attachment Beam To Building Frame--------------- Facia Arm
+*Framing Rig Frame  --Endwall Rafter-  -Endwall Columns-- Weak Axis To Attch
+*Style  C_ABm *_ABm ----C_ABm-- *_ABm  ----C_ABm-- *_ABm- --*_ABm--  Beam          
+* Id      RF   RF   C_EWR *_EWR *_EWR  C_EWC *_EWC *_EWC   RF *_EWC C_Arm *_Arm
+   1     'FE' 'FE'  '--'  '--'   '--'   'FE'  'FE'  'FE'  'FE' 'FE' 'EE'  'EE'   
+   2     'FE' 'FE'  '--'  '--'   '--'   'FE'  'FE'  'FE'  'FE' 'FE' 'EE'  'EE'   
+   3     'FE' 'FE'  '--'  '--'   '--'   'FE'  'FE'  'FE'  'FE' 'FE' 'EE'  'EE'   
+
+
+*(4 ) ENDWALL COLUMN TYPE & ORIENTATION
+*          ----------Corner Column------------  ---Int_Col_to----
+*Framing   EW_Facia   SW_Facia   EW & SW Facia  Cee_Fac Other_Fac
+*Style_Id  Type Rotn  Type Rotn   Type  Rotn     Type     Type
+     1     'R'  'N'   'R'  'R'    'R'   'R'       'R'      'R'
+     2     'W'  'N'   'W'  'R'    'W'   'R'       'W'      'W'
+     3     'D'  'N'   'D'  'R'    'D'   'R'       'D'      'D'
+
+*-----------------------------
+*(5 ) FACIA PURLIN/GIRT STYLES
+*
+*        Purlin
+* Number Style_Id  Description
+   4        1      'Zee Bypass on Attachment Beam,Zee Flush on Arm'
+            2      'Zee Flush on Attachment Beam,Zee  Flush on Arm'
+            3      'Zee Bypass on Attachment Beam, Cee Flush on Arm'
+            4      'Cee Flush on Attachment Beam,Cee  Flush on Arm'
+
+            
+*(6 ) PURLINS/GIRTS
+*Purlin   -----Located On Attach Beam-----  ---------Located On Facia--------
+*Style_Id Type Ev St  Depth | Soffit Depth  Top  Inter Bot Depth | Gutr Depth
+     1    'ZB'  'ZB'    0.0    'ZF'   0.0   'ZF' 'ZF' 'ZF'  0.0   'ZF'  0.0
+     2    'ZF'  'ZF'    0.0    'ZF'   0.0   'ZF' 'ZF' 'ZF'  0.0   'ZF'  0.0
+     3    'ZB'  'ZB'    0.0    'ZF'   0.0   'CF' 'CF' 'CF'  0.0   'CF'  0.0
+     4    'CF'  'CF'    0.0    'CF'   0.0   'CF' 'CF' 'CF'  0.0   'CF'  0.0
+
+*-----------------------------
+*(7 ) FACIA PANEL STYLES
+*
+*        Panel 
+* Number Style_Id  Description
+   3        1      'SINGLE SKIN 35/0.5'  
+            2      'SINGLE SKIN 35/0.6'  
+            3      'SINGLE SKIN 35/0.7'  
+ 
+
+*(8 ) ATTACHMENT BEAM PANELS
+*Panel     -On Beam-  -(SS Clip)-  -----Soffit Panels------
+*Style_Id  Panel_Part Type  Size   Panel_Part Rot'n Spacing
+     1     'PM35-0.5'   '--'   0.000   'PM35-0.5'    'N'    00.0
+     2     'PM35-0.6'   '--'   0.000   'PM35-0.6'    'N'    00.0
+     3     'PM35-0.7'   '--'   0.000   'PM35-0.7'    'N'    00.0
+ 
+
+
+*(9 ) FACIA PANELS
+*Panel     Front Side -(SS Clip)-  -------Back Side--------
+*Style_Id  Panel_Part Type  Size   Panel_Part Rot'n Spacing
+     1     'PM35-0.5'   '--'  0.000  'PM35-0.5'  'N'    00.0
+     2     'PM35-0.6'   '--'  0.000  'PM35-0.6'  'N'    00.0
+     3     'PM35-0.7'   '--'  0.000  'PM35-0.7'  'N'    00.0
+ 
+
+
+*-----------------------------
+*(10) FACIA DESIGN/DETAIL CONSTANT INFORMATION:             
+* Bracing_With_Attach_Bm  ------Bracing_In_Facia------        Default    Max Strap Space 
+* Panel   Type   Brace    Type  Ptrn  Brace  Dist_W/O_Brac  Gutter_Size  Screw     Stand
+* Shear   (C/R)  Diam     (C/R) (S/D) Diam   Int_Bay Exten  Width Height Down      Seam
+   'N'     'R'    0.0     'R'   'D'   0.0   6100.0  2000.  300.0  200.0 1525.0   1525.0
+
+
+*(11) FACIA GIRT/PURLIN ROTATION
+*
+*   'N' : NOT ROTATED FROM THE STANDARD
+*         outside flange of girt turned upward, or
+*         outside flange of purlin turned toward building line
+*
+*   'Y' : ROTATED FROM THE STANDARD
+*         outside flange of girt turned downward, or
+*         outside flange of purlin turned away from building line
+*
+*-Attachment Beam- ------------Located on Facia Arm------------
+* Roof   Soffit    --Top Girt--   --Int GIrt--   --Bot Girt--   ---Gutter---
+*Purlin  Purlin    ------------   ------------   ------------   ----Girt---- 
+*  ZB      ZB      ZB   ZF   CF   ZB   ZF   CF   ZB   ZF   CF    ZB   ZF  CF
+   'N'     'N'     'N'  'N'  'N'  'N'  'N'  'N'  'Y'  'Y'  'Y'   'N' 'N' 'Y'
+
+
+
+*-----------------------------
+*
+*****FOR FUTURE USE*****
+*
+*(12) DETAIL DRAWINGS TO APPEAR ON DETAIL SHEETS
+* Facia  Detail Size    No Of
+* Style   Wid    Len   Details  ---- Detail Name-----------
+    1      6.     6.      2     'FAC1' 'FAC2'
+    2      6.     6.      2     'FAC3' 'FAC4'
+
+
+

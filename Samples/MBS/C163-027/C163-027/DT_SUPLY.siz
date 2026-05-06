@@ -1,0 +1,65 @@
+*                          FILE:   DT_SUPLY.SIZ
+*
+*
+*Supply Id: Use an integer to identify each desired subdivision for the 
+*        building cost summary.  The corresponding integer will be used
+*        in the item cost file to identify the items.
+*
+*Description: Use any appropriate name to describe each subdivision of
+*        the building.
+*
+*Supplier Name: The suppliers name can be anything from an actual outside
+*        component supplier to a subdivision or work area within the
+*        manufacturing plant.
+*
+*Discount: Initially all cost will be calculated on the basis of the item
+*       cost file.  In the Summary Report at the end of the bill of
+*       materials the costs will be reduced by the discount factor times
+*       the cost. Enter the appropriate discount factor for each supplier.
+*       A negative discount factor can be used as an overhead factor.
+*       (Overhead/Discount column is not used if DT_PRICE file exists)
+*
+*Shipper Title: Enter the name for that part of the shipping list which   
+*       contains these items. Used when the report is arranged according
+*       to shipper title.
+*
+* Supply                                Supplier  Overhead(-)  Shipper
+*  Id       Description                   Name    Discount(+)   Title    
+*-------    -----------------------   ----------    --------   ---------- 
+   1         'C & Z Type Members   '   'ASPRINGS'      0.00     'ASPRINGS'  
+  2         'Wall & Roof Panels   '   'ASPRINGS'      0.00     'ASPRINGS'  
+  3         'Rigid Frames         '   'ASPRINGS'      0.00     'ASPRINGS'  
+  4         'Bolts, Fasteners     '   'ASPRINGS'      0.00     'ASPRINGS'  
+  5         'Sealant, Tape        '   'ASPRINGS'      0.00     'ASPRINGS' 
+  6         'Cables & Hardware    '   'ASPRINGS'      0.00     'ASPRINGS'  
+  7         'Clips                '   'ASPRINGS'      0.00     'ASPRINGS'  
+  8         'Standard Trim        '   'ASPRINGS'      0.00     'ASPRINGS'  
+  9         'Special Trim         '   'ASPRINGS'      0.00     'ASPRINGS'  
+  10        'Light Gage E, CH, A  '   'ASPRINGS'      0.00     'ASPRINGS'  
+  11        'Accessories          '   'ASPRINGS'      0.00     'ASPRINGS'  
+  12        'Walkdoors & Door Acc.'   'ASPRINGS'      0.00     'ASPRINGS'  
+  13        'Standing Seam Acc.   '   'ASPRINGS'      0.00     'ASPRINGS'  
+  14        'Ridge Caps           '   'ASPRINGS'      0.00     'ASPRINGS'
+  15        'Hot Rolled           '   'ASPRINGS'      0.00     'ASPRINGS'  
+  16        'Standing Seam Galv.  '   'ASPRINGS'      0.00     'ASPRINGS'  
+  17        'Standing Seam Kynar  '   'ASPRINGS'      0.00     'ASPRINGS'  
+  18        'Weather-lok Galv.    '   'ASPRINGS'      0.00     'ASPRINGS'  
+  19        'Weather-lok Kynar    '   'ASPRINGS'      0.00     'ASPRINGS'  
+  20        'Shadow Wall Galv.    '   'ASPRINGS'      0.00     'ASPRINGS'  
+  21        'Shadow Wall Kynar    '   'ASPRINGS'      0.00     'ASPRINGS'  
+  22        'Accent 11 Panel      '   'ASPRINGS'      0.00     'ASPRINGS'  
+
+  30        'Insulation           '   'ASPRINGS'      0.00     'ASPRINGS'  
+  32        'Special Panel Pricing'   'ASPRINGS'      0.00     'ASPRINGS'  
+
+  41        'Spl C & Z Type Members   '   'ASPRINGS'      0.00     'ASPRINGS'  
+  47        'Spl Clips                '   'ASPRINGS'      0.00     'ASPRINGS'  
+  48        'Spl Whirlwind Trim       '   'ASPRINGS'      0.00     'ASPRINGS'  
+  50        'Spl Light Gage E, CH, A  '   'ASPRINGS'      0.00     'ASPRINGS'  
+  55        'Spl Hot Rolled           '   'ASPRINGS'      0.00     'ASPRINGS'  
+  56        'Spl Standing Seam Galv.  '   'ASPRINGS'      0.00     'ASPRINGS'  
+  57        'Spl2 Clips               '   'ASPRINGS'      0.00     'ASPRINGS'  
+  58        'Spl2 Whirlwind Trim      '   'ASPRINGS'      0.00     'ASPRINGS'  
+  60        'Spl2 Light Gage E, CH, A '   'ASPRINGS'      0.00     'ASPRINGS'  
+  66        'Spl2 Standing Seam Galv. '   'ASPRINGS'      0.00     'ASPRINGS'  
+  

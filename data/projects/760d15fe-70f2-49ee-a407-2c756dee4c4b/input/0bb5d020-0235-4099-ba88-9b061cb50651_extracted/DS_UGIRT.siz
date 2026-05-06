@@ -1,0 +1,35 @@
+*                                      FILE: DS_UGIRT.SIZ
+*
+* Automotive Springs Channel Inventory
+*
+* This file contains the names, sizes, and section properties 
+*  of hot-rolled channel sections used as girts and purlins.
+*   _
+*   X = DISTANCE FROM OUTSIDE OF WEB TO Y-Y NUETRAL AXIS.
+*   e = DISTANCE FROM OUTSIDE OF WEB TO SHEAR CENTER LOCATION.
+*                                                          |American Properties|
+*                                                          |-------------------|
+**                                              D2         |     SHEAR         |
+**         Nom   Nom         Web               Avg         | _   CENTER        |
+**Size     Depth F-Wid Area  Depth W-Thk F-Wid F-Thk  Uwt  | X   LOC. e  d/Af  |   Ix      Sx     Rx    Iy      Sy    Ry
+**          mm    mm    cm2    mm    mm    mm    mm   kg/m |             mm-1  |   cm4     cm3    mm    cm4     cm3   mm
+**-------  ----- ----- ----   ----- ----- ----- -----  ----   ---- ------ -----   -----   -----  -----  -----  ----- ----
+'ISMC150 '  150   75  20.88  132.0   5.4   75    9.0  16.4    1.0   1.0  1.0      779.4   103.9   61.1  102.3  19.4  22.1
+'ISMC200'   200   75   28.5   200    6.2   75  11.4  22.3    0.00   22.0   0.00    1830    181   80.2   141   26.4  22.2    
+'ISMC225'   225   80   33.3   225    6.5   80  12.4  26.1    0.00   23.1   0.00    2710    241   90.2   188   33.0  23.7
+'ISMC250'   250   80   39.0   250    7.2   80  14.1  30.6    0.00   23.0   0.00    3880    307   99.2   211   38.5  23.7   
+'ISMC300'   300   90   46.3   300    7.8   90  13.6  36.3    0.00   23.5   0.00    6420    428   11.8   313   47.1  26.0
+'ISMC350'   350  100   54.4   350    8.3  100  13.5  42.7    0.00   24.4   0.00   10000    576   13.6   434   57.3  28.2
+'ISMC400'   400  100   63.8   400    8.8  100  15.3  50.1    0.00   24.2   0.00   15200    760   15.4   508   67.0  28.2 
+
+
+
+
+stop
+
+'260PFC28'  260   75   35.1   21     7.0   75   12.0  27.6    1.0   1.0  1.0       3619   278.0  101.0  185.0  34.4  23.0
+'300PFC41'  300   90   52.7   24     9.0   90   15.5  41.4    1.0   1.0  1.0       7218   481.0  117.0  404.0  63.1  27.7
+'380PFC54'  380  100   68.7   31     9.5  100   17.5  54.0    1.0   1.0  1.00     15034   791.0  148.0  643.0  89.2  30.6
+
+
+

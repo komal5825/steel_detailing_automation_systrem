@@ -1,0 +1,75 @@
+*DRAWING: CONNECTION PLATE DRAWINGS (Dxf)  CELL:Clp_Bolt
+*
+*( 1)PAGE LAYOUT:
+*---Page_Size---  --------Offset--------  ----------Scale_Factors---------
+* Width   Height    Lt    Rt    Top  Bot  Piece  Text  Table  Dimen  Title  Logo
+  297.0    210.0   0.0   0.0   0.0   0.0   1.00  1.50   1.50   1.50   1.50  'N'
+
+*( 2)PLATE TYPE:
+*Plate  Plate
+* Type  Title
+  'f'   'Jmb-Bas Plt         '
+
+*( 3)PLATE SHAPE:
+* Plate     Plate   -----Plate_Size------   Bend   --Hole_Dia--  --Slot_Size--
+* Mark       Quan    Width  Length  Thick  Angle    Left  Right  Width  Length
+ 'f1'          2    144.45  155.50   5.00  1.5708  14.00  22.00   0.00    0.00
+
+*( 4)PLATE DETAIL PARAMETERS:
+* No_Of     Parameters
+* Param     A       B       C       D       E       F       G       H
+     6     22.23  100.00   22.23  100.00   50.00   42.00
+
+*( 5)OPTIONS:
+* Option
+*   Id  
+  '-' .. 1
+  '8' .. 2
+  '8' .. 3
+  '2' .. 4
+  '1' .. 5
+  '1' .. 6
+  '-' .. 7
+  '1' .. 8
+  '1' .. 9
+  '1' .. 10
+  '0' .. 11
+  '1' .. 12
+  '0' .. 13
+  '1' .. 14
+  '-' .. 15
+  '-' .. 16
+  '-' .. 17
+  '-' .. 18
+  '-' .. 19
+  '-' .. 20
+
+*( 6)PIECE TYPE:
+* Type  Quan   Mark     Part           Title
+  'f'      2  'f1   '  'f1      '     'Jmb-Bas Plt         '
+
+*( 7)PLATE SIZES:
+*     ----Plate----
+*No.  Type  Id  Qty    Width  Length  Thick  Weight  Opt
+  1   'WB'   1    2   144.45  155.50   5.00   0.883  '-'
+
+*( 8)HOLE LOCATION:
+*     --Plate- 
+*No.  Type  Id     Dia   Slot  Offset   Gage  Gage2   Angle  Locate
+  2   'WB'   1   14.00   0.00   22.23 100.00   0.00     0.0   31.75
+      'WB'   1   22.00   0.00   22.23 100.00   0.00     0.0  123.75
+
+*( 9)PLATE LOCATION:
+*     --Plate-  2nd_Plate  -Plate--    Loc   Plate
+*No.  Type  Id  Type  Id   Side Rot    Off   Angle  Location
+  0
+
+*(10)PLATE CUTS:
+*     --Plate-
+*No.  Type  Id   Loc  Type   Width   Length
+  0
+
+*(11)PLATE BEND:
+*     --Plate-
+*No.  Type  Id  Opt    Offset  Angle1   Angle2
+  1   'WB'   1  'L'     81.75  0.0000   1.5708

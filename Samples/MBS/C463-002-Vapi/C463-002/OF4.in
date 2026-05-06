@@ -1,0 +1,31 @@
+*DRAWING: RIGID FRAME FLANGE PLATES  CELL:RF_FLG
+*
+*( 1)DRAWING:
+*  Name          Title             Orient
+  'OF4'        'RIGID FRAME FLANGE PLATES'  'L'
+
+*( 2)PLATE SIZES:
+*No. Type    Id     Qty   Part           Width   Thick    Length    Offset  Weight Opt
+  1   'OF'    4      2   'OF4'           150.000   6.000  8512.477     0.00     61.3 '-'
+
+*( 3)PLATE COORDINATES:
+*  No.
+* Coord  X-Coord  Y-Coord
+     0
+
+*( 4)HOLE LOCATION:
+*  No.   Hole  Hole   Hole    Hole    Hole    Hole   Hole  No.  Location
+* Holes  Type   Id    Dia     Slot    Off     Gage   Ang   Loc          
+    0
+
+*( 5)PLATE CUTS:
+* No.  Plate  Plate  Cut  Cut     Cut      Cut
+* Cut  Type     Id   Loc  Type  Width   Length
+    0
+
+*( 6)PLATE MEMBER:
+*No.   Plate        Member
+  2   'OF4     '   'CL2-1       '
+      'OF4     '   'CL2-3       '
+
+   

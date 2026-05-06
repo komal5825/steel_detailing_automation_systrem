@@ -1,0 +1,412 @@
+D:\MBS_JOBS\INDIAN\C463-002    17-12-2025 04:54:41 PM
+
+
+    Fabrication Warnings
+        BOM
+            c1
+                c1(c1) Hole is too close to edge of plate [Clash 235]
+                    Required 22.0000, Actual 17.2237, Bolt Diameter 11.9990
+            c2
+                c2(c2) Hole is too close to edge of plate [Clash 236]
+                    Required 22.0000, Actual 17.2237, Bolt Diameter 11.9990
+                    Required 22.0000, Actual 17.2263, Bolt Diameter 11.9990
+
+        COMPDET
+            EB-2
+                EB-2(EPE4) Hole is too close to edge of plate [Clash 238]
+                    Required 26.0000, Actual 14.8133, Bolt Diameter 20.0000
+            EB-6
+                EB-6(EPE4) Hole is too close to edge of plate [Clash 239]
+                    Required 26.0000, Actual 14.8158, Bolt Diameter 20.0000
+
+        RFDET-1
+            RF1-3
+                RF1-3(CLF5) Hole is too close to edge of plate [Clash 240]
+                    Required 35.5007, Actual 25.0000, Bolt Diameter 15.9995
+
+        RFDET-5
+            RF5-3
+                RF5-3(CLF5) Hole is too close to edge of plate [Clash 241]
+                    Required 35.5007, Actual 25.0000, Bolt Diameter 15.9995
+
+
+    Member Clashes
+        BOM
+            E-1
+                E-1 Hole has bolt but does not connect anything [Clash 171]
+            E-10
+                E-10 Hole has bolt but does not connect anything [Clash 180]
+            E-11
+                E-11 Hole has bolt but does not connect anything [Clash 181]
+            E-2
+                E-2 Hole has bolt but does not connect anything [Clash 172]
+            E-3
+                E-3 Hole has bolt but does not connect anything [Clash 173]
+            E-4
+                E-4 Hole has bolt but does not connect anything [Clash 174]
+            E-5
+                E-5 Hole has bolt but does not connect anything [Clash 175]
+            E-6
+                E-6 Hole has bolt but does not connect anything [Clash 176]
+            E-7
+                E-7 Hole has bolt but does not connect anything [Clash 177]
+            E-8
+                E-8 Hole has bolt but does not connect anything [Clash 178]
+            E-9
+                E-9 Hole has bolt but does not connect anything [Clash 179]
+            G-10
+                G-10 Hole has bolt but does not connect anything [Clash 188]
+            G-11
+                G-11 Hole has bolt but does not connect anything [Clash 189]
+            G-12
+                G-12 Hole has bolt but does not connect anything [Clash 190]
+            G-14
+                G-14 Hole has bolt but does not connect anything [Clash 191]
+            G-15
+                G-15 Hole has bolt but does not connect anything [Clash 192]
+            G-16
+                G-16 Hole has bolt but does not connect anything [Clash 193]
+            G-17
+                G-17 Hole has bolt but does not connect anything [Clash 194]
+            G-18
+                G-18 Hole has bolt but does not connect anything [Clash 195]
+            G-19
+                G-19 Hole has bolt but does not connect anything [Clash 196]
+            G-20
+                G-20 Hole has bolt but does not connect anything [Clash 197]
+            G-21
+                G-21 Hole has bolt but does not connect anything [Clash 198]
+            G-22
+                G-22 Hole has bolt but does not connect anything [Clash 199]
+            G-23
+                G-23 Hole has bolt but does not connect anything [Clash 200]
+            G-24
+                G-24 Hole has bolt but does not connect anything [Clash 201]
+            G-25
+                G-25 Hole has bolt but does not connect anything [Clash 202]
+            G-26
+                G-26 Hole has bolt but does not connect anything [Clash 203]
+            G-27
+                G-27 Hole has bolt but does not connect anything [Clash 204]
+            G-28
+                G-28 Hole has bolt but does not connect anything [Clash 205]
+            G-29
+                G-29 Hole has bolt but does not connect anything [Clash 206]
+            G-3
+                G-3 Hole has bolt but does not connect anything [Clash 182]
+            G-30
+                G-30 Hole has bolt but does not connect anything [Clash 207]
+            G-31
+                G-31 Hole has bolt but does not connect anything [Clash 208]
+            G-32
+                G-32 Hole has bolt but does not connect anything [Clash 209]
+            G-4
+                G-4 Hole has bolt but does not connect anything [Clash 183]
+            G-5
+                G-5 Hole has bolt but does not connect anything [Clash 184]
+            G-6
+                G-6 Hole has bolt but does not connect anything [Clash 185]
+            G-7
+                G-7 Hole has bolt but does not connect anything [Clash 187]
+            G-8
+                G-8 Hole has bolt but does not connect anything [Clash 186]
+            GA
+                GA intersects with GA [Clash   1]
+            P-1
+                P-1 Hole has bolt but does not connect anything [Clash 160]
+            P-10
+                P-10 Hole has bolt but does not connect anything [Clash 169]
+            P-11
+                P-11 Hole has bolt but does not connect anything [Clash 170]
+            P-2
+                P-2 Hole has bolt but does not connect anything [Clash 161]
+            P-3
+                P-3 Hole has bolt but does not connect anything [Clash 162]
+            P-4
+                P-4 Hole has bolt but does not connect anything [Clash 163]
+            P-5
+                P-5 Hole has bolt but does not connect anything [Clash 164]
+            P-6
+                P-6 Hole has bolt but does not connect anything [Clash 165]
+            P-7
+                P-7 Hole has bolt but does not connect anything [Clash 166]
+            P-8
+                P-8 Hole has bolt but does not connect anything [Clash 167]
+            P-9
+                P-9 Hole has bolt but does not connect anything [Clash 168]
+
+        COMPDET
+            EB-1
+                EB-1(CLF7) Hole has bolt but does not connect anything [Clash 210]
+                EB-1(IF5) intersects with EB-1(SS12) [Clash   3]
+                EB-1(OF7) intersects with EB-1(SS11) [Clash   2]
+            EB-2
+                EB-2(IFE2) intersects with EB-2(STE2) [Clash   5]
+                EB-2(OFE2) intersects with EB-2(STE2) [Clash   4]
+            EB-3
+                EB-3(IF6) intersects with EB-3(SS12) [Clash   7]
+                EB-3(OF8) intersects with EB-3(SS11) [Clash   6]
+            EB-4
+                EB-4(IF6) intersects with EB-4(SS12) [Clash   9]
+                EB-4(OF8) intersects with EB-4(SS11) [Clash   8]
+            EB-5
+                EB-5(CLF7) Hole has bolt but does not connect anything [Clash 212]
+                EB-5(IF5) intersects with EB-5(SS12) [Clash  11]
+                EB-5(OF7) intersects with EB-5(SS11) [Clash  10]
+            EB-6
+                EB-6(IFE3) intersects with EB-6(STE2) [Clash  13]
+                EB-6(OFE3) intersects with EB-6(STE2) [Clash  12]
+            FB
+                FB Hole has bolt but does not connect anything [Clash 211]
+
+        CRANEDET
+            CA-2
+                CA-2 Hole has bolt but does not connect anything [Clash 215]
+            RB-1
+                RB-1(cl-001) Hole has bolt but does not connect anything [Clash 213]
+            RB-2
+                RB-2(cl-001) Hole has bolt but does not connect anything [Clash 214]
+
+        EWDET
+            EC-1
+                EC-1(BOE1) intersects with EC-1(BWE1) [Clash  14]
+                EC-1(BOE1) intersects with EC-1(CLE2) [Clash  15]
+                EC-1(BWE1) intersects with EC-1(CLE2) [Clash  16]
+            EC-2
+                EC-2(BOE1) intersects with EC-2(BWE1) [Clash  17]
+                EC-2(BOE1) intersects with EC-2(CLE2) [Clash  18]
+                EC-2(BWE1) intersects with EC-2(CLE2) [Clash  19]
+
+        RFDET-1
+            RF1-1
+                RF1-1(CLF2) Hole has bolt but does not connect anything [Clash 216]
+                RF1-1(CLF2) intersects with ST-1(CLE4) [Clash  20]
+                RF1-1(GC41-01) Hole has bolt but does not connect anything [Clash 218]
+                RF1-1(ST2) Hole has bolt but does not connect anything [Clash 217]
+            RF1-4
+                RF1-4(CLF2) Hole has bolt but does not connect anything [Clash 219]
+                RF1-4(CLF2) intersects with ST-1(CLE4) [Clash  21]
+                RF1-4(GC41-01) Hole has bolt but does not connect anything [Clash 221]
+                RF1-4(ST2) Hole has bolt but does not connect anything [Clash 220]
+
+        RFDET-2
+            RF2-1
+                RF2-1(CLF2) Hole has bolt but does not connect anything [Clash 222]
+                RF2-1(CLF2) intersects with ST-1(CLE4) [Clash  22]
+            RF2-3
+                RF2-3(CLF2) Hole has bolt but does not connect anything [Clash 223]
+                RF2-3(CLF2) intersects with ST-1(CLE4) [Clash  23]
+
+        RFDET-4
+            RF4-1
+                RF4-1(CLF2) Hole has bolt but does not connect anything [Clash 224]
+                RF4-1(CLF2) intersects with ST-2(CLE4) [Clash  24]
+            RF4-4
+                RF4-4(CLF2) Hole has bolt but does not connect anything [Clash 225]
+                RF4-4(CLF2) intersects with ST-2(CLE4) [Clash  25]
+
+        RFDET-5
+            RF5-1
+                RF5-1(CLF2) Hole has bolt but does not connect anything [Clash 226]
+                RF5-1(CLF2) intersects with ST-2(CLE4) [Clash  26]
+                RF5-1(GC41-01) Hole has bolt but does not connect anything [Clash 228]
+                RF5-1(ST2) Hole has bolt but does not connect anything [Clash 227]
+            RF5-4
+                RF5-4(CLF2) Hole has bolt but does not connect anything [Clash 229]
+                RF5-4(CLF2) intersects with ST-2(CLE4) [Clash  27]
+                RF5-4(GC41-01) Hole has bolt but does not connect anything [Clash 231]
+                RF5-4(ST2) Hole has bolt but does not connect anything [Clash 230]
+
+
+    Connection Clashes
+        BOM
+            E-3
+                E-4 bracing slot/hardware in interference with E-3 [Clash  57]
+            E-7
+                E-8 bracing slot/hardware in interference with E-7 [Clash  62]
+            JB-1
+                G-12 bracing slot/hardware in interference with JB-1 [Clash  79]
+                G-14 bracing slot/hardware in interference with JB-1 [Clash  85]
+                G-16 bracing slot/hardware in interference with JB-1 [Clash  84]
+                G-18 bracing slot/hardware in interference with JB-1 [Clash  91]
+                G-2 bracing slot/hardware in interference with JB-1 [Clash  64]
+                G-20 bracing slot/hardware in interference with JB-1 [Clash  92]
+                G-21 bracing slot/hardware in interference with JB-1 [Clash  94]
+                G-22 bracing slot/hardware in interference with JB-1 [Clash  95]
+                G-23 bracing slot/hardware in interference with JB-1 [Clash  97]
+                G-24 bracing slot/hardware in interference with JB-1 [Clash  98]
+                G-26 bracing slot/hardware in interference with JB-1 [Clash 103]
+                G-27 bracing slot/hardware in interference with JB-1 [Clash 104]
+                G-28 bracing slot/hardware in interference with JB-1 [Clash 110]
+                G-29 bracing slot/hardware in interference with JB-1 [Clash 109]
+                G-3 bracing slot/hardware in interference with JB-1 [Clash  65]
+                G-30 bracing slot/hardware in interference with JB-1 [Clash 121]
+                G-32 bracing slot/hardware in interference with JB-1 [Clash 120]
+                G-5 bracing slot/hardware in interference with JB-1 [Clash  69]
+                G-7 bracing slot/hardware in interference with JB-1 [Clash  74]
+            JB-2
+                G-14 bracing slot/hardware in interference with JB-2 [Clash  80]
+                G-15 bracing slot/hardware in interference with JB-2 [Clash  81]
+                G-17 bracing slot/hardware in interference with JB-2 [Clash  87]
+                G-18 bracing slot/hardware in interference with JB-2 [Clash  88]
+                G-19 bracing slot/hardware in interference with JB-2 [Clash 115]
+                G-20 bracing slot/hardware in interference with JB-2 [Clash 114]
+                G-23 bracing slot/hardware in interference with JB-2 [Clash 113]
+                G-24 bracing slot/hardware in interference with JB-2 [Clash 112]
+                G-25 bracing slot/hardware in interference with JB-2 [Clash 100]
+                G-26 bracing slot/hardware in interference with JB-2 [Clash 101]
+                G-28 bracing slot/hardware in interference with JB-2 [Clash 106]
+                G-29 bracing slot/hardware in interference with JB-2 [Clash 107]
+                G-30 bracing slot/hardware in interference with JB-2 [Clash 116]
+                G-31 bracing slot/hardware in interference with JB-2 [Clash 117]
+                G-4 bracing slot/hardware in interference with JB-2 [Clash  66]
+                G-6 bracing slot/hardware in interference with JB-2 [Clash  70]
+                G-7 bracing slot/hardware in interference with JB-2 [Clash  71]
+            JB-3
+                G-11 bracing slot/hardware in interference with JB-3 [Clash  77]
+                G-12 bracing slot/hardware in interference with JB-3 [Clash  78]
+                G-15 bracing slot/hardware in interference with JB-3 [Clash  82]
+                G-16 bracing slot/hardware in interference with JB-3 [Clash  83]
+                G-18 bracing slot/hardware in interference with JB-3 [Clash  89]
+                G-19 bracing slot/hardware in interference with JB-3 [Clash  90]
+                G-23 bracing slot/hardware in interference with JB-3 [Clash  96]
+                G-26 bracing slot/hardware in interference with JB-3 [Clash 102]
+                G-29 bracing slot/hardware in interference with JB-3 [Clash 108]
+                G-31 bracing slot/hardware in interference with JB-3 [Clash 118]
+                G-32 bracing slot/hardware in interference with JB-3 [Clash 119]
+                G-4 bracing slot/hardware in interference with JB-3 [Clash  67]
+                G-5 bracing slot/hardware in interference with JB-3 [Clash  68]
+                G-7 bracing slot/hardware in interference with JB-3 [Clash  72]
+                G-8 bracing slot/hardware in interference with JB-3 [Clash  73]
+            JB-4
+                JB-4 Rod not aligned with slot [Clash 232]
+            JB-5
+                G-10 bracing slot/hardware in interference with JB-5 [Clash  76]
+                G-9 bracing slot/hardware in interference with JB-5 [Clash  75]
+            JB-6
+                JB-6 Rod not aligned with slot [Clash 234]
+            JB-7
+                JB-7 Rod not aligned with slot [Clash 233]
+                G-14 bracing slot/hardware in interference with JB-7 [Clash  86]
+                G-20 bracing slot/hardware in interference with JB-7 [Clash  93]
+                G-24 bracing slot/hardware in interference with JB-7 [Clash  99]
+                G-27 bracing slot/hardware in interference with JB-7 [Clash 105]
+                G-28 bracing slot/hardware in interference with JB-7 [Clash 111]
+                G-30 bracing slot/hardware in interference with JB-7 [Clash 122]
+            P-3
+                P-4 bracing slot/hardware in interference with P-3 [Clash  37]
+            P-7
+                P-8 bracing slot/hardware in interference with P-7 [Clash  50]
+            SE-1
+                E-1 bracing slot/hardware in interference with SE-1 [Clash  54]
+                E-2 bracing slot/hardware in interference with SE-1 [Clash  55]
+                E-3 bracing slot/hardware in interference with SE-1 [Clash  56]
+                E-4 bracing slot/hardware in interference with SE-1 [Clash  58]
+                E-5 bracing slot/hardware in interference with SE-1 [Clash  59]
+                E-6 bracing slot/hardware in interference with SE-1 [Clash  60]
+                E-7 bracing slot/hardware in interference with SE-1 [Clash  61]
+                E-8 bracing slot/hardware in interference with SE-1 [Clash  63]
+                P-1 bracing slot/hardware in interference with SE-1 [Clash  29]
+                P-2 bracing slot/hardware in interference with SE-1 [Clash  32]
+                P-3 bracing slot/hardware in interference with SE-1 [Clash  35]
+                P-4 bracing slot/hardware in interference with SE-1 [Clash  39]
+                P-5 bracing slot/hardware in interference with SE-1 [Clash  43]
+                P-6 bracing slot/hardware in interference with SE-1 [Clash  46]
+                P-7 bracing slot/hardware in interference with SE-1 [Clash  49]
+                P-8 bracing slot/hardware in interference with SE-1 [Clash  53]
+            SI-1
+                Rods SI-1/SE-1 share a slot on P-1 [Clash 251]
+                Rods SI-1/SE-1 share a slot on P-2 [Clash 253]
+                Rods SI-1/SE-1 share a slot on P-3 [Clash 255]
+                Rods SI-1/SE-1 share a slot on P-4 [Clash 257]
+                Rods SI-1/SE-1 share a slot on P-5 [Clash 262]
+                Rods SI-1/SE-1 share a slot on P-6 [Clash 263]
+                Rods SI-1/SE-1 share a slot on P-7 [Clash 264]
+                Rods SI-1/SE-1 share a slot on P-8 [Clash 265]
+                Rods SI-1/SI-1 share a slot on P-1 [Clash 250]
+                Rods SI-1/SI-1 share a slot on P-2 [Clash 252]
+                Rods SI-1/SI-1 share a slot on P-3 [Clash 254]
+                Rods SI-1/SI-1 share a slot on P-4 [Clash 256]
+                Rods SI-1/SI-1 share a slot on P-5 [Clash 258]
+                Rods SI-1/SI-1 share a slot on P-6 [Clash 259]
+                Rods SI-1/SI-1 share a slot on P-7 [Clash 260]
+                Rods SI-1/SI-1 share a slot on P-8 [Clash 261]
+                P-1 bracing slot/hardware in interference with SI-1 [Clash  28]
+                P-2 bracing slot/hardware in interference with SI-1 [Clash  31]
+                P-3 bracing slot/hardware in interference with SI-1 [Clash  34]
+                P-4 bracing slot/hardware in interference with SI-1 [Clash  38]
+                P-5 bracing slot/hardware in interference with SI-1 [Clash  42]
+                P-6 bracing slot/hardware in interference with SI-1 [Clash  45]
+                P-7 bracing slot/hardware in interference with SI-1 [Clash  48]
+                P-8 bracing slot/hardware in interference with SI-1 [Clash  52]
+            SP-1
+                Rods SP-1/SI-1 share a slot on P-1 [Clash 242]
+                Rods SP-1/SI-1 share a slot on P-2 [Clash 244]
+                Rods SP-1/SI-1 share a slot on P-3 [Clash 246]
+                Rods SP-1/SI-1 share a slot on P-4 [Clash 248]
+                Rods SP-1/SI-1 share a slot on P-5 [Clash 243]
+                Rods SP-1/SI-1 share a slot on P-6 [Clash 245]
+                Rods SP-1/SI-1 share a slot on P-7 [Clash 247]
+                Rods SP-1/SI-1 share a slot on P-8 [Clash 249]
+                P-1 bracing slot/hardware in interference with SP-1 [Clash  30]
+                P-2 bracing slot/hardware in interference with SP-1 [Clash  33]
+                P-3 bracing slot/hardware in interference with SP-1 [Clash  36]
+                P-4 bracing slot/hardware in interference with SP-1 [Clash  40]
+                P-5 bracing slot/hardware in interference with SP-1 [Clash  41]
+                P-6 bracing slot/hardware in interference with SP-1 [Clash  44]
+                P-7 bracing slot/hardware in interference with SP-1 [Clash  47]
+                P-8 bracing slot/hardware in interference with SP-1 [Clash  51]
+
+        COMPDET
+            EB-2
+                EB-1(EP5) bolt in interference with EB-2(IFE2) [Clash 123]
+                EB-2(EPE4) bolt in interference with EB-2(IFE2) [Clash 124]
+                RF1-1(WB1) bolt in interference with EB-2(IFE2) [Clash 140]
+            EB-6
+                EB-5(EP5) bolt in interference with EB-6(IFE3) [Clash 125]
+                EB-6(EPE4) bolt in interference with EB-6(IFE3) [Clash 126]
+                RF5-1(WB9) bolt in interference with EB-6(IFE3) [Clash 155]
+
+        CRANEDET
+            CA-1
+                RB-1(CLE5) bolt in interference with CA-1 [Clash 128]
+                RB-2(CLE5) bolt in interference with CA-1 [Clash 130]
+                RB-3(CLE5) bolt in interference with CA-1 [Clash 132]
+                RB-4(CLE5) bolt in interference with CA-1 [Clash 134]
+                RB-5(CLE5) bolt in interference with CA-1 [Clash 136]
+                RB-6(CLE5) bolt in interference with CA-1 [Clash 138]
+                RF1-1(ST2) bolt in interference with CA-1 [Clash 142]
+                RF1-4(ST2) bolt in interference with CA-1 [Clash 144]
+                RF2-1(ST2) bolt in interference with CA-1 [Clash 146]
+                RF2-3(ST2) bolt in interference with CA-1 [Clash 148]
+                RF3-1(ST2) bolt in interference with CA-1 [Clash 149]
+                RF3-3(ST2) bolt in interference with CA-1 [Clash 150]
+                RF4-1(ST2) bolt in interference with CA-1 [Clash 152]
+                RF4-4(ST2) bolt in interference with CA-1 [Clash 154]
+                RF5-1(ST2) bolt in interference with CA-1 [Clash 157]
+                RF5-4(ST2) bolt in interference with CA-1 [Clash 159]
+                CA-1 bolt in interference with CA-1 [Clash 139]
+            RB-1
+                RB-1(IFE4) bolt in interference with RB-1(STE3) [Clash 127]
+            RB-2
+                RB-2(IFE5) bolt in interference with RB-2(STE3) [Clash 129]
+            RB-3
+                RB-3(IFE6) bolt in interference with RB-3(STE3) [Clash 131]
+            RB-4
+                RB-4(IFE7) bolt in interference with RB-4(STE4) [Clash 133]
+            RB-5
+                RB-5(IFE8) bolt in interference with RB-5(STE4) [Clash 135]
+            RB-6
+                RB-6(IFE9) bolt in interference with RB-6(STE4) [Clash 137]
+
+        WINDFRM
+            ST-1
+                RF1-1(CLF2) bolt in interference with ST-1(CLE4) [Clash 141]
+                RF1-4(CLF2) bolt in interference with ST-1(CLE4) [Clash 143]
+                RF2-1(CLF2) bolt in interference with ST-1(CLE4) [Clash 145]
+                RF2-3(CLF2) bolt in interference with ST-1(CLE4) [Clash 147]
+            ST-2
+                RF4-1(CLF2) bolt in interference with ST-2(CLE4) [Clash 151]
+                RF4-4(CLF2) bolt in interference with ST-2(CLE4) [Clash 153]
+                RF5-1(CLF2) bolt in interference with ST-2(CLE4) [Clash 156]
+                RF5-4(CLF2) bolt in interference with ST-2(CLE4) [Clash 158]

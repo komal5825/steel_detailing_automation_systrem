@@ -1,0 +1,31 @@
+*( 4)OPTIMIZATION OPTIONS:
+*Plate  Depth  Frame  -L_Col_Depth_Opt-  -R_Col_Depth_Opt-    Rafter_Depth_Opt
+* Opt    Opt    Sym   Typ    Min    Max  Typ    Min    Max   Typ    Min    Max
+  'N'    'N'    'S'  'C '  250.0  900.0 'C '  250.0  900.0  'T '  250.0 1400.0
+
+*(12)MEMBER DEPTHS:
+*Surf   ----Depth----  No.   --Interior_Depth-
+* Id    Start     End  Dep    Locate     Depth
+   1   400.00  400.00   0
+   2   350.00  250.00   0
+   3   250.00  350.00   0
+   4   400.00  400.00   0
+
+*(14)SEGMENT PLATES:
+*    Surf Mem ---Segment--    Member      Flange  ----Plate_Thickness---
+*No.  Id   Id  Id   Length    Part         Width     Web  OS_Flg  IS_Flg
+   4   1    1   1      0.0   '--------'   150.00    5.00    5.00    6.00
+       2    2   2      0.0   '--------'   125.00    4.00    5.00    5.00
+       3    3   3      0.0   '--------'   125.00    4.00    5.00    5.00
+       4    4   4      0.0   '--------'   150.00    5.00    5.00    6.00
+
+*(40)CRANE BRACKET:
+*        Span ----Crane----  ----Beam----    ----Offset----  -----Bracket------  Col_Sup
+*No. Id Lt Rt Type   Height  Depth  Width     Left    Right  Type Opt  Select     Lt  Rt    Load
+  0
+
+**(41)DESIGN PLATES:
+*     ----Plate---   --Plate_Size-   Bolt   Bolt  ----Top---  --Bottom--   Bolt
+*No.  Type      Id   Width   Thick    Dia   Gage  Row  Space  Row  Space  Gage2
+  2  'BASE    '  1     0.0    0.00  24.00    0.0   0     0.0   0     0.0    0.0
+     'BASE    '  2     0.0    0.00  24.00    0.0   0     0.0   0     0.0    0.0

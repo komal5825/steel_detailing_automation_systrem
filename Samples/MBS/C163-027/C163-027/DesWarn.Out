@@ -1,0 +1,37 @@
+================================================================================
+ C163-027            Design Warning Summary                 19/JAN/2026 10:57am
+================================================================================
+
+ LEFT ENDWALL
+ ------------
+     No Warnings!
+
+ RIGHT ENDWALL
+ -------------
+     No Warnings!
+
+ FRONT SIDEWALL
+ --------------
+     No Warnings!
+
+ BACK SIDEWALL
+ -------------
+     No Warnings!
+
+ ROOF
+ ----
+     WIND BENT
+       Member
+         WRN(WBM-413): Weld Size < Required
+
+ EXTENSIONS
+ ----------
+     No Warnings!
+
+ RIGID FRAME #1
+ --------------
+     No Warnings!
+
+ RIGID FRAME #2
+ --------------
+     No Warnings!

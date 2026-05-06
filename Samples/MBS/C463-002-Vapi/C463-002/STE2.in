@@ -1,0 +1,34 @@
+*DRAWING: CWI STIFFENER PLATES  CELL:CWI_STF
+*
+*( 1)DRAWING:
+*  Name          Title             Orient
+  'STE2'        'CWI STIFFENER PLATES'  '-'
+
+*( 2)PLATE SIZES:
+*No. Type    Id     Qty   Part           Width   Thick    Length    Offset  Weight Opt
+  1   'SS'    1      4   'STE2'          120.000   5.000    95.040     0.00      0.4 '-'
+
+*( 3)PLATE COORDINATES:
+*  No.
+* Coord  X-Coord  Y-Coord
+     0      0.000     0.000
+
+*( 4)HOLE LOCATION:
+*  No.   Hole  Hole   Hole    Hole    Hole    Hole   Hole  No.  Location
+* Holes  Type   Id    Dia     Slot    Off     Gage   Ang   Loc          
+    0
+
+*( 5)PLATE CUTS:
+* No.  Plate  Plate  Cut  Cut     Cut      Cut
+* Cut  Type     Id   Loc  Type  Width   Length
+    1  'SS'      1    3   'C' 120.000   95.040
+     
+
+*( 6)PLATE MEMBER:
+*No.   Plate        Member
+  4   'STE2    '   'EB-2        '
+      'STE2    '   'EB-2        '
+      'STE2    '   'EB-6        '
+      'STE2    '   'EB-6        '
+
+   

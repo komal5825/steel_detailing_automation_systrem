@@ -1,0 +1,27 @@
+*SHOP DRAWING: R-SECTION
+*( 1)DRAWING:
+* Name         Title                    Rotate
+ 'ST-1R'      '    R-SECTION MEMBER'   'L'
+
+*( 2)PLATE SIZE:
+*No.  Type  Id  Qty   Mark/Part            Width   Thick    Length   Offset  Weight  Opt
+  1   'MB'   1    1  'MR1     :T80x32  ' 80.0000   3.200  5685.000   0.0000    42.7  '-'
+
+*( 3)PLATE COORDINATES:
+*No.    X_Coord   Y_Coord
+  0
+
+*( 4)HOLE LOCATION:
+*      Hole  Hole   Hole    Hole    Hole    Hole    Hole  No.
+*No.   Type   Id     Dia    Slot  Offset    Gage   Angle  Loc  Location
+  0
+
+*( 5)PLATE CUTS:
+*     Plate  Plate  Cut  Cut      Cut      Cut
+*No.   Type    Id   Loc  Type   Width   Length
+  0
+
+*( 6)MEMBER:
+*                                ----------Web_Cut---------------------Flange_Cut--------
+*Type Rot  Mark       Part       Type   Left  Offset   Right  Type   Left  Offset   Right
+ 'T'  'L' 'ST-1    ' 'T80x32  '  '-'   0.000   0.000   0.000  '-'   0.000   0.000   0.000

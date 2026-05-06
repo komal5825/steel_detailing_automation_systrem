@@ -1,0 +1,35 @@
+*                            FILE: DT_PUNCH.SIZ
+* 
+*
+*  MBS                                SI UNITS
+*
+*  This file permits the user to define their own punch codes, those codes 
+*  will appear in the Detailing Report.  A definition of the data is as 
+*  follows:
+*
+*  Punch ID:    The punch code to be used. (Mc: 4=1', 7=3', 8=2')
+*
+*  Punch Name:  An optional name used to describe the punch code.
+*
+*  Member:      Enter 0.0 if that punch code will work for all widths of flanges.
+*               Enter a specific flange width if the punch code applies only for 
+*               that flange width.
+*
+*  # Flange:    The number of flange holes to follow.
+*
+*  # Webs:      The number of web holes to follow.
+*
+*  Flange Location, mm.:  The distance from the end of the member to the 
+*  Web Location, mm.      center of the hole.  Holes are punched at the 
+*                         standard offset and gage values. 
+*
+*
+** Punch   Punch      Member    #Flg   Flange Location, mm
+**   Id    Name      Width, mm  #Web   Web Location, mm
+** -----  ---------- --------- -----  ---------------------
+stop
+    'P1'  'STANDARD'   0.0       0                      
+                                 5     45   325   425   705  1035     
+    'P1'  'STANDARD'   0.0       0                      
+                                 4     45   325   425   705          
+stop

@@ -1,0 +1,23 @@
+*(13)WALL OPENINGS:
+*         ----Bay---                            Sill   Base    Set  Panel  JambL/JambR/Header/Sill
+*No.  Id  Id  Offset  Type    Width   Height  Height   Elev  Depth   Opt    Type    Part
+  1    1   1   843.0   51    6000.0   7000.0     0.0   0.00   0.00   'Y'    'U '   '--------'
+                                                                            'U '   '--------'
+                                                                            'U '   '--------'
+                                                                            'C '   '--------'
+*(19)COLUMN PART & ELEVATION:
+*                                              ---Base---  Rafter
+*No. Id  Type    Part       Opt  Rot   Depth    Elev  Opt  Attach
+  3   1  '-   ' '--------'  '-'  'N'    0.00    0.00  '-'   'F'
+      2  'W   ' 'W30a158'  '-'  '-'    0.00    0.00  '-'   'F'
+      3  '-   ' '--------'  '-'  'N'    0.00    0.00  '-'   'F'
+*(25)GIRT LOCATION:
+* Set
+* Loc   No.   Location
+  'Y'    5     3080.0   4280.0   5780.0   7280.0   8280.0
+
+*(26)SPECIAL GIRT:
+*     --Bay_Id--
+*No.  Start  End   Height  Type  Rot  Part       Use
+  0
+

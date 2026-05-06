@@ -1,0 +1,34 @@
+*DRAWING: CWI WEB PLATES  CELL:CWI_WEB
+*
+*( 1)DRAWING:
+*  Name          Title             Orient
+  'WBE4'        'CWI WEB PLATES'  'N'
+
+*( 2)PLATE SIZES:
+*No. Type    Id     Qty   Part           Width   Thick    Length    Offset  Weight Opt
+  1   'WB'    1      2   'WBE4'          500.000   5.000  8300.000     0.00    163.1 '-'
+
+*( 3)PLATE COORDINATES:
+*  No.
+* Coord  X-Coord  Y-Coord
+     4      0.000     0.000
+            0.000  -500.000
+         8300.000  -500.000
+         8300.000     0.000
+
+*( 4)HOLE LOCATION:
+*  No.   Hole  Hole   Hole    Hole    Hole    Hole   Hole  No.  Location
+* Holes  Type   Id    Dia     Slot    Off     Gage   Ang   Loc          
+    0
+
+*( 5)PLATE CUTS:
+* No.  Plate  Plate  Cut  Cut     Cut      Cut
+* Cut  Type     Id   Loc  Type  Width   Length
+    0
+
+*( 6)PLATE MEMBER:
+*No.   Plate        Member
+  2   'WBE4    '   'RB-1        '
+      'WBE4    '   'RB-2        '
+
+   

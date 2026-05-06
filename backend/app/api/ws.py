@@ -21,21 +21,39 @@ from sqlalchemy.orm import Session
 from app.db.crud.stages import list_project_stages
 from app.db.session import SessionLocal
 from app.orchestrator.controller import register_ws, unregister_ws
+from app.utils.audit_logger import get_logger
+
+logger = get_logger(__name__)
 
 router = APIRouter()
 
 
 @router.websocket("/{project_id}")
 async def websocket_endpoint(websocket: WebSocket, project_id: str):
-    await websocket.accept()
+    # 1. Accept the connection first to establish the handshake
+    try:
+        await websocket.accept()
+    except Exception as exc:
+        logger.error(f"WebSocket accept failed for {project_id}: {exc}")
+        return
+
+    # 2. Validate Project ID
+    try:
+        from uuid import UUID
+        pid_uuid = UUID(project_id)
+    except Exception:
+        logger.error(f"Invalid Project ID in WebSocket: {project_id}")
+        await websocket.close(code=4000)
+        return
+
+    # 3. Register for updates
     register_ws(project_id, websocket)
 
-    # Send an immediate snapshot of current stage states
+    # 4. Send initial snapshot
     try:
         db: Session = SessionLocal()
         try:
-            from uuid import UUID  # noqa
-            stages = list_project_stages(db, UUID(project_id))
+            stages = list_project_stages(db, pid_uuid)
             snapshot = {
                 "type": "snapshot",
                 "project_id": project_id,
@@ -50,21 +68,21 @@ async def websocket_endpoint(websocket: WebSocket, project_id: str):
                 ],
             }
             await websocket.send_text(json.dumps(snapshot))
-        except Exception:
-            pass
         finally:
             db.close()
-    except Exception:
-        pass
+    except Exception as exc:
+        logger.warning(f"Failed to send WS snapshot for {project_id}: {exc}")
 
-    # Keep connection alive; the orchestrator pushes updates
+    # 5. Keep connection alive and respond to pings
     try:
         while True:
+            # We use receive_text to listen for pings or client close
             raw = await websocket.receive_text()
-            # Echo ping/pong for connection health checks
             if raw.strip() == "ping":
                 await websocket.send_text(json.dumps({"type": "pong"}))
     except WebSocketDisconnect:
-        pass
+        logger.info(f"WebSocket disconnected for {project_id}")
+    except Exception as exc:
+        logger.error(f"WebSocket error for {project_id}: {exc}")
     finally:
         unregister_ws(project_id, websocket)

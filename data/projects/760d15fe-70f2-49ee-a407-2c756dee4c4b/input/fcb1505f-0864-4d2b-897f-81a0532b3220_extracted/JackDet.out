@@ -1,0 +1,81 @@
+*===============================================================================
+*C163-027            Jack Beam Detail Input                 19/JAN/2026 10:57am
+*===============================================================================
+ 
+*( 1)JOBID:
+    'C163-027                      '
+ 
+*( 2)BUILDING LAYOUT:
+*Build        Build_Size    L_Expand_EW  R_Expand_EW
+* Type     Width   Length   Use  Offset  Use  Offset
+  'FF'   12200.0  45730.0  'Y '  415.00 'Y '  415.00
+ 
+*( 3)SURFACE SHAPE:
+*No.    X_Coord   Y_Coord  Offset
+*Surf     (mm)      (mm)     (mm)
+  4        0.0    9600.0     0.00
+        6100.0   10210.0     0.00
+       12200.0    9600.0     0.00
+       12200.0       0.0     0.00
+ 
+*( 4)BAY SPACING:
+*Wall     No.   ---Bay_Set--
+* Id     Sets    Width  Quan
+   1       1    6100.0    2
+   2       3    7805.0    1
+                7530.0    4
+                7805.0    1
+   3       1    6100.0    2
+   4       3    7805.0    1
+                7530.0    4
+                7805.0    1
+   5       3    7805.0    1
+                7530.0    4
+                7805.0    1
+ 
+*( 5)JACK BEAMS:
+* No.  Jack        --Bay_Id-      Beam    Beam  Beam   ---Extend---
+*Jack   Id   Type  Start End    Offset  Height  Type    Left  Right
+   0
+ 
+*( 6)DEPTHS:
+*Jack  ----Depth----  No.   Interior_Depths
+* Id   Start     End  Dep    Locate   Depth
+ 
+*( 7)SEGMENT PLATES:
+*Jack No. Mem Seg      Seg   Member     Flange  ----Plate_Thickness---
+* Id  Seg  Id  Id   Length   Part        Width     Web  OS_Flg  IS_Flg
+ 
+*( 8)SPLICES:
+*                                              ------------------Bolts------------------
+*Jack No.  Spl   Splice Splice  ----Plate----                       ---Top--- --Bottom-
+* Id  Spl   Id   Locate  Type    Width  Thick    Dia  Gage1  Gage2  Row Space Row Space
+ 
+*( 9)STUB COLUMNS:
+*No. Col Jack   Jack  Col  Col       Col  --Cap_Plate-  ----------Cap_Bolt---------
+*Col  Id  Id  Offset  Typ  Part      Rot  Width  Thick  Type     Dia Row Space Gage
+   0
+ 
+*(10)FLANGE BRACE:
+*No. Brc Jack    Jack                                    Bolt     Bolt
+*Brc  Id  Id   Offset  Side    Width   Type  Part        Type      Dia
+   0
+ 
+*(11)DESIGN PLATES:
+*No. Jack    Jack  ------Plate------   -----Plate_Size-----  -----Bolts------
+*Plt  Id   Offset  Type       Id Loc   Width  Length  Thick    Dia  Row  Gage
+   0
+ 
+*(12)WELDS:
+* No. Jack ------Plate------  ---OS_Flange---  ---IS_Flange---  ------Web------
+*Weld  Id  Type       Id Loc   Size Type Note   Size Type Note   Size Type Note
+    0
+ 
+*(13)RIGID FRAME AT JACK BEAM:
+*Jack  Line  Frame   Flange               Bottom_Angle     Flange_Thick  Frame
+* Id    Id     Id    Height    Offset     Left    Right     Left  Right   Gage
+ 
+*(14)RIGID FRAME AT SUPPORT:
+*Jack  Line  Frame   Flange
+* Id    Id     Id    Height
+ 

@@ -231,7 +231,9 @@ def _check_completeness(project_id: UUID, db: Session) -> dict:
         "human_review_required": fallback_report.unresolved_human_fields,
         "is_complete": is_complete,
         "overall": "PASS" if is_complete else "BLOCKED",
+        "main_output": "reports/p2-02_summary.json",
     }
+    write_processed_json(project_id, "p2-02_summary.json", result)
 
     stage_status = StageStatus.PASSED if is_complete else StageStatus.AWAITING_INPUT
     update_stage_result(

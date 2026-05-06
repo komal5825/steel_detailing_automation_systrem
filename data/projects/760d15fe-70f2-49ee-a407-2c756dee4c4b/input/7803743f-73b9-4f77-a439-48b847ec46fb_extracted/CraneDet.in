@@ -1,0 +1,183 @@
+*===============================================================================
+*C163-027            Crane Detail Input                     19/JAN/2026 10:57am
+*===============================================================================
+
+*( 1)JOBID:
+    'C163-027'
+
+*( 2)BUILDING LAYOUT:
+*                           L_Expand_EW  R_Expand_EW  Build
+* Type     Width    Length  Use  Offset  Use  Offset  Slope
+  'FF-'  12200.0   45730.0 'Y '  415.00 'Y '  415.00  10.00
+
+*( 3)WALL LAYOUT:
+*                           -------Wall-------    Wall
+* No. Id  Use     Type Opt     Start    Length  Offset
+   5  1  'LEFT  ' '-'  '-'         0     12200  230.00
+      2  'FRONT ' '-'  '-'         0     45730  230.00
+      3  'RIGHT ' '-'  '-'         0     12200  230.00
+      4  'BACK  ' '-'  '-'         0     45730  230.00
+      5  'ROOF  ' '-'  '-'         0     45730    0.00
+
+*( 4)SURFACE SHAPE:
+*                            ---Offset---
+*  No.   X_Coord   Y_Coord   Left   Right
+    4        0.0    9600.0  230.00 230.00
+          6100.0   10210.0  200.00 200.00
+         12200.0    9600.0  200.00 200.00
+         12200.0       0.0  230.00 230.00
+
+*( 5)BAY SPACING:
+* Wall   --Offset---     No.   ---Bay_Set---
+*  Id    Left  Right    Sets     Width  Quan
+    1  230.00 230.00      1     6100.0    2
+    2  415.00 415.00      3     7805.0    1
+                                7530.0    4
+                                7805.0    1
+    3  230.00 230.00      1     6100.0    2
+    4  415.00 415.00      3     7805.0    1
+                                7530.0    4
+                                7805.0    1
+    5  415.00 415.00      3     7805.0    1
+                                7530.0    4
+                                7805.0    1
+
+*( 6)WALL COLUMNS:
+*Wall                                    Base  Base   Flange    Web
+* Id   No.  Id    Part       Rot  Opt    Elev  Thick   Thick  Thick
+   1    3    1   '--------'  'N'  '-'    0.00  16.00    0.00   0.00
+             2   'W35a125'   'N'  '-'    0.00   0.00  127.00   0.00
+             3   '--------'  'N'  '-'    0.00   0.00    0.00   0.00
+   2    7    1   '--------'  'N'  '-'    0.00   0.00    5.00   5.00
+             2   '--------'  'N'  '-'    0.00   0.00    5.00   5.00
+             3   '--------'  'N'  '-'    0.00   0.00    5.00   5.00
+             4   '--------'  'N'  '-'    0.00   0.00    5.00   5.00
+             5   '--------'  'N'  '-'    0.00   0.00    5.00   5.00
+             6   '--------'  'N'  '-'    0.00   0.00    5.00   5.00
+             7   '--------'  'N'  '-'    0.00   0.00    5.00   5.00
+   3    3    1   '--------'  'N'  '-'    0.00  16.00    0.00   0.00
+             2   'W35a125'   'N'  '-'    0.00   0.00  127.00   0.00
+             3   '--------'  'N'  '-'    0.00   0.00    0.00   0.00
+   4    7    1   '--------'  'N'  '-'    0.00   0.00    5.00   5.00
+             2   '--------'  'N'  '-'    0.00   0.00    5.00   5.00
+             3   '--------'  'N'  '-'    0.00   0.00    5.00   5.00
+             4   '--------'  'N'  '-'    0.00   0.00    5.00   5.00
+             5   '--------'  'N'  '-'    0.00   0.00    5.00   5.00
+             6   '--------'  'N'  '-'    0.00   0.00    5.00   5.00
+             7   '--------'  'N'  '-'    0.00   0.00    5.00   5.00
+
+*( 7)RIGID FRAMES/INTERIOR COLUMNS:
+* No.   Frame  Frame  Frame                                                 Web ----Flange---
+*Frame  Line     Id    Type  No.  Id    Part       Rot   Locate    Elev   Depth OS_Flg IS_Flg
+   7      1       1    'RF'   0
+          2       2    'RF'   0
+          3       2    'RF'   0
+          4       2    'RF'   0
+          5       2    'RF'   0
+          6       2    'RF'   0
+          7       1    'RF'   0
+
+*( 8)CRANE RUNWAY LAYOUT:
+*No. Sys Crane Runway -----------------Runway_Location----------------
+*Sys Id  Type  Orn      Elev    Offset      Span      Start        End
+  0
+
+*( 9)CRANES OPTIONS:
+*System Runway ---Support---         -------Angles-------
+* Id     Beam  Beam   Column  Stops  Lat  Long  Beam  Col
+
+*(10)RUNWAY BEAM:
+*    Sys Mem Rnwy                                                       Conn_Id   Stiff  ---Weld_Id--
+* No. Id  Id Side   Locate Type Opt   Part       Beam       Channel   Left  Right   Id   Beam Channel
+   0
+
+*(11)CRANE SUPPORT BEAM:
+*    Sys Member Rnwy                              Conn_Id   Stiff  Weld
+* No. Id   Id   Side   Locate Opt    Part       Left  Right   Id    Id
+   0
+
+*(12)CRANE SUPPORT COLUMN:
+*    Sys Member Rnwy                                 Base  Base Cap Stiff  Weld
+*No.  Id   Id   Side   Locate Rot Opt   Part         Elev   Id   Id   Id    Id
+   0
+
+*(13)CRANE BRACKET:
+*        Sys Member Rnwy                           Stiff  Weld
+*  No.    Id   Id   Side   Locate Opt   Part         Id    Id
+    0
+
+*(14)CRANE STOP:
+*    Sys Member Rnwy                           Conn  Stiff  Weld
+* No. Id   Id   Side   Locate Opt   Part        Id     Id    Id
+   0
+
+*(15)CRANE ANGLES:
+*        Sys  Rnwy                                            ---Conn_Id---
+*  No.   Id   Side   Locate  Use     Offset  Opt   Part       Frame   Crane
+    0
+
+*(16)INDEPENDENT DIAGONAL BRACING:
+*      System  Rnwy    -----Locate-----       No.   Level                          Conn
+* No.    Id    Side    Start        End Dir  Level  Height  Type   Part       Opt   Id
+   0
+
+*(17)CONNECTION TABLE:
+*      Table            ------------Plate-----------    --------------------Bolt-------------------  Bolt  Weld
+* No.   Id   Type  Opt  Part       Width Length Thick   Type     Dia Row1 Row2 Space1 Space2   Gage   Ref   Id
+   0
+
+*(18)WELDS:
+*    Table      ---OS_Flange---  ---IS_Flange---  ------Web------  ----Stitch----
+*No.  Id   Opt   Size Type Note   Size Type Note   Size Type Note  Length   Space
+   0
+
+*(19)CRANE STRUT:
+*    Sys Member Rnwy                            --Conn_Id--  Weld
+* No. Id   Id   Side  Locate  Opt    Part       Left  Right   Id
+   0
+
+*(20)RIGID FRAME COORDINATES:
+*                  No.
+*No.   Id   Type  Coord  X_Y_Coordinates
+  2     1   'RF-'   16      641          0  
+                            641       9100  
+                            636       9095  
+                            739       9111  
+                            739       9111  
+                            739       9111  
+                            739       9111  
+                           6101       9748  
+                           6099       9748  
+                          11461       9111  
+                          11461       9111  
+                          11461       9111  
+                          11461       9111  
+                          11564       9095  
+                          11559       9100  
+                          11559          0  
+        2   'RF-'   16      641          0  
+                            641       9100  
+                            636       9095  
+                            739       9111  
+                            739       9111  
+                            739       9111  
+                            739       9111  
+                           6101       9748  
+                           6099       9748  
+                          11461       9111  
+                          11461       9111  
+                          11461       9111  
+                          11461       9111  
+                          11564       9095  
+                          11559       9100  
+                          11559          0  
+
+*(21)ADDED HOLES:
+*    Sys  Mem         Bolt    Slot                      ----Hole---
+*No.  Id   Id  Use     Dia  Length   Gage  Offset  Row  No.  Locate
+  0
+
+*(22)ADDED PLATES:
+*    Sys  Mem                                            --------Plate-------- ----Bolts---- Bolt_Holes
+*No.  Id   Id  Opt  Att  Side  Locate  Offset  Orn  Rot   Width  Thick  Length    Dia   Gage No. Locate
+  0

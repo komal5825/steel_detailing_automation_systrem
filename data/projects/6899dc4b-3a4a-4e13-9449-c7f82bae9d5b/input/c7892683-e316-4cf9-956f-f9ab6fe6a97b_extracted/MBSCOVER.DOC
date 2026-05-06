@@ -1,0 +1,62 @@
+
+
+
+
+                          Sivoko Steel Structures Ltd.
+                                  Comm.7,Tema
+                              Ghana (West Africa)
+
+
+
+
+                                    @TITLE:C
+                                      FOR
+                                                            
+                                                            
+                                                            
+
+
+
+
+                               Proposed Warehouse
+                               Proposed Warehouse
+                                                            
+                                    C08-033
+
+
+
+
+                                 BUILDING LAYOUT
+                        Width              (mm)=  61000
+                        Length             (mm)=  45500
+                        Eave Height        (mm)=   7000/  7000
+                        Roof Slope   (rise/100)= 10.00/10.00
+
+                                 BUILDING LOADS
+                        Roof Dead Load  (kN/m2)=  0.10 
+                        Wall Dead Load
+                          Left  Endwall (kN/m2)=  0.10 
+                          Right Endwall (kN/m2)=  0.10 
+                          Front Sidewall(kN/m2)=  0.10 
+                          Back  Sidewall(kN/m2)=  0.10 
+                        Live Load       (kN/m2)=  0.57 
+                        Collateral Load (kN/m2)=  0.05 
+                        Wind Speed       (m/s )=  39.0 
+                        Wind Code              = MBMA10              
+                        Exposure               = B     
+                        Closure                = Enclosed            
+                        Internal Wind Coeff    = -0.18, +0.18
+                        Risk Category          = -                                                           
+                        Importance - Wind      =  1.00
+                        Importance - Seismic   =  1.00
+                        Seismic Design Category= B  
+                        Seismic Coeff (Sms)    =  0.33
+                        Temperature Change     =   20 
+                        -------------------------------
+                        Designer : VVJ
+                        Detailer :  
+
+
+
+
+                                     @DATE

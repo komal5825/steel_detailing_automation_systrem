@@ -1,0 +1,505 @@
+03-06-2025 17:57:15    Message.out
+    ================================================================================
+     C323-153            Detail Warning Summary                  3/JUN/2025  5:57pm
+    ================================================================================
+     
+     ENDWALL
+     -------
+         No Warnings!
+     
+     EXTENSIONS
+     ----------
+         No Warnings!
+     
+     RIGID FRAME #1
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #2
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     WIND FRAMING
+     ------------
+         No Warnings!
+     
+     BOM
+     ---
+       INPUT
+       -----
+             WRN(AB-105) : No anchor bolt record for diameter
+               16.00
+     
+       OUTPUT
+       ------
+         COST
+           BOM
+             WRN(CST-01) : Incomplete cost information!
+                 ------(150Z15  )
+                 ------(Z20020  )
+03-06-2025 17:59:40    StdOut.Out
+    
+      PROGRAM DETAILS:
+         *WRN(DT-130 ): Detail block not found - C72
+         *WRN(DT-130 ): Detail block not found - D77
+04-06-2025 10:58:32    Message.out
+    ================================================================================
+     C323-153            Detail Warning Summary                  4/JUN/2025 10:58am
+    ================================================================================
+     
+     ENDWALL
+     -------
+         No Warnings!
+     
+     EXTENSIONS
+     ----------
+         No Warnings!
+     
+     RIGID FRAME #1
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #2
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     CRANE SYSTEM
+     ------------
+         No Warnings!
+     
+     WIND FRAMING
+     ------------
+         No Warnings!
+     
+     BOM
+     ---
+       INPUT
+       -----
+             WRN(AB-105) : No anchor bolt record for diameter
+               16.00
+     
+       OUTPUT
+       ------
+         COST
+           BOM
+             WRN(CST-01) : Incomplete cost information!
+                 ------(150Z15  )
+                 ------(Z20020  )
+09-07-2025 18:07:13    Message.out
+    ================================================================================
+     C323-153            Detail Warning Summary                  9/JUL/2025  6:07pm
+    ================================================================================
+     
+     ENDWALL
+     -------
+         No Warnings!
+     
+     EXTENSIONS
+     ----------
+         No Warnings!
+     
+     RIGID FRAME #1
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #2
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     CRANE SYSTEM
+     ------------
+         No Warnings!
+     
+     WIND FRAMING
+     ------------
+         No Warnings!
+     
+     BOM
+     ---
+       INPUT
+       -----
+             WRN(AB-105) : No anchor bolt record for diameter
+               16.00
+     
+       OUTPUT
+       ------
+         COST
+           BOM
+             WRN(CST-01) : Incomplete cost information!
+                 ------(150Z15  )
+                 ------(Z20020  )
+18-07-2025 15:25:53    Message.out
+    ================================================================================
+     C323-153            Design Warning Summary                 18/JUL/2025  3:25pm
+    ================================================================================
+     
+     LEFT ENDWALL
+     ------------
+         No Warnings!
+     
+     RIGHT ENDWALL
+     -------------
+         No Warnings!
+     
+     FRONT SIDEWALL
+     --------------
+         No Warnings!
+     
+     BACK SIDEWALL
+     -------------
+         No Warnings!
+     
+     ROOF
+     ----
+         No Warnings!
+     
+     EXTENSIONS
+     ----------
+         EXTENSION BEAM
+           Member
+             WRN(BXM-204): Axial + Moment > Limit
+             WRN(BXM-211): KL/R > Limit
+     
+     RIGID FRAME #1
+     --------------
+         No Warnings!
+     
+     RIGID FRAME #2
+     --------------
+         No Warnings!
+     
+     CRANE SYSTEM
+     ------------
+         No Warnings!
+18-07-2025 15:36:50    Message.out
+    ================================================================================
+     C323-153            Design Warning Summary                 18/JUL/2025  3:36pm
+    ================================================================================
+     
+     LEFT ENDWALL
+     ------------
+         No Warnings!
+     
+     RIGHT ENDWALL
+     -------------
+         No Warnings!
+     
+     FRONT SIDEWALL
+     --------------
+         No Warnings!
+     
+     BACK SIDEWALL
+     -------------
+         No Warnings!
+     
+     ROOF
+     ----
+         No Warnings!
+     
+     EXTENSIONS
+     ----------
+         EXTENSION BEAM
+           Member
+             WRN(BXM-204): Axial + Moment > Limit
+             WRN(BXM-211): KL/R > Limit
+     
+     RIGID FRAME #1
+     --------------
+         No Warnings!
+     
+     RIGID FRAME #2
+     --------------
+         No Warnings!
+     
+     CRANE SYSTEM
+     ------------
+         No Warnings!
+18-07-2025 15:37:31    Message.out
+    ================================================================================
+     C323-153            Detail Warning Summary                 18/JUL/2025  3:37pm
+    ================================================================================
+     
+     ENDWALL
+     -------
+         No Warnings!
+     
+     EXTENSIONS
+     ----------
+         No Warnings!
+     
+     RIGID FRAME #1
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #2
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     CRANE SYSTEM
+     ------------
+         No Warnings!
+     
+     WIND FRAMING
+     ------------
+         No Warnings!
+     
+     BOM
+     ---
+       INPUT
+       -----
+             WRN(AB-105) : No anchor bolt record for diameter
+               16.00
+     
+       OUTPUT
+       ------
+         COST
+           BOM
+             WRN(CST-01) : Incomplete cost information!
+                 ------(Z20020  )
+18-07-2025 15:43:22    Message.out
+    ================================================================================
+     C323-153            Design Warning Summary                 18/JUL/2025  3:43pm
+    ================================================================================
+     
+     LEFT ENDWALL
+     ------------
+         No Warnings!
+     
+     RIGHT ENDWALL
+     -------------
+         No Warnings!
+     
+     FRONT SIDEWALL
+     --------------
+         No Warnings!
+     
+     BACK SIDEWALL
+     -------------
+         No Warnings!
+     
+     ROOF
+     ----
+         No Warnings!
+     
+     EXTENSIONS
+     ----------
+         EXTENSION BEAM
+           Member
+             WRN(BXM-204): Axial + Moment > Limit
+             WRN(BXM-211): KL/R > Limit
+     
+     RIGID FRAME #1
+     --------------
+         No Warnings!
+     
+     RIGID FRAME #2
+     --------------
+         No Warnings!
+     
+     CRANE SYSTEM
+     ------------
+         No Warnings!
+18-07-2025 15:44:22    Message.out
+    ================================================================================
+     C323-153            Detail Warning Summary                 18/JUL/2025  3:44pm
+    ================================================================================
+     
+     ENDWALL
+     -------
+         No Warnings!
+     
+     EXTENSIONS
+     ----------
+         No Warnings!
+     
+     RIGID FRAME #1
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #2
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     CRANE SYSTEM
+     ------------
+         No Warnings!
+     
+     WIND FRAMING
+     ------------
+         No Warnings!
+     
+     BOM
+     ---
+       INPUT
+       -----
+             WRN(AB-105) : No anchor bolt record for diameter
+               16.00
+     
+       OUTPUT
+       ------
+         COST
+           BOM
+             WRN(CST-01) : Incomplete cost information!
+                 ------(Z20020  )
+23-07-2025 11:10:50    Message.out
+    ================================================================================
+     C323-153            Design Warning Summary                 23/JUL/2025 11:10am
+    ================================================================================
+     
+     LEFT ENDWALL
+     ------------
+         No Warnings!
+     
+     RIGHT ENDWALL
+     -------------
+         No Warnings!
+     
+     FRONT SIDEWALL
+     --------------
+         No Warnings!
+     
+     BACK SIDEWALL
+     -------------
+         No Warnings!
+     
+     ROOF
+     ----
+         No Warnings!
+     
+     EXTENSIONS
+     ----------
+         EXTENSION BEAM
+           Member
+             WRN(BXM-204): Axial + Moment > Limit
+             WRN(BXM-211): KL/R > Limit
+     
+     RIGID FRAME #1
+     --------------
+         No Warnings!
+     
+     RIGID FRAME #2
+     --------------
+         No Warnings!
+     
+     CRANE SYSTEM
+     ------------
+         No Warnings!
+23-07-2025 11:12:38    StdOut.Out
+    
+      (25)GIRT LOCATION:
+         *ERR(IO-110): Invalid input line
+              'Y'    8     2580.0   3580.0   4580.0   5580.0   6580.0  7
+23-07-2025 11:13:54    StdOut.Out
+    
+      (19)COLUMN PART & ELEVATION:
+        W40Bb155
+         *WRN(DA-105): Member not found in database files
+23-07-2025 11:20:52    Message.out
+    ================================================================================
+     C323-153            Design Warning Summary                 23/JUL/2025 11:20am
+    ================================================================================
+     
+     LEFT ENDWALL
+     ------------
+         No Warnings!
+     
+     RIGHT ENDWALL
+     -------------
+         No Warnings!
+     
+     FRONT SIDEWALL
+     --------------
+         No Warnings!
+     
+     BACK SIDEWALL
+     -------------
+         No Warnings!
+     
+     ROOF
+     ----
+         WIND BENT
+           Member
+             WRN(WBM-413): Weld Size < Required
+     
+     EXTENSIONS
+     ----------
+         No Warnings!
+     
+     RIGID FRAME #1
+     --------------
+         No Warnings!
+     
+     RIGID FRAME #2
+     --------------
+         No Warnings!
+     
+     CRANE SYSTEM
+     ------------
+         No Warnings!
+23-07-2025 11:22:14    Message.out
+    ================================================================================
+     C323-153            Detail Warning Summary                 23/JUL/2025 11:22am
+    ================================================================================
+     
+     ENDWALL
+     -------
+         No Warnings!
+     
+     EXTENSIONS
+     ----------
+         No Warnings!
+     
+     RIGID FRAME #1
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #2
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     CRANE SYSTEM
+     ------------
+         No Warnings!
+     
+     WIND FRAMING
+     ------------
+         No Warnings!
+     
+     BOM
+     ---
+       INPUT
+       -----
+             WRN(AB-105) : No anchor bolt record for diameter
+               16.00
+     
+       OUTPUT
+       ------
+         No Warnings!
+23-07-2025 11:23:56    StdOut.Out
+    
+      PROGRAM DETAILS:
+         *WRN(DT-130 ): Detail block not found - D77

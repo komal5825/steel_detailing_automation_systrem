@@ -1,0 +1,33 @@
+*DRAWING: CWI END PLATES  CELL:CWI_BEP
+*
+*( 1)DRAWING:
+*  Name          Title             Orient
+  'EPE3'        'CWI END PLATES'  'N'
+
+*( 2)PLATE SIZES:
+*No. Type    Id     Qty   Part           Width   Thick    Length    Offset  Weight Opt
+  1   'EP'    1      8   'EPE3'          150.000  10.000   150.000     0.00      1.8 '-'
+
+*( 3)PLATE COORDINATES:
+*  No.
+* Coord  X-Coord  Y-Coord
+     0      0.000     0.000
+
+*( 4)HOLE LOCATION:
+*  No.   Hole  Hole   Hole    Hole    Hole    Hole   Hole  No.  Location
+* Holes  Type   Id    Dia     Slot    Off     Gage   Ang   Loc          
+    0
+
+*( 5)PLATE CUTS:
+* No.  Plate  Plate  Cut  Cut     Cut      Cut
+* Cut  Type     Id   Loc  Type  Width   Length
+    0
+
+*( 6)PLATE MEMBER:
+*No.   Plate        Member
+  4   'EPE3    '   'ST-1        '
+      'EPE3    '   'ST-1        '
+      'EPE3    '   'ST-2        '
+      'EPE3    '   'ST-2        '
+
+   

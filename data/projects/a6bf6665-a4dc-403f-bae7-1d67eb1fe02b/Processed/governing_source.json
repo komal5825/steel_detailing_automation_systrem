@@ -1,0 +1,27 @@
+{
+  "project_id": "a6bf6665-a4dc-403f-bae7-1d67eb1fe02b",
+  "governing_file": {
+    "file_id": "bb58eb10-bd4b-4cf6-88b4-d75b0a895453",
+    "original_filename": "C007-117-Malegaon-3D.STD",
+    "file_type": "STAAD",
+    "source_application": "STAAD",
+    "likely_role": "governing",
+    "classification_confidence": 90
+  },
+  "selection_method": "HIGHEST_CONFIDENCE_WITH_SOURCE_PRIORITY",
+  "rationale": "Selected 'C007-117-Malegaon-3D.STD' (type=STAAD, confidence=90)",
+  "candidates": [
+    {
+      "file_id": "bb58eb10-bd4b-4cf6-88b4-d75b0a895453",
+      "original_filename": "C007-117-Malegaon-3D.STD",
+      "file_type": "STAAD",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "c0693a31-303f-4a07-8190-54d7979ce708",
+      "original_filename": "C007-117-Malegaon-3D.STD",
+      "file_type": "STAAD",
+      "classification_confidence": 90
+    }
+  ]
+}

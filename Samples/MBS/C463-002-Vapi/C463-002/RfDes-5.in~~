@@ -1,0 +1,58 @@
+*( 4)OPTIMIZATION OPTIONS:
+*Plate  Depth  Frame  -L_Col_Depth_Opt-  -R_Col_Depth_Opt-    Rafter_Depth_Opt
+* Opt    Opt    Sym   Typ    Min    Max  Typ    Min    Max   Typ    Min    Max
+  'N'    'N'    'S'  'T '  250.0 1400.0 'T '  250.0 1400.0  'T '  300.0 1400.0
+
+*(12)MEMBER DEPTHS:
+*Surf   ----Depth----  No.   --Interior_Depth-
+* Id    Start     End  Dep    Locate     Depth
+   1   400.00  400.00   0
+   2   400.00  300.00   0
+   3   300.00  400.00   0
+   4   400.00  400.00   0
+
+*(13)MEMBER SPLICES:
+*Surf    No.    Splice Splice
+* Id   Splice   Locate  Type
+   1      0
+   2      1        0.0  'HSS'
+   3      1        0.0  '-SS'
+   4      1        0.0  'HSS'
+ 
+ 
+*(14)SEGMENT PLATES:
+*    Surf Mem ---Segment--    Member      Flange  ----Plate_Thickness---
+*No.  Id   Id  Id   Length    Part         Width     Web  OS_Flg  IS_Flg
+   4   1    1   1      0.0   '--------'   150.00    5.00    6.00    8.00
+       2    2   2      0.0   '--------'   125.00    4.00    5.00    5.00
+       3    3   3      0.0   '--------'   125.00    4.00    5.00    5.00
+       4    4   4      0.0   '--------'   150.00    5.00    6.00    8.00
+
+*(24)FLANGE BRACE:
+*Surf       Locate  Side
+* Id  No.     Id     Opt
+   1   5       1     'L'
+               2     'L'
+               3     'L'
+               4     'L'
+               5     'L'
+   2   4       1     'L'
+               2     'L'
+               3     'L'
+               4     'N'
+   3   4       1     'N'
+               2     'L'
+               3     'L'
+               4     'L'
+   4   5       1     'L'
+               2     'L'
+               3     'L'
+               4     'L'
+               5     'L'
+
+*(41)DESIGN PLATES:
+*     ----Plate---   --Plate_Size-   Bolt   Bolt  ----Top---  --Bottom--   Bolt
+*No.  Type      Id   Width   Thick    Dia   Gage  Row  Space  Row  Space  Gage2
+  2  'BASE'      1  250.01    0.00  24.00   0.00   1    0.00   1    0.00   0.00
+     'BASE'      2  250.01    0.00  24.00   0.00   1    0.00   1    0.00   0.00
+

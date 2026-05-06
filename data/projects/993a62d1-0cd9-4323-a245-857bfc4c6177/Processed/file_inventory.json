@@ -1,0 +1,38 @@
+{
+  "project_id": "993a62d1-0cd9-4323-a245-857bfc4c6177",
+  "total_files": 3,
+  "parsed_files": 0,
+  "failed_files": 0,
+  "files": [
+    {
+      "file_id": "71aef518-a9d9-4f4c-bf1b-fd8d54de5f86",
+      "original_filename": "C08-033-Proposal drawing.dwg",
+      "file_type": "DWG",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PENDING"
+    },
+    {
+      "file_id": "3555f5d1-3672-40c7-ab32-0909a0570ca0",
+      "original_filename": "C08-033-Proposal drawing.dwg",
+      "file_type": "DWG",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PENDING"
+    },
+    {
+      "file_id": "9c203315-545e-42e7-81c7-8970ac2ee5f1",
+      "original_filename": "C08-033-Proposal drawing.dwg",
+      "file_type": "DWG",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PENDING"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+[RFDET-5:MEMBER1  ]
+Type=FRAME_RIGID
+Id=  1
+Mark=RF5-1       
+Wall=5
+LineId=5
+[RFDET-5:MEMBER2  ]
+Type=FRAME_RIGID
+Id=  2
+Mark=RF5-2       
+Wall=5
+LineId=5
+[RFDET-5:MEMBER3  ]
+Type=FRAME_RIGID
+Id=  3
+Mark=RF5-3       
+Wall=5
+LineId=5
+[RFDET-5:MEMBER4  ]
+Type=FRAME_RIGID
+Id=  4
+Mark=RF5-4       
+Wall=5
+LineId=5

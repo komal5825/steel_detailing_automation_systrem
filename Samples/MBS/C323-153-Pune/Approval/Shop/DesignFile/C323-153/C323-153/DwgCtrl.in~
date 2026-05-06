@@ -1,0 +1,374 @@
+*(10) SIDEWALL DRAWING USER DETAILS
+*
+*   SW
+* Dwg  No.    Detail       ---Location---
+*  Id Detail   Name          X        Y     Scale
+ 1    0
+ 2    0
+ 3    0
+ 4    0
+
+*
+*-------------------
+*  < ROOF DRAWINGS >
+*-------------------
+*
+
+*(11) ROOF DRAWING SIZE FACTORS
+*
+*Roof Roof
+* Dwg Dwg  Drawing_Size  ----Object_Offset-----  ----------Scale_Factor----------
+* Qty Id   Width  Height  Lt    Rt    Top   Bot  Text  Table  Dim    Build  Title
+   3   1   420    297.0  10.0  10.0   10.0  40.0  0.55  0.55  0.55 -1.0000   0.70  .. RoofDwg-1
+       2   420    297.0  10.0  10.0   10.0  40.0  0.55  0.55  0.55 -1.0000   0.70  .. RoofDwg-2
+       3   420    297.0  10.0  10.0   10.0  40.0  0.55  0.55  0.55 -1.0000   0.70  .. RoofDwg-3
+
+*(12) ROOF DRAWING OPTIONS
+*
+*Roof
+* Dwg   Contents  Call-Out  Member  Trim   Angle  List Panel   Gen
+* Id     Option   Details   Table   Table  Table   Length    Notes   Logo
+   1     'FO '     'Y '     'Y'     '6'    'Y'      'Y '     'N ' 'N'  .. RoofDwg-1
+   2     'SO '     'Y '     'Y'     '6'    'Y'      'Y '     'N ' 'N'  .. RoofDwg-2
+   3     'FO '     'N '     'N'     '6'    'Y'      'N '     'N ' 'N'  .. RoofDwg-3
+
+*(13) ROOF USER DETAILS
+*
+* Roof
+* Dwg  No.    Detail       ---Location---
+*  Id Detail   Name          X        Y     Scale
+ 1    0
+ 2    0
+ 3    0
+
+
+*
+*--------------------------
+*  < RIGID FRAME DRAWINGS >
+*--------------------------
+*
+
+*(14) RIGID FRAME DRAWING SIZE FACTORS
+*
+* RF  RF
+* Dwg Dwg  Drawing_Size  ----Object_Offset-----  ----------Scale_Factor----------
+* Qty Id   Width  Height  Lt    Rt    Top   Bot  Text  Table  Dim    Build  Title
+   1   1   420    297.0  15.0  15.0   10.0  40.0 0.55   0.55  0.55 -1.0000   0.70  .. RFDwg-1
+
+*(15) RIGID FRAME DRAWING OPTIONS
+*
+* RF
+* Dwg  Content  Call-Out Member  Bolt   General
+* Id   Option   Detail   Table   Table   Notes   Logo
+   1    'FS '    'Y '     'Y'     'Y '    'N ' 'N' .. RFDwg-1
+
+*(16) RIGID FRAME DRAWING USER DETAILS
+*
+* RF
+* Dwg  No.    Detail       ---Location---
+* Id  Detail   Name          X        Y     Scale
+    1   0
+
+
+*
+*--------------------------
+*  < ANCHOR BOLT DRAWINGS >
+*--------------------------
+*
+
+*(17) ANCHOR BOLT DRAWING SIZE FACTORS
+*
+*An   An
+* Dwg Dwg  Drawing_Size  ----Object_Offset-----  -------------Scale_Factor-------------  -Detail-
+* Qty Id   Width  Height  Lt    Rt    Top   Bot  Text  Table  Dim   Build  Title   Bolt  Size Loc
+   5   1   420    297.0   0.0  10.0  10.0  40.0  0.55   0.55  0.35  -1.0   0.70   0.55   35.0  'B ' .. AnDwg-1
+       2   420    297.0  35.0  10.0  15.0  40.0  0.40   0.40  0.40  -1.00  0.70   0.00   80.0  'T ' .. AnDwg-2
+       3   420    297.0  35.0  10.0  10.0  40.0  0.40   0.40  0.40  -1.00  0.70   0.00   65.0  'T ' .. AnDwg-3
+       4   840    600.0   0.0   0.0 100.0  40.0  1.50   0.60  0.85  -1.00  0.70   0.00   75.0  'T ' .. AnDwg-4
+       5   840    600.0   0.0 260.0   0.0  40.0  1.00   0.60  0.50  -1.00  0.70   0.00   60.0  'B ' .. AnDwg-5
+
+*(18) ANCHOR BOLT DRAWING OPTIONS
+*
+* An                    ---------------Reactions/Notes----------------
+* Dwg   Contents  Bolt  ----Reactions---   Bolt  General    Location
+* Id     Option   Line  RF    EW   Notes  Table   Notes   (R1/R2/T1/T2)   Logo
+   1      'PO '   'N'   '2 '  '2 '  '2 '   '2 '    'N '       'R2'    'N'  ..AnDwg-1
+   2      'DO '   'N'   'Y '  'Y '  'Y '   'Y '    'N '       'R2'    'N'  ..AnDwg-2
+   3      'RO '   'N'   '3 '  '3 '  'Y '   'N '    'N '       'R2'    'N'  ..AnDwg-3
+   4      'PD '   'N'   'Y '  'Y '  'Y '   'Y '    'N '       'R2'    'N'  ..AnDwg-4
+   5      'PDR'   'N'   'Y '  'Y '  'Y '   'N '    'N '       'R2'    'N'  ..AnDwg-5
+
+*(19) ANCHOR BOLT DRAWING USER DETAILS
+*
+* An
+* Dwg  No.    Detail       ---Location---
+* Id  Detail   Name          X        Y     Scale
+ 1    0
+ 2    0
+ 3    0
+ 4    0
+ 5    0
+
+*
+*---------------------
+*  < DETAIL DRAWINGS >
+*---------------------
+*
+
+*(20) DETAIL SHEET FRAME DRAWING SIZE FACTORS
+*
+*Dt   Dt
+* Dwg Dwg  Drawing_Size  ----Drawing_Offset---- Detail Title
+* Qty Id   Width  Height  Lt    Rt    Top   Bot Size   Scale Logo
+   1   1   420   297.0    5.0   5.0    5.0 40.0 75.0   0.7 'N' ..DtDwg-1
+
+*(21) DETAIL SHEET FRAME DRAWING USER DETAILS
+*
+* Dt
+* Dwg  No.    Detail       ---Location---
+* Id  Detail   Name          X        Y     Scale
+   1     0
+
+*------------------------------------------------------------------------------
+*
+*--------------------
+*  < LINER DRAWINGS >
+*--------------------
+*
+
+*(22) LINER DRAWING SIZE FACTORS
+*
+* Lnr Lnr
+* Dwg Dwg  Drawing_Size  ----Object_Offset-----  ----------Scale_Factor----------
+* Qty Id   Width  Height  Lt    Rt    Top   Bot  Text  Table  Dim    Build  Title
+   2   1   420    297.0  25.0  10.0  15.0  40.0  0.55  0.55  0.55 -1.000   0.70  .. WALL LINER
+       2   420    297.0  25.0  10.0  15.0  40.0  0.55  0.55  0.55 -1.000   0.70  .. ROOF LINER
+
+*(23) LINER DRAWING OPTIONS
+*
+* Lnr
+* Dwg  ------------Draw-------------  Member Trim           Gen
+* Id    L_EW  F_SW  R_EW  B_SW  Roof  Table  Table  Table   Notes  Logo
+   1    'Y'   'Y'   'Y'   'Y'   'N'   'Y'    '6'    'N'     'Y '  'N' .. WALL LINER
+   2    'N'   'N'   'N'   'N'   'Y'   'Y'    '6'    'N'     'Y '  'N' .. ROOF LINER
+
+*(24) LINER DRAWING USER DETAILS
+*
+* Lnr
+* Dwg  No.    Detail       ---Location---
+* Id  Detail   Name          X        Y     Scale
+   1     0
+   2     0
+
+*
+*-------------------------
+*  < INSULATION DRAWINGS >
+*-------------------------
+*
+
+*(25) INSULATION DRAWING SIZE FACTORS
+*
+* Ins Ins
+* Dwg Dwg  Drawing_Size  ----Object_Offset-----  ----------Scale_Factor----------
+* Qty Id   Width  Height  Lt    Rt    Top   Bot  Text  Table  Dim    Build  Title
+   2   1   420    297.0  25.0  10.0  15.0  40.0  0.55  0.55  0.55 -1.000   0.70  .. WALL INSUL
+       2   420    297.0  25.0  10.0  15.0  40.0  0.55  0.55  0.55 -1.000   0.70  .. ROOF INSUL
+
+*(26) INSULATION DRAWING OPTIONS
+*
+* Ins
+* Dwg  ------------Draw-------------  Member Trim           Gen
+* Id    L_EW  F_SW  R_EW  B_SW  Roof  Table  Table  Table   Notes  Logo
+   1    'Y'   'Y'   'Y'   'Y'   'N'   'Y'    '6'    'N'     'Y '  'N' .. WALL INSUL
+   2    'N'   'N'   'N'   'N'   'Y'   'Y'    '6'    'N'     'Y '  'N' .. ROOF INSUL
+
+*(27) INSULATION DRAWING USER DETAILS
+*
+* Ins
+* Dwg  No.    Detail       ---Location---
+* Id  Detail   Name          X        Y     Scale
+   1     0
+   2     0
+
+*
+*
+*-----------------------------
+*  < PARTITION WALL DRAWINGS >
+*-----------------------------
+*
+
+*(28) PARTITION DRAWING SIZE FACTORS
+*
+*Part Part
+* Dwg Dwg  Drawing_Size  ----Object_Offset-----  ----------Scale_Factor----------
+* Qty Id   Width  Height  Lt    Rt    Top   Bot  Text  Table  Dim    Build  Title
+   1   1   420    297.0   5.0  10.0  15.0  40.0  0.55  0.55   0.55 -1.000   0.70  .. PARTDWG1
+
+*(29) PARTITION DRAWING OPTIONS
+*
+*Part Contents Display  Call-Out  Member  Trim   Angle  List Panel  Gen
+* Id   Option  Option   Details   Table   Table  Table    Length   Notes   Logo
+  1     'FSI'    'P'      'Y'      'Y'     '6'    'N'      'Y'      'N'     'N'
+
+*(30) PARTITION DRAWING USER DETAILS
+*
+*Part
+* Dwg  No.    Detail       ---Location---
+* Id  Detail   Name          X        Y     Scale
+   1   1      '     '      420        0     1.00
+
+*
+*-----------------------
+*  < FUTURE#2 DRAWINGS >
+*-----------------------
+*
+
+*(31) FUTURE#2 DRAWING SIZE FACTORS
+*
+* F2  F2
+* Dwg Dwg  Drawing_Size  ----Object_Offset-----  ----------Scale_Factor----------
+* Qty Id   Width  Height  Lt    Rt    Top   Bot  Text  Table  Dim    Build  Title
+   0
+
+*(32) FUTURE#2 DRAWING OPTIONS
+*
+* F2
+* Dwg ----Draw---- Contents  Call-Out  Member  Trim   Angle  List Panel   Gen
+* Id  Wall1 Wall3   Option   Details   Table   Table  Table   Length    Notes   Logo
+
+*(33) FUTURE#2 DRAWING USER DETAILS
+*
+* F2
+* Dwg  No.    Detail       ---Location---
+* Id  Detail   Name          X        Y     Scale
+
+*
+*----------------------------
+*  < MISCELLANEOUS DRAWINGS >
+*----------------------------
+*
+
+*(34) MISCELLANEOUS DRAWING SIZE FACTORS
+*
+* Msc Msc Dwg
+* Dwg Dwg Key       Drawing_Size   ----Object_Offset-----  ----------Scale_Factor----------      Start
+* Qty Id  Word      Width  Height  Lt    Rt    Top   Bot  Text  Table  Dim    Build  Title  Det.  Loc.
+   9   1 'KEYDWG'   420.00  297.0  25.00  10.0 10.00 40.00 0.55  0.55  0.55   0.00   0.70   50.0  'R'
+       2 'CRANEDWG' 420.00  297.0  25.00  10.0 10.00 40.00 0.55  0.55  0.55   0.00   0.70   50.0  'R'
+       3 'BRCDWG'   420.00  297.0  25.00  10.0 10.00 40.00 0.55  0.55  0.55   0.00   0.70   50.0  'T'
+       4 'WINDDWG'  420.00  297.0  25.00  10.0 10.00 40.00 0.55  0.55  0.55   0.00   0.70   50.0  'B'
+       5 'JACKDWG'  420.00  297.0  25.00  10.0 10.00 40.00 0.55  0.55  0.55   0.00   0.70   50.0  'B'
+       6 'FLOORDWG' 840.00  600.0  35.00  10.0 10.00 40.00 1.0   1.0   0.8   -1.00   0.70   64.0  'B'
+       7 'FLOORDWG' 840.00  600.0  35.00  10.0 10.00 40.00 1.0   1.0   0.8   -1.00   0.70   64.0  'B'
+       8 'FLOORDWG' 840.00  600.0  35.00  10.0 10.00 40.00 1.0   1.0   0.8   -1.00   0.70   64.0  'B'
+       9 'FLOORDWG' 840.00  600.0  35.00  10.0 10.00 40.00 1.0   1.0   0.8   -1.00   0.70   64.0  'B'
+
+*(35) MISCELLANEOUS DRAWING OPTIONS
+*
+* Msc
+* Dwg ----Draw---- Contents  Call-Out -----------Table------------     Gen
+* Id  Wall1 Wall3   Option   Details  Member  Angle  Bolt  Wld/Trm    Notes   Logo
+   1   '-'   '-'     'PD'     'Y'      'Y'    '-'     '-'     '-'      'N'    'N'
+   2   '-'   '-'     'PO'     'Y'      'Y'    '-'     '-'     '-'      'N'    'N'
+   3   'NN'  'Y'     'DR'     'Y'      'Y'    '-'     '-'     '-'      'N'    'N'
+   4   '-'   '-'     '-'      'N'      'Y'    '-'     '-'     '-'      'N'    'N'
+   5   '-'   '-'     '-'      '-'      'Y'    '-'     '-'     '-'      'N'    'N'
+   6   'FA'  '-'     'JO'     '-'      '2'    '6'     'Y'     '6'      'N'    'N'
+   7   'FA'  '-'     'FO'     '-'      '2'    '6'     'Y'     '6'      'N'    'N'
+   8   'FA'  '-'     'FJ'     '-'      '2'    '6'     'Y'     '6'      'N'    'N'
+   8   'FA'  '-'     'SO'     '-'      '2'    '6'     'Y'     '6'      'N'    'N'
+
+*(36) MISCELLANEOUS DRAWING USER DETAILS
+*
+* Msc
+* Dwg  No.    Detail       ---Location---
+* Id  Detail   Name          X        Y     Scale
+   1     0
+   2     0
+   3     0
+   4     0
+   5     0
+   6     0
+   7     0
+   8     0
+   9     0
+
+
+
+
+
+*------------------------------------------------------------------------------
+
+*(37) ENDWALL, SIDEWALL, & ROOF ACCESSORIES
+*
+*  No   Opt Wall Bay  Accessory_Offset   Accessory_Size    Text   Accessory
+*Access Id   Id  Id       X       Y      Width    Height  Locate     Id
+   0
+*
+*-----------------------
+*  < COMBINED DRAWINGS >
+*-----------------------
+*
+
+*(38) COMBINED DRAWING PAGE LAYOUT
+*                                                       ---Object_Spacing----
+*Cmb  Cmb
+* Dwg Dwg Page --Page_Size--   ----Object_Offset-----   Lft   Dwg    Rt   Dwg
+* Qty Id  Id   Width  Height   Lt    Rt    Top   Bot     H     V     H     V
+  1    1  1    420  297.0     35.0  15.0   15.0  15.0    0.1   0.1   0.1   0.1  ..CmbDwg-1
+
+*(39) COMBINED DRAWING OPTIONS AND SCALE FACTORS
+*
+*Cmb
+*Dwg                Scale   Title  Notes
+*Id   Logo  Notes  Adjust   Scale  Scale
+  1   'N'    'Y'      1.0     0.     1.
+
+*(40)COMBINED DRAWING OPTIONS:
+* Content Options: 1=FO, 2=SO, 3=FS, 4=FO-SO, 5=FT, 6=FTS, 7=FT-SO
+*                  8=creates a page to be edited, 9=Calls user set pages.
+*  Contents
+*   Option
+      7
+
+*(41) ENDWALL PAGES
+*
+* Wall                  Conn  Member
+*  Id   Framing  Panel  Table  Table
+    2      1       1      1      1
+    4      1       1      1      1
+
+*(42) SIDEWALL PAGES
+*
+* Wall                  Conn  Member
+*  Id   Framing  Panel  Table  Table
+    1      2       2      2      2
+    3      2       2      2      2
+
+*(43) ROOF PAGES
+*
+*                       Conn  Member
+*       Framing  Panel  Table  Table
+           3       3      3      3
+
+*(44)RIGID FRAME PAGES
+*
+* Frame          Plate  Conn   Bolt
+*  Id   Framing  Table  Table  Table
+    1      4       4      4      4
+    2      4       4      4      4
+    3      4       4      4      4
+    4      4       4      4      4
+    5      0       0      0      0
+    6      4       4      4      4
+
+*(45) COMBINED DRAWING SHEET USER DETAILS
+* No.    Detail       ---Location---
+*Detail   Name          X        Y     Scale
+    0
+
+*(46) ACCESSORY DETAILS
+* No.   ---------Accessory---------    Drawing    Detail       ---Location---
+* Acc     Area        Type     Size      File      Name          X        Y     Scale
+   0
+

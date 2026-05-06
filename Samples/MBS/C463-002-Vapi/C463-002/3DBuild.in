@@ -1,0 +1,526 @@
+*===============================================================================
+*C463-002            3D Drawing Input                       18/DEC/2025  2:51pm
+*===============================================================================
+
+*( 1)TITLE BLOCK:
+  'INFINITI SOLUTIONS                      ' .. Manufacturer
+  '                                        ' .. Builder
+  'Proposed Warehouse                      ' .. Project
+  'Warehouse                               ' .. Project Address
+  'Vapi                                    ' .. Project Address
+  'C463-002                                ' .. Project ID
+
+*( 2)BUILDING LAYOUT:
+*           ------L_Expand_EW------  ------R_Expand_EW------
+*    Type   Use  Opt Extend  Offset  Use  Opt Extend  Offset
+     'FF'   'Y ' '-'   0.00  390.00  'Y ' '-'   0.00  390.00
+
+*( 3)WALL LAYOUT:
+*                            Base    Wall
+* No. Id  Use    Type Opt    Elev  Offset
+   5   1 'LEFT ' '-'  '-'    0.00  230.00
+       2 'FRONT' '-'  '-'    0.00  230.00
+       3 'RIGHT' '-'  '-'    0.00  230.00
+       4 'BACK ' '-'  '-'    0.00  230.00
+       5 'ROOF ' '-'  '-'    0.00    0.00
+
+*( 4)WALL OPTIONS:
+*         ------------------Use-----------------      Base
+*   Id    Wall   Girt  Panel  Brace  Trim  Strap      Elev
+     1    'Y'    'Y'   'Y'     'Y'   'Y'    'Y'       0.00
+     2    'Y'    'Y'   'Y'     'Y'   'Y'    'Y'       0.00
+     3    'Y'    'Y'   'Y'     'Y'   'Y'    'Y'       0.00
+     4    'Y'    'Y'   'Y'     'Y'   'Y'    'Y'       0.00
+
+*( 5)ROOF OPTIONS:
+*    ---------------Use---------------
+*    Roof  Purlin  Panel  Brace  Angle
+     'Y'    'Y'     'Y'    'Y'    'Y'
+
+*( 6)SURFACE SHAPE:
+*  No.                           Offset
+*  Surf   X_Coord   Y_Coord    L_EW  R_EW  Frame
+    4           0      9100   200.0 200.0  230.0
+             6400      9740   200.0 200.0  200.0
+            12800      9100   200.0 200.0  200.0
+            12800         0   200.0 200.0  230.0
+
+*( 7)BAY SPACING:
+*   Wall     No.   ---Bay_Set---
+*    Id     Sets     Width  Quan
+      1       2       7685    1
+                      5115    1
+      2       4       8535    1
+                      8210    1
+                      6715    1
+                      7040    1
+      3       2       5115    1
+                      7685    1
+      4       4       7040    1
+                      6715    1
+                      8210    1
+                      8535    1
+      5       4       8535    1
+                      8210    1
+                      6715    1
+                      7040    1
+
+*( 8)PARTIAL WALLS:
+*      Open  Wall     --Bay_Id-  -----Offset-----  -----Height-----  --------Jamb--------
+*  No.  Id    Id  Use Start End  Start        End  Bottom       Top  Base_Elev  Type  Color
+     4    1    1  'P'   1     2        0        0        0     3000          0  '- '   '--'
+          2    2  'P'   1     4        0        0        0     3000          0  '- '   '--'
+          3    3  'P'   1     2        0        0        0     3000          0  '- '   '--'
+          4    4  'P'   1     4        0        0        0     3000          0  '- '   '--'
+
+*( 9)WALL OPENINGS:
+* Wall         ----Bay---                          Sill   Base  Panel
+*  Id  No. Id  Id  Offset Type   Width   Height  Height   Elev   Opt   Color
+    1   1   1   1     843   1     6000     7000       0    0.0   'Y'     0
+    2   1   2   3    1358   1     4000     4000       0    0.0   'Y'     0
+    3   1   3   2    1843   1     4000     4000       0    0.0   'Y'     0
+    4   0
+
+*(10)WALL OPENING FRAMING:
+*           Open       -----Member----  Frame_Opt   Frame_Id   ----Locate---
+* No.  Id    Id   Use  Type Rot  Depth  Start End  Start End   Start     End
+  9     1    1    'J'  'U'  'L' 200.00   '-'  'G'    0     4        0      7280  
+        2    1    'J'  'U'  'R' 200.00   '-'  'G'    0     4        0      7280  
+        3    1    'H'  'U'  'U' 200.00   'J'  'J'    0     0      843      6843  
+        4    2    'J'  'C'  'L' 200.00   '-'  'G'    0     2        0      4280  
+        5    2    'J'  'C'  'R' 200.00   '-'  'G'    0     2        0      4280  
+        6    2    'H'  'C'  'U' 200.00   'J'  'J'    0     0    18103     22103  
+        7    3    'J'  'C'  'L' 200.00   '-'  'G'    0     2        0      4280  
+        8    3    'J'  'C'  'R' 200.00   '-'  'G'    0     2        0      4280  
+        9    3    'H'  'C'  'U' 200.00   'J'  'J'    0     0     6958     10958  
+
+*(11)WIDE OPENING LAYOUT:
+*Wall -Open-       Bay_Id   --Clear_Opening--   Wedge     Stub   Column
+* Id  No. Id  Type St  End  Width      Height   Height    Elev    Mount
+   1   0
+   2   0
+   3   0
+   4   0
+
+*(12)WALL COLUMNS:
+*Wall  No.  Col  Column Column  Col  Column    Base
+* Id   Col  Id    Type    Rot   Opt   Depth    Elev
+   1    3    1    '-'     'N'   '-'     0.0      0.00
+             2    'W'     'N'   '-'   316.0      0.00
+             3    '-'     'N'   '-'     0.0      0.00
+   2    5    1    'W'     'N'   '-'     0.0      0.00
+             2    'W'     'N'   '-'     0.0      0.00
+             3    'W'     'N'   '-'     0.0      0.00
+             4    'W'     'N'   '-'     0.0      0.00
+             5    'W'     'N'   '-'     0.0      0.00
+   3    3    1    '-'     'N'   '-'     0.0      0.00
+             2    'W'     'N'   '-'   316.0      0.00
+             3    '-'     'N'   '-'     0.0      0.00
+   4    5    1    'W'     'N'   '-'     0.0      0.00
+             2    'W'     'N'   '-'     0.0      0.00
+             3    'W'     'N'   '-'     0.0      0.00
+             4    'W'     'N'   '-'     0.0      0.00
+             5    'W'     'N'   '-'     0.0      0.00
+
+*(13)WALL RAFTERS:
+*Wall  No.  Raf  Surf  Rafter    Rafter Raf  Rafter
+* Id   Raf  Id    Id   Locate     Type  Opt  Depth
+   1    2    1     2        0     '-'   '-'    0.0
+             2     3        0     '-'   '-'    0.0
+   2    0
+   3    2    1     2        0     '-'   '-'    0.0
+             2     3        0     '-'   '-'    0.0
+   4    0
+
+*(14)PURLIN LAYOUT:
+* Surf  Purl
+*  Id   Type  Offset   Proj  Depth  Width
+    2   'ZB'    0.00 200.00   0.00   0.00    
+    3   'ZB'    0.00 200.00   0.00   0.00    
+
+*(15)PURLIN LOCATION:
+* Surf   Peak
+*  Id   Space  No.   Locate
+    2     300    4   1334.9   2933.9   4532.9   6131.9 
+    3     300    4    300.0   1899.0   3498.0   5097.0 
+
+*(16)PURLIN EXTENSION:
+*  Surf   Surf_Ext
+*   Id   Left  Right
+     2      0      0
+     3      0      0
+
+*(17)EAVE STRUTS:
+* Wall
+*  Id   Type  Depth
+    2   'ZB' 200.00
+    4   'ZB' 200.00
+
+*(18)GIRT LAYOUT:
+*  Wall  Girt
+*   Id   Type   Offset   Proj   Depth
+     1   'ZB'     0.00 230.00  203.20
+     2   'ZB'     0.00 230.00  203.20
+     3   'ZB'     0.00 230.00  203.20
+     4   'ZB'     0.00 230.00  203.20
+
+*(19)WALL GIRTS:
+* No. Wall  Bay     Girt              Frame_Opt -Frame_Id-
+*Girt   Id   Id   Locate  Type  Opt  Left Right Left Right
+  61     1    1   3080.0  'ZB'  '-'   '-'   'O'   0     1
+         1    1   4280.0  'ZB'  '-'   '-'   'O'   0     1
+         1    1   5780.0  'ZB'  '-'   '-'   'O'   0     1
+         1    1   7280.0  'ZB'  '-'   '-'   '-'   0     0
+         1    1   8280.0  'ZB'  '-'   '-'   '-'   0     0
+         1    2   3080.0  'ZB'  '-'   'O'   '-'   1     0
+         1    2   4280.0  'ZB'  '-'   'O'   '-'   1     0
+         1    2   5780.0  'ZB'  '-'   'O'   '-'   1     0
+         1    2   7280.0  'ZB'  '-'   '-'   '-'   0     0
+         1    2   8280.0  'ZB'  '-'   '-'   '-'   0     0
+         3    1   3080.0  'ZB'  '-'   '-'   'O'   0     3
+         3    1   4280.0  'ZB'  '-'   '-'   '-'   0     0
+         3    1   5780.0  'ZB'  '-'   '-'   '-'   0     0
+         3    1   7280.0  'ZB'  '-'   '-'   '-'   0     0
+         3    1   8280.0  'ZB'  '-'   '-'   '-'   0     0
+         3    2   4280.0  'ZB'  '-'   '-'   '-'   0     0
+         3    2   5250.0  'ZB'  '-'   '-'   '-'   0     0
+         3    2   5780.0  'ZB'  '-'   '-'   '-'   0     0
+         3    2   7280.0  'ZB'  '-'   '-'   '-'   0     0
+         3    2   8280.0  'ZB'  '-'   '-'   '-'   0     0
+         3    2   3080.0  'ZB'  '-'   'O'   '-'   3     0
+         2    1   3080.0  'ZB'  '-'   '-'   '-'   0     0
+         2    1   4280.0  'ZB'  '-'   '-'   '-'   0     0
+         2    1   5780.0  'ZB'  '-'   '-'   '-'   0     0
+         2    1   7280.0  'ZB'  '-'   '-'   '-'   0     0
+         2    1   8280.0  'ZB'  '-'   '-'   '-'   0     0
+         2    2   3080.0  'ZB'  '-'   '-'   'O'   0     2
+         2    2   4280.0  'ZB'  '-'   '-'   '-'   0     0
+         2    2   5780.0  'ZB'  '-'   '-'   '-'   0     0
+         2    2   7280.0  'ZB'  '-'   '-'   '-'   0     0
+         2    2   8280.0  'ZB'  '-'   '-'   '-'   0     0
+         2    3   4280.0  'ZB'  '-'   '-'   '-'   0     0
+         2    3   5280.0  'ZB'  '-'   '-'   '-'   0     0
+         2    3   5780.0  'ZB'  '-'   '-'   '-'   0     0
+         2    3   7280.0  'ZB'  '-'   '-'   '-'   0     0
+         2    3   8280.0  'ZB'  '-'   '-'   '-'   0     0
+         2    4   3080.0  'ZB'  '-'   'O'   '-'   2     0
+         2    4   4280.0  'ZB'  '-'   '-'   '-'   0     0
+         2    4   5780.0  'ZB'  '-'   '-'   '-'   0     0
+         2    4   7280.0  'ZB'  '-'   '-'   '-'   0     0
+         2    4   8280.0  'ZB'  '-'   '-'   '-'   0     0
+         4    1   3080.0  'ZB'  '-'   '-'   '-'   0     0
+         4    1   4280.0  'ZB'  '-'   '-'   '-'   0     0
+         4    1   5780.0  'ZB'  '-'   '-'   '-'   0     0
+         4    1   7280.0  'ZB'  '-'   '-'   '-'   0     0
+         4    1   8280.0  'ZB'  '-'   '-'   '-'   0     0
+         4    2   3080.0  'ZB'  '-'   '-'   '-'   0     0
+         4    2   4280.0  'ZB'  '-'   '-'   '-'   0     0
+         4    2   5780.0  'ZB'  '-'   '-'   '-'   0     0
+         4    2   7280.0  'ZB'  '-'   '-'   '-'   0     0
+         4    2   8280.0  'ZB'  '-'   '-'   '-'   0     0
+         4    3   3080.0  'ZB'  '-'   '-'   '-'   0     0
+         4    3   4280.0  'ZB'  '-'   '-'   '-'   0     0
+         4    3   5780.0  'ZB'  '-'   '-'   '-'   0     0
+         4    3   7280.0  'ZB'  '-'   '-'   '-'   0     0
+         4    3   8280.0  'ZB'  '-'   '-'   '-'   0     0
+         4    4   3080.0  'ZB'  '-'   '-'   '-'   0     0
+         4    4   4280.0  'ZB'  '-'   '-'   '-'   0     0
+         4    4   5780.0  'ZB'  '-'   '-'   '-'   0     0
+         4    4   7280.0  'ZB'  '-'   '-'   '-'   0     0
+         4    4   8280.0  'ZB'  '-'   '-'   '-'   0     0
+
+*(20)ROOF PANEL DATA:
+* Roof  Gable    Insulation   Stand  Soffit
+*Color  Color    Use   Wire   Seam     Use
+ 'A3'   'HA'     'N'   'N'    'N'      'Y'
+
+*(21)WALL PANEL DATA:
+*Wall Wall  -------Trim_Color-------   Insulation
+*Id  Color  Eave  Corner  Jamb  Base   Use   Wire
+  1  'A2'   'HA'  'HA'    'HA'  'HA'   'N'    'N'
+  2  'A2'   'HA'  'HA'    'HA'  'HA'   'N'    'N'
+  3  'A2'   'HA'  'HA'    'HA'  'HA'   'N'    'N'
+  4  'A2'   'HA'  'HA'    'HA'  'HA'   'N'    'N'
+
+*(22)ROOF DIAGONAL BRACING ATTACHMENT POINTS:
+*  Wall    No.      Attachment_Locations
+*   Id   Attach      1       2       3
+     1       3         0    6400   12800 
+     2       0
+     3       3         0    6400   12800 
+     4       0
+
+*(23)ROOF DIAGONAL BRACING SIZE:
+* Wall   No.   Bay  Brace
+*  Id   Bays   Id    Type
+     1     2   1     'R '
+                     'R '
+               4     'R '
+                     'R '
+     2     0
+     3     0
+     4     0
+
+*(24)WALL DIAGONAL BRACING:
+*Wall  No.          Bay_Id   No.   Level    Level  Brace
+* Id   Bays  Offset  St  Nd  Level  Type    Height Type
+   1    0
+   2    2         0   1   1    2     'B'      7430  'R '
+                                     'B'      9100  'R '
+                  0   4   4    2     'B'      7430  'R '
+                                     'B'      9100  'R '
+   3    0
+   4    2         0   1   1    2     'B'      7430  'R '
+                                     'B'      9100  'R '
+                  0   4   4    2     'B'      7430  'R '
+                                     'B'      9100  'R '
+   5    0
+
+*(25)GUTTERS & DOWNSPOUTS:
+*Wall  ---Gutter--  -Downspout-
+* Id   Type  Color   No.  Color
+   2    'E'  '--'     8   '--'
+   4    'E'  '--'     8   '--'
+
+*(26)WALL LIGHT PANELS:
+* Wall     No.       Start     Loc        Size      Panel    No.
+*  Id   Start Loc.  X_Coord  Y_Coord  Width Length  Color  Panel  Spacing
+    1       0
+    2       0
+    3       0
+    4       0
+
+*(27)ROOF LIGHT PANELS:
+* Surf     No.       Start     Loc        Size      Panel   No.
+*  Id   Start Loc.  X_Coord  Y_Coord  Width Length  Color  Panel  Spacing
+    2       0
+    3       0
+
+*(28)LINER PANELS:
+* Wall   No.   ----Location---          ------Panel------  Door_Trim
+*  Id   Liner    Start     End  Height     Size     Color  Use Color
+    1     0
+    2     0
+    3     0
+    4     0
+
+*(29)EXTENSION LAYOUT:
+*        Wall                ---Bay---  -Edge_Extend-  End_Option End_Support         Soffit
+* No. Id  Id  Type Opt Mount Start End   Left   Right  Left Right Left  Right Bracket  Use
+   3   1   1  'EC' '-'  'B'    1    1     0.0     0.0  '-'   '-'  '-'     '-'   'N'    'N'
+       2   2  'EC' '-'  'B'    3    3     0.0     0.0  '-'   '-'  '-'     '-'   'N'    'N'
+       3   3  'EC' '-'  'B'    2    2     0.0     0.0  '-'   '-'  '-'     '-'   'N'    'N'
+
+*(30)EXTENSION SIZE:
+*      ----Horizontal_Size---   ---------Vertical_Size-------- --Orient--  -------Support------
+* Id     Elev   Width   Slope     Elev  Height   Slope Project Beam Panel  Offset   Elev Splice
+   1   8200.0  1500.0   10.00      0.0     0.0    0.00    0.00  '-'  '-'     0.00   0.00   '-'
+   2   5200.0  1500.0   10.00      0.0     0.0    0.00    0.00  '-'  '-'     0.00   0.00   '-'
+   3   5200.0  1500.0   10.00      0.0     0.0    0.00    0.00  '-'  '-'     0.00   0.00   '-'
+
+*(31)EXTENSION BEAMS:
+*    Ext Line                                          Connect_Id  ---Depth---
+*No.  Id  Id   Use       Orn  Type Shape Rot Opt   Id  Start  End  Start   End
+  8    1    1 'ATTACH  ' 'H'  'W'   'H'  '-' '-'    1    0     0  195.6  345.6
+       1    1 'ATT_SUPP' 'H'  'W'   'H'  '-' '-'    2    0     0  350.0  350.0
+       1    2 'ATTACH  ' 'H'  'W'   'H'  '-' '-'    3    0     0  195.6  345.6
+       2    3 'ATTACH  ' 'H'  'W'   'H'  '-' '-'    4    0     0  195.6  345.6
+       2    4 'ATTACH  ' 'H'  'W'   'H'  '-' '-'    3    0     0  195.6  345.6
+       3    2 'ATTACH  ' 'H'  'W'   'H'  '-' '-'    4    0     0  195.6  345.6
+       3    3 'ATTACH  ' 'H'  'W'   'H'  '-' '-'    5    0     0  195.6  345.6
+       3    3 'ATT_SUPP' 'H'  'W'   'H'  '-' '-'    6    0     0  350.0  350.0
+
+*(32)EXTENSION PURLINS:
+*     Ext                                           Peak     Set     ----Lap----
+* No.  Id   Use       Type  Rot Opt   Depth  Row   Space   Space     Ext     Int
+   6    1  'ROOF    ' 'ZB'  'U' '-'  3000.0   1    300.0     0.0     0.0     0.0
+        1  'EAVE    ' 'ZB'  'U' '-'     0.0   1      0.0     0.0     0.0     0.0
+        2  'ROOF    ' 'ZB'  'U' '-'     0.0   1    300.0     0.0     0.0     0.0
+        2  'EAVE    ' 'ZB'  'U' '-'     0.0   1      0.0     0.0     0.0     0.0
+        3  'ROOF    ' 'ZB'  'U' '-'     0.0   1    300.0     0.0     0.0     0.0
+        3  'EAVE    ' 'ZB'  'U' '-'     0.0   1      0.0     0.0     0.0     0.0
+
+*(33)TRANSVERSE PARTITION WALLS:  (Location and Size)
+* No.   Wall   -L_EW-   -B_SW_Offset-   -Top_of_Wall-
+*Wall    Id    Offset   Start     End   Height  Panel
+   0
+
+*(34)TRANSVERSE PARTITION WALLS:  (Panels and Insulation)
+* No.  Wall  --------Panel--------  ----Insulation---  Screw  Trim
+*Wall   Id   Side  Size      Color  Type  Thick  Wire   Len  Top End
+   0
+
+*(35)LONGITUDINAL PARTITION WALLS:  (Location and Size)
+* No.  Wall   -B_SW-   -L_EW_Offset-   -Top_of_Wall-
+*Wall   Id    Offset   Start     End   Height  Panel
+   0
+
+*(36)LONGITUDINAL PARTITION WALLS:  (Panels and Insulation)
+* No.  Wall  -------Panel--------  ---Insulation----  Screw   Trim
+*Wall   Id   Side  Size     Color  Type  Thick  Wire   Len   Top End
+   0
+
+*(37)WALK DOOR, WINDOW, AND VENT LOCATIONS:
+* Wall  No.   Bay  Coor @ Lower Left  Size of Accessory
+*  Id   Loc.   Id  X_Coord  Y_Coord    Width   Height    Color
+    1     0
+    2     0
+    3     0
+    4     0
+
+*(38)BUILDING EXTERIOR COLORS:
+*                             Partition Walls
+*                             Longi-   Trans- Light Panels
+* Roof Endwall Sidewall Floor tudinal  verse   Roof Wall   Facia  Soffit
+     3     5        5      2     7        6      7     7      2      2
+
+*(39)BUILDING FRAMING COLORS:
+* Rigid  Interior                Wind   Bldg    Other
+* Frames Columns  Girts Purlins Framing Strut  Framing
+     1       1       5      4       7       4       1
+
+*(40)DRAW BUILDING EXTERIOR SURFACES:
+*       Left    Front    Right    Back
+* Roof Endwall Sidewall Endwall Sidewall
+  'Y'   'Y'      'Y'     'Y'      'Y'
+
+*(41)RIGID FRAME INTERIOR COLUMNS:
+* No.
+*Frame  Frame  Frame  --Base_Elev--  -----Interior Column-----
+*Lines   Line  Type      Lt      Rt  No.  Type  Locate    Elev
+    5      1   'RF'    0.00    0.00    0
+           2   'RF'    0.00    0.00    0
+           3   'RF'    0.00    0.00    0
+           4   'RF'    0.00    0.00    0
+           5   'RF'    0.00    0.00    0
+
+*(42)WIND BENTS:
+*Wall  No.          Bay
+* Id  Bent  Offset   Id   Height   Depth  Elev
+   1    0
+   2    0
+   3    0
+   4    0
+   5    0
+
+*(43)WIND COLUMNS:
+*Wall  No.          Bay
+* Id   Col  Offset   Id  Side   Height  Depth   Elev
+   1    0
+   2    0
+   3    0
+   4    0
+   5    0
+
+*(44)RIGID FRAME MEMBER DEPTHS:
+*    No.     Frame  Surf   Depth   Depth      No.       Interior Depth
+*  Frame      Id     Id    Start    End      Depth      Location  Depth
+      5         1     1   400.00  400.00       0
+                      2   400.00  300.00       0
+                      3   300.00  400.00       0
+                      4   400.00  400.00       0
+                2     1   400.00  400.00       0
+                      2   400.00  300.00       0
+                      3   300.00  400.00       0
+                      4   400.00  400.00       0
+                3     1   400.00  400.00       0
+                      2   400.00  300.00       0
+                      3   300.00  400.00       0
+                      4   400.00  400.00       0
+                4     1   400.00  400.00       0
+                      2   400.00  300.00       0
+                      3   300.00  400.00       0
+                      4   400.00  400.00       0
+                5     1   400.00  400.00       0
+                      2   400.00  300.00       0
+                      3   300.00  400.00       0
+                      4   400.00  400.00       0
+
+*(45)RIGID FRAME LINES:
+*   No.      Frame      No.
+*  Frame      Id       Line      Frame Lines
+      5         1        1        1
+                2        1        2
+                3        1        3
+                4        1        4
+                5        1        5
+
+*(46)FLOOR BEAMS:
+*   No.  Frame  No.  Frame  No.  Beam   Beam    Beam
+* Frames  Id   Bay    Bay  Beams  Id    Height  Depth
+    0
+
+*(47)FLOOR CABLE BRACING:
+*   No.  Frame  No.  Frame  No.   Brace  Base   Cable
+* Frame   Id   Bay    Bay  Brace   Id    Level  Type
+    0
+
+*(48)FLOOR LAYOUT:
+*   No.  Floor  Floor   Edge            No.   -Coordinates in clockwise pattern-
+* Floor   Id    Height  Depth  Color  Corner  X_Coord  Y_Coord  X_Coord  Y_Coord
+     0
+
+*(49)WALLS BETWEEN FLOORS:
+*                                   No.        Coordinates along wall
+*  No.  Wall         Wall Height   Wall        segments, start-to-end
+* Wall   Id   Color   Low  High   Segment  X_Coord Y_Coord X_Coord Y_Coord
+      0
+
+*(50)ADDITIONAL COLUMNS:
+*                               Plate           Coordinate of Distance to  No of col
+*   No.    Col  Column_length    of     of       start column  adj. column   in dir.
+* Columns  Id     Low   High   Column Column  X_Coord Y_Coord  dX  dY  X_Coord Y_Coord
+      0
+
+*(51)WALL/ROOF STRUTS:
+* No.  Strut  Loc Wall  Bay_Id   Attach  Opt  Strut
+*Strut  Id   Type Surf  St End   Locate  Id    Type   Offset  Rot
+     4    1   'W'   2     1   1    7430   4    'T'         0  'N'
+          2   'W'   2     4   4    7430   4    'T'         0  'N'
+          3   'W'   4     1   1    7430   4    'T'         0  'N'
+          4   'W'   4     4   4    7430   4    'T'         0  'N'
+
+*(52)JACK BEAM LAYOUT:
+* No.  Beam   -Bay_Id--                    Type  Draw
+*Beam   Id    Start End    Offset  Height  Type  Refer
+    0
+
+*(53)JACK BEAM DEPTH:
+* No.  Jack  Depth   Depth  No. ----Interior----
+*Jack   Id   Start     End  Dep Locate    Depth
+   0
+
+*(54)JACK BEAM MEMBER:
+*      Jack            Table
+* No.   Id   Offset     Id
+   0
+
+*(55)ROOF OPENING LAYOUT:
+*     Open  --Location--     Frame --Surface-- ----Bay----                     Ref
+* No.  Id   Use       Id Opt  Type Id   Offset Id   Offset    Width   Length   Id       Load
+    0
+
+*(56)ROOF OPENING FRAMING:
+* No.  Mem Open       Surf Bay           -------Member------  Frame_Opt   Frame_Id  Connect_Id
+* Mem   Id   Id  Use   Id   Id   Offset  Type Opt  Rot Table  Start End  Start End  Start  End
+    0
+
+*(57)ADDITIONAL PURLINS:
+*           Surf  Bay  Purl                           ----Extension-----  -Frame_Opt-  -Frame_Id-  Connect_Id
+* No.   Id   Id    Id   Id    Offset  Type  Rot  Opt      Left     Right  Left  Right  Left Right  Left Right
+    0
+
+*(58)EXTENSION PURLIN LOCATION:
+*     Ext
+* No.  Id  Use            No.    Locate
+    6   1 'ROOF        '    1     300.0
+        1 'EAVE        '    1    1417.5
+        2 'ROOF        '    1     300.0
+        2 'EAVE        '    1    1417.5
+        3 'ROOF        '    1     300.0
+        3 'EAVE        '    1    1417.5
+
+*(59)ADDITIONAL EXTENSION PURLIN LAYOUT:
+*          Ext           Bay Purlin                 -----Extend-----   Frame_Opt  -Frame_Id-
+* No.  Id   Id   Use      Id   Id   Type  Rot Opt   Left       Right  Left Right  Left Right
+    0

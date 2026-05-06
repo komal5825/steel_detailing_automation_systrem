@@ -1,0 +1,87 @@
+{
+  "project_id": "bac40ea8-441c-4298-8972-dc3b9c7dc193",
+  "governing_file": {
+    "file_id": "c113e60b-fd14-4891-b923-bd6d1fd2835e",
+    "original_filename": "C007-117-Malegaon-3D.STD",
+    "file_type": "STAAD",
+    "source_application": "STAAD",
+    "likely_role": "governing",
+    "classification_confidence": 90
+  },
+  "selection_method": "HIGHEST_CONFIDENCE_WITH_SOURCE_PRIORITY",
+  "rationale": "Selected 'C007-117-Malegaon-3D.STD' (type=STAAD, confidence=90)",
+  "candidates": [
+    {
+      "file_id": "c113e60b-fd14-4891-b923-bd6d1fd2835e",
+      "original_filename": "C007-117-Malegaon-3D.STD",
+      "file_type": "STAAD",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "5818177f-19c2-40cc-9a93-dbf929605fda",
+      "original_filename": "C007-117-Malegaon-2D.STD",
+      "file_type": "STAAD",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "3646c5d0-8438-4564-bc26-c42bd982a734",
+      "original_filename": "C007-117-Malegaon-2D.STD",
+      "file_type": "STAAD",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "e6cb6872-ee99-44aa-b3b8-367f598a95f9",
+      "original_filename": "C007-117-Malegaon-3D.STD",
+      "file_type": "STAAD",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "e779289b-30ce-4b1f-97dd-417df83edebb",
+      "original_filename": "C007-117-Malegaon-2D.STD",
+      "file_type": "STAAD",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "d9a9c325-37b0-4144-b133-20f14cd245f5",
+      "original_filename": "C007-117-Malegaon-3D.STD",
+      "file_type": "STAAD",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "e46a2ec6-f85b-4466-9eb3-43a65c1ba79f",
+      "original_filename": "Proposal-C007-117-Malegaon_R1_09May2025.pdf",
+      "file_type": "PDF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "425d90ec-dfe4-41eb-8e94-4a84512db1e6",
+      "original_filename": "3.pdf",
+      "file_type": "PDF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "e449183c-8b6a-44ab-86fa-d6ee4a81de24",
+      "original_filename": "5.pdf",
+      "file_type": "PDF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "42716b6a-dc66-44cb-ba3c-4324916860a1",
+      "original_filename": "7.pdf",
+      "file_type": "PDF",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "3c421df7-a529-47ce-9cae-8222c11a550e",
+      "original_filename": "C007-117-Malegaon-Mono Slope WIND LOAD CALCULATION sheet.xlsx",
+      "file_type": "EXCEL",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "41db1fb2-75a5-4172-8ef8-691eb9f208cb",
+      "original_filename": "C007-117-Malegaon-WIND LOAD CALCULATION sheet.xlsx",
+      "file_type": "EXCEL",
+      "classification_confidence": 90
+    }
+  ]
+}

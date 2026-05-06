@@ -1,0 +1,990 @@
+ 
+ 
+ 
+ 
+                               INFINITI SOLUTIONS
+ 
+                                      PUNE
+ 
+ 
+ 
+ 
+                                    FRAMING SUMMARY
+                                      FOR
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                               Proposed Warehouse
+                                   Warehouse
+                                      Vapi
+                                    C463-002
+ 
+ 
+ 
+ 
+                                 BUILDING LAYOUT
+                        Width              (mm)=  12800
+                        Length             (mm)=  30500
+                        Eave Height        (mm)=   9100/  9100
+                        Roof Slope   (rise/100)= 10.00/10.00
+ 
+                                 BUILDING LOADS
+                        Roof Dead Load  (kN/m2)=  0.10
+                        Wall Dead Load
+                          Left  Endwall (kN/m2)=  0.10
+                          Right Endwall (kN/m2)=  0.10
+                          Front Sidewall(kN/m2)=  0.10
+                          Back  Sidewall(kN/m2)=  0.10
+                        Live Load       (kN/m2)=  0.57
+                        Collateral Load (kN/m2)=  0.05
+                        Wind Speed       (m/s )=  44.0
+                        Wind Code              = MBMA10
+                        Exposure               = C
+                        Closure                = Enclosed
+                        Internal Wind Coeff    = -0.18, +0.18
+                        Risk Category          = -
+                        Importance - Wind      =  1.00
+                        Importance - Seismic   =  1.00
+                        Seismic Design Category= C
+                        Seismic Coeff (Sms)    =  0.16
+                        Temperature Change     =   20
+                        -------------------------------
+                        Designer : VVJ
+                        Detailer :
+ 
+ 
+ 
+ 
+                                     18/DEC/2025
+
+ 
+
+================================================================================
+ C463-002            FRAMING SUMMARY: Roof                  18/DEC/2025  2:50pm
+================================================================================
+ 
+ PURLIN LAYOUT:
+ --------------
+ Surface   Purlin   Surface_Extend  Stub_Purlin  Total     Peak  --Set_Space--
+    Id      Type      Left   Right  Left  Right   Rows    Space    Space   Row
+ -------   ------  ------- -------  ----  -----  -----  -------  -------   ---
+     2       ZB          0       0    N     N       4       300     1335     1
+                                                                    1599     3
+     3       ZB          0       0    N     N       4       300     1599     3
+                                                                    1335     1
+ 
+ EAVE LAYOUT:
+ ------------
+  Wall        Flange    Web
+   Id   Type  Rotate  Orient  Offset
+  ----  ----  ------  ------  ------
+    2    ZB      O       P      80.0
+    4    ZB      O       P      80.0
+ 
+ PURLIN LOCATION:
+ ----------------
+  Surface  Purlin   Surface
+     Id      Id      Offset    Space
+   ------  ------  --------  -------
+      2       1        1335     1335
+              2        2934     1599
+              3        4533     1599
+              4        6132     1599
+                       6432      300
+ 
+      3       1         300      300
+              2        1899     1599
+              3        3498     1599
+              4        5097     1599
+                       6432     1335
+ 
+ PURLIN SIZE:
+ ------------
+   Surface  Bay             ----Purlin_Lap----   IS_Flg
+     Id      Id  Part           Left     Right    Strap
+   -------  ---  --------   --------  --------   ------
+      2       1  200Z25                    960      3                      
+              2  200Z18          960       330      3                      
+              3  200Z18          330       960      2                      
+              4  200Z18          960                3                      
+
+      3       1  200Z25                    960      3                      
+              2  200Z18          960       330      3                      
+              3  200Z18          330       960      2                      
+              4  200Z18          960                3                      
+
+
+ EAVE STRUT SIZE:
+ ----------------
+    Wall  Bay               ----Eave_Lap----
+     Id    Id  Part            Left    Right
+    ----  ---  -----------  -------  -------
+      2     1  200Z25                    960
+            2  200Z18           960      330
+            3  200Z18           330      960
+            4  200Z18           960         
+
+      4     1  200Z18                    960
+            2  200Z18           960      330
+            3  200Z18           330      960
+            4  200Z25           960         
+
+ 
+ ROOF BRACING:
+ -------------
+   Bay  Attach_Locate
+    Id   Start    End   Type     Part        Dia
+   ---  ------ ------   -------- --------  -----
+     1       0   6400   Rod      ROD20     20.00
+          6400  12800   Rod      ROD20     20.00
+     4       0   6400   Rod      ROD20     20.00
+          6400  12800   Rod      ROD20     20.00
+ 
+ BOLT AT EAVE STRUT:
+ -------------------
+  Wall Frame_Line   Lap   -------Bolt_Size------
+   Id  Id   Type   Plate  No. Type    Dia Washer
+  ---- --   ----   -----  --- ----- ----- ------
+    2   1    RF      -     2  Gr8.8 12.00    0
+    2   2    RF      Y     4  Gr8.8 12.00    0
+    2   3    RF      Y     4  Gr8.8 12.00    0
+    2   4    RF      Y     4  Gr8.8 12.00    0
+    2   5    RF      -     2  Gr8.8 12.00    0
+    4   1    RF      -     2  Gr8.8 12.00    0
+    4   2    RF      Y     4  Gr8.8 12.00    0
+    4   3    RF      Y     4  Gr8.8 12.00    0
+    4   4    RF      Y     4  Gr8.8 12.00    0
+    4   5    RF      -     2  Gr8.8 12.00    0
+
+================================================================================
+ C463-002            FRAMING SUMMARY: Left  Endwall         18/DEC/2025  2:50pm
+================================================================================
+ 
+ RAFTER:
+ -------
+             Surf
+    Id        Id    Part      Length
+    ------   ----   --------  ------
+    Raf1       2                6432
+    Raf2       3                6432
+ 
+ RAFTER SPLICE:
+ --------------
+   -Surface-        ---Plate---  Bolt    Bolt   Bolt  ---Top---  --Bottom-
+   Id Locate  Type  Width Thick  Type     Dia   Gage  Row Space  Row Space
+   -- ------  ----  ----- -----  -----  -----  -----  --- -----  --- -----
+    3      0   -           0.00  Gr8.8   0.00          0          0
+ 
+ COLUMN:
+ -------
+                    Grid                          Base
+    Id      Offset  Line  Part      Rot  Length   Elev
+    ------  ------  ----  --------  ---  ------  -----
+    Col2      7685  B     W30a158    N     9082    0.0
+ 
+ BASE PLATE:
+ -----------
+            ----------Plate--------  -----Anchor_Bolt-----  Base_Clip_Bolts
+    Id      Type Width Length Thick  Type    Dia  Gage Row  No. Type    Dia
+    ------  ---- ----- ------ -----  ----- ----- ----- ---  --- ----- -----
+    Col2     S3  200.0  350.0 16.00  A36   20.00 100.0  2    0             
+ 
+ CAP PLATE:
+ ----------
+            -----Bolts-----
+    Id      No. Type    Dia
+    ------  --- ----- -----
+    Col2     2  Gr8.8 16.00
+ 
+ FLANGE BRACE:
+ -------------
+            Col             Brace_At
+    Id      Side  Part      Girt_Id
+    ------  ----  --------  --------------------
+    Col2     R    L40X40X4  1 2 3
+ 
+ OPENING LAYOUT:
+ ---------------
+   Open  -----Bay-----  -------Opening_Size------
+    Id    Id    Offset    Width   Height     Sill    Note
+   ----  ----  -------  -------  -------  -------    -------------
+     1     1       843     6000     7000        0                 
+ 
+ OPENING JAMB/HEADER/SILL:
+ -------------------------
+   Open  Bay
+    Id    Id  Member  Offset  Locate  Part       Length
+   ----  ---  ------  ------  ------  --------  -------
+     1     1  Jamb-L     843       0  ISMC200      7280
+              Jamb-R    6843       0  ISMC200      7280
+              Header    7000     843  ISMC200      6000
+ 
+ PARTIAL WALLS:
+ --------------
+       -Bay_Start-   --Bay_End--          Base  Left      Right
+   Id   Id  Offset    Id  Offset  Height  Type  Jamb      Jamb
+   --  ---  ------   ---  ------  ------  ----  --------  --------
+    1    1       0     2       0    3000    -                     
+ 
+ GIRT LAYOUT:
+ ------------
+  Bay                             ---Bay_Offset--  --Support-  ------Lap------  Flg
+   Id    Locate  Type  Part         Start     End  Left Right     Left   Right  Rot
+  ---  --------  ----  --------   ------- -------  ---- -----  ------- -------  ---
+    1    3080.0   ZB   200Z15         0.0   843.0  Col  Jamb       0.0     0.0   D
+         4280.0   ZB   200Z15         0.0   843.0  Col  Jamb       0.0     0.0   D
+         5780.0   ZB   200Z15         0.0   843.0  Col  Jamb       0.0     0.0   D
+         7280.0   ZB   200ZN18 (a)    0.0  7685.0  Col  Col        0.0   660.0   D
+         8280.0   ZB   200Z18         0.0  7685.0  Col  Col        0.0   660.0   D
+  ---  --------  ----  --------   ------- -------  ---- -----  ------- -------  ---
+    2    3080.0   ZB   200Z15         0.0  5115.0  Jamb Col        0.0     0.0   D
+         4280.0   ZB   200Z15         0.0  5115.0  Jamb Col        0.0     0.0   D
+         5780.0   ZB   200Z15         0.0  5115.0  Jamb Col        0.0     0.0   D
+         7280.0   ZB   200ZN18 (a)    0.0  5115.0  Col  Col      660.0     0.0   D
+         8280.0   ZB   200Z18         0.0  5115.0  Col  Col      660.0     0.0   D
+ 
+                             (a)Nested Member
+
+ GIRT INSIDE FLANGE BRACE:
+ -------------------------
+  No._Brace/Bay
+    1   2
+  --- --- 
+    3   2
+
+================================================================================
+ C463-002            FRAMING SUMMARY: Front Sidewall        18/DEC/2025  2:50pm
+================================================================================
+ 
+ OPENING LAYOUT:
+ ---------------
+   Open  -----Bay-----  -------Opening_Size------
+    Id    Id    Offset    Width   Height     Sill    Note
+   ----  ----  -------  -------  -------  -------    -------------
+     1     3      1358     4000     4000        0                 
+ 
+ OPENING JAMB/HEADER/SILL:
+ -------------------------
+   Open  Bay
+    Id    Id  Member  Offset  Locate  Part       Length
+   ----  ---  ------  ------  ------  --------  -------
+     1     3  Jamb-L    1358       0  200C20       4280
+              Jamb-R    5358       0  200C20       4280
+              Header    4000    1358  200C20       4000
+ 
+ PARTIAL WALLS:
+ --------------
+       -Bay_Start-   --Bay_End--          Base  Left      Right
+   Id   Id  Offset    Id  Offset  Height  Type  Jamb      Jamb
+   --  ---  ------   ---  ------  ------  ----  --------  --------
+    2    1       0     4       0    3000    -                     
+ 
+ GIRT LAYOUT:
+ ------------
+  Bay                             ---Bay_Offset--  --Support-  ------Lap------  Flg
+   Id    Locate  Type  Part         Start     End  Left Right     Left   Right  Rot
+  ---  --------  ----  --------   ------- -------  ---- -----  ------- -------  ---
+    1    3080.0   ZB   200Z15       390.0  8535.0  Col  Col        0.0   660.0   D
+         4280.0   ZB   200Z25       390.0  8535.0  Col  Col        0.0   660.0   D
+         5780.0   ZB   200Z25       390.0  8535.0  Col  Col        0.0   660.0   D
+         7280.0   ZB   200Z20       390.0  8535.0  Col  Col        0.0   660.0   D
+         8280.0   ZB   200Z15       390.0  8535.0  Col  Col        0.0   660.0   D
+  ---  --------  ----  --------   ------- -------  ---- -----  ------- -------  ---
+    2    3080.0   ZB   200Z15         0.0  8210.0  Col  Jamb     660.0     0.0   D
+         4280.0   ZB   200Z18         0.0  8210.0  Col  Col      660.0   660.0   D
+         5780.0   ZB   200Z20         0.0  8210.0  Col  Col      660.0   660.0   D
+         7280.0   ZB   200Z18         0.0  8210.0  Col  Col      660.0   660.0   D
+         8280.0   ZB   200Z15         0.0  8210.0  Col  Col      660.0   660.0   D
+  ---  --------  ----  --------   ------- -------  ---- -----  ------- -------  ---
+    3    4280.0   ZB   200Z18         0.0  6715.0  Col  Col      660.0   660.0   D
+         5280.0   ZB   200Z15         0.0  6715.0  Col  Col        0.0     0.0   D
+         5780.0   ZB   200Z18         0.0  6715.0  Col  Col      660.0   660.0   D
+         7280.0   ZB   200Z18         0.0  6715.0  Col  Col      660.0   660.0   D
+         8280.0   ZB   200Z15         0.0  6715.0  Col  Col      660.0   660.0   D
+  ---  --------  ----  --------   ------- -------  ---- -----  ------- -------  ---
+    4    3080.0   ZB   200Z15         0.0  6650.0  Jamb Col        0.0     0.0   D
+         4280.0   ZB   200Z18         0.0  6650.0  Col  Col      660.0     0.0   D
+         5780.0   ZB   200Z18         0.0  6650.0  Col  Col      660.0     0.0   D
+         7280.0   ZB   200Z18         0.0  6650.0  Col  Col      660.0     0.0   D
+         8280.0   ZB   200Z15         0.0  6650.0  Col  Col      660.0     0.0   D
+
+ GIRT INSIDE FLANGE BRACE:
+ -------------------------
+  No._Brace/Bay
+    1   2   3   4
+  --- --- --- --- 
+    3   3   2   3
+ 
+ WALL BRACING:  
+ -------------
+   Bay    Brace_Height
+   Id       Bot    Top  Type      Part        Dia
+  -----  ------ ------  --------  --------  -----
+    1         0   7430  Rod       ROD20     20.00
+           7430   9100  Rod       ROD20     20.00
+    4         0   7430  Rod       ROD20     20.00
+           7430   9100  Rod       ROD20     20.00
+ 
+ WALL STRUT:
+ -----------
+   Bay   Brace   Strut       Strut
+   Id   Attach   Part        Option
+   ---  ------   --------    ---------------------
+    1     7430   T125x32     Strut At Brace       
+    4     7430   T92x36      Strut At Brace       
+
+================================================================================
+ C463-002            FRAMING SUMMARY: Right Endwall         18/DEC/2025  2:50pm
+================================================================================
+ 
+ RAFTER:
+ -------
+             Surf
+    Id        Id    Part      Length
+    ------   ----   --------  ------
+    Raf1       2                6432
+    Raf2       3                6432
+ 
+ RAFTER SPLICE:
+ --------------
+   -Surface-        ---Plate---  Bolt    Bolt   Bolt  ---Top---  --Bottom-
+   Id Locate  Type  Width Thick  Type     Dia   Gage  Row Space  Row Space
+   -- ------  ----  ----- -----  -----  -----  -----  --- -----  --- -----
+    3      0   -           0.00  Gr8.8   0.00          0          0
+ 
+ COLUMN:
+ -------
+                    Grid                          Base
+    Id      Offset  Line  Part      Rot  Length   Elev
+    ------  ------  ----  --------  ---  ------  -----
+    Col2      5115  B     W30a158    N     9082    0.0
+ 
+ BASE PLATE:
+ -----------
+            ----------Plate--------  -----Anchor_Bolt-----  Base_Clip_Bolts
+    Id      Type Width Length Thick  Type    Dia  Gage Row  No. Type    Dia
+    ------  ---- ----- ------ -----  ----- ----- ----- ---  --- ----- -----
+    Col2     S3  200.0  350.0 16.00  A36   20.00 100.0  2    0             
+ 
+ CAP PLATE:
+ ----------
+            -----Bolts-----
+    Id      No. Type    Dia
+    ------  --- ----- -----
+    Col2     2  Gr8.8 16.00
+ 
+ FLANGE BRACE:
+ -------------
+            Col             Brace_At
+    Id      Side  Part      Girt_Id
+    ------  ----  --------  --------------------
+    Col2     R    L40X40X4  1 3
+ 
+ OPENING LAYOUT:
+ ---------------
+   Open  -----Bay-----  -------Opening_Size------
+    Id    Id    Offset    Width   Height     Sill    Note
+   ----  ----  -------  -------  -------  -------    -------------
+     1     2      1843     4000     4000        0                 
+ 
+ OPENING JAMB/HEADER/SILL:
+ -------------------------
+   Open  Bay
+    Id    Id  Member  Offset  Locate  Part       Length
+   ----  ---  ------  ------  ------  --------  -------
+     1     2  Jamb-L    1843       0  200C20       4280
+              Jamb-R    5843       0  200C20       4280
+              Header    4000    1843  200C20       4000
+ 
+ PARTIAL WALLS:
+ --------------
+       -Bay_Start-   --Bay_End--          Base  Left      Right
+   Id   Id  Offset    Id  Offset  Height  Type  Jamb      Jamb
+   --  ---  ------   ---  ------  ------  ----  --------  --------
+    3    1       0     2       0    3000    -                     
+ 
+ GIRT LAYOUT:
+ ------------
+  Bay                             ---Bay_Offset--  --Support-  ------Lap------  Flg
+   Id    Locate  Type  Part         Start     End  Left Right     Left   Right  Rot
+  ---  --------  ----  --------   ------- -------  ---- -----  ------- -------  ---
+    1    3080.0   ZB   200Z15         0.0  5115.0  Col  Jamb       0.0     0.0   D
+         4280.0   ZB   200ZN18 (a)    0.0  5115.0  Col  Col        0.0   660.0   D
+         5780.0   ZB   200Z15         0.0  5115.0  Col  Col        0.0   660.0   D
+         7280.0   ZB   200Z18         0.0  5115.0  Col  Col        0.0   660.0   D
+         8280.0   ZB   200Z18         0.0  5115.0  Col  Col        0.0   660.0   D
+  ---  --------  ----  --------   ------- -------  ---- -----  ------- -------  ---
+    2    3080.0   ZB   200Z15      5843.0  7685.0  Jamb Col        0.0     0.0   D
+         4280.0   ZB   200ZN18 (a)    0.0  7685.0  Col  Col      660.0     0.0   D
+         5250.0   ZB   200Z18         0.0  7685.0  Col  Col        0.0     0.0   D
+         5780.0   ZB   200Z15         0.0  7685.0  Col  Col      660.0     0.0   D
+         7280.0   ZB   200Z18         0.0  7685.0  Col  Col      660.0     0.0   D
+         8280.0   ZB   200Z18         0.0  7685.0  Col  Col      660.0     0.0   D
+ 
+                             (a)Nested Member
+
+ GIRT INSIDE FLANGE BRACE:
+ -------------------------
+  No._Brace/Bay
+    1   2
+  --- --- 
+    2   3
+
+================================================================================
+ C463-002            FRAMING SUMMARY: Back  Sidewall        18/DEC/2025  2:50pm
+================================================================================
+ 
+ PARTIAL WALLS:
+ --------------
+       -Bay_Start-   --Bay_End--          Base  Left      Right
+   Id   Id  Offset    Id  Offset  Height  Type  Jamb      Jamb
+   --  ---  ------   ---  ------  ------  ----  --------  --------
+    4    1       0     4       0    3000    -                     
+ 
+ GIRT LAYOUT:
+ ------------
+  Bay                             ---Bay_Offset--  --Support-  ------Lap------  Flg
+   Id    Locate  Type  Part         Start     End  Left Right     Left   Right  Rot
+  ---  --------  ----  --------   ------- -------  ---- -----  ------- -------  ---
+    1    3080.0   ZB   200Z15       390.0  7040.0  Col  Col        0.0   660.0   D
+         4280.0   ZB   200Z18       390.0  7040.0  Col  Col        0.0   660.0   D
+         5780.0   ZB   200Z18       390.0  7040.0  Col  Col        0.0   660.0   D
+         7280.0   ZB   200Z18       390.0  7040.0  Col  Col        0.0   660.0   D
+         8280.0   ZB   200Z15       390.0  7040.0  Col  Col        0.0   660.0   D
+  ---  --------  ----  --------   ------- -------  ---- -----  ------- -------  ---
+    2    3080.0   ZB   200Z15         0.0  6715.0  Col  Col      660.0   660.0   D
+         4280.0   ZB   200Z18         0.0  6715.0  Col  Col      660.0   660.0   D
+         5780.0   ZB   200Z18         0.0  6715.0  Col  Col      660.0   660.0   D
+         7280.0   ZB   200Z18         0.0  6715.0  Col  Col      660.0   660.0   D
+         8280.0   ZB   200Z15         0.0  6715.0  Col  Col      660.0   660.0   D
+  ---  --------  ----  --------   ------- -------  ---- -----  ------- -------  ---
+    3    3080.0   ZB   200Z15         0.0  8210.0  Col  Col      660.0   660.0   D
+         4280.0   ZB   200Z20         0.0  8210.0  Col  Col      660.0   660.0   D
+         5780.0   ZB   200Z20         0.0  8210.0  Col  Col      660.0   660.0   D
+         7280.0   ZB   200Z18         0.0  8210.0  Col  Col      660.0   660.0   D
+         8280.0   ZB   200Z15         0.0  8210.0  Col  Col      660.0   660.0   D
+  ---  --------  ----  --------   ------- -------  ---- -----  ------- -------  ---
+    4    3080.0   ZB   200Z15         0.0  8145.0  Col  Col      660.0     0.0   D
+         4280.0   ZB   200Z25         0.0  8145.0  Col  Col      660.0     0.0   D
+         5780.0   ZB   200Z25         0.0  8145.0  Col  Col      660.0     0.0   D
+         7280.0   ZB   200Z20         0.0  8145.0  Col  Col      660.0     0.0   D
+         8280.0   ZB   200Z15         0.0  8145.0  Col  Col      660.0     0.0   D
+
+ GIRT INSIDE FLANGE BRACE:
+ -------------------------
+  No._Brace/Bay
+    1   2   3   4
+  --- --- --- --- 
+    3   2   3   3
+ 
+ WALL BRACING:  
+ -------------
+   Bay    Brace_Height
+   Id       Bot    Top  Type      Part        Dia
+  -----  ------ ------  --------  --------  -----
+    1         0   7430  Rod       ROD20     20.00
+           7430   9100  Rod       ROD20     20.00
+    4         0   7430  Rod       ROD20     20.00
+           7430   9100  Rod       ROD20     20.00
+ 
+ WALL STRUT:
+ -----------
+   Bay   Brace   Strut       Strut
+   Id   Attach   Part        Option
+   ---  ------   --------    ---------------------
+    1     7430   T92x36      Strut At Brace       
+    4     7430   T125x32     Strut At Brace       
+
+================================================================================
+ C463-002            FRAMING SUMMARY: Rigid Frame 1         18/DEC/2025  2:50pm
+================================================================================
+ 
+ LAYOUT:
+ -------
+   Type          :  RF
+   No. Line      :   1
+   Frame Line Id :   1
+   Grid Line Id  :   1
+ 
+ MEMBER:
+ -------
+   Surf  Mem  Seg            Flange  Flange  -Web_Depth-  -Plate_Thickness-
+    Id    Id   Id  Part      Length   Width  Start   End    Web O-flg I-flg
+   ----  ---  ---  --------  ------  ------  ----- -----  ----- ----- -----
+     1     1    1              8918   150.0  400.0 400.0   5.00  6.00  8.00
+     2     2    2              6195   125.0  400.0 300.0   4.00  5.00  5.00
+     3     3    3              6195   125.0  300.0 400.0   4.00  5.00  5.00
+     4     4    4              8918   150.0  400.0 400.0   5.00  6.00  8.00
+ 
+ SPLICE:
+ -------
+   -Surface-        ---Plate---  Bolt    Bolt   Bolt  ---Top---  --Bottom-
+   Id Locate  Type  Width Thick  Type     Dia   Gage  Row Space  Row Space
+   -- ------  ----  ----- -----  -----  -----  -----  --- -----  --- -----
+    2      0   HSS  200.0 16.00  A325   20.00  100.0   2  100.0   2  100.0
+    3      0   -SS  200.0 16.00  A325   20.00  100.0   2  100.0   2  100.0
+    4      0   HSS  200.0 16.00  A325   20.00  100.0   2  100.0   2  100.0
+ 
+ BASE PLATE:
+ -----------
+                    ---Plate---  -----------Bolt----------   Base
+   Locate     Type  Width Thick  Type     Dia   Gage   Row   Elev
+   ---------- ----  ----- ------ -----  -----  -----  ----  -----
+   Lt Column   FI   250.0 16.00  A36    24.00  100.0    4     0.0
+   Rt Column   FI   250.0 16.00  A36    24.00  100.0    4     0.0
+ 
+ FLANGE BRACE:
+ -------------
+   Surf           No.
+    Id   Locate  Side  Part      Clip
+   ----  ------  ----  --------  ------
+     1       1     1   L40X40X4        
+     1       3     1   L40X40X4        
+     2       1     1   L40X40X4        
+     2       3     1   L40X40X4        
+     2       4     1   L40X40X4        
+     3       1     1   L40X40X4        
+     3       2     1   L40X40X4        
+     3       4     1   L40X40X4        
+     4       1     1   L40X40X4        
+     4       3     1   L40X40X4        
+ 
+ BEARING STIFFENER:
+ ------------------
+   Locate      Width  Thick
+   ----------  -----  -----
+   Lt Column    60.0   8.00
+   Rt Column    60.0   8.00
+ 
+ CRANE BRACKET:
+ --------------
+   Crane Bay
+     Id   Id  Height  Left      Right
+   ----- ---  ------  --------  --------
+      1    1    7000  W35b228   W35b228 
+ 
+ CRANE BRACKET STIFFENER:
+ ------------------------
+   Crane Bay
+     Id   Id  Side   Location    Width  Thick
+   ----- ---  -----  ----------  -----  -----
+      1    1  Left   Top Flange    840     72
+      1    1  Left   Bot Flange    840     72
+      1    1  Left   Crane Beam   1680     72
+      1    1  Right  Top Flange    840     72
+      1    1  Right  Bot Flange    840     72
+      1    1  Right  Crane Beam   1680     72
+
+================================================================================
+ C463-002            FRAMING SUMMARY: Rigid Frame 2         18/DEC/2025  2:50pm
+================================================================================
+ 
+ LAYOUT:
+ -------
+   Type          :  RF
+   No. Line      :   1
+   Frame Line Id :   2
+   Grid Line Id  :   2
+ 
+ MEMBER:
+ -------
+   Surf  Mem  Seg            Flange  Flange  -Web_Depth-  -Plate_Thickness-
+    Id    Id   Id  Part      Length   Width  Start   End    Web O-flg I-flg
+   ----  ---  ---  --------  ------  ------  ----- -----  ----- ----- -----
+     1     1    1              8917   150.0  400.0 400.0   5.00  6.00  8.00
+     2     2    2              6195   125.0  400.0 300.0   4.00  6.00  6.00
+     3     3    3              6195   125.0  300.0 400.0   4.00  6.00  6.00
+     4     4    4              8917   150.0  400.0 400.0   5.00  6.00  8.00
+ 
+ SPLICE:
+ -------
+   -Surface-        ---Plate---  Bolt    Bolt   Bolt  ---Top---  --Bottom-
+   Id Locate  Type  Width Thick  Type     Dia   Gage  Row Space  Row Space
+   -- ------  ----  ----- -----  -----  -----  -----  --- -----  --- -----
+    2      0   HSS  200.0 16.00  A325   20.00  100.0   2  100.0   2  100.0
+    3      0   -SS  200.0 16.00  A325   20.00  100.0   2  100.0   2  100.0
+    4      0   HSS  200.0 16.00  A325   20.00  100.0   2  100.0   2  100.0
+ 
+ BASE PLATE:
+ -----------
+                    ---Plate---  -----------Bolt----------   Base
+   Locate     Type  Width Thick  Type     Dia   Gage   Row   Elev
+   ---------- ----  ----- ------ -----  -----  -----  ----  -----
+   Lt Column   FI   250.0 20.00  A36    24.00  100.0    4     0.0
+   Rt Column   FI   250.0 20.00  A36    24.00  100.0    4     0.0
+ 
+ FLANGE BRACE:
+ -------------
+   Surf           No.
+    Id   Locate  Side  Part      Clip
+   ----  ------  ----  --------  ------
+     1       1     2   L40X40X4        
+     1       3     2   L40X40X4        
+     2       1     2   L40X40X4        
+     2       3     2   L40X40X4        
+     3       2     2   L40X40X4        
+     3       4     2   L40X40X4        
+     4       1     2   L40X40X4        
+     4       3     2   L40X40X4        
+ 
+ BEARING STIFFENER:
+ ------------------
+   Locate      Width  Thick
+   ----------  -----  -----
+   Lt Column    60.0  10.00
+   Rt Column    60.0  10.00
+ 
+ CRANE BRACKET:
+ --------------
+   Crane Bay
+     Id   Id  Height  Left      Right
+   ----- ---  ------  --------  --------
+      1    1    7000  W35b228   W35b228 
+ 
+ CRANE BRACKET STIFFENER:
+ ------------------------
+   Crane Bay
+     Id   Id  Side   Location    Width  Thick
+   ----- ---  -----  ----------  -----  -----
+      1    1  Left   Top Flange    840     72
+      1    1  Left   Bot Flange    840     72
+      1    1  Left   Crane Beam   1680     72
+      1    1  Right  Top Flange    840     72
+      1    1  Right  Bot Flange    840     72
+      1    1  Right  Crane Beam   1680     72
+
+================================================================================
+ C463-002            FRAMING SUMMARY: Rigid Frame 3         18/DEC/2025  2:50pm
+================================================================================
+ 
+ LAYOUT:
+ -------
+   Type          :  RF
+   No. Line      :   1
+   Frame Line Id :   3
+   Grid Line Id  :   3
+ 
+ MEMBER:
+ -------
+   Surf  Mem  Seg            Flange  Flange  -Web_Depth-  -Plate_Thickness-
+    Id    Id   Id  Part      Length   Width  Start   End    Web O-flg I-flg
+   ----  ---  ---  --------  ------  ------  ----- -----  ----- ----- -----
+     1     1    1              8918   150.0  400.0 400.0   5.00  6.00  8.00
+     2     2    2              6195   125.0  400.0 300.0   4.00  5.00  5.00
+     3     3    3              6195   125.0  300.0 400.0   4.00  5.00  5.00
+     4     4    4              8918   150.0  400.0 400.0   5.00  6.00  8.00
+ 
+ SPLICE:
+ -------
+   -Surface-        ---Plate---  Bolt    Bolt   Bolt  ---Top---  --Bottom-
+   Id Locate  Type  Width Thick  Type     Dia   Gage  Row Space  Row Space
+   -- ------  ----  ----- -----  -----  -----  -----  --- -----  --- -----
+    2      0   HSS  200.0 16.00  A325   20.00  100.0   2  100.0   2  100.0
+    3      0   -SS  200.0 16.00  A325   20.00  100.0   2  100.0   2  100.0
+    4      0   HSS  200.0 16.00  A325   20.00  100.0   2  100.0   2  100.0
+ 
+ BASE PLATE:
+ -----------
+                    ---Plate---  -----------Bolt----------   Base
+   Locate     Type  Width Thick  Type     Dia   Gage   Row   Elev
+   ---------- ----  ----- ------ -----  -----  -----  ----  -----
+   Lt Column   FI   250.0 16.00  A36    24.00  100.0    4     0.0
+   Rt Column   FI   250.0 16.00  A36    24.00  100.0    4     0.0
+ 
+ FLANGE BRACE:
+ -------------
+   Surf           No.
+    Id   Locate  Side  Part      Clip
+   ----  ------  ----  --------  ------
+     1       1     2   L40X40X4        
+     1       3     2   L40X40X4        
+     2       1     2   L40X40X4        
+     2       3     2   L40X40X4        
+     3       2     2   L40X40X4        
+     3       4     2   L40X40X4        
+     4       1     2   L40X40X4        
+     4       4     2   L40X40X4        
+ 
+ BEARING STIFFENER:
+ ------------------
+   Locate      Width  Thick
+   ----------  -----  -----
+   Lt Column    60.0  10.00
+   Rt Column    60.0  10.00
+ 
+ CRANE BRACKET:
+ --------------
+   Crane Bay
+     Id   Id  Height  Left      Right
+   ----- ---  ------  --------  --------
+      1    1    7000  W35b228   W35b228 
+ 
+ CRANE BRACKET STIFFENER:
+ ------------------------
+   Crane Bay
+     Id   Id  Side   Location    Width  Thick
+   ----- ---  -----  ----------  -----  -----
+      1    1  Left   Top Flange    840     72
+      1    1  Left   Bot Flange    840     72
+      1    1  Left   Crane Beam   1680     72
+      1    1  Right  Top Flange    840     72
+      1    1  Right  Bot Flange    840     72
+      1    1  Right  Crane Beam   1680     72
+
+================================================================================
+ C463-002            FRAMING SUMMARY: Rigid Frame 4         18/DEC/2025  2:50pm
+================================================================================
+ 
+ LAYOUT:
+ -------
+   Type          :  RF
+   No. Line      :   1
+   Frame Line Id :   4
+   Grid Line Id  :   4
+ 
+ MEMBER:
+ -------
+   Surf  Mem  Seg            Flange  Flange  -Web_Depth-  -Plate_Thickness-
+    Id    Id   Id  Part      Length   Width  Start   End    Web O-flg I-flg
+   ----  ---  ---  --------  ------  ------  ----- -----  ----- ----- -----
+     1     1    1              8918   150.0  400.0 400.0   5.00  6.00  8.00
+     2     2    2              6195   125.0  400.0 300.0   4.00  5.00  5.00
+     3     3    3              6195   125.0  300.0 400.0   4.00  5.00  5.00
+     4     4    4              8918   150.0  400.0 400.0   5.00  6.00  8.00
+ 
+ SPLICE:
+ -------
+   -Surface-        ---Plate---  Bolt    Bolt   Bolt  ---Top---  --Bottom-
+   Id Locate  Type  Width Thick  Type     Dia   Gage  Row Space  Row Space
+   -- ------  ----  ----- -----  -----  -----  -----  --- -----  --- -----
+    2      0   HSS  200.0 16.00  A325   20.00  100.0   2  100.0   2  100.0
+    3      0   -SS  200.0 16.00  A325   20.00  100.0   2  100.0   2  100.0
+    4      0   HSS  200.0 16.00  A325   20.00  100.0   2  100.0   2  100.0
+ 
+ BASE PLATE:
+ -----------
+                    ---Plate---  -----------Bolt----------   Base
+   Locate     Type  Width Thick  Type     Dia   Gage   Row   Elev
+   ---------- ----  ----- ------ -----  -----  -----  ----  -----
+   Lt Column   FI   250.0 16.00  A36    24.00  100.0    4     0.0
+   Rt Column   FI   250.0 16.00  A36    24.00  100.0    4     0.0
+ 
+ FLANGE BRACE:
+ -------------
+   Surf           No.
+    Id   Locate  Side  Part      Clip
+   ----  ------  ----  --------  ------
+     1       1     2   L40X40X4        
+     1       3     2   L40X40X4        
+     2       1     2   L40X40X4        
+     2       3     2   L40X40X4        
+     3       2     2   L40X40X4        
+     3       4     2   L40X40X4        
+     4       1     2   L40X40X4        
+     4       4     2   L40X40X4        
+ 
+ BEARING STIFFENER:
+ ------------------
+   Locate      Width  Thick
+   ----------  -----  -----
+   Lt Column    60.0   8.00
+   Rt Column    60.0   8.00
+ 
+ CRANE BRACKET:
+ --------------
+   Crane Bay
+     Id   Id  Height  Left      Right
+   ----- ---  ------  --------  --------
+      1    1    7000  W35b228   W35b228 
+ 
+ CRANE BRACKET STIFFENER:
+ ------------------------
+   Crane Bay
+     Id   Id  Side   Location    Width  Thick
+   ----- ---  -----  ----------  -----  -----
+      1    1  Left   Top Flange    840     72
+      1    1  Left   Bot Flange    840     72
+      1    1  Left   Crane Beam   1680     72
+      1    1  Right  Top Flange    840     72
+      1    1  Right  Bot Flange    840     72
+      1    1  Right  Crane Beam   1680     72
+
+================================================================================
+ C463-002            FRAMING SUMMARY: Rigid Frame 5         18/DEC/2025  2:50pm
+================================================================================
+ 
+ LAYOUT:
+ -------
+   Type          :  RF
+   No. Line      :   1
+   Frame Line Id :   5
+   Grid Line Id  :   5
+ 
+ MEMBER:
+ -------
+   Surf  Mem  Seg            Flange  Flange  -Web_Depth-  -Plate_Thickness-
+    Id    Id   Id  Part      Length   Width  Start   End    Web O-flg I-flg
+   ----  ---  ---  --------  ------  ------  ----- -----  ----- ----- -----
+     1     1    1              8918   150.0  400.0 400.0   5.00  6.00  8.00
+     2     2    2              6195   125.0  400.0 300.0   4.00  5.00  5.00
+     3     3    3              6195   125.0  300.0 400.0   4.00  5.00  5.00
+     4     4    4              8918   150.0  400.0 400.0   5.00  6.00  8.00
+ 
+ SPLICE:
+ -------
+   -Surface-        ---Plate---  Bolt    Bolt   Bolt  ---Top---  --Bottom-
+   Id Locate  Type  Width Thick  Type     Dia   Gage  Row Space  Row Space
+   -- ------  ----  ----- -----  -----  -----  -----  --- -----  --- -----
+    2      0   HSS  200.0 16.00  A325   20.00  100.0   2  100.0   2  100.0
+    3      0   -SS  200.0 16.00  A325   20.00  100.0   2  100.0   2  100.0
+    4      0   HSS  200.0 16.00  A325   20.00  100.0   2  100.0   2  100.0
+ 
+ BASE PLATE:
+ -----------
+                    ---Plate---  -----------Bolt----------   Base
+   Locate     Type  Width Thick  Type     Dia   Gage   Row   Elev
+   ---------- ----  ----- ------ -----  -----  -----  ----  -----
+   Lt Column   FI   250.0 16.00  A36    24.00  100.0    4     0.0
+   Rt Column   FI   250.0 16.00  A36    24.00  100.0    4     0.0
+ 
+ FLANGE BRACE:
+ -------------
+   Surf           No.
+    Id   Locate  Side  Part      Clip
+   ----  ------  ----  --------  ------
+     1       1     1   L40X40X4        
+     1       3     1   L40X40X4        
+     2       1     1   L40X40X4        
+     2       3     1   L40X40X4        
+     3       2     1   L40X40X4        
+     3       4     1   L40X40X4        
+     4       1     1   L40X40X4        
+     4       3     1   L40X40X4        
+ 
+ BEARING STIFFENER:
+ ------------------
+   Locate      Width  Thick
+   ----------  -----  -----
+   Lt Column    60.0   8.00
+   Rt Column    60.0   8.00
+ 
+ CRANE BRACKET:
+ --------------
+   Crane Bay
+     Id   Id  Height  Left      Right
+   ----- ---  ------  --------  --------
+      1    1    7000  W35b228   W35b228 
+ 
+ CRANE BRACKET STIFFENER:
+ ------------------------
+   Crane Bay
+     Id   Id  Side   Location    Width  Thick
+   ----- ---  -----  ----------  -----  -----
+      1    1  Left   Top Flange    840     72
+      1    1  Left   Bot Flange    840     72
+      1    1  Left   Crane Beam   1680     72
+      1    1  Right  Top Flange    840     72
+      1    1  Right  Bot Flange    840     72
+      1    1  Right  Crane Beam   1680     72
+
+================================================================================
+ C463-002            FRAMING SUMMARY: Extensions            18/DEC/2025  2:50pm
+================================================================================
+ 
+ CANOPY LAYOUT:
+ --------------
+  Wall   Ext       --Bay_Id--                                -Edge_Extend-
+   Id     Id  Opt  Start  End   Width  Height  Slope  Mount   Left   Right
+  ----   ---  ---  -----  ---  ------  ------  -----  -----  -----   -----
+    1      1   -     1     1   1500.0  8200.0  10.00    B      0.0     0.0
+    2      2   -     3     3   1500.0  5200.0  10.00    B      0.0     0.0
+    3      3   -     2     2   1500.0  5200.0  10.00    B      0.0     0.0
+ 
+ CANOPY BEAM & CONNECTION:
+ -------------------------
+  Wall Ext Column                -------Connection-----   -----------Bolts-----------
+   Id   Id  Line  Use   Part     Loc   Type Width Thick   Type    Dia Space  Gage Row
+  ---- --- ------ ----- -------- ----- ---- ----- -----   ----- ----- ----- ----- ---
+    1    1    1   BeamH Built_Up Start  SS  200.0  16.0   Gr8.8 20.00 100.0 100.0   4
+              1   Supp  W35a208  Start  SS  200.0  16.0   Gr8.8 20.00 100.0 100.0   4
+                                 End    S3  200.0  10.0   Gr8.8 16.00 100.0  75.0   2
+              2   BeamH Built_Up Start  SS  200.0  16.0   Gr8.8 20.00 100.0 100.0   4
+    2    2    3   BeamH Built_Up Start  SS  200.0  16.0   Gr8.8 20.00 100.0 100.0   4
+              4   BeamH Built_Up Start  SS  200.0  16.0   Gr8.8 20.00 100.0 100.0   4
+    3    3    2   BeamH Built_Up Start  SS  200.0  16.0   Gr8.8 20.00 100.0 100.0   4
+              3   BeamH Built_Up Start  SS  200.0  16.0   Gr8.8 20.00 100.0 100.0   4
+              3   Supp  W35a208  Start  SS  200.0  16.0   Gr8.8 20.00 100.0 100.0   4
+                                 End    S3  200.0  10.0   Gr8.8 16.00 100.0  75.0   2
+ 
+ CANOPY ROOF & SOFFIT PURLIN:
+ ----------------------------
+  Wall  Ext          Bay                       -------Lap------  Eave      Flange
+   Id    Id  Locate   Id  Type  Row  Part         Left    Right  Strut      Strap
+  ----  ---  ------  ---  ----  ---  --------  -------  -------  --------  ------
+    1     1  Roof      1   ZB     1  250Z18                      250Z18       3
+             Soffit    1   ZB     1                              250Z18       3
+    2     2  Roof      3   ZB     1  250Z15                      250Z15       2
+             Soffit    3   --     0                              250Z15       2
+    3     3  Roof      2   ZB     1  250Z18                      250Z18       0
+             Soffit    2   --     0                              250Z18       0
+
+================================================================================
+ C463-002            FRAMING SUMMARY:  Crane System  1      18/DEC/2025  2:50pm                      
+================================================================================
+ 
+ CRANE SYSTEM:
+ -------------
+  -Crane-  Runway  --------------Runway_Location--------------
+  Id Type  Orient      Elev   Offset     Span    Start      End
+  -- ----  ------  -------- -------- -------- -------- --------
+   1  TG     L         7000     1200    10400        0    30500
+ 
+ RUNWAY BEAM:
+ ------------
+  Beam  Bay              Beam      Channel   Ds_CrnBm
+   Id    Id  Side  Type  Part      Part      Name
+  ----  ---  ----  ----  --------  --------  --------
+    1     1    L    WB   W50b3010            W50b3010
+    2     1    R    WB   W50b3010            W50b3010
+    3     1    L    WB   W50b3010            W50b3010
+    4     1    R    WB   W50b3010            W50b3010
+    5     2    L    WB   W50b2510            W50b2510
+    6     2    R    WB   W50b2510            W50b2510
+    7     4    L    WB   W50b2510            W50b2510
+    8     4    R    WB   W50b2510            W50b2510
+ 
+ RUNWAY FLANGE BRACE:
+ --------------------
+  ---Runway---  Col    Brace
+  Side  Locate  Side   Width  Part
+  ---- -------  ----  ------  --------
+   L       390    R    870.0  L75X6
+   L      8535    L    870.0  L75X6
+   L      8535    R    870.0  L75X6
+   L     16745    L    870.0  L75X6
+   L     16745    R    870.0  L75X6
+   L     23460    L    870.0  L75X6
+   L     23460    R    870.0  L75X6
+   L     30110    L    870.0  L75X6
+   R       390    R    870.0  L75X6
+   R      8535    L    870.0  L75X6
+   R      8535    R    870.0  L75X6
+   R     16745    L    870.0  L75X6
+   R     16745    R    870.0  L75X6
+   R     23460    L    870.0  L75X6
+   R     23460    R    870.0  L75X6
+   R     30110    L    870.0  L75X6
+   L       390    1      0.0  L100X8
+   L      8535    2      0.0  L100X8
+   L     16745    2      0.0  L100X8
+   L     23460    2      0.0  L100X8
+   L     30110    1      0.0  L100X8
+   R       390    1      0.0  L100X8
+   R      8535    2      0.0  L100X8
+   R     16745    2      0.0  L100X8
+   R     23460    2      0.0  L100X8
+   R     30110    1      0.0  L100X8

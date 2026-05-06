@@ -1,0 +1,105 @@
+10/27/2025|04:32:17:750 PM|WARNING: Running C:\MBS\EXE2\XDesCtrl.exe||
+<NL>  WIND BENTS:
+<NL>    Wall-2 :
+<NL>     *WRN(BS-115): Invalid bay Id
+<NL>    Wall-4 :
+<NL>     *WRN(BS-115): Invalid bay Id
+<NL>
+<NL>  (69)RUNWAY CRANES:
+<NL>     *WRN(CS-150): No crane associated with crane system            1
+<NL>
+<NL>  (13)WALL OPENINGS:
+<NL>    Wall-1 :
+<NL>     *WRN(FO-110): Framed opening width > bay width
+<NL>
+10/27/2025|04:41:32:808 PM|Warnings Exist in Wall Openings|Ignore errors?|*WRN(FR-006) Wall 1, Framed Opening 1: Framed opening width (3650.0000) + offset (3000.0000) > bay width (6000.0000)
+<NL>
+10/27/2025|04:44:36:115 PM|WARNING: Running C:\MBS\EXE2\XDtDwg.exe||
+<NL>  PROGRAM DETAILS:
+<NL>     *WRN(DT-130 ): Detail block not found - C72
+<NL>     *WRN(DT-130 ): Detail block not found - D77
+<NL>
+10/27/2025|05:09:11:536 PM|WARNING: Running C:\MBS\EXE2\XDtDwg.exe||
+<NL>  PROGRAM DETAILS:
+<NL>     *WRN(DT-130 ): Detail block not found - C72
+<NL>     *WRN(DT-130 ): Detail block not found - D77
+<NL>
+10/27/2025|05:21:30:248 PM|WARNING: Running C:\MBS\EXE2\XDtDwg.exe||
+<NL>  PROGRAM DETAILS:
+<NL>     *WRN(DT-130 ): Detail block not found - C72
+<NL>     *WRN(DT-130 ): Detail block not found - D77
+<NL>
+11/17/2025|12:06:41:759 PM|Warnings Exist in Rigid Frames|Ignore Warnings?|*WRN(RG-006) Rigid Frame 2 load width of 7.0000 < 7500.0000
+<NL>
+11/17/2025|12:07:03:429 PM|Warnings Exist in Rigid Frames|Ignore Warnings?|*WRN(RG-005) Rigid Frame 1: Frame load width is less than avg adj bayspacing + Offset. Frame load width should be >= 3682.5000
+<NL>
+11/17/2025|12:21:13:949 PM|WARNING: Running C:\MBS\EXE2\XDtDwg.exe||
+<NL>  PROGRAM DETAILS:
+<NL>     *WRN(DT-130 ): Detail block not found - C72
+<NL>     *WRN(DT-130 ): Detail block not found - D77
+<NL>
+11/17/2025|12:27:57:246 PM|RfDes-2.err||================================================================================
+<NL> C163-027            Program Warning Summary                17/NOV/2025 12:27pm
+<NL>================================================================================
+<NL>
+<NL> RIGID FRAME #2
+<NL> --------------
+<NL>     FRAME RAFTER
+<NL>       End Plate
+<NL>        *WRN(RFE-413): Weld Size < Required
+<NL>
+11/17/2025|12:40:21:606 PM|WARNING: Running C:\MBS\EXE2\XDtDwg.exe||
+<NL>  PROGRAM DETAILS:
+<NL>     *WRN(DT-130 ): Detail block not found - C72
+<NL>     *WRN(DT-130 ): Detail block not found - D77
+<NL>
+11/28/2025|02:37:09:613 PM|Warnings Exist in Wall Openings|Ignore Warnings?|*WRN(FR-006) Wall 3, Framed Opening 2: Framed opening width (3650.0000) + offset (2400.0000) > bay width (6000.0000)
+<NL>
+11/28/2025|03:41:42:665 PM|WARNING: Running C:\MBS\EXE2\XDtDwg.exe||
+<NL>  PROGRAM DETAILS:
+<NL>     *WRN(DT-130 ): Detail block not found - C72
+<NL>     *WRN(DT-130 ): Detail block not found - D77
+<NL>
+01/09/2026|02:58:57:161 PM|WARNING: Running C:\MBS\EXE2\XDtDwg.exe||
+<NL>  PROGRAM DETAILS:
+<NL>     *WRN(DT-130 ): Detail block not found - D77
+<NL>
+01/09/2026|03:07:31:735 PM|WARNING: Running C:\MBS\EXE2\XDtDwg.exe||
+<NL>  PROGRAM DETAILS:
+<NL>     *WRN(DT-130 ): Detail block not found - D77
+<NL>
+01/14/2026|02:32:48:392 PM|WARNING: Running C:\MBS\EXE2\XDtDwg.exe||
+<NL>  PROGRAM DETAILS:
+<NL>     *WRN(DT-130 ): Detail block not found - D77
+<NL>
+01/14/2026|02:40:45:844 PM|WARNING: Running C:\MBS\EXE2\XDtDwg.exe||
+<NL>  PROGRAM DETAILS:
+<NL>     *WRN(DT-130 ): Detail block not found - D77
+<NL>
+01/19/2026|10:17:07:858 AM|WARNING: Running C:\MBS\EXE2\XDtDwg.exe||
+<NL>  PROGRAM DETAILS:
+<NL>     *WRN(DT-130 ): Detail block not found - D77
+<NL>
+01/19/2026|10:17:24:605 AM|Warnings Exist in Wall Openings|Ignore Warnings?|*WRN(FR-004) Wall 1, Framed Opening 1: Invalid bay Id (3)
+<NL>
+01/19/2026|10:26:09:131 AM|WARNING: Running C:\MBS\EXE2\XDtDwg.exe||
+<NL>  PROGRAM DETAILS:
+<NL>     *WRN(DT-130 ): Detail block not found - C72
+<NL>     *WRN(DT-130 ): Detail block not found - D77
+<NL>
+01/19/2026|10:30:22:161 AM|WARNING: Running C:\MBS\EXE2\XDtDwg.exe||
+<NL>  PROGRAM DETAILS:
+<NL>     *WRN(DT-130 ): Detail block not found - C72
+<NL>     *WRN(DT-130 ): Detail block not found - D77
+<NL>
+01/19/2026|10:33:41:174 AM|WARNING: Running C:\MBS\EXE2\XDtDwg.exe||
+<NL>  PROGRAM DETAILS:
+<NL>     *WRN(DT-130 ): Detail block not found - C72
+<NL>     *WRN(DT-130 ): Detail block not found - D77
+<NL>
+01/19/2026|10:51:28:255 AM|WARNING: Running C:\MBS\EXE2\XDtDwg.exe||
+<NL>  PROGRAM DETAILS:
+<NL>     *WRN(DT-130 ): Detail block not found - C72
+<NL>     *WRN(DT-130 ): Detail block not found - D77
+<NL>
+01/19/2026|10:58:09:234 AM|WARNING: Running C:\MBS\EXE2\XDtDwg.exe||<NL>  PROGRAM DETAILS:<NL>     *WRN(DT-130 ): Detail block not found - C72<NL>     *WRN(DT-130 ): Detail block not found - D77<NL>

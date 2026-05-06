@@ -1,0 +1,55 @@
+*================================================================================
+* VERSION:1.0        Job Properties Data File               19/JAN/2026 10:57am
+*================================================================================
+*
+*Type      Key1           Key2                      Field  Unit  Value
+*--------  -------------  ------------------------  -----  ----  -----
+FEATURE    Building       Single_Slope              Used    Y/N      N
+FEATURE    Building       Special_Shape             Used    Y/N      N
+FEATURE    Building       Lean_To                   Used    Y/N      N
+FEATURE    Load           Additional                Used    Y/N      N
+FEATURE    Load           Crane                     Used    Y/N      N
+FEATURE    Frame          In_Endwall                Used    Y/N      Y
+FEATURE    Frame          Inset                     Used    Y/N      N
+FEATURE    Frame          Rolled                    Used    Y/N      Y
+FEATURE    Frame          Cold_Formed               Used    Y/N      N
+FEATURE    Frame          Moment_Base               Used    Y/N      N
+FEATURE    Frame          Jack_Beam                 Used    Y/N      N
+FEATURE    Frame          Soldier                   Used    Y/N      N
+FEATURE    Bracing        Panel_Shear               Used    Y/N      N
+FEATURE    Bracing        Tier_Bracing              Used    Y/N      N
+FEATURE    Bracing        Torsional                 Used    Y/N      N
+FEATURE    Bracing        Angle                     Used    Y/N      N
+FEATURE    Bracing        High-Tension              Used    Y/N      N
+FEATURE    Bracing        Weak_Axis                 Used    Y/N      N
+FEATURE    Bracing        Wind_Bent                 Used    Y/N      N
+FEATURE    Bracing        Wind_Column               Used    Y/N      N
+FEATURE    Panel          Gutter                    Used    Y/N      Y
+FEATURE    Panel          Wall_Insulation           Used    Y/N      N
+FEATURE    Panel          Roof_Insulation           Used    Y/N      N
+FEATURE    Panel          Wall_Liner                Used    Y/N      N
+FEATURE    Panel          Roof_Liner                Used    Y/N      N
+FEATURE    Panel          Wall_Light                Used    Y/N      N
+FEATURE    Panel          Roof_Light                Used    Y/N      N
+FEATURE    Crane          Top_Run                   Used    Y/N      N
+FEATURE    Crane          System                    Used    Y/N      N
+FEATURE    Extension      Gable                     Used    Y/N      N
+FEATURE    Extension      Eave                      Used    Y/N      N
+FEATURE    Extension      Canopy                    Used    Y/N      Y
+FEATURE    Extension      Facia_Canopy              Used    Y/N      N
+FEATURE    Extension      Facia_Eave                Used    Y/N      N
+FEATURE    Extension      Parapet_Extended          Used    Y/N      N
+FEATURE    Extension      Parapet_Bumpout           Used    Y/N      N
+FEATURE    Extension      Bumpout                   Used    Y/N      N
+FEATURE    Extension      Supported                 Used    Y/N      N
+FEATURE    Extension      Hipped                    Used    Y/N      N
+FEATURE    Extension      Supported_Hipped          Used    Y/N      N
+FEATURE    Opening        Wall                      Used    Y/N      Y
+FEATURE    Opening        Roof                      Used    Y/N      N
+FEATURE    Opening        Partial                   Used    Y/N      N
+FEATURE    Opening        Wainscot                  Used    Y/N      Y
+FEATURE    Opening        Wide_Door                 Used    Y/N      N
+FEATURE    Opening        Wide_Endwall              Used    Y/N      N
+FEATURE    Opening        Walk_Door                 Used    Y/N      N
+FEATURE    Partition      System                    Used    Y/N      N
+FEATURE    Floor          Floor                     Used    Y/N      N

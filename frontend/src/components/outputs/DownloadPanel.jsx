@@ -1,23 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { Download, FileJson, FileText, File, FileArchive } from 'lucide-react';
+import { Download, FileJson, FileText, File, FileArchive, FileSpreadsheet, Eye } from 'lucide-react';
 import { outputsApi } from '../../api/outputs';
 import { fmtFileSize } from '../../utils/formatters';
+import OutputPreviewModal from '../shared/OutputPreviewModal';
 
 const OUTPUT_TYPES = [
   { key: 'json', label: 'Status Report', ext: 'JSON', icon: FileJson },
   { key: 'pdf', label: 'Status Report', ext: 'PDF', icon: FileText },
   { key: 'docx', label: 'Status Report', ext: 'DOCX', icon: FileText },
+  { key: 'xlsx', label: 'Status Report', ext: 'XLSX', icon: FileSpreadsheet },
 ];
 
 function outputIcon(extension) {
   if (extension === 'json') return FileJson;
   if (extension === 'zip') return FileArchive;
+  if (extension === 'xlsx' || extension === 'xls') return FileSpreadsheet;
   if (['txt', 'pdf', 'docx'].includes(extension)) return FileText;
   return File;
 }
 
 export default function DownloadPanel({ projectId, stages }) {
+  const [previewFile, setPreviewFile] = useState(null);
+
   const { data } = useQuery({
     queryKey: ['outputs', projectId],
     queryFn: () => outputsApi.listFiles(projectId),
@@ -34,7 +39,7 @@ export default function DownloadPanel({ projectId, stages }) {
         <Download size={13} className="text-blue-600" />
         <h3 className="text-sm font-bold text-slate-900">Downloads</h3>
       </div>
-      <div className="grid grid-cols-3 gap-2">
+      <div className="grid grid-cols-2 gap-2">
         {OUTPUT_TYPES.map((ot) => {
           const Icon = ot.icon;
           return (
@@ -64,23 +69,44 @@ export default function DownloadPanel({ projectId, stages }) {
           <div className="max-h-36 space-y-1 overflow-y-auto">
             {files.map((file) => {
               const Icon = outputIcon(file.extension);
+              const url = outputsApi.downloadUrl(projectId, file.relative_path);
               return (
-                <a
+                <div
                   key={file.relative_path}
-                  href={outputsApi.downloadUrl(projectId, file.relative_path)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 rounded border border-slate-200 px-2 py-1.5 text-xs text-slate-700 hover:bg-slate-50"
+                  className="flex items-center gap-2 rounded border border-slate-200 px-2 py-1.5 text-xs text-slate-700 hover:bg-slate-50 group"
                 >
                   <Icon size={13} className="text-slate-500" />
                   <span className="min-w-0 flex-1 truncate">{file.relative_path}</span>
-                  <span className="font-mono text-xxs text-slate-400">{fmtFileSize(file.size_bytes)}</span>
-                </a>
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={() => setPreviewFile({ ...file, url })}
+                      className="opacity-0 group-hover:opacity-100 p-0.5 text-blue-600 hover:bg-blue-50 rounded"
+                      title="Preview"
+                    >
+                      <Eye size={12} />
+                    </button>
+                    <a
+                      href={url}
+                      download
+                      className="text-slate-400 hover:text-blue-600"
+                    >
+                      <Download size={12} />
+                    </a>
+                  </div>
+                </div>
               );
             })}
           </div>
         )}
       </div>
+
+      <OutputPreviewModal
+        isOpen={!!previewFile}
+        onClose={() => setPreviewFile(null)}
+        file={previewFile}
+        downloadUrl={previewFile?.url}
+      />
     </div>
   );
 }
+

@@ -1,0 +1,743 @@
+*                                 DT_METHD.SIZ
+*      MBS 
+*      Detailing methods are selected and described in this file. See the       
+*      DETAIL METHODS section of the DATA FILES MANUAL for a drawing
+*      of each detailing method. The help screen and Table 5.15
+*      list the detailing methods by building area and topic.
+*
+* OPT    NO DWG   - Description of detailing method.
+* ----   ---------------------------------------------------------------------
+
+ '4' ..  1 EWC3  EW Col base conn.: (1),(2),(3),(4)
+ '7' ..  2 EC17  EW Col to Z Raf conn.: (1),(2),(3),(7),(A)
+ 'Y' ..  3 EWC3  EW Col base w/ b.clip, std.col.holes: (Y),(N)
+ 'N' ..  4 EWC9  EW Col to EW girt conn., std.col.holes: (Y),(N)
+ 'Y' ..  5 EWC5  EW Col top w/b.clip, std.col.holes: (Y),(N)
+ '2' ..  6 EWR1  Flg.br.on CZ EW Raf: (1),(2),(3)
+ 'Y' ..  7 EWR1  Flg.br.all purlins on CZ EW Raf: (Y),(N)
+ '-' ..  8    
+ '1' ..  9 DJH1  Dr.jamb base conn.: (1),(2),(3),(4),(5),(6)
+ '1' .. 10 DJH2  Dr.jamb top conn.: (1),(2),(3),(4),(6)
+ '1' .. 11 DJH4  Girt to dr.jamb conn.: (1),(2),(3),(4),(5),(6)
+ '1' .. 12 DJH5  Dr.header to dr.jamb conn.: (1),(2),(3),(4),(5),(6),(7)
+ 'I' .. 13 RF3   Bypass RF to ES, Vert,Perp,Hor splice: (1),(2),(3)
+ '2' .. 14 RF1   Bypass SW girt to RF conn.: (1),(2),(3),(4),(5)
+ '2' .. 15 RF2   Purlin to RF conn.: (1),(2),(3),(4)
+ '1' .. 16 RF4   Flg.br.to RF conn.: (1),(2),(3)
+ 'N' .. 17 EWR3  Flg.br.on ES(C&Z Raf): (Y),(N)
+ 'Y' .. 18 EWC8  EW Col back up pl.for bracing: (Y),(N)
+ 'Y' .. 19 EWC8  EW Raf back up pl.for bracing: (Y),(N)
+ 'N' .. 20 GPE1  Zee girt, out.flg.turned up: (Y),(N)
+ '5' .. 21 GEN2  Dimensions for output reports: (1),(2),(3),(4)
+ '1' .. 22 DJH3  Dr.jamb to ES: (1),(2),(3),(4),(5),(6)
+ '3' .. 23 EWRA  EW Col/Raf opposite hand member - use same mark: (1),(2)
+ 'N' .. 24 GPE1  Stub purlins @ EW Raf: (Y),(N),(2)
+ 'Y' .. 25 EWC8  Bracing to EW Col web @ top: (Y),(N)
+ 'Y' .. 26 EWC8  Bracing in EW Col web @ bottom: (Y),(N)
+ 'N' .. 27 GEN1  Use cables for bracing Roof And Walls: (Y),(N)
+ '3' .. 28 EWR5  Purlin to (WRD)EW Raf: (1),(2),(3),(4),(7)
+ '3' .. 29 GPE4  SW girt to (CU)EW Col: (1),(2),(3)
+ '5' .. 30 EWR7  EW Raf termination: (1),(2),(3),(4)
+ '2' .. 31 EWR4  Purlin to (CZ)EW Raf: (1),(2),(3),(4),(5),(6),(7),(8)
+ '7' .. 32 EWR3  EW Raf holes for ES: (1),(2),(3),(4),(5),(6),(7),(8)
+ '5' .. 33 GEN2  Erection dwgs - member table units: (1),(2),(3),(4)
+ '1' .. 34 EC10  Flush EW girt to EW Col: (1),(2),(3),(4),(5)
+ '3' .. 35       Trim pc.quantity:(1)=use drop,(2)=discard drop,(3)=cut to lgth
+ '-' .. 36  O P E N 
+ '1' .. 37 EWC6  ES to EW Col: (1),(2),(3)
+ '2' .. 38 GPE4  SW girt to (WRD)EW Col: (1),(2),(3)
+ 'N' .. 39 EWR3  ES to EW Raf, use flg.br.: (Y),(N)
+ '1' .. 40 EC10  Flush EW girt to (RW) EW Col:(1),(2),(3),(4),(5)
+ '3' .. 41 EC10  Bypass EW girt to (RW) EW Col:(1),(2),(3)
+ '-' .. 42   O P E N
+ 'N' .. 43 EWR8  EW Raf web holes by es & et: (Y),(N)
+ 'N' .. 44 EWC9  EW Col web holes by es & et: (Y),(N)
+ 'N' .. 45 GPE4  EW girt web holes by es & et: (Y),(N)
+ 'N' .. 46 GPE4  SW girt web holes by es & et: (Y),(N)
+ 'N' .. 47 GPE1  Purlin web holes by es & et: (Y),(N)
+ 'Y' .. 48 EWR8  EW Raf web holes @ peak sq.w/ top flg.: (Y),(N)
+ '2' .. 49 EWRA  EW Raf dim.for detailing, start from peak down: (1),(2),(3),(4)
+ '-' .. 50   O P E N
+ 'N' .. 51 EWCA  EW Col pc.location (bkts,holes) from fab end w/pl.: (Y),(N)
+ 'N' .. 52 EWRA  EW Raf piece location (bkts,holes) from fab end w/pl.:(Y),(N)
+ '3' .. 53 EWR8  EW (CZ)Raf to (DRW)Col - Raf web hole locations: (Y),(N),(2)
+ '-' .. 54   O P E N    
+ 'N' .. 55 EWR6  Residual space location w/ set purlin spacing @ peak: (Y),(N)
+ '-' .. 56  O P E N
+ 'N' .. 57 EWR6  Purlin locations measured along top of Raf: (Y),(N)
+ 'N' .. 58  O P E N
+ '-' .. 59  O P E N
+ '2' .. 60 GPE2  ES on bldg is open side outward: (Y),(N)
+ 'Y' .. 61 RFA   RF web piece & hole locations measure from fab.end: (Y),(N)
+ 'Y' .. 62 RFA   RF out.flg. piece & hole locations measure from fab.end: (Y),(N)
+ 'Y' .. 63 RFA   RF in.flg. piece & hole locations measure from fab.end: (Y),(N)
+ '4' .. 64 EWCA  Erection dwgs.- EW frame line is at EW steel line: (Y),(N)
+ 'Y' .. 65 EWC7  Cor Col @ EW w/RF exp.EW omit cor.Col.: (Y),(N)
+ '5' .. 66 RFA   Erection dwgs. of RF - report the web thk.in deci.: (Y),(N)
+ 'N' .. 67 GEN1  Base channel C members - lengths of SW bay: (Y),(N)
+ '7' .. 68 EWC2  Flush (CD)EW Col to (C)EW Raf: (1)thru(9),(A),(B)
+ '2' .. 69 EWC1  (CD)EW Col to (RWD)EW Raf: (1),(2),(3),(A)
+ 'Y' .. 70 GENA  Erection dwgs.- title block customized: (Y),(N)
+ '2' .. 71 EWR2  Flg.br.on (WRD)EW Raf use flg.br.: (2),(1),(4)
+ '8' .. 72 EWR2  Flg.br.on (WRD)EW Raf at all purlins: (Y),(N)
+ 'Y' .. 73   O P E N
+ 'Y' .. 74   O P E N
+ '-' .. 75   O P E N
+ '-' .. 76   O P E N
+ 'Y' .. 77 GPEB  Erection dwgs - roof plan, label roof purlins 'TYP': (Y),(N)
+ '2' .. 78 GPEC  Erection dwgs - drawing of members: (1),(2),(3),(4) 
+ 'Y' .. 79 GPEB  Erection dwgs - walls & roof plan, show member laps: (Y),(N)
+ 'Y' .. 80 EC11  Cor Col web offset, ej, also applies to (C)cols? (Y),(N)
+ 'Y' .. 81 GEN1  BOM - anchor bolts to be included in the BOM: (Y),(N)
+ '-' .. 82
+ 'N' .. 83 GEN1  Purlin web to RF clip conn. 2 bolts, not 4: (Y),(N)
+ 'Y' .. 84 GEN1  ES to Cor Col clip conn 4 bolts, not 2: (Y),(N)
+ 'Y' .. 85 EWC9  Hole location in bent clip, use inside bend dim.: (Y),(N)
+ '1' .. 86 EWC5  Cor Col - (RW)members Col web in plane of:SW(1),EW(2)
+ '6' .. 87 EWC5  EW col @ bldg peak - Col to Raf conn: (1),(2)
+ '5' .. 88       RF shop drawings: (1)standard,(2)Alliance,(3)Nelissen
+ '-' .. 89
+ '3' .. 90 EC10  Bypass (CD)EW Col to girt: (1),(2),(3)
+ '7' .. 91 EWC2  Bypass EW Col to (C)EW Raf:  (1)thru(9),(A),(B)
+ '-' .. 92
+ 'Y' .. 93 EWC7  Cor Col orientation closed toward SW: (Y),(N)
+ '1' .. 94 GENB  Erection dwg - A.B.plan @ F.O.  (1)-(4) ENHANCEMENT 5-95-3
+ '2' .. 95 GPEB  Erection dwgs - SW & EW label loose pl.locations: (Y),(N)
+ '-' .. 96
+ 'N' .. 97 GEN1  BOM to call out s.seam roof parts: (Y),(N)
+ '-' .. 98
+ 'Y' .. 99 EC15  EW Col & Raf - shop dwg - web slot from I.D.: (Y),(N)
+ '-' ..100
+ '1' ..101 EC11  (WR)Cor Col to SW girt: (1),(2),(3)
+ '-' ..102
+ '-' ..103
+ '1' ..104 RF6   Max. web length location (1),(2)
+ '1' ..105 GEN1  Delete EW cor col @Hi Side of LT building: (Y),(N)
+ '1' ..106 RF5   Wind bent to wall col conn.: (1),(2),(3)
+ '1' ..107 RF5   Wind col to wall column conn.: (1),(2),(3)
+ '-' ..108 
+ 'N' ..109 EWCA  EW Col open side toward eave: (Y),(N)
+ '1' ..110 EWC8  EW Col holes for bracing (1),(2)
+ 'Y' ..111       Use eyebolt at each end of cable brace: (Y),(N)
+ '3' ..112 GEN3  sidewall end bay corner bracing to CDU Cor Col: (1),(2),(3)
+ '2' ..113 RF1   Flush SW girts to RF col: (1),(2)
+ '2' ..114 EC11  Gap between girt & closed side of C col: (1),(2)
+ 'Y' ..115 GEN3  Check for same punch pattern at each end: (Y),(N)
+ '2' ..116 GEN4  Len of wall in.flg. strap: roof to floor(1),to lower girt(2)
+ '1' ..117 EC15  Rows of bolts @ bot&top of EW col:1=set parm,2=1forC,2others
+ '4' ..118 RF7   EW Col to exp endwall frame conn.: (1),(2),(3),(4)
+ '2' ..119 GENA  Anchor bolt drawing(plan view): (1),(2),(3),(4)
+ '3' ..120 EWR4  Purlin to (U)EW Raf: (1),(2),(3),(4),(5),(6),(7),(8)    
+ '1' ..121 EC10  Flush EW girt to (U)col.: (1),(2),(3),(4),(5)
+ '3' ..122 EC10  Bypass EW girt to (U) col.: (1),(2),(3)
+ '1' ..123 EWR7  Shear splice for C EW rafters: (1),(2)
+ '2' ..124 RF8   EW girt to RF col: (1),(2)
+ '3' ..125 EWC4  EW col to RF rafter: (1),(2),(3)
+ '2' ..126 RFB   Location of in. flg clips on RF Rafter: (1),(3)
+ '1' ..127 GPE3  Number of bolts in SW girt to EW girt: (1) use 8,(2) use 6
+ '1' ..128 RF13  RF col stiffener: 1=plane same as roof slope, 2=horizontal
+ '3' ..129 GEN4  Selecting ROOF closures (out,in)     1=YY,2=NY,3=YN,4=NN,5=2in,6=2out
+ '2' ..130 GEN4  Selecting SIDEWALL closures (out,in) 1=YY,2=NY,3=YN,4=NN,5=2in,6=2out
+ '3' ..131 GEN4  Selecting ENDWALL closures (out,in)  1=YY,2=NY,3=YN,4=NN,5=2in,6=2out
+ '1' ..132 GENC  Erection dwgs - cable cut lengths: (1)Y,(2)N
+ '5' ..133 GENC  Erection dwgs - RF & EW part marks on roof plan: (1)N,(2)Y
+ '1' ..134 RFA   RF shop dwg clip hole location from out of: (1)web,(2)flange 
+ '2' ..135 GENA  Start column line lables at: (1)back SW,(2)front SW
+ '3' ..136 DJH6  If DH loc is within gs of girt:(1)omit header,(2)see PE5-95-2
+ '1' ..137 EC12  SW offset of cor col: (1)=std,(2)=same as SW col,(3)
+ '1' ..138 RF15  Where to measure web depth, at end of:(1)=web, (2)=member
+ '2' ..139 GENC  MBS run in English, bldg dwgs units to be: (1)English,(2)Metric
+ '2' ..140 EC15  EW col top IS flg holes, add OS flg holes same ht: (1)N,(2)Y
+ '1' ..141 RF14  Rafter slots to line up with: (1)purlins, (2)EW columns   
+ '1' ..142 RF14  Criteria on locating slots at knee: (1)MBS,(2)Behlen
+ '6' ..143 RF11  Flush RF to ES, Ver,Perpen,Hor splice: (2),(3),(5),(6),(7)
+ '4' ..144 RF10  Bypass RF to ES, Diagonal splice: (1),(3),(4),(9)
+ '6' ..145 RF12  Flush RF to ES, Diagonal splice: (2),(3),(5),(6),(8)
+ '1' ..146 RF14  Ends of T frame: (1)no PL,(2)Vertical PL,(3)Diagonal PL
+ '3' ..147 GPE3  Holes in purlins for bridging angles:(1)none,(2)std,(3)slots 
+ '1' ..148 EC13  Attachment of flush (C) cor col to SW girts: (1)clip & screws
+ '7' ..149 EC13  Attachment of flush (WRD) cor col:(1)Bolted angle,(2)weld PL
+ '4' ..150 EC14  Attachment of (C)cor col to base:(1-4)see EWC3,(5)U type clip
+ '7' ..151 EWC1  (Z)EW rafter to (WR)EW col: (1),(2),(3),(7),(A)
+ '7' ..152 EC17  (Z)EW rafter to (U)EW col:  (1),(2),(3),(7),(A)
+ '2' ..153 EC17  (RWD)EW rafter to (WR)EW col: (1),(2),(3),(A) 
+ '2' ..154 EWC1  (RWD)EW rafter to (U)EW col:  (1),(2),(3),(A) 
+ '7' ..155 EWC2  (CU)EW rafter to flush (WR)EW col:  (1)thru(9),(A),(B)
+ '7' ..156 EWC2  (CU)EW rafter to bypass (WR)EW col: (1)thru(9),(A),(B) 
+ '7' ..157 EWC2  (CU)EW rafter to flush (U)EW col:   (1)thru(9),(A),(B)
+ '7' ..158 EWC2  (CU)EW rafter to bypass (U)EW col:  (1)thru(9),(A),(B)
+ '2' ..159 EWR9  Flush (C)cor col to (Z)EW raf, std holes in: (1)col,(2)raf
+ '1' ..160 EWR9  Splice at peak of (Z)EW rafter: (1)BEP, (2)special
+ '1' ..161 EC10  Attach't of (C)cor col to flush EW girt:(1)-(4)EC10,(5)clip &screws
+ '2' ..162 RF6   Shop Dwg - Table Reported Web Widths: (1),(2)
+ '2' ..163 RF13  Stiffener Locations Above Interior Columns: (1),(2),(3)
+ '2' ..164       Should program select symm.gable trim: 1=no,2=yes
+ '3' ..165 GPE3  RF Near EW, attachment of bypass SW & EW Girts: (1),(2)
+ '3' ..166 GPE3  Rot Cor Col, attachment of bypass SW & EW Girts: (1),(2)
+ '3' ..167 GPE3  RF Near EW, flush SW Girt attachment of EW Girts: (1),(2)
+ '3' ..168 GEN3  sidewall end bay corner bracing to WR Cor Col: (1),(2),(3)
+ '3' ..169 GEN3  sidewall end bay corner bracing to WR Rot Cor Col: (1),(2),(3)
+ '2' ..170 PR22  Use trim as shown=1, no std.gable trim-only trim shown=2
+ '4' ..171 Rf17  Plate and/or cut at end of EE beam: RW beam, Flush purlin
+ '4' ..172 Rf17  Plate and/or cut at end of EE beam: CD beam, Flush bypass
+ '4' ..173 Rf17  Plate and/or cut at end of EE beam: RW beam, Flush purlin
+ '4' ..174 Rf17  Plate and/or cut at end of EE beam: CDbeam, Flush bypass
+ '1' ..175 RF17  End plate on RW EE beam attached to top of column:1=no, 2=yes
+ '1' ..176 RF17  End plate on CD EE beam attached to top of column:1=no, 2=yes
+ '9' ..177 RF17  Conn of roof purlins to CD flush EE beam:6=bolt clip,9=weld cp
+ '9' ..178 RF17  Conn of roof purlins to RW flush EE beam:6=bolt clip,9=weld cp
+ '3' ..179 RF18  Conn of roof purlins to CD bypass EE beam:see dwg
+ '3' ..180 RF18  Conn of roof purlins to RW bypass EE beam:see dwg
+ '5' ..181 RF19  Conn of ES to end of flush RW EE beam:3=bolted ang,9=weld pl
+ '7' ..182 RF19  Conn of ES to end of flush CD EE beam:3=bolted ang,9=weld pl
+ '7' ..183 RF19  Conn of ES to end of bypass RW EE beam:see dwg
+ '6' ..184 RF19  Conn of ES to end of bypass CD EE beam:see dwg
+ '9' ..185 RF17  Conn of ES at sidewall to flush RW EE beam:6=bolt cp,9=weld cp
+ '9' ..186 RF17  Conn of ES at sidewall to flush CD EE beam:6=bolt cp,9=weld cp
+ '1' ..187 RF19  Member type at end of EE beam:1=inclined , 2=vertical
+ '3' ..188 GPE5  Method of detailing roof panels when SW EE are present: 1,2,3
+ '2' ..189 PR21  Use trim as shown=1, use 2 trim pcs.independent of slope=2
+ '1' ..190 EWR7  Type of moment splice for C EW rafters: 1=BEP, 2=User Special
+ '1' ..191 PA5   Sidewall endbay cable brace to concrete:1=Std,2=Rotate 90 deg.
+ '2' ..192       Flange brc holes reported for pur/grt detail:1=std only,2=all
+ '2' ..193 GEN4  Selecting closures for single slope buildings: 1 thru 6
+ '4' ..194 RFB   Weld options, web to BEP & web to base plate. See PE 3-97-11
+ '1' ..195       A role of roof insulation is 
+ '2' ..196 RF20  Column flg thick used in Bldg Width calcs:1=thickest,2=base
+ '2' ..197 RF20  Rafter flg thick used in Bldg Width calcs:1=thickest,2=eave
+ '1' ..198 RF21  Eave strut to line up with roof line(2) or purlin offset(1).
+ '1' ..199       Purlin loc on RF dwg measured along top of:1=purlin,2=rafter
+ '1' ..200       Additions to piece marks for DH DJ ER EC
+ '1' ..201       Bolted End Plate Length, Round to the:1=nearest, 2=round up
+ '4' ..202 GENB  Anchor Bolt plan dimenison Label:1=Out/Out Conc.,2=Out/Out Stl.
+ '2' ..203       EW Girt to EW Raf.: 1=Do not Detail,2=Detail Girt & Clip
+ '0' ..204       If '2' & 2 rows of bolts, then web stiffener on EW Rafabove Col
+ '1' ..205       Door jamb detailing
+ '1' ..206       For '2' cable len & dia  to replace CB-i on erection dwgs.
+ '2' ..207 GENC  Units on Design Reports:1=English, 2=Metric    
+ '1' ..208       Cutting wall girts for F.O.: 1=Cut girts, 2=Do Not Cut Girts
+ '-' ..209       Quantity in set of purlins turned same direction, RFDWG only.    
+ '2' ..210 HOLD  Eave Strut Across the building: 2=Detail the same    
+ 'N' ..211       Trim Pieces on DWGs: Y=Yes for BldgDwgs Input file, N=None
+ '1' ..212       Show FB Clips when one side only:1=clps both sides,2=one side
+ '1' ..213       EW Raf holes for Cols:1=only holes req'd, 2=Cee Col use 4 hole
+ '1' ..214 GEN4  Panels Separate Pc.Mark for:1=None,2=EW,3=SW,4=EW & SW
+ 'L' ..215 EC19  Attach EW door jamb to web of EW rafter.
+ '3' ..216 EC18  Attach EW door jamb to flange of EW rafter.
+ '0' ..217 GEN5  Brace pads on R & W members: 0=none, 1=all, 2=criteria
+ '0' ..218 GEN5  Brace pads on cold rolled members: 0=none, 1=all, 2=criteria
+ '2' ..219       '2' place flg brc clips on both sides of endwall rafter.    
+ '1' ..220 PE46  calculating len of EW girt attached to a turned cor column.
+ '5' ..221 GEND  Units for building size in MBS.IN file. Used for title block
+ '1' ..222       Bolt type for framed openings of less than 8 ft height.
+ '2' ..223       Detailing strut purlins:1=same as purlins,2=end conn only
+ '1' ..224 EC12  Attachment of sidewall girt to turned corner column.
+ '2' ..225 GEND  AB Plan, col not @ fin flr elev:1=place note on plan,2=no note
+ '1' ..226 GPE6  Bolt locations for eave strut to W R D endwall rafter conn.
+ '2' ..227       Enter '2' if the bays with X brac are to be labeled on AB plan
+ '2' ..228 GEN1  No. of bolts for purlin clip when DM15=4, See Dwg RF2.
+ '4' ..229 GPE6  No. of bolts and holes in EW rafter:options 3,4&9 of DM31&120, See EWR4.
+ '2' ..230 ER11  Roof diagonal brace attaches to the C endwall rafter:1=web,2=Reinf.Plt
+ '1' ..231 GPE2  '2' for special bridging angle from eave strut to 1st purlin.
+ '4' ..232 RF7   Web holes in rigid frame near endwall by:1=shop,2=field.    
+ '1' ..233 GPE6  Replace lighter gage girts in a bay with the heaviest gage.
+ '-' ..234 EWC7  C endwall cor col brace conn: not active    
+ '2' ..235 GPE6  Holes and bolt quantity for purlin to W,R,and D endwall raf
+ '1' ..236 EWC2  C EW raf with DM 68,155,157 option1:1=no web clip,2=web clip
+ '1' ..237       Holes not in pun pat:1=2pun pat+holes,2=holes,3=1pun pat+holes
+ '1' ..238       Roof drawing:1=roof surface dim, 2=use bldg wid dim    
+ '-' ..239       Eave strut cover:1=use allways, 2=use for bypass outset girt only
+ '2' ..240       2=brace from door jamb to eave strut conn to web of purlin.
+ '2' ..241       2=hot rolled col, vert splice, BEP weld to outside of col flg.
+ '3' ..242 GEN4  Quantity of strapping and bridging angles.
+ '4' ..243 GPE8  Eave strut lap plate options.
+ '1' ..244 RF22  Use '2' to conn inside flange of rot cor col to W rafter. 
+ '5' ..245 GPE7  BP EW grt(@diff elev than SW grt) to rot cor col:3=weld,6=blt
+ '5' ..246 GPE7  BP EW grt(@diff elev than SW grt) to RF near EW:3=weld,5=blt
+ '1' ..247 DJH2  Conn of window and blocking jambs to wall girts.
+ '1' ..248 DJH1  Jamb blocking to base plate.    
+ '2' ..249 EWC3  Options for detailing EW flange brace:1=n0,2=one side,3=both
+ '2' ..250       Rigid frame flange brace options: (not active)    
+ '1' ..251 PE8   Walk door base plate:    
+ '1' ..252 PL6/7 Top of walk door/window to wall girt:    
+ '1' ..253 PS1/7 Wall girt to walk door/window jamb:
+ '1' ..254 PS5/10 Walk door /header to jamb:
+ '1' ..255       Show filler angles on drawings: Y=yes,N=no
+ '2' ..256       Filler angles at corner column:N=none,1=in BOM,2=BOM & drawings
+ '2' ..257       C rafter on opposite hand:
+ '1' ..258 DJH1  Door jamb base plate for member types W & R.
+ '2' ..259 DJH2  Top of door jamb to wall girt member types R and W.
+ '1' ..260 DJH3  Top of door jamb to eave strut member types R and W.
+ '1' ..261 DJH4  Wall girt to jamb member types R and W.
+ '1' ..262 DJH5  Door header to jamb member, types R and W.
+ '2' ..263 EWR7  Endwall rafter on high side:1=vertical cut,2=square cut
+ '1' ..264 PL14  Use of web stiff at frame attachments on wind framing:2=use
+ '1' ..265       Stock material to unique part numbers:2=yes
+ '2' ..266       Holes shown on DJ:2=punch pattern & adnl holes,1=all holes
+ '3' ..267       Wall girts holes/slots for sag rods:2=holes,3=slots
+ 'B' ..268 RF17  Flush purlins to eave extension end rafter:6=weld, 9=bolt, A=screws
+ '6' ..269 RF21  End support for eave extension end rafter:3=bolt,F=screws
+ '6' ..270 RF23  Attach of O type to eave strut
+ '6' ..271 RF23  Attach of O type to purlin
+ '6' ..272 RF23  Attach of O type to eave strut, EBI < ruu
+ '6' ..273 RF23  Attach of O type to purlin, EBI < ruu
+ '6' ..274 RF23  Attach of O type to eave strut
+ '6' ..275 RF23  Attach of O type to eave strut at interior bays
+ '3' ..276       EW raf stiff near SW cable slot:1=use,2=use for cold only,3=no use 
+ '6' ..277 GEN6  Conn bet top/bot facia girt and facia beam:6=bolt clip,9=weld clip. (bypass)
+ '-' ..278       SW cable slots on RF:2=use on both columns if only required on one col.
+ '6' ..279 GEN6  Top/bottom girt to end facia beam CD (flush)
+ '6' ..280 GEN6  Top/bottom girt to end facia beam RW (flush)
+ '6' ..281 GEN6  End member to facia girts top and bottom girts
+ '6' ..282 GEN6  End member to facia girts intermediate girts
+ '1' ..283       Facia to facia at corner connection
+ '1' ..284       Mom splice on C raf:1=bolts on each side of web,2=bolts on one side of web
+ '1' ..285       Extend beam to eave clip:2=use beam param,1=eave strut parameters (default)
+ 'A' ..286 DJH3  Top of doof jamb to under side of wind bent (portal frame).
+ '2' ..287 RF8   Wall girt to inside flange of wind bent (portal frame).
+ '2' ..288 GEN6  Use One length of cable on facia bracing no = '1'  yes = '2'
+ '6' ..289 GEN6&7 Connection of top and bottom bypass girt on R W facia arm.
+ '2' ..290 GEN9  Top facia girt, outside flange points up (-,1) or down (2).
+ '1' ..291 GEN9  Intermediate facia girt: location of outside flange:(-,1) = up), (2 = down).
+ '1' ..292 GEN9  Bottom facia girt: location of outside flange: -,1 = up, 2 = down.
+ '1' ..293 GEN8  Conn between SW facia girts and EW girts for vertical facia.
+ '3' ..294 EWR4  Purlin to C or Z EW raf: only for build that are detail diff w/ a gab exten
+ '3' ..295 EWR4  Purlin to U EW raf:only for buildings detailed differently w/ gable exten.
+ '3' ..296 EWR5  Purlin to R,W,D endwall raf: only for buildings detail diff w/ gable exten
+ '7' ..297 EWR3  EW raf to eave strut conn: Only for buildings detailied diff w/ gable exten
+ '-' ..298 PR27  If set to '2'a plate will be welded to the inside flange of the eave strut.
+ '2' ..299       RF detailing, '2' detail from peak down on rafters
+ '1' ..300 PF10  Joist purlin to RF rafter connection:1=bolted,5=field welded.
+ '2' ..301 EWR5  JF purlin to R,W endwall rafter:1=no holes,2=bolt purlin to raf flg    
+ '4' ..302       Zee bottom facia girt to Cee vertical arm with sloped facia panels
+ 'C' ..303       Cee bottom facia girt to Cee vertical arm with sloped facia panels
+ '4' ..304       Zee bottom facia girt to R,W vertical arm with sloped facia panels
+ 'C' ..305       Cee bottom facia girt to R,W vertical arm with sloped facia panels
+ '2' ..306       Count of flg brace bolts:'-'deduct at purlin laps,1=do not deduct
+ '3' ..307 ER11  1=add holes on EW raf flg to connect EW col or DJ,2=no added holes
+ '2' ..308       Bypass purlin clip orien to attach bm perpen to:1=bm,2=panel 
+ '2' ..309       Flush purlin clip orien to attach bm perpen to:1=bm,2=panel
+ '1' ..310       Bypass purlin clip orien to facia bm perpen to:1=bm,2=panel
+ '1' ..311       Flush purlin clip orien to facia bm perpen to:1=bm,2=panel
+ '1' ..312 RF6   Direction of detailing web of RF rafter, start at:2=high side,else low    
+ 'N' ..313       Angle and draw table on EW,SW and Roof dwgs.
+ '2' ..314 RF24  Joist eave to RF, same conditions as DM 13
+ '2' ..315 RF25  Joist eave to RF, same conditions as DM 143
+ '-' ..316 RF24  Joist eave to RF, same condtions as DM 144
+ '2' ..317 RF25  Joist eave to RF, same conditions as DM 145
+ '-' ..318 RF30-31 Special rigid frame detailing features.
+ '3' ..319 RF29  Options for detailing RF members at surface intersections
+ '1' ..320 RF32  Options for Sloped (S type ) column to rafter splice
+ '1' ..321 EC10  Flush EW girt to flush rotated R,W corner column
+ '1' ..322 GEN5  BOM to show insul. cuts in each roll: 1=no cuts, 2=report each cut.
+ '1' ..323 GENC  EWCol with g para.not equal to zero: '1' show 2 holes,'2' show 3 holes.
+ '1' ..324 GENC  DJ,DH,DS with g para.not equal to zero: '1' show 2 holes,'2' show 3 holes.
+ '1' ..325 GENC  Grt/Pur with g para.not equal to zero: '1' show 2 holes,'2' show 3 holes.
+ '7' ..326 EWR3  Buildings with and without gable exten for R,W,U rafters only.
+ '7' ..327 EWR3  Same as DM 297 only for R,W,U rafters only.
+ '1' ..328 EWC7  Rotate C column in bay with cable bracing, '2' open side to bracing
+ '1' ..329 EX14  Reinf plate options for B2 conn. on member major axis.
+ '2' ..330 GPE4  By-pass sidewall girt attachment options to a rotated corner column
+ '2' ..331 EX11  '2' uses two clips on top and bot of facia arm to bypass girts, else 1 clip
+ '-' ..332 GEN5  Options in RF detailing to offset the flange splice from the web splice.
+ '1' ..333 DJH3  Option to have 4 holes in clip for door jamb connection to eave strut
+ '1' ..334 GPE7  Options with 3 web holes in girt/purlin (g does not = 0.00),
+ '-' ..335       Pgm to detail purlins and girts to be contin with mem in adj building
+ '3' ..336 RF33  Raf IF at int col: 1=Use flg size, 2=Replace flg seg, 3=Replace part 
+ '2' ..337       SS pan are labeled:1=Roof Sheet,2=P(peak), E(eave), I(Interior)
+ '1' ..338       Extra longest EW sheet: 1=none, 2=one total extra, 3=one for each EW 
+ '1' ..339       Extra longest SW sheet: 1=none, 2=one total extra, 3=one for each SW
+ '1' ..340       Extra longest Roof sheet: 1=none, 2=one tot extra, 3=one for each sur 
+ '1' ..341       Extra longest EW liner sheet: 1=none, 2=one total extra, 3=one for W
+ '1' ..342       Extra longest SW liner sheet: 1=none, 2=one total extra, 3=one for W
+ '2' ..343 DJH7  Quanity of holes in leg of door jamb clip to eave strut 
+ '6' ..344 EX5   Flush C D Eave Ext. beam to Eave Ext. Eave strut at EW with gable extension
+ '5' ..345 EX5   Flush R W Eave Ext. beam to eave ext. eave strut at EW with gable extension
+ '2' ..346       Option when C EW rafter flange holes are on one side to be on both sides.
+ 'Y' ..347 GEN1  Partition wall column anchor bolts to be included in the BOM.
+ '4' ..348 EWC3  O type partition columns to base connection
+ '7' ..349 PT16  Partition girt to (CD) partition column of adjacent wall.
+ '7' ..350 PT16  Partition girt to (U) partition column of adjacent wall.
+ '1' ..351 PT16  Partition girt to (O) partn col with presence of continuous adjacent wall.
+ '7' ..352 PT9   T partition not at rigid frame,L or R rotate rafter, top of column.
+ '7' ..353 PT9   T partition not at rigid frame,L or R rotate rafter, top of jamb to rafter.
+ 'J' ..354 PT10  T partition not at rigid frame,D rotate rafter, top of column.
+ 'J' ..355 PT10  T partition not at rigid frame,D rotate rafter, top of jamb to rafter.
+ '3' ..356 PT18  Attachment of adjacent (U) column to girt of continuous partition wall.
+ '1' ..357 PT17  Partn girt tie-in to outside of contin bypass girt with same girt elevation
+ '1' ..358 PT6   Partition wall girt to RW rigid frame interior column attachment to web.
+ '3' ..359 PT7   Partition wall girt to RW rigid frame interior column attachment to flange.
+ '3' ..360 PT8   Partition wall girt to T rigid frame interior column.
+ '2' ..361       If =2, door header is elim for sliding door type, else DH is included.
+ '3' ..362 GPE2  Holes in eave struts for sag rods:-,1= no holes, 2=holes
+ '2' ..363 GPE2  Holes in endwall rafter for sag rods:-,1= no holes, 2=holes
+ '7' ..364 EWC1  CD EWCol to U EW Raf with flush girts
+ '4' ..365 EWC1  WR EWCol to U EW Raf with flush girts
+ '4' ..366 EWC1  U EWCol to U EW Raf with flush girts
+ '7' ..367 EWC1  CD EWCol to U EW Raf with bypass girts
+ '4' ..368 EWC1  WR EWCol to U EW Raf with bypass girts
+ '4' ..369 EWC1  U EWCol to U EW Raf with bypass girts
+ '1' ..370 EX16  Location of connection holes on ew rafter for LK & LP eave extensions
+ '4' ..371 OPEN
+ '-' ..372 OPEN
+ '-' ..373 OPEN
+ '5' ..374 PT11  Partition Rafter to Purlin - Rafter Option '1'
+ '7' ..375 PT12  Partition Rafter to purlin - Rafter Option '2'
+ '7' ..376 PT13  Partition Rafter to purlin - Rafter Option '3'
+ '7' ..377 PT14  L partn with col not at RF, top conn to 'L' or 'R' rot Raf
+ '7' ..378 PT14  L partn w/ DJ to roof line and col not at RF, top conn to 'L' or 'R' rot Raf
+ '1' ..379 PT15  L partn with column not at RF, top connection to 'D' rotated Rafter
+ '1' ..380 PT15  L partn with DJ to roof line, no col at RF, top conn to 'D' rot raf 
+ '1' ..381 PT19  Clip to (WR) column of adjacent continuous partition girt
+ '2' ..382 PF32  '2' plasma cut webs
+ '1' ..383 EC16  CD EWCol to D EW Raf 
+ '1' ..384 EC16  WR EWCol to D EW Raf
+ '1' ..385 EC16  U EWCol to D EW Raf    
+ '3' ..386 EC18  DJ to R or W EW Raf    
+ '3' ..387 EC18  DJ to U EW Raf    
+ '3' ..388 EWR5  Purlin to EW Raf with or without eave extension
+ '3' ..389 EWR5  Purlin to D EW raf for bldgs det diff with gab ext or flush SW EE.    
+ '-' ..390       OPEN
+ '1' ..391       OPEN
+ '1' ..392 PT19  Clip to adjacent continuous partition girt when (WR) column
+ '2' ..393 RF13  Option for stiff orientation on horizontal column to rafter splice.  
+ '1' ..394 RF35  Option to replace the RF rafter web slots with a pattern of holes 
+ '-' ..395 RF35  Type of RF int col to raf conn at the valley in a multi gable bldg
+ '2' ..396 ER11  E or S BEP, splice bolts centered on:0=flg cen,1=flg out edge.
+ '5' ..397 RF36  D strut, conn between strut and rigid frame web.
+ '5' ..398 RF36  RW strut, conn between strut and rigid frame web.
+ '5' ..399 RF36  PT strut, conn between strut and rigid frame web.
+ '6' ..400 PX12  Conn, ES to closed C end raf:6=bolt,9=weld,A=screw clip,B=screw
+ '6' ..401 PX12  Conn, purlin to closed C end raf:6=bolt,9=weld,A=screw clip,B=screw
+ '1' ..402 GEN5  Additional costs defined in DT_COST are attributed to Labor costs.
+ '1' ..403 ER11  Wld Clip conn EW col to raf: -,1=cen clip on raf, 2=cen on second column.
+ '3' ..404 GPE9  Option to locate or not locate the brace holes in absence of girts.
+ '2' ..405 GEN5  Insulation wire quantity calc based on insulation area provided.
+ '-' ..406 PS25  OPEN   <Design Option = Soldier column top connection to rafter option 4>
+ 'G' ..407 PS26  Soldier column to eave strut for bypass girts
+ 'G' ..408 PS27  Soldier column to eave strut for flush girt
+ '1' ..409 GPE9  Option to stagger location of roof panel splices: 
+ '2' ..410 SO3   Sol Raf option 6:'1'=con to all purlins,'2'=con to only high side purlin
+ '-' ..411 SO3   Sol Raf con to purlin:'1'=bolt square tube spacer, '2' = bolting plate 
+ '2' ..412 PE2-01-10Web slots or web holes:-,1=holes,2=slots,3=slots in P/G & holes in ES.
+ '-' ..413       OPEN
+ '1' ..414 EC10  Wall girt to 'C' endwall column between header/sill and base 
+ '1' ..415 EC10  Wall girt to 'U' endwall column between header/sill and base 
+ '1' ..416 DJH4  Wall girt to 'C' jamb between header/sill and base 
+ '1' ..417 DJH4  Wall girt to 'U' jamb between header/sill and base 
+ '4' ..418 EWC3  D Endwall & Partition column to base connection; if =0, then use DM 1
+ '1' ..419 GP10  Opt to rev top and bot flgs in adj bays, wide flg left end:2=top,3bot
+ '-' ..420 EX17  EW col to raf conn., parapet EW with flush girts: CD column type, D raf
+ '-' ..421 EX17  EW col to raf conn., parapet EW with flush girts: WR column type, D raf
+ '-' ..422 EX17  EW col to raf conn., parapet EW with flush girts: U column type, D raf
+ 'K' ..423 EX17  EW col to raf conn., parapet EW with flush girts: CD column type, WR raf
+ 'O' ..424 EX17  EW col to raf conn., parapet EW with flush girts: WR column type, WR raf
+ '-' ..425 EX17  EW col to raf conn., parapet EW with flush girts: U column type, WR raf
+ '7' ..426 EX17  EW col to raf conn., parapet EW with flush girts: CD column type, C raf
+ 'O' ..427 EX17  EW col to raf conn., parapet EW with flush girts: WR column type, C raf
+ '-' ..428 EX17  EW col to raf conn., parapet EW with flush girts: U column type, C raf
+ '-' ..429 EX17  EW col to raf conn., parapet EW with flush girts: CD column type, U raf
+ '-' ..430 EX17  EW col to raf conn., parapet EW with flush girts: WR column type, U raf
+ '-' ..431 EX17  EW col to raf conn., parapet EW with flush girts: U column type, U raf
+ '6' ..432 EX18  EW raf to turned cor col when parapet wall beam is attached to the col.
+ '6' ..433 EX18  Attachment of parapet wall open C end post to top girt and wall girt.
+ '1' ..434 ER11  Direction for splice plate along ZCD endwall rafter
+ '1' ..435 ER11  Direction for splice plate along WRU endwall rafter
+ '4' ..436 RF7,EWC4 Top of door jamb to rigid frame near endwall
+ '-' ..437 EWC4  Door jamb to underside of rigid frame
+ '3' ..438 GPE9  BP EW girt attachment to rot cor col held flush with sidewall steel line
+ '1' ..439 GEN4  Girt labels: 1=SW girt & EW girt, 2=Wall girt
+ '1' ..440 DJH7  '2'=countersunk holes for bolts in framed opening on DJ & DH shop dwgs.
+ '2' ..441 EX18  Purlin and eave strut deduct to CU rafter at endwall parapet: 1=standard, 2=inside of parapet
+ '2' ..442 EX18  Purlin and eave strut deduct to DRW rafter at endwall parapet: 1=standard, 2=inside of parapet
+ '6' ..443 RF16  Rigid Frame to Eave Strut - High side only
+ '1' ..444 ER13  Endwall to Eave Strut - High side only
+ '4' ..445 RF7   PE' Endwall column as parapet arm to rigid frame near endwall
+ '-' ..446 RF26  set to '2'  for rectangular shaped gusset plates for rigid frame bolted end plates
+ '2' ..447 EC14  Flg Br to D Col or Raf
+ '4' ..448 RF19  Shear splice to hot rolled rigid frame 
+ '-' ..449 GEN1  Option at base of rigid frame column to replace web slot with plate welded to column web. 
+ 'N' ..450 GEN1  Number of bolts in flush girt web to clip plate 
+ '2' ..451 RF28  Crane runway beam lateral brace angle to auxiliary beam connection
+ '2' ..452 RF8   Crane runway beam lateral brace angle to rigid frame column connection
+ '2' ..453 RF8   Auxiliary column lateral brace angle to rigid frame connection
+ '2' ..454 RF22  Lateral brace angle to crane runway beam connection
+ '2' ..455 RF22  Longitudinal brace angle to crane runway beam connection
+ '4' ..456 RF23  Longitudinal brace angle to rigid frame connection
+ '2' ..457 RF8   Lateral brace angle to auxiliary column connection
+ '1' ..458 RF27  Crane longitudinal diagonal bracing connection to auxiliary column flange
+ '4' ..459 EWC3  Double C rigid frame: base plate to rigid frame column.  
+ '2' ..460 RF1   Double C rigid frame:flush wall girts to rigid frame column.  
+ '2' ..461 RF1   Double C rigid frame: bypass wall girts to rigid frame column.  
+ '2' ..462 RF2   Double C rigid frame: roof purlins to rigid frame rafter. 
+ '6' ..463 RF3   Double C rigid frame: eave strut to rigid frame rafter for bypass girts.
+ '1' ..464 RF4   Double C rigid frame: flange brace to column or rafter.  
+ '6' ..465 RF11  Double C rigid frame: eave strut to rigid frame rafter for flush girts.
+ '2' ..466 EWC5  Rotated C or U corner column connection to the Endwall Rafter
+ '1' ..467 GP11  Sidewall girt to endwall girt for non-rotated RWD non-rotated corner columns.
+ '-' ..468 GP11  Sidewall girt to endwall girt for non-rotated CU non-rotated corner columns.
+ '3' ..469 PE4-03-4 Option for attaching flange braces to roof purlins when roof liner panel is present.
+ '-' ..470 PE4-03-4 Option for attaching flange braces to wall girts when wall liner panel is present.
+ '3' ..471 PE5-03-2 Calculating the length of metric bolts: 0=1=standard, 2=china extension, washer thickness and nut thickness, 3 - same as 2 only no washer.
+ '1' ..472 RF4   Flange brace attachment to purlins/girts with screws; 1 - Bolts, 2 - Screws
+ '1' ..473       Flange brace attachment to girts
+ '4' ..474 
+ '3' ..475 GPE4  Sidewall girt attachment to RWD non-rotated corner column when SW and EW girts at the same elevation.
+ '2' ..476 GPE4  Sidewall girt attachment to CU non-rotated corner column when SW and EW girts at the same elevation.
+ '-' ..477 PE61  Option for user to center the sidewall girt clip on the column, else start d at c distance from girt.
+ '1' ..478 GEN5  Option for a roll to have cuts only used at a single wall instead of multiples.
+ '2' ..479 EWR1,2 Flange brace attachment on C, Z endwall columns
+ '2' ..480 EWR1,2 Flange brace attachment on W, R endwall columns
+ '2' ..481 EWR1,2 Flange brace attachment on D endwall columns
+ '2' ..482        Align SW and EW girt clips when both attach to the flange of a RW corner column
+ '1' ..483        Align center of SW girt clip with web of rotated RW corner column
+ '2' ..484 RF8   Flush endwall girt connection to inside flange of Double C rigid frame 
+ '2' ..485 GPE2  Option for detailing the peak bridging angle: 1=Calculate to ridge line along roof slope, 2=Calculate horizontaly between the peak purlins
+ '1' ..486 DJH4  Wall girt to U jamb
+ '1' ..487 DJH5  U header to jamb
+ '2' ..488 EC20  Option to align endwall loose girt clip holes for rigid frame near endwall with flush sidewall welded clip holes when at the same elevation.
+ '-' ..489 EWC3  Flange brace option for rotated corner columns: 1=Use rules according to method 249, 2=No brace, 3=Use brace
+ '3' ..490 GPE9  Bypass endwall girt connected to web of sidewall parapet arm
+ '4' ..491       RESERVED
+ '4' ..492 RF19  Rigid Frame with constant depth column having same size inside flange and end plate: '1'=separate pl.s, '4'=one pc.
+ '2' ..493 DJH1  Door jamb base plate for U jamb
+ '5' ..494 RF38  Wide opening R/W door jamb connection to rigid frame rafter
+ '5' ..495 RF38  Wide opening R/W stub column connection to rigid frame rafter
+ '1' ..496 RF38  Wide opening door jamb and stub column to use more than 1 clip
+ '1' ..497 EC22  Wide opening R/W door jamb to header beam
+ '1' ..498 EC22  Wide opening stub column to header beam
+ '1' ..499 RF37  Wide opening back brace connection to C/Z roof strut
+ '1' ..500 RF37  Wide opening back brace connection to U roof strut
+ '2' ..501 RF37  Wide opening back brace connection to D roof strut
+ '2' ..502 RF37  Wide opening back brace connection to R/W roof strut
+ '2' ..503 RF37  Wide opening back brace connection to R/W stub column
+ 'N' ..504 GPE1  Wide opening C/Z header beam orientation
+ 'N' ..505 GPE1  Wide opening U header beam orientation
+ '3' ..506 EC22  Wide opening stub column to C header beam when toed down
+ '3' ..507 EC22  Wide opening stub column to U header beam when toed down
+ '1' ..508 GP12  Set at 2 for welded plate connections on C girts with strip windows.    
+ '1' ..509 GP14  Option for selecting pattern bridging for the intermediate purlin spacing.    
+ '1' ..510 GP13  Select the compression member that will be used with the diagonal rods for girt and purlin stabilizers.    
+ '1' ..511 GP13  Set = 2 for wall girts to be stabilized with diagonal rods.    
+ '1' ..512 GP13  Set = 2 for purlins to be stabilized with diagonal rods.    
+ '3' ..513 DJH2  End connection for compression channel member to be used with diagonal rods for qirts and purlins.
+ '-' ..514 EWC8  Cable Brace to Light Gauge Rafters
+ '-' ..515 EWC8  Cable Brace to Light Gauge Columns
+ 'N' ..516 GPE1  Partial wall girt orientation. Options similar to DM20.
+ '-' ..517       Long partn with col not at RF, top conn D orient C type rafter. 
+ '-' ..518       Long partn with DJ at roof line and col not at RF, top conn to D orient C type rafter.
+ '-' ..519 GEN5  Insulation height with parapets
+ '-' ..520       ON HOLD Offset for floor elevation for inset endwalls.
+ '-' ..521 RF32  Col to R.F. raf web for attach of struts for wide openings: -,1= both Sides and 2 = required Side Only
+ '-' ..522       ON HOLD Connection of wind bent/column to top or bottom of eave strut
+ '-' ..523 RF27  Loc of independent crane bracing; 1=between rigid frame, 2=between auxiliary columns when present
+ '2' ..524       Wall panels break at canopy roof height
+ '-' ..525
+ '2' ..526 RF9  Endwall/partition girt to inside flange of rigid frame rafter
+ '2' ..527       Set = 2 and web holes will appear at all flange holes in girts and purlins. See PE 9-05-6.
+ '9' ..528 EX11  Bottom flush girt to CD end facia arm.
+ '9' ..529 EX11  Bottom flush girt to RW end facia arm.
+ '5' ..530 EX4   Bottom flush girt to RW interior facia arm.
+ '5' ..531 EX4   Bottom flush girt to CD interior facia arm.
+ '-' ..532
+ '-' ..533
+ '-' ..534
+ '-' ..535 
+ '-' ..536
+ '2' ..537      At 2 permits changes in shipping list editor to be saved when BOM is made.
+ '-' ..538
+ '-' .. 539 Added By MBS DM539
+ '-' .. 540 Added By MBS DM540
+ '-' .. 541 Added By MBS DM541
+ '2' .. 542 Angle bracing aligned with diagonal line through the working points
+ '1' .. 543 Protruding leg of angle compared with diagonal line through the working points
+ '2' .. 544 End cut at one end compared with end cut at other end.
+ 'N' .. 545 Orientation of C U Z Top Girt for Wainscot
+ '4' .. 546 Detailing the seam of one Wainscot to an adjacent Wainscot on the same wall where the same panel type is used, but the rib spacing do not align.
+ '-' .. 547 Added By MBS DM547
+ '6' .. 548 End of strut connection with presence of angle bracing, which also requires a plate type
+ '-' .. 549 Added By MBS DM549
+ '-' .. 550 Added By MBS DM550
+ '-' .. 551 Added By MBS DM551
+ '-' .. 552 Added By MBS DM552
+ '2' .. 553 Options for connecting the jack beam flange brace to the lower flange of the supported frame
+ '-' .. 554 Added By MBS DM554
+ '-' .. 555 Added By MBS DM555
+ '2' .. 556 The bracing member with the standard cut length for the 'SB' connections
+ '-' .. 557 Added By MBS DM557
+ '-' .. 558 Added By MBS DM558
+ '-' .. 559 Added By MBS DM559
+ '-' .. 560 Added By MBS DM560
+ '-' .. 561 Added By MBS DM561
+ '-' .. 562 Added By MBS DM562
+ '-' .. 563 Added By MBS DM563
+ '-' .. 564 Added By MBS DM564
+ '4' .. 565 Downspout locations calculation
+ '-' .. 566 Added By MBS DM566
+ '-' .. 567 Added By MBS DM567
+ '-' .. 568 Added By MBS DM568
+ '-' .. 569 dj2.dxf Added By MBS DM569
+ '1' .. 570 EC22 Wide EW Opening: Header beam to C jamb
+ '1' .. 571 EC22 Wide EW Opening: Header beam to D jamb
+ '1' .. 572 EC22 Wide EW Opening: Header beam to U jamb
+ '-' .. 573 Added By MBS DM573
+ '-' .. 574 Added By MBS DM574
+ '-' .. 575 Added By MBS DM575
+ '-' .. 576 Added By MBS DM576
+ '-' .. 577 Added By MBS DM577
+ '-' .. 578 Added By MBS DM578
+ '-' .. 579 Added By MBS DM579
+ '-' .. 580 Added By MBS DM580
+ '-' .. 581 Added By MBS DM581
+ '-' .. 582 Added By MBS DM582
+ '-' .. 583 Added By MBS DM583
+ '-' .. 584 Added By MBS DM584
+ '2' .. 585 Added By MBS DM585
+ '2' .. 586 Added By MBS DM586
+ '2' .. 587 Added By MBS DM587
+ '2' .. 588 Added By MBS DM588
+ '-' .. 589 Added By MBS DM589
+ '-' .. 590 Added By MBS DM590
+ '-' .. 591 Added By MBS DM591
+ '-' .. 592 Added By MBS DM592
+ '-' .. 593 Added By MBS DM593
+ '-' .. 594 Added By MBS DM594
+ '-' .. 595 Added By MBS DM595
+ '-' .. 596 Added By MBS DM596
+ '-' .. 597 Added By MBS DM597
+ '-' .. 598 Added By MBS DM598
+ '-' .. 599 Added By MBS DM599
+ '-' .. 600 Added By MBS DM600
+ '-' .. 601 Added By MBS DM601
+ '9' .. 602 Sidewall girt to column connection when projection is greater than DT_BUILD lio
+ '9' .. 603 Endwall girt to column connection when projection is greater than DT_BUILD
+ '-' .. 604 Added By MBS DM604
+ '-' .. 605 Added By MBS DM605
+ '-' .. 606 Added By MBS DM606
+ '-' .. 607 Added By MBS DM607
+ '-' .. 608 Added By MBS DM608
+ '-' .. 609 Added By MBS DM609
+ '-' .. 610 Added By MBS DM610
+ '-' .. 611 Added By MBS DM611
+ '-' .. 612 Added By MBS DM612
+ '-' .. 613 Added By MBS DM613
+ '1' .. 614 Strapping or bridging with diagonals on canopy purlins, and purlins on the 'C' type facia.
+ '1' .. 615 Strapping or bridging with diagonals on eave extension purlins, and purlins on the 'E' type facia
+ '-' .. 616 Added By MBS DM616
+ '-' .. 617 Added By MBS DM617
+ '-' .. 618 Added By MBS DM618
+ '-' .. 619 Added By MBS DM619
+ '-' .. 620 Added By MBS DM620
+ '-' .. 621 Added By MBS DM621
+ '-' .. 622 Added By MBS DM622
+ '-' .. 623 Added By MBS DM623
+ '3' .. 624 rigid frame rafter/column end plate bolt spacing reference point.
+ '-' .. 625 Added By MBS DM625
+ '-' .. 626 Added By MBS DM626
+ '-' .. 627 Added By MBS DM627
+ '-' .. 628 Added By MBS DM628
+ '2' .. 629 Slots for roof jambs and headers
+ '-' .. 630 Added By MBS DM630
+ '-' .. 631 Added By MBS DM631
+ '-' .. 632 Added By MBS DM632
+ '1' .. 633 Added By MBS DM633
+ '-' .. 634 Added By MBS DM634
+ '-' .. 635 Added By MBS DM635
+ '-' .. 636 Added By MBS DM636
+ '-' .. 637 Added By MBS DM637
+ '-' .. 638 Added By MBS DM638
+ '-' .. 639 Added By MBS DM639
+ '2' .. 640 DJ16 Wall girt to jamb member type T (tube)
+ '-' .. 641 Added By MBS DM641
+ '-' .. 642 Added By MBS DM642
+ '-' .. 643 dj19.dxf Added By MBS DM643
+ '-' .. 644 Added By MBS DM644
+ '-' .. 645 Added By MBS DM645
+ '-' .. 646 Added By MBS DM646
+ '-' .. 647 Added By MBS DM647
+ '-' .. 648 Added By MBS DM648
+ '-' .. 649 Added By MBS DM649
+ '-' .. 650 Added By MBS DM650
+ '-' .. 651 Added By MBS DM651
+ '-' .. 652 Added By MBS DM652
+ '-' .. 653 Added By MBS DM653
+ '-' .. 654 Added By MBS DM654
+ '-' .. 655 Added By MBS DM655
+ '-' .. 656 Added By MBS DM656
+ '-' .. 657 Added By MBS DM657
+ '-' .. 658 Added By MBS DM658
+ '-' .. 659 Added By MBS DM659
+ '-' .. 660 Added By MBS DM660
+ '-' .. 661 Added By MBS DM661
+ '-' .. 662 Added By MBS DM662
+ '-' .. 663 Added By MBS DM663
+ '-' .. 664 Added By MBS DM664
+ '-' .. 665 Added By MBS DM665
+ '-' .. 666 Added By MBS DM666
+ '-' .. 667 Added By MBS DM667
+ '-' .. 668 Added By MBS DM668
+ '5' .. 669 PA12 Tube extension support column base connection
+ '-' .. 670 Added By MBS DM670
+ '-' .. 671 Added By MBS DM671
+ '-' .. 672 Added By MBS DM672
+ '-' .. 673 Added By MBS DM673
+ '-' .. 674 Added By MBS DM674
+ '-' .. 675 Added By MBS DM675
+ '3' .. 676 DJ28.With sill close to girt, what happens with sill or jamb
+ '-' .. 677 Added By MBS DM677
+ '-' .. 678 Added By MBS DM678
+ '-' .. 679 Added By MBS DM679
+ '-' .. 680 Added By MBS DM680
+ '-' .. 681 Added By MBS DM681
+ '-' .. 682 Added By MBS DM682
+ '-' .. 683 Added By MBS DM683
+ '-' .. 684 Added By MBS DM684
+ '-' .. 685 Added By MBS DM685
+ '-' .. 686 Added By MBS DM686
+ '-' .. 687 Added By MBS DM687
+ '-' .. 688 Added By MBS DM688
+ '-' .. 689 Added By MBS DM689
+ 'I' .. 690 RF87.Longitudinal Partition 'ZB' Eave Strut to Rigid Frame (High and Low)
+***1/7/2022 Lines 677 to 690 added by MBS
+***1/3/2022 Lines 670 to 676 added by MBS
+***8/25/2021 Lines 644 to 669 added by MBS
+***3/25/2021 Lines 641 to 643 added by MBS
+***3/25/2021 Lines 603 to 640 added by MBS
+***3/23/2021 Lines 573 to 602 added by MBS
+***2/1/2021 Lines 570 to 572 added by MBS
+***1/30/2021 Lines 566 to 569 added by MBS
+***12/9/2010 Lines 557 to 565 added by MBS
+***11/10/2010 Lines 554 to 556 added by MBS
+***6/4/2010 Lines 540 to 553 added by MBS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

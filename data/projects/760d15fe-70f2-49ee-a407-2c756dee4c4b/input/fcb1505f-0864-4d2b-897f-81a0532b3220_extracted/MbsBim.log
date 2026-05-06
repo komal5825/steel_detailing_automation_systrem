@@ -1,0 +1,20 @@
+19-01-2026 11:00:55
+1
+1.A:D:\MBS_JOBS\INDIAN\C163-027
+1.B:/B,/SMBS.INI,/PGOCFUEAHWDAVCBHDBNCVVNAMBANQKGDSBAVCPFQM,/AH8<1937659?9)9<>9
+IsMini=False
+IsDealer=False
+2
+SC:0
+SC:1
+lockType=MBS, Lib=C:\MBS\LIB\, mbsIniPath=c:\mbs\system\MBS.INI
+dllPath=C:\MBS\LIB\SpecialL.DLL
+mbsLock: Status=1 Platform=MBS Features=8 LaserId=2C88BFD9-C83D-4D52-9462-7DA6F39FB62F
+GER: ER=4
+3
+4
+(C163-027/bom/RC-01:887/MB1:1723) Plate passed with no coordinates
+(C163-027/bom/RC-01:887) Piece passed with no plates
+5
+6
+7

@@ -1,0 +1,1299 @@
+17-12-2025 15:20:27    Message.out
+    ================================================================================
+     C463-002            Design Warning Summary                 17/DEC/2025  3:20pm
+    ================================================================================
+     
+     LEFT ENDWALL
+     ------------
+         DOOR JAMB
+           Member
+             WRN(DJM-203): Moment > Limit
+     
+     RIGHT ENDWALL
+     -------------
+         No Warnings!
+     
+     FRONT SIDEWALL
+     --------------
+         No Warnings!
+     
+     BACK SIDEWALL
+     -------------
+         No Warnings!
+     
+     ROOF
+     ----
+         No Warnings!
+     
+     EXTENSIONS
+     ----------
+         EXTENSION BEAM
+           Member
+             WRN(BXM-204): Axial + Moment > Limit
+             WRN(BXM-211): KL/R > Limit
+     
+     RIGID FRAME #1
+     --------------
+         FRAME RAFTER
+           End Plate
+             WRN(RFE-413): Weld Size < Required
+     
+         CRANE BRACKET
+           Stiffener
+             WRN(CKS-011): Plate Size < Required
+     
+     RIGID FRAME #2
+     --------------
+         FRAME RAFTER
+           End Plate
+             WRN(RFE-413): Weld Size < Required
+     
+         CRANE BRACKET
+           Stiffener
+             WRN(CKS-011): Plate Size < Required
+     
+     RIGID FRAME #3
+     --------------
+         FRAME RAFTER
+           End Plate
+             WRN(RFE-413): Weld Size < Required
+     
+     RIGID FRAME #4
+     --------------
+         FRAME RAFTER
+           End Plate
+             WRN(RFE-413): Weld Size < Required
+     
+     RIGID FRAME #5
+     --------------
+         FRAME RAFTER
+           End Plate
+             WRN(RFE-413): Weld Size < Required
+     
+     CRANE SYSTEM
+     ------------
+         No Warnings!
+17-12-2025 15:33:20    Message.out
+    ================================================================================
+     C463-002            Design Warning Summary                 17/DEC/2025  3:33pm
+    ================================================================================
+     
+     LEFT ENDWALL
+     ------------
+         DOOR JAMB
+           Member
+             WRN(DJM-203): Moment > Limit
+     
+     RIGHT ENDWALL
+     -------------
+         No Warnings!
+     
+     FRONT SIDEWALL
+     --------------
+         No Warnings!
+     
+     BACK SIDEWALL
+     -------------
+         No Warnings!
+     
+     ROOF
+     ----
+         No Warnings!
+     
+     EXTENSIONS
+     ----------
+         No Warnings!
+     
+     RIGID FRAME #1
+     --------------
+         No Warnings!
+     
+     RIGID FRAME #2
+     --------------
+         FRAME RAFTER
+           End Plate
+             WRN(RFE-413): Weld Size < Required
+     
+     RIGID FRAME #3
+     --------------
+         FRAME RAFTER
+           End Plate
+             WRN(RFE-413): Weld Size < Required
+     
+     RIGID FRAME #4
+     --------------
+         FRAME RAFTER
+           End Plate
+             WRN(RFE-413): Weld Size < Required
+     
+     RIGID FRAME #5
+     --------------
+         No Warnings!
+     
+     CRANE SYSTEM
+     ------------
+         No Warnings!
+17-12-2025 15:34:34    Message.out
+    ================================================================================
+     C463-002            Detail Warning Summary                 17/DEC/2025  3:34pm
+    ================================================================================
+     
+     ENDWALL
+     -------
+         No Warnings!
+     
+     EXTENSIONS
+     ----------
+         No Warnings!
+     
+     RIGID FRAME #1
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #2
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #3
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #4
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #5
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     CRANE SYSTEM
+     ------------
+         No Warnings!
+     
+     WIND FRAMING
+     ------------
+         No Warnings!
+     
+     BOM
+     ---
+       INPUT
+       -----
+             WRN(AB-105) : No anchor bolt record for diameter
+               16.00
+     
+       OUTPUT
+       ------
+         COST
+           BOM
+             WRN(CST-01) : Incomplete cost information!
+                 ------(Z20020  )
+                 ------(AB16    )
+17-12-2025 15:42:22    Message.out
+    ================================================================================
+     C463-002            Design Warning Summary                 17/DEC/2025  3:42pm
+    ================================================================================
+     
+     LEFT ENDWALL
+     ------------
+         No Warnings!
+     
+     RIGHT ENDWALL
+     -------------
+         No Warnings!
+     
+     FRONT SIDEWALL
+     --------------
+         No Warnings!
+     
+     BACK SIDEWALL
+     -------------
+         No Warnings!
+     
+     ROOF
+     ----
+         WIND BENT
+           Member
+             WRN(WBM-413): Weld Size < Required
+     
+     EXTENSIONS
+     ----------
+         No Warnings!
+     
+     RIGID FRAME #1
+     --------------
+         No Warnings!
+     
+     RIGID FRAME #2
+     --------------
+         FRAME RAFTER
+           End Plate
+             WRN(RFE-413): Weld Size < Required
+     
+     RIGID FRAME #3
+     --------------
+         FRAME RAFTER
+           End Plate
+             WRN(RFE-413): Weld Size < Required
+     
+     RIGID FRAME #4
+     --------------
+         FRAME RAFTER
+           End Plate
+             WRN(RFE-413): Weld Size < Required
+     
+     RIGID FRAME #5
+     --------------
+         No Warnings!
+     
+     CRANE SYSTEM
+     ------------
+         No Warnings!
+17-12-2025 15:43:59    Message.out
+    ================================================================================
+     C463-002            Detail Warning Summary                 17/DEC/2025  3:43pm
+    ================================================================================
+     
+     ENDWALL
+     -------
+         No Warnings!
+     
+     EXTENSIONS
+     ----------
+         No Warnings!
+     
+     RIGID FRAME #1
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #2
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #3
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #4
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #5
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     CRANE SYSTEM
+     ------------
+         No Warnings!
+     
+     WIND FRAMING
+     ------------
+         No Warnings!
+     
+     BOM
+     ---
+       INPUT
+       -----
+             WRN(AB-105) : No anchor bolt record for diameter
+               16.00
+     
+       OUTPUT
+       ------
+         No Warnings!
+17-12-2025 16:09:11    Message.out
+    ================================================================================
+     C463-002            Design Warning Summary                 17/DEC/2025  4:09pm
+    ================================================================================
+     
+     LEFT ENDWALL
+     ------------
+         No Warnings!
+     
+     RIGHT ENDWALL
+     -------------
+         No Warnings!
+     
+     FRONT SIDEWALL
+     --------------
+         No Warnings!
+     
+     BACK SIDEWALL
+     -------------
+         No Warnings!
+     
+     ROOF
+     ----
+         WIND BENT
+           Member
+             WRN(WBM-413): Weld Size < Required
+     
+     EXTENSIONS
+     ----------
+         No Warnings!
+     
+     RIGID FRAME #1
+     --------------
+         No Warnings!
+     
+     RIGID FRAME #2
+     --------------
+         FRAME RAFTER
+           End Plate
+             WRN(RFE-413): Weld Size < Required
+     
+     RIGID FRAME #3
+     --------------
+         FRAME RAFTER
+           End Plate
+             WRN(RFE-413): Weld Size < Required
+     
+     RIGID FRAME #4
+     --------------
+         FRAME RAFTER
+           End Plate
+             WRN(RFE-413): Weld Size < Required
+     
+     RIGID FRAME #5
+     --------------
+         No Warnings!
+     
+     CRANE SYSTEM
+     ------------
+         No Warnings!
+17-12-2025 16:09:56    Message.out
+    ================================================================================
+     C463-002            Detail Warning Summary                 17/DEC/2025  4:09pm
+    ================================================================================
+     
+     ENDWALL
+     -------
+         No Warnings!
+     
+     EXTENSIONS
+     ----------
+         No Warnings!
+     
+     RIGID FRAME #1
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #2
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #3
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #4
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #5
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     CRANE SYSTEM
+     ------------
+         No Warnings!
+     
+     WIND FRAMING
+     ------------
+         No Warnings!
+     
+     BOM
+     ---
+       INPUT
+       -----
+             WRN(AB-105) : No anchor bolt record for diameter
+               16.00
+     
+       OUTPUT
+       ------
+         No Warnings!
+17-12-2025 16:18:38    Message.out
+    ================================================================================
+     C463-002            Design Warning Summary                 17/DEC/2025  4:18pm
+    ================================================================================
+     
+     LEFT ENDWALL
+     ------------
+         No Warnings!
+     
+     RIGHT ENDWALL
+     -------------
+         No Warnings!
+     
+     FRONT SIDEWALL
+     --------------
+         No Warnings!
+     
+     BACK SIDEWALL
+     -------------
+         No Warnings!
+     
+     ROOF
+     ----
+         WIND BENT
+           Member
+             WRN(WBM-413): Weld Size < Required
+     
+     EXTENSIONS
+     ----------
+         No Warnings!
+     
+     RIGID FRAME #1
+     --------------
+         No Warnings!
+     
+     RIGID FRAME #2
+     --------------
+         No Warnings!
+     
+     RIGID FRAME #3
+     --------------
+         FRAME RAFTER
+           End Plate
+             WRN(RFE-413): Weld Size < Required
+     
+     RIGID FRAME #4
+     --------------
+         FRAME RAFTER
+           End Plate
+             WRN(RFE-413): Weld Size < Required
+     
+     RIGID FRAME #5
+     --------------
+         No Warnings!
+     
+     CRANE SYSTEM
+     ------------
+         No Warnings!
+17-12-2025 16:19:25    Message.out
+    ================================================================================
+     C463-002            Detail Warning Summary                 17/DEC/2025  4:19pm
+    ================================================================================
+     
+     ENDWALL
+     -------
+         No Warnings!
+     
+     EXTENSIONS
+     ----------
+         No Warnings!
+     
+     RIGID FRAME #1
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #2
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #3
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #4
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #5
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     CRANE SYSTEM
+     ------------
+         No Warnings!
+     
+     WIND FRAMING
+     ------------
+         No Warnings!
+     
+     BOM
+     ---
+       INPUT
+       -----
+             WRN(AB-105) : No anchor bolt record for diameter
+               16.00
+     
+       OUTPUT
+       ------
+         No Warnings!
+17-12-2025 16:20:24    StdOut.Out
+    
+      PROGRAM DETAILS:
+         *WRN(DT-130 ): Detail block not found - C72
+17-12-2025 04:25:39 PM    Message.out
+    ================================================================================
+     C463-002            Design Warning Summary                 17/DEC/2025  4:25pm
+    ================================================================================
+     
+     LEFT ENDWALL
+     ------------
+         No Warnings!
+     
+     RIGHT ENDWALL
+     -------------
+         No Warnings!
+     
+     FRONT SIDEWALL
+     --------------
+         No Warnings!
+     
+     BACK SIDEWALL
+     -------------
+         No Warnings!
+     
+     ROOF
+     ----
+         WIND BENT
+           Member
+             WRN(WBM-413): Weld Size < Required
+     
+     EXTENSIONS
+     ----------
+         No Warnings!
+     
+     RIGID FRAME #1
+     --------------
+         No Warnings!
+     
+     RIGID FRAME #2
+     --------------
+         No Warnings!
+     
+     RIGID FRAME #3
+     --------------
+         FRAME RAFTER
+           End Plate
+             WRN(RFE-413): Weld Size < Required
+     
+     RIGID FRAME #4
+     --------------
+         FRAME RAFTER
+           End Plate
+             WRN(RFE-413): Weld Size < Required
+     
+     RIGID FRAME #5
+     --------------
+         No Warnings!
+     
+     CRANE SYSTEM
+     ------------
+         No Warnings!
+17-12-2025 04:26:07 PM    Message.out
+    ================================================================================
+     C463-002            Detail Warning Summary                 17/DEC/2025  4:26pm
+    ================================================================================
+     
+     ENDWALL
+     -------
+         No Warnings!
+     
+     EXTENSIONS
+     ----------
+         No Warnings!
+     
+     RIGID FRAME #1
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #2
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #3
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #4
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #5
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     CRANE SYSTEM
+     ------------
+         No Warnings!
+     
+     WIND FRAMING
+     ------------
+         No Warnings!
+     
+     BOM
+     ---
+       INPUT
+       -----
+             WRN(AB-105) : No anchor bolt record for diameter
+               16.00
+     
+       OUTPUT
+       ------
+         No Warnings!
+17-12-2025 04:26:49 PM    StdOut.Out
+    
+      PROGRAM DETAILS:
+         *WRN(DT-130 ): Detail block not found - C72
+17-12-2025 04:52:15 PM    Message.out
+    ================================================================================
+     C463-002            Design Warning Summary                 17/DEC/2025  4:52pm
+    ================================================================================
+     
+     LEFT ENDWALL
+     ------------
+         No Warnings!
+     
+     RIGHT ENDWALL
+     -------------
+         No Warnings!
+     
+     FRONT SIDEWALL
+     --------------
+         No Warnings!
+     
+     BACK SIDEWALL
+     -------------
+         No Warnings!
+     
+     ROOF
+     ----
+         WIND BENT
+           Member
+             WRN(WBM-413): Weld Size < Required
+     
+     EXTENSIONS
+     ----------
+         No Warnings!
+     
+     RIGID FRAME #1
+     --------------
+         No Warnings!
+     
+     RIGID FRAME #2
+     --------------
+         No Warnings!
+     
+     RIGID FRAME #3
+     --------------
+         FRAME RAFTER
+           End Plate
+             WRN(RFE-413): Weld Size < Required
+     
+     RIGID FRAME #4
+     --------------
+         FRAME RAFTER
+           End Plate
+             WRN(RFE-413): Weld Size < Required
+     
+     RIGID FRAME #5
+     --------------
+         No Warnings!
+     
+     CRANE SYSTEM
+     ------------
+         No Warnings!
+17-12-2025 04:53:15 PM    Message.out
+    ================================================================================
+     C463-002            Detail Warning Summary                 17/DEC/2025  4:53pm
+    ================================================================================
+     
+     ENDWALL
+     -------
+         No Warnings!
+     
+     EXTENSIONS
+     ----------
+         No Warnings!
+     
+     RIGID FRAME #1
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #2
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #3
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #4
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #5
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     CRANE SYSTEM
+     ------------
+         No Warnings!
+     
+     WIND FRAMING
+     ------------
+         No Warnings!
+     
+     BOM
+     ---
+       INPUT
+       -----
+             WRN(AB-105) : No anchor bolt record for diameter
+               16.00
+     
+       OUTPUT
+       ------
+         No Warnings!
+18-12-2025 10:05:51    Message.out
+    ================================================================================
+     C463-002            Design Warning Summary                 18/DEC/2025 10:05am
+    ================================================================================
+     
+     LEFT ENDWALL
+     ------------
+         No Warnings!
+     
+     RIGHT ENDWALL
+     -------------
+         No Warnings!
+     
+     FRONT SIDEWALL
+     --------------
+         No Warnings!
+     
+     BACK SIDEWALL
+     -------------
+         No Warnings!
+     
+     ROOF
+     ----
+         WIND BENT
+           Member
+             WRN(WBM-413): Weld Size < Required
+     
+     EXTENSIONS
+     ----------
+         No Warnings!
+     
+     RIGID FRAME #1
+     --------------
+         No Warnings!
+     
+     RIGID FRAME #2
+     --------------
+         No Warnings!
+     
+     RIGID FRAME #3
+     --------------
+         FRAME RAFTER
+           End Plate
+             WRN(RFE-413): Weld Size < Required
+     
+     RIGID FRAME #4
+     --------------
+         FRAME RAFTER
+           End Plate
+             WRN(RFE-413): Weld Size < Required
+     
+     RIGID FRAME #5
+     --------------
+         No Warnings!
+     
+     CRANE SYSTEM
+     ------------
+         No Warnings!
+18-12-2025 10:07:47    Message.out
+    ================================================================================
+     C463-002            Detail Warning Summary                 18/DEC/2025 10:07am
+    ================================================================================
+     
+     ENDWALL
+     -------
+         No Warnings!
+     
+     EXTENSIONS
+     ----------
+         No Warnings!
+     
+     RIGID FRAME #1
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #2
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #3
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #4
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #5
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     CRANE SYSTEM
+     ------------
+         No Warnings!
+     
+     WIND FRAMING
+     ------------
+         No Warnings!
+     
+     BOM
+     ---
+       INPUT
+       -----
+             WRN(AB-105) : No anchor bolt record for diameter
+               16.00
+     
+       OUTPUT
+       ------
+         No Warnings!
+18-12-2025 10:09:17    StdOut.Out
+    
+      PROGRAM DETAILS:
+         *WRN(DT-130 ): Detail block not found - C72
+18-12-2025 10:16:07    Message.out
+    ================================================================================
+     C463-002            Design Warning Summary                 18/DEC/2025 10:16am
+    ================================================================================
+     
+     LEFT ENDWALL
+     ------------
+         No Warnings!
+     
+     RIGHT ENDWALL
+     -------------
+         No Warnings!
+     
+     FRONT SIDEWALL
+     --------------
+         No Warnings!
+     
+     BACK SIDEWALL
+     -------------
+         No Warnings!
+     
+     ROOF
+     ----
+         WIND BENT
+           Member
+             WRN(WBM-413): Weld Size < Required
+     
+     EXTENSIONS
+     ----------
+         No Warnings!
+     
+     RIGID FRAME #1
+     --------------
+         No Warnings!
+     
+     RIGID FRAME #2
+     --------------
+         No Warnings!
+     
+     RIGID FRAME #3
+     --------------
+         FRAME RAFTER
+           End Plate
+             WRN(RFE-413): Weld Size < Required
+     
+     RIGID FRAME #4
+     --------------
+         FRAME RAFTER
+           End Plate
+             WRN(RFE-413): Weld Size < Required
+     
+     RIGID FRAME #5
+     --------------
+         No Warnings!
+     
+     CRANE SYSTEM
+     ------------
+         No Warnings!
+18-12-2025 10:17:17    Message.out
+    ================================================================================
+     C463-002            Detail Warning Summary                 18/DEC/2025 10:17am
+    ================================================================================
+     
+     ENDWALL
+     -------
+         No Warnings!
+     
+     EXTENSIONS
+     ----------
+         No Warnings!
+     
+     RIGID FRAME #1
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #2
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #3
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #4
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #5
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     CRANE SYSTEM
+     ------------
+         No Warnings!
+     
+     WIND FRAMING
+     ------------
+         No Warnings!
+     
+     BOM
+     ---
+       INPUT
+       -----
+             WRN(AB-105) : No anchor bolt record for diameter
+               16.00
+     
+       OUTPUT
+       ------
+         No Warnings!
+18-12-2025 10:25:32    StdOut.Out
+    
+      PROGRAM DETAILS:
+         *WRN(DT-130 ): Detail block not found - C72
+18-12-2025 11:27:39    Message.out
+    ================================================================================
+     C463-002            Design Warning Summary                 18/DEC/2025 11:27am
+    ================================================================================
+     
+     LEFT ENDWALL
+     ------------
+         No Warnings!
+     
+     RIGHT ENDWALL
+     -------------
+         No Warnings!
+     
+     FRONT SIDEWALL
+     --------------
+         No Warnings!
+     
+     BACK SIDEWALL
+     -------------
+         No Warnings!
+     
+     ROOF
+     ----
+         WIND BENT
+           Member
+             WRN(WBM-413): Weld Size < Required
+     
+     EXTENSIONS
+     ----------
+         No Warnings!
+     
+     RIGID FRAME #1
+     --------------
+         No Warnings!
+     
+     RIGID FRAME #2
+     --------------
+         No Warnings!
+     
+     RIGID FRAME #3
+     --------------
+         FRAME RAFTER
+           End Plate
+             WRN(RFE-413): Weld Size < Required
+     
+     RIGID FRAME #4
+     --------------
+         FRAME RAFTER
+           End Plate
+             WRN(RFE-413): Weld Size < Required
+     
+     RIGID FRAME #5
+     --------------
+         No Warnings!
+     
+     CRANE SYSTEM
+     ------------
+         No Warnings!
+18-12-2025 11:28:48    Message.out
+    ================================================================================
+     C463-002            Detail Warning Summary                 18/DEC/2025 11:28am
+    ================================================================================
+     
+     ENDWALL
+     -------
+         No Warnings!
+     
+     EXTENSIONS
+     ----------
+         No Warnings!
+     
+     RIGID FRAME #1
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #2
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #3
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #4
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #5
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     CRANE SYSTEM
+     ------------
+         No Warnings!
+     
+     WIND FRAMING
+     ------------
+         No Warnings!
+     
+     BOM
+     ---
+       INPUT
+       -----
+             WRN(AB-105) : No anchor bolt record for diameter
+               16.00
+     
+       OUTPUT
+       ------
+         No Warnings!
+18-12-2025 12:09:37    StdOut.Out
+    
+      PROGRAM DETAILS:
+         *WRN(DT-130 ): Detail block not found - C72
+18-12-2025 14:50:12    Message.out
+    ================================================================================
+     C463-002            Design Warning Summary                 18/DEC/2025  2:50pm
+    ================================================================================
+     
+     LEFT ENDWALL
+     ------------
+         No Warnings!
+     
+     RIGHT ENDWALL
+     -------------
+         No Warnings!
+     
+     FRONT SIDEWALL
+     --------------
+         No Warnings!
+     
+     BACK SIDEWALL
+     -------------
+         No Warnings!
+     
+     ROOF
+     ----
+         WIND BENT
+           Member
+             WRN(WBM-413): Weld Size < Required
+     
+     EXTENSIONS
+     ----------
+         No Warnings!
+     
+     RIGID FRAME #1
+     --------------
+         No Warnings!
+     
+     RIGID FRAME #2
+     --------------
+         No Warnings!
+     
+     RIGID FRAME #3
+     --------------
+         FRAME RAFTER
+           End Plate
+             WRN(RFE-413): Weld Size < Required
+     
+     RIGID FRAME #4
+     --------------
+         FRAME RAFTER
+           End Plate
+             WRN(RFE-413): Weld Size < Required
+     
+     RIGID FRAME #5
+     --------------
+         No Warnings!
+     
+     CRANE SYSTEM
+     ------------
+         No Warnings!
+18-12-2025 14:51:03    Message.out
+    ================================================================================
+     C463-002            Detail Warning Summary                 18/DEC/2025  2:51pm
+    ================================================================================
+     
+     ENDWALL
+     -------
+         No Warnings!
+     
+     EXTENSIONS
+     ----------
+         No Warnings!
+     
+     RIGID FRAME #1
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #2
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #3
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #4
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #5
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     CRANE SYSTEM
+     ------------
+         No Warnings!
+     
+     WIND FRAMING
+     ------------
+         No Warnings!
+     
+     BOM
+     ---
+       INPUT
+       -----
+             WRN(AB-105) : No anchor bolt record for diameter
+               16.00
+     
+       OUTPUT
+       ------
+         No Warnings!
+18-12-2025 14:52:19    StdOut.Out
+    
+      PROGRAM DETAILS:
+         *WRN(DT-130 ): Detail block not found - C72

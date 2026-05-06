@@ -25,6 +25,10 @@ def get_project(db: Session, project_id: UUID) -> Project | None:
     return db.query(Project).filter(Project.id == project_id).first()
 
 
+def get_project_by_proposal_id(db: Session, proposal_id: str) -> Project | None:
+    return db.query(Project).filter(Project.proposal_id == proposal_id).first()
+
+
 def list_project_files(db: Session, project_id: UUID) -> list[ProjectFile]:
     return (
         db.query(ProjectFile)
@@ -89,3 +93,8 @@ def create_project_file(
     db.commit()
     db.refresh(project_file)
     return project_file
+
+
+def delete_project_file(db: Session, file_id: UUID):
+    db.query(ProjectFile).filter(ProjectFile.id == file_id).delete()
+    db.flush()

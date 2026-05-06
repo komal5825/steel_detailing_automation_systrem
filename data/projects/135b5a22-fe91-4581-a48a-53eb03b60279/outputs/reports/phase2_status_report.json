@@ -1,0 +1,1221 @@
+{
+  "generated_at": "2026-05-04T11:18:09.881534",
+  "project": {
+    "id": "135b5a22-fe91-4581-a48a-53eb03b60279",
+    "proposal_id": "string",
+    "name": "string",
+    "location": "string",
+    "project_type": "string",
+    "status": "CREATED"
+  },
+  "files": [
+    {
+      "id": "de768659-f5b5-4bff-ba49-9399c2346693",
+      "original_filename": "C08-033-Proposal drawing.dwg",
+      "file_type": "DWG",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PENDING"
+    }
+  ],
+  "stages": [
+    {
+      "stage_code": "P2-01",
+      "status": "PASSED",
+      "started_at": "2026-05-04T11:17:34.840895",
+      "completed_at": "2026-05-04T11:17:49.493350",
+      "error_message": null,
+      "result": {
+        "status": "success",
+        "project_id": "135b5a22-fe91-4581-a48a-53eb03b60279",
+        "files_found": 0,
+        "parsed_files": 0,
+        "failed_files": 0,
+        "extracted_fields": 0,
+        "normalized_fields": 0,
+        "governing_file": null
+      }
+    },
+    {
+      "stage_code": "P2-02",
+      "status": "AWAITING_INPUT",
+      "started_at": "2026-05-04T11:17:56.942477",
+      "completed_at": "2026-05-04T11:18:00.172889",
+      "error_message": null,
+      "result": {
+        "project_id": "135b5a22-fe91-4581-a48a-53eb03b60279",
+        "ab_readiness": {
+          "output": "AB",
+          "required_count": 72,
+          "present_count": 2,
+          "missing_count": 70,
+          "missing_codes": [
+            "F-001",
+            "F-006",
+            "F-009",
+            "F-010",
+            "F-013",
+            "F-014",
+            "F-015",
+            "F-016",
+            "F-017",
+            "F-019",
+            "F-021",
+            "F-023",
+            "F-024",
+            "F-025",
+            "F-026",
+            "F-027",
+            "F-028",
+            "F-029",
+            "F-031",
+            "F-032",
+            "F-033",
+            "F-034",
+            "F-035",
+            "F-036",
+            "F-037",
+            "F-039",
+            "F-040",
+            "F-041",
+            "F-042",
+            "F-043",
+            "F-044",
+            "F-048",
+            "F-075",
+            "F-078",
+            "F-080",
+            "F-081",
+            "F-082",
+            "F-083",
+            "F-084",
+            "F-085",
+            "F-086",
+            "F-087",
+            "F-088",
+            "F-089",
+            "F-090",
+            "F-132",
+            "F-133",
+            "F-134",
+            "F-135",
+            "F-136",
+            "F-137",
+            "F-138",
+            "F-139",
+            "F-140",
+            "F-141",
+            "F-142",
+            "F-143",
+            "F-144",
+            "F-145",
+            "F-147",
+            "F-148",
+            "F-151",
+            "F-152",
+            "F-156",
+            "F-171",
+            "F-172",
+            "F-191",
+            "F-192",
+            "F-193",
+            "F-194"
+          ],
+          "status": "BLOCKED",
+          "fields": {
+            "F-002": {
+              "status": "PRESENT",
+              "source": "SYSTEM_DEFAULT",
+              "value": ""
+            },
+            "F-020": {
+              "status": "PRESENT",
+              "source": "SYSTEM_DEFAULT",
+              "value": ""
+            },
+            "F-001": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-006": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-009": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-010": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-013": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-014": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-015": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-016": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-017": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-019": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-021": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-023": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-024": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-025": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-026": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-027": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-028": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-029": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-031": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-032": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-033": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-034": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-035": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-036": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-037": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-039": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-040": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-041": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-042": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-043": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-044": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-048": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-075": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-078": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-080": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-081": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-082": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-083": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-084": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-085": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-086": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-087": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-088": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-089": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-090": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-132": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-133": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-134": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-135": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-136": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-137": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-138": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-139": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-140": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-141": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-142": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-143": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-144": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-145": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-147": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-148": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-151": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-152": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-156": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-171": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-172": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-191": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-192": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-193": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-194": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            }
+          }
+        },
+        "ga_readiness": {
+          "output": "GA",
+          "required_count": 78,
+          "present_count": 2,
+          "missing_count": 76,
+          "missing_codes": [
+            "F-001",
+            "F-003",
+            "F-006",
+            "F-009",
+            "F-010",
+            "F-013",
+            "F-014",
+            "F-015",
+            "F-016",
+            "F-017",
+            "F-019",
+            "F-021",
+            "F-023",
+            "F-024",
+            "F-025",
+            "F-026",
+            "F-027",
+            "F-028",
+            "F-029",
+            "F-031",
+            "F-032",
+            "F-033",
+            "F-034",
+            "F-035",
+            "F-036",
+            "F-037",
+            "F-039",
+            "F-040",
+            "F-041",
+            "F-042",
+            "F-043",
+            "F-044",
+            "F-045",
+            "F-046",
+            "F-047",
+            "F-048",
+            "F-051",
+            "F-052",
+            "F-054",
+            "F-055",
+            "F-056",
+            "F-057",
+            "F-059",
+            "F-060",
+            "F-061",
+            "F-063",
+            "F-064",
+            "F-065",
+            "F-067",
+            "F-072",
+            "F-121",
+            "F-122",
+            "F-123",
+            "F-132",
+            "F-133",
+            "F-134",
+            "F-135",
+            "F-136",
+            "F-137",
+            "F-138",
+            "F-139",
+            "F-140",
+            "F-141",
+            "F-142",
+            "F-143",
+            "F-144",
+            "F-145",
+            "F-147",
+            "F-148",
+            "F-151",
+            "F-152",
+            "F-156",
+            "F-171",
+            "F-172",
+            "F-173",
+            "F-191"
+          ],
+          "status": "BLOCKED",
+          "fields": {
+            "F-002": {
+              "status": "PRESENT",
+              "source": "SYSTEM_DEFAULT",
+              "value": ""
+            },
+            "F-020": {
+              "status": "PRESENT",
+              "source": "SYSTEM_DEFAULT",
+              "value": ""
+            },
+            "F-001": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-003": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-006": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-009": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-010": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-013": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-014": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-015": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-016": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-017": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-019": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-021": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-023": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-024": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-025": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-026": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-027": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-028": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-029": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-031": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-032": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-033": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-034": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-035": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-036": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-037": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-039": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-040": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-041": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-042": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-043": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-044": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-045": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-046": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-047": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-048": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-051": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-052": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-054": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-055": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-056": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-057": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-059": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-060": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-061": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-063": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-064": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-065": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-067": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-072": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-121": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-122": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-123": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-132": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-133": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-134": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-135": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-136": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-137": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-138": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-139": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-140": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-141": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-142": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-143": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-144": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-145": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-147": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-148": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-151": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-152": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-156": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-171": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-172": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-173": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            },
+            "F-191": {
+              "status": "MISSING",
+              "source": null,
+              "value": null
+            }
+          }
+        },
+        "blocking_issues_count": 92,
+        "blocking_issues": [
+          "F-001",
+          "F-003",
+          "F-006",
+          "F-009",
+          "F-010",
+          "F-013",
+          "F-014",
+          "F-015",
+          "F-016",
+          "F-017",
+          "F-019",
+          "F-021",
+          "F-023",
+          "F-024",
+          "F-025",
+          "F-026",
+          "F-027",
+          "F-028",
+          "F-029",
+          "F-031",
+          "F-032",
+          "F-033",
+          "F-034",
+          "F-035",
+          "F-036",
+          "F-037",
+          "F-039",
+          "F-040",
+          "F-041",
+          "F-042",
+          "F-043",
+          "F-044",
+          "F-045",
+          "F-046",
+          "F-047",
+          "F-048",
+          "F-051",
+          "F-052",
+          "F-054",
+          "F-055",
+          "F-056",
+          "F-057",
+          "F-059",
+          "F-060",
+          "F-061",
+          "F-063",
+          "F-064",
+          "F-065",
+          "F-067",
+          "F-072",
+          "F-075",
+          "F-078",
+          "F-080",
+          "F-081",
+          "F-082",
+          "F-083",
+          "F-084",
+          "F-085",
+          "F-086",
+          "F-087",
+          "F-088",
+          "F-089",
+          "F-090",
+          "F-121",
+          "F-122",
+          "F-123",
+          "F-132",
+          "F-133",
+          "F-134",
+          "F-135",
+          "F-136",
+          "F-137",
+          "F-138",
+          "F-139",
+          "F-140",
+          "F-141",
+          "F-142",
+          "F-143",
+          "F-144",
+          "F-145",
+          "F-147",
+          "F-148",
+          "F-151",
+          "F-152",
+          "F-156",
+          "F-171",
+          "F-172",
+          "F-173",
+          "F-191",
+          "F-192",
+          "F-193",
+          "F-194"
+        ],
+        "non_blocking_warnings_count": 0,
+        "human_review_required": [
+          "F-001",
+          "F-003",
+          "F-006",
+          "F-009",
+          "F-010",
+          "F-013",
+          "F-014",
+          "F-015",
+          "F-016",
+          "F-017",
+          "F-019",
+          "F-021",
+          "F-023",
+          "F-024",
+          "F-025",
+          "F-026",
+          "F-027",
+          "F-028",
+          "F-029",
+          "F-031",
+          "F-032",
+          "F-033",
+          "F-034",
+          "F-035",
+          "F-036",
+          "F-037",
+          "F-039",
+          "F-040",
+          "F-041",
+          "F-042",
+          "F-043",
+          "F-044",
+          "F-045",
+          "F-046",
+          "F-047",
+          "F-048",
+          "F-051",
+          "F-052",
+          "F-054",
+          "F-055",
+          "F-056",
+          "F-057",
+          "F-059",
+          "F-060",
+          "F-061",
+          "F-063",
+          "F-064",
+          "F-065",
+          "F-066",
+          "F-067",
+          "F-069",
+          "F-072",
+          "F-073",
+          "F-075",
+          "F-076",
+          "F-077",
+          "F-078",
+          "F-080",
+          "F-081",
+          "F-082",
+          "F-083",
+          "F-084",
+          "F-085",
+          "F-086",
+          "F-087",
+          "F-088",
+          "F-089",
+          "F-090",
+          "F-091",
+          "F-092",
+          "F-093",
+          "F-095",
+          "F-098",
+          "F-100",
+          "F-101",
+          "F-104",
+          "F-107",
+          "F-108",
+          "F-109",
+          "F-111",
+          "F-112",
+          "F-114",
+          "F-115",
+          "F-116",
+          "F-118",
+          "F-119",
+          "F-121",
+          "F-122",
+          "F-123",
+          "F-124",
+          "F-132",
+          "F-133",
+          "F-134",
+          "F-135",
+          "F-136",
+          "F-137",
+          "F-138",
+          "F-139",
+          "F-140",
+          "F-141",
+          "F-142",
+          "F-143",
+          "F-144",
+          "F-145",
+          "F-147",
+          "F-148",
+          "F-149",
+          "F-150",
+          "F-151",
+          "F-152",
+          "F-156",
+          "F-157",
+          "F-159",
+          "F-160",
+          "F-161",
+          "F-162",
+          "F-163",
+          "F-170",
+          "F-171",
+          "F-172",
+          "F-173",
+          "F-183",
+          "F-191",
+          "F-192",
+          "F-193",
+          "F-194"
+        ],
+        "is_complete": false,
+        "overall": "BLOCKED"
+      }
+    },
+    {
+      "stage_code": "P2-03",
+      "status": "PENDING",
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null,
+      "result": {}
+    },
+    {
+      "stage_code": "P2-04",
+      "status": "PENDING",
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null,
+      "result": {}
+    },
+    {
+      "stage_code": "P2-05",
+      "status": "PENDING",
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null,
+      "result": {}
+    }
+  ],
+  "outputs": []
+}

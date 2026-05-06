@@ -1,0 +1,60 @@
+*                          FILE: DT_CLIP.SIZ
+*  
+*
+* MBS data
+*
+*  Plate Type:  Part number as shown on the shop drawing labeled SPi.  The use 
+*               of the connection plate is also shown on the shop drawing.  
+*               Chapter 5 of the Detailing Manual contains a further 
+*               description of each connection plate.
+*
+*  Plate Name:  The name or part number which will appear in the bill of 
+*               materials.
+*
+*  Plate Size, mm:  Size parameters for the substitution plate.
+*
+*  Detail Parameters, mm:  These parameters match those shown on the shop 
+*              drawings for the corresponding plate type.
+*
+*
+*             PAR   SHOP
+*  TYPE NAME  DWG   DWG   LOCATION
+*   j         PL10        DJ to above girt
+*   d         PX5         Facia arm to interior girt
+*   d         PX5         Facia arm to interior girt, matches 82 offset
+*   c         PS7         Closed side of DJ to wall girt
+*   v         PF17        DJ to DH, welded to header, also PS10
+*   b         PS7         Open side of DJ to wall girt, pg1 of IBSF std det
+*   x         PE1         Flange brace clip welded to EW rafter, also PF17
+*   d         PX5
+*   d                     Facia?
+*   d         PX2,PX15    Facia Details
+*   j         1-7         Bolted clip, eave strut to corner column
+*=======================================================================
+*=======================================================================
+*
+*                  Plt     Plt     Plt    Plt  Plt   -Detail_Parameters, mm--
+*Plate   Plate    Width   Length  Thick   Wt   Ang     A     B       C     D    
+*Type    Name       mm      mm     mm     kg   deg     E     F       G     H
+*----- ---------- ------  ------  -----  ----- ----   ----   ----   ----   ----
+
+ 'x'  'cl-001 '   120.    150.     8    1.13   0      60.    0.     100.  25.4
+
+                                                       0.     0.      0.    0.
+
+  'v'  ' GC41-01 '  300.   150.     8    2.83   0      25.40 200.00  38.10 100.00
+
+                                                       22.00   0.00   0.00   0.00
+
+
+
+
+
+
+stop
+  'y'  'PC-200A '   80.    195.     8    0.99   0     25.     0.     25.  110.
+                                                       55.     0.      0.    0.
+
+  'y'  ' GC1-01 '   200.   180.     5    1.41   0      25.00 100.00  25.00 100.00
+
+                                                       50.00   0.00   0.00   0.00

@@ -1,0 +1,283 @@
+*                           FILE:  DT-COLOR.SIZ
+*                           
+*     This file is used to define each available color.  Both the 2 digit
+*     code will be in the report.  At the end of the report, both the 2
+*     letter code and the description will appear.
+*
+*     A second feature of this file is that you can name the color of the
+*     angles by placing an 'A' under type on line with the desired color.
+*
+*     Additional codes available:
+*
+*     FR - Rigid Frame Color
+*     Xx - X = Section Type
+*          x = Location Type
+*
+*          Section Type:  Hot Rolled Channel = U
+*                         Single Cee Channel = C
+*                         Double Cee Channel = D
+*                         Zee Member         = Z
+*                         Eave Strut         = E
+*                         Hot Rolled Member  = R
+*                         Built-up Member    = W
+*
+*          Location Type: G = Girt/Purlin/Eave Strut
+*                         C = Column/Rafter
+*                         J = Jambs/Headers/Sills  
+*
+*
+*
+*
+*         Color   Color
+*  Type    Id     Description
+*  ----   -----   --------------------------
+   '--'   'RO'    'Red Oxide           '      94   33   33   26            
+   'FR'   'RO'    'Red Oxide           '      94   33   33   26              ...default rigid frame finish
+   'WF'   'RO'    'Red Oxide           '      94   33   33   26              ...default wind bent/wind column finish
+   'FB'   'RO'    'Red Oxide           '      94   33   33   26              ...default flange brace finish
+   'CL'   'RO'    'Red Oxide           '      94   33   33   26              ...default Clip finish
+   'CC'   'RO'    'Red Oxide           '      94   33   33   26              ...default Single Cee Column finish
+   'CE'   'RO'    'Red Oxide           '      94   33   33   26              ...default Single Cee Eave Strut finish
+   'CG'   'RO'    'Red Oxide           '      94   33   33   26              ...default Single Cee Girt finish
+   'CJ'   'RO'    'Red Oxide           '      94   33   33   26              ...default Single Cee Jamb/Header/Sill finish
+   'CP'   'RO'    'Red Oxide           '      94   33   33   26              ...default Single Cee Purlin finish
+   'CR'   'RO'    'Red Oxide           '      94   33   33   26              ...default Single Cee Rafter finish
+   'ZC'   'RO'    'Red Oxide           '      94   33   33   26              ...default Zee Column finish
+   'ZE'   'RO'    'Red Oxide           '      94   33   33   26              ...default Zee Eave Strut finish
+   'ZG'   'RO'    'Red Oxide           '      94   33   33   26              ...default Zee Girt finish
+   'ZJ'   'RO'    'Red Oxide           '      94   33   33   26              ...default Zee Jamb/Header/Sill finish
+   'ZP'   'RO'    'Red Oxide           '      94   33   33   26              ...default Zee Purlin finish
+   'ZR'   'RO'    'Red Oxide           '      94   33   33   26              ...default Zee Rafter finish
+   'DC'   'RO'    'Red Oxide           '      94   33   33   26              ...default Double Cee Column finish
+   'DE'   'RO'    'Red Oxide           '      94   33   33   26              ...default Double Cee Eave Strut finish
+   'DG'   'RO'    'Red Oxide           '      94   33   33   26              ...default Double Cee Girt finish
+   'DJ'   'RO'    'Red Oxide           '      94   33   33   26              ...default Double Cee Jamb/Header/Sill finish
+   'DP'   'RO'    'Red Oxide           '      94   33   33   26              ...default Double Cee Purlin finish
+   'DR'   'RO'    'Red Oxide           '      94   33   33   26              ...default Double Cee Rafter finish
+   'EC'   'RO'    'Red Oxide           '      94   33   33   26              ...default Eave Strut Column finish
+   'EE'   'RO'    'Red Oxide           '      94   33   33   26              ...default Eave Strut finish
+   'EG'   'RO'    'Red Oxide           '      94   33   33   26              ...default Eave Strut Girt finish
+   'EJ'   'RO'    'Red Oxide           '      94   33   33   26              ...default Eave Strut Jamb/Header/Sill finish
+   'EP'   'RO'    'Red Oxide           '      94   33   33   26              ...default Eave Strut Purlin finish
+   'ER'   'RO'    'Red Oxide           '      94   33   33   26              ...default Eave Strut Rafter finish
+   'PS'   'RO'    'Red Oxide           '      94   33   33   26              ...default Purlin Bridging Angles finish
+   'RC'   'RO'    'Red Oxide           '      94   33   33   26              ...default Hot Rolled R Column finish
+   'RE'   'RO'    'Red Oxide           '      94   33   33   26              ...default Hot Rolled R Eave Strut finish
+   'RG'   'RO'    'Red Oxide           '      94   33   33   26              ...default Hot Rolled R Girt finish
+   'RJ'   'RO'    'Red Oxide           '      94   33   33   26              ...default Hot Rolled R Jamb/Header/Sill finish
+   'RP'   'RO'    'Red Oxide           '      94   33   33   26              ...default Hot Rolled R Purlin finish
+   'RR'   'RO'    'Red Oxide           '      94   33   33   26              ...default Hot Rolled R Rafter finish
+   'UC'   'RO'    'Red Oxide           '      94   33   33   26              ...default Hot Rolled U Column finish
+   'UE'   'RO'    'Red Oxide           '      94   33   33   26              ...default Hot Rolled U Eave Strut finish
+   'UG'   'RO'    'Red Oxide           '      94   33   33   26              ...default Hot Rolled U Girt finish
+   'UJ'   'RO'    'Red Oxide           '      94   33   33   26              ...default Hot Rolled U Jamb/Header/Sill finish
+   'UP'   'RO'    'Red Oxide           '      94   33   33   26              ...default Hot Rolled U Purlin finish
+   'UR'   'RO'    'Red Oxide           '      94   33   33   26              ...default Hot Rolled U Rafter finish
+   'WC'   'RO'    'Red Oxide           '      94   33   33   26              ...default Built-up Column finish
+   'WE'   'RO'    'Red Oxide           '      94   33   33   26              ...default Built-up Eave Strut finish
+   'WG'   'RO'    'Red Oxide           '      94   33   33   26              ...default Built-up Girt finish
+   'WJ'   'RO'    'Red Oxide           '      94   33   33   26              ...default Built-up Jamb/Header/Sill finish
+   'WP'   'RO'    'Red Oxide           '      94   33   33   26              ...default Built-up Purlin finish
+   'WR'   'RO'    'Red Oxide           '      94   33   33   26              ...default Built-up Rafter finish
+   '-'    'A1'    'NEED COLOR          '     255  255  255    7               
+   '-'    'A2'    'NEED WALL COLOR     '     255  255  255    7               
+   '-'    'A3'    'NEED ROOF COLOR     '     255  255  255    7               
+   '-'    'A4'    'NEED TRIM COLOR     '     255  255  255    7               
+   '-'    'M '    'Galvalume Plus      '     192  192  192  254              
+   '--'   'AA'    '1000 GREEN BEIGE    '     204  204  153   53           
+   '--'   'AB'    '1001 PALE BEIGE     '     210  170   90   43              
+   '--'   'AC'    '1002 SAND YELLOW    '     208  168   24   52                 
+   '--'   'AD'    '1003 SIGNAL YELLOW  '     255  204    0   40                 
+   '--'   'AE'    '1004 DRK GLDN YLLW  '     224  176    0   40             
+   '--'   'AF'    '1005 HONEY YELLOW   '     201  135   33   42          
+   '--'   'AG'    '1006 MAIZE YELLOW   '     227  167   41   40          
+   '--'   'AH'    '1007 CHROME YELLOW  '     221  159   35   42          
+   '--'   'AI'    '1011 BROWN BEIGE    '     173  122   41   42              
+   '--'   'AJ'    '1012 LEMON YELLOW   '     227  184   56   40               
+   '--'   'AK'    '1013 PEARL WHITE    '     255  245  227    7          
+   '--'   'AL'    '1014 DARK IVORY     '     240  214  171   31             
+   '--'   'AM'    '1015 LIGHT IVORY    '     252  235  204   41              
+   '--'   'AN'    '1016 SULPHUR YELLOW '     255  245   66    2          
+   '--'   'AO'    '1017 SAFFRON YELLOW '     255  171   89   43          
+   '--'   'AP'    '1018 ZINC YELLOW    '     255  214   77   31               
+   '--'   'AQ'    '1019 GREY BEIGE     '     163  140  122   23                     
+   '--'   'AR'    '1020 OLIVE YELLOW   '     156  143   97   55              
+   '--'   'AS'    '1021 CADMIUM YELLOW '     252  189   31   40          
+   '--'   'AT'    '1023 TRAFFIC YELLOW '     252  189   31   40          
+   '--'   'AU'    '1024 OCHRE YELLOW   '     181  140   79   23          
+   '--'   'AV'    '1027 CURRY YELLOW   '     153  117   33   54          
+   '--'   'AW'    '1028 MELLON YELLOW  '     255  140   26   30              
+   '--'   'AX'    '1032 BROOM YELLOW   '     227  163   41   40          
+   '--'   'AY'    '1033 DAHLIA YELLOW  '     255  148   54   30          
+   '--'   'AZ'    '1034 PASTEL YELLOW  '     247  153   92   33          
+   '--'   'BA'    '2000 YELLOW ORANGE  '     224   94   31   32          
+   '--'   'BB'    '2001 RED ORANGE     '     186   46   33   22          
+   '--'   'BC'    '2002 VERMILLION     '     204   36   28   22          
+   '--'   'BD'    '2003 PASTEL ORANGE  '     255   99   54   30          
+   '--'   'BE'    '2004 PURE ORANGE    '     242   59   28   20          
+   '--'   'BF'    '2008 LT RED ORANGE  '     250   79   41   20                
+   '--'   'BG'    '2009 TRAFFIC ORANGE '     235   59   28   20          
+   '--'   'BH'    '2010 SIGNAL ORANGE  '     212   69   41   22          
+   '--'   'BI'    '2011 DEEP ORANGE    '     237   92    0   20          
+   '--'   'BJ'    '2012 SALMON ORANGE  '     222   82   71   13          
+   '--'   'BK'    '3000 FLAME RED      '     171   31   28   22          
+   '--'   'BL'    '3001 RAL SIGNAL RED '     163   23   26  244               
+   '--'   'BM'    '3002 CARMINE RED    '     163   26   26   22          
+   '--'   'BN'    '3003 RUBY RED       '     138   18   20  244          
+   '--'   'BO'    '3004 PURPLE RED     '     105   15   20  246          
+   '--'   'BP'    '3005 WINE RED       '      79   18   26  248          
+   '--'   'BQ'    '3007 BLACK RED      '      46   18   26  248          
+   '--'   'BR'    '3009 OXIDE RED      '      94   33   33   19          
+   '--'   'BS'    '3011 BROWN RED      '     120   20   23  244          
+   '--'   'BT'    '3012 BEIGE RED      '     204  130  115   13             
+   '--'   'BU'    '3013 TOMATO RED     '     150   31   28   24          
+   '--'   'BV'    '3014 ANTIQUE PINK   '     217  102  117   13          
+   '--'   'BW'    '3015 LIGHT PINK     '     232  156  181  241          
+   '--'   'BX'    '3016 CORAL RED      '     166   36   38  242          
+   '--'   'BY'    '3017 ROSE           '     209   54   84  232              
+   '--'   'BZ'    '3018 STRAWBERRY RED '     207   41   66  242              
+   '--'   'CA'    '3020 TRAFFIC RED    '     119   23   18   26        
+   '--'   'CB'    '3022 DRK SALMON RED '     217   89   79   13          
+   '--'   'CC'    '3027 RASBERRY RED   '     181   18   51  242          
+   '--'   'CD'    '3031 ORIENT RED     '     166   28   46  242          
+   '--'   'CE'    '4001 RED LILAC      '     130   64   48   17          
+   '--'   'CF'    '4002 RED VIOLET     '     143   38   64  234          
+   '--'   'CG'    '4003 HEATHER VIOLET '     201   56  140  222            
+   '--'   'CH'    '4004 CLARET VIOLET  '      92    8   43  238        
+   '--'   'CI'    '4005 BLUE LILAC     '      99   61  156  185        
+   '--'   'CJ'    '4006 TRAFFIC PURPLE '     145   15  102  224        
+   '--'   'CK'    '4007 PURPLE VIOLET  '      56   10   46  238        
+   '--'   'CL'    '4008 SIGNAL VIOLET  '     125   31  122  214        
+   '--'   'CM'    '4009 PASTEL VIOLET  '     158  115  148  253        
+   '--'   'CN'    '4010 TELEMAGENTA    '     191   23  115  232        
+   '--'   'CO'    '5000 VIOLET BLUE    '      23   51  107  156        
+   '--'   'CP'    '5001 GREEN BLUE     '      10   51   84  148       
+   '--'   'CQ'    '5002 ULTRAMARINE BLU'       0   15  117  166        
+   '--'   'CR'    '5003 DRK SAPPHIRE RD'       0   23   69  168        
+   '--'   'CS'    '5004 BLACK BLUE     '       3   13   31    0        
+   '--'   'CT'    '5005 SIGNAL BLUE    '       0   46  122  164        
+   '--'   'CU'    '5007 BRILLIANT BLUE '      38   78  135  154        
+   '--'   'CV'    '5008 GREY BLUE      '      26   41   56  250        
+   '--'   'CW'    '5009 LT AZURE BLUE  '      23   69  112  146       
+   '--'   'CX'    '5010 GENTIAN BLUE   '       0    0    0    0        
+   '--'   'CY'    '5011 STEEL BLUE     '       0   43  112  156        
+   '--'   'CZ'    '5012 LIGHT BLUE     '      41  115  184  152       
+   '--'   'DA'    '5013 DRK COBALT BLUE'       0   18   69  168        
+   '--'   'DB'    '5014 PIGEON BLUE    '      77  105  153  155        
+   '--'   'DC'    '5015 MIDDLE SKY BLUE'      23   97  171  152        
+   '--'   'DD'    '5017 TRAFFIC BLUE   '       0   59  128  154         
+   '--'   'DE'    '5018 TURKISH BLUE   '      56  148  130  135        
+   '--'   'DF'    '5019 CAPRI BLUE     '      10   66  120  154        
+   '--'   'DG'    '5020 OCEAN BLUE     '       5   51   51  128          
+   '--'   'DH'    '5021 WATER BLUE     '      26  122   99  124        
+   '--'   'DI'    '5022 NIGHT BLUE     '       0    8   79  178        
+   '--'   'DJ'    '5023 FERN BLUE      '      46   82  143  175        
+   '--'   'DK'    '5024 PASTEL BLUE    '      87  140  171  135       
+   '--'   'DL'    '6000 PATINA GREEN   '      51  120   84  117        
+   '--'   'DM'    '6001 MDL EMERALD GRN'      38  102   81  107       
+   '--'   'DN'    '6002 LEAF GREEN     '      38   87   33   78        
+   '--'   'DO'    '6003 MDL OLIVE GRN  '      61   69   46   89         
+   '--'   'DP'    '6004 BLUE GREEN     '      13   59   46  118         
+   '--'   'DQ'    '6005 LT MOSS GREEN  '      10   56   31  118       
+   '--'   'DR'    '6006 GREY OLIVE     '      41   43   46  250        
+   '--'   'DS'    '6007 BOTTLE GREEN   '      28   38   23  250        
+   '--'   'DT'    '6008 BROWN GREEN    '      33   33   26  250        
+   '--'   'DU'    '6009 FIR GREEN      '      23   41   28  250        
+   '--'   'DV'    '6010 MDL GRASS GRN  '      54  105   38   76        
+   '--'   'DW'    '6011 RESEDA GREEN   '      94  125   79   85        
+   '--'   'DX'    '6012 BLACK GREEN    '      31   46   43  250        
+   '--'   'DY'    '6013 RED GREEN      '     117  115   79   45        
+   '--'   'DZ'    '6014 YELLOW OLIVE   '      51   48   38  250        
+   '--'   'EA'    '6015 BLACK OLIVE    '      41   43   38  250        
+   '--'   'EB'    '6016 TURQUOISE GRN  '      56  148  130  135        
+   '--'   'EC'    '6017 MAY GREEN      '      15  122   51  114        
+   '--'   'ED'    '6018 YELLOW GREEN   '      79  168   51   95         
+   '--'   'EE'    '6019 PASTEL GREEN   '     191  227  186  254         
+   '--'   'EF'    '6020 CHROME GREEN   '      38   56   41  250       
+   '--'   'EG'    '6021 PALE GREEN     '     133  166  122   93        
+   '--'   'EH'    '6022 BROWN OLIVE    '      43   38   28  250        
+   '--'   'EI'    '6024 TRAFFIC GREEN  '      36  145   64  114        
+   '--'   'EJ'    '6025 BRACKEN GREEN  '      74  110   51   87        
+   '--'   'EK'    '6026 OPAL GREEN     '      10   92   51  116        
+   '--'   'EL'    '6027 TURKISH GREEN  '     125  204  189  133       
+   '--'   'EM'    '6028 PINE TREE GREEN'      38   74   51   99        
+   '--'   'EN'    '6029 MINT GREEN     '      18  120   38  104       
+   '--'   'EO'    '6032 SIGNAL GREEN   '      41  138   64   97        
+   '--'   'EP'    '6033 TURQUOISE BLUE '      66  140  120  125        
+   '--'   'EQ'    '6034 PALE TURQUOISE '     125  189  181  123         
+   '--'   'ER'    '7000 DRK SQRRL GREY '     115  133  145  253       
+   '--'   'ES'    '7001 SILVER GREY    '     135  148  166  163         
+   '--'   'ET'    '7002 OLIVE GREY     '     122  117   97   45        
+   '--'   'EU'    '7003 MOSS GREY      '     112  112   97  252        
+   '--'   'EV'    '7004 SIGNAL GREY    '     156  156  156  253        
+   '--'   'EW'    '7005 MOUSE GREY     '      97  105  105  252        
+   '--'   'EX'    '7006 BEIGE GREY     '     107   97   87   47       
+   '--'   'EY'    '7008 KHAKI GREY     '     105   84   56   37        
+   '--'   'EZ'    '7009 GREEN GREY     '      77   82   74  251        
+   '--'   'FA'    '7010 TARPAULIN GREY '      77   82   74  251        
+   '--'   'FB'    '7011 IRON GREY      '      64   74   84  149        
+   '--'   'FC'    '7012 BASALT GREY    '      74   84   89  251        
+   '--'   'FD'    '7013 BROWN GREY     '      71   66   56   39        
+   '--'   'FE'    '7015 SLATE GREY     '      61   66   82  159          
+   '--'   'FF'    '7016 ANTHRACITE GREY'      38   46   56  250        
+   '--'   'FG'    '7021 BLACK GREY     '      26   33   41  250        
+   '--'   'FH'    '7022 UMBER GREY     '      61   61   59    8        
+   '--'   'FI'    '7023 CONCRETE GREY  '     122  125  117    9       
+   '--'   'FJ'    '7024 GRAPHITE GREY  '      48   56   69  169       
+   '--'   'FK'    '7026 GRANITE GREY   '      38   51   56  250        
+   '--'   'FL'    '7030 STONE GREY     '     145  143  135  253       
+   '--'   'FM'    '7031 BLUE GREY      '      77   92  107  147        
+   '--'   'FN'    '7032 GREY           '     189  186  171  254        
+   '--'   'FO'    '7033 CEMENT CREY    '     122  130  117    9        
+   '--'   'FP'    '7034 YELLOW GREY    '     143  135  112  253          
+   '--'   'FQ'    '7035 PALE GREY      '     212  217  219  254        
+   '--'   'FR'    '7036 PLATINUM GREY  '     158  150  156  233         
+   '--'   'FS'    '7037 DUSTY GREY     '     122  125  128    9        
+   '--'   'FT'    '7038 AGATE GREY     '     186  189  186  254       
+   '--'   'FU'    '7039 QUARTZ GREY    '      97   94   89  252        
+   '--'   'FV'    '7040 WINDOW GREY    '     158  163  176  153        
+   '--'   'FW'    '7042 TRAFFIC GREY A '     143  150  153  253        
+   '--'   'FX'    '7043 TRAFFIC GREY B '      64   69   69    8        
+   '--'   'FY'    '7044 SILKY GREY     '     194  191  184  254        
+   '--'   'FZ'    '7045 TELEGREY 1     '     143  148  158  253        
+   '--'   'GA'    '7046 TELEGREY 2     '     120  130  140  253        
+   '--'   'GB'    '7047 TELEGREY 4     '     217  214  219  254        
+   '--'   'GC'    '8000 GREEN BROWN    '     125   92   56   47        
+   '--'   'GD'    '8001 GOLD BROWN     '     145   82   46   15        
+   '--'   'GE'    '8002 SIGNAL BROWN   '     110   59   36   29        
+   '--'   'GF'    '8003 CLAY BROWN     '     115   59   36   17        
+   '--'   'GG'    '8004 COPPER BROWN   '     133   56   43   34       
+   '--'   'GH'    '8007 FAWN BROWN     '      94   51   33   19        
+   '--'   'GI'    '8008 OLIVE BROWN    '      99   61   36   29        
+   '--'   'GJ'    '8011 NUT BROWN      '      71   38   28   19        
+   '--'   'GK'    '8012 RED BROWN      '      84   31   31   19        
+   '--'   'GL'    '8014 SEPIA BROWN    '      56   38   28  250        
+   '--'   'GM'    '8015 CHESTNUT BROWN '      77   31   28   38        
+   '--'   'GN'    '8016 MAHOGANY BROWN '      61   31   28  250        
+   '--'   'GO'    '8017 CHOCOLATE BROWN'      46   28   28  250        
+   '--'   'GP'    '8019 GREY BROWN     '      43   38   41  250        
+   '--'   'GQ'    '8022 BLACK BROWN    '      13    8   13    0        
+   '--'   'GR'    '8023 ORANGE BROWN   '     156   69   41   34        
+   '--'   'GS'    '8024 BEIGE BROWN    '     110   64   48   17        
+   '--'   'GT'    '8025 PALE BROWN     '     102   74   61   27        
+   '--'   'GU'    '8028 EARTH BROWN    '      64   46   33  250        
+   '--'   'GV'    '9001 CREAM          '     252  252  240    7       
+   '--'   'GW'    '9002 OFF WHITE      '     240  237  230    7       
+   '--'   'GX'    '9003 WHITE          '     255  255  255    7        
+   '--'   'GY'    '9004 SIGNAL BLACK   '      28   28   33  250        
+   '--'   'GZ'    '9005 JET BLACK      '       3    5   10    0         
+   '--'   'HA'    '9010 PURE WHITE     '     250  255  255    7       
+   '--'   'HB'    '9011 GRAPHITE BLACK '      13   18   26    0        
+   '--'   'HC'    '9016 TRAFFIC WHTIE  '     252  255  255    7       
+   '--'   'HD'    '9017 TRAFFIC BLACK  '      20   23   28    0        
+   '--'   'HE'    '9018 PAPYRUS WHITE  '     219  227  222    7        
+stop
+
+
+
+stop
+
+
+
+
+

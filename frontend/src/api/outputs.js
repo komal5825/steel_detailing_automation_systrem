@@ -19,4 +19,11 @@ export const outputsApi = {
 
   reportUrl: (uuid, format) =>
     `${apiRoot()}/api/outputs/${uuid}/report/${format}`,
+
+  getAgentFiles: (uuid, agentCode) =>
+    client.get(`/outputs/${uuid}/files/${agentCode}`),
+
+  processedExportUrl: (uuid, filename, format = 'pdf') =>
+    `${apiRoot()}/api/outputs/${uuid}/processed/export/${filename}/${format}`,
 };
+

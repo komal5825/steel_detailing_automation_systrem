@@ -1,0 +1,924 @@
+*===============================================================================
+*C463-002            Sidewall Design Input                  17/DEC/2025  4:04pm
+*===============================================================================
+ 
+*( 1)JOBID:
+    'C463-002'
+ 
+*( 2)PROGRAM OPTIONS:
+*Sidewall  Run    Run    Lap
+*   Id     Girt   Panel Stiff
+   'F'      'Y'   'Y'    0.50
+ 
+*( 3)DESIGN CODE:
+*Design  ---Steel_Code---             ---Build---   Code     Seismic
+* Code   Cold       Hot      Country  Code   Year   Label     Zone
+  'WS'  'NAUS07  ' 'AISC05'  '    '  'MBMA'  '10'  'MBMA 10 ' 'C  '
+ 
+*( 4)DESIGN CONSTANTS:
+*               ---Strength_Factors--
+* Stress_Ratio          ---Seismic---
+* Girt   Panel    Wind   Frame  Brace
+  1.00    1.00  1.0000  1.0000 1.0000
+ 
+*( 5)STEEL YIELDS:
+* Web   Flg  C_Sec  W_Sec  R_Sec  P_Sec  T_Sec  U_Sec    EP     BP
+  345   345    345    345    235    345    317    235   345    345
+ 
+*( 6)DEFLECTION LIMITS:
+* ---Girt---  --Panel---
+* Wall Facia  Wall Facia
+   90.  120.   90.  120.
+ 
+*( 7)REPORTS:
+*   Input  Wall  Door  Wall
+*   Echo   Girt  Jamb  Panel
+    'Y'    'Y'   'Y'   'Y'
+ 
+*( 8)BUILDING LAYOUT:
+*---------Build----------   -----Left_Expand_EW-----   -----Right_Expand_EW----
+* Type    Width    Length   Use  Opt  Extend  Offset   Use  Opt  Extend  Offset
+ 'FF-'  12800.0   30500.0  'Y '  '-'    0.00  390.00  'Y '  '-'    0.00  390.00
+ 
+*( 9)WALL LAYOUT:
+* Id  Use     Type Opt     Start   Length
+   2 'FRONT '  '-' '-'       0.0  30500.0
+ 
+*(10)SURFACE SHAPE:
+* No.    X_Coord  Y_Coord  Offset
+   4         0.0   9100.0  200.00
+          6400.0   9740.0  200.00
+         12800.0   9100.0  200.00
+         12800.0      0.0  200.00
+ 
+*(11)SIDEWALL BAY SPACING:
+*   No.   ---Bay_Set---
+*  Sets     Width  Quan
+     4     8535.0    1
+           8210.0    1
+           6715.0    1
+           7040.0    1
+ 
+*(12)WALL OPENINGS:
+*         ----Bay---                            Sill   Base    Set  Panel  JambL/JambR/Header/Sill
+*No.  Id  Id  Offset  Type    Width   Height  Height   Elev  Depth   Opt    Type    Part
+  1    2   3  1358.0   51    4000.0   4000.0     0.0   0.00   0.00   'Y'    'C '   '--------'
+                                                                            'C '   '--------'
+                                                                            'C '   '--------'
+                                                                            'C '   '--------'
+ 
+*(13)PARTIAL WALLS:
+*                --Bay_Id-  ----Offset----          Jamb Base  Top Full_Load  ------Panel------  Deflect_Limit
+*No. Id  Use Opt Start End   Start     End   Height Type Type Type Girt  Col  Part      Opt Rot   Girt   Panel
+  1   2  'P' 'O'    1    4     0.0     0.0   3000.0  '-'  '-'  '-'  'N'  'Y' '--------' '-' '-'   90.0    90.0
+ 
+*(14)GIRT DESIGN:
+*Girt  --Flange_Strap--    Set     Set     Max
+*Type  Out  In    Space  Depth     Lap   Space
+ 'ZB'  'C'  'Y'  2250.0 200.00     0.0  1500.0
+ 
+*(15)GIRT LOCATION:
+* Set
+* Loc   No.   Location
+  'Y'    5    3080.0   4280.0   5780.0   7280.0   8280.0
+ 
+*(16)SPECIAL GIRT:
+*     --Bay_Id--
+*No.  Start  End   Height  Type  Rot  Part       Use
+  1      3     3   5280.0  'ZB'  'D' '--------'  'C'
+ 
+*(17)PANELS/GUTTERS:
+*----Wall_Panel----  -----Gutter-----  ------Insulation-----  Stand
+* Part      Opt Rot  Use  Type  Width  Use  Thick  Part       Seam
+ '45250 .5' '-' '-'  '-'  'Y'    0.00  'N'   0.00 '--------'  'N'
+ 
+*(18)LINER PANELS:
+*      --Bay_Id-                       Flange
+*No.   Start End    Height   Part       Opt
+  0
+ 
+*(19)FACIA/PARAPET:
+*                     -Bay_Id--    Horz -Vertical_Size-   --Edge_Extend-           Beam
+* No.   Id  Type Opt  Start End   Width    Elev  Height     Left   Right  Mount     Lap
+   0
+ 
+*(20)FACIA/PARAPET GIRTS:
+*Ext ---Top--  Interior  -Gutter-    Set
+*Id  Type Rot  Type Rot  Type Rot  Depth
+ 
+*(21)FACIA/PARAPET PANELS:
+*Ext  Front      -----Back----    Angle
+*Id   Part       Part      Rot  Spacing
+ 
+*(22)LOAD GROUPS:
+*    Group
+*No.   Id   Description
+   1  '-'  'Standard            '
+ 
+*(23)BASIC LOADS:
+*              ---Deflection---    Wind
+*Group Basic      Load_Ratio       Load  -------Seismic-------
+*  Id   Wind   Snow  Wind  Seis  Factor   Dead   Coeff  Factor
+  '-' 0.9865   1.00  1.00  1.00    1.00 0.0957  0.0000    1.00
+ 
+*(24)EDGE ZONE:
+*                                    ---Ratio---
+*Group -Left_Zone--   -Right_Zone-   Girt/
+*  Id  Width   Base   Width   Base   Jamb  Panel
+  '-'   1280      0    1280      0   1.07   1.00
+ 
+*(25)WIND PRESSURE/SUCTION:
+*Group   Wind    Wind
+*  Id   Press    Suct
+  '-'  0.8621 -0.9509    .. Girt/Header
+  '-'  1.0654 -1.1542    .. Panel
+  '-'  0.8621 -0.9509    .. Jamb
+  '-'  0.0000  0.0000    .. Parapet Girt
+ 
+*(26)GIRT LAPS:
+*      Data  ------Set_1-------  ------Set_2-------  ------Set_3-------
+* Opt  Sets  Left    Right Quan  Left    Right Quan  Left    Right Quan
+  '-'   0
+ 
+*(27)GIRT STRAPS:
+*     Data  ---Set_1---  ---Set_2---  ---Set_3---  ---Set_4---
+*Opt  Sets  Strap  Quan  Strap  Quan  Strap  Quan  Strap  Quan
+ '-'   0
+ 
+*(28)EXPANSION JOINTS:
+* No.  Expansion_Location
+   0
+ 
+*(29)BEAMS:
+*     Bay
+*No.   Id Use    Height   Offset  Locate1  Locate2
+  0
+ 
+*(30)DESIGN CODE OPTIONS:
+*No.   Event                         Condition
+  0
+ 
+*(31)PANEL SCREWS:
+* No.                                    Washer
+*Zone Zone   Part          Dia    Limit     Dia  -------Spacing------
+   2 'INT ' '14x20SDS'    4.80   13.700   19.00  250.00 125.00  83.33
+     'EDGE' '14x20SDS'    4.80   13.700   19.00  250.00 125.00  83.33
+ 
+*(32)GIRT LAYOUT:
+*      Bay                                    -----Extend----   Frame_Opt  -Frame_Id-
+*  No.  Id   Locate  Type  Rot Opt  Part         Left   Right  Left Right  Left Right
+    0
+ 
+* Code files used:
+*   MBMA.10N
+*   EW_MBMA.10N Version 4.0
+
+
+================================================================================
+ C463-002            Wall 2 - Design Code                   18/DEC/2025  2:49pm
+================================================================================
+
+ STRUCTURAL CODE:
+ ----------------
+   Design Basis      : WS - Working Stress
+   Hot  Rolled Steel : AISC05
+   Cold Formed Steel : NAUS07  
+
+ BUILDING CODE:
+ --------------
+   Wind Code         : MBMA 10
+   Seismic Zone      : C  
+
+ MODULUS OF ELASTICITY:
+ ----------------------
+   Hot  Rolled Steel : 199955 (MN/m2)
+   Cold Formed Steel : 203403 (MN/m2)
+ 
+
+================================================================================
+ C463-002            Wall 2 - Bypass Girt Layout            18/DEC/2025  2:49pm
+================================================================================
+
+ GIRT LAYOUT:
+ ------------
+         Des Bay             Bay_Offset Design ---Extend--         ----Max_Load---
+  Locate  Id  Id Part       Start   End Length  Left Right Weight  Id   UC Report  Rot
+  ------ --- --- --------   ----- ----- ------ ----- ----- ------  -- ---- ------- ---
+    3080   1   1 200Z15       390  8535   8145     0   660   35.7  WS 0.69 Moment   D
+               2 200Z15         0  8210   8210   660     0   36.0  WS 0.73 Moment   D
+               3 200Z15         0  1358   1256     0     0    5.1  WS 0.73 Moment   D
+           2   3 200Z15      5358  6715   1255     0     0    5.1  WS 0.84 Moment   D
+               4 200Z15         0  6650   6650     0     0   27.0  WS 0.84 Moment   D
+  ------ --- --- --------   ----- ----- ------ ----- ----- ------  -- ---- ------- ---
+    4280   3   1 200Z25       390  8535   8145     0   660   59.6  WS 0.82 Moment   D
+               2 200Z18         0  8210   8210   660   660   46.4  WS 0.97 Moment   D
+               3 200Z18         0  6715   6715   660   660   39.1  WS 0.51 Moment   D
+               4 200Z18         0  6650   6650   660     0   35.6  WS 0.75 Moment   D
+  ------ --- --- --------   ----- ----- ------ ----- ----- ------  -- ---- ------- ---
+    5280   4   3 200Z15         0  6715   6715     0     0   27.3  WS 0.90 Moment   D
+  ------ --- --- --------   ----- ----- ------ ----- ----- ------  -- ---- ------- ---
+    5780   5   1 200Z25       390  8535   8145     0   660   59.6  WS 0.89 Moment   D
+               2 200Z20         0  8210   8210   660   660   51.7  WS 0.98 Moment   D
+               3 200Z18         0  6715   6715   660   660   39.1  WS 0.59 Moment   D
+               4 200Z18         0  6650   6650   660     0   35.6  WS 0.91 Moment   D
+  ------ --- --- --------   ----- ----- ------ ----- ----- ------  -- ---- ------- ---
+    7280   6   1 200Z20       390  8535   8145     0   660   47.7  WS 0.94 Moment   D
+               2 200Z18         0  8210   8210   660   660   46.4  WS 0.92 Moment   D
+               3 200Z18         0  6715   6715   660   660   39.1  WS 0.51 Moment   D
+               4 200Z18         0  6650   6650   660     0   35.6  WS 0.70 Moment   D
+  ------ --- --- --------   ----- ----- ------ ----- ----- ------  -- ---- ------- ---
+    8280   7   1 200Z15       390  8535   8145     0   660   35.7  WS 0.86 Moment   D
+               2 200Z15         0  8210   8210   660   660   38.7  WS 0.79 Moment   D
+               3 200Z15         0  6715   6715   660   660   32.6  WS 0.43 Moment   D
+               4 200Z15         0  6650   6650   660     0   29.7  WS 0.59 Moment   D
+ 
+                                      WS - Wind_Suction                  
+ 
+
+ GIRT INSIDE FLANGE BRACE:
+ -------------------------
+  No._Brace/Bay
+    1   2   3   4
+  --- --- --- ---
+    3   3   2   3
+
+================================================================================
+ C463-002            Wall 2 - Girt Design  1 (Locate  3080) 18/DEC/2025  2:49pm
+================================================================================
+
+ GIRT LAYOUT:
+ ------------
+                                                                      Available
+                                                                      Reduction
+  Bay                      Design  --Lap(mm)--   Load   No.             Factor
+   Id  Part        Locate  Length  Left  Right  Width  Brace  Weight   Out   In
+  ---  --------   -------  ------  ----  -----  -----  -----  ------  ---- ----
+    1  200Z15      3080.0    8145          660    640    3      35.7  0.00 0.70
+    2  200Z15      3080.0    8210   660           640    3      36.0  0.00 0.70
+    3  200Z15      3080.0    1256                 640    0       5.1  0.00 0.65
+                                                              ------
+                                                                76.9
+
+
+ LOAD ID - Wind_Pressure:
+ ----------------------------
+
+ GIRT ACTIONS:
+       ---------Shear(kN)--------   --------------Moment(kN-m)--------------
+  Bay   Left   Left  Right  Right    Left   Left     Mid-Span   Right  Right
+   Id    Sup    Lap    Lap    Sup     Sup    Lap    Mom    Loc    Lap    Sup
+  ---  -----  -----  -----  -----   -----  -----  -----  -----  -----  -----
+    1   1.77         -2.36  -2.72    0.00         -2.85   3212   2.19   3.87
+    2   2.38   2.01         -2.16    3.87   2.42  -1.24   4305          2.97
+    3   2.71                 2.01    2.97          1.37    628          0.00
+
+ STRENGTH/DEFLECTION:
+  Bay  -------Shear(kN)------  -----Moment(kN-m)-----  -Mom+Shr-  Deflect(mm)
+   Id  Loc    Calc Limit   UC  Loc    Calc Limit   UC  Loc    UC   Calc Limit
+  ---  ---- ------ ----- ----  ---- ------ ----- ----  ---- ----  ----- -----
+    1  RLap  -2.36 11.20 0.21  MidS  -2.85  4.46 0.64  LLap 0.44  -25.5  90.5
+    2  RSup  -2.16 11.20 0.19  RSup   2.97  4.73 0.63  RSup 0.56   -6.3  91.2
+    3  LSup   2.71 11.20 0.24  LSup   2.97  4.80 0.62  LSup 0.58   -3.9
+
+
+ LAP BOLT SHEAR/BEARING:
+
+  Bolt Size =12.00 (Gr8.8)
+
+   Bay  Member    --Member_Left_End(kN)-  -Member_Right_End(kN)-
+    Id  Part       Calc Shear  Bear   UC   Calc Shear  Bear   UC
+  ----  --------  ----- ----- ----- ----  ----- ----- ----- ----
+    1   200Z15                             1.47 15.37  7.27 0.20
+    2   200Z15     1.47 15.37  7.27 0.20
+
+
+
+ LOAD ID - Wind_Suction:
+ ----------------------------
+
+ GIRT ACTIONS:
+       ---------Shear(kN)--------   --------------Moment(kN-m)--------------
+  Bay   Left   Left  Right  Right    Left   Left     Mid-Span   Right  Right
+   Id    Sup    Lap    Lap    Sup     Sup    Lap    Mom    Loc    Lap    Sup
+  ---  -----  -----  -----  -----   -----  -----  -----  -----  -----  -----
+    1  -1.99          2.61   3.01    0.00          3.15   3245  -2.42  -4.28
+    2  -2.62  -2.22          2.38   -4.28  -2.68   1.37   4307         -3.27
+    3  -2.98                -2.22   -3.27         -1.51    628          0.00
+
+ STRENGTH/DEFLECTION:
+  Bay  -------Shear(kN)------  -----Moment(kN-m)-----  -Mom+Shr-  Deflect(mm)
+   Id  Loc    Calc Limit   UC  Loc    Calc Limit   UC  Loc    UC   Calc Limit
+  ---  ---- ------ ----- ----  ---- ------ ----- ----  ---- ----  ----- -----
+    1  RLap   2.61 11.20 0.23  MidS   3.15  4.53 0.69  LLap 0.49   28.2  90.5
+    2  RSup   2.38 11.20 0.21  RSup  -3.27  4.46 0.73  RSup 0.62    7.0  91.2
+    3  LSup  -2.98 11.20 0.27  LSup  -3.27  4.46 0.73  LSup 0.64    4.2
+
+
+ LAP BOLT SHEAR/BEARING:
+
+  Bolt Size =12.00 (Gr8.8)
+
+   Bay  Member    --Member_Left_End(kN)-  -Member_Right_End(kN)-
+    Id  Part       Calc Shear  Bear   UC   Calc Shear  Bear   UC
+  ----  --------  ----- ----- ----- ----  ----- ----- ----- ----
+    1   200Z15                             1.62 15.37  7.27 0.22
+    2   200Z15     1.62 15.37  7.27 0.22
+
+
+================================================================================
+ C463-002            Wall 2 - Girt Design  2 (Locate  3080) 18/DEC/2025  2:49pm
+================================================================================
+
+ GIRT LAYOUT:
+ ------------
+                                                                      Available
+                                                                      Reduction
+  Bay                      Design  --Lap(mm)--   Load   No.             Factor
+   Id  Part        Locate  Length  Left  Right  Width  Brace  Weight   Out   In
+  ---  --------   -------  ------  ----  -----  -----  -----  ------  ---- ----
+    3  200Z15      3080.0    1255                 640    0       5.1  0.00 0.65
+    4  200Z15      3080.0    6650                 640    3      27.0  0.00 0.65
+                                                              ------
+                                                                32.1
+
+
+ LOAD ID - Wind_Pressure:
+ ----------------------------
+
+ GIRT ACTIONS:
+       ---------Shear(kN)--------   --------------Moment(kN-m)--------------
+  Bay   Left   Left  Right  Right    Left   Left     Mid-Span   Right  Right
+   Id    Sup    Lap    Lap    Sup     Sup    Lap    Mom    Loc    Lap    Sup
+  ---  -----  -----  -----  -----   -----  -----  -----  -----  -----  -----
+    3  -2.35                -3.05    0.00          1.59    628          3.39
+    4   2.35                -1.33    3.39         -1.59   4248          0.00
+
+ STRENGTH/DEFLECTION:
+  Bay  -------Shear(kN)------  -----Moment(kN-m)-----  -Mom+Shr-  Deflect(mm)
+   Id  Loc    Calc Limit   UC  Loc    Calc Limit   UC  Loc    UC   Calc Limit
+  ---  ---- ------ ----- ----  ---- ------ ----- ----  ---- ----  ----- -----
+    3  RSup  -3.05 11.20 0.27  RSup   3.39  4.80 0.71  RSup 0.66   -4.4
+    4  LSup   2.35 11.20 0.21  LSup   3.39  4.73 0.72  LSup 0.64   -7.7  73.9
+
+
+
+ LOAD ID - Wind_Suction:
+ ----------------------------
+
+ GIRT ACTIONS:
+       ---------Shear(kN)--------   --------------Moment(kN-m)--------------
+  Bay   Left   Left  Right  Right    Left   Left     Mid-Span   Right  Right
+   Id    Sup    Lap    Lap    Sup     Sup    Lap    Mom    Loc    Lap    Sup
+  ---  -----  -----  -----  -----   -----  -----  -----  -----  -----  -----
+    3   2.60                 3.37    0.00         -1.75    628         -3.75
+    4  -2.59                 1.50   -3.75          1.76   4214          0.00
+
+ STRENGTH/DEFLECTION:
+  Bay  -------Shear(kN)------  -----Moment(kN-m)-----  -Mom+Shr-  Deflect(mm)
+   Id  Loc    Calc Limit   UC  Loc    Calc Limit   UC  Loc    UC   Calc Limit
+  ---  ---- ------ ----- ----  ---- ------ ----- ----  ---- ----  ----- -----
+    3  RSup   3.37 11.20 0.30  RSup  -3.75  4.46 0.84  RSup 0.73    4.8
+    4  LSup  -2.59 11.20 0.23  LSup  -3.75  4.46 0.84  LSup 0.70    8.5  73.9
+
+
+================================================================================
+ C463-002            Wall 2 - Girt Design  3 (Locate  4280) 18/DEC/2025  2:49pm
+================================================================================
+
+ GIRT LAYOUT:
+ ------------
+                                                                      Available
+                                                                      Reduction
+  Bay                      Design  --Lap(mm)--   Load   No.             Factor
+   Id  Part        Locate  Length  Left  Right  Width  Brace  Weight   Out   In
+  ---  --------   -------  ------  ----  -----  -----  -----  ------  ---- ----
+    1  200Z25      4280.0    8145          660   1350    3      59.6  0.00 0.70
+    2  200Z18      4280.0    8210   660    660   1350    3      46.4  0.00 0.70
+    3  200Z18      4280.0    6715   660    660   1100    2      39.1  0.00 0.70
+    4  200Z18      4280.0    6650   660          1350    3      35.6  0.00 0.70
+                                                              ------
+                                                               180.8
+
+
+ LOAD ID - Wind_Pressure:
+ ----------------------------
+
+ GIRT ACTIONS:
+       ---------Shear(kN)--------   --------------Moment(kN-m)--------------
+  Bay   Left   Left  Right  Right    Left   Left     Mid-Span   Right  Right
+   Id    Sup    Lap    Lap    Sup     Sup    Lap    Mom    Loc    Lap    Sup
+  ---  -----  -----  -----  -----   -----  -----  -----  -----  -----  -----
+    1   3.72         -5.00  -5.77    0.00         -5.95   3196   4.77   8.32
+    2   5.18   4.41  -3.62  -4.39    8.32   5.15  -3.19   4444   2.43   5.07
+    3   4.53   3.91  -3.87  -4.50    5.07   2.29  -1.11   3289   2.68   5.44
+    4   4.69   3.92         -3.06    5.44   2.60  -4.00   4028          0.00
+
+ STRENGTH/DEFLECTION:
+  Bay  -------Shear(kN)------  -----Moment(kN-m)-----  -Mom+Shr-  Deflect(mm)
+   Id  Loc    Calc Limit   UC  Loc    Calc Limit   UC  Loc    UC   Calc Limit
+  ---  ---- ------ ----- ----  ---- ------ ----- ----  ---- ----  ----- -----
+    1  RLap  -5.00 45.39 0.11  MidS  -5.95  9.31 0.64  LLap 0.50  -31.9  90.5
+    2  LLap   4.41 19.42 0.23  LLap   5.15  6.21 0.83  LLap 0.75  -17.2  91.2
+    3  LLap   3.91 19.42 0.20  RLap   2.68  6.40 0.42  RLap 0.42   -3.2  74.6
+    4  LLap   3.92 19.42 0.20  MidS  -4.00  5.84 0.69  RLap 0.48  -20.0  73.9
+
+
+ LAP BOLT SHEAR/BEARING:
+
+  Bolt Size =12.00 (Gr8.8)
+
+   Bay  Member    --Member_Left_End(kN)-  -Member_Right_End(kN)-
+    Id  Part       Calc Shear  Bear   UC   Calc Shear  Bear   UC
+  ----  --------  ----- ----- ----- ----  ----- ----- ----- ----
+    1   200Z25                             3.65 15.37 12.11 0.30
+    2   200Z18     2.65 15.37  8.72 0.30   1.92 15.37  8.72 0.22
+    3   200Z18     1.92 15.37  8.72 0.22   2.06 15.37  8.72 0.24
+    4   200Z18     2.06 15.37  8.72 0.24
+
+
+
+ LOAD ID - Wind_Suction:
+ ----------------------------
+
+ GIRT ACTIONS:
+       ---------Shear(kN)--------   --------------Moment(kN-m)--------------
+  Bay   Left   Left  Right  Right    Left   Left     Mid-Span   Right  Right
+   Id    Sup    Lap    Lap    Sup     Sup    Lap    Mom    Loc    Lap    Sup
+  ---  -----  -----  -----  -----   -----  -----  -----  -----  -----  -----
+    1  -4.18          5.52   6.37    0.00          6.58   3229  -5.26  -9.18
+    2  -5.71  -4.86   3.99   4.84   -9.18  -5.69   3.51   4445  -2.68  -5.59
+    3  -5.00  -4.31   4.27   4.96   -5.59  -2.52   1.22   3287  -2.97  -6.01
+    4  -5.18  -4.33          3.44   -6.01  -2.87   4.43   3995          0.00
+
+ STRENGTH/DEFLECTION:
+  Bay  -------Shear(kN)------  -----Moment(kN-m)-----  -Mom+Shr-  Deflect(mm)
+   Id  Loc    Calc Limit   UC  Loc    Calc Limit   UC  Loc    UC   Calc Limit
+  ---  ---- ------ ----- ----  ---- ------ ----- ----  ---- ----  ----- -----
+    1  RLap   5.52 45.39 0.12  MidS   6.58  8.04 0.82  LLap 0.55   35.3  90.5
+    2  LLap  -4.86 19.42 0.25  LLap  -5.69  5.84 0.97  LLap 0.83   19.0  91.2
+    3  LLap  -4.31 19.42 0.22  RLap  -2.97  5.84 0.51  RLap 0.46    3.5  74.6
+    4  LLap  -4.33 19.42 0.22  MidS   4.43  5.95 0.75  RLap 0.54   22.1  73.9
+
+
+ LAP BOLT SHEAR/BEARING:
+
+  Bolt Size =12.00 (Gr8.8)
+
+   Bay  Member    --Member_Left_End(kN)-  -Member_Right_End(kN)-
+    Id  Part       Calc Shear  Bear   UC   Calc Shear  Bear   UC
+  ----  --------  ----- ----- ----- ----  ----- ----- ----- ----
+    1   200Z25                             4.03 15.37 12.11 0.33
+    2   200Z18     2.93 15.37  8.72 0.34   2.12 15.37  8.72 0.24
+    3   200Z18     2.12 15.37  8.72 0.24   2.28 15.37  8.72 0.26
+    4   200Z18     2.28 15.37  8.72 0.26
+
+
+================================================================================
+ C463-002            Wall 2 - Girt Design  4 (Locate  5280) 18/DEC/2025  2:49pm
+================================================================================
+
+ GIRT LAYOUT:
+ ------------
+                                                                      Available
+                                                                      Reduction
+  Bay                      Design  --Lap(mm)--   Load   No.             Factor
+   Id  Part        Locate  Length  Left  Right  Width  Brace  Weight   Out   In
+  ---  --------   -------  ------  ----  -----  -----  -----  ------  ---- ----
+    3  200Z15      5280.0    6715                 750    2      27.3  0.00 0.65
+                                                              ------
+                                                                27.3
+
+
+ LOAD ID - Wind_Pressure:
+ ----------------------------
+
+ GIRT ACTIONS:
+       ---------Shear(kN)--------   --------------Moment(kN-m)--------------
+  Bay   Left   Left  Right  Right    Left   Left     Mid-Span   Right  Right
+   Id    Sup    Lap    Lap    Sup     Sup    Lap    Mom    Loc    Lap    Sup
+  ---  -----  -----  -----  -----   -----  -----  -----  -----  -----  -----
+    3   2.17                -2.17    0.00         -3.65   3357          0.00
+
+ STRENGTH/DEFLECTION:
+  Bay  -------Shear(kN)------  -----Moment(kN-m)-----  -Mom+Shr-  Deflect(mm)
+   Id  Loc    Calc Limit   UC  Loc    Calc Limit   UC  Loc    UC   Calc Limit
+  ---  ---- ------ ----- ----  ---- ------ ----- ----  ---- ----  ----- -----
+    3  LSup   2.17 11.20 0.19  MidS  -3.65  4.46 0.82  LLap 0.49  -28.0  74.6
+
+
+
+ LOAD ID - Wind_Suction:
+ ----------------------------
+
+ GIRT ACTIONS:
+       ---------Shear(kN)--------   --------------Moment(kN-m)--------------
+  Bay   Left   Left  Right  Right    Left   Left     Mid-Span   Right  Right
+   Id    Sup    Lap    Lap    Sup     Sup    Lap    Mom    Loc    Lap    Sup
+  ---  -----  -----  -----  -----   -----  -----  -----  -----  -----  -----
+    3  -2.40                 2.40    0.00          4.02   3357          0.00
+
+ STRENGTH/DEFLECTION:
+  Bay  -------Shear(kN)------  -----Moment(kN-m)-----  -Mom+Shr-  Deflect(mm)
+   Id  Loc    Calc Limit   UC  Loc    Calc Limit   UC  Loc    UC   Calc Limit
+  ---  ---- ------ ----- ----  ---- ------ ----- ----  ---- ----  ----- -----
+    3  LSup  -2.40 11.20 0.21  MidS   4.02  4.45 0.90  LLap 0.54   30.9  74.6
+
+
+================================================================================
+ C463-002            Wall 2 - Girt Design  5 (Locate  5780) 18/DEC/2025  2:49pm
+================================================================================
+
+ GIRT LAYOUT:
+ ------------
+                                                                      Available
+                                                                      Reduction
+  Bay                      Design  --Lap(mm)--   Load   No.             Factor
+   Id  Part        Locate  Length  Left  Right  Width  Brace  Weight   Out   In
+  ---  --------   -------  ------  ----  -----  -----  -----  ------  ---- ----
+    1  200Z25      5780.0    8145          660   1500    3      59.6  0.00 0.70
+    2  200Z20      5780.0    8210   660    660   1500    3      51.7  0.00 0.70
+    3  200Z18      5780.0    6715   660    660   1000    2      39.1  0.00 0.70
+    4  200Z18      5780.0    6650   660          1500    3      35.6  0.00 0.70
+                                                              ------
+                                                               186.0
+
+
+ LOAD ID - Wind_Pressure:
+ ----------------------------
+
+ GIRT ACTIONS:
+       ---------Shear(kN)--------   --------------Moment(kN-m)--------------
+  Bay   Left   Left  Right  Right    Left   Left     Mid-Span   Right  Right
+   Id    Sup    Lap    Lap    Sup     Sup    Lap    Mom    Loc    Lap    Sup
+  ---  -----  -----  -----  -----   -----  -----  -----  -----  -----  -----
+    1   4.09         -5.60  -6.46    0.00         -6.45   3158   5.66   9.64
+    2   5.96   5.11  -3.81  -4.67    9.64   5.99  -4.07   4604   1.55   4.34
+    3   2.81   2.24  -2.41  -2.98    4.34   2.68  -0.24   3259   3.13   4.91
+    4   5.04   4.19         -3.57    4.91   1.87  -4.91   3896          0.00
+
+ STRENGTH/DEFLECTION:
+  Bay  -------Shear(kN)------  -----Moment(kN-m)-----  -Mom+Shr-  Deflect(mm)
+   Id  Loc    Calc Limit   UC  Loc    Calc Limit   UC  Loc    UC   Calc Limit
+  ---  ---- ------ ----- ----  ---- ------ ----- ----  ---- ----  ----- -----
+    1  RLap  -5.60 45.39 0.12  MidS  -6.45  9.31 0.69  RLap 0.58  -33.8  90.5
+    2  LLap   5.11 26.69 0.19  LLap   5.99  7.18 0.83  LLap 0.77  -21.8  91.2
+    3  RLap  -2.41 19.42 0.12  RLap   3.13  6.16 0.51  RLap 0.45    4.4  74.6
+    4  LLap   4.19 19.42 0.22  MidS  -4.91  5.84 0.84  RLap 0.58  -26.5  73.9
+
+
+ LAP BOLT SHEAR/BEARING:
+
+  Bolt Size =12.00 (Gr8.8)
+
+   Bay  Member    --Member_Left_End(kN)-  -Member_Right_End(kN)-
+    Id  Part       Calc Shear  Bear   UC   Calc Shear  Bear   UC
+  ----  --------  ----- ----- ----- ----  ----- ----- ----- ----
+    1   200Z25                             4.05 15.37 12.11 0.33
+    2   200Z20     3.26 15.37  9.69 0.34   1.73 15.37  9.69 0.18
+    3   200Z18     1.56 15.37  8.72 0.18   1.86 15.37  8.72 0.21
+    4   200Z18     1.86 15.37  8.72 0.21
+
+
+
+ LOAD ID - Wind_Suction:
+ ----------------------------
+
+ GIRT ACTIONS:
+       ---------Shear(kN)--------   --------------Moment(kN-m)--------------
+  Bay   Left   Left  Right  Right    Left   Left     Mid-Span   Right  Right
+   Id    Sup    Lap    Lap    Sup     Sup    Lap    Mom    Loc    Lap    Sup
+  ---  -----  -----  -----  -----   -----  -----  -----  -----  -----  -----
+    1  -4.59          6.19   7.13    0.00          7.14   3191  -6.25 -10.65
+    2  -6.58  -5.63   4.21   5.15  -10.65  -6.62   4.49   4605  -1.70  -4.79
+    3  -3.10  -2.47   2.66   3.29   -4.79  -2.95   0.26   3257  -3.47  -5.43
+    4  -5.57  -4.63          4.01   -5.43  -2.07   5.43   3865          0.00
+
+ STRENGTH/DEFLECTION:
+  Bay  -------Shear(kN)------  -----Moment(kN-m)-----  -Mom+Shr-  Deflect(mm)
+   Id  Loc    Calc Limit   UC  Loc    Calc Limit   UC  Loc    UC   Calc Limit
+  ---  ---- ------ ----- ----  ---- ------ ----- ----  ---- ----  ----- -----
+    1  RLap   6.19 45.39 0.14  MidS   7.14  8.03 0.89  RLap 0.64   37.4  90.5
+    2  LLap  -5.63 26.69 0.21  LLap  -6.62  6.78 0.98  LLap 0.85   24.0  91.2
+    3  RLap   2.66 19.42 0.14  RLap  -3.47  5.84 0.59  RLap 0.50   -4.9  74.6
+    4  LLap  -4.63 19.42 0.24  MidS   5.43  5.96 0.91  RLap 0.64   29.3  73.9
+
+
+ LAP BOLT SHEAR/BEARING:
+
+  Bolt Size =12.00 (Gr8.8)
+
+   Bay  Member    --Member_Left_End(kN)-  -Member_Right_End(kN)-
+    Id  Part       Calc Shear  Bear   UC   Calc Shear  Bear   UC
+  ----  --------  ----- ----- ----- ----  ----- ----- ----- ----
+    1   200Z25                             4.47 15.37 12.11 0.37
+    2   200Z20     3.60 15.37  9.69 0.37   1.91 15.37  9.69 0.20
+    3   200Z18     1.72 15.37  8.72 0.20   2.06 15.37  8.72 0.24
+    4   200Z18     2.06 15.37  8.72 0.24
+
+
+================================================================================
+ C463-002            Wall 2 - Girt Design  6 (Locate  7280) 18/DEC/2025  2:49pm
+================================================================================
+
+ GIRT LAYOUT:
+ ------------
+                                                                      Available
+                                                                      Reduction
+  Bay                      Design  --Lap(mm)--   Load   No.             Factor
+   Id  Part        Locate  Length  Left  Right  Width  Brace  Weight   Out   In
+  ---  --------   -------  ------  ----  -----  -----  -----  ------  ---- ----
+    1  200Z20      7280.0    8145          660   1250    3      47.7  0.00 0.70
+    2  200Z18      7280.0    8210   660    660   1250    3      46.4  0.00 0.70
+    3  200Z18      7280.0    6715   660    660   1250    2      39.1  0.00 0.70
+    4  200Z18      7280.0    6650   660          1250    3      35.6  0.00 0.70
+                                                              ------
+                                                               168.9
+
+
+ LOAD ID - Wind_Pressure:
+ ----------------------------
+
+ GIRT ACTIONS:
+       ---------Shear(kN)--------   --------------Moment(kN-m)--------------
+  Bay   Left   Left  Right  Right    Left   Left     Mid-Span   Right  Right
+   Id    Sup    Lap    Lap    Sup     Sup    Lap    Mom    Loc    Lap    Sup
+  ---  -----  -----  -----  -----   -----  -----  -----  -----  -----  -----
+    1   3.43         -4.64  -5.36    0.00         -5.45   3180   4.54   7.84
+    2   4.84   4.13  -3.31  -4.02    7.84   4.88  -3.01   4485   2.06   4.48
+    3   3.56   2.85  -2.97  -3.68    4.48   2.36  -1.39   3300   2.70   4.90
+    4   4.32   3.61         -2.85    4.90   2.28  -3.77   4008          0.00
+
+ STRENGTH/DEFLECTION:
+  Bay  -------Shear(kN)------  -----Moment(kN-m)-----  -Mom+Shr-  Deflect(mm)
+   Id  Loc    Calc Limit   UC  Loc    Calc Limit   UC  Loc    UC   Calc Limit
+  ---  ---- ------ ----- ----  ---- ------ ----- ----  ---- ----  ----- -----
+    1  RLap  -4.64 26.69 0.17  MidS  -5.45  6.78 0.80  RLap 0.60  -36.0  90.5
+    2  LLap   4.13 19.42 0.21  LLap   4.88  6.21 0.79  LLap 0.71  -16.3  91.2
+    3  RLap  -2.97 19.42 0.15  RLap   2.70  6.27 0.43  RLap 0.40   -2.9  74.6
+    4  LLap   3.61 19.42 0.19  MidS  -3.77  5.84 0.64  RLap 0.45  -19.0  73.9
+
+
+ LAP BOLT SHEAR/BEARING:
+
+  Bolt Size =12.00 (Gr8.8)
+
+   Bay  Member    --Member_Left_End(kN)-  -Member_Right_End(kN)-
+    Id  Part       Calc Shear  Bear   UC   Calc Shear  Bear   UC
+  ----  --------  ----- ----- ----- ----  ----- ----- ----- ----
+    1   200Z20                             3.13 15.37  9.69 0.32
+    2   200Z18     2.82 15.37  8.72 0.32   1.70 15.37  8.72 0.19
+    3   200Z18     1.70 15.37  8.72 0.19   1.86 15.37  8.72 0.21
+    4   200Z18     1.86 15.37  8.72 0.21
+
+
+
+ LOAD ID - Wind_Suction:
+ ----------------------------
+
+ GIRT ACTIONS:
+       ---------Shear(kN)--------   --------------Moment(kN-m)--------------
+  Bay   Left   Left  Right  Right    Left   Left     Mid-Span   Right  Right
+   Id    Sup    Lap    Lap    Sup     Sup    Lap    Mom    Loc    Lap    Sup
+  ---  -----  -----  -----  -----   -----  -----  -----  -----  -----  -----
+    1  -3.85          5.13   5.91    0.00          6.03   3213  -5.02  -8.66
+    2  -5.34  -4.55   3.65   4.43   -8.66  -5.40   3.31   4487  -2.27  -4.93
+    3  -3.92  -3.14   3.28   4.07   -4.93  -2.60   1.54   3298  -2.99  -5.41
+    4  -4.78  -3.99          3.21   -5.41  -2.52   4.17   3976          0.00
+
+ STRENGTH/DEFLECTION:
+  Bay  -------Shear(kN)------  -----Moment(kN-m)-----  -Mom+Shr-  Deflect(mm)
+   Id  Loc    Calc Limit   UC  Loc    Calc Limit   UC  Loc    UC   Calc Limit
+  ---  ---- ------ ----- ----  ---- ------ ----- ----  ---- ----  ----- -----
+    1  RLap   5.13 26.69 0.19  MidS   6.03  6.43 0.94  RLap 0.66   39.9  90.5
+    2  LLap  -4.55 19.42 0.23  LLap  -5.40  5.84 0.92  LLap 0.78   18.0  91.2
+    3  RLap   3.28 19.42 0.17  RLap  -2.99  5.84 0.51  RLap 0.45    3.2  74.6
+    4  LLap  -3.99 19.42 0.21  MidS   4.17  5.95 0.70  RLap 0.50   21.1  73.9
+
+
+ LAP BOLT SHEAR/BEARING:
+
+  Bolt Size =12.00 (Gr8.8)
+
+   Bay  Member    --Member_Left_End(kN)-  -Member_Right_End(kN)-
+    Id  Part       Calc Shear  Bear   UC   Calc Shear  Bear   UC
+  ----  --------  ----- ----- ----- ----  ----- ----- ----- ----
+    1   200Z20                             3.45 15.37  9.69 0.36
+    2   200Z18     3.11 15.37  8.72 0.36   1.87 15.37  8.72 0.21
+    3   200Z18     1.87 15.37  8.72 0.21   2.05 15.37  8.72 0.23
+    4   200Z18     2.05 15.37  8.72 0.23
+
+
+================================================================================
+ C463-002            Wall 2 - Girt Design  7 (Locate  8280) 18/DEC/2025  2:49pm
+================================================================================
+
+ GIRT LAYOUT:
+ ------------
+                                                                      Available
+                                                                      Reduction
+  Bay                      Design  --Lap(mm)--   Load   No.             Factor
+   Id  Part        Locate  Length  Left  Right  Width  Brace  Weight   Out   In
+  ---  --------   -------  ------  ----  -----  -----  -----  ------  ---- ----
+    1  200Z15      8280.0    8145          660    810    3      35.7  0.00 0.70
+    2  200Z15      8280.0    8210   660    660    810    3      38.7  0.00 0.70
+    3  200Z15      8280.0    6715   660    660    810    2      32.6  0.00 0.70
+    4  200Z15      8280.0    6650   660           810    3      29.7  0.00 0.70
+                                                              ------
+                                                               136.7
+
+
+ LOAD ID - Wind_Pressure:
+ ----------------------------
+
+ GIRT ACTIONS:
+       ---------Shear(kN)--------   --------------Moment(kN-m)--------------
+  Bay   Left   Left  Right  Right    Left   Left     Mid-Span   Right  Right
+   Id    Sup    Lap    Lap    Sup     Sup    Lap    Mom    Loc    Lap    Sup
+  ---  -----  -----  -----  -----   -----  -----  -----  -----  -----  -----
+    1   2.22         -3.01  -3.47    0.00         -3.52   3174   2.97   5.11
+    2   3.14   2.68  -2.14  -2.60    5.11   3.19  -1.94   4493   1.33   2.89
+    3   2.30   1.84  -1.93  -2.39    2.89   1.52  -0.91   3297   1.75   3.17
+    4   2.80   2.34         -1.85    3.17   1.48  -2.44   4008          0.00
+
+ STRENGTH/DEFLECTION:
+  Bay  -------Shear(kN)------  -----Moment(kN-m)-----  -Mom+Shr-  Deflect(mm)
+   Id  Loc    Calc Limit   UC  Loc    Calc Limit   UC  Loc    UC   Calc Limit
+  ---  ---- ------ ----- ----  ---- ------ ----- ----  ---- ----  ----- -----
+    1  RLap  -3.01 11.20 0.27  MidS  -3.52  4.46 0.79  RLap 0.56  -30.8  90.5
+    2  LLap   2.68 11.20 0.24  LLap   3.19  4.77 0.67  LLap 0.59  -12.4  91.2
+    3  RLap  -1.93 11.20 0.17  RLap   1.75  4.82 0.36  RLap 0.33   -2.3  74.6
+    4  LLap   2.34 11.20 0.21  MidS  -2.44  4.46 0.55  RLap 0.38  -14.7  73.9
+
+
+ LAP BOLT SHEAR/BEARING:
+
+  Bolt Size =12.00 (Gr8.8)
+
+   Bay  Member    --Member_Left_End(kN)-  -Member_Right_End(kN)-
+    Id  Part       Calc Shear  Bear   UC   Calc Shear  Bear   UC
+  ----  --------  ----- ----- ----- ----  ----- ----- ----- ----
+    1   200Z15                             1.94 15.37  7.27 0.27
+    2   200Z15     1.94 15.37  7.27 0.27   1.09 15.37  7.27 0.15
+    3   200Z15     1.09 15.37  7.27 0.15   1.20 15.37  7.27 0.17
+    4   200Z15     1.20 15.37  7.27 0.17
+
+
+
+ LOAD ID - Wind_Suction:
+ ----------------------------
+
+ GIRT ACTIONS:
+       ---------Shear(kN)--------   --------------Moment(kN-m)--------------
+  Bay   Left   Left  Right  Right    Left   Left     Mid-Span   Right  Right
+   Id    Sup    Lap    Lap    Sup     Sup    Lap    Mom    Loc    Lap    Sup
+  ---  -----  -----  -----  -----   -----  -----  -----  -----  -----  -----
+    1  -2.49          3.33   3.83    0.00          3.89   3207  -3.28  -5.65
+    2  -3.46  -2.95   2.35   2.86   -5.65  -3.53   2.13   4495  -1.46  -3.18
+    3  -2.54  -2.03   2.13   2.64   -3.18  -1.67   1.00   3295  -1.94  -3.51
+    4  -3.09  -2.58          2.08   -3.51  -1.63   2.70   3976          0.00
+
+ STRENGTH/DEFLECTION:
+  Bay  -------Shear(kN)------  -----Moment(kN-m)-----  -Mom+Shr-  Deflect(mm)
+   Id  Loc    Calc Limit   UC  Loc    Calc Limit   UC  Loc    UC   Calc Limit
+  ---  ---- ------ ----- ----  ---- ------ ----- ----  ---- ----  ----- -----
+    1  RLap   3.33 11.20 0.30  MidS   3.89  4.53 0.86  RLap 0.62   34.0  90.5
+    2  LLap  -2.95 11.20 0.26  LLap  -3.53  4.46 0.79  LLap 0.65   13.7  91.2
+    3  RLap   2.13 11.20 0.19  RLap  -1.94  4.46 0.43  RLap 0.37    2.5  74.6
+    4  LLap  -2.58 11.20 0.23  MidS   2.70  4.55 0.59  RLap 0.42   16.3  73.9
+
+
+ LAP BOLT SHEAR/BEARING:
+
+  Bolt Size =12.00 (Gr8.8)
+
+   Bay  Member    --Member_Left_End(kN)-  -Member_Right_End(kN)-
+    Id  Part       Calc Shear  Bear   UC   Calc Shear  Bear   UC
+  ----  --------  ----- ----- ----- ----  ----- ----- ----- ----
+    1   200Z15                             2.14 15.37  7.27 0.29
+    2   200Z15     2.14 15.37  7.27 0.29   1.21 15.37  7.27 0.17
+    3   200Z15     1.21 15.37  7.27 0.17   1.33 15.37  7.27 0.18
+    4   200Z15     1.33 15.37  7.27 0.18
+
+
+================================================================================
+ C463-002            Wall 2 - Door Jamb & Header Design     18/DEC/2025  2:49pm
+================================================================================
+
+ LAYOUT:
+ -------
+                                                      Reduction
+  Open  Bay                             Load            Factor
+   Id    Id  Locate  Part      Length  Width  Weight   Out   In
+  ----  ---  ------  --------  ------  -----  ------  ---- ----
+    2     3  JambL   200C20      4280   2000    23.2  0.00 0.65
+             JambR   200C20      4280   2000    23.2  0.00 0.65
+             Header  200C20      4000    140    21.7  0.00 0.65
+
+ STRENGTH/DEFLECTION:
+ --------------------
+  Open         Load  --Shear(kN)-  --Moment(mm,kN-m)-   Mom+   Max  Deflect(mm)
+   Id  Member   Id     Calc Limit    Loc   Calc Limit  Shear    UC   Calc Limit
+  ---- ------  ----  ------ -----  ----- ------ -----  -----  ----  ----- -----
+   2  JambL     WP     3.13  25.6   1813  -2.84   4.4   0.20  0.63   -6.3  47.6 
+                WS    -3.45  25.6   1813   3.13   5.3   0.22  0.59    6.9  47.6 
+      JambR     WP     3.03  25.6   1758  -2.67   4.5   0.17  0.59   -5.7  47.6 
+                WS    -3.34  25.6   1757   2.94   5.3   0.18  0.55    6.3  47.6 
+      Header    WP     0.24  25.6   2000  -0.24   7.2   0.00  0.03   -0.5  44.4 
+                WS    -0.27  25.6   2000   0.27   6.8   0.00  0.04    0.5  44.4 
+
+                WP - Wind_Pressure                  
+                WS - Wind_Suction                   
+ 
+
+================================================================================
+ C463-002            Wall 2 - Panel Design (Bay  1)         18/DEC/2025  2:49pm
+================================================================================
+
+ PANEL DATA:
+ -----------
+  Bay                                       Rotation   Panel
+   Id   Part      Rot  Type  Thick  Yield  Stiffness  Height
+  ---   --------  ---  ----  -----  -----  ---------  ------
+    1   45250 .5   N    4525  0.50    250     0.00      8899
+
+ MOMENTS & DEFLECTION:
+ ---------------------
+                            --------------Moment(m-N/m   )-------------
+  Span    Locate(mm)            Start       Midspan        End      Max  Deflect(mm)
+   Id    Start   End  Load   Calc Limit   Calc Limit   Calc Limit    UC   Calc Limit
+  ----   ----- -----  ----  ----- -----  ----- -----  ----- -----  ----  ----- -----
+    1     3000  3080   WP       0  1800     50  1800    101  1800  0.06    0.0   0.9
+                       WS       0   940    -54   940   -109   940  0.12    0.0   0.9
+    2     3080  4280   WP     101  1800    -59   940    169  1800  0.09   -0.1  13.3
+                       WS    -109   940     63  1800   -183   940  0.19    0.1  13.3
+    3     4280  5780   WP     169  1800   -107   940    218  1800  0.12   -0.5  16.7
+                       WS    -183   940    116  1800   -237   940  0.25    0.5  16.7
+    4     5780  7280   WP     218  1800   -113   940    157  1800  0.12   -0.5  16.7
+                       WS    -237   940    122  1800   -170   940  0.25    0.6  16.7
+    5     7280  8280   WP     157  1800    -33   940     53  1800  0.09    0.0  11.1
+                       WS    -170   940     36  1800    -58   940  0.18    0.0  11.1
+    6     8280  8899   WP      53  1800    -28   940      0   940  0.03    0.0   6.9
+                       WS     -58   940     30  1800      0  1800  0.06    0.0   6.9
+ 
+                       WP - Wind_Pressure                  
+                       WS - Wind_Suction                   
+ 
+
+================================================================================
+ C463-002            Wall 2 - Panel Zones                   18/DEC/2025  2:49pm
+================================================================================
+
+ PANEL:
+ ------
+                            Tensile
+            Thick   Yield   Strength
+  Part       (mm)  (MN/m2)  (MN/m2)
+  --------  -----  -------  --------
+  45250 .5   0.50   250.0     325.0
+
+ GIRT SCREWS:
+ ------------
+              Dia  Washer  Limit
+  Part       (mm)    (mm)   (kN)
+  --------  -----  ------  -----
+  14x20SDS    4.8    19.0  13.70
+
+ PANEL ZONE LAYOUT:
+ ------------------
+                                            --Girt(mm,mm,mm)--  Panel
+  Zone                 ----Wall(mm)---  Bay         Load   Min   Span
+   Id   Description    Offset1 Offset2   Id Locate Width Thick   (mm)
+  ----  -------------  ------- -------  --- ------ ----- -----  -----
+    1   Interior          1280   29220    1   5780  1500  1.50   1500
+    2   Lt Edge              0    1280    1   5780  1500  1.50   1500
+    3   Rt Edge          29220   30500    4   5780  1500  1.50   1500
+
+ GIRT SCREW CHECK:
+ -----------------
+        Screw     Wind         --------Limit(kN)-------
+  Zone  Space  Suction   Load     Girt    Panel   Screw   Max
+   Id    (mm)  (kN/m2)   (kN)  Pullout Pullover Tension    UC
+  ----  -----  -------  -----  ------- -------- -------  ----
+    1     250    1.154   0.43     0.92     1.54    3.65  0.47
+    2     250    1.154   0.43     0.92     1.54    3.65  0.47
+    3     250    1.154   0.43     0.92     1.54    3.65  0.47
+ 
+
+================================================================================
+ C463-002            Wall 2 - Weight Summary                18/DEC/2025  2:49pm
+================================================================================
+
+                                            Weight
+                 Description                  (kg)
+                 -----------               -------
+                 Girts                 =    808.57
+                 Wall Openings         =     68.08
+                                         ---------
+                                            876.65
+
+
+================================================================================
+ C463-002            Wall 2 - Warning Summary               18/DEC/2025  2:49pm
+================================================================================
+
+                   .. No Warnings

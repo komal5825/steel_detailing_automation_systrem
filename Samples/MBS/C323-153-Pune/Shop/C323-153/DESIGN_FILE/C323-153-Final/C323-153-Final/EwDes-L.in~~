@@ -1,0 +1,16 @@
+*(19)COLUMN PART & ELEVATION:
+*                                              ---Base---  Rafter
+*No. Id  Type    Part       Opt  Rot   Depth    Elev  Opt  Attach
+  3   1  '-   ' '--------'  '-'  'N'    0.00    0.00  '-'   'F'
+      2  'W   ' 'W40b155'  'I'  '-'    0.00    0.00  '-'   'F'
+      3  '-   ' '--------'  '-'  'N'    0.00    0.00  '-'   'F'
+*(24)GIRT DESIGN:
+*Girt  --Flange_Strap--                   --Depth--     Set     Max  Rafter
+*Type  Out  In    Space  Offset  Project    Set Opt     Lap   Space  Attach
+ 'ZB'  'C'  'Y'  2250.0    0.00   230.00 200.00 'W'     0.0  2580.0    'Y'
+
+*(25)GIRT LOCATION:
+* Set
+* Loc   No.   Location
+  'Y'    6     2580.0   3580.0   4580.0   5780.0   7280.0   8080.0
+

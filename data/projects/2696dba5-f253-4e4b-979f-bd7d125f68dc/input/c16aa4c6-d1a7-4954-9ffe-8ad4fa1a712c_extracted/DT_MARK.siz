@@ -1,0 +1,81 @@
+*              DT_MARK.SIZ
+*
+* User Defined Marks
+*
+* 
+*MBS         Detail        Shop                 
+*MARK        Mark          Mark     Condition      Priority
+*-------------------------------------------------------------
+ 'RF'         ' CL '       'CL  '    'RF Column'         1
+ 'RF'         ' RF '       'RF  '    'RF Rafter'         1
+ 'RF'         ' CL '       'CL  '    'RF Int Col'        1
+
+
+STOP
+
+ 'RF'         '  '         '  '    'RF Member'         1
+ 'RF'         '  '         '  '    'RF Column'         1
+ 'RF'         '  '         '  '    'RF Rafter'         1
+ 'RF'         '  '         '  '    'RF Int Col'        1
+ 'RF'         '  '         '  '    'Member'            1
+ 'WF'         '  '         '  '    'Wind Bent'         1
+ 'WF'         '  '         '  '    'Wind Column'       1
+ 'EB'         '  '         '  '    'Ext Beam'          1
+ 'HB'         '  '         '  '    'Header Beam'       1
+ 'BB'         '  '         '  '    'Back Brace'        1
+ 'SB'         '  '         '  '    'Stub Column'       1
+ 'JK'         '  '         '  '    'Jack Beam'         1
+ 'MB'         '  '         '  '    'Floor Beam'        1
+ 'MC'         '  '         '  '    'Floor Column'      1
+ 'EC'         '  '         '  '    'EW Column'         1
+ 'ER'         '  '         '  '    'EW Rafter'         1
+ 'RB'         '  '         '  '    'Runway Beam'       1
+ 'AC'         '  '         '  '    'Aux. Column'       1
+ 'AB'         '  '         '  '    'Aux. Beam'         1
+ 'SC'         '  '         '  '    'SW Column'         1
+ 'SR'         '  '         '  '    'SW Rafter'         1
+ 'PC'         '  '         '  '    'PW Column'         1
+ 'PR'         '  '         '  '    'PW Rafter'         1
+
+ ' B'         '  '         '  '    'Block'             2
+ 'DJ'         '  '         '  '    'Door Jamb'         2
+ 'DH'         '  '         '  '    'Door Header'       2
+ 'DS'         '  '         '  '    'Door Sill'         2
+ 'WJ'         '  '         '  '    'W.D. Jamb'         2
+ 'WH'         '  '         '  '    'W.D. Header'       2
+ 'WS'         '  '         '  '    'W.D. Sill'         2
+ 'JB'         '  '         '  '    'Jamb Block'        2
+
+ ' P'         '  '         '  '    'Roof Purlin'       3
+ ' P'         '  '         '  '    'Lap Purlin'        3
+ ' P'         '  '         '  '    'Attach Purl'       3
+ ' P'         '  '         '  '    'Roof Strut'        3
+ ' G'         '  '         '  '    'SW Girt'           3
+ ' G'         '  '         '  '    'EW Girt'           3
+ ' G'         '  '         '  '    'EW Lap Girt'       3
+ ' G'         '  '         '  '    'SW Lap Girt'       3
+ ' G'         '  '         '  '    'Facia Girt'        3
+ ' G'         '  '         '  '    'PW Girt'           3
+ ' G'         '  '         '  '    'Wall Girt'         3
+ ' G'         '  '         '  '    'Wall Strut'        3
+ ' G'         '  '         '  '    'Int. Strut'        3
+ ' E'         '  '         '  '    'Eave Strut'        3
+ ' S'         '  '         '  '    'Stub Purlin'       3
+ ' C'         '  '         '  '    'Base Channel'      3
+ ' A'         '  '         '  '    'Acc Member'        3
+ 'MJ'         '  '         '  '    'Floog Joist'       3
+ 'ST'         '  '         '  '    'Wall Strut'        3
+ 'ST'         '  '         '  '    'Roof Strut'        3
+
+ 'CBC'        '  '         '  '    'Crane Cable'       8
+ 'CBC'        '  '         '  '    'Crane Rod'         8
+ 'CBC'        '  '         '  '    'Crane Angle'       8
+ 'CB'         '  '         '  '    'Roof Cable'        8
+ 'CB'         '  '         '  '    'SW Cable'          8
+ 'CB'         '  '         '  '    'EW Cable'          8
+ 'CB'         '  '         '  '    'Acc Cable'         8
+ 'CB'         '  '         '  '    'SW Cable@Base'     8
+ 'CB'         '  '         '  '    'Int Cable'         8
+ 'CB'         '  '         '  '    'Mez Cable'         8
+ 'DB'         '  '         '  '    'SW Angle'          8
+ 'DB'         '  '         '  '    'Roof Angle'        8

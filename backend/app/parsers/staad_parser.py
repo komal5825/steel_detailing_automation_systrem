@@ -27,6 +27,8 @@ class StaadParser:
         "section_property_count": "STAAD-SECTION-PROPERTY-COUNT",
         "material_constant_count": "STAAD-MATERIAL-CONSTANT-COUNT",
         "unit_system": "STAAD-UNIT-SYSTEM",
+        "job_engineer": "STAAD-JOB-ENGINEER",
+        "job_date": "STAAD-JOB-DATE",
     }
 
     UNITS = {
@@ -45,16 +47,23 @@ class StaadParser:
 
         text = path.read_text(encoding="utf-8", errors="ignore")
         lines = [line.strip() for line in text.splitlines()]
-        sections = self._collect_sections(lines)
+        
+        # Pre-process continuation lines (ending with -)
+        processed_lines = self._preprocess_continuation(lines)
+        
+        sections = self._collect_sections(processed_lines)
+        job_info = self._extract_job_info(processed_lines)
 
         values = {
-            "node_count": self._count_joint_coordinates(sections.get("joint_coordinates", [])),
-            "member_count": self._count_member_incidences(sections.get("member_incidences", [])),
+            "node_count": self._count_joints(sections.get("joint_coordinates", [])),
+            "member_count": self._count_members(sections.get("member_incidences", [])),
             "support_count": self._count_supports(sections.get("supports", [])),
-            "load_case_count": self._count_load_cases(lines),
+            "load_case_count": self._count_load_cases(processed_lines),
             "section_property_count": self._count_section_properties(sections.get("member_properties", [])),
             "material_constant_count": self._count_material_constants(sections.get("constants", [])),
-            "unit_system": self._extract_unit_system(lines),
+            "unit_system": self._extract_unit_system(processed_lines),
+            "job_engineer": job_info.get("engineer"),
+            "job_date": job_info.get("date"),
         }
 
         fields = [
@@ -65,7 +74,7 @@ class StaadParser:
                 normalized_value=str(raw_value),
                 unit=self.UNITS.get(field_name),
                 source_path=str(path),
-                confidence=85,
+                confidence=90,
             )
             for field_name, raw_value in values.items()
             if raw_value not in (None, "", 0)
@@ -75,9 +84,22 @@ class StaadParser:
             "parser": "StaadParser",
             "source_path": str(path),
             "field_count": len(fields),
-            "confidence": 85 if fields else 0,
+            "confidence": 90 if fields else 0,
             "fields": [field.__dict__ for field in fields],
         }
+
+    def _preprocess_continuation(self, lines: list[str]) -> list[str]:
+        new_lines = []
+        current_line = ""
+        for line in lines:
+            if line.endswith("-"):
+                current_line += line[:-1] + " "
+            else:
+                new_lines.append(current_line + line)
+                current_line = ""
+        if current_line:
+            new_lines.append(current_line)
+        return new_lines
 
     def _collect_sections(self, lines: list[str]) -> dict[str, list[str]]:
         sections = {
@@ -90,9 +112,11 @@ class StaadParser:
         current: str | None = None
 
         for line in lines:
-            upper = line.upper()
+            upper = line.upper().strip()
             if not line or upper.startswith("*"):
                 continue
+            
+            # Section detection
             if upper.startswith("JOINT COORDINATES"):
                 current = "joint_coordinates"
                 continue
@@ -108,8 +132,11 @@ class StaadParser:
             if upper.startswith("SUPPORTS"):
                 current = "supports"
                 continue
+            
+            # End section if another major keyword starts
             if self._starts_new_section(upper):
                 current = None
+            
             if current:
                 sections[current].append(line)
 
@@ -127,23 +154,82 @@ class StaadParser:
             "PARAMETER",
             "CHECK ",
             "STEEL ",
+            "UNIT ",
         )
         return upper_line.startswith(section_prefixes)
 
-    def _count_joint_coordinates(self, lines: list[str]) -> int:
-        return sum(1 for line in lines if re.match(r"^\d+\s+[-+0-9.]", line))
+    def _count_joints(self, lines: list[str]) -> int:
+        count = 0
+        for line in lines:
+            # Split by ; for multiple coordinates on one line
+            entries = line.split(";")
+            for entry in entries:
+                if re.search(r"^\d+\s+", entry.strip()):
+                    count += 1
+        return count
 
-    def _count_member_incidences(self, lines: list[str]) -> int:
-        return sum(1 for line in lines if re.match(r"^\d+\s+\d+\s+\d+", line))
+    def _count_members(self, lines: list[str]) -> int:
+        count = 0
+        for line in lines:
+            entries = line.split(";")
+            for entry in entries:
+                if re.match(r"^\d+\s+\d+\s+\d+", entry.strip()):
+                    count += 1
+        return count
+
+    def _expand_ids(self, id_string: str, stop_words: list[str] | None = None) -> set[int]:
+        if stop_words is None:
+            stop_words = ["TAPERED", "TABLE", "FIXED", "PINNED", "ENFORCED", "SPRING", "START", "END"]
+            
+        ids = set()
+        tokens = id_string.split()
+        
+        filtered_tokens = []
+        for token in tokens:
+            if token.upper() in stop_words:
+                break
+            filtered_tokens.append(token)
+            
+        i = 0
+        while i < len(filtered_tokens):
+            token = filtered_tokens[i].upper()
+            if token == "TO":
+                if i > 0 and i + 1 < len(filtered_tokens):
+                    try:
+                        start = int(filtered_tokens[i-1])
+                        end = int(filtered_tokens[i+1])
+                        for val in range(start + 1, end + 1):
+                            ids.add(val)
+                        i += 2
+                    except ValueError:
+                        i += 1
+                else:
+                    i += 1
+            else:
+                try:
+                    ids.add(int(filtered_tokens[i]))
+                except ValueError:
+                    pass
+                i += 1
+        return ids
 
     def _count_supports(self, lines: list[str]) -> int:
-        return sum(1 for line in lines if re.match(r"^\d+(\s+\d+)*\s+(FIXED|PINNED|ENFORCED|SPRING)", line.upper()))
+        all_node_ids = set()
+        for line in lines:
+            # We only care about the part before the support type
+            ids = self._expand_ids(line)
+            all_node_ids.update(ids)
+        return len(all_node_ids)
+
+    def _count_section_properties(self, lines: list[str]) -> int:
+        all_member_ids = set()
+        for line in lines:
+            ids = self._expand_ids(line)
+            all_member_ids.update(ids)
+        return len(all_member_ids)
 
     def _count_load_cases(self, lines: list[str]) -> int:
         return sum(1 for line in lines if re.match(r"^LOAD\s+\d+", line.upper()))
-
-    def _count_section_properties(self, lines: list[str]) -> int:
-        return sum(1 for line in lines if re.match(r"^\d+(\s+TO\s+\d+|\s+\d+)*\s+", line.upper()))
 
     def _count_material_constants(self, lines: list[str]) -> int:
         return sum(1 for line in lines if re.match(r"^(E|POISSON|DENSITY|ALPHA)\s+", line.upper()))
@@ -154,3 +240,26 @@ class StaadParser:
             if match:
                 return match.group(1).strip()
         return None
+
+    def _extract_job_info(self, lines: list[str]) -> dict[str, str]:
+        info = {}
+        in_job_info = False
+        for line in lines:
+            upper = line.upper()
+            if "START JOB INFORMATION" in upper:
+                in_job_info = True
+                continue
+            if "END JOB INFORMATION" in upper:
+                in_job_info = False
+                continue
+            if in_job_info:
+                if upper.startswith("ENGINEER DATE"):
+                    parts = line.split()
+                    if len(parts) >= 3:
+                        info["date"] = parts[2]
+                elif upper.startswith("ENGINEER"):
+                    info["engineer"] = line[8:].strip()
+                elif upper.startswith("DATE"):
+                    info["date"] = line[4:].strip()
+        return info
+

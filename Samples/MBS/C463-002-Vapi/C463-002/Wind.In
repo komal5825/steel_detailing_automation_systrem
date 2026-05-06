@@ -1,0 +1,1718 @@
+[DESIGN]
+NAME=MBMA
+YEAR=10
+Deflection_Load_Ratio=    1.00
+METHOD=ASCE 7-05 Method 2 - Analytical Procedure for Low-Rise Buildings
+[VALUE]
+Cpi_P=  0.18
+Cpi_S= -0.18
+I= 1.00
+Slope= 5.71
+Exposure=C
+Closure=C - Enclosed
+Zone_h= 9100.00
+h= 9100.00
+Kh=0.98
+Kzt= 1.00
+Kd=0.85
+G=0.85
+V=158.40
+Vasd=122.70
+Basic= 0.9865
+[COMPDES:FACIA]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.0000
+Suct= 0.0000
+[COMPDES:Wall1]
+Kh= 0.98
+Basic= 0.9865
+Press=-1.6473
+Suct= 0.4785
+[COMPDES:Wall2]
+Kh= 0.98
+Basic= 0.9865
+Press=-1.6473
+Suct= 0.4785
+[COMPDES:Wall3]
+Kh= 0.98
+Basic= 0.9865
+Press=-1.6473
+Suct= 0.4785
+[COMPDES:Wall4]
+Kh= 0.98
+Basic= 0.9865
+Press=-1.6473
+Suct= 0.4785
+[EWDES-L:BRACE]
+Coeff1= 0.5002
+Coeff2=-0.3565
+Coeff3=-0.6807
+[EWDES-L:BRACE_WIND_L]
+Surf1=  0.3343
+Surf2= -1.0638
+Surf3= -0.6377
+Surf4= -0.5493
+Surf2_1= -0.6377
+Start2_1= 6400.00
+End2_1= 6431.92
+[EWDES-L:BRACE_WIND_R]
+Surf1= -0.5493
+Surf2= -0.6377
+Surf3= -1.0638
+Surf4=  0.3343
+Surf3_1= -0.6377
+Start3_1=    0.00
+End3_1=   31.92
+[EWDES-L:COLUMN]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.8621
+Suct=-0.9509
+Edge_Suct=-1.0127
+Edge_Suct_Ratio= 1.07
+[EWDES-L:FACIA_BRACE]
+Kh= 0.98
+Basic= 0.9865
+Press= 1.4797
+Suct=-0.9865
+Roof= 0.7892
+[EWDES-L:GIRT]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.8621
+Suct=-0.9509
+Edge_Suct=-1.0127
+Edge_Suct_Ratio= 1.07
+[EWDES-L:JAMB]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.8621
+Suct=-0.9509
+[EWDES-L:LONG_WIND]
+Surf1= -0.6300
+Surf2= -0.8700
+Surf3= -0.8700
+Surf4= -0.6300
+Surf2-1= -1.2500
+Start2-1=    0.00
+End2-1= 2560.00
+Surf3-1= -1.2500
+Start3-1= 3871.92
+End3-1= 6431.92
+[EWDES-L:LONG_WIND_2]
+Surf1= -0.2700
+Surf2= -0.5100
+Surf3= -0.5100
+Surf4= -0.2700
+Surf2-1= -0.8900
+Start2-1=    0.00
+End2-1= 2560.00
+Surf3-1= -0.8900
+Start3-1= 3871.92
+End3-1= 6431.92
+[EWDES-L:PANEL]
+Kh= 0.98
+Basic= 0.9865
+Press= 1.0654
+Suct=-1.1542
+Edge_Suct=-1.1542
+Edge_Suct_Ratio= 1.00
+Area2_Width=   1280.00
+Area3_Width=   1280.00
+[EWDES-L:PARAPET_COLUMN]
+Kh=  0.980
+Basic=  0.987
+Press=  0.862
+Suct= -0.951
+[EWDES-L:PARAPET_GIRT]
+Kh= 0.98
+Basic= 0.9865
+Press= 1.7697
+Suct=-1.4578
+[EWDES-L:WIND]
+Kh= 0.98
+Basic= 0.9865
+Cpi_P= 0.18
+Cpi_S=-0.18
+CpCg1=  0.5143
+CpCg2= -0.8838
+CpCg3= -0.4577
+CpCg4= -0.3693
+[EWDES-L:WIND_1_L]
+Surf1=  0.3343
+Surf2= -1.0638
+Surf3= -0.6380
+Surf4= -0.5493
+Surf2_1= -0.6380
+Start2_1= 6400.00
+End2_1= 6431.92
+[EWDES-L:WIND_1_R]
+Surf1= -0.5493
+Surf2= -0.6380
+Surf3= -1.0638
+Surf4=  0.3343
+Surf3_1= -0.6380
+Start3_1=    0.00
+End3_1=   31.92
+[EWDES-L:WIND_2_L]
+Surf1=  0.6943
+Surf2= -0.7038
+Surf3= -0.2780
+Surf4= -0.1893
+Surf2_1= -0.2780
+Start2_1= 6400.00
+End2_1= 6431.92
+[EWDES-L:WIND_2_R]
+Surf1= -0.1893
+Surf2= -0.2780
+Surf3= -0.7038
+Surf4=  0.6943
+Surf3_1= -0.2780
+Start3_1=    0.00
+End3_1=   31.92
+[EWDES-R:BRACE]
+Coeff1= 0.5179
+Coeff2=-0.3683
+Coeff3=-0.6807
+[EWDES-R:BRACE_WIND_L]
+Surf1=  0.3524
+Surf2= -1.0961
+Surf3= -0.6515
+Surf4= -0.5615
+Surf2_1= -0.6515
+Start2_1= 6400.00
+End2_1= 6431.92
+[EWDES-R:BRACE_WIND_R]
+Surf1= -0.5615
+Surf2= -0.6515
+Surf3= -1.0961
+Surf4=  0.3524
+Surf3_1= -0.6515
+Start3_1=    0.00
+End3_1=   31.92
+[EWDES-R:COLUMN]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.8621
+Suct=-0.9509
+Edge_Suct=-1.0127
+Edge_Suct_Ratio= 1.07
+[EWDES-R:FACIA_BRACE]
+Kh= 0.98
+Basic= 0.9865
+Press= 1.4797
+Suct=-0.9865
+Roof= 0.7892
+[EWDES-R:GIRT]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.8621
+Suct=-0.9509
+Edge_Suct=-1.0127
+Edge_Suct_Ratio= 1.07
+[EWDES-R:JAMB]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.8621
+Suct=-0.9509
+[EWDES-R:LONG_WIND]
+Surf1= -0.6300
+Surf2= -0.8700
+Surf3= -0.8700
+Surf4= -0.6300
+Surf2-1= -1.2500
+Start2-1=    0.00
+End2-1= 2560.00
+Surf3-1= -1.2500
+Start3-1= 3871.92
+End3-1= 6431.92
+[EWDES-R:LONG_WIND_2]
+Surf1= -0.2700
+Surf2= -0.5100
+Surf3= -0.5100
+Surf4= -0.2700
+Surf2-1= -0.8900
+Start2-1=    0.00
+End2-1= 2560.00
+Surf3-1= -0.8900
+Start3-1= 3871.92
+End3-1= 6431.92
+[EWDES-R:PANEL]
+Kh= 0.98
+Basic= 0.9865
+Press= 1.0654
+Suct=-1.1542
+Edge_Suct=-1.1542
+Edge_Suct_Ratio= 1.00
+Area2_Width=   1280.00
+Area3_Width=   1280.00
+[EWDES-R:PARAPET_COLUMN]
+Kh=  0.980
+Basic=  0.987
+Press=  0.862
+Suct= -0.951
+[EWDES-R:PARAPET_GIRT]
+Kh= 0.98
+Basic= 0.9865
+Press= 1.7697
+Suct=-1.4578
+[EWDES-R:WIND]
+Kh= 0.98
+Basic= 0.9865
+Cpi_P= 0.18
+Cpi_S=-0.18
+CpCg1=  0.5324
+CpCg2= -0.9161
+CpCg3= -0.4715
+CpCg4= -0.3815
+[EWDES-R:WIND_1_L]
+Surf1=  0.3524
+Surf2= -1.0961
+Surf3= -0.6518
+Surf4= -0.5615
+Surf2_1= -0.6518
+Start2_1= 6400.00
+End2_1= 6431.92
+[EWDES-R:WIND_1_R]
+Surf1= -0.5615
+Surf2= -0.6518
+Surf3= -1.0961
+Surf4=  0.3524
+Surf3_1= -0.6518
+Start3_1=    0.00
+End3_1=   31.92
+[EWDES-R:WIND_2_L]
+Surf1=  0.7124
+Surf2= -0.7361
+Surf3= -0.2918
+Surf4= -0.2015
+Surf2_1= -0.2918
+Start2_1= 6400.00
+End2_1= 6431.92
+[EWDES-R:WIND_2_R]
+Surf1= -0.2015
+Surf2= -0.2918
+Surf3= -0.7361
+Surf4=  0.7124
+Surf3_1= -0.2918
+Start3_1=    0.00
+End3_1=   31.92
+[EXTEND1:BEAM_H]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.4785
+Suct=-1.6473
+[EXTEND1:BEAM_SOFFIT]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.0000
+Suct= 0.0000
+[EXTEND1:BEAM_V]
+Kh= 0.98
+Basic= 0.0000
+Press= 0.0000
+Suct= 0.0000
+[EXTEND1:FRAME_H]
+Kh= 0.98
+Basic= 0.9865
+Press=-1.4698
+Suct=-0.3701
+Long= 0.0543
+Long_Area=  6.594
+Long_Area_Ratio= 0.0503
+[EXTEND1:FRAME_V]
+Kh= 0.98
+Basic= 0.0000
+Press= 0.0000
+Suct= 0.0000
+[EXTEND1:PANEL_H]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.4785
+Suct=-1.6770
+[EXTEND1:PANEL_SOFFIT]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.0000
+Suct= 0.0000
+[EXTEND1:PANEL_V]
+Kh= 0.98
+Basic= 0.0000
+Press= 0.0000
+Suct= 0.0000
+[EXTEND1:PURLIN_H]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.4785
+Suct=-1.3660
+[EXTEND1:PURLIN_SOFFIT]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.0000
+Suct= 0.0000
+[EXTEND1:PURLIN_V]
+Kh= 0.98
+Basic= 0.0000
+Press= 0.0000
+Suct= 0.0000
+[EXTEND2:BEAM_H]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.4785
+Suct=-1.6473
+[EXTEND2:BEAM_SOFFIT]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.0000
+Suct= 0.0000
+[EXTEND2:BEAM_V]
+Kh= 0.98
+Basic= 0.0000
+Press= 0.0000
+Suct= 0.0000
+[EXTEND2:FRAME_H]
+Kh= 0.98
+Basic= 0.9865
+Press=-1.4698
+Suct=-0.3701
+Long= 0.0559
+Long_Area=  6.594
+Long_Area_Ratio= 0.0797
+[EXTEND2:FRAME_V]
+Kh= 0.98
+Basic= 0.0000
+Press= 0.0000
+Suct= 0.0000
+[EXTEND2:PANEL_H]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.4785
+Suct=-1.6770
+[EXTEND2:PANEL_SOFFIT]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.0000
+Suct= 0.0000
+[EXTEND2:PANEL_V]
+Kh= 0.98
+Basic= 0.0000
+Press= 0.0000
+Suct= 0.0000
+[EXTEND2:PURLIN_H]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.4785
+Suct=-1.3660
+[EXTEND2:PURLIN_SOFFIT]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.0000
+Suct= 0.0000
+[EXTEND2:PURLIN_V]
+Kh= 0.98
+Basic= 0.0000
+Press= 0.0000
+Suct= 0.0000
+[EXTEND3:BEAM_H]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.4785
+Suct=-1.6473
+[EXTEND3:BEAM_SOFFIT]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.0000
+Suct= 0.0000
+[EXTEND3:BEAM_V]
+Kh= 0.98
+Basic= 0.0000
+Press= 0.0000
+Suct= 0.0000
+[EXTEND3:FRAME_H]
+Kh= 0.98
+Basic= 0.9865
+Press=-1.4698
+Suct=-0.3701
+Long= 0.0559
+Long_Area=  6.594
+Long_Area_Ratio= 0.0797
+[EXTEND3:FRAME_V]
+Kh= 0.98
+Basic= 0.0000
+Press= 0.0000
+Suct= 0.0000
+[EXTEND3:PANEL_H]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.4785
+Suct=-1.6770
+[EXTEND3:PANEL_SOFFIT]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.0000
+Suct= 0.0000
+[EXTEND3:PANEL_V]
+Kh= 0.98
+Basic= 0.0000
+Press= 0.0000
+Suct= 0.0000
+[EXTEND3:PURLIN_H]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.4785
+Suct=-1.3660
+[EXTEND3:PURLIN_SOFFIT]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.0000
+Suct= 0.0000
+[EXTEND3:PURLIN_V]
+Kh= 0.98
+Basic= 0.0000
+Press= 0.0000
+Suct= 0.0000
+[FORMULA]
+Wind=0.00256*Kh*Kzt*Kd*V^2*I
+[LABEL]
+Import=I
+Wind_Velocity=V
+[PARTDES:COLUMN]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.8612
+Suct=-0.9411
+[PARTDES:GIRT]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.8612
+Suct=-0.9411
+[PARTDES:JAMB]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.8621
+Suct=-0.9509
+[PARTDES:PANEL]
+Kh= 0.98
+Basic= 0.9865
+Press= 1.0654
+Suct=-1.1542
+[RFDES-1:EXTEND1_H]
+kh=0.980
+Basic= 0.9865
+Wind_L= 0.0000
+Wind_R= 0.0000
+[RFDES-1:EXTEND1_V]
+kh=0.980
+Basic= 0.0000
+Press= 0.0000
+Suct= 0.0000
+[RFDES-1:EXTEND2_H]
+kh=0.980
+Basic= 0.9865
+Wind_L=-0.5299
+Wind_R=-1.8448
+[RFDES-1:EXTEND2_V]
+kh=0.980
+Basic= 0.0000
+Press= 0.0000
+Suct= 0.0000
+[RFDES-1:EXTEND3_H]
+kh=0.980
+Basic= 0.9865
+Wind_L= 0.0000
+Wind_R= 0.0000
+[RFDES-1:EXTEND3_V]
+kh=0.980
+Basic= 0.0000
+Press= 0.0000
+Suct= 0.0000
+[RFDES-1:LONG_WIND_L]
+Surf1= -0.6300
+Surf2= -0.8700
+Surf3= -0.8700
+Surf4= -0.6300
+Zone=2.0
+Surf2-1= -1.2500
+Start2-1=    0.00
+End2-1= 2560.00
+Surf3-1= -1.2500
+Start3-1= 3871.92
+End3-1= 6431.92
+[RFDES-1:LONG_WIND_R]
+Surf1= -0.2700
+Surf2= -0.5100
+Surf3= -0.5100
+Surf4= -0.2700
+Zone=2.0
+Surf2-1= -0.8900
+Start2-1=    0.00
+End2-1= 2560.00
+Surf3-1= -0.8900
+Start3-1= 3871.92
+End3-1= 6431.92
+[RFDES-1:WIND]
+Kh= 0.98
+Basic= 0.9865
+Cpi_P= 0.18
+Cpi_S=-0.18
+CpCg1_C=  0.6186
+CpCg2_C= -1.0700
+CpCg3_C= -0.5372
+CpCg4_C= -0.4395
+[RFDES-1:WIND_1_L]
+Surf1=  0.4386
+Surf2= -1.2500
+Surf3= -0.7176
+Surf4= -0.6195
+Surf2_1= -0.7176
+Start2_1= 6400.00
+End2_1= 6431.92
+[RFDES-1:WIND_1_R]
+Surf1= -0.6195
+Surf2= -0.7176
+Surf3= -1.2500
+Surf4=  0.4386
+Surf3_1= -0.7176
+Start3_1=    0.00
+End3_1=   31.92
+[RFDES-1:WIND_2_L]
+Surf1=  0.7986
+Surf2= -0.8900
+Surf3= -0.3576
+Surf4= -0.2595
+Surf2_1= -0.3576
+Start2_1= 6400.00
+End2_1= 6431.92
+[RFDES-1:WIND_2_R]
+Surf1= -0.2595
+Surf2= -0.3576
+Surf3= -0.8900
+Surf4=  0.7986
+Surf3_1= -0.3576
+Start3_1=    0.00
+End3_1=   31.92
+[RFDES-2:EXTEND1_H]
+kh=0.980
+Basic= 0.9865
+Wind_L= 0.0000
+Wind_R= 0.0000
+[RFDES-2:EXTEND1_V]
+kh=0.980
+Basic= 0.0000
+Press= 0.0000
+Suct= 0.0000
+[RFDES-2:EXTEND2_H]
+kh=0.980
+Basic= 0.9865
+Wind_L=-0.3699
+Wind_R=-1.4699
+[RFDES-2:EXTEND2_V]
+kh=0.980
+Basic= 0.0000
+Press= 0.0000
+Suct= 0.0000
+[RFDES-2:EXTEND3_H]
+kh=0.980
+Basic= 0.9865
+Wind_L= 0.0000
+Wind_R= 0.0000
+[RFDES-2:EXTEND3_V]
+kh=0.980
+Basic= 0.0000
+Press= 0.0000
+Suct= 0.0000
+[RFDES-2:LONG_WIND_L]
+Surf1= -0.6300
+Surf2= -0.8700
+Surf3= -0.8700
+Surf4= -0.6300
+Zone=2.0
+Surf2-1= -1.0591
+Start2-1=    0.00
+End2-1= 2560.00
+Surf3-1= -1.0591
+Start3-1= 3871.92
+End3-1= 6431.92
+[RFDES-2:LONG_WIND_R]
+Surf1= -0.2700
+Surf2= -0.3968
+Surf3= -0.3968
+Surf4= -0.2700
+Zone=2.0
+Surf2-1= -0.6991
+Start2-1=    0.00
+End2-1= 2560.00
+Surf3-1= -0.6991
+Start3-1= 3871.92
+End3-1= 6431.92
+[RFDES-2:WIND]
+Kh= 0.98
+Basic= 0.9865
+Cpi_P= 0.18
+Cpi_S=-0.18
+CpCg1_C=  0.4059
+CpCg2_C= -0.6900
+CpCg3_C= -0.3750
+CpCg4_C= -0.2963
+[RFDES-2:WIND_1_L]
+Surf1=  0.2259
+Surf2= -0.8700
+Surf3= -0.5552
+Surf4= -0.4763
+Surf2_1= -0.5552
+Start2_1= 6400.00
+End2_1= 6431.92
+[RFDES-2:WIND_1_R]
+Surf1= -0.4763
+Surf2= -0.5552
+Surf3= -0.8700
+Surf4=  0.2259
+Surf3_1= -0.5552
+Start3_1=    0.00
+End3_1=   31.92
+[RFDES-2:WIND_2_L]
+Surf1=  0.5859
+Surf2= -0.5100
+Surf3= -0.1952
+Surf4= -0.1163
+Surf2_1= -0.1952
+Start2_1= 6400.00
+End2_1= 6431.92
+[RFDES-2:WIND_2_R]
+Surf1= -0.1163
+Surf2= -0.1952
+Surf3= -0.5100
+Surf4=  0.5859
+Surf3_1= -0.1952
+Start3_1=    0.00
+End3_1=   31.92
+[RFDES-3:EXTEND1_H]
+kh=0.980
+Basic= 0.9865
+Wind_L= 0.0000
+Wind_R= 0.0000
+[RFDES-3:EXTEND1_V]
+kh=0.980
+Basic= 0.0000
+Press= 0.0000
+Suct= 0.0000
+[RFDES-3:EXTEND2_H]
+kh=0.980
+Basic= 0.9865
+Wind_L=-0.3699
+Wind_R=-1.4699
+[RFDES-3:EXTEND2_V]
+kh=0.980
+Basic= 0.0000
+Press= 0.0000
+Suct= 0.0000
+[RFDES-3:EXTEND3_H]
+kh=0.980
+Basic= 0.9865
+Wind_L= 0.0000
+Wind_R= 0.0000
+[RFDES-3:EXTEND3_V]
+kh=0.980
+Basic= 0.0000
+Press= 0.0000
+Suct= 0.0000
+[RFDES-3:LONG_WIND_L]
+Surf1= -0.6300
+Surf2= -0.8700
+Surf3= -0.8700
+Surf4= -0.6300
+Zone=2.0
+Surf2-1= -0.9864
+Start2-1=    0.00
+End2-1= 2560.00
+Surf3-1= -0.9864
+Start3-1= 3871.92
+End3-1= 6431.92
+[RFDES-3:LONG_WIND_R]
+Surf1= -0.2700
+Surf2= -0.3538
+Surf3= -0.3538
+Surf4= -0.2700
+Zone=2.0
+Surf2-1= -0.6264
+Start2-1=    0.00
+End2-1= 2560.00
+Surf3-1= -0.6264
+Start3-1= 3871.92
+End3-1= 6431.92
+[RFDES-3:WIND]
+Kh= 0.98
+Basic= 0.9865
+Cpi_P= 0.18
+Cpi_S=-0.18
+CpCg1_C=  0.4059
+CpCg2_C= -0.6900
+CpCg3_C= -0.3750
+CpCg4_C= -0.2963
+[RFDES-3:WIND_1_L]
+Surf1=  0.2259
+Surf2= -0.8700
+Surf3= -0.5552
+Surf4= -0.4763
+Surf2_1= -0.5552
+Start2_1= 6400.00
+End2_1= 6431.92
+[RFDES-3:WIND_1_R]
+Surf1= -0.4763
+Surf2= -0.5552
+Surf3= -0.8700
+Surf4=  0.2259
+Surf3_1= -0.5552
+Start3_1=    0.00
+End3_1=   31.92
+[RFDES-3:WIND_2_L]
+Surf1=  0.5859
+Surf2= -0.5100
+Surf3= -0.1952
+Surf4= -0.1163
+Surf2_1= -0.1952
+Start2_1= 6400.00
+End2_1= 6431.92
+[RFDES-3:WIND_2_R]
+Surf1= -0.1163
+Surf2= -0.1952
+Surf3= -0.5100
+Surf4=  0.5859
+Surf3_1= -0.1952
+Start3_1=    0.00
+End3_1=   31.92
+[RFDES-4:EXTEND1_H]
+kh=0.980
+Basic= 0.9865
+Wind_L= 0.0000
+Wind_R= 0.0000
+[RFDES-4:EXTEND1_V]
+kh=0.980
+Basic= 0.0000
+Press= 0.0000
+Suct= 0.0000
+[RFDES-4:EXTEND2_H]
+kh=0.980
+Basic= 0.9865
+Wind_L=-0.3699
+Wind_R=-1.4699
+[RFDES-4:EXTEND2_V]
+kh=0.980
+Basic= 0.0000
+Press= 0.0000
+Suct= 0.0000
+[RFDES-4:EXTEND3_H]
+kh=0.980
+Basic= 0.9865
+Wind_L= 0.0000
+Wind_R= 0.0000
+[RFDES-4:EXTEND3_V]
+kh=0.980
+Basic= 0.0000
+Press= 0.0000
+Suct= 0.0000
+[RFDES-4:LONG_WIND_L]
+Surf1= -0.6300
+Surf2= -0.8700
+Surf3= -0.8700
+Surf4= -0.6300
+Zone=2.0
+Surf2-1= -1.2500
+Start2-1=    0.00
+End2-1= 2560.00
+Surf3-1= -1.2500
+Start3-1= 3871.92
+End3-1= 6431.92
+[RFDES-4:LONG_WIND_R]
+Surf1= -0.2700
+Surf2= -0.5100
+Surf3= -0.5100
+Surf4= -0.2700
+Zone=2.0
+Surf2-1= -0.8900
+Start2-1=    0.00
+End2-1= 2560.00
+Surf3-1= -0.8900
+Start3-1= 3871.92
+End3-1= 6431.92
+[RFDES-4:WIND]
+Kh= 0.98
+Basic= 0.9865
+Cpi_P= 0.18
+Cpi_S=-0.18
+CpCg1_C=  0.4059
+CpCg2_C= -0.6900
+CpCg3_C= -0.3750
+CpCg4_C= -0.2963
+[RFDES-4:WIND_1_L]
+Surf1=  0.2259
+Surf2= -0.8700
+Surf3= -0.5552
+Surf4= -0.4763
+Surf2_1= -0.5552
+Start2_1= 6400.00
+End2_1= 6431.92
+[RFDES-4:WIND_1_R]
+Surf1= -0.4763
+Surf2= -0.5552
+Surf3= -0.8700
+Surf4=  0.2259
+Surf3_1= -0.5552
+Start3_1=    0.00
+End3_1=   31.92
+[RFDES-4:WIND_2_L]
+Surf1=  0.5859
+Surf2= -0.5100
+Surf3= -0.1952
+Surf4= -0.1163
+Surf2_1= -0.1952
+Start2_1= 6400.00
+End2_1= 6431.92
+[RFDES-4:WIND_2_R]
+Surf1= -0.1163
+Surf2= -0.1952
+Surf3= -0.5100
+Surf4=  0.5859
+Surf3_1= -0.1952
+Start3_1=    0.00
+End3_1=   31.92
+[RFDES-5:EXTEND1_H]
+kh=0.980
+Basic= 0.9865
+Wind_L= 0.0000
+Wind_R= 0.0000
+[RFDES-5:EXTEND1_V]
+kh=0.980
+Basic= 0.0000
+Press= 0.0000
+Suct= 0.0000
+[RFDES-5:EXTEND2_H]
+kh=0.980
+Basic= 0.9865
+Wind_L=-0.5299
+Wind_R=-1.8448
+[RFDES-5:EXTEND2_V]
+kh=0.980
+Basic= 0.0000
+Press= 0.0000
+Suct= 0.0000
+[RFDES-5:EXTEND3_H]
+kh=0.980
+Basic= 0.9865
+Wind_L= 0.0000
+Wind_R= 0.0000
+[RFDES-5:EXTEND3_V]
+kh=0.980
+Basic= 0.0000
+Press= 0.0000
+Suct= 0.0000
+[RFDES-5:LONG_WIND_L]
+Surf1= -0.6300
+Surf2= -0.8700
+Surf3= -0.8700
+Surf4= -0.6300
+Zone=2.0
+Surf2-1= -1.2500
+Start2-1=    0.00
+End2-1= 2560.00
+Surf3-1= -1.2500
+Start3-1= 3871.92
+End3-1= 6431.92
+[RFDES-5:LONG_WIND_R]
+Surf1= -0.2700
+Surf2= -0.5100
+Surf3= -0.5100
+Surf4= -0.2700
+Zone=2.0
+Surf2-1= -0.8900
+Start2-1=    0.00
+End2-1= 2560.00
+Surf3-1= -0.8900
+Start3-1= 3871.92
+End3-1= 6431.92
+[RFDES-5:WIND]
+Kh= 0.98
+Basic= 0.9865
+Cpi_P= 0.18
+Cpi_S=-0.18
+CpCg1_C=  0.6186
+CpCg2_C= -1.0700
+CpCg3_C= -0.5372
+CpCg4_C= -0.4395
+[RFDES-5:WIND_1_L]
+Surf1=  0.4386
+Surf2= -1.2500
+Surf3= -0.7176
+Surf4= -0.6195
+Surf2_1= -0.7176
+Start2_1= 6400.00
+End2_1= 6431.92
+[RFDES-5:WIND_1_R]
+Surf1= -0.6195
+Surf2= -0.7176
+Surf3= -1.2500
+Surf4=  0.4386
+Surf3_1= -0.7176
+Start3_1=    0.00
+End3_1=   31.92
+[RFDES-5:WIND_2_L]
+Surf1=  0.7986
+Surf2= -0.8900
+Surf3= -0.3576
+Surf4= -0.2595
+Surf2_1= -0.3576
+Start2_1= 6400.00
+End2_1= 6431.92
+[RFDES-5:WIND_2_R]
+Surf1= -0.2595
+Surf2= -0.3576
+Surf3= -0.8900
+Surf4=  0.7986
+Surf3_1= -0.3576
+Start3_1=    0.00
+End3_1=   31.92
+[ROOF:SURFACE2_ZONES]
+NoAreas=12
+Area1_ZoneId=1
+Area1_Label=Interior
+Area1_Load=WINDP
+Area1_EffectiveArea1=  0.9290
+Area1_Coeff1=  0.4800
+Area1_EffectiveArea2=  9.2903
+Area1_Coeff2=  0.3800
+Area2_ZoneId=1
+Area2_Label=Interior
+Area2_Load=WINDS
+Area2_EffectiveArea1=  0.9290
+Area2_Coeff1= -1.1800
+Area2_EffectiveArea2=  9.2903
+Area2_Coeff2= -1.0800
+Area3_ZoneId=3
+Area3_Label=Edge_Left
+Area3_Load=WINDP
+Area3_EffectiveArea1=  0.9290
+Area3_Coeff1=  0.4800
+Area3_EffectiveArea2=  9.2903
+Area3_Coeff2=  0.3800
+Area4_ZoneId=3
+Area4_Label=Edge_Left
+Area4_Load=WINDS
+Area4_EffectiveArea1=  0.9290
+Area4_Coeff1= -1.9800
+Area4_EffectiveArea2=  9.2903
+Area4_Coeff2= -1.2800
+Area5_ZoneId=4
+Area5_Label=Edge_Top
+Area5_Load=WINDP
+Area5_EffectiveArea1=  0.9290
+Area5_Coeff1=  0.4800
+Area5_EffectiveArea2=  9.2903
+Area5_Coeff2=  0.3800
+Area6_ZoneId=4
+Area6_Label=Edge_Top
+Area6_Load=WINDS
+Area6_EffectiveArea1=  0.9290
+Area6_Coeff1= -1.9800
+Area6_EffectiveArea2=  9.2903
+Area6_Coeff2= -1.2800
+Area7_ZoneId=5
+Area7_Label=Edge_Right
+Area7_Load=WINDP
+Area7_EffectiveArea1=  0.9290
+Area7_Coeff1=  0.4800
+Area7_EffectiveArea2=  9.2903
+Area7_Coeff2=  0.3800
+Area8_ZoneId=5
+Area8_Label=Edge_Right
+Area8_Load=WINDS
+Area8_EffectiveArea1=  0.9290
+Area8_Coeff1= -1.9800
+Area8_EffectiveArea2=  9.2903
+Area8_Coeff2= -1.2800
+Area9_ZoneId=7
+Area9_Label=Corner_Top_Left
+Area9_Load=WINDP
+Area9_EffectiveArea1=  0.9290
+Area9_Coeff1=  0.4800
+Area9_EffectiveArea2=  9.2903
+Area9_Coeff2=  0.3800
+Area10_ZoneId=7
+Area10_Label=Corner_Top_Left
+Area10_Load=WINDS
+Area10_EffectiveArea1=  0.9290
+Area10_Coeff1= -2.9800
+Area10_EffectiveArea2=  9.2903
+Area10_Coeff2= -1.2800
+Area11_ZoneId=8
+Area11_Label=Corner_Top_Right
+Area11_Load=WINDP
+Area11_EffectiveArea1=  0.9290
+Area11_Coeff1=  0.4800
+Area11_EffectiveArea2=  9.2903
+Area11_Coeff2=  0.3800
+Area12_ZoneId=8
+Area12_Label=Corner_Top_Right
+Area12_Load=WINDS
+Area12_EffectiveArea1=  0.9290
+Area12_Coeff1= -2.9800
+Area12_EffectiveArea2=  9.2903
+Area12_Coeff2= -1.2800
+[ROOF:SURFACE3_ZONES]
+NoAreas=12
+Area1_ZoneId=1
+Area1_Label=Interior
+Area1_Load=WINDP
+Area1_EffectiveArea1=  0.9290
+Area1_Coeff1=  0.4800
+Area1_EffectiveArea2=  9.2903
+Area1_Coeff2=  0.3800
+Area2_ZoneId=1
+Area2_Label=Interior
+Area2_Load=WINDS
+Area2_EffectiveArea1=  0.9290
+Area2_Coeff1= -1.1800
+Area2_EffectiveArea2=  9.2903
+Area2_Coeff2= -1.0800
+Area3_ZoneId=3
+Area3_Label=Edge_Left
+Area3_Load=WINDP
+Area3_EffectiveArea1=  0.9290
+Area3_Coeff1=  0.4800
+Area3_EffectiveArea2=  9.2903
+Area3_Coeff2=  0.3800
+Area4_ZoneId=3
+Area4_Label=Edge_Left
+Area4_Load=WINDS
+Area4_EffectiveArea1=  0.9290
+Area4_Coeff1= -1.9800
+Area4_EffectiveArea2=  9.2903
+Area4_Coeff2= -1.2800
+Area5_ZoneId=5
+Area5_Label=Edge_Right
+Area5_Load=WINDP
+Area5_EffectiveArea1=  0.9290
+Area5_Coeff1=  0.4800
+Area5_EffectiveArea2=  9.2903
+Area5_Coeff2=  0.3800
+Area6_ZoneId=5
+Area6_Label=Edge_Right
+Area6_Load=WINDS
+Area6_EffectiveArea1=  0.9290
+Area6_Coeff1= -1.9800
+Area6_EffectiveArea2=  9.2903
+Area6_Coeff2= -1.2800
+Area7_ZoneId=6
+Area7_Label=Edge_Bottom
+Area7_Load=WINDP
+Area7_EffectiveArea1=  0.9290
+Area7_Coeff1=  0.4800
+Area7_EffectiveArea2=  9.2903
+Area7_Coeff2=  0.3800
+Area8_ZoneId=6
+Area8_Label=Edge_Bottom
+Area8_Load=WINDS
+Area8_EffectiveArea1=  0.9290
+Area8_Coeff1= -1.9800
+Area8_EffectiveArea2=  9.2903
+Area8_Coeff2= -1.2800
+Area9_ZoneId=9
+Area9_Label=Corner_Bottom_Right
+Area9_Load=WINDP
+Area9_EffectiveArea1=  0.9290
+Area9_Coeff1=  0.4800
+Area9_EffectiveArea2=  9.2903
+Area9_Coeff2=  0.3800
+Area10_ZoneId=9
+Area10_Label=Corner_Bottom_Right
+Area10_Load=WINDS
+Area10_EffectiveArea1=  0.9290
+Area10_Coeff1= -2.9800
+Area10_EffectiveArea2=  9.2903
+Area10_Coeff2= -1.2800
+Area11_ZoneId=10
+Area11_Label=Corner_Bottom_Left
+Area11_Load=WINDP
+Area11_EffectiveArea1=  0.9290
+Area11_Coeff1=  0.4800
+Area11_EffectiveArea2=  9.2903
+Area11_Coeff2=  0.3800
+Area12_ZoneId=10
+Area12_Label=Corner_Bottom_Left
+Area12_Load=WINDS
+Area12_EffectiveArea1=  0.9290
+Area12_Coeff1= -2.9800
+Area12_EffectiveArea2=  9.2903
+Area12_Coeff2= -1.2800
+[ROOFDES:BRACING]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.3946
+Suct=-0.2861
+Roof=-0.6807
+[ROOFDES:EDGE_BRACING]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.6017
+Suct=-0.4242
+Roof=-1.0555
+[ROOFDES:Ext1]
+Purlin_Beam_Press= 0.4785
+Purlin_Beam_Suct=-1.3660
+Purlin_Facia_Press= 0.0000
+Purlin_Facia_Suct= 0.0000
+Panel_Beam_Press= 0.4785
+Panel_Beam_Suct=-1.6770
+Panel_Facia_Press= 0.0000
+Panel_Facia_Suct= 0.0000
+[ROOFDES:Ext2]
+Purlin_Beam_Press= 0.4785
+Purlin_Beam_Suct=-1.3660
+Purlin_Facia_Press= 0.0000
+Purlin_Facia_Suct= 0.0000
+Panel_Beam_Press= 0.4785
+Panel_Beam_Suct=-1.6770
+Panel_Facia_Press= 0.0000
+Panel_Facia_Suct= 0.0000
+[ROOFDES:Ext3]
+Purlin_Beam_Press= 0.4785
+Purlin_Beam_Suct=-1.3660
+Purlin_Facia_Press= 0.0000
+Purlin_Facia_Suct= 0.0000
+Panel_Beam_Press= 0.4785
+Panel_Beam_Suct=-1.6770
+Panel_Facia_Press= 0.0000
+Panel_Facia_Suct= 0.0000
+[ROOFDES:FACIA_BRACE]
+Kh= 0.98
+Basic= 0.9865
+Press= 1.4797
+Suct=-0.9865
+Roof= 0.7892
+[ROOFDES:PANEL]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.4785
+Suct=-1.1640
+[ROOFDES:PURLIN]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.4785
+Suct=-1.0654
+[ROOFDES:PURLIN_G_EXT]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.4785
+Suct=-1.6473
+[ROOFDES:ZONE_SURFACE2_LOAD1]
+NoAreas= 6
+Area1_ZoneId= 1
+Area1_Label=Interior
+Area1_Width=    0.00
+Area1_Length=    0.00
+Area1_Purlin_Press=  1.0000
+Area1_Purlin_Suct=  1.0000
+Area1_Panel_Press=  1.0000
+Area1_Panel_Suct=  1.0000
+Area1_Screw_Suct=  1.0000
+Area2_ZoneId= 3
+Area2_Label=Edge_Left
+Area2_Width=    0.00
+Area2_Length= 1280.00
+Area2_Purlin_Press=  1.0000
+Area2_Purlin_Suct=  1.1833
+Area2_Panel_Press=  1.0000
+Area2_Panel_Suct=  1.6780
+Area2_Screw_Suct=  1.6780
+Area3_ZoneId= 4
+Area3_Label=Edge_Top
+Area3_Width= 1280.00
+Area3_Length=    0.00
+Area3_Purlin_Press=  1.0000
+Area3_Purlin_Suct=  1.1833
+Area3_Panel_Press=  1.0000
+Area3_Panel_Suct=  1.6780
+Area3_Screw_Suct=  1.6780
+Area4_ZoneId= 5
+Area4_Label=Edge_Right
+Area4_Width=    0.00
+Area4_Length= 1280.00
+Area4_Purlin_Press=  1.0000
+Area4_Purlin_Suct=  1.1833
+Area4_Panel_Press=  1.0000
+Area4_Panel_Suct=  1.6780
+Area4_Screw_Suct=  1.6780
+Area5_ZoneId= 7
+Area5_Label=Corner_Top_Left
+Area5_Width= 1280.00
+Area5_Length= 1280.00
+Area5_Purlin_Press=  1.0000
+Area5_Purlin_Suct=  1.1833
+Area5_Panel_Press=  1.0000
+Area5_Panel_Suct=  2.5254
+Area5_Screw_Suct=  2.5254
+Area6_ZoneId= 8
+Area6_Label=Corner_Top_Right
+Area6_Width= 1280.00
+Area6_Length= 1280.00
+Area6_Purlin_Press=  1.0000
+Area6_Purlin_Suct=  1.1833
+Area6_Panel_Press=  1.0000
+Area6_Panel_Suct=  2.5254
+Area6_Screw_Suct=  2.5254
+[ROOFDES:ZONE_SURFACE2_LOAD2]
+NoAreas= 1
+Area1_ZoneId= 1
+Area1_Label=Interior
+Area1_Width=    0.00
+Area1_Length=    0.00
+Area1_Purlin_Press=  1.0000
+Area1_Purlin_Suct=  1.0000
+Area1_Panel_Press=  1.0000
+Area1_Panel_Suct=  1.0000
+Area1_Screw_Suct=  1.0000
+[ROOFDES:ZONE_SURFACE2_LOAD3]
+NoAreas= 1
+Area1_ZoneId= 1
+Area1_Label=Interior
+Area1_Width=    0.00
+Area1_Length=    0.00
+Area1_Purlin_Press=  0.0000
+Area1_Purlin_Suct=  1.0000
+Area1_Panel_Press=  0.0000
+Area1_Panel_Suct=  0.0000
+Area1_Screw_Suct=  0.0000
+[ROOFDES:ZONE_SURFACE2_LOAD4]
+NoAreas= 1
+Area1_ZoneId= 1
+Area1_Label=Interior
+Area1_Width=    0.00
+Area1_Length=    0.00
+Area1_Purlin_Press=  1.0000
+Area1_Purlin_Suct=  1.0000
+Area1_Panel_Press=  1.0000
+Area1_Panel_Suct=  1.0000
+Area1_Screw_Suct=  0.0000
+[ROOFDES:ZONE_SURFACE3_LOAD1]
+NoAreas= 6
+Area1_ZoneId= 1
+Area1_Label=Interior
+Area1_Width=    0.00
+Area1_Length=    0.00
+Area1_Purlin_Press=  1.0000
+Area1_Purlin_Suct=  1.0000
+Area1_Panel_Press=  1.0000
+Area1_Panel_Suct=  1.0000
+Area1_Screw_Suct=  1.0000
+Area2_ZoneId= 3
+Area2_Label=Edge_Left
+Area2_Width=    0.00
+Area2_Length= 1280.00
+Area2_Purlin_Press=  1.0000
+Area2_Purlin_Suct=  1.1833
+Area2_Panel_Press=  1.0000
+Area2_Panel_Suct=  1.6780
+Area2_Screw_Suct=  1.6780
+Area3_ZoneId= 5
+Area3_Label=Edge_Right
+Area3_Width=    0.00
+Area3_Length= 1280.00
+Area3_Purlin_Press=  1.0000
+Area3_Purlin_Suct=  1.1833
+Area3_Panel_Press=  1.0000
+Area3_Panel_Suct=  1.6780
+Area3_Screw_Suct=  1.6780
+Area4_ZoneId= 6
+Area4_Label=Edge_Bottom
+Area4_Width= 1280.00
+Area4_Length=    0.00
+Area4_Purlin_Press=  1.0000
+Area4_Purlin_Suct=  1.1833
+Area4_Panel_Press=  1.0000
+Area4_Panel_Suct=  1.6780
+Area4_Screw_Suct=  1.6780
+Area5_ZoneId= 9
+Area5_Label=Corner_Bottom_Right
+Area5_Width= 1280.00
+Area5_Length= 1280.00
+Area5_Purlin_Press=  1.0000
+Area5_Purlin_Suct=  1.1833
+Area5_Panel_Press=  1.0000
+Area5_Panel_Suct=  2.5254
+Area5_Screw_Suct=  2.5254
+Area6_ZoneId=10
+Area6_Label=Corner_Bottom_Left
+Area6_Width= 1280.00
+Area6_Length= 1280.00
+Area6_Purlin_Press=  1.0000
+Area6_Purlin_Suct=  1.1833
+Area6_Panel_Press=  1.0000
+Area6_Panel_Suct=  2.5254
+Area6_Screw_Suct=  2.5254
+[ROOFDES:ZONE_SURFACE3_LOAD2]
+NoAreas= 1
+Area1_ZoneId= 1
+Area1_Label=Interior
+Area1_Width=    0.00
+Area1_Length=    0.00
+Area1_Purlin_Press=  1.0000
+Area1_Purlin_Suct=  1.0000
+Area1_Panel_Press=  1.0000
+Area1_Panel_Suct=  1.0000
+Area1_Screw_Suct=  1.0000
+[ROOFDES:ZONE_SURFACE3_LOAD3]
+NoAreas= 1
+Area1_ZoneId= 1
+Area1_Label=Interior
+Area1_Width=    0.00
+Area1_Length=    0.00
+Area1_Purlin_Press=  0.0000
+Area1_Purlin_Suct=  1.0000
+Area1_Panel_Press=  0.0000
+Area1_Panel_Suct=  0.0000
+Area1_Screw_Suct=  0.0000
+[ROOFDES:ZONE_SURFACE3_LOAD4]
+NoAreas= 1
+Area1_ZoneId= 1
+Area1_Label=Interior
+Area1_Width=    0.00
+Area1_Length=    0.00
+Area1_Purlin_Press=  1.0000
+Area1_Purlin_Suct=  1.0000
+Area1_Panel_Press=  1.0000
+Area1_Panel_Suct=  1.0000
+Area1_Screw_Suct=  0.0000
+[SCDES:COLUMN]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.8621
+Suct=-0.9509
+Long=-0.6215
+[SWDES-B:GIRT]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.8621
+Suct=-0.9509
+Edge_Suct=-1.0127
+Edge_Suct_Ratio= 1.07
+[SWDES-B:JAMB]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.8621
+Suct=-0.9509
+Edge_Suct=-1.0127
+Edge_Suct_Ratio= 1.07
+[SWDES-B:PANEL]
+Kh= 0.98
+Basic= 0.9865
+Press= 1.0654
+Suct=-1.1542
+Edge_Suct=-1.1542
+Edge_Suct_Ratio= 1.00
+Area2_Width=   1280.00
+Area3_Width=   1280.00
+[SWDES-B:PARAPET_GIRT]
+Kh= 0.98
+Basic= 0.9865
+Press= 1.7697
+Suct=-1.4578
+[SWDES-F:GIRT]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.8621
+Suct=-0.9509
+Edge_Suct=-1.0127
+Edge_Suct_Ratio= 1.07
+[SWDES-F:JAMB]
+Kh= 0.98
+Basic= 0.9865
+Press= 0.8621
+Suct=-0.9509
+Edge_Suct=-1.0127
+Edge_Suct_Ratio= 1.07
+[SWDES-F:PANEL]
+Kh= 0.98
+Basic= 0.9865
+Press= 1.0654
+Suct=-1.1542
+Edge_Suct=-1.1542
+Edge_Suct_Ratio= 1.00
+Area2_Width=   1280.00
+Area3_Width=   1280.00
+[SWDES-F:PARAPET_GIRT]
+Kh= 0.98
+Basic= 0.9865
+Press= 1.7697
+Suct=-1.4578
+[WALL:ID1_ZONES]
+NoAreas=4
+Area1_ZoneId=1
+Area1_Label=Interior
+Area1_Load=WINDP
+Area1_EffectiveArea1=  0.9290
+Area1_Coeff1=  1.0800
+Area1_EffectiveArea2= 46.4516
+Area1_Coeff2=  0.8100
+Area2_ZoneId=1
+Area2_Label=Interior
+Area2_Load=WINDS
+Area2_EffectiveArea1=  0.9290
+Area2_Coeff1= -1.1700
+Area2_EffectiveArea2= 46.4516
+Area2_Coeff2= -0.9000
+Area3_ZoneId=2
+Area3_Label=Edge
+Area3_Load=WINDP
+Area3_EffectiveArea1=  0.9290
+Area3_Coeff1=  1.0800
+Area3_EffectiveArea2= 46.4516
+Area3_Coeff2=  0.8100
+Area4_ZoneId=2
+Area4_Label=Edge
+Area4_Load=WINDS
+Area4_EffectiveArea1=  0.9290
+Area4_Coeff1= -1.4400
+Area4_EffectiveArea2= 46.4516
+Area4_Coeff2= -0.9000
+[WALL:ID2_ZONES]
+NoAreas=4
+Area1_ZoneId=1
+Area1_Label=Interior
+Area1_Load=WINDP
+Area1_EffectiveArea1=  0.9290
+Area1_Coeff1=  1.0800
+Area1_EffectiveArea2= 46.4516
+Area1_Coeff2=  0.8100
+Area2_ZoneId=1
+Area2_Label=Interior
+Area2_Load=WINDS
+Area2_EffectiveArea1=  0.9290
+Area2_Coeff1= -1.1700
+Area2_EffectiveArea2= 46.4516
+Area2_Coeff2= -0.9000
+Area3_ZoneId=2
+Area3_Label=Edge
+Area3_Load=WINDP
+Area3_EffectiveArea1=  0.9290
+Area3_Coeff1=  1.0800
+Area3_EffectiveArea2= 46.4516
+Area3_Coeff2=  0.8100
+Area4_ZoneId=2
+Area4_Label=Edge
+Area4_Load=WINDS
+Area4_EffectiveArea1=  0.9290
+Area4_Coeff1= -1.4400
+Area4_EffectiveArea2= 46.4516
+Area4_Coeff2= -0.9000
+[WALL:ID3_ZONES]
+NoAreas=4
+Area1_ZoneId=1
+Area1_Label=Interior
+Area1_Load=WINDP
+Area1_EffectiveArea1=  0.9290
+Area1_Coeff1=  1.0800
+Area1_EffectiveArea2= 46.4516
+Area1_Coeff2=  0.8100
+Area2_ZoneId=1
+Area2_Label=Interior
+Area2_Load=WINDS
+Area2_EffectiveArea1=  0.9290
+Area2_Coeff1= -1.1700
+Area2_EffectiveArea2= 46.4516
+Area2_Coeff2= -0.9000
+Area3_ZoneId=2
+Area3_Label=Edge
+Area3_Load=WINDP
+Area3_EffectiveArea1=  0.9290
+Area3_Coeff1=  1.0800
+Area3_EffectiveArea2= 46.4516
+Area3_Coeff2=  0.8100
+Area4_ZoneId=2
+Area4_Label=Edge
+Area4_Load=WINDS
+Area4_EffectiveArea1=  0.9290
+Area4_Coeff1= -1.4400
+Area4_EffectiveArea2= 46.4516
+Area4_Coeff2= -0.9000
+[WALL:ID4_ZONES]
+NoAreas=4
+Area1_ZoneId=1
+Area1_Label=Interior
+Area1_Load=WINDP
+Area1_EffectiveArea1=  0.9290
+Area1_Coeff1=  1.0800
+Area1_EffectiveArea2= 46.4516
+Area1_Coeff2=  0.8100
+Area2_ZoneId=1
+Area2_Label=Interior
+Area2_Load=WINDS
+Area2_EffectiveArea1=  0.9290
+Area2_Coeff1= -1.1700
+Area2_EffectiveArea2= 46.4516
+Area2_Coeff2= -0.9000
+Area3_ZoneId=2
+Area3_Label=Edge
+Area3_Load=WINDP
+Area3_EffectiveArea1=  0.9290
+Area3_Coeff1=  1.0800
+Area3_EffectiveArea2= 46.4516
+Area3_Coeff2=  0.8100
+Area4_ZoneId=2
+Area4_Label=Edge
+Area4_Load=WINDS
+Area4_EffectiveArea1=  0.9290
+Area4_Coeff1= -1.4400
+Area4_EffectiveArea2= 46.4516
+Area4_Coeff2= -0.9000
+[ROOFDES:ZONE_SURFACE2_WIND1]
+Zone1_Label=Interior
+Zone1_Width=    0.00
+Zone1_Length=    0.00
+Zone1_Purlin_Press=    0.48
+Zone1_Purlin_Suct=   -1.07
+Zone1_Panel_Press=    0.48
+Zone1_Panel_Suct=   -1.16
+Zone1_Screw_Suct=   -1.16
+Zone3_Label=Edge_Left
+Zone3_Width=    0.00
+Zone3_Length= 1280.00
+Zone3_Purlin_Press=    0.48
+Zone3_Purlin_Suct=   -1.26
+Zone3_Panel_Press=    0.48
+Zone3_Panel_Suct=   -1.95
+Zone3_Screw_Suct=   -1.95
+Zone4_Label=Edge_Top
+Zone4_Width= 1280.00
+Zone4_Length=    0.00
+Zone4_Purlin_Press=    0.48
+Zone4_Purlin_Suct=   -1.26
+Zone4_Panel_Press=    0.48
+Zone4_Panel_Suct=   -1.95
+Zone4_Screw_Suct=   -1.95
+Zone5_Label=Edge_Right
+Zone5_Width=    0.00
+Zone5_Length= 1280.00
+Zone5_Purlin_Press=    0.48
+Zone5_Purlin_Suct=   -1.26
+Zone5_Panel_Press=    0.48
+Zone5_Panel_Suct=   -1.95
+Zone5_Screw_Suct=   -1.95
+Zone7_Label=Corner_Top_Left
+Zone7_Width= 1280.00
+Zone7_Length= 1280.00
+Zone7_Purlin_Press=    0.48
+Zone7_Purlin_Suct=   -1.26
+Zone7_Panel_Press=    0.48
+Zone7_Panel_Suct=   -2.93
+Zone7_Screw_Suct=   -2.93
+Zone8_Label=Corner_Top_Right
+Zone8_Width= 1280.00
+Zone8_Length= 1280.00
+Zone8_Purlin_Press=    0.48
+Zone8_Purlin_Suct=   -1.26
+Zone8_Panel_Press=    0.48
+Zone8_Panel_Suct=   -2.93
+Zone8_Screw_Suct=   -2.93
+[ROOFDES:ZONE_SURFACE2_WIND2]
+Zone1_Label=Interior
+Zone1_Width=    0.00
+Zone1_Length=    0.00
+Zone1_Purlin_Press=    0.48
+Zone1_Purlin_Suct=   -1.07
+Zone1_Panel_Press=    0.48
+Zone1_Panel_Suct=   -1.16
+Zone1_Screw_Suct=   -1.16
+[ROOFDES:ZONE_SURFACE2_WIND3]
+Zone1_Label=Interior
+Zone1_Width=    0.00
+Zone1_Length=    0.00
+Zone1_Purlin_Press=    0.00
+Zone1_Purlin_Suct=   -1.07
+Zone1_Panel_Press=    0.00
+Zone1_Panel_Suct=    0.00
+Zone1_Screw_Suct=    0.00
+[ROOFDES:ZONE_SURFACE2_WIND4]
+Zone1_Label=Interior
+Zone1_Width=    0.00
+Zone1_Length=    0.00
+Zone1_Purlin_Press=    0.48
+Zone1_Purlin_Suct=   -1.07
+Zone1_Panel_Press=    0.48
+Zone1_Panel_Suct=   -1.16
+Zone1_Screw_Suct=    0.00
+[ROOFDES:ZONE_SURFACE3_WIND1]
+Zone1_Label=Interior
+Zone1_Width=    0.00
+Zone1_Length=    0.00
+Zone1_Purlin_Press=    0.48
+Zone1_Purlin_Suct=   -1.07
+Zone1_Panel_Press=    0.48
+Zone1_Panel_Suct=   -1.16
+Zone1_Screw_Suct=   -1.16
+Zone3_Label=Edge_Left
+Zone3_Width=    0.00
+Zone3_Length= 1280.00
+Zone3_Purlin_Press=    0.48
+Zone3_Purlin_Suct=   -1.26
+Zone3_Panel_Press=    0.48
+Zone3_Panel_Suct=   -1.95
+Zone3_Screw_Suct=   -1.95
+Zone5_Label=Edge_Right
+Zone5_Width=    0.00
+Zone5_Length= 1280.00
+Zone5_Purlin_Press=    0.48
+Zone5_Purlin_Suct=   -1.26
+Zone5_Panel_Press=    0.48
+Zone5_Panel_Suct=   -1.95
+Zone5_Screw_Suct=   -1.95
+Zone6_Label=Edge_Bottom
+Zone6_Width= 1280.00
+Zone6_Length=    0.00
+Zone6_Purlin_Press=    0.48
+Zone6_Purlin_Suct=   -1.26
+Zone6_Panel_Press=    0.48
+Zone6_Panel_Suct=   -1.95
+Zone6_Screw_Suct=   -1.95
+Zone9_Label=Corner_Bottom_Right
+Zone9_Width= 1280.00
+Zone9_Length= 1280.00
+Zone9_Purlin_Press=    0.48
+Zone9_Purlin_Suct=   -1.26
+Zone9_Panel_Press=    0.48
+Zone9_Panel_Suct=   -2.93
+Zone9_Screw_Suct=   -2.93
+Zone10_Label=Corner_Bottom_Left
+Zone10_Width= 1280.00
+Zone10_Length= 1280.00
+Zone10_Purlin_Press=    0.48
+Zone10_Purlin_Suct=   -1.26
+Zone10_Panel_Press=    0.48
+Zone10_Panel_Suct=   -2.93
+Zone10_Screw_Suct=   -2.93
+[ROOFDES:ZONE_SURFACE3_WIND2]
+Zone1_Label=Interior
+Zone1_Width=    0.00
+Zone1_Length=    0.00
+Zone1_Purlin_Press=    0.48
+Zone1_Purlin_Suct=   -1.07
+Zone1_Panel_Press=    0.48
+Zone1_Panel_Suct=   -1.16
+Zone1_Screw_Suct=   -1.16
+[ROOFDES:ZONE_SURFACE3_WIND3]
+Zone1_Label=Interior
+Zone1_Width=    0.00
+Zone1_Length=    0.00
+Zone1_Purlin_Press=    0.00
+Zone1_Purlin_Suct=   -1.07
+Zone1_Panel_Press=    0.00
+Zone1_Panel_Suct=    0.00
+Zone1_Screw_Suct=    0.00
+[ROOFDES:ZONE_SURFACE3_WIND4]
+Zone1_Label=Interior
+Zone1_Width=    0.00
+Zone1_Length=    0.00
+Zone1_Purlin_Press=    0.48
+Zone1_Purlin_Suct=   -1.07
+Zone1_Panel_Press=    0.48
+Zone1_Panel_Suct=   -1.16
+Zone1_Screw_Suct=    0.00

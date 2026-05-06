@@ -8,6 +8,7 @@ from sqlalchemy.orm import Session
 
 from app.config.settings import settings
 from app.db.crud import projects as project_crud
+from app.db.crud.stages import reset_all_stages
 from app.db.models import FileProcessingStatus
 from app.db.session import get_db
 from app.parsers.archive_handler import ArchiveHandler
@@ -66,6 +67,12 @@ async def get_project(project_id: UUID, db: Session = Depends(get_db)) -> Projec
 
 @router.post("/", response_model=ProjectRead, status_code=status.HTTP_201_CREATED, summary="Create a new project")
 async def create_project(project: ProjectCreate, db: Session = Depends(get_db)) -> ProjectRead:
+    existing = project_crud.get_project_by_proposal_id(db, project.proposal_id)
+    if existing:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=f"Project with proposal ID '{project.proposal_id}' already exists.",
+        )
     return project_crud.create_project(db, project)
 
 
@@ -95,6 +102,9 @@ async def upload_project_files(
     input_dir = _project_input_dir(project_id)
     registered_files = []
 
+    # Reset all stages when new files are uploaded
+    reset_all_stages(db, project_id)
+
     for upload in files:
         stored_path = input_dir / _safe_stored_name(upload.filename)
         with stored_path.open("wb") as buffer:
@@ -122,3 +132,27 @@ async def upload_project_files(
 
     db.commit()
     return registered_files
+
+
+@router.delete("/{project_id}/files/{file_id}", status_code=status.HTTP_204_NO_CONTENT, summary="Delete a project file")
+async def delete_file(project_id: UUID, file_id: UUID, db: Session = Depends(get_db)):
+    file_record = db.query(project_crud.ProjectFile).filter(
+        project_crud.ProjectFile.id == file_id,
+        project_crud.ProjectFile.project_id == project_id
+    ).first()
+    
+    if not file_record:
+        raise HTTPException(status_code=404, detail="File not found")
+        
+    # Delete physical file
+    stored_path = Path(file_record.stored_path)
+    if stored_path.exists():
+        stored_path.unlink()
+        
+    project_crud.delete_project_file(db, file_id)
+    
+    # Also reset stages since inventory changed
+    reset_all_stages(db, project_id)
+    
+    db.commit()
+    return None

@@ -1,0 +1,12 @@
+*                  DT_Code.SIZ
+*                    
+* In this example, the material code represents the yield strength of these plates.
+* See PE 6-05-3. 
+*                                                     
+*Stock Type  Width  Thickness  Material Code   Description
+*
+*    'WEB'      0.       0.        'Gr 345'     WB, BW plates
+*    'FLG'      0.       0.        'Gr 345'     OF, IF, BO, BI plates
+*    'BEP'      0.       0.        'Gr 345'     EP, CP, BE plates
+*    'STF'      0.       0.        'Gr 345'     ST, BS plates
+*    'CLP'      0.       0.        'Gr 345'     WR, All other plates

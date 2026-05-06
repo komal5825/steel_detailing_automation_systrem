@@ -1,0 +1,272 @@
+ 
+[CRANEDET:MEMBER1]
+Type=FRAME_CRANE
+Id=1
+Mark=RB-1
+Wall=5
+Part=W50b3010
+Offset=   4380.00
+ 
+[CRANEDET:MEMBER2]
+Type=FRAME_CRANE
+Id=2
+Mark=RB-2
+Wall=5
+Part=W50b3010
+Offset=   4380.00
+ 
+[CRANEDET:MEMBER3]
+Type=FRAME_CRANE
+Id=3
+Mark=RB-3
+Wall=5
+Part=W50b3010
+Offset=  12640.00
+ 
+[CRANEDET:MEMBER4]
+Type=FRAME_CRANE
+Id=4
+Mark=RB-3
+Wall=5
+Part=W50b3010
+Offset=  12640.00
+ 
+[CRANEDET:MEMBER5]
+Type=FRAME_CRANE
+Id=5
+Mark=RB-4
+Wall=5
+Part=W50b2510
+Offset=  20102.50
+ 
+[CRANEDET:MEMBER6]
+Type=FRAME_CRANE
+Id=6
+Mark=RB-4
+Wall=5
+Part=W50b2510
+Offset=  20102.50
+ 
+[CRANEDET:MEMBER7]
+Type=FRAME_CRANE
+Id=7
+Mark=RB-5
+Wall=5
+Part=W50b2510
+Offset=  26867.50
+ 
+[CRANEDET:MEMBER8]
+Type=FRAME_CRANE
+Id=8
+Mark=RB-6
+Wall=5
+Part=W50b2510
+Offset=  26867.50
+ 
+[CRANEDET:MEMBER9]
+Type=FRAME_CRANE
+Id=9
+Mark=CA-1
+Wall=5
+Part=L75X6
+Offset=    390.00
+ 
+[CRANEDET:MEMBER10]
+Type=FRAME_CRANE
+Id=10
+Mark=CA-1
+Wall=5
+Part=L75X6
+Offset=   8535.00
+ 
+[CRANEDET:MEMBER11]
+Type=FRAME_CRANE
+Id=11
+Mark=CA-1
+Wall=5
+Part=L75X6
+Offset=   8535.00
+ 
+[CRANEDET:MEMBER12]
+Type=FRAME_CRANE
+Id=12
+Mark=CA-1
+Wall=5
+Part=L75X6
+Offset=  16745.00
+ 
+[CRANEDET:MEMBER13]
+Type=FRAME_CRANE
+Id=13
+Mark=CA-1
+Wall=5
+Part=L75X6
+Offset=  16745.00
+ 
+[CRANEDET:MEMBER14]
+Type=FRAME_CRANE
+Id=14
+Mark=CA-1
+Wall=5
+Part=L75X6
+Offset=  23460.00
+ 
+[CRANEDET:MEMBER15]
+Type=FRAME_CRANE
+Id=15
+Mark=CA-1
+Wall=5
+Part=L75X6
+Offset=  23460.00
+ 
+[CRANEDET:MEMBER16]
+Type=FRAME_CRANE
+Id=16
+Mark=CA-1
+Wall=5
+Part=L75X6
+Offset=  30110.00
+ 
+[CRANEDET:MEMBER17]
+Type=FRAME_CRANE
+Id=17
+Mark=CA-1
+Wall=5
+Part=L75X6
+Offset=    390.00
+ 
+[CRANEDET:MEMBER18]
+Type=FRAME_CRANE
+Id=18
+Mark=CA-1
+Wall=5
+Part=L75X6
+Offset=   8535.00
+ 
+[CRANEDET:MEMBER19]
+Type=FRAME_CRANE
+Id=19
+Mark=CA-1
+Wall=5
+Part=L75X6
+Offset=   8535.00
+ 
+[CRANEDET:MEMBER20]
+Type=FRAME_CRANE
+Id=20
+Mark=CA-1
+Wall=5
+Part=L75X6
+Offset=  16745.00
+ 
+[CRANEDET:MEMBER21]
+Type=FRAME_CRANE
+Id=21
+Mark=CA-1
+Wall=5
+Part=L75X6
+Offset=  16745.00
+ 
+[CRANEDET:MEMBER22]
+Type=FRAME_CRANE
+Id=22
+Mark=CA-1
+Wall=5
+Part=L75X6
+Offset=  23460.00
+ 
+[CRANEDET:MEMBER23]
+Type=FRAME_CRANE
+Id=23
+Mark=CA-1
+Wall=5
+Part=L75X6
+Offset=  23460.00
+ 
+[CRANEDET:MEMBER24]
+Type=FRAME_CRANE
+Id=24
+Mark=CA-1
+Wall=5
+Part=L75X6
+Offset=  30110.00
+ 
+[CRANEDET:MEMBER25]
+Type=FRAME_CRANE
+Id=25
+Mark=CA-2
+Wall=5
+Part=L100X8
+Offset=    390.00
+ 
+[CRANEDET:MEMBER26]
+Type=FRAME_CRANE
+Id=26
+Mark=CA-2
+Wall=5
+Part=L100X8
+Offset=   8535.00
+ 
+[CRANEDET:MEMBER27]
+Type=FRAME_CRANE
+Id=27
+Mark=CA-2
+Wall=5
+Part=L100X8
+Offset=  16745.00
+ 
+[CRANEDET:MEMBER28]
+Type=FRAME_CRANE
+Id=28
+Mark=CA-2
+Wall=5
+Part=L100X8
+Offset=  23460.00
+ 
+[CRANEDET:MEMBER29]
+Type=FRAME_CRANE
+Id=29
+Mark=CA-2
+Wall=5
+Part=L100X8
+Offset=  30110.00
+ 
+[CRANEDET:MEMBER30]
+Type=FRAME_CRANE
+Id=30
+Mark=CA-2
+Wall=5
+Part=L100X8
+Offset=    390.00
+ 
+[CRANEDET:MEMBER31]
+Type=FRAME_CRANE
+Id=31
+Mark=CA-2
+Wall=5
+Part=L100X8
+Offset=   8535.00
+ 
+[CRANEDET:MEMBER32]
+Type=FRAME_CRANE
+Id=32
+Mark=CA-2
+Wall=5
+Part=L100X8
+Offset=  16745.00
+ 
+[CRANEDET:MEMBER33]
+Type=FRAME_CRANE
+Id=33
+Mark=CA-2
+Wall=5
+Part=L100X8
+Offset=  23460.00
+ 
+[CRANEDET:MEMBER34]
+Type=FRAME_CRANE
+Id=34
+Mark=CA-2
+Wall=5
+Part=L100X8
+Offset=  30110.00

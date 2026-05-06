@@ -1,0 +1,133 @@
+*===============================================================================
+*C323-153-Final      Insulation Drawing Input               11/AUG/2025  1:06pm
+*===============================================================================
+
+*( 1)TITLE BLOCK:
+  'INFINITI SOLUTION                       ' .. Manufacturer
+  '                                        ' .. Builder
+  'Proposed Warehouse                      ' .. Project
+  'Proposed Warehouse                      ' .. Project Address
+  '                                        ' .. Project Address
+  'C323-153-Final                          ' .. Project ID
+
+*( 2)DRAWING SIZE FACTORS:
+*  Drawing_Size     ----Object_Offset----  --------Scale_Factor-------------
+*  Width  Height    Lt    Rt    Top   Bot   Text  Table  Dim    Build  Title
+   420.0   297.0    25.0  10.0  15.0  40.0  0.55   0.55  0.55 -1.0000   0.70
+
+*( 3)DRAWING OPTIONS:
+* ---------Draw----------------    Member Trim    Gen                Page_Number
+* L_EW  F_SW  R_EW  B_SW   Roof    Table  Table  Notes    Logo       Id     Total
+   'N'   'N'   'N'   'N'   'N'      'Y'    '6'    'Y '   'N       '  '----' '----'
+
+*( 4)BUILDING LAYOUT:
+*Build                    ------L_Expand_EW------  ------R_Expand_EW------     Floor
+* Type    Width   Length  Use  Opt Extend  Offset  Use  Opt Extend  Offset      Elev
+  'FF'    22470    36285  'Y-' '-'      0     440  'Y-' '-'      0     440         0
+
+*( 5)WALL LAYOUT:
+*                            -------Wall-------   Line     Base    Wall  Sheet
+*No.  Id   Use     Type  Opt    Start    Length   Id       Elev  Offset  Notch
+  5    1  'LEFT '  '-'   '-'        0     22470  '1 '         0  5842.0   0.00
+       2  'FRONT'  '-'   '-'        0     36285  'A '         0  5842.0   0.00
+       3  'RIGHT'  '-'   '-'        0     22470  '7 '         0  5842.0   0.00
+       4  'BACK '  '-'   '-'        0     36285  'C '         0  5842.0   0.00
+       5  'ROOF '  '-'   '-'        0     36285  '- '         0    0.00   0.00
+
+*( 6)SURFACE SHAPE:
+*   No.    X_Coord   Y_Coord
+*   Surf     (mm)      (mm)
+      4          0      8420
+             11235      9544
+             22470      8420
+             22470         0
+
+*( 7)BAY SPACING:
+*  Wall  ---Offset---    No.   ---Bay_Set---
+*   Id   Left   Right   Sets     Width  Quan
+     1  230.00 230.00     1      11235    2
+     2  440.00 440.00     6       6200    1
+                                  5990    1
+                                  6145    1
+                                  5700    1
+                                  6000    1
+                                  6250    1
+     3  230.00 230.00     1      11235    2
+     4  440.00 440.00     6       6250    1
+                                  6000    1
+                                  5700    1
+                                  6145    1
+                                  5990    1
+                                  6200    1
+     5  440.00 440.00     6       6200    1
+                                  5990    1
+                                  6145    1
+                                  5700    1
+                                  6000    1
+                                  6250    1
+
+*( 8)WALL OPENINGS:
+* Wall  No.  Bay                                     Sill      Base Panel
+*  Id  Open   Id    Width   Height   Offset  Type  Height      Elev  Opt
+    1    0
+    2    0
+    3    1     1     4500     4500     3368    1        0      0.00  'Y'
+    4    0
+
+*( 9)PARTIAL WALLS:
+* Wall             Bay_Id     ----Offset-----           -Angle_Id- -Trim_Id--
+*  Id  No.  Opt  Start End    Start       End    Height Base Lt Rt Base Lt Rt
+    1    1  '-'    1    2         0         0      2500   0   0  0   0   0  0
+    2    1  '-'    1    6         0         0      2500   0   0  0   0   0  0
+    3    1  '-'    1    2         0         0      2500   0   0  0   0   0  0
+    4    1  '-'    1    6         0         0      2500   0   0  0   0   0  0
+
+*(10)INSULATION:
+* Wall
+*  Id    Use   Type  Thick
+    1    'N'   '--'     0.00
+    2    'N'   '--'     0.00
+    3    'N'   '--'     0.00
+    4    'N'   '--'     0.00
+    5    'N'   '--'     0.00
+
+*(11)DRAWING REVISIONS:
+* No.
+* Lines  Revision
+    0
+
+*(12)USER DETAILS:
+*  No.    Detail       ---Location---
+* Detail   Name          X        Y     Scale
+    0
+
+*(13)USER TEXT ADJUST:
+*  No.    -----Adjust------
+*Adjust    X     Y   Rotate   Text
+   0
+
+*(14)WIDE OPENING LAYOUT:
+*Wall  -Open-  Bay_Id  ---Clear Opening--  Wedge    Stub
+* Id   No. Id  St End  Width     Height    Height   Elev
+ 1      0
+ 2      0
+ 3      0
+ 4      0
+
+*(15)HORIZONTAL GRID LINE:
+*         L_EW   Line
+*No.    Offset   Id
+  7          0  '1   '
+          6200  '2   '
+         12190  '3   '
+         18335  '4   '
+         24035  '5   '
+         30035  '6   '
+         36285  '7   '
+
+*(16)VERTICAL GRID LINE:
+*         B_SW   Line
+*No.    Offset   Id
+  3          0  'C   '
+         11235  'B   '
+         22470  'A   '

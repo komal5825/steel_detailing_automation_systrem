@@ -1,0 +1,28 @@
+ JOB Id  : C163-027                                            Page:  1
+ CUSTOMER:                                                     Date: 19/JAN/2026
+
+
+ Fin Material               Punch
+ ish Description   Part     Code    Comment            Qnt Length (mm)    Mark
+ --- ------------- -------- ------- ------------------ --- ------------   ------
+     200x 60 C   3 200C25           See Drawing DJ-1     4   5980         DJ-1  *
+     200x 60 C   2 200C20   ?? -??  See Drawing DH-1     2   3980         DH-1   
+
+     200x 60 Z   2 200Z18   ?? -??  See Drawing  P-1     8   8175          P-1   
+     200x 60 Z   2 200Z18   ?? -??  See Drawing  P-2    32   8280          P-2   
+     200x 60 Z   2 200Z18   ?? -??  See Drawing  P-3     8   8175          P-3   
+     200x 60 Z   2 200Z18   ?? -??  See Drawing  P-4     4   6295          P-4   
+     200x 60 Z   2 200Z18   ?? -??  See Drawing  E-1     2   8175          E-1   
+     200x 60 Z   2 200Z18   ?? -??  See Drawing  E-2     8   8280          E-2   
+     200x 60 Z   2 200Z18   ?? -??  See Drawing  E-3     2   8175          E-3   
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  E-4     2   6300          E-4   
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  G-1     4   6848          G-1   
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  G-2     6   6265          G-2   
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  G-3     2   6265          G-3   
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  G-4     2   6190          G-4   
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  G-5     4   6265          G-5   
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  G-6     4    748          G-6   
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  G-7    10   8175          G-7   
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  G-8    40   8280          G-8   
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  G-9    10   8175          G-9   
+

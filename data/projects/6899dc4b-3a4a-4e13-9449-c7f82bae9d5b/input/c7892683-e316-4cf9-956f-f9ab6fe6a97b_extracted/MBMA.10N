@@ -1,0 +1,42 @@
+*FILE:MBMA.10n              UNIT:ENGLISH                         5/4/10  8:26am
+* Revisions
+*  0.00.01  1/03/2018 SPF  Changed purlin wind deflection limit from 120 to 150  
+*  0.00.02  1/03/2018 SPF  Changed wall and roof panel deflection limit to 60 per IBC Table 1604.3 note a
+*===============================================================================
+* Based on IBC 2009
+* For additional information, see code file help
+*
+*===============================================================================
+*(1)CODE IDENTIFICATION:
+*                            ----Steel_Code----
+*  Name   Year   Code_Type    Cold       Hot
+  'MBMA'   '10'     'WS'     'NAUS07'   'AISC05'
+
+*(2) DEFLECTION LIMITS FROM DESIGN CONTROL FILE:
+*  EW   --EW_RAF--  Wall  --Purlin--   Wall   Roof_Panel  Rigid Frame  Wind
+*  Col  Live  Wind  Girt  Live  Wind   Panel  Live  Wind   Horiz Vert  Bent
+   120  150   150   90    150   150     60     60    60     60   150    60 
+
+*(3) WIND LOADING FACTORS:
+*  Wind                          Seismic
+*  Strength   Wind_Load_Ratio    Strength
+*  Factor     Deflect  Factor    Factor
+   1.0000      1.00     1.00      1.000
+
+*(4) TRIBUTARY AREA FOR WIND PRESSURE/SUCTION:
+*      Units -  English(ft^2), Metric (m^2)
+* -------Roof-------  -----Extension-----  --Facia/Parapet--  -------Wall-------
+* Purlin G.Ext Panel  Beam  Purlin  Panel  Arm   Girt  Panel  Girt  Panel Column
+*  200     20    10     20    200     10    0      0     0     200   10    200  
+     0      0     0      0      0      0    0      0     0       0    0      0  
+
+*(5)  LIVE LOAD REDUCTION:
+*Use    Method 
+ 'RF'      2   
+ 'EW'      2   
+
+*(6) OPTIONS:
+*No      Event                    Condition               Value1      Value2
+  2     'LONG_WIND=BRACING'      'CLOSURE_OPEN=MBMA10'     '--'       0.0000
+        'LONG_WIND=RIGID_FRAME'  'EDGE_ZONE=EXTENDED'      '--'       0.0000
+

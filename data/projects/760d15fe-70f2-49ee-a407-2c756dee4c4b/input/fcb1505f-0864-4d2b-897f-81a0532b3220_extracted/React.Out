@@ -1,0 +1,556 @@
+ 
+ 
+ 
+ 
+                          Sivoko Steel Structures Ltd.
+                                  Comm.7,Tema
+                              Ghana (West Africa)
+ 
+ 
+ 
+ 
+                    REACTIONS, ANCHOR BOLTS, & BASE PLATES
+                                      FOR
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                               Proposed Warehouse
+                               Proposed Warehouse
+ 
+                                    C163-027
+ 
+ 
+ 
+ 
+                                 BUILDING LAYOUT
+                        Width              (mm)=  12200
+                        Length             (mm)=  45730
+                        Eave Height        (mm)=   9600/  9600
+                        Roof Slope   (rise/100)= 10.00/10.00
+ 
+                                 BUILDING LOADS
+                        Roof Dead Load  (kN/m2)=  0.10
+                        Wall Dead Load
+                          Left  Endwall (kN/m2)=  0.10
+                          Right Endwall (kN/m2)=  0.10
+                          Front Sidewall(kN/m2)=  0.10
+                          Back  Sidewall(kN/m2)=  0.10
+                        Live Load       (kN/m2)=  0.57
+                        Collateral Load (kN/m2)=  0.05
+                        Wind Speed       (m/s )=  39.0
+                        Wind Code              = MBMA10
+                        Exposure               = B
+                        Closure                = Enclosed
+                        Internal Wind Coeff    = -0.18, +0.18
+                        Risk Category          = -
+                        Importance - Wind      =  1.00
+                        Importance - Seismic   =  1.00
+                        Seismic Design Category= B
+                        Seismic Coeff (Sms)    =  0.16
+                        Temperature Change     =   20
+                        -------------------------------
+                        Designer : VVJ
+                        Detailer :
+ 
+ 
+ 
+ 
+                                     19/JAN/2026
+
+
+
+================================================================================
+ C163-027            Reactions, Anchor Bolts, & Base Plates:19/JAN/2026 10:57am
+================================================================================
+
+ -----  -----   -----Foundation_Loads(kN)-----   ---------   -----------------
+ Frame  Col      Max_Pos_Val     Max_Neg_Val     Anc._Bolt      Base_Plate 
+ Line   Line    Id  Horz  Vert  Id  Horz  Vert   No.  Diam   Width   Len Thick
+ -----  ------  -- ----- -----  -- ----- -----   --- -----   ----- ----- -----
+ 1      B        8  20.4  -0.2   9 -16.9  -5.9    4   20.0   200.0 400.0  16.0 
+                 3  -0.9   8.1                                                 
+ -----  ------  -- ----- -----  -- ----- -----   --- -----   ----- ----- -----
+ 7      B        8  20.4  -0.2   9 -16.9  -5.9    4   20.0   200.0 400.0  16.0 
+                 3  -0.9   8.1                                                 
+ -----  ------  -- ----- -----  -- ----- -----   --- -----   ----- ----- -----
+ 1*     C       Moment connection, see below.     8   24.0   200.0 705.5  16.0 
+ 1*     A       Moment connection, see below.     8   24.0   200.0 705.5  16.0 
+ 2*     C       Moment connection, see below.     8   24.0   200.0 705.5  16.0 
+ 2*     A       Moment connection, see below.     8   24.0   200.0 705.5  16.0 
+
+ Rigid Frame Reactions Frame Lines :1  7  
+ --------------------------------------------------
+
+ Load  -----Left_Column------- -----Right_Column------
+  Id   Fx(kN) Fy(kN) Mom(kN-m) Fx(kN) Fy(kN) Mom(kN-m)
+ ----  ------ ------ --------- ------ ------ ---------
+   1     11.0   11.1     -36.7    6.3    4.5     -23.6
+   2    -16.9   -9.5      53.0   -6.1   -0.6      27.4
+   3      5.2   21.8     -17.4   -5.2   21.8      17.4
+   4      5.8  -20.2      -7.6   -5.6  -18.4       5.9
+   5      6.1   -0.6     -27.4   16.9   -9.5     -53.0
+   6     -6.3    4.5      23.6  -11.0   11.1      36.7
+   7      5.6  -18.4      -5.9   -5.8  -20.2       7.6
+  10      1.3    7.5      -4.4   -1.3    7.5       4.4
+  11      1.3    7.5      -4.4   -1.3    7.5       4.4
+  12      1.3    7.5      -4.4   -1.3    7.5       4.4
+  13      1.3    7.5      -4.4   -1.3    7.5       4.4
+  14      1.0    6.2      -3.3   -1.0    6.2       3.3
+  15      1.3    7.5      -4.4   -1.3    7.5       4.4
+  16      1.3    7.5      -4.4   -1.3    7.5       4.4
+  17      1.3    7.5      -4.4   -1.3    7.5       4.4
+  18     -8.9    8.3      27.1   -8.4   14.9      33.2
+  19      8.4   14.9     -33.2    8.9    8.3     -27.1
+  20      8.2    0.3     -18.3   -8.0    1.6      17.1
+  21      8.0    1.6     -17.1   -8.2    0.3      18.3
+  22      5.5    4.1     -14.8   -5.4    5.4      13.6
+  23      5.4    5.4     -13.6   -5.5    4.1      14.8
+  24     -9.2   -6.3      33.3   -8.1    0.4      27.0
+  25     -9.2   -6.3      33.3   -8.1    0.4      27.0
+  26     -9.2   -6.3      33.3   -8.1    0.4      27.0
+  27      8.1    0.4     -27.0    9.2   -6.3     -33.3
+  28      8.1    0.4     -27.0    9.2   -6.3     -33.3
+  29      8.1    0.4     -27.0    9.2   -6.3     -33.3
+  30    -11.8   -2.5      36.8   -5.5    4.2      23.5
+  31    -11.8   -2.5      36.8   -5.5    4.2      23.5
+  32    -11.8   -2.5      36.8   -5.5    4.2      23.5
+  33      5.5    4.2     -23.5   11.8   -2.5     -36.8
+  34      5.5    4.2     -23.5   11.8   -2.5     -36.8
+  35      5.5    4.2     -23.5   11.8   -2.5     -36.8
+  36      3.7   -3.3      -6.9   -3.6   -2.5       6.2
+  37      3.6   -2.5      -6.2   -3.7   -3.3       6.9
+  38      3.7   -3.3      -6.9   -3.6   -2.5       6.2
+  39      3.6   -2.5      -6.2   -3.7   -3.3       6.9
+  40      3.7   -3.3      -6.9   -3.6   -2.5       6.2
+  41      3.6   -2.5      -6.2   -3.7   -3.3       6.9
+  42      2.1   -1.0      -4.9   -2.0   -0.2       4.1
+  43      2.0   -0.2      -4.1   -2.1   -1.0       4.9
+  44      2.1   -1.0      -4.9   -2.0   -0.2       4.1
+  45      2.0   -0.2      -4.1   -2.1   -1.0       4.9
+  46      2.1   -1.0      -4.9   -2.0   -0.2       4.1
+  47      2.0   -0.2      -4.1   -2.1   -1.0       4.9
+  48    -13.4  -14.6      48.3   -9.6   -5.7      32.0
+  49      9.6   -5.7     -32.0   13.4  -14.6     -48.3
+  50      2.3  -15.1      -2.9   -2.1  -13.4       1.3
+  51      2.1  -13.4      -1.3   -2.3  -15.1       2.9
+  52      1.1    7.4      -3.0   -1.6    7.7       6.0
+  53      1.6    7.7      -6.0   -1.1    7.4       3.0
+  54      4.1   18.2     -13.1   -4.5   18.4      15.3
+  55      4.5   18.4     -15.3   -4.1   18.2      13.1
+  56      1.2    7.4      -3.4   -1.5    7.7       5.6
+  57      1.5    7.7      -5.6   -1.2    7.4       3.4
+  58      0.3    3.5      -0.4   -0.8    3.8       3.4
+  59      0.8    3.8      -3.4   -0.3    3.5       0.4
+  60      1.3    6.6      -4.5   -1.3    6.6       4.5
+  61      4.3   17.6     -14.2   -4.3   17.6      14.2
+  62      1.3    6.9      -4.5   -1.3    6.9       4.5
+  63      0.6    2.8      -1.9   -0.6    2.8       1.9
+  64      1.1    6.2      -4.2   -1.1    6.2       4.2
+  65      0.9    6.2      -2.4   -0.9    6.2       2.4
+  66      4.4   18.2     -14.8   -4.4   18.2      14.8
+  67      4.2   18.2     -13.4   -4.2   18.2      13.5
+  68      1.4    7.5      -5.1   -1.4    7.5       5.1
+  69      1.4    7.5      -5.1   -1.4    7.5       5.1
+  70      1.4    7.5      -5.1   -1.4    7.5       5.1
+  71      1.2    7.5      -3.7   -1.2    7.5       3.7
+  72      1.2    7.5      -3.7   -1.2    7.5       3.7
+  73      1.2    7.5      -3.7   -1.2    7.5       3.7
+
+ Rigid Frame Reactions Frame Lines :2  3  4  5  6  
+ --------------------------------------------------
+
+ Load  -----Left_Column------- -----Right_Column------
+  Id   Fx(kN) Fy(kN) Mom(kN-m) Fx(kN) Fy(kN) Mom(kN-m)
+ ----  ------ ------ --------- ------ ------ ---------
+   1     20.7   21.0     -67.2    7.0   12.0     -30.2
+   2    -27.5  -10.1      83.8   -9.1    1.8      44.6
+   3      9.3   36.8     -31.0   -9.3   36.8      31.0
+   4     10.4  -30.8     -13.4  -10.0  -27.5      10.4
+   5      9.1    1.8     -44.6   27.5  -10.1     -83.8
+   6     -7.0   12.0      30.2  -20.7   21.0      67.2
+   7     10.0  -27.5     -10.4  -10.4  -30.8      13.3
+  10      2.2   10.6      -7.3   -2.2   10.6       7.3
+  11      2.2   10.6      -7.3   -2.2   10.6       7.3
+  12      2.2   10.6      -7.3   -2.2   10.6       7.3
+  13      2.2   10.6      -7.3   -2.2   10.6       7.3
+  14      1.6    8.3      -5.2   -1.6    8.3       5.2
+  15      2.2   10.6      -7.3   -2.2   10.6       7.3
+  16      2.2   10.6      -7.3   -2.2   10.6       7.3
+  17      2.2   10.6      -7.3   -2.2   10.6       7.3
+  18    -13.7   19.0      40.1  -13.7   27.9      56.2
+  19     13.7   27.9     -56.2   13.7   19.0     -40.1
+  20     14.7    3.5     -32.7  -14.4    5.9      30.5
+  21     14.4    5.9     -30.5  -14.7    3.5      32.8
+  22      9.9   10.4     -26.3   -9.6   12.9      24.1
+  23      9.6   12.9     -24.1   -9.9   10.4      26.4
+  24    -12.3   -7.7      48.0  -15.4    1.3      49.4
+  25    -12.3   -7.7      48.0  -15.4    1.3      49.4
+  26    -12.3   -7.7      48.0  -15.4    1.3      49.4
+  27     15.4    1.3     -49.4   12.3   -7.7     -48.0
+  28     15.4    1.3     -49.4   12.3   -7.7     -48.0
+  29     15.4    1.3     -49.4   12.3   -7.7     -48.0
+  30    -19.1   -0.7      57.9   -8.3    8.2      38.4
+  31    -19.1   -0.7      57.9   -8.3    8.2      38.4
+  32    -19.1   -0.7      57.9   -8.3    8.2      38.4
+  33      8.3    8.2     -38.4   19.1   -0.7     -57.9
+  34      8.3    8.2     -38.4   19.1   -0.7     -57.9
+  35      8.3    8.2     -38.4   19.1   -0.7     -57.9
+  36      6.5   -5.5     -11.9   -6.3   -4.0      10.5
+  37      6.3   -4.0     -10.5   -6.5   -5.5      11.9
+  38      6.5   -5.5     -11.9   -6.3   -4.0      10.5
+  39      6.3   -4.0     -10.5   -6.5   -5.5      11.9
+  40      6.5   -5.5     -11.9   -6.3   -4.0      10.5
+  41      6.3   -4.0     -10.5   -6.5   -5.5      11.9
+  42      3.6   -1.3      -8.1   -3.4    0.2       6.7
+  43      3.4    0.2      -6.7   -3.6   -1.3       8.1
+  44      3.6   -1.3      -8.1   -3.4    0.2       6.7
+  45      3.4    0.2      -6.7   -3.6   -1.3       8.1
+  46      3.6   -1.3      -8.1   -3.4    0.2       6.7
+  47      3.4    0.2      -6.7   -3.6   -1.3       8.1
+  48    -18.4  -19.4      70.6  -18.5   -7.4      59.2
+  49     18.5   -7.4     -59.2   18.4  -19.4     -70.6
+  50      4.1  -21.5      -4.8   -3.7  -18.2       1.8
+  51      3.7  -18.2      -1.8   -4.1  -21.5       4.8
+  52      1.9   10.5      -5.5   -2.5   10.9       9.2
+  53      2.5   10.9      -9.2   -1.9   10.5       5.5
+  54      7.3   30.2     -23.7   -7.8   30.5      26.5
+  55      7.8   30.5     -26.5   -7.3   30.2      23.8
+  56      2.0   10.6      -6.0   -2.5   10.9       8.7
+  57      2.5   10.9      -8.7   -2.0   10.6       6.0
+  58      0.6    4.7      -1.2   -1.2    5.1       4.9
+  59      1.2    5.1      -4.9   -0.6    4.7       1.2
+  60      2.2    9.8      -7.4   -2.2    9.8       7.4
+  61      7.6   29.7     -25.1   -7.6   29.7      25.2
+  62      2.2   10.1      -7.4   -2.2   10.1       7.4
+  63      0.9    4.0      -3.1   -0.9    4.0       3.1
+  64      1.7    8.3      -6.1   -1.7    8.3       6.1
+  65      1.4    8.3      -4.3   -1.4    8.3       4.3
+  66      7.7   30.3     -25.8   -7.7   30.3      25.8
+  67      7.5   30.3     -24.4   -7.5   30.3      24.4
+  68      2.3   10.6      -8.0   -2.3   10.6       8.0
+  69      2.3   10.6      -8.0   -2.3   10.6       8.0
+  70      2.3   10.6      -8.0   -2.3   10.6       8.0
+  71      2.1   10.6      -6.6   -2.1   10.6       6.6
+  72      2.1   10.6      -6.6   -2.1   10.6       6.6
+  73      2.1   10.6      -6.6   -2.1   10.6       6.6
+
+
+ -----------------------------------------------------------------------------
+ 1*   Frame Lines:1 7  
+ 2*   Frame Lines:2 3 4 5 6  
+
+ LOAD COMBINATIONS:
+ ------------------
+     Id   Combination
+   ----   ------------------------------
+      1   Dead+Collateral+0.75Live+0.75Wind_Right1+0.75Floor_Live
+      2   0.6Dead+Wind_Left2
+      3   Dead+Collateral+Live
+      4   0.6Dead+Wind_Long1L+LWIND1_L2E
+      5   0.6Dead+Wind_Right2
+      6   Dead+Collateral+0.75Live+0.75Wind_Left1+0.75Floor_Live
+      7   0.6Dead+Wind_Long1L+LWIND1_R2E
+      8   0.6Dead+Wind_Right2+Wind_Suction
+      9   0.6Dead+Wind_Pressure+Wind_Long2L
+     10   Dead+Collateral+Floor_Live
+     11   Dead+Collateral+Snow
+     12   Dead+Collateral+Snow+Snow_Drift
+     13   Dead+Collateral+Snow+Slide_Snow
+     14   Dead
+     15   Dead+Collateral+0.75Snow+0.75Floor_Live
+     16   Dead+Collateral+0.75Snow+0.75Snow_Drift+0.75Floor_Live
+     17   Dead+Collateral+0.75Snow+0.75Slide_Snow+0.75Floor_Live
+     18   Dead+Collateral+0.75Live+0.75Wind_Left2+0.75Floor_Live
+     19   Dead+Collateral+0.75Live+0.75Wind_Right2+0.75Floor_Live
+     20   Dead+Collateral+0.75Live+0.75Wind_Long1L+0.75Floor_Live+0.75LWIND1_L2E
+     21   Dead+Collateral+0.75Live+0.75Wind_Long1L+0.75Floor_Live+0.75LWIND1_R2E
+     22   Dead+Collateral+0.75Live+0.75Wind_Long2L+0.75Floor_Live+0.75LWIND2_L2E
+     23   Dead+Collateral+0.75Live+0.75Wind_Long2L+0.75Floor_Live+0.75LWIND2_R2E
+     24   Dead+Collateral+0.75Snow+0.75Wind_Left1+0.75Floor_Live
+     25   Dead+Collateral+0.75Snow+0.75Wind_Left1+0.75Snow_Drift+0.75Floor_Live
+     26   Dead+Collateral+0.75Snow+0.75Wind_Left1+0.75Slide_Snow+0.75Floor_Live
+     27   Dead+Collateral+0.75Snow+0.75Wind_Right1+0.75Floor_Live
+     28   Dead+Collateral+0.75Snow+0.75Wind_Right1+0.75Snow_Drift+0.75Floor_Live
+     29   Dead+Collateral+0.75Snow+0.75Wind_Right1+0.75Slide_Snow+0.75Floor_Live
+     30   Dead+Collateral+0.75Snow+0.75Wind_Left2+0.75Floor_Live
+     31   Dead+Collateral+0.75Snow+0.75Wind_Left2+0.75Snow_Drift+0.75Floor_Live
+     32   Dead+Collateral+0.75Snow+0.75Wind_Left2+0.75Slide_Snow+0.75Floor_Live
+     33   Dead+Collateral+0.75Snow+0.75Wind_Right2+0.75Floor_Live
+     34   Dead+Collateral+0.75Snow+0.75Wind_Right2+0.75Snow_Drift+0.75Floor_Live
+     35   Dead+Collateral+0.75Snow+0.75Wind_Right2+0.75Slide_Snow+0.75Floor_Live
+     36   Dead+Collateral+0.75Snow+0.45Wind_Long1L+0.75Floor_Live+0.45LWIND1_L2E
+     37   Dead+Collateral+0.75Snow+0.45Wind_Long1L+0.75Floor_Live+0.45LWIND1_R2E
+     38   Dead+Collateral+0.75Snow+0.45Wind_Long1L+0.75Snow_Drift+0.75Floor_Live+0.45LWIND1_L2E
+     39   Dead+Collateral+0.75Snow+0.45Wind_Long1L+0.75Snow_Drift+0.75Floor_Live+0.45LWIND1_R2E
+     40   Dead+Collateral+0.75Snow+0.45Wind_Long1L+0.75Slide_Snow+0.75Floor_Live+0.45LWIND1_L2E
+     41   Dead+Collateral+0.75Snow+0.45Wind_Long1L+0.75Slide_Snow+0.75Floor_Live+0.45LWIND1_R2E
+     42   Dead+Collateral+0.75Snow+0.45Wind_Long2L+0.75Floor_Live+0.45LWIND2_L2E
+     43   Dead+Collateral+0.75Snow+0.45Wind_Long2L+0.75Floor_Live+0.45LWIND2_R2E
+     44   Dead+Collateral+0.75Snow+0.45Wind_Long2L+0.75Snow_Drift+0.75Floor_Live+0.45LWIND2_L2E
+     45   Dead+Collateral+0.75Snow+0.45Wind_Long2L+0.75Snow_Drift+0.75Floor_Live+0.45LWIND2_R2E
+     46   Dead+Collateral+0.75Snow+0.45Wind_Long2L+0.75Slide_Snow+0.75Floor_Live+0.45LWIND2_L2E
+     47   Dead+Collateral+0.75Snow+0.45Wind_Long2L+0.75Slide_Snow+0.75Floor_Live+0.45LWIND2_R2E
+     48   0.6Dead+Wind_Left1
+     49   0.6Dead+Wind_Right1
+     50   0.6Dead+Wind_Long2L+LWIND2_L2E
+     51   0.6Dead+Wind_Long2L+LWIND2_R2E
+     52   1.01Dead+1.01Collateral+0.7Seismic_Left
+     53   1.01Dead+1.01Collateral+0.7Seismic_Right
+     54   1.01Dead+1.01Collateral+0.75Live+0.52Seismic_Left+0.75Floor_Live
+     55   1.01Dead+1.01Collateral+0.75Live+0.52Seismic_Right+0.75Floor_Live
+     56   1.01Dead+1.01Collateral+0.52Seismic_Left+0.75Floor_Live
+     57   1.01Dead+1.01Collateral+0.52Seismic_Right+0.75Floor_Live
+     58   0.59Dead+0.7Seismic_Left
+     59   0.59Dead+0.7Seismic_Right
+     60   1.01Dead+1.01Collateral+0.7Seismic_LongL
+     61   1.01Dead+1.01Collateral+0.75Live+0.52Seismic_LongL+0.75Floor_Live
+     62   1.01Dead+1.01Collateral+0.52Seismic_LongL+0.75Floor_Live
+     63   0.59Dead+0.7Seismic_LongL
+     64   Dead+ 20Deg+Floor_Live
+     65   Dead- 20Deg+Floor_Live
+     66   Dead+Collateral+0.75Live+ 15Deg+0.75Floor_Live
+     67   Dead+Collateral+0.75Live- 15Deg+0.75Floor_Live
+     68   Dead+Collateral+0.75Snow+ 15Deg+0.75Floor_Live
+     69   Dead+Collateral+0.75Snow+ 15Deg+0.75Snow_Drift+0.75Floor_Live
+     70   Dead+Collateral+0.75Snow+ 15Deg+0.75Slide_Snow+0.75Floor_Live
+     71   Dead+Collateral+0.75Snow- 15Deg+0.75Floor_Live
+     72   Dead+Collateral+0.75Snow- 15Deg+0.75Snow_Drift+0.75Floor_Live
+     73   Dead+Collateral+0.75Snow- 15Deg+0.75Slide_Snow+0.75Floor_Live
+
+
+================================================================================
+ C163-027            Bracing Reactions Report:              19/JAN/2026 10:57am
+================================================================================
+
+
+
+ BUILDING BRACING REACTIONS:
+ ---------------------------
+                        ----Reactions(+/-)(kN)----
+  ----Wall---  Col      ----Wind----  --Seismic---  Panel_Shear(N/m  )
+  Loc  Line    Line      Horz   Vert   Horz   Vert     Wind  Seismic    Notes
+  ---- ------  -------  -----  -----  -----  -----   ------  -------    -----
+  L_EW 1                                                                 (h)
+ 
+  F_SW A       1  ,2     7.85   9.72   1.04   1.29                           
+               6  ,7     7.85   9.72   1.04   1.29                           
+ 
+  R_EW 7                                                                 (h)
+ 
+  B_SW C       7  ,6     7.85   9.72   1.04   1.29                           
+               2  ,1     7.85   9.72   1.04   1.29                           
+ 
+  ---- ------  -------  -----  -----  -----  -----   ------  -------    -----
+ 
+  (h)Rigid frame at endwall
+
+  Reaction values for seismic shear force, Eh
+  Reaction values shown are unfactored
+  Maximum load combination factors are:
+    Wind   : 1.00
+    Seismic: 0.70
+
+
+================================================================================
+ C163-027            Additional Reactions Report:           19/JAN/2026 10:57am
+================================================================================
+
+
+
+                    Rigid Frame Column Reactions(kN,kN-m)
+                    -------------------------------------
+
+
+ Frame  Col     --------Dead-------  ----Collateral-----  --------Live-------
+ Line   Line     Horz  Vert  Moment   Horz  Vert  Moment   Horz  Vert  Moment
+ -----  ------  ----- ----- -------  ----- ----- -------  ----- ----- -------
+ 1*     C         1.0   6.2    -3.3    0.3   1.3    -1.1    3.9  14.3   -12.9
+ 1*     A        -1.0   6.2     3.3   -0.3   1.3     1.1   -3.9  14.3    13.0
+
+ Frame  Col     ----Wind_Left1-----  ----Wind_Right1----  ----Wind_Left2-----
+ Line   Line     Horz  Vert  Moment   Horz  Vert  Moment   Horz  Vert  Moment
+ -----  ------  ----- ----- -------  ----- ----- -------  ----- ----- -------
+ 1*     C       -14.0 -18.3    50.3    9.0  -9.4   -30.1  -17.5 -13.2    55.0
+ 1*     A        -9.0  -9.4    30.1   14.0 -18.3   -50.3   -5.5  -4.3    25.4
+
+ Frame  Col     ----Wind_Right2----  ----Wind_Long1-----  ----Wind_Long2-----
+ Line   Line     Horz  Vert  Moment   Horz  Vert  Moment   Horz  Vert  Moment
+ -----  ------  ----- ----- -------  ----- ----- -------  ----- ----- -------
+ 1*     C         5.5  -4.3   -25.4    5.2 -22.0    -5.1    1.7 -16.9    -0.5
+ 1*     A        17.5 -13.2   -55.0   -5.2 -22.0     5.1   -1.7 -16.9     0.5
+
+ Frame  Col     -----Seis_Left-----  ----Seis_Right-----  -----Seis_Long-----
+ Line   Line     Horz  Vert  Moment   Horz  Vert  Moment   Horz  Vert  Moment
+ -----  ------  ----- ----- -------  ----- ----- -------  ----- ----- -------
+ 1*     C        -0.4  -0.2     2.1    0.4   0.2    -2.1    0.0  -1.3     0.0
+ 1*     A        -0.4   0.2     2.1    0.4  -0.2    -2.1    0.0  -1.3     0.0
+
+ Frame  Col     --------Temp-------  ----LWIND1_L2E ----  ----LWIND1_R2E ----
+ Line   Line     Horz  Vert  Moment   Horz  Vert  Moment   Horz  Vert  Moment
+ -----  ------  ----- ----- -------  ----- ----- -------  ----- ----- -------
+ 1*     C         0.1   0.0    -0.9    0.0  -2.0    -0.5   -0.2  -0.2     1.2
+ 1*     A        -0.1   0.0     0.9    0.2  -0.2    -1.2    0.0  -2.0     0.5
+
+ Frame  Col     ----LWIND2_L2E ----  ----LWIND2_R2E ----
+ Line   Line     Horz  Vert  Moment   Horz  Vert  Moment
+ -----  ------  ----- ----- -------  ----- ----- -------
+ 1*     C         0.0  -2.0    -0.5   -0.2  -0.2     1.2
+ 1*     A         0.2  -0.2    -1.2    0.0  -2.0     0.5
+ ----------------------------------------------------------------------------
+
+
+ Frame  Col     --------Dead-------  ----Collateral-----  --------Live-------
+ Line   Line     Horz  Vert  Moment   Horz  Vert  Moment   Horz  Vert  Moment
+ -----  ------  ----- ----- -------  ----- ----- -------  ----- ----- -------
+ 2*     C         1.6   8.3    -5.2    0.6   2.3    -2.1    7.2  26.2   -23.7
+ 2*     A        -1.6   8.3     5.2   -0.6   2.3     2.1   -7.2  26.2    23.7
+
+ Frame  Col     ----Wind_Left1-----  ----Wind_Right1----  ----Wind_Left2-----
+ Line   Line     Horz  Vert  Moment   Horz  Vert  Moment   Horz  Vert  Moment
+ -----  ------  ----- ----- -------  ----- ----- -------  ----- ----- -------
+ 2*     C       -19.4 -24.4    73.7   17.6 -12.4   -56.1  -28.4 -15.1    86.9
+ 2*     A       -17.6 -12.4    56.1   19.4 -24.4   -73.7   -8.1  -3.2    41.5
+
+ Frame  Col     ----Wind_Right2----  ----Wind_Long1-----  ----Wind_Long2-----
+ Line   Line     Horz  Vert  Moment   Horz  Vert  Moment   Horz  Vert  Moment
+ -----  ------  ----- ----- -------  ----- ----- -------  ----- ----- -------
+ 2*     C         8.1  -3.2   -41.5    9.5 -32.2    -9.4    3.1 -22.9    -0.8
+ 2*     A        28.4 -15.1   -86.9   -9.5 -32.2     9.4   -3.1 -22.9     0.8
+
+ Frame  Col     -----Seis_Left-----  ----Seis_Right-----  -----Seis_Long-----
+ Line   Line     Horz  Vert  Moment   Horz  Vert  Moment   Horz  Vert  Moment
+ -----  ------  ----- ----- -------  ----- ----- -------  ----- ----- -------
+ 2*     C        -0.5  -0.3     2.7    0.5   0.3    -2.7    0.0  -1.3     0.0
+ 2*     A        -0.4   0.3     2.7    0.4  -0.3    -2.7    0.0  -1.3     0.0
+
+ Frame  Col     --------Temp-------  ----LWIND1_L2E ----  ----LWIND1_R2E ----
+ Line   Line     Horz  Vert  Moment   Horz  Vert  Moment   Horz  Vert  Moment
+ -----  ------  ----- ----- -------  ----- ----- -------  ----- ----- -------
+ 2*     C         0.1   0.0    -0.9    0.0  -3.6    -0.9   -0.4  -0.3     2.1
+ 2*     A        -0.1   0.0     0.9    0.4  -0.3    -2.1    0.0  -3.6     0.9
+
+ Frame  Col     ----LWIND2_L2E ----  ----LWIND2_R2E ----
+ Line   Line     Horz  Vert  Moment   Horz  Vert  Moment
+ -----  ------  ----- ----- -------  ----- ----- -------
+ 2*     C         0.0  -3.6    -0.9   -0.4  -0.3     2.1
+ 2*     A         0.4  -0.3    -2.1    0.0  -3.6     0.9
+ ----------------------------------------------------------------------------
+
+ 1*   Frame Lines:1 7  
+ 2*   Frame Lines:2 3 4 5 6  
+
+
+                      Endwall Column Reactions(kN)
+                      -----------------------------
+
+
+                                                                      Seismic
+ Frame  Col   ----Dead----  ----Live----  Wind_Pressure Wind_Suction   Long
+ Line   Line   Horz   Vert   Horz   Vert   Horz   Vert   Horz   Vert   Horz
+ -----  ----  -----  -----  -----  -----  -----  -----  -----  -----  -----
+ 1      B      -0.1    2.9   -0.8    5.2  -16.8   -7.7   20.5   -1.9   0.08
+ ------------------------------------------------------------------------------
+
+                                                                      Seismic
+ Frame  Col   ----Dead----  ----Live----  Wind_Pressure Wind_Suction   Long
+ Line   Line   Horz   Vert   Horz   Vert   Horz   Vert   Horz   Vert   Horz
+ -----  ----  -----  -----  -----  -----  -----  -----  -----  -----  -----
+ 7      B      -0.1    2.9   -0.8    5.2  -16.8   -7.7   20.5   -1.9   0.08
+ ------------------------------------------------------------------------------
+
+
+================================================================================
+ C163-027            Seismic Design Report:                 19/JAN/2026 10:57am
+================================================================================
+
+
+      Building Data
+      -------------
+        Code                =MBMA 10
+        Length              =   45730
+        Width               =   12200
+        Left  Eave Height   =    9600
+        Right Eave Height   =    9600
+
+      Seismic Formula
+      ---------------
+        Equivalent Lateral Force, Section 12.8
+
+        Base  Shear V       = 0.667*Ie*Sms*W/R                        
+
+
+        Shear Force Eh      = Rho*V                                   
+         (Rigid frame, endwall frame, wind bent, wind column & base reactions)
+
+        Shear Force Em      = Omega*V                                 
+         (Wall diagonal bracing, splice at rigid frame & wind bent knee)
+
+
+        Note: Applied load is seismic force multiplied by load combination
+
+        Sms                 =   0.160
+        Zone/Design Category=   B  
+        Ie                  =   1.000
+
+      Seismic Dead Load, W
+      --------------------
+        Frame    Dead       =   0.096 (kN/m2)
+        Roof     Dead       =   0.100 (kN/m2)
+        Collateral          =   0.050 (kN/m2)
+        Roof     Total      =   0.246 (kN/m2)    , Weight= 137.22 (kN)
+        Left  EW Dead       =   0.096 (kN/m2)    , Weight=   5.81 (kN)
+        Front SW Dead       =   0.096 (kN/m2)    , Weight=  21.10 (kN)
+        Right EW Dead       =   0.096 (kN/m2)    , Weight=   5.81 (kN)
+        Back  SW Dead       =   0.096 (kN/m2)    , Weight=  21.10 (kN)
+        Extensions
+          Left  EW Total    =   0.100 (kN/m2)    , Weight=   1.83 (kN)
+          Right EW Total    =   0.100 (kN/m2)    , Weight=   1.83 (kN)
+                                                          -------
+                                                   Total = 194.69 (kN)
+
+      Seismic Forces
+      --------------
+
+        Roof Bracing
+                       R  =   5.00, Rho=   1.00                              
+                      Cs  =   0.0213
+                       W  = 148.84 (kN)
+                Force  V  =   3.17 (kN)        
+                Force  Eh =   3.17 (kN)
+
+        Sidewall Bracing
+          Front SW     R  =   5.00, Rho=   1.00, Omega=   2.00               
+                      Cs  =   0.0213
+                       W  =  97.99 (kN)
+                Force  V  =   2.09 (kN)        
+                Force  Em =   4.18 (kN)
+                Force  Eh =   2.09 (kN)
+          Back  SW     R  =   5.00, Rho=   1.00, Omega=   2.00               
+                      Cs  =   0.0213
+                       W  =  97.99 (kN)
+                Force  V  =   2.09 (kN)        
+                Force  Em =   4.18 (kN)
+                Force  Eh =   2.09 (kN)
+
+        Rigid Frames
+                       R  =   3.50, Rho=   1.00                              
+                      Cs  =   0.0305
+          Frame  1     W  =  21.64 (kN)
+                Force  V  =   0.66 (kN)        
+                Force  Eh =   0.66 (kN)
+          Frame  2     W  =  29.51 (kN)
+                Force  V  =   0.90 (kN)        
+                Force  Eh =   0.90 (kN)
+
+        End Plates
+          Frame        R  =   3.50, Omega=   3.00                            
+
+        Total Base Shear
+          Longitudinal
+                Force  V  =   4.17 (kN)
+          Transverse
+                Force  V  =   5.82 (kN)

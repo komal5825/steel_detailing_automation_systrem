@@ -1,0 +1,199 @@
+*===============================================================================
+*111                 Bracing Drawing Input                  19/JAN/2026 10:58am
+*===============================================================================
+
+*( 1)TITLE BLOCK:
+  'Sivoko Steel Structures Ltd.            ' .. Manufacturer
+  '                                        ' .. Builder
+  'Proposed Warehouse                      ' .. Project
+  'Proposed Warehouse                      ' .. Project Address
+  '                                        ' .. Project Address
+  '111                                     ' .. Project ID
+
+*( 2)DRAWING SIZE FACTORS:
+* Drawing_Size  ----Object_Offset----  -----Scale_Factor-----   --Detail--
+* Width Height  Lt     Rt   Top   Bot   Text Table  Dim  Title   Size  Loc
+  420.0  297.0  25.0  10.0  10.0  40.0  0.55  0.55  0.55  0.70   50.0     'T '
+
+*( 3)DRAWING OPTIONS:
+*Content -----------Draw_Wall-------  Member                Page_Number
+* Option L_EW  F_SW  R_EW  B_SW  Int  Table   Logo          Id      Total
+   'DR '  'N'  'N'    'N'   'N'  'Y'   'Y'    'N       '  '----'  '----'
+
+*( 4)BUILDING LAYOUT:
+*Build                     ------L_Expand_EW-----  ------R_Expand_EW-----
+*Type     Width    Length  Use  Opt Extend Offset  Use  Opt Extend Offset
+'FF-'   12200.0   45730.0  'Y-' '-'   0.00 415.00  'Y-' '-'   0.00 415.00
+
+*( 5)WALL OFFSET:
+* --------Wall_Offset-------
+*  L_EW   F_SW   R_EW   B_SW
+ 230.00 230.00 230.00 230.00    
+
+*( 6)SURFACE SHAPE:
+*                             ----Offset---  ---Option--
+*   No.   X_Coord   Y_Coord   L_EW     R_EW  L_EW   R_EW
+     4        0.0    9600.0  200.00  200.00   '-'    '-'
+           6100.0   10210.0  200.00  200.00   '-'    '-'
+          12200.0    9600.0  200.00  200.00   '-'    '-'
+          12200.0       0.0  200.00  200.00   '-'    '-'
+
+*( 7)BAY SPACING:
+*  Wall  ---Offset---    No.   ---Bay_Set---
+*   Id   Left   Right   Sets     Width  Quan
+     1  230.00 230.00     1     6100.0    2
+     2  415.00 415.00     3     7805.0    1
+                                7530.0    4
+                                7805.0    1
+     3  230.00 230.00     1     6100.0    2
+     4  415.00 415.00     3     7805.0    1
+                                7530.0    4
+                                7805.0    1
+     5  415.00 415.00     3     7805.0    1
+                                7530.0    4
+                                7805.0    1
+
+*( 8)WALL COLUMNS:
+*Wall  No.  Col  Col          Base    Col  Line     Piece
+* Id   Col  Typ  Rot  Opt     Elev    Det   Id      Mark
+   1    3   '-'  'N'  '-'     0.00     0   'C   '  '------ '
+            'W'  'N'  '-'     0.00     4   'B   '  'EC-1   '
+            '-'  'N'  '-'     0.00     0   'A   '  '------ '
+   2    7   'W'  'N'  '-'     0.00     0   '1   '  'RF1-4  '
+            'W'  'N'  '-'     0.00     0   '2   '  'RF2-3  '
+            'W'  'N'  '-'     0.00     0   '3   '  'RF2-1  '
+            'W'  'N'  '-'     0.00     0   '4   '  'RF2-1  '
+            'W'  'N'  '-'     0.00     0   '5   '  'RF2-1  '
+            'W'  'N'  '-'     0.00     0   '6   '  'RF2-1  '
+            'W'  'N'  '-'     0.00     0   '7   '  'RF1-1  '
+   3    3   '-'  'N'  '-'     0.00     0   'A   '  '------ '
+            'W'  'N'  '-'     0.00     4   'B   '  'EC-1   '
+            '-'  'N'  '-'     0.00     0   'C   '  '------ '
+   4    7   'W'  'N'  '-'     0.00     0   '7   '  'RF1-4  '
+            'W'  'N'  '-'     0.00     0   '6   '  'RF2-3  '
+            'W'  'N'  '-'     0.00     0   '5   '  'RF2-1  '
+            'W'  'N'  '-'     0.00     0   '4   '  'RF2-1  '
+            'W'  'N'  '-'     0.00     0   '3   '  'RF2-1  '
+            'W'  'N'  '-'     0.00     0   '2   '  'RF2-1  '
+            'W'  'N'  '-'     0.00     0   '1   '  'RF1-1  '
+
+*( 9)RIGID FRAMES/INTERIOR COLUMNS:
+* No.   ---Frame----  No.  Col  Col  Col    Col      Col    Col
+*Frame  Line Id Type  Col  Id   Typ  Rot    Loc      Elev   Mark
+   7      1   1 'RF-'  0
+          2   2 'RF-'  0
+          3   2 'RF-'  0
+          4   2 'RF-'  0
+          5   2 'RF-'  0
+          6   2 'RF-'  0
+          7   1 'RF-'  0
+
+*(10)WALL DIAGONAL BRACING:
+*Wall  No.            Bay    No.   Level    Level  Brace  Connect             Brace_Id
+* Id   Bays  Offset St End  Level  Type    Height  Type   Opt  Id   Side  Qty  --- --- --- --- --- --- --- ---
+   1    0
+   2    2       0.0  1   1    2     'B'    4930.0   'R '  '-'   0    'L'   1    34
+                                                                     'R'   1    34
+                                    'B'    9800.0   'R '  '-'   0    'L'   1    35
+                                                                     'R'   1    35
+                0.0  6   6    2     'B'    4930.0   'R '  '-'   0    'L'   1    34
+                                                                     'R'   1    34
+                                    'B'    9800.0   'R '  '-'   0    'L'   1    35
+                                                                     'R'   1    35
+         
+   3    0
+   4    2       0.0  1   1    2     'B'    4930.0   'R '  '-'   0    'L'   1    34
+                                                                     'R'   1    34
+                                    'B'    9800.0   'R '  '-'   0    'L'   1    35
+                                                                     'R'   1    35
+                0.0  6   6    2     'B'    4930.0   'R '  '-'   0    'L'   1    34
+                                                                     'R'   1    34
+                                    'B'    9800.0   'R '  '-'   0    'L'   1    35
+                                                                     'R'   1    35
+         
+   5    0
+
+*(11)AUXILIARY DIAGONAL BRACING:
+*No.                                   No.  -Level-  -Level_Height-  Brace   Conn             Brace_Id
+*Brace Dir  Offset  Locate1  Locate2  Level Type Id     Bot    Top   Type    Id   Side  Qty  --- --- --- ---
+    0
+
+*(12)WIND BENTS:
+*Wall  No.      B_SW  Bay   Col  ---Member_Id---           -Column_Depth-  Rafter  -----Conn_Id-----   ----Offset----   ---Clearance---
+* Id   Bent   Offset   Id  Type ColLt ColRt Beam   Height    Base     Top   Depth  Base Splice Attach  Left     Right   Height    Width
+   1     0
+   2     0
+   3     0
+   4     0
+   5     0
+
+*(13)WIND COLUMNS:
+* Wall  No.     B_SW  Bay   Col    Side                     ----Depth----   --Conn_Id--
+*  Id   Col   Offset   Id  Type   Lt/Rt  Member_Id Height    Base     Top   Base Attach  Offset
+    1    0
+    2    0
+    3    0
+    4    0
+    5    0
+
+*(14)AUXILIARY COLUMNS:
+*No. Col  Wall     Col     Wall    Col  Col   Base  Detail
+*Col  Id   Id    Locate   Offset  Type  Rot   Elev    Id     Mark
+   0
+
+*(15)WALL STRUTS:
+* No.  Strut   Loc  Wall --Bay Id--   Attach  Option Strut   Det              Conn  Sup
+*Strut  Id    Type   Id  Start  End   Locate    Id    Type   Id   Offset  Rot   Id  Row
+   4    1     'W'     2    1     1      4930     4    'T'    24        0  'N'    2    0
+        2     'W'     2    6     6      4930     4    'T'    24        0  'N'    2    0
+        3     'W'     4    1     1      4930     4    'T'    24        0  'N'    2    0
+        4     'W'     4    6     6      4930     4    'T'    24        0  'N'    2    0
+    
+
+*(16)MEMBER TABLE:
+* No.  Table Member             Member    Member
+* Mem   Id   Mark       Type     Part     Length   Opt  Ref
+   6     4   'EC-1    '  'W'  'W35a125 '   9583.00 '-'   0
+        10   ' P-4    '  'Z'  '200Z18  '   6294.99 '-'   0
+        14   ' E-4    '  'Z'  '200Z15  '   6299.99 '-'   0
+        24   'ST-1    '  'T'  'T100x40 '   7347.50 '-'   0
+        34   'CB-1    '  '-'  'ROD20   '   8660.00 '-'   0
+        35   'CB-2    '  '-'  'ROD20   '   8450.00 '-'   0
+
+*(17)CONNECTIONS:
+*        ----------------Plate_Size--------------  ----------------Bolts----------------   No.    No.
+*No. Id  Type Opt  Mark       Width Length  Thick  Type      Dia   Length Gage  Row  Qty  Washer Attach
+  1   2  'SG' '-' '--------' 150.00   0.00  10.00 'Gr8.8'  16.00  70.00  75.00    1     1    0     0
+
+*(18)DRAWING REVISIONS:
+* No.
+* Lines  Revision
+    0
+
+*(19)USER DETAILS:
+*  No.    Detail              ---Location---
+* Detail   Name              X_Coord  Y_Coord  Scale
+    0
+
+*(20)USER TEXT ADJUST:
+*  No.    -----Adjust------
+*Adjust    X     Y   Rotate   Text
+   0
+
+*(21)HORIZONTAL GRID LINE:
+*         L_EW   Line  Wall
+*No.    Offset   Id      Id
+  7        0.0  '1   '   1
+        7805.0  '2   '   0
+       15335.0  '3   '   0
+       22865.0  '4   '   0
+       30395.0  '5   '   0
+       37925.0  '6   '   0
+       45730.0  '7   '   3
+
+*(22)VERTICAL GRID LINE:
+*         B_SW   Line  Wall
+*No.    Offset   Id      Id
+  3        0.0  'C   '   4
+        6100.0  'B   '   0
+       12200.0  'A   '   2

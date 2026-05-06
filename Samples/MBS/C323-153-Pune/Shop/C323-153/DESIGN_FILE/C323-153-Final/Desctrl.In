@@ -1,0 +1,567 @@
+*==============================================================================
+*C323-153-Final      Design Control Input File  VERSION:2    11/AUG/2025  1:03pm
+*==============================================================================
+
+*( 1)JOB IDENTIFICATION:
+*   Job Id
+  'C323-153-Final'
+
+*(1a)WALL LAYOUT:
+*                                    ---Start_Coord--  ----End_Coord---   Base
+*No. Id  Use     Type Opt    Length       X1       Y1       X2       Y2   Elev
+  5   1 'LEFT '  '-'  '-'     22470        0    22470        0        0        0
+      2 'FRONT'  '-'  '-'     36285        0        0    36285        0        0
+      3 'RIGHT'  '-'  '-'     22470    36285        0    36285    22470        0
+      4 'BACK '  '-'  '-'     36285    36285    22470        0    22470        0
+      5 'ROOF '  '-'  '-'     36285        0        0    36285    22470        0
+
+*( 2)WALL OPTIONS:
+* Wall   Detail   Use     Use     Use    Use
+*  Id     Wall    Girt   Panel   Brace   Trim
+    1     'YY'    'YY'   'YY'    'YY'    'Y'
+    2     'YY'    'YY'   'YY'    'YY'    'Y'
+    3     'YY'    'YY'   'YY'    'YY'    'Y'
+    4     'YY'    'YY'   'YY'    'YY'    'Y'
+
+*( 3)ROOF OPTIONS:
+* Detail   Use     Use     Use     Use
+*  Roof    Purl   Panel   Brace   Angle
+   'YY'     'YY'   'YY'    'YY'    'YY'
+
+*( 4)BASE OPTIONS:
+*  Angle   Channel   Seal   Angle/Seal
+   'Y'      'N'      'NHA--'      'N'
+   'Y'      'N'      'NHA--'      'N'
+   'Y'      'N'      'NHA--'      'N'
+   'Y'      'N'      'NHA--'      'N'
+
+*( 5)STEEL YIELD:
+*  -------------Steel_Yield--------------    Max
+*                Wall  Roof  Flange   Web    Stress
+*  Hot   Cold   Panel  Panel  Plate  Plate   Ratio
+   235.0 345.0  250.0  250.0  345.0  345.0   1.00
+
+*( 6)DEFLECTION LIMITS:
+*  EW   --EW_RAF--  Wall  --Purlin--  Wall  Roof_Panel  Rigid_Frame Wind Rigid_Frame Wind_Frame -Total_Vertical-
+*  Col  Live  Wind  Girt  Live  Wind Panel  Live  Wind  Horz  Live  Bent Crane Seism   Seismic  Purlin   EW   RF
+   120   180   150    90   180   120    90   180   120    75   150    60   100    50    50           0    0    0
+
+*( 7)BUILDING CODE:
+* Wind Des Code  Hot   Cold      Exposure/Code                   Closure  Seismic   Importance  Column_Wind
+* Code Typ Year  Ver    Ver     (B/C:CCode:Code Lbl:Code File)    (O/C)    Zone     Seis  Wind  EW     SW 
+ 'MBMA:WS' '10:AISC05:NAUS07  '  'B  :    :MBMA 10 :MBMA.10     '  'C '    'B '      1.00  1.00  'YY'   'YY'
+
+*( 8)BUILDING LOADS:
+*  Dead    Live    Snow   Colat.  Wind     Load
+*  Load    Load    Load    Load   Speed    Reduce Wind10  Wind30   Sa02   Sa05   Sa10   Sa20  Temp
+   0.100   0.570   0.000   0.050  140.400    'N'   0.000   0.000  0.0000 0.1600 0.0000 1.0000   20
+
+*( 9)BUILDING SHAPE:
+* Build   Build     Build    L_Eave   R_Eave   Peak     L_Roof
+* Type    Width    Length    Height   Height   Offset   Slope
+ 'FF-S'      22470    36285      8420     8420    11235  1.2000
+
+*(10)EXPANDABLE ENDWALL/FLUSH WALL:
+* -L_Expand_EW-  -R_Expand_EW-  Flush_Wall  Wall
+* Use    Offset  Use    Offset  Use  Depth  Same
+ 'YY:E'     440 'YY:E'     440  'N'      0  'Y'
+
+*(11)SURFACE SHAPE:
+*   No.
+*   Surf   X_Coord   Y_Coord
+    0    
+
+*(12)WALL BAY SPACING:
+*  Wall   Sets     Bay     No.
+*   Id    Bays    Width    Bays
+     1      1      11235     2
+     2      6       6200     1
+                    5990     1
+                    6145     1
+                    5700     1
+                    6000     1
+                    6250     1
+     3      1      11235     2
+     4      6       6250     1
+                    6000     1
+                    5700     1
+                    6145     1
+                    5990     1
+                    6200     1
+     5      6       6200     1
+                    5990     1
+                    6145     1
+                    5700     1
+                    6000     1
+                    6250     1
+
+*(13)WALL OPENINGS:
+* Wall   No.   Bay                                       Sill      Base  Panel
+*  Id   Open   Id     Width   Height   Offset   Type   Height      Elev   Opt
+    1     0 
+    2     0 
+    3     1     1      4500     4500     3368     51        0         0   'Y'
+    4     0 
+
+*(14)ENDWALL FRAMING:
+* Wall     Corner_Column     Interior_Column   ----Rafter---     Splice
+*  Id   Type  Rot    Depth    Type    Depth    Type    Depth      Type
+    1   'W   :-:-'        0   'W   '        0  'W   '          0   'M :M '
+    3   'W   :-:-'        0   'W   '        0  'W   '          0   'M :M '
+
+*(15)PARTIAL WALLS (NO LONGER USED):
+* Wall               Sets    --Bay_Id--   Wall    Base  Full
+*  Id   Opt1  Opt2   Bays    Start  End  Height   Type  Load  Opt3
+    1   '-'   '-'      0 
+    2   '-'   '-'      0 
+    3   '-'   '-'      0 
+    4   '-'   '-'      0 
+
+*(16)BASE ELEVATION:
+*  -----Base_Elevation-------
+*    Endwalls       Sidewalls
+*  Left   Right   Front   Back
+      0       0       0       0
+
+*(17)WALL GIRTS:
+* Wall  Girt  Flange_Brace                      Set      Set
+*  Id   Type   Use  Supply   Offset   Project   Depth    Lap
+    1   'ZB'   'Y'    'Y'         0      230      200        0
+    2   'ZB'   'Y'    'Y'         0      230      200        0
+    3   'ZB'   'Y'    'Y'         0      230      200        0
+    4   'ZB'   'Y'    'Y'         0      230      200        0
+
+*(18)WALL GIRT LOCATION:
+* Wall    Low    Set   No.    Girt
+*  Id     Girt   Loc  Girts   Location
+    1         0  'Y'    6       2580       3580       4580 
+                                5780       7280       8780 
+    2         0  'Y'    5       2580       3580       4580 
+                                5780       7280 
+    3         0  'Y'    6       2580       3580       4580 
+                                5780       7280       8780 
+    4         0  'Y'    5       2580       3580       4580 
+                                5780       7280 
+
+*(19)ROOF PURLINS:
+* Surf  Purlin      Flange_Brace                     Set     Set
+*  Id Type/EaveF/B   Use  Supply  Offset  Project   Depth    Lap
+     2  'ZBZBZB'     'Y'    'Y'        0        0        0        0
+     3  'ZBZBZB'     'Y'    'Y'        0        0        0        0
+
+*(20)ROOF PURLIN SPACING:
+* Surf   Peak     Max      Set     ------Surface_Ext------
+*  Id    Space   Space    Space    Left     Right   Soffit
+    2      300     1650        0        0        0  '------------'
+    3      300     1650        0        0        0  '------------'
+
+*(21)WALL PANEL DATA:
+*                   Wall       ---Trim_Color---    Screw   -------Insulation-----  Thermal  Panel
+* Part        Thk   Color    Eave  Corner   Jamb    Type   Use Type   Thick  Wire   Block    Rot
+  '45250 .5'   0.50  'A2--'  'HA--' 'HA--'  'HA--'  'M--'  'N' '--'    0.00   'N'    0.0000   '-'
+  '45250 .5'   0.50  'A2--'  'HA--' 'HA--'  'HA--'  'M--'  'N' '--'    0.00   'N'    0.0000   '-'
+  '45250 .5'   0.50  'A2--'  'HA--' 'HA--'  'HA--'  'M--'  'N' '--'    0.00   'N'    0.0000   '-'
+  '45250 .5'   0.50  'A2--'  'HA--' 'HA--'  'HA--'  'M--'  'N' '--'    0.00   'N'    0.0000   '-'
+
+*(22)ROOF PANEL DATA:
+*                   Roof     Gable  Screw  -----Insulation-----  -------------Standing_Seam-------------
+* Part        Thk   Color    Color  Type   Use Type  Thick Wire  Use  Type  Clip   Seam Type       Clamp  Thermal_Block
+  '45250 .5'  0.50  'A3--'   'HA--' 'M--'  'N' '--'   0.00  'N'  'N'  '--'  0.00  '---------------' 'N'    0.0000
+
+*(23)RIGID FRAMES:
+* No_Diff  Frame  Frame  Load     --Frame_Shape--  Frame  Frame  Frame_Line
+* Frames    Id    Type   Width    Col/ConL:R  Raf   Symm    Quan     Id_No.
+     5       1    'HP-'     3345  'T:FI:FI'   'T '   'S'      1      1 
+             2    'RF-'     6068  'T:FI:FI'   'T '   'S'      3      2   3   5 
+             3    'RF-'     5923  'T:FI:FI'   'T '   'S'      1      4 
+             4    'RF-'     5905  'T:FI:FI'   'T '   'S'      1      6 
+             5    'HP-'     3345  'T:FI:FI'   'T '   'S'      1      7 
+
+*(24)RIGID FRAME INTERIOR COLUMNS:
+* Frame  Column  Column  Column   No.       Column
+*  Id    Typ/Con Rot/Shp  Elev   Columns   Location
+    1     'WPP'    'YC'         0   1         11235
+    2     '-P-'    'N-'         0   0 
+    3     '-P-'    'N-'         0   0 
+    4     '-P-'    'N-'         0   0 
+    5     'WPP'    'YC'         0   1         11235
+
+*(25)WIND FRAMING:
+* Wall  Panel  Diagonal  Wind   Wind   Weak_Axis  Brace
+*  Id   Shear  Bracing   Bent  Column   Bending   Option    Height
+    1    'N'     'N'     'N'     'N'     'N'      '--'         0
+    2    'N'     'R'     'N'     'N'     'N'      '--'         0
+    3    'N'     'N'     'N'     'N'     'N'      '--'         0
+    4    'N'     'R'     'N'     'N'     'N'      '--'         0
+    5    'N'     'R:N'   'N'     'N'     'N'      '--'         0
+
+*(26)WIND BRACING LOCATION:
+* Wall  No.    Bay
+*  Id   Bays   Id
+    1     0   
+    2     2    2  5 
+    3     0   
+    4     2    2  5 
+    5     2    2  5 
+
+*(27)WIND BENT LOCATION:
+* Wall  No.
+*  Id   Bays   BayId
+    1     0   
+    2     0   
+    3     0   
+    4     0   
+
+*(28)WIND COLUMN LOCATION:
+* Wall  No.
+*  Id   Bays   BayId   Side
+    1     0   
+    2     0   
+    3     0   
+    4     0   
+
+*(29)EAVE EXTENSION (NO LONGER USED):
+*Wall No. Bay_Id                        Purl_Extend      Purl   -Member--  ------Soffit------   -End_Option-  -----Space-----
+* Id  Ext St End      Width     Slope  Start     End     Type   Typ Shape  Part         Color   Left   Right  Peak        Set
+   2   0 
+   4   0 
+
+*(30)GUTTERS & DOWNSPOUTS:
+*    Gutter_Length      No. Downspouts    ------Color-----
+*  Front_SW  Back_SW   Front_SW  Back_SW  Gutter Downspout
+     36285     36285     8         8      '----E'   '----'
+
+*(31)WALL LIGHT PANELS (NO LONGER USED):
+* Data     Wall   Panel   Panel   Panel    Panel    Panel  Remove
+* Lines     Id    Quan    Type    Color   Length   Offset  Panel
+     0
+
+*(32)ROOF LIGHT PANELS (NO LONGER USED):
+* No.      Surf   Panel   Panel   Panel    Panel    Panel  Remove
+* Panels    Id    Quan    Type    Color   Length   Offset  Panel
+     0
+
+*(33)WALKDOORS & ACCESSORIES:
+* Data   Door    Door  Door   Weather  --Hardware---  Door  Lock Acc  Close
+* Lines  Size    Quan  Color  Stripp.  Panic Mullion  Type  Type Type  Type
+     0
+
+*(34)ADDITIONAL ITEMS:
+*  No.                                                      Unit     Unit  Supplier
+*  Add    Quan  Description                                Weight    Cost     Id
+     0
+
+*(35)ACCESSORY ITEMS:
+*  No.          Access    Accessory
+*  Acc   Quan     Id      Description
+     0
+
+*(36)WALL LINER PANELS (NO LONGER USED):
+* Wall   Use   ----Location----            --------------Panel--------------  Liner_Trim
+*  Id   Liner    Start      End   Height   Part        Thick   Yield   Color  Use  Color
+    1    'N'
+    2    'N'
+    3    'N'
+    4    'N'
+
+*(37)FACIA (NO LONGER USED):
+* Wall   Use   ----Location---  Bottom                         --Cover---
+*  Id   Facia    Start     End   Elev   Height  Offset  Slope  Panel Trim
+    1    'N'
+    2    'N'
+    3    'N'
+    4    'N'
+
+*(38)LINER PANELS:
+*     Loc          -----Location-----  ---------------Panel----------------  Liner_Trim
+* No.  Id   Use      Start        End   Part         Thick    Yield   Color  Use  Color   Opt    Height
+    0
+
+*(39)WALL PROPERTIES DATA:
+* Walls       -----Base-----  -----Seismic------
+*No. Id  Opt  Notch    Grout  Dead   Force  Girt
+  4   1  '0'  0.000    0.000   0.000  'Y'   'N'
+      2  '0'  0.000    0.000   0.000  'Y'   'N'
+      3  '0'  0.000    0.000   0.000  'Y'   'N'
+      4  '4'  0.000    1.000   0.000  'Y'   'N'
+
+*(40)LONGITUDINAL PARTITION WALL LOCATION (NO LONGER USED):
+* No.  Wall  -B_SW-  -L_EW Offset--  -Top_Of_Wall-
+*Walls No.   Offset   Start     End  Height  Panel
+    0
+
+*(41)LONGITUDINAL PARTITION WALL DATA (NO LONGER USED):
+*No.   Wall -----------Panel-----------  -----Insulation-----  Screw  --Trim--
+*Walls No.  Side Type  Thk  Yield Color  Use Type  Thick Wire  Type   Top  End
+    0
+
+*(42)CRANES:
+*No.  Frame  Crane Col ------Loads------  --Beam %_Force--  Wheel --------Location---------
+*Cran Id Bay Type  Sup  Cap  Brg    Ht    DL    Long  Lat   Base  Elev   XL     Span   XR
+    0
+
+*(43)ESTIMATE ITEMS:
+*  No.   Estimate
+*  Est     Id      Quan    Length    Width
+    0
+
+*(44)CANOPY (NO LONGER USED):
+*Wall No. Bay_Id                             Purl_Extend       Purl  -Member--   ------Soffit------  --------Roof-------  -End_Option-  Screw   -Standing_Seam-  -----Space-----
+* Id  Ext St End  Width    Height   Slope    Start    End      Type  Typ Shape   Part         Color  Part          Color  Left   Right  Type    Use  Type  Clip  Peak        Set
+   1   0 
+   2   0 
+   3   0 
+   4   0 
+
+*(45)ADDITIONAL LOADS:
+*No.   Frame  Surf/  Basic    Load       Fx        Fy       Mom        DX        DY          ----Surface----
+*Load  Load   Col    Load     Type       W1        W2        Co        D1        D2  Orn     Start       End
+   0
+
+*(46)EXTENSION LOADS & DEFLECTION LIMITS:
+*                      -----------------------Deflection Limits-----------------------
+*       ---Snow--      --Horizontal_Beam--  Horizontal-Beam-Purlin  --Vertical_Facia--
+*Dead   SW     EW      Live   Wind   Total   Live   Wind   Total    Beam   Panel  Girt
+  0.10   0.00   0.00     180    180    120     150    150    120      120    120    120
+
+*(47)EXTENSION LAYOUT:
+*             Wall              ---Bay_Id--    --Edge_Extend-  -End_Option-
+* No.    Id    Id  Type  Style  Start   End    Left     Right  Left   Right
+   1      1     3  'EC'    0      1      2         0        0  '--'    '--'
+
+*(48)EXTENSION SIZE:
+*      ----Horizontal_Size----     ------Vertical_Size-------    -Orientation-  ---Beam---
+* Id   Elev     Width    Slope     Elev     Height      Slope    Beam    Panel  Type Shape
+   1      5700     1800 10.0000          0        0    0.0000    '-'     '-'    'S'  'H'
+
+*(49)EXTENSION PURLINS:
+*      -------------Purlins-------------  ----------------Girts----------------  --Horizontal--  ---Set_Space---
+* Id   Type Ev St   Depth  Soffit  Depth  Top   Inter Bot  Depth   Gutr   Depth  Peak       Set  Top       Inter
+   1   'ZB' 'ZB--'       0 '--'        0  '--'  '--' '--'        0 '--'       0       0       0       0        0
+
+*(50)EXTENSION PANELS, HORIZONTAL:
+* ------------------Roof---Standing_Seam--  --------------Soffit--------------  Screw
+* Id   Part       Color   Use  Type   Clip  Part       Color   Rotate  Spacing   Type
+   1  '45250 .5' 'A3--'   'N'  '--'      0 '--------' '----'   'N'           0  'M--'
+
+*(51)EXTENSION PANELS, VERTICAL:
+* -----------------Front---Standing_Seam--   ---------------Back---------------
+* Id   Part       Color   Use  Type   Clip   Part       Color   Rotate  Spacing
+   1  '--------' '----'   'N'  '--'      0  '--------' '----'   'N'           0
+
+*(52)EXTENSION TRIM:
+*     --------Trim Colors--------      ---------Gutters------------  Downspouts   -------Trim_Colors-------
+* Id  Top    Bottom Corner Soffit Opt  Use Color    Width    Height  Color  Quan  Back   Roof   Wall   End
+   1 '----' '----'  '----' '----' 'N'  'N' '----'        0        0  '----'  0   '----' '----' '----' '----'
+
+*(53)PARTITION WALL LOADS & DEFLECTION LIMITS:
+*  Wind      ---Deflection--- 
+* Pressure   Col   Girt  Panel
+    0.00      90    90     90
+
+*(54)PARTITION WALL LOCATION:
+*Sets                        --------Start--------  ---------End---------
+*Partn  Partn Orient Wall             Adj   Tie-in           Adj   Tie-in  --Location--
+*Walls   Id   (L/W)  Dir.    Offset  WallId Option  Offset  WallId Option  Qty  Offset 
+  0
+
+*(55)PARTITION WALL BAY SPACING:
+* Partn  Sets     Bay     No.
+*  Id    Bays    Width    Bays  
+
+*(56)PARTITION WALL FRAMED & BAY OPENINGS:
+*Partn  No_Of  Bay     Open    Open     Open   Open  Sill    Base    Remove
+*  Id   Opens  Id     Width   Height   Offset  Type  Height  Elev    Panels
+
+*(57)PARTITION WALL COLUMN/RAFTER FRAMING:
+*       -------------Column-------------   ---------Rafter---------
+*Partn  Set  ---------Type--------  Base    Set
+*  Id  Depth  Start   Int    End    Elev   Depth Type Orient Option
+
+*(58)PARTITION WALL PARTIAL WALLS:
+*Partn    Sets    Base  Full  --Bay_Id--   Wall   Open
+*  Id     Bays    Type  Load  Start  End  Height  Use
+
+*(59)PARTITION WALL GIRTS:
+*Partn  Girt  Flange_Brace   Set    Top_Girt
+*  Id   Type   Use  Supply   Depth    Type  
+
+*(60)PARTITION WALL GIRT LOCATION:
+*Partn  Set   No.    Girt    
+*  Id   Loc  Girts   Location
+
+*(61)PARTITION WALL LEFT SIDE OF WALL DATA:
+*Partn --Top_Wall---  --------Panel-------- Screw  -----------Trim_Color---------
+* Id   Height  Panel  Part_Name      Color  Type   Corner   Jamb    Top     Base 
+
+*(62)PARTITION WALL RIGHT SIDE OF WALL DATA:
+*Partn --Top_Wall---  --------Panel-------- Screw  -----------Trim_Color---------
+* Id   Height  Panel  Part_Name      Color  Type   Corner   Jamb    Top     Base 
+
+*(63)PARTITION WALL ACCESSORIES:
+* --------Insulation--------    -----------Base_Options------------
+*Partn                          Base     Base     Base     Base    
+* Id    Use Type  Thick Wire    Angle   Channel   Seal   Angle/Seal
+
+*(64)COLUMN INFO. FOR INTERSECTION OF TWO CONTINUOUS PARTITIONS:
+*      First_Partition  Second_Partition
+*          Col  Tie-In      Col  Tie-In
+* Qty  Id  Type Option  Id  Type Option
+  0
+
+*(65)SOLDIER COLUMN BAY SPACING:
+*  Wall   Sets     Bay     No.
+*   Id    Bays    Width    Bays
+     2      0
+     4      0
+
+*(66)SOLDIER COLUMN FRAMING:
+* Wall  --Soldier_Column--  --Soldier_Rafter--  --Bracing--    Eave  Ext_Ev
+*  Id   Type   Depth   Opt  Type   Depth   Opt  Type   Loc      Opt     Opt
+    2   '--'        0  ' '  '--'        0  '4'  'N '        0   '-'     '-'
+    4   '--'        0  ' '  '--'        0  '4'  'N '        0   '-'     '-'
+
+*(67)CRANE RUNWAY LAYOUT:
+*No. Sys Crane Runway -----------------Runway Location----------------
+*Sys Id  Type  Orn    Elev     Offset     Span       Start      End       
+  1  1   'TG'  'L'     6570      1530     19410          0     36285
+     
+
+*(68)CRANES OPTIONS:
+*System Runway  ---Support---         --Bracket--  ----------Rail---------  RF Vert.  Min Crane  Overload
+* Id     Beam   Beam   Column  Stops  Left  Right  Type  Depth Conn  Dead    Impact     Space     Factor
+  1      'N-'   'N-'   'N-'    'N-'   'Y-'  'Y-'   'R-'    50  'H'   30.0     'Y'           0      'N'
+
+*(69)RUNWAY CRANES:
+*    Sys                         -------Loads-------  Max.Whl  --------Power / %_Force--------  --Wheel_Base-- Service Load
+*No.  Id  Id  Start     End      Cap     Brg    H/T    Load    --Long---  ---Lat---  --Vert---   Out     In     Class  Cond
+  1    1  1         0     36270  50.00   41.3    3.8       36  'E'  10.0  'E'  20.0  'E'  10.0    3200       0   'C'    500000
+
+*(70)CRANE RUNWAY BEAM:
+*System Member       Depth  Set/Min  Max    Deflection
+* Id    Type    Opt  Option Depth   Depth   Horiz Vert
+   1    'WB'    '--'   '-'       0       0   400   600
+
+*(71)CRANE SUPPORT BEAM:
+*       -----------Left Beam------------  -----------Right Beam-----------
+*System            Depth  ---Set_Depth--             Depth  ---Set_Depth--  Deflection
+* Id    Type  Opt  Option   Min     Max   Type  Opt  Option   Min     Max     Vert
+   1     'N'  '--'  '-'        0       0   'N'  '--'  '-'        0       0     150
+
+*(72)CRANE SUPPORT COLUMN:
+*       ----------------Left Column----------------   ----------------Right Column---------------
+*System Col        Depth  ---Set_Depth--    Base      Col        Depth  ---Set_Depth--    Base
+* Id    Type  Opt  Option  Min     Max      Elev      Type  Opt  Option  Min     Max      Elev
+   1    'N'   '--'  '-'         0       0       0     'N'   '--'  '-'         0       0       0
+
+*(73)CRANE DIAGONAL BRACING LOCATION:
+* System  Support_Beam  --Runway_Beam-  No.    Bay
+*  Id         Type       Type   Option  Bays   Id
+    1         'N '       'N '   '  '     0 
+    1         'N '       'N '   '  '     0 
+
+*(74)WIDE OPENING LAYOUT:
+*Wall ---Open----  Bay_Id  --Clear_Opening--   Wedge    Stub    Column   Total
+* Id  No. Id Type St End  Width      Height   Height   Elev     Mount   Weight
+   1   0
+   2   0
+   3   0
+   4   0
+
+*(75)WIDE OPENING AND STRUT FRAMING:
+*Wall -Open- -----Door_Jamb------ Stub Head Back_Brace  Strut -Header_Beam-  Deflection
+* Id  No. Id Type  FlgWid  FlgThk Type Type Type   Loc  Type  Type  Max_Len  Horz  Vert
+   1   0
+   2   0
+   3   0
+   4   0
+
+*(76)WIDE OPENING PANEL:
+*Wall -Open-  ----Door_Panel----  Trim  --Panel_Length--    Screw  ---Insulation---
+* Id  No. Id  Part_Name    Color  Type  Top       Bottom    Type   Type  Thick Wire
+   1   0
+   2   0
+   3   0
+   4   0
+
+*(77)USER PURLIN SPACING:
+*Surf   Sets     --Set_Space--
+* Id    Space    Space     No.
+   2      0
+   3      0
+
+*(78)JACK BEAM LAYOUT:
+*Number Beam  Bay Number   ------Jack_Beam------       Height  ----Bracing----
+*Beams   Id   Start  End   Offset   Height  Type  Opt   Opt    Type   Location
+   0
+
+*(79)PARTIAL WALL LAYOUT:
+*        Wall      --Bay_Id--  ----Offset----  -----Height-----   --Attach_Type--  ---Jamb--    Full  Deflect_Limit
+* No. Id  Id  Use  Start  End   Start     End   Bottom      Top   Bottom      Top  Type  Opt    Load   Girt   Panel
+   4   1   1  'PO'   1     2        0       0        0     2500   '-:---' '-:1--'  '-'   '-'    'NY'     90      0
+       2   2  'PO'   1     6        0       0        0     2500   '-:---' '-:1--'  '-'   '-'    'NY'     90      0
+       3   3  'PO'   1     2        0       0        0     2500   '-:---' '-:1--'  '-'   '-'    'NY'     90      0
+       4   4  'PO'   1     6        0       0        0     2500   '-:---' '-:1--'  '-'   '-'    'NY'     90      0
+
+*(80)PARTIAL WALL PANEL & TRIM:
+*    --------Panel-----------   -----------Trim----------   Screw  ----Insulation-----  Panel
+*Id  Part        Color    Opt   Base   LeftRghtJamb   Top   Type   Use Type Thick Wire   Rot
+  1 '--------'  '----'   '-N'  '----' '------------' '----' '---'  '-' '--'     0  '-'   '-'
+  2 '--------'  '----'   '-N'  '----' '------------' '----' '---'  '-' '--'     0  '-'   '-'
+  3 '--------'  '----'   '-N'  '----' '------------' '----' '---'  '-' '--'     0  '-'   '-'
+  4 '--------'  '----'   '-N'  '----' '------------' '----' '---'  '-' '--'     0  '-'   '-'
+
+*(81)LIGHT PANELS:
+* Data   --Location--                          Remove                          No.
+* Lines  Type     Id    Quan    Type   Color   Panel   Opt   Length   Offset   Loc   Locations
+   0
+
+*(82)ADDITIONAL LOAD DESCRIPTIONS:
+*No.
+*Load  Id   Description
+   0
+
+*(83)GUTTER:
+*         ---Location---  -------Layout-------        ------Size-----
+* No. Id   Use        Id      Start        End  Use    Width    Depth   Color
+   3   1  'WALL    '   2        0.0        0.0  'E'      0.0      0.0  '----'
+       2  'WALL    '   4        0.0        0.0  'E'      0.0      0.0  '----'
+       3  'EXTEND  '   1        0.0        0.0  'N'      0.0      0.0  '----'
+
+*(84)DOWNSPOUT:
+*Gtr
+* Id  Color   No.  Locations
+   1  '----'   8      0.0      0.0      0.0      0.0      0.0
+                      0.0      0.0      0.0
+   2  '----'   8      0.0      0.0      0.0      0.0      0.0
+                      0.0      0.0      0.0
+   3  '----'   0
+
+*(85)EXTENSION PANELS:
+*                -----Standing_Seam----
+* No.  Id  Side  Seam_Type        Clamp
+   1    1  'R'  '---------------'  'N'
+
+*(86)EXTENSION PROPERTIES:
+*               -------------Support--------------   Concrete  ---Concrete_Extend---  ----Member_Depth----  -Beam_Type-
+* No.  Id  Opt  Type   Offset     Elev Splice  Opt    Elev    Left   Right    Front  Purlin Rafter Column   Stub Rafter
+   1    1  '-'  '--'        0        0   '-'   '-'       0        0       0       0       0      0      0   '-'  '-'
+
+*(87)EXTENSION LOADS:
+*     Ext                                Thermal Slippery
+* No.  Id   Dead  Collat   Live   Snow    Coeff    Roof
+   1    1   0.10    0.00   0.57   0.00     0.00    'Y'
+
+*(88)PURLIN LAPS:
+*Surf      Data  -------Set_1-------  -------Set_2-------  -------Set_3-------
+* Id  Opt  Sets    Left   Right Quan    Left   Right Quan    Left   Right Quan
+   2  '-'    0
+   3  '-'    0
+
+*(89)DEFLECTION LIMIT:
+* No.   Use           Orn   Load    Limit
+   5   'PURLIN     '  'V'  'TOTAL'     0
+       'EW_RAFTER  '  'V'  'TOTAL'     0
+       'RIGID_FRAME'  'V'  'TOTAL'     0
+       'RIGID_FRAME'  'V'  'WIND '     0
+       'RIGID_FRAME'  'H'  'FLOOR'     0

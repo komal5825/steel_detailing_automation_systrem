@@ -1,0 +1,180 @@
+*DRAWING:CZE Shop   CELL:Cze_Dwg
+*( 1)DRAWING OPTIONS:
+* ---Page_Size---  --------Offset-------  -------Scale_Factor-----  Detail
+* Width   Height    Lt    Rt   Top   Bot  Text Table    Dim  Title    Size   Logo
+ 420.00   297.00  0.00  0.00  0.00  0.00  1.00  1.50   1.00   0.00  64.000  'Y'
+
+*( 2)MEMBER TYPE:
+* Member   Member      Member  Flange_Width      Web   Flange_Angle
+*  Type    Name        Depth     Top     Bot    Thick     Top     Bot  
+   'Z'    '200Z18  ' 200.000  60.000  60.000    1.800  0.0000  0.0000
+
+*( 3)MEMBER LENGTH:
+* Member   Overall -------------------Member_Parameters------------------
+* Length    Length   a      b      c      d      e      f      g      h
+ 3979.992 3979.992 50.000 100.000 45.000 100.000  0.000 30.000  0.000 45.000
+
+*( 4)MEMBER CUTS:
+*Member/Web_Cut     ----Special_Cuts-----  IS_Flg Special  Fab
+*   Left   Right   L_Cut   L_Off   R_Cut   Cut   Cut_Type End
+   0.000   0.000   0.000   0.000   0.000   0.000     'F'   'N'
+
+*( 5)MEMBER ORIENTATION:
+*                 --------Mark--------         ---Quantity-- 
+* Drawing         Std.           Op_Hd         Std.    Op_Hd 
+  'G-12       '  'G-12       '  'G-12       '    1        0
+
+*( 6)PUNCH:
+* Punch   Punch
+* Left    Right
+  '?? '     '?? '
+
+*( 7)PLATES:
+*No.    Type  Id  Qnt  Mark                   Width    Length  Length2   Thick  Weight  Detail
+    1   'MB'   1   1 'MR1:200Z18          '  60.000  3979.992    0.000   1.800    19.38  'N'
+
+
+*( 8)HOLE LOCATION:
+*          ---Plate--                                          No. 
+*  No.     Type    Id    Dia.    Aux.    Off     Gage   Angle  Hole   Location
+     2     'WS-'     1   14.000  19.000  50.000 100.000  0.0000    8     45.001
+                                                                      2314.994
+                                                                      2614.996
+                                                                      2944.993
+                                                                      3224.995
+                                                                      3324.995
+                                                                      3604.992
+                                                                      3934.991
+                                                                   
+           'WS-'     1   14.000  19.000  50.000 100.000  0.0000    1   1027.999
+                                                                   
+
+
+*( 9)PLATE LOCATION:
+*        ---Plate--                                            No.          
+*No.     Type    Id     Loc      Orn   Offset   Angle   Angle2  Loc    Location
+  0
+
+
+
+*(10)WELDS:
+*     --Plate--   2nd 
+*No.  Type   Id   Plate Type      Size  Note Opt  Length   Space
+  0
+
+*(11)USER DETAILS:
+*  No.      Id            X_Coord   Y_Coord   Scale
+    6    'CZETITLE    '  420.000 297.000    1.000
+         'CZEDRAW     '    0.000  50.000    1.000
+         'CZEPIECE    '    0.000  64.000    1.000
+         'CZEPLATE    '    0.000   0.000    1.000
+         'CZESLOT     '  350.000 270.000    1.500
+         'CZEHLGND    '  150.000 150.000    1.000
+
+*(12)DRAWING OPTIONS:
+* Option 
+   'N'   ..  1
+   '8'   ..  2
+   '8'   ..  3
+   'Y'   ..  4
+   'N'   ..  5
+   'N'   ..  6
+   'Y'   ..  7
+   '5'   ..  8
+   'N'   ..  9
+   '2'   .. 10
+   '2'   .. 11
+   'N'   .. 12
+   'Y'   .. 13
+   'N'   .. 14
+   '-'   .. 15
+   '0'   .. 16
+   '-'   .. 17
+   'Y'   .. 18
+   '8'   .. 19
+   '0'   .. 20
+   '2'   .. 21
+   'Y'   .. 22
+   '1'   .. 23
+   '2'   .. 24
+   'N'   .. 25
+   '0'   .. 26
+   '-'   .. 27
+   'Y'   .. 28
+   '-'   .. 29
+   '-'   .. 30
+   'Y'   .. 31
+   'Y'   .. 32
+   'Y'   .. 33
+   'Y'   .. 34
+   'Y'   .. 35
+   'Y'   .. 36
+   'Y'   .. 37
+   'Y'   .. 38
+   'Y'   .. 39
+   '-'   .. 40
+   '-'   .. 41
+   '1'   .. 42
+   '2'   .. 43
+   'Y'   .. 44
+   '2'   .. 45
+   'N'   .. 46
+   '-'   .. 47
+   '2'   .. 48
+   '1'   .. 49
+   '2'   .. 50
+   '2'   .. 51
+   '2'   .. 52
+   '1'   .. 53
+   'N'   .. 54
+   '2'   .. 55
+   '2'   .. 56
+   '3'   .. 57
+   '4'   .. 58
+   '3'   .. 59
+   '2'   .. 60
+   'M'   .. 61
+   '2'   .. 62
+   '3'   .. 63
+   '2'   .. 64
+   '2'   .. 65
+   '0'   .. 66
+   '1'   .. 67
+   '-'   .. 68
+   'N'   .. 69
+   '2'   .. 70
+   '1'   .. 71
+   '1'   .. 72
+   '-'   .. 73
+   '-'   .. 74
+   '2'   .. 75
+   '1'   .. 76
+   '1'   .. 77
+   '-'   .. 78
+   '2'   .. 79
+   '1'   .. 80
+   '4'   .. 81
+   '2'   .. 82
+   '1'   .. 83
+   '2'   .. 84
+   '2'   .. 85
+   '3'   .. 86
+   '-'   .. 87
+   '-'   .. 88
+   '-'   .. 89
+   '-'   .. 90
+   '-'   .. 91
+   '-'   .. 92
+   '-'   .. 93
+   '-'   .. 94
+   '-'   .. 95
+   '-'   .. 96
+   '-'   .. 97
+   '-'   .. 98
+   '-'   .. 99
+   '-'   .. 100
+
+*(13)PLATE CUTS:
+* No.  Plate  Plate  Cut  Cut     Cut      Cut
+* Cut  Type     Id   Loc  Type  Width   Length
+    0

@@ -1,0 +1,15 @@
+*FILE:DE_ROPEN.in    VERSION:1.00    UNITS:METRIC
+
+*(  )ROOF OPENING LAYOUT:
+*No.  Open              Frame --------Surface----------- -----Bay------                    Len           Ref
+*Open  Id  Use     Opt  Type  Id   Offset  Ref  From To  Id   Offset To     Width   Length Ref   Height  Id
+   0
+
+*(  )ROOF OPENING FRAMING:
+*Open Jamb Head -----Support-----  Panel           Load
+* Id  Type Type Type  Opt   Depth   Opt      Load   Opt
+
+*(  )ROOF OPENING ACCESSORY PROPERTIES
+*Open              -----Panel-----  Fasten        Trim
+* Id    Length     Type      Color  Finish  Mesh  Style
+

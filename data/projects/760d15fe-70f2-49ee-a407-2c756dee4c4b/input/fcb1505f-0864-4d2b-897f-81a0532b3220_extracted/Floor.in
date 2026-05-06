@@ -1,0 +1,59 @@
+*( ) VERSION
+      '1.06'
+
+*( )FLOOR LAYOUT
+* No.   Floor       Joist                       BackSW    LeftEW   ---Elevation---
+*Floor   Id    Opt  Orient    Width   Length    Offset    Offset    Height    Ref
+   0
+
+*( )CLEARANCE:
+*Floor  ----Under----  Over
+* Id    Joist    Beam  Floor
+
+*( )DECKING:
+*Floor                         Floor  -----Offset Reference-----
+* Id   Opt  Type   Part        Thick   Left  Front  Right  Back
+
+*( )JOISTS:
+*Floor                  --------Depth-------  ----Set_Lap---  ----Spacing---    No.
+* Id   Opt  Type Strap   Seat    Min     Max     Ext     Int     Max     Set   Joist  Location
+
+*( )OPENINGS:
+* No. Floor       JambType HeadType   ----Depth----                                     Load
+*Open  Id    Opt    1   2   1   2      Min    Max   Width   Length   Offset   Locate  Locate     Load
+   0
+
+*( )COLUMN OPTIONS
+*Floor                  ----Depth----      Max    Max             Base  Top
+* Id   Opt  Type  Rot     Min     Max   Length BM_Span   Grout    Elev Conn
+
+*( )COLUMNS:
+* No.   Floor                    ----Depth----                      Base  Top
+* Col   Id   Opt  Type  Rotate    Min     Max   Offset   Locate     Elev  Conn
+   0
+
+*( )SUPPORT BEAMS:
+*Floor             Connection_Type   ----Depth----    Max      No.
+* Id    Opt  Type  RF  IntCol  Spl     Min     Max  Jst_Span  Locate  Location
+
+*( )PERIMETER BEAMS:
+*Floor      -------Type--------  ----Depth----
+* Id    Opt  Lt   Rt   Top  Bot    Min     Max
+
+*( )LOADS:
+*Floor                        Part   ---Collateral--            Panel  Deflection_Limit
+* Id    Opt  Use     Dead     Dead    Below    Above     Live   Live   Live   Dead+Live
+
+*( )DETAIL OPTIONS
+*Floor               -------Beam------   Post    -------Angle-------
+* Id    Deck  Joist  Support Perimeter  Support  Perimeter  Bridging
+
+*( )BRACING
+*Floor      Lateral  ----------Type----------
+* Id   Opt  Support  Longitudinal  Transverse
+
+*( )PANEL/TRIM COLOR
+*       -----Panel-----  OpenTrim
+*Floor  Color/  Length/   Color/
+* Id    Style   Finish    Style
+

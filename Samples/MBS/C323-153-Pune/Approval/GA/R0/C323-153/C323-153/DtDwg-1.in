@@ -1,0 +1,40 @@
+*===============================================================================
+*C323-153            Detail Sheet # 1 Input                  23/JUL/202511:23am
+*===============================================================================
+
+*( 1)TITLE BLOCK:
+  'Sivoko Steel Structures Ltd.            '    .. Manufacturer
+  '                                        '    .. Builder
+  'Proposed Warehouse                      '    .. Project
+  'Proposed Warehouse                      '    .. Project Site
+  '                                        '    .. Project Site
+  'C323-153                                '    .. Project ID
+
+*( 2)DRAWING OPTIONS:
+* Drawing_Size     Drawing_Offset       Detail  Title               Page_Number
+* Width   Height  Lt    Rt    Top  Bot   Size   Scale    Logo        Id   Total
+    420     297     5     5     5    40    75   0.7000 'N       ' '----' '----'
+
+*( 3)PROGRAM SELECTED DETAILS:
+*  No.    Detail            --Insert_Point---    ---Detail_Size---
+* Detail   Name             X_Coord   Y_Coord     Width     Height     Scale
+   15     'A10'                 5.0     217.0      75.0       75.0    2.0833 .. EwDwg-L     
+          'B20'                80.0     217.0      75.0       75.0    2.0833 .. EwDwg-L     
+          'C12'               155.0     217.0      75.0       75.0    2.0833 .. EwDwg-L     
+          'D27'               230.0     217.0      75.0       75.0    2.0833 .. EwDwg-L     
+          'D77'               305.0     217.0      75.0       75.0    2.0833 .. EwDwg-L     
+          'E3'                  5.0     142.0      75.0       75.0    2.0833 .. EwDwg-L     
+          'E6'                 80.0     142.0      75.0       75.0    2.0833 .. EwDwg-R     
+          'G2'                155.0     142.0      75.0       75.0    2.0833 .. RoofDwg     
+          'H2'                230.0     142.0      75.0       75.0    2.0833 .. SwDwg-F     
+          'J16'               305.0     142.0      75.0       75.0    2.0833 .. SwDwg-F     
+          'J24'                 5.0      67.0      75.0       75.0    2.0833 .. SwDwg-F     
+          'K2'                 80.0      67.0      75.0       75.0    2.0833 .. EwDwg-R     
+          'L6'                155.0      67.0      75.0       75.0    2.0833 .. EwDwg-R     
+          'Q3'                230.0      67.0      75.0       75.0    2.0833 .. SwDwg-F     
+          'R10'               305.0      67.0      75.0       75.0    2.0833 .. RfDwg-1     
+
+*( 4)USER SELECTED DETAILS:
+*  No.    Detail            --Insert_Point---    ---Detail_Size---
+* Detail   Name             X_Coord   Y_Coord     Width     Height     Scale
+    0

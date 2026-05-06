@@ -1,0 +1,233 @@
+*===============================================================================
+*C08-033             Partition Detail Input                 23/APR/2026  3:19pm
+*===============================================================================
+
+*( 1)JOBID:
+    'C08-033'
+
+*( 2)PROGRAM OPTIONS:
+*  Build  L_Expand_EW  R_Expand_EW  --Rafter_Type-
+*  Type   Use  Offset  Use  Offset  -Left-- -Right-
+   'FF'   'Y ' 380.00  'Y ' 380.00   '-'     '-'
+
+*( 3)SURFACE SHAPE:
+* No.    X_Coord   Y_Coord   Offset
+    4        0.0    7000.0   150.00
+         30500.0   10050.0   200.00
+         61000.0    7000.0   200.00
+         61000.0       0.0   150.00
+
+*( 4)PARTITION WALL LOCATION:
+*                         -----------Start------------  ------------End-------------
+*Sets_Of     Orient Wall                    Adj Tie_in                   Adj Tie_in  --Location--
+*Walls  Id   (L/T)  Dir.   Offset   Extend Wall Option   Offset   Extend Wall Option No.   Offset
+   0
+
+*( 5)COLUMN INFO. FOR INTERSECTION OF TWO CONTINUOUS PARTITIONS:
+*      First_Partn     Second_Partn
+*          Col  Col        Col  Col
+* No.  Id  Type Opt    Id  Type Opt
+   0
+
+*( 6)BAY SPACING:
+* Wall  ----Offset---    No.   ---Bay_Set---
+*  Id    Left  Right    Sets     Width  Quan
+    1  150.00 150.00      3     7400.0    1
+                                7700.0    6
+                                7400.0    1
+    2  380.00 380.00      3     7350.0    1
+                                7700.0    4
+                                7350.0    1
+    3  150.00 150.00      3     7400.0    1
+                                7700.0    6
+                                7400.0    1
+    4  380.00 380.00      3     7350.0    1
+                                7700.0    4
+                                7350.0    1
+    5  380.00 380.00      3     7350.0    1
+                                7700.0    4
+                                7350.0    1
+
+*( 7)PARTITION WALL BAY SPACING:
+*Partn   No.   ---Bay_Set---
+*  Id   Sets     Width  Quan
+
+*( 8)WALL COLUMNS:
+*Wall
+* Id   No.  Id    Part       Rot  Opt
+   1    9    1   '--------'  'N'  '-'
+             2   'MB225'     'N'  '-'
+             3   'MB225'     'N'  '-'
+             4   'MB225'     'N'  '-'
+             5   'MB225'     'N'  '-'
+             6   'MB225'     'N'  '-'
+             7   'MB225'     'N'  '-'
+             8   'MB225'     'N'  '-'
+             9   '--------'  'N'  '-'
+   2    0
+   3    9    1   '--------'  'N'  '-'
+             2   'MB225'     'N'  '-'
+             3   'MB225'     'N'  '-'
+             4   'MB225'     'N'  '-'
+             5   'MB225'     'N'  '-'
+             6   'MB225'     'N'  '-'
+             7   'MB225'     'N'  '-'
+             8   'MB225'     'N'  '-'
+             9   '--------'  'N'  '-'
+   4    0
+
+*( 9)PARTITION COLUMNS:
+*Partn                                               Frame  ConnBase ConnCap  Weld
+* Id   No.  Id    Part       Rot   Opt    Elev      Height  Id  Opt  Id  Opt   Id
+
+*(10)PARTITION RAFTERS:
+*Partn                                             Weld
+* Id   No.  Id   Offset    Part       Rot  Option   Id
+
+*(11)BUILDING WALL OPENINGS:
+*Wall       Bay                                 Sill    Base  Header     Sill
+* Id   No.  Id    Width  Height  Offset Type  Height    Elev  Part       Part
+   1    4    3   4000.0  4000.0  1850.0   1      0.0    0.00 '200C20'   '200C20'  
+             4   4000.0  4000.0  1850.0   1      0.0    0.00 '200C20'   '200C20'  
+             5   4000.0  4000.0  1850.0   1      0.0    0.00 '200C20'   '200C20'  
+             6   4000.0  4000.0  1850.0   1      0.0    0.00 '200C20'   '200C20'  
+   2    0
+   3    4    3   4000.0  4000.0  1850.0   1      0.0    0.00 '200C20'   '200C20'  
+             4   4000.0  4000.0  1850.0   1      0.0    0.00 '200C20'   '200C20'  
+             5   4000.0  4000.0  1850.0   1      0.0    0.00 '200C20'   '200C20'  
+             6   4000.0  4000.0  1850.0   1      0.0    0.00 '200C20'   '200C20'  
+   4    0
+
+*(12)PARTITION WALL OPENINGS:
+*Partn      Bay                                 Sill    Base  Header     Sill
+* Id   No.  Id    Width  Height  Offset Type  Height    Elev  Part       Part
+
+*(13)BUILDING PARTIAL WALLS:
+*Wall Sets_Of   Base       Top         --Bay_Id--
+* Id   Bays     Part       Part        Start  End   Height
+   1     1     '--------' '--------'     1     8    3600.0
+   2     1     '--------' '--------'     1     6    3600.0
+   3     1     '--------' '--------'     1     8    3600.0
+   4     1     '--------' '--------'     1     6    3600.0
+
+*(14)PARTITION PARTIAL WALLS:
+*Wall Sets_Of   Base       Top         --Bay_Id--
+* Id   Bays     Part       Part        Start  End   Height
+
+*(15)PURLIN TYPE:
+*   Surf
+*    Id    Type   Offset  Project   Part
+      2    'ZB'     0.00     0.00  '200Z18'  
+      3    'ZB'     0.00     0.00  '200Z18'  
+
+*(16)PURLIN LOCATION:
+*Surf    Peak
+* Id    Space  No.  Locate
+   2    300.0   21     352     1852     3352     4852     6352     7852     9352 
+                     10852    12352    13852    15352    16852    18352    19852 
+                     21352    22852    24352    25852    27352    28852    30352 
+   3    300.0   21     300     1800     3300     4800     6300     7800     9300 
+                     10800    12300    13800    15300    16800    18300    19800 
+                     21300    22800    24300    25800    27300    28800    30300 
+
+*(17)BUILDING GIRT LAYOUT:
+*Wall   Girt
+* Id    Type        Offset  Project
+   1    'ZB'          0.00     0.00
+   2    'ZB'          0.00     0.00
+   3    'ZB'          0.00     0.00
+   4    'ZB'          0.00     0.00
+
+*(18)BUILDING WALL GIRTS:
+*Wall  No.  Bay
+* Id   Bay  Id  Part        No.  Location
+   1    8    1 '200Z15'      3   3680.0   5180.0   6680.0
+             2 '200Z15'      3   3680.0   5180.0   6680.0
+             3 '200Z18'      4   3680.0   4550.0   5180.0   6680.0
+             4 '200Z18'      5   3680.0   4550.0   5180.0   6680.0   8180.0
+             5 '200Z18'      5   3680.0   4550.0   5180.0   6680.0   8180.0
+             6 '200Z18'      4   3680.0   4550.0   5180.0   6680.0
+             7 '200Z15'      3   3680.0   5180.0   6680.0
+             8 '200Z15'      3   3680.0   5180.0   6680.0
+   2    6    1 '150Z15'      2   3680.0   5180.0
+             2 '150Z15'      2   3680.0   5180.0
+             3 '150Z15'      2   3680.0   5180.0
+             4 '150Z15'      2   3680.0   5180.0
+             5 '150Z15'      2   3680.0   5180.0
+             6 '150Z15'      2   3680.0   5180.0
+   3    8    1 '200Z15'      3   3680.0   5180.0   6680.0
+             2 '200Z15'      3   3680.0   5180.0   6680.0
+             3 '200Z18'      4   3680.0   4550.0   5180.0   6680.0
+             4 '200Z18'      5   3680.0   4550.0   5180.0   6680.0   8180.0
+             5 '200Z18'      5   3680.0   4550.0   5180.0   6680.0   8180.0
+             6 '200Z18'      4   3680.0   4550.0   5180.0   6680.0
+             7 '200Z15'      3   3680.0   5180.0   6680.0
+             8 '200Z15'      3   3680.0   5180.0   6680.0
+   4    6    1 '150Z15'      2   3680.0   5180.0
+             2 '150Z15'      2   3680.0   5180.0
+             3 '150Z15'      2   3680.0   5180.0
+             4 '150Z15'      2   3680.0   5180.0
+             5 '150Z15'      2   3680.0   5180.0
+             6 '150Z15'      2   3680.0   5180.0
+
+*(19)BUILDING SPECIAL GIRT:
+* Wall Sets_Of  --Bay_Id--   Girt  Girt   Girt   Girt
+*  Id   Girts   Start  End  Height Type  Rotate  Size
+    1     0
+    2     0
+    3     0
+    4     0
+
+*(20)PARTITION GIRT LAYOUT:
+*Partn  Girt  Top
+* Id    Type  Type  Offset  Project
+
+*(21)PARTITION WALL GIRTS:
+*Partn No.  Bay
+* Id   Bay  Id  Part        No.  Location
+
+*(22)PARTITION SPECIAL GIRT:
+*Partn Sets_Of  --Bay_Id--   Girt  Girt   Girt   Girt
+*  Id   Girts   Start  End  Height Type  Rotate  Size
+
+*(23)EAVE STRUTS, GUTTER:
+*Wall                   Gutter
+* Id   Type   Part      Type
+   2   'ZB'  '200Z18'   'Y'       
+   4   'ZB'  '200Z18'   'Y'       
+
+*(24)ADDITIONAL COLUMNS:
+*    Wall Column                                                -Connect-
+*No.  Id   Id   Type  Part      Rot  Opt      Elev     Height   Base  Cap
+  0
+
+*(25)CONNECTIONS:
+*                    -----Plate_Size----  -------------------Bolts-------------------  Bolt  Weld
+*No.  Id  Type  Opt  Width Length  Thick  Type      Dia Row1 Row2 Space1 Space2  Gage   Ref   Id
+   0
+
+*(26)WELDS:
+*    Table      ---OS_Flange---  ---IS_Flange---  ------Web------
+*No.  Id   Opt   Size Type Note   Size Type Note   Size Type Note
+   0
+
+*(27)RIGID FRAME LOCATIONS:
+*                              Line
+*   No.     Id    Type    Quan  Id
+     2       1    'HP-'    2     1   7
+             2    'HP-'    5     2   3   4   5   6
+
+*(28)INTERIOR COLUMNS:
+* Frame                                                 Max    Flange
+*  Id     Type    Rot      No.  Location   Part        Depth    Width
+    1     'S'     'N'       1    9296400  '--------'  203.20   200.00
+    2     'S'     'N'       1    9296400  '--------'  203.20   240.00
+
+*(29)BLOCK/BRIDGING EAVE STRUT HOLES:
+*     Bay           Hole   Slot
+*No.   Id   Offset   Dia  Length
+  0
+
+*(30)COLUMN FLANGE BRACES:
+*Wall  Column
+* Id   No. Id   No.    Loc  Side  Type  Offset  Opt  Ref

@@ -1,0 +1,48 @@
+*                      FILE:   DT_SKYLT.SIZ
+*
+*
+*
+*                       SI UNITS
+*
+*     Type: Used to identify the type of accessory.
+*
+*     Description: The name which will appear in the BOM.
+*
+*     Mark: Label to be placed on the item.
+*
+*     Part Number: Number used to order the item.
+*
+*     Drawing: Drawing to detail the member, if available.
+*
+*     Color: Additional identification of the member, if required.
+*
+*     Length: Length of light panel in millimeters.
+*
+*     Weight: Weight of light panel in kilograms.
+**                                                               Length Weight
+**Typ    Description            Mark      Part       Dwg  Color    mm      kg  
+**-----  ---------------------- -------- ---------- ----- ------ ------ ------ 
+
+ 'FRP '  'FRP 2.0 x 3200      ' '      ' 'FRP2032 '  '--'  '--'   3200.   4.48
+
+ 'FRP '  'FRP 2.0 x 3600      ' '      ' 'FRP2036 '  '--'  '--'   3600.   5.04 
+
+ 'FRP '  'FRP 2.0 x 3800      ' '      ' 'FRP2038 '  '--'  '--'   3800.   5.32
+
+STOP
+
+ 'FRP '  'FRP 2.0 x 3100      ' '      ' 'FRP2031 '  '--'  '--'   3100.   4.34
+ 'FRP '  'FRP 2.0 x 3200      ' '      ' 'FRP2032 '  '--'  '--'   3200.   4.48
+ 'FRP '  'FRP 2.0 x 3300      ' '      ' 'FRP2033 '  '--'  '--'   3300.   4.62
+ 'FRP '  'FRP 2.0 x 3400      ' '      ' 'FRP2034 '  '--'  '--'   3400.   4.76
+ 'FRP '  'FRP 2.0 x 3500      ' '      ' 'FRP2035 '  '--'  '--'   3500.   4.90 
+ 'FRP '  'FRP 2.0 x 3600      ' '      ' 'FRP2036 '  '--'  '--'   3600.   5.04 
+ 'FRP '  'FRP 2.0 x 3700      ' '      ' 'FRP2037 '  '--'  '--'   3700.   5.18
+ 'FRP '  'FRP 2.0 x 3800      ' '      ' 'FRP2038 '  '--'  '--'   3800.   5.32
+ 'FRP '  'FRP 2.0 x 4500      ' '      ' 'FRP2045 '  '--'  '--'   4500.   6.30
+ 'FRP '  'FRP 2.0 x 4700      ' '      ' 'FRP2047 '  '--'  '--'   4700.   6.58
+ 'FRP '  'FRP 2.0 x 4800      ' '      ' 'FRP2048 '  '--'  '--'   4800.   6.72
+ 'FRP '  'FRP 2.0 x 4900      ' '      ' 'FRP2049 '  '--'  '--'   4900.   6.86
+ 'FRP '  'FRP 2.0 x 5100      ' '      ' 'FRP2051 '  '--'  '--'   5100.   7.14
+ 'FRP '  'FRP 2.0 x 5300      ' '      ' 'FRP2053 '  '--'  '--'   5300.   7.42
+ 'FRP '  'FRP 2.0 x 5400      ' '      ' 'FRP2054 '  '--'  '--'   5400.   7.56

@@ -1,0 +1,72 @@
+ 
+[COMPDET:MEMBER1]
+Type=FRAME_EXTEND
+Id=1
+Mark=EB-1
+Wall=1
+Part=--------
+X=      0.00
+Y=  12800.00
+ 
+[COMPDET:MEMBER2]
+Type=FRAME_EXTEND
+Id=2
+Mark=EB-2
+Wall=1
+Part=W35a208
+X=      0.00
+Y=  12800.00
+ 
+[COMPDET:MEMBER3]
+Type=FRAME_EXTEND
+Id=3
+Mark=EB-3
+Wall=1
+Part=--------
+X=      0.00
+Y=   5115.00
+ 
+[COMPDET:MEMBER4]
+Type=FRAME_EXTEND
+Id=4
+Mark=EB-4
+Wall=2
+Part=--------
+X=  16745.00
+Y=      0.00
+ 
+[COMPDET:MEMBER5]
+Type=FRAME_EXTEND
+Id=5
+Mark=EB-3
+Wall=2
+Part=--------
+X=  23460.00
+Y=      0.00
+ 
+[COMPDET:MEMBER6]
+Type=FRAME_EXTEND
+Id=6
+Mark=EB-4
+Wall=3
+Part=--------
+X=  30500.00
+Y=   5115.00
+ 
+[COMPDET:MEMBER7]
+Type=FRAME_EXTEND
+Id=7
+Mark=EB-5
+Wall=3
+Part=--------
+X=  30500.00
+Y=  12800.00
+ 
+[COMPDET:MEMBER8]
+Type=FRAME_EXTEND
+Id=8
+Mark=EB-6
+Wall=3
+Part=W35a208
+X=  30500.00
+Y=  12800.00

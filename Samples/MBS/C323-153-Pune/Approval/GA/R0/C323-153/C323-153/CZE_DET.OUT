@@ -1,0 +1,49 @@
+ JOB Id  : C323-153                                            Page:  1
+ CUSTOMER:                                                     Date: 23/JUL/2025
+
+
+ Fin Material               Punch
+ ish Description   Part     Code    Comment            Qnt Length (mm)    Mark
+ --- ------------- -------- ------- ------------------ --- ------------   ------
+     200x 60 C   2 200C20           See Drawing DJ-1     2   4480         DJ-1  *
+
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  P-1     7   6570          P-1   
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  P-2    14   6740          P-2   
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  P-3    14   6480          P-3   
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  P-4    14   6980          P-4   
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  P-5    14   6620          P-5   
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  P-6     7   6620          P-6   
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  P-7     7   6570          P-7   
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  P-8     7   6620          P-8   
+     250x 80 Z   3 250Z25   ?? -??  See Drawing  P-9     2  11430          P-9   
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  E-1     1   6570          E-1   
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  E-2     2   6740          E-2   
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  E-3     2   6480          E-3   
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  E-4     2   6980          E-4   
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  E-5     2   6620          E-5   
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  E-6     1   6620          E-6   
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  E-7     1   6570          E-7   
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  E-8     1   6620          E-8   
+     250x 80 Z   2 250Z18   ?? -??  See Drawing  E-9     1  11435          E-9   
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  G-1     1  12030          G-1   
+     200x 60 Z   2 200Z18   ?? -??  See Drawing  G-2     7  12235          G-2   
+     200x 60 Z   2 200Z18   ?? -??  See Drawing  G-3     1  12030          G-3   
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  G-4     2   8130          G-4   
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  G-5     2  12030          G-5   
+     200x 60 Z   2 200Z18   ?? -??  See Drawing  G-6    10  12235          G-6   
+     200x 60 Z   2 200Z18   ?? -??  See Drawing  G-7     1  12030          G-7   
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  G-8     2   8130          G-8   
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  G-9     1   3116          G-9   
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  G-10    1   3321          G-10  
+     200x 60 Z   3 200Z25   ?? -??  See Drawing  G-11    2  12235          G-11  
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  G-12    1   4230          G-12  
+     200x 60 Z   2 200Z18   ?? -??  See Drawing  G-13    1   4230          G-13  
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  G-14    4   6570          G-14  
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  G-15    8   6740          G-15  
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  G-16    8   6480          G-16  
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  G-17    8   6980          G-17  
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  G-18    8   6620          G-18  
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  G-19    4   6620          G-19  
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  G-20    4   6620          G-20  
+     200x 60 Z   2 200Z15   ?? -??  See Drawing  G-21    4   6570          G-21  
+

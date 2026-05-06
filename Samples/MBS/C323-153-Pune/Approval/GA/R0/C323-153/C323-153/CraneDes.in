@@ -1,0 +1,148 @@
+*===============================================================================
+*C323-153            Crane Design Input                     23/JUL/2025 11:19am
+*===============================================================================
+
+*( 1)JOBID:
+    'C323-153'
+
+*( 2)DESIGN CODE:
+*Design  ---Steel_Code---             ---Build---   Code     Seismic
+* Code   Cold       Hot      Country  Code   Year   Label     Zone
+  'WS'  'NAUS07  ' 'AISC05'  '    '  'MBMA'  '10'  'MBMA 10 ' 'B  '
+
+*( 3)DESIGN CONSTANTS:
+*                                                      Wind     Load
+* ---------------Steel_Yield----------------  Stress Strength   Ratio
+* Web   Flg  C_Sec W_Sec R_Sec  U_Sec   EP    Ratio   Ratio    Factor
+  345   345    345   345   235    235   345    1.00    1.0000  1.0000
+
+*( 4)REPORTS:
+* Input  Runway   ---Support---  Cable
+* Echo    Beam    Beam   Column  Brace
+   'I'    'Y'     'Y'     'Y'     'Y'
+
+*( 5)BUILDING LAYOUT:
+* Build   L_Expand_EW  R_Expand_EW
+*  Type   Use  Offset  Use  Offset
+  'FF-'   'Y ' 440.00  'Y ' 440.00
+
+*( 6)SURFACE SHAPE:
+*  No.     X_Coord  Y_Coord  Offset
+     4          0      8170  230.00
+            11235      9294  200.00
+            22470      8170  200.00
+            22470         0  230.00
+
+*( 7)BAY SPACING:
+* Wall   No.   ---Bay_Set---
+*  Id   Sets     Width  Quan
+    1     1      11235    2
+    2     6       6200    1
+                  5990    1
+                  5730    1
+                  6230    1
+                  5870    1
+                  6250    1
+    3     1      11235    2
+    4     6       6250    1
+                  5870    1
+                  6230    1
+                  5730    1
+                  5990    1
+                  6200    1
+    5     6       6200    1
+                  5990    1
+                  5730    1
+                  6230    1
+                  5870    1
+                  6250    1
+
+*( 8)CRANE RUNWAY LAYOUT:
+*        Crane Runway -----------------Runway_Location----------------    Frame_Offset
+*No. Id  Type  Orn      Elev    Offset      Span      Start        End    Left   Right
+  1   1  'TG'  'L'      6000      1200     20175          0      36270     970     865
+
+*( 9)CRANE OPTIONS:
+*System Runway ---Support---        ----------Rail---------  Min_Crane   Set
+* Id     Beam  Beam   Column Stops  Type  Depth Conn   Dead    Space    Order
+   1     'Y-'  'N-'   'N-'   'N-'   'R-'  50.00 'H '   30.0        0     'Y'
+
+*(10)CRANE SYSTEM OPTIMIZATION:
+*    --------Runway_Beam--------  -----Support_Beam-----  ---------Support_Column---------
+*Sys ------Depth-----   Deflect   -----Depth------  Defl  ---Left_Depth--  --Right_Depth--
+* Id Opt  Min   Max    Horz Vert  Opt  Min    Max   Vert  Opt  Min   Max   Opt  Min   Max
+   1 '-'   0.0   0.0  400.  600.  '-'   0.0    0.0  150.  '-'   0.0   0.0  '-'   0.0   0.0
+
+*(11)CRANE RUNWAY BEAM:
+*    Sys Mem Rnwy        Member                            ----Web----   Bot_Flange    Top_Flange
+* No. Id  Id Side  Locate Type  Opt  Beam       Channel    Depth Thick  Width  Thick  Width  Thick
+   12  1   1 'L'        0 'WB'  '-' '--------' '--------'   0.00  0.00   0.00   0.00   0.00   0.00
+       1   2 'R'        0 'WB'  '-' '--------' '--------'   0.00  0.00   0.00   0.00   0.00   0.00
+       1   3 'L'     6200 'WB'  '-' '--------' '--------'   0.00  0.00   0.00   0.00   0.00   0.00
+       1   4 'R'     6200 'WB'  '-' '--------' '--------'   0.00  0.00   0.00   0.00   0.00   0.00
+       1   5 'L'    12190 'WB'  '-' '--------' '--------'   0.00  0.00   0.00   0.00   0.00   0.00
+       1   6 'R'    12190 'WB'  '-' '--------' '--------'   0.00  0.00   0.00   0.00   0.00   0.00
+       1   7 'L'    17920 'WB'  '-' '--------' '--------'   0.00  0.00   0.00   0.00   0.00   0.00
+       1   8 'R'    17920 'WB'  '-' '--------' '--------'   0.00  0.00   0.00   0.00   0.00   0.00
+       1   9 'L'    24150 'WB'  '-' '--------' '--------'   0.00  0.00   0.00   0.00   0.00   0.00
+       1  10 'R'    24150 'WB'  '-' '--------' '--------'   0.00  0.00   0.00   0.00   0.00   0.00
+       1  11 'L'    30020 'WB'  '-' '--------' '--------'   0.00  0.00   0.00   0.00   0.00   0.00
+       1  12 'R'    30020 'WB'  '-' '--------' '--------'   0.00  0.00   0.00   0.00   0.00   0.00
+
+*(12)CRANE SUPPORT BEAM:
+*    Sys Member Rnwy                                 Conn
+* No. Id   Id   Side   Locate Type Opt    Part       Type
+   0
+
+*(13)CRANE SUPPORT COLUMN:
+*    Sys Member Rnwy                                       Base      Max
+* No. Id   Id   Side   Locate Type Rot   Opt  Part         Elev      UBL
+   0
+
+*(14)CRANE BRACKET:
+*       Sys Member Rnwy  ------------Bracket----------- Conn
+*  No.   Id   Id   Side    Locate Type  Opt   Part      Type
+   14     1    1    'L'         0 'R '  '-'  'W15a125 ' '--'
+          1    2    'R'         0 'R '  '-'  'W15a125 ' '--'
+          1    3    'L'      6200 'R '  '-'  'W15a125 ' '--'
+          1    4    'R'      6200 'R '  '-'  'W15a125 ' '--'
+          1    5    'L'     12190 'R '  '-'  'W15a125 ' '--'
+          1    6    'R'     12190 'R '  '-'  'W15a125 ' '--'
+          1    7    'L'     17920 'R '  '-'  'W15a125 ' '--'
+          1    8    'R'     17920 'R '  '-'  'W15a125 ' '--'
+          1    9    'L'     24150 'R '  '-'  'W15a125 ' '--'
+          1   10    'R'     24150 'R '  '-'  'W15a125 ' '--'
+          1   11    'L'     30020 'R '  '-'  'W15a125 ' '--'
+          1   12    'R'     30020 'R '  '-'  'W15a125 ' '--'
+          1   13    'L'     36270 'R '  '-'  'W15a125 ' '--'
+          1   14    'R'     36270 'R '  '-'  'W15a125 ' '--'
+
+*(15)CRANE STOP:
+*    Sys Member Rnwy                                Conn
+* No. Id   Id   Side   Locate Type Opt   Part       Type
+   0
+
+*(16)CRANE MEMBER:
+*     Sys                        --Wheel_Base--
+*No.  Id  Id    Start      End      Out      In
+  1    1   1        0    36270     3200       0
+
+*(17)CRANE LOAD:
+*                                                                Vertical_Impact
+*     Sys               --------------Wheel_Loads-------------    Frame    Beam   Overload Service    No.
+*No.  Id  Id  Capacity  Bridge  Hoist  Vertical  Lateral  Long   Factor  Factor    Factor    Class  Cycles
+  1    1   1    50.00   10.33    0.95   36.00     2.69    3.60     1.10    1.10     0.00      'C'   500000
+
+*(18)INDEPENDENT DIAGONAL BRACING:
+*             Support_Beam  --------Runway_Brace---------
+*System  Rnwy    Brace      Brace Brace    No.
+*  Id    Side    Type       Type   Opt    Bays     Bay_Id
+    1    'L'     'N '       'N '   '  '     0
+    1    'R'     'N '       'N '   '  '     0
+
+*(19)DESIGN CODE OPTIONS:
+*No.   Event                         Condition
+  0
+
+* Code file used:
+*   MBMA.10N                                                                        

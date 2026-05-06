@@ -1,0 +1,224 @@
+*===============================================================================
+*C323-153-Final      Component Design Input                  7/AUG/2025  2:47pm
+*===============================================================================
+
+*( 1)JOBID:
+    'C323-153-Final'
+
+*( 2)DESIGN CODE:
+*        ---Steel_Code---             ---Build---            Seismic
+* Code   Cold       Hot      Country  Code   Year   Label     Zone
+  'WS'  'NAUS07  ' 'AISC05'  '    '  'MBMA'  '10'  'MBMA 10 ' 'B  '
+
+*( 3)DESIGN CONSTANTS:
+* -----------------------Steel_Yield-----------------------  Stress  Strength_Factor
+* Web   Flg C_Sec W_Sec R_Sec P_Sec T_Sec U_Sec    EP    BP   Ratio    Wind  Seismic
+  345   345   345   345   235   345   317   235   345   345    1.00  1.0000   1.0000
+
+*( 4)DEFLECTION LIMITS:
+* ---Eave_Extension--   ------Canopy-------   ----Horiz_Beam----- Vert_Facia
+* Live   Wind   Total   Live   Wind   Total   Live   Wind   Total    Beam
+  180.0  180.0  120.0   180.0  180.0  120.0   180.0  180.0  120.0   120.0
+
+*( 5)REPORTS:
+* Input  Ext   End  Flange
+* Echo   Beam Plate Brace
+  'I'    'Y'   'Y'   'Y'
+
+*( 6)BUILDING LAYOUT:
+*                          -------Left_Endwall------   ------Right_Endwall------
+*  Type    Width   Length  Exp  Opt  Offset  Project   Exp  Opt  Offset  Project
+  'FF-'    22470    36285  'Y ' 'E'   440.0    230.0   'Y ' 'E'   440.0    230.0
+
+*( 7)WALL LAYOUT:
+*                          -------Wall-------    Base    Wall
+* No. Id  Use     Type Opt    Start    Length    Elev  Offset
+   5  1  'LEFT  ' '-'  '-'      0.0   22470.0    0.00    0.00
+      2  'FRONT ' '-'  '-'      0.0   36285.0    0.00    0.00
+      3  'RIGHT ' '-'  '-'      0.0   22470.0    0.00    0.00
+      4  'BACK  ' '-'  '-'      0.0   36285.0    0.00    0.00
+      5  'ROOF  ' '-'  '-'      0.0   36285.0    0.00    0.00
+
+*( 8)SURFACE SHAPE:
+* No.   X_Coord  Y_Coord  Offset  Opt
+   4        0.0   8420.0  230.00  '-'
+        11235.0   9543.5  150.00  '-'
+        22470.0   8420.0  150.00  '-'
+        22470.0      0.0  230.00  '-'
+
+*( 9)BAY SPACING:
+*Wall  ----Offset---   No.   ---Bay_Set---
+* Id    Left   Right  Sets     Width  Quan
+   1  230.00  230.00    1    11235.0    2
+   2  440.00  440.00    6     6200.0    1
+                              5990.0    1
+                              6145.0    1
+                              5700.0    1
+                              6000.0    1
+                              6250.0    1
+   3  230.00  230.00    1    11235.0    2
+   4  440.00  440.00    6     6250.0    1
+                              6000.0    1
+                              5700.0    1
+                              6145.0    1
+                              5990.0    1
+                              6200.0    1
+   5  440.00  440.00    6     6200.0    1
+                              5990.0    1
+                              6145.0    1
+                              5700.0    1
+                              6000.0    1
+                              6250.0    1
+
+*(10)WALL COLUMNS:
+*Wall                                         ---Flange---          ---Clearance--    Bolt Frame
+* Id  No.  Id   Part       Rot  Opt   Height  Width  Thick  Splice    Roof    Wall  Offset   Id
+  1    3    1  '--------'  'N'  '-'      0.0   0.00   0.00   '-'      0.00    0.00    0.00    0
+            2  'W40b155 '  'N'  '-'   8646.4 150.00   5.00   '-'      0.00    0.00    0.00    0
+            3  '--------'  'N'  '-'      0.0   0.00   0.00   '-'      0.00    0.00    0.00    0
+  2    7    1  '--------'  'N'  '-'      0.0 125.00   6.00   'H'   1284.98 1038.40    0.00    1
+            2  '--------'  'N'  '-'      0.0 175.00   8.00   'H'   1284.98 1038.40    0.00    2
+            3  '--------'  'N'  '-'      0.0 175.00   8.00   'H'   1284.98 1038.40    0.00    2
+            4  '--------'  'N'  '-'      0.0 160.00   6.00   'H'   1284.98 1038.40    0.00    3
+            5  '--------'  'N'  '-'      0.0 175.00   8.00   'H'   1284.98 1038.40    0.00    2
+            6  '--------'  'N'  '-'      0.0 175.00   8.00   'H'   1284.98 1038.40    0.00    4
+            7  '--------'  'N'  '-'      0.0 125.00   5.00   'H'   1284.98  421.14    0.00    5
+  3    3    1  '--------'  'N'  '-'      0.0   0.00   0.00   '-'      0.00    0.00    0.00    0
+            2  'W40b155 '  'N'  '-'   8646.4 150.00   5.00   '-'      0.00    0.00    0.00    0
+            3  '--------'  'N'  '-'      0.0   0.00   0.00   '-'      0.00    0.00    0.00    0
+  4    7    1  '--------'  'N'  '-'      0.0 125.00   5.00   'H'   1284.98  421.14    0.00    5
+            2  '--------'  'N'  '-'      0.0 175.00   8.00   'H'   1284.98 1038.40    0.00    4
+            3  '--------'  'N'  '-'      0.0 175.00   8.00   'H'   1284.98 1038.40    0.00    2
+            4  '--------'  'N'  '-'      0.0 160.00   6.00   'H'   1284.98 1038.40    0.00    3
+            5  '--------'  'N'  '-'      0.0 175.00   8.00   'H'   1284.98 1038.40    0.00    2
+            6  '--------'  'N'  '-'      0.0 175.00   8.00   'H'   1284.98 1038.40    0.00    2
+            7  '--------'  'N'  '-'      0.0 125.00   6.00   'H'   1284.98 1038.40    0.00    1
+
+*(11)WALL RAFTERS:
+* Wall             Surf
+*  Id   No.  Id     Id   Part      Rotate  Option
+    1    2    1      2  '--------'   '-'     '-'
+              2      3  '--------'   '-'     '-'
+    2    0
+    3    2    1      2  '--------'   '-'     '-'
+              2      3  '--------'   '-'     '-'
+    4    0
+
+*(12)PURLIN LOCATION:
+*Surf         Peak
+* Id  Type   Space  No.  Locate
+   2  'ZB'   300.0    8  1373.9   2747.8   4121.6   5495.5   6869.4   8243.3   9617.2 
+                        10991.0 
+   3  'ZB'   300.0    8   300.0   1673.9   3047.8   4421.6   5795.5   7169.4   8543.3 
+                         9917.2 
+
+*(13)EAVE STRUTS:
+*Wall        Bays_With_Bending
+* Id   Type  No.  Bay_Id
+   2   'ZB'   6   1   2   3   4   5   6
+   4   'ZB'   6   1   2   3   4   5   6
+
+*(14)SPECIAL GIRT:
+* Wall   No.    ---Bay---
+*  Id   Sets    Start End   Height Type
+    1     0
+    2     0
+    3     1        1    2   5750.0 'ZB'
+    4     0
+
+*(15)EXTENSION LAYOUT:
+*        Wall                ---Bay---   -Edge_Extend-  End_Option  End_Support Frame
+* No. Id  Id  Type Opt Mount Start End    Left   Right  Left Right   Left Right  Opt
+   1   1   3  'EC' '-'  'B'    1     2     0.0     0.0  '-'  '-'     '-'   '-'   '-'
+
+*(16)EXTENSION SIZE:
+*      ----Horizontal_Size---   ---------Vertical_Size--------- --Orient--  ---Support_Column--- ---Concrete---
+* Id     Elev   Width   Slope     Elev   Height   Slope Project Beam Panel  Offset   Elev Splice Extend    Elev
+   1   5700.0  1800.0   10.00      0.0     0.0     0.00    0.00  '-'  '-'     0.00   0.00   '-'    0.00    0.00
+
+*(17)EXTENSION BEAMS:
+*     Ext Line                                                   Load  ------Depth------ Splice_Type
+*No.   Id  Id   Use       Orn   Part       Type Shape Rot Opt    Width Set   Min    Max  Start   End Bracket
+   5    1   1  'ATTACH  ' 'H'  '--------'  'S'   'H'  '-' '-'   5617.5 'N' 200.00   0.00  'SS'  '--'   'N'
+        1   1  'ATT_SUPP' 'H'   'W30a155'   'W'   'H'  '-' '-'   5617.5 'N' 200.00   0.00  'SS'  'S3'   'N'
+        1   2  'ATTACH  ' 'H'  '--------'  'S'   'H'  '-' '-'  14043.7 'N' 200.00   0.00  'SS'  '--'   'Y'
+        1   3  'ATTACH  ' 'H'  '--------'  'S'   'H'  '-' '-'   5617.5 'N' 200.00   0.00  'SS'  '--'   'N'
+        1   3  'ATT_SUPP' 'H'   'W30a155'   'W'   'H'  '-' '-'   5617.5 'N' 200.00   0.00  'SS'  'S3'   'N'
+
+*(18)EXTENSION PURLINS:
+*    Ext
+*No.  Id  Use        Type  Rot  Row     Peak   Space   Part       Brace
+  1    1 'ROOF    '  'ZB'  'U'    1    300.0     0.0  '250Z18  '   'Y'
+
+*(19)EXTENSION EAVE STRUTS:
+* Ext
+* Id  Type  Rot  Opt  Part
+   1  'ZB'  'U'  '-' '250Z18  '
+
+*(20)LOAD GROUPS:
+*    Group
+*No.   Id   Description
+   1  '-'  'Standard            '
+
+*(21)BASIC LOADS:
+*                                                   Deflection
+*Group Ext                                   Basic  Load_Ratio
+*  Id   Id  Dead  Coll   Live   Snow   Rain   Wind  Snow  Wind
+  '-'    1 0.100 0.000  0.570  0.000  0.000  0.554  1.00  1.00
+
+*(22)BASIC WIND LOADS:
+*              -----Wind_Press-----    ------Wind_Suct-----
+*Group Ext     Horz    Vert  Soffit    Horz    Vert  Soffit
+*  Id   Id     Beam    Beam    Beam    Beam    Beam    Beam
+  '-'    1   -0.926   0.000   0.000   0.479   0.000   0.000
+
+*(23)EAVE STRUT BASIC LOADS:
+*Group Wall                                   -----Wind----
+*  Id   Id  Dead  Coll   Live   Snow   Rain   Press    Suct
+  '-'    2 0.100 0.050  0.570  0.000  0.000  -0.926   0.479
+  '-'    4 0.100 0.050  0.570  0.000  0.000  -0.926   0.479
+
+*(24)LOAD COMBINATIONS - STRENGTH:
+*    Load Group                                          Wind  Wind
+*No.   Id   Id Dead  Coll  Live  Snow Drift Slide  Rain Press  Suct
+  18    1  '-' 1.00  1.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00
+        2  '-' 1.00  1.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+        3  '-' 1.00  1.00  0.00  1.00  1.00  0.00  0.00  0.00  0.00
+        4  '-' 1.00  1.00  0.00  1.00  0.00  1.00  0.00  0.00  0.00
+        5  '-' 1.00  1.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00
+        6  '-' 1.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+        7  '-' 1.00  1.00  0.75  0.00  0.00  0.00  0.00  0.75  0.00
+        8  '-' 1.00  1.00  0.75  0.00  0.00  0.00  0.00  0.00  0.75
+        9  '-' 1.00  1.00  0.00  0.75  0.00  0.00  0.00  0.75  0.00
+       10  '-' 1.00  1.00  0.00  0.75  0.00  0.00  0.00  0.00  0.75
+       11  '-' 1.00  1.00  0.00  0.75  0.75  0.00  0.00  0.75  0.00
+       12  '-' 1.00  1.00  0.00  0.75  0.75  0.00  0.00  0.00  0.75
+       13  '-' 1.00  1.00  0.00  0.75  0.00  0.75  0.00  0.75  0.00
+       14  '-' 1.00  1.00  0.00  0.75  0.00  0.75  0.00  0.00  0.75
+       15  '-' 1.00  1.00  0.00  0.00  0.00  0.00  0.75  0.75  0.00
+       16  '-' 1.00  1.00  0.00  0.00  0.00  0.00  0.75  0.00  0.75
+       17  '-' 0.60  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00
+       18  '-' 0.60  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00
+
+*(25)LOAD COMBINATIONS - DEFLECTION:
+*    Load Group                                          Wind  Wind
+*No.   Id   Id Dead  Coll  Live  Snow Drift Slide  Rain Press  Suct
+   0
+
+*(26)ADDITIONAL LOADS:
+*    Add  Group Ext  Basic    Load       Fx       Fy        Dx       Dy  .. Conc
+*No.  Id    Id   Id  Load     Type       W1       W2        D1       D2  .. Dist
+  0
+
+*(27)DESIGN CODE OPTIONS:
+*No.   Event                         Condition
+  0
+
+*(28)DESIGN PLATES:
+*    Ext                    End  --Plate_Size--  -------Bolt------
+*No.  Id  Line   Use        Loc   Width   Thick     Dia   Gage Row
+  0
+
+* Code files used:
+*   MBMA.10N                                                                        
+*   COMPMBMA.10N Version 4.0                                                        

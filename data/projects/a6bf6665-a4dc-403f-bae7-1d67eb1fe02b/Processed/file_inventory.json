@@ -1,0 +1,28 @@
+{
+  "project_id": "a6bf6665-a4dc-403f-bae7-1d67eb1fe02b",
+  "total_files": 2,
+  "parsed_files": 2,
+  "failed_files": 0,
+  "files": [
+    {
+      "file_id": "bb58eb10-bd4b-4cf6-88b4-d75b0a895453",
+      "original_filename": "C007-117-Malegaon-3D.STD",
+      "file_type": "STAAD",
+      "file_category": "design_file",
+      "source_application": "STAAD",
+      "likely_role": "governing",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "file_id": "c0693a31-303f-4a07-8190-54d7979ce708",
+      "original_filename": "C007-117-Malegaon-3D.STD",
+      "file_type": "STAAD",
+      "file_category": "design_file",
+      "source_application": "STAAD",
+      "likely_role": "governing",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    }
+  ]
+}

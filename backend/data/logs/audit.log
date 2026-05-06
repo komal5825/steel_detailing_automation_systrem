@@ -9,3 +9,98 @@
 2026-05-04 15:15:44,200 - audit.app.agents.phase2.p2_02_completeness - INFO - P2-02 completeness: 128 mandatory, 0 present, 2 fallback-resolved, 126 still missing — gate=FAIL
 2026-05-04 15:15:44,213 - audit.app.orchestrator.controller - WARNING - Stage P2-02 → BLOCKED — pipeline paused
 2026-05-04 15:15:44,221 - audit.app.agents.support.checkpoint - INFO - Checkpoint [P2-05] Hard Gate 5 — Phase 2 Release Gate → FAIL
+2026-05-04 15:32:10,813 - audit.app.agents.support.fallback - INFO - Applying default value for F-002: ''
+2026-05-04 15:32:10,844 - audit.app.agents.support.fallback - INFO - Applying default value for F-020: ''
+2026-05-04 15:32:11,152 - audit.app.agents.support.checkpoint - INFO - Checkpoint [P2-02] Completeness Hard Gate → FAIL
+2026-05-04 15:32:11,154 - audit.app.agents.phase2.p2_02_completeness - INFO - P2-02 completeness: 128 mandatory, 0 present, 2 fallback-resolved, 126 still missing — gate=FAIL
+2026-05-04 15:58:44,391 - audit.app.agents.support.fallback - INFO - Applying default value for F-002: ''
+2026-05-04 15:58:44,421 - audit.app.agents.support.fallback - INFO - Applying default value for F-020: ''
+2026-05-04 15:58:44,743 - audit.app.agents.support.checkpoint - INFO - Checkpoint [P2-02] Completeness Hard Gate → FAIL
+2026-05-04 15:58:44,745 - audit.app.agents.phase2.p2_02_completeness - INFO - P2-02 completeness: 128 mandatory, 0 present, 2 fallback-resolved, 126 still missing — gate=FAIL
+2026-05-04 15:59:24,107 - audit.app.agents.support.fallback - INFO - Applying default value for F-002: ''
+2026-05-04 15:59:24,140 - audit.app.agents.support.fallback - INFO - Applying default value for F-020: ''
+2026-05-04 15:59:24,604 - audit.app.agents.support.checkpoint - INFO - Checkpoint [P2-02] Completeness Hard Gate → FAIL
+2026-05-04 15:59:24,605 - audit.app.agents.phase2.p2_02_completeness - INFO - P2-02 completeness: 128 mandatory, 0 present, 2 fallback-resolved, 126 still missing — gate=FAIL
+2026-05-04 15:59:26,669 - audit.app.agents.support.fallback - INFO - Applying default value for F-002: ''
+2026-05-04 15:59:26,697 - audit.app.agents.support.fallback - INFO - Applying default value for F-020: ''
+2026-05-04 15:59:27,002 - audit.app.agents.support.checkpoint - INFO - Checkpoint [P2-02] Completeness Hard Gate → FAIL
+2026-05-04 15:59:27,004 - audit.app.agents.phase2.p2_02_completeness - INFO - P2-02 completeness: 128 mandatory, 0 present, 2 fallback-resolved, 126 still missing — gate=FAIL
+2026-05-04 16:47:57,114 - audit.app.agents.support.fallback - INFO - Applying default value for F-002: ''
+2026-05-04 16:47:57,443 - audit.app.agents.support.fallback - INFO - Applying default value for F-020: ''
+2026-05-04 16:48:00,167 - audit.app.agents.support.checkpoint - INFO - Checkpoint [P2-02] Completeness Hard Gate → FAIL
+2026-05-04 16:48:00,174 - audit.app.agents.phase2.p2_02_completeness - INFO - P2-02 completeness: AB missing=70, GA missing=76, fallback_resolved=2, warnings=0 — gate=FAIL
+2026-05-04 16:52:41,827 - audit.app.agents.support.fallback - INFO - Applying default value for F-002: ''
+2026-05-04 16:52:42,119 - audit.app.agents.support.fallback - INFO - Applying default value for F-020: ''
+2026-05-04 16:52:44,990 - audit.app.agents.support.checkpoint - INFO - Checkpoint [P2-02] Completeness Hard Gate → FAIL
+2026-05-04 16:52:45,009 - audit.app.agents.phase2.p2_02_completeness - INFO - P2-02 completeness: AB missing=70, GA missing=76, fallback_resolved=2, warnings=0 — gate=FAIL
+2026-05-04 16:55:34,289 - audit.app.agents.support.fallback - INFO - Applying default value for F-002: ''
+2026-05-04 16:55:34,590 - audit.app.agents.support.fallback - INFO - Applying default value for F-020: ''
+2026-05-04 16:55:35,951 - audit.app.agents.support.checkpoint - INFO - Checkpoint [P2-02] Completeness Hard Gate → FAIL
+2026-05-04 16:55:35,965 - audit.app.agents.phase2.p2_02_completeness - INFO - P2-02 completeness: AB missing=70, GA missing=76, fallback_resolved=2, warnings=0 — gate=FAIL
+2026-05-04 17:55:35,888 - audit.app.agents.support.fallback - INFO - Applying default value for F-002: ''
+2026-05-04 17:55:36,154 - audit.app.agents.support.fallback - INFO - Applying default value for F-020: ''
+2026-05-04 17:55:39,007 - audit.app.agents.support.checkpoint - INFO - Checkpoint [P2-02] Completeness Hard Gate → FAIL
+2026-05-04 17:55:39,014 - audit.app.agents.phase2.p2_02_completeness - INFO - P2-02 completeness: AB missing=70, GA missing=76, fallback_resolved=2, warnings=0 — gate=FAIL
+2026-05-05 10:31:45,620 - audit.app.agents.support.fallback - INFO - Applying default value for F-002: ''
+2026-05-05 10:31:45,860 - audit.app.agents.support.fallback - INFO - Applying default value for F-020: ''
+2026-05-05 10:31:48,855 - audit.app.agents.support.checkpoint - INFO - Checkpoint [P2-02] Completeness Hard Gate → FAIL
+2026-05-05 10:31:48,916 - audit.app.agents.phase2.p2_02_completeness - INFO - P2-02 completeness: AB missing=69, GA missing=75, fallback_resolved=2, warnings=0 — gate=FAIL
+2026-05-05 11:14:28,496 - audit.app.agents.support.fallback - INFO - Applying default value for F-002: ''
+2026-05-05 11:14:28,768 - audit.app.agents.support.fallback - INFO - Applying default value for F-020: ''
+2026-05-05 11:14:31,877 - audit.app.agents.support.checkpoint - INFO - Checkpoint [P2-02] Completeness Hard Gate → FAIL
+2026-05-05 11:14:31,895 - audit.app.agents.phase2.p2_02_completeness - INFO - P2-02 completeness: AB missing=69, GA missing=75, fallback_resolved=2, warnings=0 — gate=FAIL
+2026-05-05 11:14:39,111 - audit.app.agents.support.fallback - INFO - Applying default value for F-002: ''
+2026-05-05 11:14:39,378 - audit.app.agents.support.fallback - INFO - Applying default value for F-020: ''
+2026-05-05 11:14:41,807 - audit.app.agents.support.checkpoint - INFO - Checkpoint [P2-02] Completeness Hard Gate → FAIL
+2026-05-05 11:14:41,831 - audit.app.agents.phase2.p2_02_completeness - INFO - P2-02 completeness: AB missing=69, GA missing=75, fallback_resolved=2, warnings=0 — gate=FAIL
+2026-05-05 11:14:47,669 - audit.app.agents.phase2.p2_03_ab_generation - INFO - Plan DXF: ..\data\projects\a6bf6665-a4dc-403f-bae7-1d67eb1fe02b\outputs\ab\ab_plan_view.dxf
+2026-05-05 11:14:48,094 - audit.app.agents.phase2.p2_03_ab_generation - INFO - Section DXF: ..\data\projects\a6bf6665-a4dc-403f-bae7-1d67eb1fe02b\outputs\ab\ab_section_view.dxf
+2026-05-05 11:14:48,472 - audit.app.agents.phase2.p2_03_ab_generation - INFO - Detail DXF: ..\data\projects\a6bf6665-a4dc-403f-bae7-1d67eb1fe02b\outputs\ab\ab_detail_view.dxf
+2026-05-05 11:18:40,121 - audit.app.agents.support.fallback - INFO - Applying default value for F-002: ''
+2026-05-05 11:18:40,328 - audit.app.agents.support.fallback - INFO - Applying default value for F-020: ''
+2026-05-05 11:18:43,554 - audit.app.agents.support.checkpoint - INFO - Checkpoint [P2-02] Completeness Hard Gate → FAIL
+2026-05-05 11:18:43,577 - audit.app.agents.phase2.p2_02_completeness - INFO - P2-02 completeness: AB missing=69, GA missing=75, fallback_resolved=2, warnings=0 — gate=FAIL
+2026-05-05 11:54:04,838 - audit.app.api.ws - INFO - WebSocket disconnected for a6bf6665-a4dc-403f-bae7-1d67eb1fe02b
+2026-05-05 11:57:52,282 - audit.app.api.ws - INFO - WebSocket disconnected for a6bf6665-a4dc-403f-bae7-1d67eb1fe02b
+2026-05-05 11:59:38,880 - audit.app.api.ws - INFO - WebSocket disconnected for 760d15fe-70f2-49ee-a407-2c756dee4c4b
+2026-05-05 12:12:04,874 - audit.app.api.ws - INFO - WebSocket disconnected for a6bf6665-a4dc-403f-bae7-1d67eb1fe02b
+2026-05-05 12:19:05,554 - audit.app.api.ws - INFO - WebSocket disconnected for a6bf6665-a4dc-403f-bae7-1d67eb1fe02b
+2026-05-05 12:19:08,032 - audit.app.api.ws - INFO - WebSocket disconnected for a6bf6665-a4dc-403f-bae7-1d67eb1fe02b
+2026-05-05 12:19:16,846 - audit.app.api.ws - INFO - WebSocket disconnected for a6bf6665-a4dc-403f-bae7-1d67eb1fe02b
+2026-05-05 12:20:25,495 - audit.app.agents.support.fallback - INFO - Applying default value for F-002: ''
+2026-05-05 12:20:25,767 - audit.app.agents.support.fallback - INFO - Applying default value for F-020: ''
+2026-05-05 12:20:28,333 - audit.app.agents.support.checkpoint - INFO - Checkpoint [P2-02] Completeness Hard Gate → FAIL
+2026-05-05 12:20:28,345 - audit.app.agents.phase2.p2_02_completeness - INFO - P2-02 completeness: AB missing=69, GA missing=75, fallback_resolved=2, warnings=0 — gate=FAIL
+2026-05-05 12:28:29,783 - audit.app.utils.source_priority - INFO - Conflict on STAAD-NODE-COUNT — 4 candidates, strategy=HIGHEST_PRIORITY, winner=UNKNOWN
+2026-05-05 12:28:29,819 - audit.app.utils.source_priority - INFO - Conflict on STAAD-MEMBER-COUNT — 4 candidates, strategy=HIGHEST_PRIORITY, winner=UNKNOWN
+2026-05-05 12:28:29,847 - audit.app.utils.source_priority - INFO - Conflict on STAAD-SUPPORT-COUNT — 4 candidates, strategy=HIGHEST_PRIORITY, winner=UNKNOWN
+2026-05-05 12:28:30,015 - audit.app.utils.source_priority - INFO - Conflict on STAAD-SECTION-PROPERTY-COUNT — 4 candidates, strategy=HIGHEST_PRIORITY, winner=UNKNOWN
+2026-05-05 12:28:30,279 - audit.app.agents.support.fallback - INFO - Applying default value for F-002: ''
+2026-05-05 12:28:30,479 - audit.app.agents.support.fallback - INFO - Applying default value for F-020: ''
+2026-05-05 12:28:33,835 - audit.app.agents.support.checkpoint - INFO - Checkpoint [P2-02] Completeness Hard Gate → FAIL
+2026-05-05 12:28:33,872 - audit.app.agents.phase2.p2_02_completeness - INFO - P2-02 completeness: AB missing=69, GA missing=75, fallback_resolved=2, warnings=4 — gate=FAIL
+2026-05-05 12:30:05,953 - audit.app.api.ws - INFO - WebSocket disconnected for 760d15fe-70f2-49ee-a407-2c756dee4c4b
+2026-05-05 12:30:57,096 - audit.app.api.ws - INFO - WebSocket disconnected for 760d15fe-70f2-49ee-a407-2c756dee4c4b
+2026-05-05 12:30:57,186 - audit.app.api.ws - INFO - WebSocket disconnected for 760d15fe-70f2-49ee-a407-2c756dee4c4b
+2026-05-05 12:45:27,968 - audit.app.utils.source_priority - INFO - Conflict on STAAD-NODE-COUNT — 12 candidates, strategy=HIGHEST_PRIORITY, winner=UNKNOWN
+2026-05-05 12:45:27,993 - audit.app.utils.source_priority - INFO - Conflict on STAAD-MEMBER-COUNT — 12 candidates, strategy=HIGHEST_PRIORITY, winner=UNKNOWN
+2026-05-05 12:45:28,011 - audit.app.utils.source_priority - INFO - Conflict on STAAD-SUPPORT-COUNT — 12 candidates, strategy=HIGHEST_PRIORITY, winner=UNKNOWN
+2026-05-05 12:45:28,085 - audit.app.utils.source_priority - INFO - Conflict on STAAD-SECTION-PROPERTY-COUNT — 12 candidates, strategy=HIGHEST_PRIORITY, winner=UNKNOWN
+2026-05-05 12:45:28,453 - audit.app.agents.support.fallback - INFO - Applying default value for F-002: ''
+2026-05-05 12:45:28,680 - audit.app.agents.support.fallback - INFO - Applying default value for F-020: ''
+2026-05-05 12:45:31,035 - audit.app.agents.support.checkpoint - INFO - Checkpoint [P2-02] Completeness Hard Gate → FAIL
+2026-05-05 12:45:31,066 - audit.app.agents.phase2.p2_02_completeness - INFO - P2-02 completeness: AB missing=69, GA missing=75, fallback_resolved=2, warnings=4 — gate=FAIL
+2026-05-05 14:23:45,520 - audit.app.api.ws - INFO - WebSocket disconnected for bac40ea8-441c-4298-8972-dc3b9c7dc193
+2026-05-05 15:11:41,592 - audit.app.api.ws - INFO - WebSocket disconnected for 760d15fe-70f2-49ee-a407-2c756dee4c4b
+2026-05-05 15:16:30,894 - audit.app.api.ws - INFO - WebSocket disconnected for 760d15fe-70f2-49ee-a407-2c756dee4c4b
+2026-05-05 15:16:33,016 - audit.app.api.ws - INFO - WebSocket disconnected for 760d15fe-70f2-49ee-a407-2c756dee4c4b
+2026-05-05 15:47:35,472 - audit.app.api.ws - INFO - WebSocket disconnected for 760d15fe-70f2-49ee-a407-2c756dee4c4b
+2026-05-05 16:40:47,276 - audit.app.utils.source_priority - INFO - Conflict on PROTA-DXF-ENTITY-COUNT — 204 candidates, strategy=HIGHEST_PRIORITY, winner=DXF
+2026-05-05 16:40:47,320 - audit.app.utils.source_priority - INFO - Conflict on PROTA-DXF-LAYER-COUNT — 204 candidates, strategy=HIGHEST_PRIORITY, winner=DXF
+2026-05-05 16:40:47,346 - audit.app.utils.source_priority - INFO - Conflict on PROTA-DXF-LAYERS — 204 candidates, strategy=HIGHEST_PRIORITY, winner=DXF
+2026-05-05 16:40:47,386 - audit.app.utils.source_priority - INFO - Conflict on PROTA-DXF-LINE-COUNT — 200 candidates, strategy=HIGHEST_PRIORITY, winner=DXF
+2026-05-05 16:40:47,409 - audit.app.utils.source_priority - INFO - Conflict on PROTA-DXF-TEXT-COUNT — 200 candidates, strategy=HIGHEST_PRIORITY, winner=DXF
+2026-05-05 16:40:47,531 - audit.app.agents.support.fallback - INFO - Applying default value for F-002: ''
+2026-05-05 16:40:47,694 - audit.app.agents.support.fallback - INFO - Applying default value for F-020: ''
+2026-05-05 16:40:50,351 - audit.app.agents.support.checkpoint - INFO - Checkpoint [P2-02] Completeness Hard Gate → FAIL
+2026-05-05 16:40:50,372 - audit.app.agents.phase2.p2_02_completeness - INFO - P2-02 completeness: AB missing=70, GA missing=76, fallback_resolved=2, warnings=5 — gate=FAIL

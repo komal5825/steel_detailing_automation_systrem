@@ -1,0 +1,236 @@
+Columns & Rafters
+1,   1  , CL1-1     ,RF Column               ,         ,RO        ,          ,          ,     8550     ,  393.2
+1,   1  , RF1-2     ,RF Rafter               ,         ,RO        ,          ,          ,     6200     ,  171.9
+1,   1  , RF1-3     ,RF Rafter               ,         ,RO        ,          ,          ,     6200     ,  174.4
+1,   1  , CL1-4     ,RF Column               ,         ,RO        ,          ,          ,     8550     ,  393.2
+1,   1  , CL2-1     ,RF Column               ,         ,RO        ,          ,          ,     8549     ,  398.7
+1,   2  , RF2-2     ,RF Rafter               ,         ,RO        ,          ,          ,     6201     ,  369.2
+1,   1  , CL2-3     ,RF Column               ,         ,RO        ,          ,          ,     8549     ,  398.7
+1,   1  , CL3-1     ,RF Column               ,         ,RO        ,          ,          ,     8550     ,  390.3
+1,   2  , RF3-2     ,RF Rafter               ,         ,RO        ,          ,          ,     6200     ,  344.2
+1,   1  , CL3-3     ,RF Column               ,         ,RO        ,          ,          ,     8550     ,  410.1
+1,   1  , CL4-1     ,RF Column               ,         ,RO        ,          ,          ,     8550     ,  393.2
+1,   1  , RF4-2     ,RF Rafter               ,         ,RO        ,          ,          ,     6200     ,  171.4
+1,   1  , RF4-3     ,RF Rafter               ,         ,RO        ,          ,          ,     6200     ,  171.4
+1,   1  , CL4-4     ,RF Column               ,         ,RO        ,          ,          ,     8550     ,  412.9
+1,   1  , CL5-1     ,RF Column               ,         ,RO        ,          ,          ,     8550     ,  393.2
+1,   1  , RF5-2     ,RF Rafter               ,         ,RO        ,          ,          ,     6200     ,  171.4
+1,   1  , RF5-3     ,RF Rafter               ,         ,RO        ,          ,          ,     6200     ,  174.0
+1,   1  , CL5-4     ,RF Column               ,         ,RO        ,          ,          ,     8550     ,  393.2
+1,   1  ,EB-1       ,Ext Beam                ,         ,RO        ,          ,          ,     1921     ,   54.6
+1,   1  ,EB-2       ,Ext Beam                ,W35a208  ,RO        ,          ,          ,     8140     ,  316.3
+1,   2  ,EB-3       ,Ext Beam                ,         ,RO        ,          ,          ,     1529     ,   90.4
+1,   2  ,EB-4       ,Ext Beam                ,         ,RO        ,          ,          ,     1529     ,   90.4
+1,   1  ,EB-5       ,Ext Beam                ,         ,RO        ,          ,          ,     1921     ,   54.6
+1,   1  ,EB-6       ,Ext Beam                ,W35a208  ,RO        ,          ,          ,     6645     ,  261.9
+1,   1  ,RB-1       ,Runway Beam             ,W50b3010 ,RO        ,          ,          ,     8300     ,  569.2
+1,   1  ,RB-2       ,Runway Beam             ,W50b3010 ,RO        ,          ,          ,     8300     ,  569.2
+1,   2  ,RB-3       ,Runway Beam             ,W50b3010 ,RO        ,          ,          ,     8200     , 1125.2
+1,   2  ,RB-4       ,Runway Beam             ,W50b2510 ,RO        ,          ,          ,     6705     ,  816.4
+1,   1  ,RB-5       ,Runway Beam             ,W50b2510 ,RO        ,          ,          ,     6805     ,  414.1
+1,   1  ,RB-6       ,Runway Beam             ,W50b2510 ,RO        ,          ,          ,     6805     ,  414.1
+1,   1  ,EC-1       ,EW Column               ,W30a158  ,RO        ,          ,          ,     8976     ,  290.1
+1,   1  ,EC-2       ,EW Column               ,W30a158  ,RO        ,          ,          ,     8976     ,  291.1
+ 
+    Colors:   RO  - Red Oxide
+ 
+Opening Framing
+2,   2  ,DJ-1       ,Door Jamb               ,ISMC200  ,RO        ,          ,          ,     7190     ,  323.4
+2,   4  ,DJ-2       ,Door Jamb               ,200C20   ,RO        ,          ,          ,     4180     ,   90.6
+2,   1  ,DH-1       ,Door Header             ,ISMC200  ,RO        , ??-??    ,          ,     5980     ,  133.4
+2,   2  ,DH-2       ,Door Header             ,200C20   ,RO        , ??-??    ,          ,     3980     ,   43.1
+ 
+    Colors:   RO  - Red Oxide
+ 
+Purlins & Girts
+3,   4  , P-1       ,Roof Purlin             ,200Z25   ,RO        ,          , ??-??    ,     9535     ,  258.2
+3,   4  , P-2       ,Roof Purlin             ,200Z18   ,RO        ,          , ??-??    ,     9590     ,  186.8
+3,   4  , P-3       ,Roof Purlin             ,200Z18   ,RO        ,          , ??-??    ,     8095     ,  157.7
+3,   4  , P-4       ,Roof Purlin             ,200Z18   ,RO        ,          , ??-??    ,     8040     ,  156.6
+3,   4  , P-5       ,Roof Purlin             ,200Z25   ,RO        ,          , ??-??    ,     9535     ,  258.2
+3,   4  , P-6       ,Roof Purlin             ,200Z18   ,RO        ,          , ??-??    ,     9590     ,  186.8
+3,   4  , P-7       ,Roof Purlin             ,200Z18   ,RO        ,          , ??-??    ,     8095     ,  157.7
+3,   4  , P-8       ,Roof Purlin             ,200Z18   ,RO        ,          , ??-??    ,     8040     ,  156.6
+3,   1  , P-9       ,Roof Purlin             ,250Z18   ,RO        ,          , ??-??    ,     7880     ,   50.0
+3,   1  , P-10      ,Roof Purlin             ,250Z15   ,RO        ,          , ??-??    ,     7115     ,   37.7
+3,   1  , P-11      ,Roof Purlin             ,250Z18   ,RO        ,          , ??-??    ,     7880     ,   50.0
+3,   1  , E-1       ,Eave Strut              ,200Z25   ,RO        ,          , ??-??    ,     9535     ,   64.6
+3,   1  , E-2       ,Eave Strut              ,200Z18   ,RO        ,          , ??-??    ,     9590     ,   46.7
+3,   1  , E-3       ,Eave Strut              ,200Z18   ,RO        ,          , ??-??    ,     8095     ,   39.4
+3,   1  , E-4       ,Eave Strut              ,200Z18   ,RO        ,          , ??-??    ,     8040     ,   39.2
+3,   1  , E-5       ,Eave Strut              ,200Z25   ,RO        ,          , ??-??    ,     9535     ,   64.6
+3,   1  , E-6       ,Eave Strut              ,200Z18   ,RO        ,          , ??-??    ,     9590     ,   46.7
+3,   1  , E-7       ,Eave Strut              ,200Z18   ,RO        ,          , ??-??    ,     8095     ,   39.4
+3,   1  , E-8       ,Eave Strut              ,200Z18   ,RO        ,          , ??-??    ,     8040     ,   39.2
+3,   1  , E-9       ,Eave Strut              ,250Z18   ,RO        ,          , ??-??    ,     7885     ,   50.1
+3,   1  , E-10      ,Eave Strut              ,250Z15   ,RO        ,          , ??-??    ,     7115     ,   37.7
+3,   1  , E-11      ,Eave Strut              ,250Z18   ,RO        ,          , ??-??    ,     7885     ,   50.1
+3,   3  , G-1       ,EW Girt                 ,200Z15   ,RO        ,          , ??-??    ,      541     ,    6.6
+3,   2  , G-2       ,EW Girt                 ,200Z18   ,RO        ,          , ??-??    ,     8180     ,   79.7
+3,   1  , G-3       ,EW Girt                 ,200Z18   ,RO        ,          , ??-??    ,     8180     ,   39.8
+3,   3  , G-4       ,EW Girt                 ,200Z15   ,RO        ,          , ??-??    ,     5655     ,   68.9
+3,   3  , G-5       ,EW Girt                 ,200Z18   ,RO        ,          , ??-??    ,     5610     ,   82.0
+3,   1  , G-6       ,EW Girt                 ,200Z15   ,RO        ,          , ??-??    ,     6656     ,   27.0
+3,   4  , G-7       ,EW Girt                 ,200Z18   ,RO        ,          , ??-??    ,     5610     ,  109.3
+3,   1  , G-8       ,EW Girt                 ,200Z15   ,RO        ,          , ??-??    ,     5610     ,   22.8
+3,   2  , G-9       ,EW Girt                 ,200Z18   ,RO        ,          , ??-??    ,     8180     ,   79.7
+3,   1  , G-10      ,EW Girt                 ,200Z18   ,RO        ,          , ??-??    ,     7775     ,   37.9
+3,   1  , G-11      ,EW Girt                 ,200Z15   ,RO        ,          , ??-??    ,     8180     ,   33.2
+3,   2  , G-12      ,EW Girt                 ,200Z18   ,RO        ,          , ??-??    ,     8180     ,   79.7
+3,   1  , G-13      ,EW Girt                 ,200Z15   ,RO        ,          , ??-??    ,     1540     ,    6.3
+3,   2  , G-14      ,SW Girt                 ,200Z15   ,RO        ,          , ??-??    ,     9235     ,   75.0
+3,   2  , G-15      ,SW Girt                 ,200Z25   ,RO        ,          , ??-??    ,     9235     ,  125.0
+3,   1  , G-16      ,SW Girt                 ,200Z20   ,RO        ,          , ??-??    ,     9235     ,   50.1
+3,   1  , G-17      ,SW Girt                 ,200Z15   ,RO        ,          , ??-??    ,    10181     ,   41.3
+3,   3  , G-18      ,SW Girt                 ,200Z18   ,RO        ,          , ??-??    ,     9620     ,  140.5
+3,   3  , G-19      ,SW Girt                 ,200Z20   ,RO        ,          , ??-??    ,     9620     ,  156.4
+3,   3  , G-20      ,SW Girt                 ,200Z15   ,RO        ,          , ??-??    ,     9620     ,  117.2
+3,   1  , G-21      ,SW Girt                 ,200Z18   ,RO        ,          , ??-??    ,     8125     ,   39.6
+3,   1  , G-22      ,SW Girt                 ,200Z15   ,RO        ,          , ??-??    ,     6905     ,   28.0
+3,   5  , G-23      ,SW Girt                 ,200Z18   ,RO        ,          , ??-??    ,     8125     ,  197.8
+3,   3  , G-24      ,SW Girt                 ,200Z15   ,RO        ,          , ??-??    ,     8125     ,   99.0
+3,   1  , G-25      ,SW Girt                 ,200Z15   ,RO        ,          , ??-??    ,     8300     ,   33.7
+3,   3  , G-26      ,SW Girt                 ,200Z18   ,RO        ,          , ??-??    ,     7740     ,  113.1
+3,   1  , G-27      ,SW Girt                 ,200Z15   ,RO        ,          , ??-??    ,     7740     ,   31.4
+3,   2  , G-28      ,SW Girt                 ,200Z15   ,RO        ,          , ??-??    ,     7740     ,   62.8
+3,   3  , G-29      ,SW Girt                 ,200Z18   ,RO        ,          , ??-??    ,     7740     ,  113.1
+3,   2  , G-30      ,SW Girt                 ,200Z15   ,RO        ,          , ??-??    ,     9235     ,   75.0
+3,   2  , G-31      ,SW Girt                 ,200Z25   ,RO        ,          , ??-??    ,     9235     ,  125.0
+3,   1  , G-32      ,SW Girt                 ,200Z20   ,RO        ,          , ??-??    ,     9235     ,   50.1
+3,   2  ,ST-1       ,Wall Strut              ,T125x32  ,          ,          ,          ,     8103     ,  201.0
+3,   2  ,ST-2       ,Wall Strut              ,T92x36   ,          ,          ,          ,     6607     ,  135.4
+ 
+    Colors:   RO  - Red Oxide
+ 
+Sheeting
+3,  62  ,RS-1       ,Roof Sheet              ,45250 .5 ,A3        ,          ,          ,     6580     , 1954.2
+3,  23  ,RS-2       ,Ext Sheet               ,45250 .5 ,A3        ,          ,          ,     1560     ,  171.9
+3,   2  ,ES-1       ,EW Sheet                ,45250 .5 ,A2        ,          ,          ,     5300     ,   50.8
+3,   1  ,ES-2       ,EW Sheet                ,45250 .5 ,A2        ,          ,          ,      840     ,    4.0
+3,   8  ,ES-3       ,EW Sheet                ,45250 .5 ,A2        ,          ,          ,     1190     ,   45.6
+3,   1  ,ES-4       ,EW Sheet                ,45250 .5 ,A2        ,          ,          ,      930     ,    4.5
+3,   1  ,ES-5       ,EW Sheet                ,45250 .5 ,A2        ,          ,          ,     1030     ,    4.9
+3,   1  ,ES-6       ,EW Sheet                ,45250 .5 ,A2        ,          ,          ,     1130     ,    5.4
+3,   1  ,ES-7       ,EW Sheet                ,45250 .5 ,A2        ,          ,          ,     1230     ,    5.9
+3,   1  ,ES-8       ,EW Sheet                ,45250 .5 ,A2        ,          ,          ,     1330     ,    6.4
+3,   1  ,ES-9       ,EW Sheet                ,45250 .5 ,A2        ,          ,          ,     1430     ,    6.8
+3,   2  ,ES-10      ,EW Sheet                ,45250 .5 ,A2        ,          ,          ,     6690     ,   64.1
+3,   2  ,ES-11      ,EW Sheet                ,45250 .5 ,A2        ,          ,          ,     6590     ,   63.1
+3,   2  ,ES-12      ,EW Sheet                ,45250 .5 ,A2        ,          ,          ,     6490     ,   62.2
+3,   2  ,ES-13      ,EW Sheet                ,45250 .5 ,A2        ,          ,          ,     6390     ,   61.2
+3,   2  ,ES-14      ,EW Sheet                ,45250 .5 ,A2        ,          ,          ,     6290     ,   60.3
+3,   2  ,ES-15      ,EW Sheet                ,45250 .5 ,A2        ,          ,          ,     6200     ,   59.4
+3,   4  ,ES-16      ,EW Sheet                ,45250 .5 ,A2        ,          ,          ,     2300     ,   44.1
+3,   1  ,ES-17      ,EW Sheet                ,45250 .5 ,A2        ,          ,          ,     4430     ,   21.2
+3,   1  ,ES-18      ,EW Sheet                ,45250 .5 ,A2        ,          ,          ,     4330     ,   20.7
+3,   1  ,ES-19      ,EW Sheet                ,45250 .5 ,A2        ,          ,          ,     4230     ,   20.3
+3,   1  ,ES-20      ,EW Sheet                ,45250 .5 ,A2        ,          ,          ,     4130     ,   19.8
+3,   1  ,ES-21      ,EW Sheet                ,45250 .5 ,A2        ,          ,          ,     4030     ,   19.3
+3,   1  ,ES-22      ,EW Sheet                ,45250 .5 ,A2        ,          ,          ,     3930     ,   18.8
+3,   1  ,ES-23      ,EW Sheet                ,45250 .5 ,A2        ,          ,          ,     3840     ,   18.4
+3,  56  ,SS-1       ,SW Sheet                ,45250 .5 ,A2        ,          ,          ,     6200     , 1663.1
+3,   3  ,SS-2       ,SW Sheet                ,45250 .5 ,A2        ,          ,          ,     2300     ,   33.1
+3,   6  ,SS-3       ,SW Sheet                ,45250 .5 ,A2        ,          ,          ,     3840     ,  110.4
+3,   3  ,SS-4       ,SW Sheet                ,45250 .5 ,A2        ,          ,          ,     1190     ,   17.1
+ 
+    Colors:   A2  - NEED WALL COLOR
+              A3  - NEED ROOF COLOR
+ 
+Clips
+3,  10  , b1        ,Grt-Jmb Plt             ,         , 90       ,  5.0     ,  144     ,      203     ,   11.5
+3,   2  , c1        ,Hdr-Jmb Plt             ,         , 90       ,  5.0     ,  144     ,      131     ,    1.5
+3,   4  , c2        ,Hdr-Jmb Plt             ,         , 90       ,  5.0     ,  144     ,      126     ,    2.9
+3,   1  , d1        ,Cor-Grt6 Plt            ,         , 90       ,  5.0     ,  144     ,      406     ,    2.3
+3,   4  , f1        ,Jmb-Bas Plt             ,         , 90       ,  5.0     ,  144     ,      155     ,    3.5
+3,   2  , j1        ,Jmb-Grt Plt             ,         , 90       ,  5.0     ,  144     ,      211     ,    2.4
+3,   4  , j2        ,Jmb-Grt Plt             ,         , 90       ,  5.0     ,  144     ,      206     ,    4.7
+3,  20  , r1        ,Cor-Grt3 Plt            ,         ,  0       ,  5.0     ,  144     ,      349     ,   39.7
+ 
+Angles
+3,   2  ,FB464     ,RF Flg Brc              ,L40X40X4 ,FB464     ,RO        ,  4.0     ,      464     ,    2.2
+3,   6  ,FB480     ,Ext Flg Br              ,L40X40X4 ,FB480     ,RO        ,  4.0     ,      480     ,    7.0
+3,  16  ,FB488     ,RF Flg Brc              ,L40X40X4 ,FB488     ,RO        ,  4.0     ,      488     ,   18.9
+3,   5  ,FB488     ,EW Flg Brc              ,L40X40X4 ,FB488     ,RO        ,  4.0     ,      488     ,    5.9
+3,  16  ,FB536     ,RF Flg Brc              ,L40X40X4 ,FB536     ,RO        ,  4.0     ,      536     ,   20.8
+3,  32  ,FB568     ,RF Flg Brc              ,L40X40X4 ,FB568     ,RO        ,  4.0     ,      568     ,   44.0
+3,  34  ,JB-1      ,Sag rod at base         ,SROD12   ,JB-1      ,          ,          ,     1100     ,   40.4
+3,  24  ,JB-2      ,Sag rod at base         ,SROD12   ,JB-2      ,          ,          ,     1300     ,   33.7
+3,  53  ,JB-3      ,Sag rod at base         ,SROD12   ,JB-3      ,          ,          ,     1600     ,   91.6
+3,   2  ,JB-4      ,Sag rod at base         ,SROD12   ,JB-4      ,          ,          ,      600     ,    1.3
+3,   3  ,JB-5      ,Sag rod at base         ,SROD12   ,JB-5      ,          ,          ,     1070     ,    3.5
+3,   3  ,JB-6      ,Sag rod at base         ,SROD12   ,JB-6      ,          ,          ,      630     ,    2.0
+3,  22  ,JB-7      ,Sag rod at girt         ,SROD12   ,JB-7      ,          ,          ,      720     ,   17.1
+3,  15  ,GA        ,GABLE ANGLE             ,L75X100  ,GA        ,RO        , 2.00     ,     3000     ,  141.3
+3,  16  ,SI-       ,12mm SAG ROD            ,SROD12   ,SI-       ,          , 12.0     ,     1217     ,    9.5
+3,  11  ,SP-1      ,12mm SAG ROD            ,SROD12   ,SP-1      ,          , 12.0     ,      697     ,    3.7
+3,  66  ,SI-1      ,12mm SAG ROD            ,SROD12   ,SI-1      ,          , 12.0     ,     1699     ,   54.6
+3,  22  ,SE-1      ,12mm SAG ROD            ,SROD12   ,SE-1      ,          , 12.0     ,     1355     ,   14.5
+3,  16  ,CA-1      ,Crane Angle             ,L75X6    ,CA-1      ,          ,          ,     1209     ,  132.8
+3,  16  ,CA-2      ,Crane Angle             ,L100X8   ,CA-2      ,          ,          ,      453     ,   88.0
+ 
+    Colors:   RO  - Red Oxide
+ 
+Trim
+3,   2  ,BA        ,Base Angle              ,SGA-001  ,HA        ,  10.0    , 2.00     ,     3000     ,   56.5
+3,   2  ,BSA       ,Base/Seal An            ,P20204   ,HA        ,  10.0    , 2.00     ,       25     ,  0.120
+3,   2  ,DT        ,Drip Trim               ,P150X.63 ,HA        ,  10.0    , 0.50     ,       25     ,  0.042
+3,   6  ,ET-01     ,Eave Trim               ,ET-01    ,HA        ,  10.0    , 0.40     ,     5600     ,   31.7
+3,   6  ,CT-05     ,Roof To Wall            ,CT-05    ,A3        ,          , 0.40     ,     5600     ,   31.7
+3,  12  ,GT-01     ,Rake Trim               ,GT-01    ,HA        ,          , 0.40     ,     5600     ,   63.4
+3,   4  ,CTS-04    ,H Trim                  ,CTS-04   ,HA        ,          , 0.40     ,     5600     ,   28.1
+3,   6  ,CTS-05    ,J Trim                  ,CTS-05   ,HA        ,          , 0.40     ,     5600     ,   42.2
+3,  32  ,DS-100    ,Downspout               ,DS-100   ,          ,          , 0.40     ,     5600     ,  281.3
+3,  64  ,GS-01     ,Downspout Strap         ,GS-01    ,          ,          , 0.40     ,      350     ,   96.0
+3,  12  ,EG-01     ,Eave Gutter             ,EG-01    ,          ,          , 0.40     ,     5600     ,  126.6
+3,   1  ,GS-01     ,Eave Gutter Strap       ,GS-01    ,          ,          , 0.40     ,      600     ,    1.0
+3,   2  ,GC-01     ,Gutter Endcap           ,GC-01    ,          ,          , 0.40     ,       25     ,    1.0
+3,   2  ,GC-02     ,Gutter Endcap           ,GC-02    ,          ,          , 0.40     ,       25     ,    1.0
+3,  15  ,DT-01     ,Base Trim               ,DT-01    ,HA        ,          , 0.40     ,     5600     ,   83.7
+3,   8  ,CT-02     ,Outside Corner          ,CT-02    ,HA        ,          , 0.40     ,     5600     ,   42.2
+3,  51  ,RC-01     ,Ridge Cap               ,RC-01    ,A3        ,          , 0.40     ,      700     ,  255.0
+ 
+    Colors:   A3  - NEED ROOF COLOR
+              HA  - 9010 PURE WHITE
+ 
+Bracing
+3,   4  ,CB-1       ,SW Rod                  ,ROD20    ,  20      ,    11000     ,     ,    10750     ,  106.0
+3,   4  ,CB-2       ,SW Rod                  ,ROD20    ,  20      ,     8470     ,     ,     8220     ,   81.2
+3,   4  ,CB-3       ,SW Rod                  ,ROD20    ,  20      ,     9920     ,     ,     9670     ,   95.2
+3,   4  ,CB-4       ,SW Rod                  ,ROD20    ,  20      ,     6990     ,     ,     6740     ,   66.4
+3,   4  ,CB-5       ,Roof Rod                ,ROD20    ,  20      ,    10260     ,     ,    10010     ,   98.8
+3,   4  ,CB-6       ,Roof Rod                ,ROD20    ,  20      ,     9090     ,     ,     8840     ,   87.2
+3,   8  ,SSEAL      ,Silicone Tube Seal      ,SILICON  ,          ,        6     ,     ,     7500     ,    8.0
+3, 167  ,FF100      ,Panel Clsr  (IN)        ,FF-100   ,          ,       25     ,     ,     1020     ,  167.0
+3,  94  ,FF200      ,Panel Clsr  (OUT)       ,FF-200   ,          ,       25     ,     ,     1020     ,   94.0
+ 
+ 
+Accessories
+3,  48  ,---        ,NUT 20                  ,HN20     ,          ,          ,          ,      1.0     ,    2.4
+3,  48  ,---        ,HILLSIDE WASHER20       ,HW20     ,          ,          ,          ,      1.0     ,   17.0
+3,  48  ,---        ,FLAT WASHER20           ,Ø20WSHR ,          ,          ,          ,      1.0     ,    1.6
+ 
+Fasteners
+3,   4  ,Bolts                            , ,M16X70   ,          ,Gr8.8     , 16.0     ,       70     ,  0.225
+3, 840  ,Bolts                            , ,M12X50   ,          ,Gr8.8     , 12.0     ,       50     ,   44.4
+3, 435  ,Bolts                            , ,H12X50   ,          ,Gr8.8     , 12.0     ,       50     ,   22.3
+3, 302  ,Bolts                            , ,H20X90   ,          ,Gr8.8     , 20.0     ,       90     ,   90.5
+3,  25  ,Bolts                            , ,H16X70   ,          ,Gr8.8     , 16.0     ,       70     ,    3.4
+3,   8  ,Anchor Bolt                      , ,AB20     ,          ,A36       , 20.0     ,      625     ,   13.5
+3,   8  ,A.B. Washers                     , ,W20      ,          ,A36       , 20.0     ,              ,  0.127
+3,  80  ,Anchor Bolt                      , ,AB24     ,          ,A36       , 24.0     ,      730     ,  245.6
+3,  80  ,A.B. Washers                     , ,W24      ,          ,A36       , 24.0     ,              ,    2.1
+3,2700  ,No. 12-14x20 SDS                 , ,14x20SDS ,A2        ,          ,          ,       20     ,   18.4
+3,1700  ,No. 12-14x55 SDS                 , ,14x55SDS ,A3        ,          ,          ,       55     ,   11.6
+3, 400  ,No. 10-12X20 SDS                 , ,12x20SDS ,HA        ,          ,          ,       20     ,    2.7
+3, 700  ,No. 10-12x20 SDS                 , ,12x20SDS ,HA        ,          ,          ,       20     ,    4.8
+3, 100  ,Pop Rivet                        , ,Rivet    ,HA        ,          ,          ,       11     ,    0.7
+3, 300  ,No. 10-12X20 SDS                 , ,12x20SDS ,          ,          ,          ,       20     ,    2.0
+3,1400  ,No. 10-12X20 SDS                 , ,12x20SDS ,A3        ,          ,          ,       20     ,    9.5
+3, 200  ,Pop Rivet                        , ,Rivet    ,          ,          ,          ,       11     ,    1.4
+3,1200  ,No. 10-12x20 SDS                 , ,12x20SDS ,A2        ,          ,          ,       20     ,    8.2
+3, 400  ,Pop Rivet                        , ,Rivet    ,A3        ,          ,          ,       11     ,    2.7
+ 
+    Colors:   A2  - NEED WALL COLOR
+              A3  - NEED ROOF COLOR
+              HA  - 9010 PURE WHITE
+ 

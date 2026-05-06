@@ -1,0 +1,493 @@
+*                     FILE : CZE_DWG.SIZ 
+*    mbs                          METRIC UNITS 
+*   This file determines how the various (non-rigid frame) shop drawings will
+*   appear. It is read by the program which prepares each of the shop 
+*   drawing input files.  There are two sets of data in this file.
+*      1. The first set of data is used by all the shop drawings. It 
+*         consists of paper size, scale factors for text, tables, and 
+*         title block plus the size of the details on the drawing. 
+*
+*      2. The second set of data determines how each type of drawing 
+*         will appear. Each member type for each usage have a column 
+*         in this file. The top row of letters in the headings 
+*         designate the member location, and the lower row of letters 
+*         in the heading designates the member type used at that 
+*         location. 
+*          Top row of letters:  
+*            GP = Girt and purlin, ES = Eave strut, DJ = Door jamb and header,
+*            EC = Endwall column,  and  ER = Endwall rafter
+*          Lower Row of letters:        
+*            Z = Zee section, C = Cee section, D = Double cee sections, 
+*            U = Hot rolled channel sections, W = Welded plate sections and
+*            R = Hot rolled wide flange sections.
+*         The forty data lines are divided as follows:
+*            Lines 1 to 25:  Drawing options which also appear on the 
+*                            shop drawing input file.
+*            Lines 26 to 27: These options do not appear on the input 
+*                            file.
+*            Lines 28 to 30: Details in addition to the program generated 
+*                            details. Program enters this data on line 10 of 
+*                            the input file. 
+*            Lines 31 to 39: Replacement details for program generated 
+*                            clip details. Program enters this data on line 11 
+*                            of the input file.
+*
+* DATA LINES
+* ..1 [CZ1]   Company refers to manufacturer: 
+*                 'Y' - manufacturer
+*                 'N' - customer
+* ..2 [CZ1]   Dimensions in Table: 
+*                 '1' - inch-dec.
+*                 '2' - ft-inch-fract
+*                 '3' - ft-dec.
+*                 '4' - inch-fract
+*                 '5' - opposite of data file units
+*                 '6' - inch-dec(to nearest 1/16")
+*                 '8' - metric
+* ..3 [CZ1]   Dimensions on Dwgs:  
+*                 '1' - inch-dec.
+*                 '2' - ft-inch-fract
+*                 '3' - ft-dec.
+*                 '4' - inch-fract
+*                 '5' - opposite of data file units
+*                 '6' - inch-dec(to nearest 1/16")
+*                 '8' - metric
+* ..4 [CZ1]   Drawing, dimensioned from right to left: 
+*                 'Y' - right to left
+*                 'N' - left to right
+*       (NOTE: 'EC' type members are only available with base on the left)
+* ..5 [CZ1]   Drawing, top flange away from viewer: 
+*                 'Y' - away from viewer
+*                 'N' - toward viewer 
+* ..6 [CZ1]   Drawing, outside flange is bottom flange: 
+*                 'Y' - bottom flange
+*                 'N' - top flange  
+* ..7 [CZ2]   Drawing, with only one view req'd - always draw AS SHOWN: 
+*                 'Y' - yes
+*                 'N' - no
+* ..8 [CZ2]   If drawing AS SHOWN is req'd (line 7), change which of lines 4, 5, or 6:
+*                 '4' - drawing will be drawn the opposite of what is entered on line 4
+*                       (end dimensioned from stays the same, but pc locations switch)
+*                 '5' - drawing will be drawn the opposite of what is entered on line 5
+*                 '6' - drawing will be drawn the opposite of what is entered on line 6
+* ..9 [CZ2]   Use notes on CZE_DWG: 
+*                 'N' - no, 
+*                 'x' - use CZE_DWGx.NOT in MBS\NOT directory,
+*                       where x= user defined variable
+* .10 [CZ2]   Inside flg pc/hole locations within 12" of end, dimension from that end: 
+*                 '1' - no, far end dim.
+*                 '2' - yes, near end dim. - spacing, 
+*                 '3' - yes, near end dim. - cummulative
+* .11 [CZ2]   Outside flg pc/hole locations within 12" of end, dimension from that end: 
+*                 '1' - no, far end dim.
+*                 '2' - yes, near end dim. - spacing, 
+*                 '3' - yes, near end dim. - cummulative
+* .12 [CZ2]   Pc/hole location from fab end (with plate): 
+*                 'Y' - fab end 
+*                 'N' - stock end
+* .13 [CZ3]   Dimension flanges on section that locates std hole punch: 
+*                 'Y' - yes
+*                 'N' - no
+* .14 [CZ3]   Weld symbols on drawing:
+*                 'Y' - yes
+*                 'N' - no
+* .15 [CZ3]   Angled web holes, dimension from bottom: 
+*                 'N' - from top
+*                 'Y' - from bottom
+* .16 [CZ3]   Special drawing name: 
+*                 '0' - None, use standard name
+*                 '1' - special name to include standard name plus last 2 chars. of Job Id
+*                         (ex- EC-199)
+*                 '2' - special name to include last 3 chars. of Job Id.(ex- EC-1299)
+*                 '3' - special name to begin with last 5 chars. of Job Id.(ex- 45678EC-1)
+* .17 [CZ3]   Special hole table: 
+*                 '0' - None
+*                 '1' - use special hole table labelling.
+* .18 [CZ3]   Show offset of single web hole with standard offset:
+*                 'Y' - yes
+*                 'N' - no
+* .19 [CZ3]   Dimensions on Section:
+*                 '1' - inch-dec.
+*                 '2' - ft-inch-fract
+*                 '3' - ft-dec.
+*                 '4' - inch-fract
+*                 '5' - opposite of data file units
+*                 '6' - inch-dec(to nearest 1/16")
+*                 '8' - metric
+* .20 Show section:
+*                 '1' - Use standard section
+*                 '2' - Use a 'C' type member regardless of type in the input file.
+*                                                  
+* .21 Gage item in the Title Block:
+*                 '1' -Use gage
+*                 '2' - Use decimal thickness 
+* .22 Use Fab Length in the Title Block:
+*                 'Y' - Yes, Fab Length
+*                 'N' - No, Cut Length.
+* .23 Dimensions on all locations, use: 
+*                 '1' - Arrowheads
+*                 '2' - Tick Marks.
+* .24 [CZ24]  Member weight on shop drawing:
+*                 '1' - No Weight,
+*                 '2' - Individual Member Wt.
+*                 '3' - Total Member Wt.
+* .25 Combine OPPOSITE and AS SHOWN onto one drawing: 
+*                 'Y' - yes-combine,
+*                 'N' - no-make 2 separate drawings.
+* .26 Input file piece mark: 
+*                 '0' - Use standard mark
+*                 '1' - special mark to include standard mark plus last 2 chars. of Job Id
+*                        (ex- EC-199),
+*                 '2' - special mark to include last 3 chars. of Job Id.(ex- EC-1299)
+*                 '3' - special mark to begin with last 5 chars. of Job Id.(ex- 45678EC-1)
+* .27 Shop Drawing is Produced When:
+*                 '1' - There are holes or clips in addition to the standard end punch
+*                 '2' - Punch at each end is different and/or (1)
+*                 '3' - Punch at each end is the same and/or (1)
+* .28 User detail on CZE_DWG: 
+*                 'N' - no, (x)use CZEx.BLK in MBS\BLK directory
+*                        where x= user defined variable.
+*  Details will be added to the next detail space, same size as other details.
+* .29 Same as .28
+* .30 Same as .28
+*         Lines 31 to 39 are replacement details for standard clip 
+*         details. A different clip is shown on each line. Use one of 
+*         the following options:Y=use standard detail, N=no detail, 
+*         x=use the detail under the name CZEx.BLK in the C:\MBS\BLK 
+*         directory.
+* .31 'EP'(Id=1) standard detail: base plate
+*                 'Y' - use standard detail
+*                 'N' - no detail
+*                 'x' - use CZEx.BLK in MBS\BLK directory as 'EP' (Id=1) replacement detail
+* .32 'EP'(Id=2) standard detail: cap plate
+*                 'Y' - use standard detail
+*                 'N' - no detail
+*                 'x' - use CZEx.BLK in MBS\BLK directory as 'EP' (Id=2) replacement detail
+* .33 'EP'(Id=3) standard detail: 2nd cap plate
+*                 'Y' - use standard detail
+*                 'N' - no detail
+*                 'x' - use CZEx.BLK in MBS\BLK directory as 'EP' (Id=3) replacement detail
+* .34 'FC' standard detail: flange clip
+*                 'Y' - use standard detail
+*                 'N' - no detail
+*                 'x' - use CZEx.BLK in MBS\BLK directory as 'FC' replacement clip detail
+* .35 'WC' standard detail: web clip
+*                 'Y' - use standard detail
+*                 'N' - no detail
+*                 'x' - use CZEx.BLK in MBS\BLK directory as 'WC' replacement clip detail
+* .36 'AC' standard detail: angle clip on top
+*                 'Y' - use standard detail
+*                 'N' - no detail
+*                 'x' - use CZEx.BLK in MBS\BLK directory as 'AC' replacement clip detail
+* .37 'BC' standard detail: brace clip
+*                 'Y' - use standard detail
+*                 'N' - no detail
+*                 'x' - use CZEx.BLK in MBS\BLK directory as 'BC' replacement clip detail
+* .38 'EC' standard detail:  eave strut clip
+*                 'Y' - use standard detail
+*                 'N' - no detail
+*                 'x' - use CZEx.BLK in MBS\BLK directory as 'BC' replacement clip detail* .39 Clip is '  ' 
+* .40
+* .41
+* .42 -NOT ACTIVE-Clip Type on Drawing:
+*                 '1' - Rect.
+*                 '2' - Taper Cut one side
+*                 '3' - Taper Cut both sides
+*                 '4' - Rect. notch one side
+*                 '5' - Rect. notch both sides
+*                 '6' - Rect. notch for 'C' lip
+* .43 [CZ24]  Turn off Drawing Label or Title Block
+*                 '1' - Turn off top member table,
+*                 '2' - Turn off lower right drawing label,
+*                 '3' - Turn off member table and drawing label. 
+* .44 CZELOGOx.BLK in MBS\BLK directory as replacement title block and
+*      member table, where x= user defined variable. If 'Y' is the option
+*      setting, then CZELOGO.BLK is the replacement title block.
+* .45 [CZ45]  Member dimensions, reference end as: 
+*                 '-' - No label
+*                 '1' - TAILS
+*                 '2' - TAPE.
+* .46 [CZ45]  For EW RAF members,only: Hole dimensions on detail,remove:
+*                 'Y' - yes
+*                 'N' - no
+* .47 [CZ45]  CUT LENGTH includes: 
+*                 '1' - Member name included
+* .48 [CZ45]  Cut Length = Fab.Length: 
+*                 '1' - Show Both Dim.s
+*                 '2' - Show Fab.Length,only
+* .49 [CZ45]  Web Clip offset on member: 
+*                 '-' - No dim,use detail
+*                 '1' - Offset dim.to hole,
+*                 '2' - Offset dim.to clip edge
+* .50 [CZ50]  Member table with clips: 
+*                 '-' - No table
+*                 '1' - Total member table for the dwg,
+*                 '2' - member table for individual member
+*                 '3' - Offset dim.to clip edge
+* .51 [CZ50]  Member table to include: 
+*                 '1' - No horiz.lines
+*                 '2' - Horiz.lines for each item
+* .52 [CZ50]  Clip labels: 
+*                 '1' - Label each clip
+*                 '2' - Label one & call (TYP)
+* .53 [CZ50]  Member table description:
+*                 '1' - T x W x L
+*                 '2' - W x T x L
+* .54 [CZ50]  For Rafters & Columns, use '*' notation for part marks when viewing
+*          lefts & rights, also set DM23='3': 
+*                 '1' - Use *'s
+*                 '2' - Do not use *'s.
+* .55 [CZ55]  Draw a Slot Table- BLOCK NAME (CZESLOT):
+*                 '1' - Slots listed with hole table,
+*                 '2' - Slot Table with slots labeled s1 first size, s2 second size, etc.
+* .56 [CZ55]  Hole Legend- BLOCK NAME (CZEBOLT):
+*                 '1' - Show hole legend,
+*                 '2' - No hole legend and label holes with G= and D= for gage and diameter
+*
+* .57 [CZ55]  Plate offset dimension: 
+*                 '1' - No dim. on member,
+*                 '2' - Dim. top of flg. to end of plate,
+*                 '3' - Dim. top of flg. to centerline of hole
+* .58 [CZ55]  End Plate Dim. on member: 
+*                 '1' - Cumm. Dim.
+*                 '2' - Spacing Dim.
+*                 '3' - No dim.
+* .59 [CZ59]  'FLG-I' & 'FLG-O' labels: 
+*                 '1' - use labels,
+*                 '2' - No labels.
+* .60 [CZ59]  Web & Brace Clips called out with "NS/FS":
+*                 '1' - no
+*                 '2' - yes
+* .61 [CZ59]  Cut length: 
+*                 '1' - out to out max of member, 
+*                 '2' - out to out max of top flange
+* .62 [CZ59]  Flange clip welded at an angle, label angle by: 
+*                 '1' - pitch symbol,
+*                 '2' - length across clip
+* .63 [CZ59]  Combining plates (WB, OF, IF, EP, ST, WR): 
+*                 '1' - none, 
+*                 '2' - '5' - same as frm_dwg
+* .64 [CZ64]  Eave strut: 
+*                 '1' - flange at slope
+*                 '2' - lip at slope
+* .65 [CZ64]  Default location for row of details: 
+*                 '1' - lower left 
+*                 '2' - upper left
+*                 '3' - upper right
+*                 '4' - lower right
+* .66 [CZ64]  Quantity of blank lines to add to member: 
+*                 '0' - no line
+*                 '1' - blank line,
+*                 '2' - 2 blank lines, etc.
+* .67 [CZ64]  Combining plates (MB) 
+*                 '1' - none, 
+*                 '2' - '5' - same as frm_dwg
+* .68 [    ]  Not used
+* .69 [CZ69]  Replace holes on member with VERTICAL slots:
+*                 'Y' - yes
+*                 'N' - no
+* .70 - Option to determine geometry of angled flange clip stiffeners;  
+*        2: Triangular;   Default: Rect.
+* .71 - Web hole locations from:1= Stock End,2= Fab End
+* .72 - Eave struts mem, replace outside flg holes with welded clip on open face side.
+* .73 - Show member name near the flange labels:(1) No, (2) Yes - add name
+* .74 - Member Table to include material codes (DT_CODE.SIZ file),1=No,2=Yes 
+* .75 - Flg hole loc on section view, omit holes and dim when flg holes are not present.
+* .76 - When labeling holes with the (D=,G=) option:1=Label one hole, (2) Label ALL holes
+* .77 - When cut across the width of flg (special cuts line):1=Label the flg being viewed
+*                (2) Always view from flange in bottom of drawing - No Label
+* .78 - Eave strut members, on the section view label the degree
+*        bend angle of the flanges when at other than 90 degrees:
+*            (0), (1) = No label
+*                 (2) - Yes, label in degrees
+* .79 - Web hole/pc. within 12" of end - dimensions from: 
+*                 (1)far end,
+*                 (2)near end-spacing,
+*                 (3)near end-cumm.
+* .80 - Member view for non-standard flange holes:
+*                 (1) Show when special hole gage occurs,
+*                 (2) Never show non-standard flange hole view.
+* 
+* .81 - Web hole locations on section view, omit holes and 
+*       dimensions when web holes are not present:
+*                 (1) No - show holes and dimensions
+*                 (2) Yes - omit flange holes and dimensions
+* .82 [CZ81]  Descriptions in plate table:
+*                 '1' - turn off description for standard parts
+*                       (clips/plates substituted from DT_CLIP file)
+*                 '2' - show description for all.
+* .83 [CZ81]  Clip details appear as defined by:
+*                 '1' - Options (31) through (39)
+*                 '2' - Options (31) through (39), except for no details for 
+*                       standard clips (clips substituted from DT_CLIP file)
+* .84 [CZ81]  Angle clip offset dimensions are measured from:
+*                 '1' - Web to bend in angle clip(edge) 
+*                 '2' - Flange edge to bend in angle clip(edge)
+* .85 [CZ81]  Flange clip and Zee clip offset dimensions are measured from:
+*                 '1' - Web to center of clip
+*                 '2' - Flange edge to clip edge  
+* .86 [CZ81]  Bottom flange items aligned with web item or top flange item: 
+*                 '1' - Dimension all
+*                 '2' - Do not dimension all
+* .87 [CZ87]  Slot shape:
+*                 '1' - Standard shaped web slots
+*                 '2' - T shaped web slots
+* .88         Option for specific holes in purlion to be a larger dia, PE 9-02-10.
+*                 '2' - larger holes
+*                 else, no larger holes
+*
+* ----------------------------------------------------------------------------
+*  Drawing Size      ------Scale Factors------     ------Object_Offset------
+* Width    Height    Text  Table  Title  Detail    Left  Right  Top   Bottom
+  420.0  297.0      1.00   1.5    0.0    64.0      0.00  0.0    0.0   0.0
+ 
+*
+*=====================================================================
+*
+*      GP            ES    DJ          EC                 ER           
+*-------------------     ------- --------------- -------------------- 
+* Z   C   D   U   W       C   U   C   D   U   W   Z   C   D   U   W    DATA
+*=================== === ======= =============== ====================  LINE
+ 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N'   .. 1 
+ '8' '8' '8' '8' '8' '8' '8' '8' '8' '8' '8' '8' '8' '8' '8' '8' '8'   .. 2 
+ '8' '8' '8' '8' '8' '8' '8' '8' '8' '8' '8' '8' '8' '8' '8' '8' '8'   .. 3 
+ 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y'   .. 4 
+ 'N' 'N' 'Y' 'Y' 'Y' 'N' 'N' 'Y' 'N' 'Y' 'Y' 'Y' 'Y' 'N' 'Y' 'Y' 'Y'   .. 5 
+ 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N'   .. 6 
+ 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y'   .. 7 
+ '5' '4' '-' '4' '5' '5' '4' '4' '6' '-' '5' '5' '-' '4' '-' '-' '5'   .. 8 
+ 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'A' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N'   .. 9 
+ '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2'   ..10
+ '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2'   ..11 
+ 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N'   ..12 
+ 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y'   ..13 
+ 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N'   ..14 
+ '-' '-' '-' '-' '-' '-' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'N' 'N' 'N' 'N' 'N'   ..15 
+ '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0'   ..16
+ '-' '-' '-' '-' '-' '-' '-' '-' '0' '0' '0' '0' '0' '0' '0' '0' '0'   ..17
+ 'Y' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'Y'   ..18
+ '8' '8' '8' '8' '8' '8' '8' '8' '8' '8' '8' '8' '8' '8' '8' '8' '8'   ..19
+ '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0'   ..20
+ '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2'   ..21
+ 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'N' 'Y' 'Y' 'Y' 'Y' 'Y'   ..22
+ '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1'   ..23
+ '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2'   ..24
+ 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N'   ..25
+ '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0'   ..26
+ '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-'   ..27
+ 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y'   ..28
+ '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-'   ..29
+ '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-'   ..30
+ 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y'   ..31
+ 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y'   ..32
+ 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y'   ..33
+ 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y'   ..34
+ 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y'   ..35
+ 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y'   ..36
+ 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y'   ..37
+ 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y'   ..38
+ 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y'   ..39
+ '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-'   ..40
+ '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-'   ..41
+ '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1'   ..42
+ '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2'   ..43
+ 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y' 'Y'   ..44
+ '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2'   ..45
+ 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N'   ..46
+ '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-'   ..47
+ '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2'   ..48
+ '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1'   ..49
+ '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2'   ..50
+ '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2'   ..51
+ '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2'   ..52
+ '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1'   ..53
+ 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N'   ..54
+ '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2'   ..55
+ '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2'   ..56
+ '3' '3' '3' '3' '3' '3' '3' '3' '3' '3' '3' '3' '3' '3' '3' '3' '3'   ..57
+ '4' '4' '4' '4' '4' '4' '4' '4' '4' '4' '4' '4' '4' '4' '4' '4' '4'   ..58
+ '3' '3' '3' '3' '3' '3' '3' '3' '3' '3' '3' '3' '3' '3' '3' '3' '3'   ..59
+ '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2'   ..60
+ 'M' 'M' 'M' 'M' 'M' 'M' 'M' 'M' 'M' 'M' 'M' 'M' 'M' 'M' 'M' 'M' 'M'   ..61
+ '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2'   ..62
+ '3' '3' '3' '3' '3' '3' '3' '3' '3' '3' '3' '3' '3' '3' '3' '3' '3'   ..63
+ '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2'   ..64
+ '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2'   ..65
+ '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0'   ..66
+ '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1'   ..67
+ '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-'   ..68
+ 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N' 'N'   ..69
+ '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2'   ..70
+ '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1'   ..71
+ '1' '1' '1' '1' '1' '2' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1'   ..72
+ '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-'   ..73
+ '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-'   ..74
+ '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2'   ..75
+ '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1'   ..76
+ '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1'   ..77
+ '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-'   ..78
+ '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2'   ..79
+ '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1'   ..80
+ '4' '4' '4' '4' '4' '4' '4' '4' '4' '4' '4' '4' '4' '4' '4' '4' '4'   ..81
+ '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2'   ..82
+ '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1'   ..83
+ '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2'   ..84
+ '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2'   ..85
+ '3' '3' '3' '3' '3' '3' '3' '3' '3' '3' '3' '3' '3' '3' '3' '3' '3'   ..86
+ '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-'   ..87
+ '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-'   ..88
+ '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-'   ..89
+ '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-'   ..90
+ '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-'   ..91
+ '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-'   ..92
+ '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-'   ..93
+ '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-'   ..94
+ '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-'   ..95
+ '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-'   ..96
+ '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-'   ..97
+ '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-'   ..98
+ '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-'   ..99
+ '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-' '-'   .100
+
+*(101) CZE DRAWING USER DETAILS:
+*
+*  No      Detail      ----_Location ---
+* Detail    Id           X          Y       Scale
+* ------   ------       ----       ----     -----
+    6    'CZETITLE'   420.00  297.00     1.00
+         'CZEDRAW '     0.00   50.00     1.00
+         'CZEPIECE'     0.00   64.00     1.00
+         'CZEPLATE'     0.00    0.00     1.00
+         'CZESLOT '   350.00  270.00     1.50
+         'CZEHLGND'   150.00  150.00     1.00
+     
+ 
+
+*     7    'CZEPIECE'      10.00    90.00     0.95
+*          'CZESECTN'      10.00    90.00     0.95
+*          'CZEPLATE'       2.00     2.00     1.20
+*          'CZETITLE'     420.       25.0     1.00
+*          'CZEHLGND'     420.     000.0      1.50
+*          'CZESLOT'      390.     250.0      1.00
+*          'CZEBOLT'      400.     215.0      1.50*
+
+
+*(102) ANGLE DRAWING PAGE LAYOUT
+* --Drawing--   --Drawing Size-   ------Object_Offset------  ---------Scale Factors---------
+* No. Id Type   Width    Height   Left  Right Top   Bottom   Piece  Text  Table  Dim   Title  Logo
+   1   1  'R'   420.0    297.0    0.0   0.0   0.0   0.0      1.00   1.00  0.70   0.70  1.00   'Y'
+
+*(103) ANGLE DRAWING USER DETAILS:
+* No      Detail     Dwg     ----Location---
+* Detail   Name       Id      X          Y       Scale
+* ------  ------    ------   ----       ----     -----
+*   4     'CZEPLATE'  1      00.0       0.0       1.0
+*         'CZESLOT'   1      390.     250.0       0.5
+*         'CZEHLGND'  1       0.0     125.0       0.0
+*         'CZESECTN'  1      30.0     125.0       0.0
+*
+   0
+
+ 
+
+

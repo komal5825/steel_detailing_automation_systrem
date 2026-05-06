@@ -12,4 +12,18 @@ export const stagesApi = {
     client.post(`/stages/${uuid}/pipeline/run/${stageCode}`),
 
   getDependencyReadiness: () => client.get('/stages/dependencies/readiness'),
+
+  resetIntake: (uuid) => client.post(`/stages/${uuid}/reset-intake`),
+
+  getFields: (uuid, stageCode = null) =>
+    client.get(`/stages/${uuid}/fields${stageCode ? `?stage_code=${stageCode}` : ''}`),
+
+  overrideFields: (uuid, overrides) =>
+    client.post(`/stages/${uuid}/fields/override`, overrides),
+
+  approveStage: (uuid, stageCode) =>
+    client.post(`/stages/${uuid}/approve?stage_code=${stageCode}`),
+
+  getCheckpoints: (uuid) => client.get(`/stages/${uuid}/checkpoints`),
 };
+

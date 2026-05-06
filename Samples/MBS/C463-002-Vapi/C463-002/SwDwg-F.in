@@ -1,0 +1,708 @@
+*===============================================================================
+*C463-002            Sidewall  Drawing Input                18/DEC/2025  2:51pm
+*===============================================================================
+
+*( 1)TITLE BLOCK:
+  'INFINITI SOLUTIONS                      ' .. Manufacturer
+  '                                        ' .. Builder
+  'Proposed Warehouse                      ' .. Project
+  'Warehouse                               ' .. Project Address
+  'Vapi                                    ' .. Project Address
+  'C463-002                                ' .. Project ID
+
+*( 2)DRAWING SIZE FACTORS:
+*  Drawing_Size     ----Object_Offset----  -----------Scale_Factor---------------
+*  Width  Height    Lt    Rt    Top   Bot    Text   Table     Dim    Build  Title
+   420.0   297.0     0.0  10.0  10.0  40.0   0.55    0.55    0.55  -1.0000   0.70
+
+*( 3)DRAWING OPTIONS:
+*Draw_Wall  Content_Opt  Show  Member Trim  Angle  Panel   Gen                Page_Number
+*  1     2     1    2   Detail Table  Table Table  Length Notes   Logo       Id      Total
+   2     0  'FO ' 'FO ' 'Y '   'Y'    '6'   'Y'    'Y '   'N '  'N       ' '----'   '----'
+
+*( 4)MATCH LINES:
+*       --Location--
+* No.    Start     End
+   0
+
+*( 5)BUILDING LAYOUT:
+*Build                     ------L_Expand_EW-----  ------R_Expand_EW-----     Floor
+*Type     Width    Length  Use  Opt Extend Offset  Use  Opt Extend Offset      Elev
+'FF-'   12800.0   30500.0  'Y-' '-'   0.00 390.00  'Y-' '-'   0.00 390.00       0.0
+
+*( 6)WALL LAYOUT:
+*                            -------Wall-------   Line     Base    Wall  Sheet
+*No.  Id   Use     Type  Opt    Start    Length   Id       Elev  Offset  Notch
+  5    1  'LEFT '  '-'   '-'      0.0   12800.0  '1   '     0.0  230.00   0.00
+       2  'FRONT'  '-'   '-'      0.0   30500.0  'A   '     0.0  230.00   0.00
+       3  'RIGHT'  '-'   '-'      0.0   12800.0  '5   '     0.0  230.00   0.00
+       4  'BACK '  '-'   '-'      0.0   30500.0  'C   '     0.0  230.00   0.00
+       5  'ROOF '  '-'   '-'      0.0   30500.0  '    '     0.0    0.00   0.00
+
+*( 7)SURFACE SHAPE:
+*                             ----Offset---  ---Option--
+*   No.   X_Coord   Y_Coord   L_EW     R_EW  L_EW   R_EW
+     4        0.0    9100.0  200.00  200.00   '-'    '-'
+           6400.0    9740.0  200.00  200.00   '-'    '-'
+          12800.0    9100.0  200.00  200.00   '-'    '-'
+          12800.0       0.0  200.00  200.00   '-'    '-'
+
+*( 8)BAY SPACING:
+*  Wall  ---Offset---    No.   ---Bay_Set---
+*   Id   Left   Right   Sets     Width  Quan
+     1  230.00 230.00     2     7685.0    1
+                                5115.0    1
+     2  390.00 390.00     4     8535.0    1
+                                8210.0    1
+                                6715.0    1
+                                7040.0    1
+     3  230.00 230.00     2     5115.0    1
+                                7685.0    1
+     4  390.00 390.00     4     7040.0    1
+                                6715.0    1
+                                8210.0    1
+                                8535.0    1
+     5  390.00 390.00     4     8535.0    1
+                                8210.0    1
+                                6715.0    1
+                                7040.0    1
+
+*( 9)WALL OPENINGS:
+*Wall  No.     Bay                                    Sill    Base   Panel Member  ---Member_Id----
+* Id  Open Id   Id   Offset  Type    Width  Height  Height    Elev    Opt   Type    Lt  Rt Head Sill
+   1    1   1    1    843.0   51    6000.0  7000.0     0.0    0.00    'Y'  'UUU-'     9   9  11    0
+   2    1   2    3   1358.0   51    4000.0  4000.0     0.0    0.00    'Y'  'CCC-'    10  10  12    0
+   3    1   3    2   1843.0   51    4000.0  4000.0     0.0    0.00    'Y'  'CCC-'    10  10  12    0
+   4    0
+
+*(10)ROOF OPENING LAYOUT:
+*   Open  -Location-     Frame --Surface-- ----Bay----                     Ref
+*No.  Id  Use     Id Opt  Type Id   Offset Id   Offset    Width   Length   Id        Load
+   0
+
+*(11)ROOF OPENING FRAMING:
+*        Open     Bay           -------Member------  Frame_Opt   Frame_Id  Connect_Id
+*No.  Id  Id  Use  Id   Offset  Type Opt  Rot Table  Start End  Start End  Start  End
+  0
+
+*(12)PARTIAL WALLS:
+*        Wall      --Bay_Id- ----Offset-----  -----Height-----   --Attach_Type--  -Member_Id-  --Jamb---
+*No.  Id  Id  Use  Start End   Start     End  Bottom       Top   Bottom      Top  Left  Right  Base_Elev
+  4    1   1  'P'    1     2     0.0     0.0     0.0    3000.0   '-:---' '-:1--'     0      0        0.0   
+       2   2  'P'    1     4     0.0     0.0     0.0    3000.0   '-:---' '-:1--'     0      0        0.0   
+       3   3  'P'    1     2     0.0     0.0     0.0    3000.0   '-:---' '-:1--'     0      0        0.0   
+       4   4  'P'    1     4     0.0     0.0     0.0    3000.0   '-:---' '-:1--'     0      0        0.0   
+
+*(13)ADDITIONAL OPENINGS:
+*         Wall  ---Locate--
+*No.  Id   Id   Use      Id  Opt  #Coord   CoordX   CoordY
+ 0
+
+*(14)WALL COLUMNS:
+*Wall  No.  Col  Col          Base    Col  Line    Piece     ConnBase  ConnCap
+* Id   Col  Typ  Rot  Opt     Elev    Det   Id     Mark       Id  Opt  Id  Opt
+   1    3   '-'  'N'  '-'     0.00     0   'C   ' '------  '   0  '-'   0  'F'
+            'W'  'N'  '-'     0.00     7   'B   ' 'EC-1    '   0  '-'   1  'F'
+            '-'  'N'  '-'     0.00     0   'A   ' '------  '   0  '-'   0  'F'
+   2    5   'W'  'N'  '-'     0.00     0   '1   ' ' CL1-4  '   0  '-'   0  '-'
+            'W'  'N'  '-'     0.00     0   '2   ' ' CL2-3  '   0  '-'   0  '-'
+            'W'  'N'  '-'     0.00     0   '3   ' ' CL3-3  '   0  '-'   0  '-'
+            'W'  'N'  '-'     0.00     0   '4   ' ' CL4-4  '   0  '-'   0  '-'
+            'W'  'N'  '-'     0.00     0   '5   ' ' CL5-4  '   0  '-'   0  '-'
+   3    3   '-'  'N'  '-'     0.00     0   'A   ' '------  '   0  '-'   0  'F'
+            'W'  'N'  '-'     0.00     8   'B   ' 'EC-2    '   0  '-'   1  'F'
+            '-'  'N'  '-'     0.00     0   'C   ' '------  '   0  '-'   0  'F'
+   4    5   'W'  'N'  '-'     0.00     0   '5   ' ' CL5-1  '   0  '-'   0  '-'
+            'W'  'N'  '-'     0.00     0   '4   ' ' CL4-1  '   0  '-'   0  '-'
+            'W'  'N'  '-'     0.00     0   '3   ' ' CL3-1  '   0  '-'   0  '-'
+            'W'  'N'  '-'     0.00     0   '2   ' ' CL2-1  '   0  '-'   0  '-'
+            'W'  'N'  '-'     0.00     0   '1   ' ' CL1-1  '   0  '-'   0  '-'
+
+*(15)ADDITIONAL COLUMNS:
+*    Wall  Col                   Table                     Conn_Id
+*No.  Id    Id  Type   Rot  Opt    Id       Elev   Height  Bot Top
+ 0  
+
+*(16)WALL RAFTERS:
+*Wall No.  Surf  -----Rafter-----  Piece
+* Id  Raf   Id   Typ  Rot Opt Det  Mark
+   1   2     2   '-'  '-' 'F'   0 '------ '
+             3   '-'  '-' 'F'   0 '------ '
+   2   0
+   3   2     2   '-'  '-' 'F'   0 '------ '
+             3   '-'  '-' 'F'   0 '------ '
+   4   0
+
+*(17)WALL RAFTER SPLICES:
+*Wall No.  Surf    ---Splice---
+* Id  Spl   Id     Loc    Type   Conn_Id
+   1   3     2       0.0  '  '     0
+             3       0.0  '- '     3
+             3    6431.9  '  '     0
+   2   0
+   3   3     2       0.0  '  '     0
+             3       0.0  '- '     3
+             3    6431.9  '  '     0
+   4   0
+
+*(18)PURLIN LAYOUT:
+*Surf  Purlin  Purlin  Purlin   Purlin  Purlin
+* Id    Type   Offset  Project  Depth    Width
+   2    'ZB'     0.00    0.00   200.00    0.00    
+   3    'ZB'     0.00    0.00   200.00    0.00    
+
+*(19)PURLIN LOCATION:
+*Surf  Peak
+* Id   Space  No.  Locate
+   2   300.0    4   1334.9     2933.9     4532.9     6131.9   
+   3   300.0    4    300.0     1899.0     3498.0     5097.0   
+
+*(20)ADDITIONAL PURLINS:
+*         Surf Bay Purl           ------Member------ ----Extension---- Frame_Opt -Frame_Id-  Connect_Id
+*No.  Id   Id   Id  Id    Offset  Type Rot Opt Table     Left    Right  Left Right Left Right  Left Right
+  0
+
+*(21)EAVE STRUTS:
+*Wall Eave Frame   Lap      Lap    Lap    --Surface Extend-- EvSt_Ext_Id No.  Eave_Strut_Id
+* Id  Type  Opt    Ext      Int   Plate    Left      Right   Left  Right Bays    1    2    3    4
+   2  'ZB'  '-'   1005.0    375.0  'N'        0.0       0.0    0     0     4    24   25   26   27
+   4  'ZB'  '-'   1005.0    375.0  'N'        0.0       0.0    0     0     4    31   30   29   28
+
+*(22)WALL GIRT LAYOUT:
+*Wall  Girt    Girt     Girt   Girt
+* Id   Type  Offset  Project  Depth
+   1   'ZB'    0.00  230.00  200.00
+   2   'ZB'    0.00  230.00  200.00
+   3   'ZB'    0.00  230.00  200.00
+   4   'ZB'    0.00  230.00  200.00
+
+*(23)WALL GIRTS:
+* No. Wall  Bay     Girt                 Mem   ----Extend----   Frame_Opt -Frame_Id-
+*Girt  Id    Id   Locate  Type  Rot Opt   Id     Left   Right  Left Right Left Right
+  67    1     1   3080.0  'ZB'  'D' '-'   35      0.0     0.0   '-'   'O'    0     1 ( G-1    )
+        1     1   4280.0  'ZB'  'D' '-'   35      0.0     0.0   '-'   'O'    0     1 ( G-1    )
+        1     1   5780.0  'ZB'  'D' '-'   35      0.0     0.0   '-'   'O'    0     1 ( G-1    )
+        1     1   7280.0  'ZB'  'D' '-'   85      0.0   705.0   '-'   '-'    0     0 ( G-2    )
+        1     1   8280.0  'ZB'  'D' '-'   37      0.0   705.0   '-'   '-'    0     0 ( G-3    )
+        1     1   3080.0  '-B'  'D' 'X'    0      0.0     0.0   'O'   '-'    1     0 (------  )
+        1     1   4280.0  '-B'  'D' 'X'    0      0.0     0.0   'O'   '-'    1     0 (------  )
+        1     1   5780.0  '-B'  'D' 'X'    0      0.0     0.0   'O'   '-'    1     0 (------  )
+        1     2   3080.0  'ZB'  'D' '-'   38      0.0     0.0   'O'   '-'    1     0 ( G-4    )
+        1     2   4280.0  'ZB'  'D' '-'   38      0.0     0.0   'O'   '-'    1     0 ( G-4    )
+        1     2   5780.0  'ZB'  'D' '-'   38      0.0     0.0   'O'   '-'    1     0 ( G-4    )
+        1     2   7280.0  'ZB'  'D' '-'   86    705.0     0.0   '-'   '-'    0     0 ( G-5    )
+        1     2   8280.0  'ZB'  'D' '-'   39    705.0     0.0   '-'   '-'    0     0 ( G-5    )
+        3     1   3080.0  'ZB'  'D' '-'   40      0.0     0.0   '-'   'O'    0     3 ( G-6    )
+        3     1   4280.0  'ZB'  'D' '-'   87      0.0   705.0   '-'   '-'    0     0 ( G-7    )
+        3     1   5780.0  'ZB'  'D' '-'   42      0.0   705.0   '-'   '-'    0     0 ( G-8    )
+        3     1   7280.0  'ZB'  'D' '-'   41      0.0   705.0   '-'   '-'    0     0 ( G-7    )
+        3     1   8280.0  'ZB'  'D' '-'   41      0.0   705.0   '-'   '-'    0     0 ( G-7    )
+        3     2   3080.0  '-B'  'D' 'X'    0      0.0     0.0   '-'   'O'    0     3 (------  )
+        3     2   4280.0  'ZB'  'D' '-'   88    705.0     0.0   '-'   '-'    0     0 ( G-9    )
+        3     2   5250.0  'ZB'  'D' '-'   44      0.0     0.0   '-'   '-'    0     0 ( G-10   )
+        3     2   5780.0  'ZB'  'D' '-'   45    705.0     0.0   '-'   '-'    0     0 ( G-11   )
+        3     2   7280.0  'ZB'  'D' '-'   46    705.0     0.0   '-'   '-'    0     0 ( G-12   )
+        3     2   8280.0  'ZB'  'D' '-'   46    705.0     0.0   '-'   '-'    0     0 ( G-12   )
+        3     2   3080.0  'ZB'  'D' '-'   47      0.0     0.0   'O'   '-'    3     0 ( G-13   )
+        2     1   3080.0  'ZB'  'D' '-'   48      0.0   705.0   '-'   '-'    0     0 ( G-14   )
+        2     1   4280.0  'ZB'  'D' '-'   49      0.0   705.0   '-'   '-'    0     0 ( G-15   )
+        2     1   5780.0  'ZB'  'D' '-'   49      0.0   705.0   '-'   '-'    0     0 ( G-15   )
+        2     1   7280.0  'ZB'  'D' '-'   50      0.0   705.0   '-'   '-'    0     0 ( G-16   )
+        2     1   8280.0  'ZB'  'D' '-'   48      0.0   705.0   '-'   '-'    0     0 ( G-14   )
+        2     2   3080.0  'ZB'  'D' '-'   51    705.0     0.0   '-'   'O'    0     2 ( G-17   )
+        2     2   4280.0  'ZB'  'D' '-'   52    705.0   705.0   '-'   '-'    0     0 ( G-18   )
+        2     2   5780.0  'ZB'  'D' '-'   53    705.0   705.0   '-'   '-'    0     0 ( G-19   )
+        2     2   7280.0  'ZB'  'D' '-'   52    705.0   705.0   '-'   '-'    0     0 ( G-18   )
+        2     2   8280.0  'ZB'  'D' '-'   54    705.0   705.0   '-'   '-'    0     0 ( G-20   )
+        2     3   3080.0  '-B'  'D' 'X'    0      0.0     0.0   '-'   'O'    0     2 (------  )
+        2     3   4280.0  'ZB'  'D' '-'   55    705.0   705.0   '-'   '-'    0     0 ( G-21   )
+        2     3   5280.0  'ZB'  'D' '-'   56      0.0     0.0   '-'   '-'    0     0 ( G-22   )
+        2     3   5780.0  'ZB'  'D' '-'   57    705.0   705.0   '-'   '-'    0     0 ( G-23   )
+        2     3   7280.0  'ZB'  'D' '-'   57    705.0   705.0   '-'   '-'    0     0 ( G-23   )
+        2     3   8280.0  'ZB'  'D' '-'   58    705.0   705.0   '-'   '-'    0     0 ( G-24   )
+        2     3   3080.0  '-B'  'D' 'X'    0      0.0     0.0   'O'   '-'    2     0 (------  )
+        2     4   3080.0  'ZB'  'D' '-'   59      0.0     0.0   'O'   '-'    2     0 ( G-25   )
+        2     4   4280.0  'ZB'  'D' '-'   60    705.0     0.0   '-'   '-'    0     0 ( G-26   )
+        2     4   5780.0  'ZB'  'D' '-'   60    705.0     0.0   '-'   '-'    0     0 ( G-26   )
+        2     4   7280.0  'ZB'  'D' '-'   60    705.0     0.0   '-'   '-'    0     0 ( G-26   )
+        2     4   8280.0  'ZB'  'D' '-'   61    705.0     0.0   '-'   '-'    0     0 ( G-27   )
+        4     1   3080.0  'ZB'  'D' '-'   62      0.0   705.0   '-'   '-'    0     0 ( G-28   )
+        4     1   4280.0  'ZB'  'D' '-'   63      0.0   705.0   '-'   '-'    0     0 ( G-29   )
+        4     1   5780.0  'ZB'  'D' '-'   63      0.0   705.0   '-'   '-'    0     0 ( G-29   )
+        4     1   7280.0  'ZB'  'D' '-'   63      0.0   705.0   '-'   '-'    0     0 ( G-29   )
+        4     1   8280.0  'ZB'  'D' '-'   62      0.0   705.0   '-'   '-'    0     0 ( G-28   )
+        4     2   3080.0  'ZB'  'D' '-'   58    705.0   705.0   '-'   '-'    0     0 ( G-24   )
+        4     2   4280.0  'ZB'  'D' '-'   57    705.0   705.0   '-'   '-'    0     0 ( G-23   )
+        4     2   5780.0  'ZB'  'D' '-'   57    705.0   705.0   '-'   '-'    0     0 ( G-23   )
+        4     2   7280.0  'ZB'  'D' '-'   57    705.0   705.0   '-'   '-'    0     0 ( G-23   )
+        4     2   8280.0  'ZB'  'D' '-'   58    705.0   705.0   '-'   '-'    0     0 ( G-24   )
+        4     3   3080.0  'ZB'  'D' '-'   54    705.0   705.0   '-'   '-'    0     0 ( G-20   )
+        4     3   4280.0  'ZB'  'D' '-'   53    705.0   705.0   '-'   '-'    0     0 ( G-19   )
+        4     3   5780.0  'ZB'  'D' '-'   53    705.0   705.0   '-'   '-'    0     0 ( G-19   )
+        4     3   7280.0  'ZB'  'D' '-'   52    705.0   705.0   '-'   '-'    0     0 ( G-18   )
+        4     3   8280.0  'ZB'  'D' '-'   54    705.0   705.0   '-'   '-'    0     0 ( G-20   )
+        4     4   3080.0  'ZB'  'D' '-'   64    705.0     0.0   '-'   '-'    0     0 ( G-30   )
+        4     4   4280.0  'ZB'  'D' '-'   65    705.0     0.0   '-'   '-'    0     0 ( G-31   )
+        4     4   5780.0  'ZB'  'D' '-'   65    705.0     0.0   '-'   '-'    0     0 ( G-31   )
+        4     4   7280.0  'ZB'  'D' '-'   66    705.0     0.0   '-'   '-'    0     0 ( G-32   )
+        4     4   8280.0  'ZB'  'D' '-'   64    705.0     0.0   '-'   '-'    0     0 ( G-30   )
+
+*(24)WALL STRUTS:
+* No.  Strut   Loc  Wall --Bay Id--   Attach  Option Strut   Det              Conn  Sup
+*Strut  Id    Type   Id  Start  End   Locate    Id    Type   Id   Offset  Rot   Id  Row
+   4    1     'W'     2    1     1      7430     4    'T'    67        0  'N'    2    0
+        2     'W'     2    4     4      7430     4    'T'    68        0  'N'    2    0
+        3     'W'     4    1     1      7430     4    'T'    68        0  'N'    2    0
+        4     'W'     4    4     4      7430     4    'T'    67        0  'N'    2    0
+    
+
+*(25)WALL STRUT BOLTS:
+*No.  Bolt Strut  Wall Frame  Attach  Option  Conn
+*Bolt  Id  Type    Id   Id    Locate    Id     Id
+  14    1   'E'     2    1     12800     0      4
+        2   'E'     2    2     12800     0      5
+        3   'E'     2    3     12800     0      5
+        4   'E'     2    4     12800     0      5
+        5   'E'     2    5     12800     0      4
+        6   'E'     4    5         0     0      4
+        7   'E'     4    4         0     0      5
+        8   'E'     4    3         0     0      5
+        9   'E'     4    2         0     0      5
+       10   'E'     4    1         0     0      4
+       11   'W'     2    1      7430     4      6
+       12   'W'     2    4      7430     4      6
+       13   'W'     4    1      7430     4      6
+       14   'W'     4    4      7430     4      6
+
+*(26)COLUMN FLANGE BRACES:
+*    Wall  Col  No.                                                              Clip       Clip2
+*No.  Id    Id  Brace  Loc  Side  Type   Mark      Length  Offset  Opt  Ref      Mark       Mark
+  0
+
+*(27)RAFTER FLANGE BRACES:
+*     Wall  Surf   No.                                                       Clip       Clip2
+*No.   Id    Id   Brace  Loc  Type   Mark      Length  Offset  Opt  Ref      Mark       Mark
+  4    1      2      0
+       1      3      0
+       3      2      0
+       3      3      0
+
+*(28)PURLIN ANTI-ROLL:
+* No.  Line  Surf           Roll     Detail     No.
+*Item   Id    Id  Opt  Rot   Id        Id       Purlin  Purlin_Id
+   0
+
+*(29)WALL PANELS:
+*    Wall
+*No.  Id    Part        Color  Rot
+  4    1   '45250 .5'  'A2--'  '-'
+       2   '45250 .5'  'A2--'  '-'
+       3   '45250 .5'  'A2--'  '-'
+       4   '45250 .5'  'A2--'  '-'
+
+*(30)ROOF PANELS:
+* Panel       -Standing_Seam-
+*  Part       Use  Type  Clip
+  '45250 .5'  'N'  '--'   0.0
+
+*(31)PARTIAL WALL PANELS:
+*
+* Id    Part       Color    Opt  Rot
+   1   '--------'  '----'   '-'  '-'
+   2   '--------'  '----'   '-'  '-'
+   3   '--------'  '----'   '-'  '-'
+   4   '--------'  '----'   '-'  '-'
+
+*(32)EXTENSION LAYOUT:
+*        Wall                ---Bay---  -Edge_Extend-  End_Option  End_Support          Purlin
+* No. Id  Id  Type Opt Mount Start End   Left   Right  Left Right  Left  Right  Bracket  Type
+   3   1   1  'EC' '-'  'B'    1    1     0.0     0.0  '-'   '-'   '-'     '-'    'N'    'ZB'
+       2   2  'EC' '-'  'B'    3    3     0.0     0.0  '-'   '-'   '-'     '-'    'N'    'ZB'
+       3   3  'EC' '-'  'B'    2    2     0.0     0.0  '-'   '-'   '-'     '-'    'N'    'ZB'
+
+*(33)EXTENSION SIZE:
+*      -------Horizontal_Size--------   ---------Vertical_Size-------- --Orient--  ------Support------
+* Id     Elev   Width   Slope  Offset    Elev  Height   Slope  Project Beam Panel  Offset   Elev Splice
+   1   8200.0  1500.0   10.00   250.0     0.0     0.0    0.00    0.00  '-'  '-'      0.00   0.00   '-'
+   2   5200.0  1500.0   10.00   250.0     0.0     0.0    0.00    0.00  '-'  '-'      0.00   0.00   '-'
+   3   5200.0  1500.0   10.00   250.0     0.0     0.0    0.00    0.00  '-'  '-'      0.00   0.00   '-'
+
+*(34)EXTENSION BEAMS:   
+*    Ext Line                                          Connect_Id
+*No.  Id  Id   Use       Orn  Type Shape Rot Opt   Id  Start  End
+   8   1   1  'ATTACH  ' 'H'  'W'   'H'  '-' '-'    1    7     0
+       1   1  'ATT_SUPP' 'H'  'W'   'H'  '-' '-'    2    8     9
+       1   2  'ATTACH  ' 'H'  'W'   'H'  '-' '-'    3   10     0
+       2   3  'ATTACH  ' 'H'  'W'   'H'  '-' '-'    4   10     0
+       2   4  'ATTACH  ' 'H'  'W'   'H'  '-' '-'    3   10     0
+       3   2  'ATTACH  ' 'H'  'W'   'H'  '-' '-'    4   10     0
+       3   3  'ATTACH  ' 'H'  'W'   'H'  '-' '-'    5    7     0
+       3   3  'ATT_SUPP' 'H'  'W'   'H'  '-' '-'    6    8     9
+
+*(35)EXTENSION PURLINS:
+*                                                    Peak     Set   ------Lap-----  Pos
+*No.  Id   Use         Locate  Type  Rot Opt Row    Space   Space     Ext      Int   Id
+   6   1  'ROOF    '      0.0  'ZB'  'U' '-'  1     300.0     0.0     0.0      0.0    0
+       1  'EAVE    '      0.0  'ZB'  'U' '-'  1       0.0     0.0     0.0      0.0    0
+       2  'ROOF    '      0.0  'ZB'  'U' '-'  1     300.0     0.0     0.0      0.0    0
+       2  'EAVE    '      0.0  'ZB'  'U' '-'  1       0.0     0.0     0.0      0.0    0
+       3  'ROOF    '      0.0  'ZB'  'U' '-'  1     300.0     0.0     0.0      0.0    0
+       3  'EAVE    '      0.0  'ZB'  'U' '-'  1       0.0     0.0     0.0      0.0    0
+
+*(36)EXTENSION PURLIN LAYOUT:
+*                     Bay  Member
+*No.  Id   Use         Id      Id
+   9   1  'ROOF    '    1      21
+       1  'EAVE    '    1      32
+       1  'GUTTER_A'    1       0
+       2  'ROOF    '    3      22
+       2  'EAVE    '    3      33
+       2  'GUTTER_A'    3       0
+       3  'ROOF    '    2      23
+       3  'EAVE    '    2      34
+       3  'GUTTER_A'    2       0
+
+*(37)EXTENSION PANELS:
+*   Ext                                   Support
+*No. Id  Use       Part      Rot  Color   Spacing
+  6   1 'ROOF  '  '45250 .5' 'N'  'A3--'     0.00
+      1 'SOFFIT'  '--------' 'N'  '----'     0.00
+      2 'ROOF  '  '45250 .5' 'N'  'A3--'     0.00
+      2 'SOFFIT'  '--------' 'N'  '----'     0.00
+      3 'ROOF  '  '45250 .5' 'N'  'A3--'     0.00
+      3 'SOFFIT'  '--------' 'N'  '----'     0.00
+
+*(38)EXTENSION TRIM:
+*     Ext                  ----Top---  --Bottom--  ---Left----  ---Right---   -Gable-
+*No.   Id    Use           Lt Ctr  Rt  Lt Ctr  Rt  Top Ctr Bot  Top Ctr Bot   Peak Rt
+   3    1   'INT_BOTTOM  '  0  19   0   0   0   0    0  20   0    0  20   0    0    0
+        2   'INT_BOTTOM  '  0  19   0   0   0   0    0  20   0    0  20   0    0    0
+        3   'INT_BOTTOM  '  0  19   0   0   0   0    0  20   0    0  20   0    0    0
+
+*(39)EXTENSION ANGLE:
+*     Ext                  ----Top---  --Bottom--  ---Left----  ---Right---  --Center--  --Gutter--
+*No.   Id    Use           Lt Ctr  Rt  Lt Ctr  Rt  Top Ctr Bot  Top Ctr Bot  Lt Ctr  Rt  Lt Ctr  Rt
+   3    1   'INT_BOTTOM  '  0   0   0   0   0   0    0  21   0    0  21   0    0  0    0   0  0    0
+        2   'INT_BOTTOM  '  0   0   0   0   0   0    0  21   0    0  21   0    0  0    0   0  0    0
+        3   'INT_BOTTOM  '  0   0   0   0   0   0    0  21   0    0  21   0    0  0    0   0  0    0
+
+*(40)WALL DIAGONAL BRACING:
+*Wall  No.     Bay    No.   Level    Level  Brace  Connect              Brace_Id
+* Id   Bays  St End  Level  Type    Height  Type   Opt  Id   Side  Qty  --- --- --- --- --- --- --- ---
+   1    0
+   2    2     1   1    2     'B'    7430.0   'R '  '-'   0    'L'   1   79
+                                                              'R'   1   79
+                             'B'    9100.0   'R '  '-'   0    'L'   1   80
+                                                              'R'   1   80
+              4   4    2     'B'    7430.0   'R '  '-'   0    'L'   1   81
+                                                              'R'   1   81
+                             'B'    9100.0   'R '  '-'   0    'L'   1   82
+                                                              'R'   1   82
+   3    0
+   4    2     1   1    2     'B'    7430.0   'R '  '-'   0    'L'   1   81
+                                                              'R'   1   81
+                             'B'    9100.0   'R '  '-'   0    'L'   1   82
+                                                              'R'   1   82
+              4   4    2     'B'    7430.0   'R '  '-'   0    'L'   1   79
+                                                              'R'   1   79
+                             'B'    9100.0   'R '  '-'   0    'L'   1   80
+                                                              'R'   1   80
+
+*(41)WIND BENTS:
+*    Wall     B_SW  Bay   Col  ---Member_Id---           -Column_Depth-  Rafter  -----Conn_Id-----   ----Offset----   ---Clearance---
+*No.  Id    Offset   Id  Type ColLt ColRt Beam   Height    Base     Top   Depth  Base Splice Attach  Left     Right   Height    Width
+  0
+
+*(42)WIND COLUMNS:
+*    Wall     B_SW  Bay   Col    Side                     ----Depth----   --Conn_Id--
+*No.  Id    Offset   Id  Type   Lt/Rt  Member_Id Height    Base     Top   Base Attach  Offset
+  0
+
+*(43)INSIDE FLANGE STRAPS:
+*    Wall   No.   Number_of_Straps_per_Bay
+*No.  Id    Bay   Left_to_Right_Along_Wall
+  2    2      4     3  3  2  3
+       4      4     3  2  3  3
+
+*(44)WALL LIGHT PANELS:
+*  No.   Wall  Panel  Panel   Panel    Panel   Remove   Bay
+* Lites   Id   Quan   Type   Length   Offset   Panel    Id
+    0
+
+*(45)BASE OPTIONS:
+*    Wall   Base   Base    Base    Base
+*No.  Id   Angle  Channel  Seal  Ang/Seal
+  4    1    'Y'     'N'     'N'     'N'
+       2    'Y'     'N'     'N'     'N'
+       3    'Y'     'N'     'N'     'N'
+       4    'Y'     'N'     'N'     'N'
+
+*(46)WALL ANGLE:
+*    Wall   Base    Roof  --Corner_Angle--  Girt
+*No.  Id    Angle  Angle  Left       Right  Strap
+  2    2     0        0    0          0        0
+       4     0        0    0          0        0
+
+*(47)TRIM PIECES:
+*    Wall  Base      Left      Left                Right    Right
+*Id.  Id   Trim     Corner     End      Interior    End     Corner
+  2    2     0       17         0         0         0        17
+       4     0       17         0         0         0        17
+
+*(48)WALL OPENING TRIM PIECES:
+*    Wall  No. Bay   -Left_Jamb--   -Right_Jamb-   ---Header---   ----Sill----
+*No.  Id  Open  Id   Trim   Cover   Trim   Cover   Trim   Cover   Trim   Cover
+  2    2    1    3   15      0      15      0      16      0       0      0
+       4    0
+
+*(49)PARTIAL WALL ANGLE/TRIM PIECES:
+*         ----Left_Jamb---  ---Right_Jamb---  -------Top------  -----Bottom-----
+*No.  Id  Angle Trim Cover  Angle Trim Cover  Angle Trim Cover  Angle Trim Cover
+ 4     1      0    0     0      0    0     0      0   22     0      0    0     0
+       2      0    0     0      0    0     0      0   23     0      0    0     0
+       3      0    0     0      0    0     0      0   22     0      0    0     0
+       4      0    0     0      0    0     0      0   24     0      0    0     0
+
+*(50)ADDITIONAL OPENING TRIM:
+*              Base  --------Left-------        -------Right-------
+*No.  Id  Opt  Trim  Corner  End  Rafter  Peak  Rafter  End  Corner
+  0
+
+*(51)BRACING VERTICAL MEMBERS:
+* No.   Ext Bay ----Brace--------    ------Blocking--------
+*Data   Id  Id  Pattern Type  Id     Id  Id  Id  Id  Id  Id
+   0
+
+*(52)BASE MEMBERS:
+*No.    Wall  Bay  Type   Height    Loc   Det
+*Items   Id   Id                          Id
+  0
+
+*(53)WIDE OPENING LAYOUT:
+*    Wall  --Open--   Bay_Id  ---Clear Opening--    Wedge     Stub   Strut
+*No.  Id   Id  Type   St End   Width      Height   Height     Elev   Type
+  0
+
+*(54)TRIM/ANGLE PIECES:
+*                                            ---Bay---           Bld  Pos  Table
+*No. Wall Marker                          Id Start End Srf  Side  Id   Id    Id  Use
+  6    2  'GUTTER                      '   1    1    4   0  'F-'   0    2     6  'T'
+       2  'GUTTER                      '   1    1    4   0  'F-'   0    1     7  'T'
+       2  'GUTTER                      '   1    1    4   0  'F-'   0    3     8  'T'
+       4  'GUTTER                      '   2    1    4   0  'F-'   0    2     6  'T'
+       4  'GUTTER                      '   2    1    4   0  'F-'   0    1     7  'T'
+       4  'GUTTER                      '   2    1    4   0  'F-'   0    3     8  'T'
+
+*(55)JACK BEAM LAYOUT:
+* No.  Beam   -Bay_Id--                    Type  Draw
+*Beam   Id    Start End    Offset  Height  Type  Refer
+    0
+
+*(56)JACK BEAM DEPTH:
+* No.  Jack  Depth   Depth  No. ----Interior----
+*Jack   Id   Start     End  Dep Locate    Depth
+    0
+
+*(57)JACK BEAM MEMBER:
+*      Jack            Table
+* No.   Id   Offset     Id
+   0
+
+*(58)CRANE RUNWAY LAYOUT:
+* No. Sys Wall    Crane Rnwy  ----------------Runway_Location----------------
+*Sys  Id   Id     Type  Orn      Elev   Offset     Span     Start       End
+  0
+
+*(59)CRANE COMPONENTS:
+*No.   Sys  Comp                                             Table   Conn
+*Sys   Id  Type       Side   Locate    Height   Type   Opt    Id      Id
+   0 
+
+*(60)GUTTER:
+*         ---Location---  -------Layout-------        ------Size-----
+* No. Id   Use        Id      Start        End  Type   Width    Depth   Color
+   2   1  'WALL    '   2        0.0    30500.0  'E'     0.00     0.00  '----'
+       2  'WALL    '   4        0.0    30500.0  'E'     0.00     0.00  '----'
+
+*(61)DOWNSPOUT:
+*Gtr
+* Id  Color   No.  Locations
+   1  '----'   8       390.0     4635.7     8881.4    13127.1    17372.9
+                     21618.6    25864.3    30110.0
+   2  '----'   8       390.0     4635.7     8881.4    13127.1    17372.9
+                     21618.6    25864.3    30110.0
+
+*(62)RIGID FRAME COORDINATES:
+*     EW  Frame Frame   No.   Surf
+*No.  Id    Id   Type  Coord   Id    X_Coord    Y_Coord
+  2    1     1   'RF'     9     1      644.0        0.0
+                                1      636.8     8544.5
+                                1      740.6     8560.5
+                                2      740.6     8560.5
+                                3     6399.4     9227.8
+                                3    12059.4     8560.5
+                                4    12059.2     8560.5
+                                4    12156.0     8549.5
+                                4    12156.0        0.0
+       3     5   'RF'     9     4      644.0        0.0
+                                4      644.0     8549.5
+                                4      740.8     8560.5
+                                3      740.6     8560.5
+                                3     6400.6     9227.8
+                                2    12059.4     8560.5
+                                1    12059.4     8560.5
+                                1    12163.2     8544.5
+                                1    12156.0        0.0
+
+*(63)ACCESSORIES:
+*    Wall    No.   Bay  Accessory_Offset   Accessory_Size     Accessory
+*No.  Id   Access  Id       X       Y      Width    Height       Id
+  2    2      0
+       4      0
+
+*(64)MEMBER TABLE:
+*      Table
+* No.    Id   Mark      Type     Part      Length   Depth   Width    Opt  Ref
+  66      1  'EB-1    '  '-'  'BEAM    '  1920.50    0.00    0.00    ' '   0
+          2  'EB-2    '  'W'  'W35a208 '  8140.00  350.00  200.00    '-'   0
+          3  'EB-3    '  '-'  'BEAM    '  1528.60    0.00    0.00    ' '   0
+          4  'EB-4    '  '-'  'BEAM    '  1528.60    0.00    0.00    ' '   0
+          5  'EB-5    '  '-'  'BEAM    '  1920.50    0.00    0.00    ' '   0
+          6  'EB-6    '  'W'  'W35a208 '  6645.00  350.00  200.00    '-'   0
+          7  'EC-1    '  'W'  'W30a158 '  8976.20  300.00  150.00    '-'   0
+          8  'EC-2    '  'W'  'W30a158 '  8976.20  300.00  150.00    '-'   0
+          9  'DJ-1    '  'U'  'ISMC200 '  7189.98  200.00   75.00    '-'   0
+         10  'DJ-2    '  'C'  '200C20  '  4180.00  200.00   60.00    '-'   0
+         11  'DH-1    '  'U'  'ISMC200 '  5980.00  200.00   75.00    '-'   0
+         12  'DH-2    '  'C'  '200C20  '  3980.00  200.00   60.00    '-'   0
+         21  ' P-9    '  'Z'  '250Z18  '  7879.98  250.00   80.00    '-'   0
+         22  ' P-10   '  'Z'  '250Z15  '  7114.99  250.00   80.00    '-'   0
+         23  ' P-11   '  'Z'  '250Z18  '  7879.98  250.00   80.00    '-'   0
+         24  ' E-1    '  'Z'  '200Z25  '  9534.98  200.00   60.00    '-'   0
+         25  ' E-2    '  'Z'  '200Z18  '  9589.98  200.00   60.00    '-'   0
+         26  ' E-3    '  'Z'  '200Z18  '  8094.99  200.00   60.00    '-'   0
+         27  ' E-4    '  'Z'  '200Z18  '  8039.98  200.00   60.00    '-'   0
+         28  ' E-5    '  'Z'  '200Z25  '  9534.98  200.00   60.00    '-'   0
+         29  ' E-6    '  'Z'  '200Z18  '  9589.98  200.00   60.00    '-'   0
+         30  ' E-7    '  'Z'  '200Z18  '  8094.99  200.00   60.00    '-'   0
+         31  ' E-8    '  'Z'  '200Z18  '  8039.98  200.00   60.00    '-'   0
+         32  ' E-9    '  'Z'  '250Z18  '  7884.99  250.00   80.00    '-'   0
+         33  ' E-10   '  'Z'  '250Z15  '  7114.99  250.00   80.00    '-'   0
+         34  ' E-11   '  'Z'  '250Z18  '  7884.99  250.00   80.00    '-'   0
+         35  ' G-1    '  'Z'  '200Z15  '   541.00  200.00   60.00    '-'   0
+         85  ' G-2    '  'Z'  '200Z18  '  8179.98  200.00   60.00    '2'   0
+         37  ' G-3    '  'Z'  '200Z18  '  8179.98  200.00   60.00    '-'   0
+         38  ' G-4    '  'Z'  '200Z15  '  5654.99  200.00   60.00    '-'   0
+         39  ' G-5    '  'Z'  '200Z18  '  5609.99  200.00   60.00    '-'   0
+         40  ' G-6    '  'Z'  '200Z15  '  6655.99  200.00   60.00    '-'   0
+         41  ' G-7    '  'Z'  '200Z18  '  5609.99  200.00   60.00    '-'   0
+         42  ' G-8    '  'Z'  '200Z15  '  5609.99  200.00   60.00    '-'   0
+         88  ' G-9    '  'Z'  '200Z18  '  8179.98  200.00   60.00    '2'   0
+         44  ' G-10   '  'Z'  '200Z18  '  7774.98  200.00   60.00    '-'   0
+         45  ' G-11   '  'Z'  '200Z15  '  8179.98  200.00   60.00    '-'   0
+         46  ' G-12   '  'Z'  '200Z18  '  8179.98  200.00   60.00    '-'   0
+         47  ' G-13   '  'Z'  '200Z15  '  1540.00  200.00   60.00    '-'   0
+         48  ' G-14   '  'Z'  '200Z15  '  9234.98  200.00   60.00    '-'   0
+         49  ' G-15   '  'Z'  '200Z25  '  9234.98  200.00   60.00    '-'   0
+         50  ' G-16   '  'Z'  '200Z20  '  9234.98  200.00   60.00    '-'   0
+         51  ' G-17   '  'Z'  '200Z15  ' 10180.98  200.00   60.00    '-'   0
+         52  ' G-18   '  'Z'  '200Z18  '  9619.98  200.00   60.00    '-'   0
+         53  ' G-19   '  'Z'  '200Z20  '  9619.98  200.00   60.00    '-'   0
+         54  ' G-20   '  'Z'  '200Z15  '  9619.98  200.00   60.00    '-'   0
+         55  ' G-21   '  'Z'  '200Z18  '  8124.98  200.00   60.00    '-'   0
+         56  ' G-22   '  'Z'  '200Z15  '  6904.99  200.00   60.00    '-'   0
+         57  ' G-23   '  'Z'  '200Z18  '  8124.98  200.00   60.00    '-'   0
+         58  ' G-24   '  'Z'  '200Z15  '  8124.98  200.00   60.00    '-'   0
+         59  ' G-25   '  'Z'  '200Z15  '  8299.98  200.00   60.00    '-'   0
+         60  ' G-26   '  'Z'  '200Z18  '  7739.98  200.00   60.00    '-'   0
+         61  ' G-27   '  'Z'  '200Z15  '  7739.98  200.00   60.00    '-'   0
+         62  ' G-28   '  'Z'  '200Z15  '  7739.98  200.00   60.00    '-'   0
+         63  ' G-29   '  'Z'  '200Z18  '  7739.98  200.00   60.00    '-'   0
+         64  ' G-30   '  'Z'  '200Z15  '  9234.98  200.00   60.00    '-'   0
+         65  ' G-31   '  'Z'  '200Z25  '  9234.98  200.00   60.00    '-'   0
+         66  ' G-32   '  'Z'  '200Z20  '  9234.98  200.00   60.00    '-'   0
+         67  'ST-1    '  'T'  'T125x32 '  8102.50  125.00  125.00    '-'   0
+         68  'ST-2    '  'T'  'T92x36  '  6607.50   91.50   91.50    '-'   0
+         79  'CB-1    '  '-'  'ROD20   ' 10750.00    0.00    0.00    '-'   0
+         80  'CB-2    '  '-'  'ROD20   '  8220.00    0.00    0.00    '-'   0
+         81  'CB-3    '  '-'  'ROD20   '  9670.00    0.00    0.00    '-'   0
+         82  'CB-4    '  '-'  'ROD20   '  6740.00    0.00    0.00    '-'   0
+         86  ' G-5    '  'Z'  '200Z18  '  5609.99  200.00   60.00    '2'   0
+         87  ' G-7    '  'Z'  '200Z18  '  5609.99  200.00   60.00    '2'   0
+
+*(65)TRIM TABLE:
+* No.  Trim       Trim          Trim      Trim      Detail
+* Trim  Id    Opt  Mark          Part     Length      Id     Quan  Color Use
+  28      1   '-' 'ET-01 '    'ET-01   '  5600.00       0       2  'HA'  'T'
+          2   '-' 'ET-01 '    'ET-01   '  5600.00       0       2  'HA'  'T'
+          3   '-' 'ET-01 '    'ET-01   '  5600.00       0       2  'HA'  'T'
+          4   '-' 'GT-01 '    'GT-01   '  5600.00       0       3  'HA'  'T'
+          5   '-' 'GT-01 '    'GT-01   '  5600.00       0       3  'HA'  'T'
+          6   '-' 'EG-01 '    'EG-01   '  5600.00       0       6  '--'  'T'
+          6   '-' 'GS-01 '    'GS-01   '   600.00       0       0  '--'  'T'
+          7   '-' 'GC-01 '    'GC-01   '    25.00       0       1  '--'  'T'
+          8   '-' 'GC-02 '    'GC-02   '    25.00       0       1  '--'  'T'
+          9   '-' 'GA    '    'L75X100 '  3000.00       0       3  'RO'  'A'
+         10   '-' 'GA    '    'L75X100 '  3000.00       0       2  'RO'  'A'
+         11   '-' 'GA    '    'L75X100 '  3000.00       0       2  'RO'  'A'
+         12   '-' 'GA    '    'L75X100 '  3000.00       0       2  'RO'  'A'
+         13   '-' 'GA    '    'L75X100 '  3000.00       0       1  'HA'  'A'
+         13   '-' 'WA    '    'L75X100 '    25.00       0       3  'HA'  'A'
+         14   '-' 'GA    '    'L75X100 '  3000.00       0       1  'HA'  'A'
+         14   '-' 'WA    '    'L75X100 '    25.00       0       1  'HA'  'A'
+         15   '-' 'CTS-05'    'CTS-05  '  5600.00       0       1  'HA'  'T'
+         16   '-' 'CTS-04'    'CTS-04  '  5600.00       0       1  'HA'  'T'
+         17   '-' 'CT-02 '    'CT-02   '  5600.00       0       2  'HA'  'T'
+         18   '-' 'DS-100'    'DS-100  '  5600.00       0      16  '--'  'T'
+         18   '-' 'GS-01 '    'GS-01   '   350.00       0      32  '--'  'T'
+         19   '-' 'CT-05 '    'CT-05   '  5600.00       0       2  'A3'  'T'
+         20   '-' 'GT-01 '    'GT-01   '  5600.00       0       1  'HA'  'T'
+         21   '-' 'GA    '    'L75X100 '  3000.00       0       1  'RO'  'A'
+         22   '-' 'DT-01 '    'DT-01   '  5600.00       0       2  'HA'  'T'
+         23   '-' 'DT-01 '    'DT-01   '  5600.00       0       5  'HA'  'T'
+         24   '-' 'DT-01 '    'DT-01   '  5600.00       0       6  'HA'  'T'
+
+*(66)CONNECTIONS:
+*        ----------------Plate_Size--------------  ----------------Bolts----------------   No.    No.
+*No. Id  Type Opt  Mark       Width Length  Thick  Type      Dia   Length Gage  Row  Qty  Washer Attach
+ 10   1  '--' '2' '--------'   0.00   0.00   0.00 'Gr8.8'  16.00  70.00 100.00    1     2    0     0
+      2  'SG' '-' '--------' 150.00   0.00  10.00 'Gr8.8'  16.00  70.00  75.00    1     1    0     0
+      3  '- ' '-' '--------'   0.00   0.00   0.00 'Gr8.8'   0.00   0.00   0.00    2     0    0     0
+      4  '--' '-' '--------'   0.00   0.00   0.00 'Gr8.8'  12.00  50.00   0.00    2     2    0     0
+      5  '--' '-' '--------'   0.00   0.00   0.00 'Gr8.8'  12.00  50.00   0.00    4     4    0     0
+      6  '--' '-' '--------'   0.00   0.00   0.00 'Gr8.8'  16.00  70.00   0.00    2     2    2     0
+      7  'SS' '-' '--------' 200.00 586.22  16.00 'Gr8.8'  20.00  90.00   0.00    8     8    0     0
+      8  'SS' '-' '--------' 200.00 556.04  16.00 'Gr8.8'  20.00  90.00   0.00    8     8    0     0
+      9  'S3' '-' '--------' 200.00 416.04  10.00 'Gr8.8'  16.00   0.00   0.00    4     4    0     0
+     10  'SS' '-' '--------' 200.00 547.22  16.00 'Gr8.8'  20.00  90.00   0.00    8     8    0     0
+
+*(67)USER DETAILS:
+*  No.    Detail              ---Location---
+* Detail   Name              X_Coord  Y_Coord  Scale
+    0
+
+*(68)DRAWING REVISIONS:
+* No.
+* Lines  Revision
+    0
+
+*(69)USER TEXT ADJUST:
+*  No.    -----Adjust------
+*Adjust    X     Y   Rotate   Text
+   0
+
+*(70)HORIZONTAL GRID LINE:
+*         L_EW   Line  Wall
+*No.    Offset   Id      Id
+  5        0.0  '1   '   1
+        8535.0  '2   '   0
+       16745.0  '3   '   0
+       23460.0  '4   '   0
+       30500.0  '5   '   3
+
+*(71)VERTICAL GRID LINE:
+*         B_SW   Line  Wall
+*No.    Offset   Id      Id
+  3        0.0  'C   '   4
+        7685.0  'B   '   0
+       12800.0  'A   '   2

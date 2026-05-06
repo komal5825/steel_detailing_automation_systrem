@@ -1,0 +1,91 @@
+*    UPDTED ON 01-07-2011 BY SKC                   
+*  Connection definitions for beams to columns and 
+*                             beams to beams 
+*           -----Member1----- to -------Member2------       Conn             
+* Area      Member     Type       Member   Type  Condition  Type   Description 
+*--------  ----------- -----     --------- ----  ---------  ----  -------------------------------------------------------- 
+
+'FLOOR'   'SUPPORT'   'CD'      'RF_COL'  '--'   'FLANGE'  'S3'  'Support Beam to Rigid Frame Column Flange' 
+ 'FLOOR'   'SUPPORT'   'RW'      'RF_COL'  '--'   'FLANGE'  'S3'  'Support Beam to Rigid Frame Column Flange' 
+ 'FLOOR'   'SUPPORT'   'CD'      'INT_COL' '--'   'FLANGE'  'S3'  'Support Beam to Rigid Frame Interior Column Flange' 
+ 'FLOOR'   'SUPPORT'   'RW'      'INT_COL' '--'   'FLANGE'  'S3'  'Support Beam to Rigid Frame Interior Column Flange' 
+ 'FLOOR'   'SUPPORT'   'CD'      'RF_COL'  '--'      'WEB'  'S2'  'Support Beam to Rigid Frame Column Web'                     
+ 'FLOOR'   'SUPPORT'   'RW'      'RF_COL'  '--'      'WEB'  'S2'  'Support Beam to Rigid Frame Column Web'                     
+ 'FLOOR'   'SUPPORT'   'CD'      'INT_COL' '--'      'WEB'  'S2'  'Support Beam to Rigid Frame Interior Column Web' 
+ 'FLOOR'   'SUPPORT'   'RW'      'INT_COL' '--'      'WEB'  'S2'  'Support Beam to Rigid Frame Interior Column Web'              
+ 'FLOOR'   'SUPPORT'   'CD'      'EW_COL'  '--'   'FLANGE'  'S3'  'Support Beam to Endwall Column Flange' 
+ 'FLOOR'   'SUPPORT'   'RW'      'EW_COL'  '--'   'FLANGE'  'S3'  'Support Beam to Endwall Column Flange' 
+ 'FLOOR'   'SUPPORT'   'CD'      'SW_COL'  '--'   'FLANGE'  'S3'  'Support Beam to Soldier Column Flange' 
+ 'FLOOR'   'SUPPORT'   'RW'      'SW_COL'  '--'   'FLANGE'  'S3'  'Support Beam to Soldier Column Flange' 
+ 'FLOOR'   'SUPPORT'   'CD'      'FL_COL'  '--'   'FLANGE'  'S3'  'Support Beam to Floor Column Flange' 
+ 'FLOOR'   'SUPPORT'   'RW'      'FL_COL'  '--'   'FLANGE'  'S3'  'Support Beam to Floor Column Flange' 
+ 'FLOOR'   'SUPPORT'   'CD'      'EW_COL'  '--'      'WEB'  'S2'  'Support Beam to Endwall Column Web' 
+ 'FLOOR'   'SUPPORT'   'RW'      'EW_COL'  '--'      'WEB'  'S2'  'Support Beam to Endwall Column Web'                              
+ 'FLOOR'   'SUPPORT'   'CD'      'SW_COL'  '--'      'WEB'  'S2'  'Support Beam to Soldier Column Web' 
+ 'FLOOR'   'SUPPORT'   'RW'      'SW_COL'  '--'      'WEB'  'S2'  'Support Beam to Soldier Column Web'                          
+ 'FLOOR'   'SUPPORT'   'CD'      'FL_COL'  '--'      'WEB'  'S2'  'Support Beam to Floor Column Web' 
+ 'FLOOR'   'SUPPORT'   'RW'      'FL_COL'  '--'      'WEB'  'S2'  'Support Beam to Floor Column Web'                            
+ 'FLOOR'   'SUPPORT'   'CD'      'SUPPORT' '--'    'SHEAR'  'S2'  'Support Beam to Support Beam, Shear'                           
+ 'FLOOR'   'SUPPORT'   'RW'      'SUPPORT' '--'    'SHEAR'  'S2'  'Support Beam to Support Beam, Shear'                           
+ 'FLOOR'   'SUPPORT'   'RW'      'SUPPORT' '--'   'MOMENT'  'EE'  'Support Beam to Support Beam, Moment' 
+ 
+ 'FLOOR'   'SUPPORT'   '--'      'INT_COL' 'PT'      'WEB'  'S9'  'Support Beam to Rigid Frame (PT) Interior Column'               
+ 'FLOOR'   'PERIMETER' '--'      'INT_COL' 'PT'      'WEB'  'S9'  'Perimeter Beam to Rigid Frame (PT) Interior Column'          
+ 
+ 'FLOOR'   'PERIMETER' 'RW'      'RF_COL'  '--'   'FLANGE'  'S3'  'Perimeter Beam to Rigid Frame Column Flange' 
+ 'FLOOR'   'PERIMETER' 'RW'      'INT_COL' '--'   'FLANGE'  'S3'  'Perimeter Beam to Rigid Frame Interior Column Flange'  
+ 'FLOOR'   'PERIMETER' 'RW'      'RF_COL'  '--'      'WEB'  'S2'  'Perimeter Beam to Rigid Frame Column Web'                      
+ 'FLOOR'   'PERIMETER' 'RW'      'INT_COL' '--'      'WEB'  'S2'  'Perimeter Beam to Rigid Frame Interior Column Web'              
+ 'FLOOR'   'PERIMETER' 'RW'      'EW_COL'  '--'   'FLANGE'  'S3'  'Perimeter Beam to Endwall Column Flange'                       
+ 'FLOOR'   'PERIMETER' 'RW'      'EW_COL'  '--'      'WEB'  'S2'  'Perimeter Beam to Endwall Column Web'                          
+ 'FLOOR'   'PERIMETER' 'RW'      'SW_COL'  '--'   'FLANGE'  'S3'  'Perimeter Beam to Soldier Column Flange'                       
+ 'FLOOR'   'PERIMETER' 'RW'      'SW_COL'  '--'      'WEB'  'S2'  'Perimeter Beam to Soldier Column Web'                          
+ 'FLOOR'   'PERIMETER' 'RW'      'SUPPORT' '--'      'WEB'  'S2'  'Perimeter Beam to Support Beam Web'  
+ 'FLOOR'   'PERIMETER' 'RW'      'PERIMETER' '--'    'WEB'  'S2'  'Perimeter Beam to Perimeter Beam Web'  
+ 
+ 'FLOOR'   'HEADER'    '--'      'JAMB'    '--'      'WEB'  'S2'  'Header to Framed Opening Jamb Web'  
+ 'FLOOR'   'HEADER'    '--'      'PERIMETER' '--'    'WEB'  'S2'  'Header to Perimeter Beam Web'  
+
+ 'FLOOR'   'JAMB'      '--'      'SUPPORT' '--'   'FLANGE'  'S2'  'Jamb to Support Beam Flange'  
+ 'FLOOR'   'JAMB'      '--'      'SUPPORT' '--'      'WEB'  'S2'  'Jamb to Support Beam Web'  
+ 'FLOOR'   'JAMB'      '--'      'PERIMETER' '--'    'WEB'  'S2'  'Jamb to Perimeter Beam Web'  
+
+ 'FLOOR'   'JOIST'     'RW'      'SUPPORT' '--'      'WEB'  'S2'  'Joist to Support Beam Web'  
+ 'FLOOR'   'JOIST'     'RW'      'SUPPORT' '--'   'FLANGE'  'S2'  'Joist to Support Beam Flange'                                   
+ 'FLOOR'   'JOIST'     'RW'      'PERIMETER' '--'    'WEB'  'S2'  'Joist to Perimeter Beam Web'  
+ 'FLOOR'   'JOIST'     'RW'      'HEADER'  '--'      'WEB'  'S2'  'Joist to Framed Opening Header Web'  
+ 
+ 'FLOOR'   'JOIST'     'J'       'HEADER'  '--'      'WEB'  'S4'  'Joist to Framed Opening Header Web'                             
+ 'FLOOR'   'JOIST'     'J'       'HEADER'  '--'   'FLANGE'  'S4'  'Joist to Framed Opening Header Web'                             
+
+ 'FLOOR'   'JOIST'     'J'       'RF_COL'  '--'      'WEB'  'S2'  'Joist to Rigid Frame Column Web Bracket'                   
+ 'FLOOR'   'JOIST'     'J'       'SW_COL'  '--'      'WEB'  'S2'  'Joist to Soldier Column Web Bracket'                       
+ 'FLOOR'   'JOIST'     'J'       'EW_COL'  '--'      'WEB'  'S2'  'Joist to Endwall Column Web Bracket'                       
+ 'FLOOR'   'JOIST'     'J'       'RF_COL'  '--'   'FLANGE'  'S2'  'Joist to Rigid Frame Column Flange Bracket'                 
+ 'FLOOR'   'JOIST'     'J'       'SW_COL'  '--'   'FLANGE'  'S2'  'Joist to Soldier Column Flange Bracket'                    
+ 'FLOOR'   'JOIST'     'J'       'EW_COL'  '--'   'FLANGE'  'S2'  'Joist to Endwall Column Flange Bracket'                     
+
+ 'JACK'    'SUPPORT'   '--'      'RF_COL'  '--'      'WEB'  'S3'  'Jack Beam to Rigid Frame Column Web'                      
+ 
+ 'SOLDIER' 'SUPPORT'   '--'      'RF_RAF'  '--'      'WEB'  'S2'  'Soldier Beam to Rigid Frame Rafter Web' 
+ 'SOLDIER' 'SUPPORT'   '--'      'SW_COL'  '--'      'WEB'  'S2'  'Soldier Beam Web to Soldier Column Web' 
+ 'SOLDIER' 'SUPPORT'   '--'      'SW_COL'  '--'   'FLANGE'  'S4'  'Soldier Beam Flange to Soldier Column Flange'              
+ 
+ 'CRANE'   'SUPPORT'   '--'      'ENDWALL' '--'      'WEB'  'S2'  'Auxiliary Beam to Endwall Column Web'                 
+ 
+ 
+ 
+ 
+* Connection Definitions 
+* 
+*  Type    Description 
+*  ----    ---------------------------- 
+*   'S3'    'Shear end plate' 
+*   'S2'    'Shear 2 loose clips' 
+*   'S9'    'Shear welded knife plate' 
+*   'S4'    'Flange Direct bolt' 
+ 
+
+ 
+}
+ 

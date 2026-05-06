@@ -1,0 +1,10 @@
+*VERSION:
+ 'VER:1.06'
+
+*MEMBERS:
+*Ref  Beam Beam Floor                             Cut      Fab             Cost      Cost                            Conn Conn  Conn Punch Punch ---End_Angle---
+* Id Class   Id   Id   Part        Mark        Length   Length  Weight    Labor  Material  Offset  Locate1  Locate2 Start  End Stiff  Left Right    Left   Right Det
+
+*CONNECTIONS:
+*Conn Conn Conn  -------------------------------Plate-------------------------------  --------------------------Bolt-------------------------  No.
+* Id  Type  Opt  Part       Mark       Width Length  Thick Offset Weight CostL CostM  Type      Dia   Len Row1 Row2 Quan Space1 Space2   Gage  Loc  Locate

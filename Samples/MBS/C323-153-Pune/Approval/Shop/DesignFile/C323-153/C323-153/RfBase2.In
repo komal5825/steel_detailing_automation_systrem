@@ -1,0 +1,86 @@
+
+*( 1)PROGRAM OPTIONS:
+  'a'      'Left Column'
+
+*( 2)MEMBER:
+*                  Max   Hot      Design
+*Type  Part         UC   Code      Type
+ 'W'  '--------'  1.00  'AISC05'   'WS '
+
+*( 3)MEMBER SHAPE:
+*  Web     Web   Flange   Flange_Thick      Max
+* Depth   Thick  Width    Top     Bot      Clear
+  400.00   5.00  150.0      6.00   6.00   230.0
+
+*( 4)DESIGN CONSTANTS:
+* DS_RFPLT        Compr_taken Allow     Yield  Yield Yield      DS_WELD
+*   File          Bolt/Concr   Bearing  Web    Base  Gusset     File
+ 'DS_RFPLT.Siz'      'CC'        7.00     345    345   345   'DS_WELD.Siz'
+
+*( 5)BASE PLATE:
+* Plate  Plate   Plate  Try_Wider      Max
+* Type   Width  Thick    if_thick      SideExt
+  'FI'     0.0    0.0    30.0          175.0
+
+*( 6)LOADING:
+*   --------Condition_1--------   -------- Condition_2--------
+*   Moment  Axial  Shear  Wind    Moment  Axial  Shear  Wind
+    70.86   54.74  30.29   1.00   62.78   -24.2  23.23   1.00
+
+*( 7)BOLTS:
+* Bolt    Bolt   Bolt     if_bolt_dia     Reduce
+* Type    Dia    Gage   exceeds_this_dia  #_Rows
+ 'A36  '  0.00     0.0     20.00           'N'
+
+*( 8)BOLT LOCATION:
+* Outside_of_flange       End    Outside&inside     Bolts_on
+* Flg_offset Spacing Rows End    outside&inside       inside
+    75.0     150.0     0   75.0      150.0              90.0
+
+*( 9)GUSSET PLATE:
+*  Flange_Gusset             Side_Gusset             Web_Gusset
+* Use  Height   Slope      Use  Height   Slope     Use  Height   Slope
+  'Y'    50.0    1.00      'Y'    50.0    2.00     'R'    50.0    2.00
+
+*( 1)PROGRAM OPTIONS:
+  'a'      'Right Colum'
+
+*( 2)MEMBER:
+*                  Max   Hot      Design
+*Type  Part         UC   Code      Type
+ 'W'  '--------'  1.00  'AISC05'   'WS '
+
+*( 3)MEMBER SHAPE:
+*  Web     Web   Flange   Flange_Thick      Max
+* Depth   Thick  Width    Top     Bot      Clear
+  400.00   5.00  150.0      6.00   6.00   230.0
+
+*( 4)DESIGN CONSTANTS:
+* DS_RFPLT        Compr_taken Allow     Yield  Yield Yield      DS_WELD
+*   File          Bolt/Concr   Bearing  Web    Base  Gusset     File
+ 'DS_RFPLT.Siz'      'CC'        7.00     345    345   345   'DS_WELD.Siz'
+
+*( 5)BASE PLATE:
+* Plate  Plate   Plate  Try_Wider      Max
+* Type   Width  Thick    if_thick      SideExt
+  'FI'     0.0    0.0    30.0          175.0
+
+*( 6)LOADING:
+*   --------Condition_1--------   -------- Condition_2--------
+*   Moment  Axial  Shear  Wind    Moment  Axial  Shear  Wind
+    71.75   54.65  30.29   1.00   62.73   -24.2  23.18   1.00
+
+*( 7)BOLTS:
+* Bolt    Bolt   Bolt     if_bolt_dia     Reduce
+* Type    Dia    Gage   exceeds_this_dia  #_Rows
+ 'A36  '  0.00     0.0     20.00           'N'
+
+*( 8)BOLT LOCATION:
+* Outside_of_flange       End    Outside&inside     Bolts_on
+* Flg_offset Spacing Rows End    outside&inside       inside
+    75.0     150.0     0   75.0      150.0              90.0
+
+*( 9)GUSSET PLATE:
+*  Flange_Gusset             Side_Gusset             Web_Gusset
+* Use  Height   Slope      Use  Height   Slope     Use  Height   Slope
+  'Y'    50.0    1.00      'Y'    50.0    2.00     'R'    50.0    2.00

@@ -1,0 +1,198 @@
+*===============================================================================
+*C463-002            Floor System Detail Input              18/DEC/2025  2:50pm
+*===============================================================================
+ 
+*( 1)JOBID:
+    'C463-002'
+ 
+*( 2)BUILDING TYPE:
+*Build    Build_Size(mm)   L_Expand_EW   R_Expand_EW
+*Type     Width   Length   Use  Offset   Use  Offset
+ 'FF'   12800.0   30500.0 'Y '     390  'Y '     390
+ 
+*( 3)WALL OFFSET:
+*  L_EW   F_SW   R_EW   B_SW
+    230     230     230     230
+ 
+*( 4)SURFACE SHAPE:
+* No.   X_Coord   Y_Coord
+*Surf      (mm)      (mm)
+   4        0.0     9100.0
+         6400.0     9740.0
+        12800.0     9100.0
+        12800.0        0.0
+ 
+*( 5)BAY SPACING:
+*Wall  ---Offset---   No.   ---Bay_Set---
+* Id    Left  Right  Sets     Width  Quan
+   1       0      0    2     7685.0    1
+                             5115.0    1
+   2       0      0    4     8535.0    1
+                             8210.0    1
+                             6715.0    1
+                             7040.0    1
+   3       0      0    2     5115.0    1
+                             7685.0    1
+   4       0      0    4     7040.0    1
+                             6715.0    1
+                             8210.0    1
+                             8535.0    1
+   5       0      0    4     8535.0    1
+                             8210.0    1
+                             6715.0    1
+                             7040.0    1
+ 
+*( 6)WALL OPENINGS:
+* Wall  No. Open Bay                                Sill  Base Panel     Frame_Ht    -----Jamb_Size-----
+*  Id  Open Id   Id   Width  Height  Offset Type  Height  Elev Opt     Left   Right  Left       Right
+   1    1    1    0  6000.0  7000.0   843.0  51      0.0     0 'Y'      0.0     0.0 '        ' '        '
+ 
+   2    1    2    0  4000.0  4000.0  1358.0  51      0.0     0 'Y'      0.0     0.0 '        ' '        '
+ 
+   3    1    3    0  4000.0  4000.0  1843.0  51      0.0     0 'Y'      0.0     0.0 '        ' '        '
+ 
+   4    0
+ 
+*( 7)WALL COLUMNS:
+*Wall                                                          Base
+* Id   No.   Id  Type  Rot  Opt  Part        Depth   Width     Elev
+   1    3     1   '-'  'N'  '-' '--------'    0.00    0.00     0.00
+              2   'W'  'N'  '-' '--------'    0.00    0.00     0.00
+              3   '-'  'N'  '-' '--------'    0.00    0.00     0.00
+ 
+   2    5     1   '-'  '-'  '-' '--------'    0.00    0.00     0.00
+              2   '-'  '-'  '-' '--------'    0.00    0.00     0.00
+              3   '-'  '-'  '-' '--------'    0.00    0.00     0.00
+              4   '-'  '-'  '-' '--------'    0.00    0.00     0.00
+              5   '-'  '-'  '-' '--------'    0.00    0.00     0.00
+ 
+   3    3     1   '-'  'N'  '-' '--------'    0.00    0.00     0.00
+              2   'W'  'N'  '-' '--------'    0.00    0.00     0.00
+              3   '-'  'N'  '-' '--------'    0.00    0.00     0.00
+ 
+   4    5     1   '-'  '-'  '-' '--------'    0.00    0.00     0.00
+              2   '-'  '-'  '-' '--------'    0.00    0.00     0.00
+              3   '-'  '-'  '-' '--------'    0.00    0.00     0.00
+              4   '-'  '-'  '-' '--------'    0.00    0.00     0.00
+              5   '-'  '-'  '-' '--------'    0.00    0.00     0.00
+ 
+ 
+*( 8)RIGID FRAMES/INTERIOR COLUMNS:
+* -------Frame------                                                                 Base
+*  No.  Line Id Type  No.  Id   Typ  Rot  Opt  Part         Locate   Depth   Width   Elev
+    5     1   0 '--'   0
+          2   0 '--'   0
+          3   0 '--'   0
+          4   0 '--'   0
+          5   0 '--'   0
+ 
+ 
+*( 9)WALL GIRTS:
+*No. Wall Bay                            ---Girt_Coord---
+*Rec  Id   Id   Locate  Type  Part          Left    Right
+   0
+ 
+*(10)FLOOR LAYOUT:
+* No   Floor               -Elevation-                       B_SW     L_EW
+*Floor  Id   Opt  Orient   Height  Opt    Width   Length   Offset   Offset
+   0
+ 
+*(11)FLOOR OFFSET:
+*Floor    -----------Decking-----------    -----------Beam_Web----------
+*  Id      L_EW    F_SW    R_EW    B_SW     L_EW    F_SW    R_EW    B_SW
+ 
+*(12)DECKING:
+*Floor                                        Screw    Trim
+*  Id   Type  Opt   Part       Thick  Color  Length   Color
+ 
+*(13)SUPPORT BEAMS:
+* No. Floor  Beam                            ---------Beam-------  Splice_Id  Weld
+*Beam   Id    Id   Offset  Locate1  Locate2  Type  Opt  Part       Start End   Id
+    0
+ 
+*(14)PERIMETER BEAMS:
+* No. Floor  Beam                                 ---------Beam-------  Splice_Id  Weld
+*Beam   Id    Id  Dir   Offset  Locate1  Locate2  Type  Opt  Part       Start End   Id
+   0
+ 
+*(15)SUPPORT COLUMN LAYOUT:
+*     Floor                                                      Top    Base  -Connection_Id- Weld
+*  No.  Id   Id    Offset   Locate  Type  Rot  Opt  Part        Conn    Elev  Base  Cap Stiff  Id
+    0
+ 
+*(16)OPENING LAYOUT:
+* No.  Floor  Open
+*Open    Id    Id    Width   Length   Offset   Locate  Opt
+   0
+ 
+*(17)OPENING BEAM:
+* No. Floor Open Beam                                 ---------Beam-------  Splice_Id Weld
+*Beam   Id   Id   Id  Dir   Offset   Locate1  Locate2 Type  Opt  Part       Start End  Id
+   0
+ 
+*(18)JOISTS:
+*Floor             ---Set_Lap---  Depth
+* Id   Type  Opt      Ext    Int   Seat
+ 
+*(19)JOIST LAYOUT:
+* No.   Floor  Joist                                                         -Splice_Id-  Weld
+*Joist    Id     Id    Offset   Locate1  Locate2  Type  Rot  Opt  Part       Start   End   Id
+   0
+ 
+*(20)FLANGE BRACES:
+* No.  Floor  Brace                                                  Brace  Conn
+*Brace   Id    Id    Offset    Locate  Type  Rot  Opt   Part         Width   Id
+   0
+ 
+*(21)DIAGONAL BRACING LAYOUT:
+* No.  Floor Brace                                 -------Brace--------  Conn
+*Brace   Id    Id  Dir   Offset  Locate1  Locate2  Type  Opt  Part         Id
+   0
+ 
+*(22)JOIST STRAPPING:
+*Floor  Strap
+*  Id    Type  No.   Location
+ 
+*(23)CONNECTION TABLE:
+* No.  Conn  Conn  Conn  -------------Plate------------  -----------------Bolt-----------------------  Bolt  Weld
+*Conn   Id   Type   Opt  Part        Width Length Thick  Type      Dia Row1 Row2 Space1 Space2   Gage   Ref   Id
+     0
+ 
+*(24)WELDS:
+*    Table      ---OS_Flange---  ---IS_Flange---  ------Web------
+*No.  Id   Opt   Size Type Note   Size Type Note   Size Type Note
+   0
+ 
+*(25)RIGID FRAME COORDINATES:
+*No.   Frame Surf
+*Coord   Id   Id   X_Coord    Y_Coord
+  10      1    0       0.0        0.0
+          1    0       0.0        0.0
+          2    0       0.0        0.0
+          2    0       0.0        0.0
+          3    0       0.0        0.0
+          3    0       0.0        0.0
+          4    0       0.0        0.0
+          4    0       0.0        0.0
+          5    0       0.0        0.0
+          5    0       0.0        0.0
+ 
+*(26)INTERIOR COLUMN COORDINATES:
+*No.   Frame Col
+*Coord   Id   Id Side  X_Coord    Y_Coord
+   0
+ 
+*(27)DETAIL OPTIONS:
+*Floor         -------Beam------  Support
+* Id    Joist  Support Perimeter   Column
+
+================================================================================
+ C463-002            Joist Bridging                         18/DEC/2025  2:50pm
+================================================================================
+
+  JOIST BRIDGING
+  --------------
+   Floor              ----Location----
+    Id    Id  Offset    Start      End  Part      Mark     Length
+   ----  ---  ------  -------  -------  --------  ------   -------
+ 

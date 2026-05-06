@@ -1,0 +1,69 @@
+*   VERSION:0.50
+*
+*(1)HEADER:
+* No.    No.     No.    No_Add   No.
+*Open  Member  Connect  Purlin Purlin
+   0       0       0         0    42
+
+*(2)ROOF OPENING LAYOUT:
+* Open  -Location-      Frame --Surface1-- --Surface2--  ----Bay1---  ----Bay2---                      Ref
+*  Id   Use      Id Opt  Type Id    Offset Id    Offset  Id   Offset  Id   Offset     Width    Length   Id       Load
+
+*(3)ROOF OPENING FRAMING:
+*        Open     Bay           ---------Member--------  Frame_Opt   Frame_Id  Connect_Id Surf
+*     Id  Id  Use  Id   Offset  Type Opt  Rot  Part      Start End  Start End  Start  End  Id
+
+*(4)CONNECTION TABLE:
+*                ---------Plate---------  --------------------------Bolt-------------------------
+*Id   Type  Opt  Part       Width  Thick  Type     Dia  Row1  Row2  Space1  Space2   Gage DtBolt
+
+*(5)ADDITIONAL PURLINS:
+*    Surf Bay Purl                                   ----Extension----   Frame_Opt -Frame_Id-  Connect_Id  Ext
+*  Id Id   Id  Id    Offset  Type Rot Opt  Part          Left    Right  Left Right Left Right  Left Right   Id  Use
+
+*(6)PURLIN LAYOUT:
+* -Location-
+* Use     Id  Id     Offset  Rot
+ 'ROOF'    2   1    13.8629 'F'       352.118
+ 'ROOF'    2   2    72.9180 'F'      1852.118
+ 'ROOF'    2   3   131.9731 'F'      3352.118
+ 'ROOF'    2   4   191.0283 'F'      4852.118
+ 'ROOF'    2   5   250.0834 'F'      6352.118
+ 'ROOF'    2   6   309.1385 'F'      7852.118
+ 'ROOF'    2   7   368.1937 'F'      9352.118
+ 'ROOF'    2   8   427.2488 'F'     10852.118
+ 'ROOF'    2   9   486.3039 'F'     12352.119
+ 'ROOF'    2  10   545.3590 'F'     13852.119
+ 'ROOF'    2  11   604.4142 'F'     15352.119
+ 'ROOF'    2  12   663.4693 'F'     16852.119
+ 'ROOF'    2  13   722.5244 'F'     18352.119
+ 'ROOF'    2  14   781.5796 'F'     19852.119
+ 'ROOF'    2  15   840.6346 'F'     21352.119
+ 'ROOF'    2  16   899.6897 'F'     22852.119
+ 'ROOF'    2  17   958.7448 'F'     24352.117
+ 'ROOF'    2  18  1017.7999 'F'     25852.117
+ 'ROOF'    2  19  1076.8550 'F'     27352.115
+ 'ROOF'    2  20  1135.9100 'F'     28852.115
+ 'ROOF'    2  21  1194.9653 'F'     30352.119
+ 'ROOF'    3   1    11.8110 'B'       300.000
+ 'ROOF'    3   2    70.8663 'B'      1800.005
+ 'ROOF'    3   3   129.9214 'B'      3300.005
+ 'ROOF'    3   4   188.9766 'B'      4800.005
+ 'ROOF'    3   5   248.0317 'B'      6300.005
+ 'ROOF'    3   6   307.0868 'B'      7800.005
+ 'ROOF'    3   7   366.1420 'B'      9300.005
+ 'ROOF'    3   8   425.1971 'B'     10800.006
+ 'ROOF'    3   9   484.2522 'B'     12300.006
+ 'ROOF'    3  10   543.3074 'B'     13800.006
+ 'ROOF'    3  11   602.3625 'B'     15300.006
+ 'ROOF'    3  12   661.4176 'B'     16800.006
+ 'ROOF'    3  13   720.4727 'B'     18300.006
+ 'ROOF'    3  14   779.5278 'B'     19800.008
+ 'ROOF'    3  15   838.5829 'B'     21300.006
+ 'ROOF'    3  16   897.6381 'B'     22800.006
+ 'ROOF'    3  17   956.6931 'B'     24300.004
+ 'ROOF'    3  18  1015.7482 'B'     25800.004
+ 'ROOF'    3  19  1074.8032 'B'     27300.002
+ 'ROOF'    3  20  1133.8584 'B'     28800.002
+ 'ROOF'    3  21  1192.9135 'B'     30300.000
+ 

@@ -1,0 +1,479 @@
+ 
+ 
+ 
+ 
+                          Sivoko Steel Structures Ltd.
+                                  Comm.7,Tema
+                              Ghana (West Africa)
+ 
+ 
+ 
+ 
+                                SHIPPING LIST
+                                      FOR
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                               Proposed Warehouse
+                               Proposed Warehouse
+ 
+                                    C163-027
+ 
+ 
+ 
+ 
+                                 BUILDING LAYOUT
+                        Width              (mm)=  12200
+                        Length             (mm)=  45730
+                        Eave Height        (mm)=   9600/  9600
+                        Roof Slope   (rise/100)= 10.00/10.00
+ 
+                                 BUILDING LOADS
+                        Roof Dead Load  (kN/m2)=  0.10
+                        Wall Dead Load
+                          Left  Endwall (kN/m2)=  0.10
+                          Right Endwall (kN/m2)=  0.10
+                          Front Sidewall(kN/m2)=  0.10
+                          Back  Sidewall(kN/m2)=  0.10
+                        Live Load       (kN/m2)=  0.57
+                        Collateral Load (kN/m2)=  0.05
+                        Wind Speed       (m/s )=  39.0
+                        Wind Code              = MBMA10
+                        Exposure               = B
+                        Closure                = Enclosed
+                        Internal Wind Coeff    = -0.18, +0.18
+                        Risk Category          = -
+                        Importance - Wind      =  1.00
+                        Importance - Seismic   =  1.00
+                        Seismic Design Category= B
+                        Seismic Coeff (Sms)    =  0.16
+                        Temperature Change     =   20
+                        -------------------------------
+                        Designer : VVJ
+                        Detailer :
+ 
+ 
+ 
+ 
+                                     19/JAN/2026
+
+===============================================================================
+ 
+  Sivoko Steel Structures Ltd.                                        19/JAN/2026
+  Comm.7,Tema
+  Ghana (West Africa)
+ 
+                              12200 x 45730 x 9600
+ 
+  111
+ 
+===============================================================================
+ 
+                 1. RIGID & ENDWALL FRAME MEMBERS
+ 
+Quan  Mark   Description   Size       Color                 Length       Weight
+===============================================================================
+   2   CL1-1    RF Column               RO                     9100         672.0
+   2   RF1-2    RF Rafter               RO                     5899         307.2
+   2   RF1-3    RF Rafter               RO                     5899         311.6
+   2   CL1-4    RF Column               RO                     9100         672.0
+   8   CL2-1    RF Column               RO                     9100        2509.6
+  10   RF2-2    RF Rafter               RO                     5899        1536.0
+   2   CL2-3    RF Column               RO                     9100         627.4
+   2  EB-1      Ext Beam                RO                     3036         169.8
+   2  EB-2      Ext Beam                RO                     3453         193.8
+   2  EB-3      Ext Beam    W30a178     RO                     7385         502.4
+   2  EC-1      EW Column   W35a125     RO                     9583         487.2
+-------------------------------------------------------------------------------
+                                                       Total =           7989.0
+ 
+    Colors:   RO  - Red Oxide
+ 
+ 
+
+================================================================================
+ 
+  Sivoko Steel Structures Ltd.                                        19/JAN/2026
+  Comm.7,Tema
+  Ghana (West Africa)
+ 
+                              12200 x 45730 x 9600
+ 
+  111
+ 
+================================================================================
+ 
+                 2. DOOR HEADERS / JAMBS
+ 
+Quan  Mark   Description   Size      Color     Punch      Length         Weight
+================================================================================
+   4  DJ-1     Door Jamb    200C25     RO                      5980          161.9
+   2  DH-1     Door Header  200C20     RO        ??-??         3980           43.1
+--------------------------------------------------------------------------------
+                                                       Total =             205.1
+ 
+    Colors:   RO  - Red Oxide
+ 
+    NOTE: ?? = non-standard punch
+ 
+
+====================================================================================
+ 
+  Sivoko Steel Structures Ltd.                                        19/JAN/2026
+  Comm.7,Tema
+  Ghana (West Africa)
+ 
+                              12200 x 45730 x 9600
+ 
+  111
+ 
+====================================================================================
+ 
+                 3. PURLINS, EAVE STRUTS, WALL GIRTS,
+ 
+Quan  Mark   Description   Size     Color   Punch     Pitch     Length        Weight
+====================================================================================
+   4  ST-1     Wall Strut   T100x40                                  7348        358.0
+  32   P-2     Roof Purlin  200Z18    RO       ??-??                 8280       1290.4
+                             Web :       45       325       425       705
+                                 :     1035      1335      6945      7245
+                                 :     7575      7855      7955      8235
+                             Slot:     2070      4140      6210
+   8   E-2     Eave Strut   200Z18    RO       ??-??                 8280        322.6
+                             Web :       45       325       425       705
+                                 :     7575      7855      7955      8235
+                             Slot:     2070      2257      4140      6022
+                                 :     6210
+   8   P-1     Roof Purlin  200Z18    RO       ??-??                 8175        318.5
+                             Web :      360       460       740      1070
+                                 :     1370      6840      7140      7470
+                                 :     7750      7850      8130
+                             Slot:     2044      4087      6131
+   8   P-3     Roof Purlin  200Z18    RO       ??-??                 8175        318.5
+                             Web :       45       325       425       705
+                                 :     1035      1335      6805      7105
+                                 :     7435      7715      7815
+                             Slot:     2044      4087      6131
+   2   E-1     Eave Strut   200Z18    RO       ??-??                 8175         79.6
+                             Web :      360       460      7470      7750
+                                 :     7850      8130
+                             Slot:     1946      2044      3897      4087
+                                 :     5849      6131
+   2   E-3     Eave Strut   200Z18    RO       ??-??                 8175         79.6
+                             Web :       45       325       425       705
+                                 :     7715      7815
+                             Slot:     2044      2326      4087      4277
+                                 :     6131      6229
+   4   P-4     Roof Purlin  200Z18    RO       ??-??                 6295        122.6
+                             Web :      195       475       575       855
+                                 :     1185      1485      5135      5435
+                                 :     5765      6045      6145
+                             Slot:     2098      4196
+  40   G-8     SW Girt      200Z15    RO       ??-??                 8280       1344.7
+                             Web :       45       325       425       705
+                                 :     1035      1335      6945      7245
+                                 :     7575      7855      7955      8235
+                             Slot:     2257      4140      6022
+  10   G-7     SW Girt      200Z15    RO       ??-??                 8175        331.9
+                             Web :      360       460       740      1070
+                                 :     1370      6840      7140      7470
+                                 :     7750      7850      8130
+                             Slot:     1946      3897      5849
+  10   G-9     SW Girt      200Z15    RO       ??-??                 8175        331.9
+                             Web :       45       325       425       705
+                                 :     1035      1335      6805      7105
+                                 :     7435      7715      7815
+                             Slot:     2326      4277      6229
+   4   G-1     EW Girt      200Z15    RO       ??-??                 6848        111.2
+                             Web :      170       270      4930      5230
+                                 :     5560      5840      5940      6220
+                                 :     6550      6803
+                             Slot:     1823      3856
+   2   E-4     Eave Strut   200Z15    RO       ??-??                 6300         51.2
+                             Web :      480       580      6050      6150
+                             Slot:     2100      4200
+   6   G-2     EW Girt      200Z15    RO       ??-??                 6265        152.6
+                             Web :      170       270      4930      5230
+                                 :     5560      5840      5940      6220
+                             Slot:     1823      3856
+   2   G-3     EW Girt      200Z15    RO       ??-??                 6265         50.9
+                             Web :       45       325       425       705
+                                 :     1035      1335      1385      5465
+                                 :     5995      6095
+                             Slot:     2408      4441
+   4   G-5     EW Girt      200Z15    RO       ??-??                 6265        101.7
+                             Web :       45       325       425       705
+                                 :     1035      1335      5995      6095
+                             Slot:     2408      4441
+   2   G-4     EW Girt      200Z15    RO       ??-??                 6190         50.3
+                             Web :       45       145       425       755
+                                 :     1055      5715      5815
+                             Slot:     2128      4161
+   4   G-6     EW Girt      200Z15    RO       ??-??                  748         12.1
+                             Web :       45       478       578
+------------------------------------------------------------------------------------
+                                                           Total =            5428.3
+ 
+ 
+    Colors:   RO  - Red Oxide
+ 
+    NOTE: ?? = non-standard punch
+ 
+
+================================================================================
+ 
+  Sivoko Steel Structures Ltd.                                        19/JAN/2026
+  Comm.7,Tema
+  Ghana (West Africa)
+ 
+                              12200 x 45730 x 9600
+ 
+  111
+ 
+================================================================================
+ 
+                 4. ROOF & WALL SHEETING
+ 
+Quan  Mark     Description    Part            Color          Length       Weight
+================================================================================
+ 
+  92  SS-1       SW Sheet       40333 .5         A2             6700       2656.7
+  14  RS-2       Ext Sheet      40333 .5         A3             3060        184.6
+  92  RS-1       Roof Sheet     40333 .5         A3             6280       2490.1
+   2  ES-9       EW Sheet       40333 .5         A2             3940         34.0
+   6  ES-8       EW Sheet       40333 .5         A2             3200         82.7
+   2  ES-7       EW Sheet       40333 .5         A2             7260         62.6
+   2  ES-6       EW Sheet       40333 .5         A2             7190         62.0
+   2  ES-5       EW Sheet       40333 .5         A2             7090         61.1
+   2  ES-4       EW Sheet       40333 .5         A2             6990         60.3
+   2  ES-3       EW Sheet       40333 .5         A2             6890         59.4
+   2  ES-2       EW Sheet       40333 .5         A2             6790         58.5
+   2  ES-15      EW Sheet       40333 .5         A2             3440         29.7
+   2  ES-14      EW Sheet       40333 .5         A2             3540         30.5
+   2  ES-13      EW Sheet       40333 .5         A2             3640         31.4
+   2  ES-12      EW Sheet       40333 .5         A2             3740         32.2
+   2  ES-11      EW Sheet       40333 .5         A2             3840         33.1
+   6  ES-10      EW Sheet       40333 .5         A2             1090         28.2
+   2  ES-1       EW Sheet       40333 .5         A2             6700         57.8
+ 
+--------------------------------------------------------------------------------
+                                                        Total =          6054.8
+ 
+    Colors:   A2  - NEED WALL COLOR
+              A3  - NEED ROOF COLOR
+ 
+ 
+
+===============================================================================
+ 
+  Sivoko Steel Structures Ltd.                                        19/JAN/2026
+  Comm.7,Tema
+  Ghana (West Africa)
+ 
+                              12200 x 45730 x 9600
+ 
+  111
+ 
+===============================================================================
+ 
+                 5. CONNECTION PLATES / FLANGE BRACES
+ 
+Quan  Mark   Description    Part   Type  Ang   Thick   Width    Length   Weight
+===============================================================================
+   8   b1      Grt-Jmb Plt            b1    90     5.0   14      203          9.2
+   4   c1      Hdr-Jmb Plt            c1    90     5.0   14      126          2.9
+   2   d1      Cor-Grt6 Plt           d1    90     5.0   14      431          4.9
+   4   f1      Jmb-Bas Plt            f1    90     5.0   14      155          3.5
+   4   j1      Jmb-Grt Plt            j1    90     5.0   14      206          4.7
+-------------------------------------------------------------------------------
+                                                       Total =             25.2
+ 
+ 
+
+========================================================================================
+ 
+  Sivoko Steel Structures Ltd.                                        19/JAN/2026
+  Comm.7,Tema
+  Ghana (West Africa)
+ 
+                              12200 x 45730 x 9600
+ 
+  111
+ 
+========================================================================================
+ 
+                 6. ANGLES
+ 
+Quan  Mark     Description         Part   Color   Width   Thick    Length       Weight
+========================================================================================
+  24  FB432      RF Flg Brc          L40X40X4 RO      40      4.0        432          25.1
+  24  FB448      RF Flg Brc          L40X40X4 RO      40      4.0        448          26.0
+  24  FB488      RF Flg Brc          L40X40X4 RO      40      4.0        488          28.3
+   4  FB496      Ext Flg Br          L40X40X4 RO      40      4.0        496           4.8
+   8  FB528      EW Flg Brc          L40X40X4 RO      40      4.0        528          10.2
+  48  FB568      RF Flg Brc          L40X40X4 RO      40      4.0        568          66.0
+   4  FB608      Ext Flg Br          L40X40X4 RO      40      4.0        608           5.9
+ 120  JB-1       Sag rod at base     SROD12                             1600         207.4
+  44  JB-2       Sag rod at base     SROD12                             1500          71.3
+   4  JB-3       Sag rod at base     SROD12                              170           0.7
+   4  JB-4       Sag rod at base     SROD12                             1531           6.6
+  36  JB-5       Sag rod at girt     SROD12                              520          20.2
+  13  GA         GABLE ANGLE         L75X100  RO     175     2.00       3000         122.5
+   8  SI-        12mm SAG ROD        SROD12           12     12.0       1387           5.4
+  18  SP-1       12mm SAG ROD        SROD12           12     12.0        697           6.1
+ 108  SI-1       12mm SAG ROD        SROD12           12     12.0       1557          81.9
+   4  SI-2       12mm SAG ROD        SROD12           12     12.0       1457           2.8
+  36  SE-1       12mm SAG ROD        SROD12           12     12.0       1478          25.9
+----------------------------------------------------------------------------------------
+                                                                 Total =           717.2
+ 
+    Colors:   RO  - Red Oxide
+ 
+ 
+
+===================================================================================
+ 
+  Sivoko Steel Structures Ltd.                                        19/JAN/2026
+  Comm.7,Tema
+  Ghana (West Africa)
+ 
+                              12200 x 45730 x 9600
+ 
+  111
+ 
+===================================================================================
+ 
+                 7. TRIM
+                                                      Blank
+Quan  Mark      Description              Clr  Pitch   Width       Length     Weight
+===================================================================================
+   2  SGA-001   Base Angle               HA    10.0     200       3000        56.5
+  22  DT-01     Base Trim                HA             300       5600       122.8
+   2  P20204    Base/Seal An             HA    10.0      50         25       0.120
+   2  DS-100    Downspout                EX             500       5600        17.6
+  20  DS-100    Downspout                               500       5600       175.8
+   4  GS-01     Downspout Strap          EX              50        350         6.0
+  40  GS-01     Downspout Strap                          50        350        60.0
+   2  P150X.63  Drip Trim                HA    10.0     215         25       0.042
+  18  EG-01     Eave Gutter                             600       5600       189.9
+   1  GS-01     Eave Gutter Strap                        50        600         1.0
+   4  ET-01     Eave Trim                HA    10.0     300       5600        21.1
+   2  GC-01     Gutter Endcap                           200         25         1.0
+   2  GC-02     Gutter Endcap                           200         25         1.0
+   2  CTS-04    H Trim                   HA             400       5600        14.1
+   4  CTS-05    J Trim                   HA             400       5600        28.1
+   8  CT-02     Outside Corner           HA             300       5600        42.2
+  10  GT-01     Rake Trim                HA             300       5600        52.8
+  77  RC-01     Ridge Cap                A3             710        700       385.0
+   4  CT-05     Roof To Wall             A3             300       5600        21.1
+ 
+-----------------------------------------------------------------------------------
+                                                           Total =          1196.2
+ 
+    Colors:   A3  - NEED ROOF COLOR
+              EX  - 7006 BEIGE GREY
+              HA  - 9010 PURE WHITE
+ 
+ 
+
+=================================================================================
+ 
+  Sivoko Steel Structures Ltd.                                        19/JAN/2026
+  Comm.7,Tema
+  Ghana (West Africa)
+ 
+                              12200 x 45730 x 9600
+ 
+  111
+ 
+=================================================================================
+ 
+                 8. CABLES & SEALANT
+                                                    Length
+Quan  Mark     Description           Part        Fab          Cut          Weight
+=================================================================================
+   8  CB-1       SW Rod               ROD20         8910           8660       171.2
+   8  CB-2       SW Rod               ROD20         8700           8450       166.4
+   8  CB-3       Roof Rod             ROD20         9470           9220       181.6
+   4  CB-4       Ext Rod              ROD20         6380           6130        60.4
+  11  SSEAL      Silicone Tube Seal   SILICON          6           7500        11.0
+ 216  FF100      Panel Clsr  (IN)     FF-100          25           1020       216.0
+ 126  FF200      Panel Clsr  (OUT)    FF-200          25           1020       126.0
+---------------------------------------------------------------------------------
+                                                       Total =              932.7
+ 
+ 
+
+================================================================================
+ 
+  Sivoko Steel Structures Ltd.                                        19/JAN/2026
+  Comm.7,Tema
+  Ghana (West Africa)
+ 
+                              12200 x 45730 x 9600
+ 
+  111
+ 
+===============================================================================
+ 
+                 9. ACCESSORIES
+ 
+Quan  Mark   Description          Part        Clr  Pitch     Length      Weight
+===============================================================================
+  56  ---      NUT 20               HN20                          1.0         2.8
+  56  ---      HILLSIDE WASHER20    HW20                          1.0        19.8
+  56  ---      FLAT WASHER20        Ø20WSHR                      1.0         1.9
+ 
+-------------------------------------------------------------------------------
+                                                       Total =             24.5
+ 
+ 
+
+===============================================================================
+ 
+  Sivoko Steel Structures Ltd.                                        19/JAN/2026
+  Comm.7,Tema
+  Ghana (West Africa)
+ 
+                              12200 x 45730 x 9600
+ 
+  111
+ 
+===============================================================================
+ 
+                10. FASTENERS
+ 
+Quan  Mark    Description         Part     Clr  Type     Dia    Length   Weight
+===============================================================================
+ 112  ------    A.B. Washers        W24           A36    24.0                 3.0
+   8  ------    A.B. Washers        W20           A36    20.0               0.127
+ 100  Rivet     Pop Rivet           Rivet     HA                     11       0.7
+ 200  Rivet     Pop Rivet           Rivet                            11       1.4
+ 100  Rivet     Pop Rivet           Rivet     EX                     11       0.7
+ 500  Rivet     Pop Rivet           Rivet     A3                     11       3.4
+   4  ------    Bolts               M16X70        Gr8.8  16.0        70     0.225
+1034  ------    Bolts               M12X50        Gr8.8  12.0        50      54.6
+ 227  ------    Bolts               H20X90        Gr8.8  20.0        90      76.5
+  21  ------    Bolts               H16X70        Gr8.8  16.0        70       2.8
+ 599  ------    Bolts               H12X50        Gr8.8  12.0        50      30.7
+ 112  ------    Anchor Bolt         AB24          A36    24.0       730     343.8
+   8  ------    Anchor Bolt         AB20          A36    20.0       625      13.5
+2300  ------    No. 12-14x55 SDS    14x55SDS  A3                     55      15.7
+3600  ------    No. 12-14x20 SDS    14x20SDS  A2                     20      24.5
+ 400  ------    No. 10-12X20 SDS    12x20SDS  HA                     20       2.7
+ 800  ------    No. 10-12x20 SDS    12x20SDS  HA                     20       5.4
+ 400  ------    No. 10-12X20 SDS    12x20SDS                         20       2.7
+2100  ------    No. 10-12X20 SDS    12x20SDS  A3                     20      14.3
+1700  ------    No. 10-12x20 SDS    12x20SDS  A2                     20      11.6
+ 
+-------------------------------------------------------------------------------
+                                                        Total =           608.4
+ 
+    Colors:   A2  - NEED WALL COLOR
+              A3  - NEED ROOF COLOR
+              EX  - 7006 BEIGE GREY
+              HA  - 9010 PURE WHITE

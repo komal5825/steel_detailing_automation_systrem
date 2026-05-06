@@ -62,11 +62,13 @@ def _run_ingestion(project_id: UUID, db: Session) -> dict:
     normalized_fields = 0
     field_dictionary = get_field_dictionary()
 
+    all_parser_results = {}
     for project_file in files:
         parser_class = PARSER_BY_FILE_TYPE[project_file.file_type]
         parser = parser_class()
         try:
             result = parser.parse(project_file.stored_path)
+            all_parser_results[project_file.id] = result
             fields = [field_dictionary.normalize_field(field) for field in result["fields"]]
             normalized_fields += sum(
                 1
@@ -183,8 +185,10 @@ def _run_ingestion(project_id: UUID, db: Session) -> dict:
             if governing_file
             else None
         ),
-        "selection_method": "HIGHEST_CONFIDENCE_WITH_SOURCE_PRIORITY",
+        "selection_method": "SINGLE_FILE" if len(candidates) == 1 else "HIGHEST_CONFIDENCE_WITH_SOURCE_PRIORITY",
         "rationale": (
+            f"Only one parseable file found: '{governing_file.original_filename}'"
+            if len(candidates) == 1 else
             f"Selected '{governing_file.original_filename}' "
             f"(type={governing_file.file_type}, "
             f"confidence={governing_file.classification_confidence})"
@@ -209,6 +213,13 @@ def _run_ingestion(project_id: UUID, db: Session) -> dict:
     }
     write_processed_json(project_id, "governing_source.json", governing_payload)
 
+    governing_details = {}
+    if governing_file and governing_file.id in all_parser_results:
+        res = all_parser_results[governing_file.id]
+        for f in res.get("fields", []):
+            if f["field_name"] in ["node_count", "member_count", "support_count", "job_date", "unit_system"]:
+                governing_details[f["field_name"]] = f["raw_value"]
+
     result = {
         "status": "success" if failed_files == 0 else "partial_success",
         "project_id": str(project_id),
@@ -218,7 +229,10 @@ def _run_ingestion(project_id: UUID, db: Session) -> dict:
         "extracted_fields": extracted_fields,
         "normalized_fields": normalized_fields,
         "governing_file": governing_payload["governing_file"],
+        "governing_details": governing_details,
+        "main_output": "reports/p2-01_summary.json",
     }
+    write_processed_json(project_id, "p2-01_summary.json", result)
     update_stage_result(
         db,
         project_id=project_id,

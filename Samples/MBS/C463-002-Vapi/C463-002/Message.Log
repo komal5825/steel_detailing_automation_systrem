@@ -1,0 +1,43 @@
+12/17/2025|03:13:36:759 PM|Warnings Exist in Rigid Frames|Ignore Warnings?|*WRN(RG-006) Rigid Frame 2 load width of 817.0000 < 8177.5000
+<NL>
+12/17/2025|03:13:43:961 PM|Warnings Exist in Rigid Frames|Ignore Warnings?|*WRN(RG-006) Rigid Frame 3 load width of 817.0000 < 7462.5000
+<NL>
+12/17/2025|03:13:52:133 PM|Warnings Exist in Rigid Frames|Ignore Warnings?|*WRN(RG-005) Rigid Frame 4: Frame load width is less than avg adj bayspacing + Offset. Frame load width should be >= 3715.0000
+<NL>
+12/17/2025|03:13:59:555 PM|Warnings Exist in Rigid Frames|Ignore Warnings?|*WRN(RG-006) Rigid Frame 4 load width of 0.0000 < 6682.5000
+<NL>
+12/17/2025|03:39:27:456 PM|RoofDes.err||================================================================================
+<NL> C463-002            Program Warning Summary                17/DEC/2025  3:39pm
+<NL>================================================================================
+<NL>
+<NL> ROOF DESIGN
+<NL> -----------
+<NL>     WIND BENT
+<NL>       Member
+<NL>        *WRN(WBM-413): Weld Size < Required
+<NL>
+12/17/2025|04:20:24:649 PM|WARNING: Running C:\MBS\EXE2\XDtDwg.exe||
+<NL>  PROGRAM DETAILS:
+<NL>     *WRN(DT-130 ): Detail block not found - C72
+<NL>
+12/17/2025|04:26:49:728 PM|WARNING: Running C:\MBS\EXE2\XDtDwg.exe||
+<NL>  PROGRAM DETAILS:
+<NL>     *WRN(DT-130 ): Detail block not found - C72
+<NL>
+12/18/2025|10:09:17:931 AM|WARNING: Running C:\MBS\EXE2\XDtDwg.exe||
+<NL>  PROGRAM DETAILS:
+<NL>     *WRN(DT-130 ): Detail block not found - C72
+<NL>
+12/18/2025|10:25:32:902 AM|WARNING: Running C:\MBS\EXE2\XDtDwg.exe||
+<NL>  PROGRAM DETAILS:
+<NL>     *WRN(DT-130 ): Detail block not found - C72
+<NL>
+12/18/2025|12:09:37:777 PM|WARNING: Running C:\MBS\EXE2\XDtDwg.exe||
+<NL>  PROGRAM DETAILS:
+<NL>     *WRN(DT-130 ): Detail block not found - C72
+<NL>
+12/18/2025|02:52:19:531 PM|WARNING: Running C:\MBS\EXE2\XDtDwg.exe||
+<NL>  PROGRAM DETAILS:
+<NL>     *WRN(DT-130 ): Detail block not found - C72
+<NL>
+12/18/2025|03:40:13:276 PM|DT_MEMBR.err||================================================================================<NL> C463-002            Program Warning Summary                18/DEC/2025  3:40pm<NL>================================================================================<NL><NL> DT_MEMBR<NL> --------<NL>   INPUT<NL>   -----<NL>     DT_MEMBR<NL>       DS_RCOL.SIZ<NL>        *WRN(DB-155) : DT_Membr Record Not Found<NL>           MB100                                             <NL>           MB125                                             <NL>           MB150                                             <NL>           MB175                                             <NL>       DS_UCOL.SIZ<NL>        *WRN(DB-155) : DT_Membr Record Not Found<NL>           ISMC150                                           <NL>       DS_UJAMB.SIZ<NL>        *WRN(DB-155) : DT_Membr Record Not Found<NL>           ISMC150                                           <NL>       DS_UGIRT.SIZ<NL>        *WRN(DB-155) : DT_Membr Record Not Found<NL>           ISMC150                                           <NL>       DS_TFRM.SIZ<NL>        *WRN(DB-155) : DT_Membr Record Not Found<NL>           T25x20                                            <NL>           T25x26                                            <NL>           T32x20                                            <NL>           T25x32                                            <NL>           T32x26                                            <NL>           T32x32                                            <NL>           T38x26                                            <NL>           T40x26                                            <NL>           T38x32                                            <NL>           T40x32                                            <NL>           T50x26                                            <NL>           T38x40                                            <NL>           T50x29                                            <NL>           T40x40                                            <NL>           T60x26                                            <NL>           T50x36                                            <NL>           T60x32                                            <NL>           T50x45                                            <NL>           T72x32                                            <NL>           T60x40                                            <NL>           T60x48                                            <NL>           T72x40                                            <NL>           T72x48                                            <NL>           T92x36                                            <NL>           T92x45                                            <NL>           T125x32                                           <NL>           T92x54                                            <NL>           T114x48                                           <NL>           T114x54                                           <NL>           T132x48                                           <NL>           T132x54                                           <NL>           T220x60                                           <NL>           T220x80                                           <NL>           T220x100                                          <NL>           T220x120                                          <NL>       DS_CRNBM.SIZ<NL>        *WRN(DB-155) : DT_Membr Record Not Found<NL>           60WC2512                                          <NL>           70WC2814                                          <NL>           85WE316                                           <NL>           95WC2816                                          <NL>           95WG2716                                          <NL>           80WG2716                                          <NL>           60WC2614                                          <NL>           70wc208                                           <NL>           70wd186                                           <NL>           65wd188                                           <NL>           70wd1710                                          <NL>           70wc2010                                          <NL>           60wc2512                                          <NL>           70WD208                                           <NL>           ISWB300                                           <NL>           ISLB350                                           <NL>           ISMB350                                           <NL>           ISLB400                                           <NL>           ISWB350                                           <NL>           ISMB400                                           <NL>           ISLB450                                           <NL>           ISWB400                                           <NL>           ISMB450                                           <NL>           ISLB500                                           <NL>           ISWB450                                           <NL>           ISLB550                                           <NL>           ISMB500                                           <NL>           ISWB500                                           <NL>           ISLB600                                           <NL>           ISMB550                                           <NL>           ISWB550                                           <NL>           ISMB600                                           <NL>           ISWB600b                                          <NL>

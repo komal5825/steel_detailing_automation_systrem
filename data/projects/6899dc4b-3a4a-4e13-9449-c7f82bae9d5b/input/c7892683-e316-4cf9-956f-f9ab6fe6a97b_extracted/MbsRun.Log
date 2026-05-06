@@ -1,0 +1,173 @@
+23-04-2026 03:03:44 PM    Message.out
+    ================================================================================
+     C08-033-20180720-Ja Design Warning Summary                 23/APR/2026  3:03pm
+    ================================================================================
+     
+     LEFT ENDWALL
+     ------------
+         No Warnings!
+     
+     RIGHT ENDWALL
+     -------------
+         No Warnings!
+     
+     FRONT SIDEWALL
+     --------------
+         No Warnings!
+     
+     BACK SIDEWALL
+     -------------
+         No Warnings!
+     
+     ROOF
+     ----
+         No Warnings!
+     
+     EXTENSIONS
+     ----------
+         No Warnings!
+     
+     RIGID FRAME #1
+     --------------
+         FRAME RAFTER
+           End Plate
+             WRN(RFE-413): Weld Size < Required
+     
+     RIGID FRAME #2
+     --------------
+         FRAME RAFTER
+           End Plate
+             WRN(RFE-413): Weld Size < Required
+     
+         INTERIOR COLUMN
+           Member
+             WRN(CIM-204): Axial + Moment > Limit
+               1.11
+23-04-2026 03:04:35 PM    Message.out
+    ================================================================================
+     C08-033-20180720-Ja Detail Warning Summary                 23/APR/2026  3:04pm
+    ================================================================================
+     
+     ENDWALL
+     -------
+         No Warnings!
+     
+     EXTENSIONS
+     ----------
+         No Warnings!
+     
+     RIGID FRAME #1
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #2
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     WIND FRAMING
+     ------------
+         No Warnings!
+     
+     BOM
+     ---
+         COST
+           BOM
+             WRN(CST-01) : Incomplete cost information!
+                 ------(150Z20  )
+                 ------(150Z18  )
+                 ------(150Z15  )
+                 ------(AB16    )
+23-04-2026 03:18:44 PM    Message.out
+    ================================================================================
+     C08-033             Design Warning Summary                 23/APR/2026  3:18pm
+    ================================================================================
+     
+     LEFT ENDWALL
+     ------------
+         No Warnings!
+     
+     RIGHT ENDWALL
+     -------------
+         No Warnings!
+     
+     FRONT SIDEWALL
+     --------------
+         No Warnings!
+     
+     BACK SIDEWALL
+     -------------
+         No Warnings!
+     
+     ROOF
+     ----
+         No Warnings!
+     
+     EXTENSIONS
+     ----------
+         No Warnings!
+     
+     RIGID FRAME #1
+     --------------
+         FRAME RAFTER
+           End Plate
+             WRN(RFE-413): Weld Size < Required
+     
+     RIGID FRAME #2
+     --------------
+         FRAME RAFTER
+           End Plate
+             WRN(RFE-413): Weld Size < Required
+     
+         INTERIOR COLUMN
+           Member
+             WRN(CIM-204): Axial + Moment > Limit
+               1.11
+23-04-2026 03:19:29 PM    Message.out
+    ================================================================================
+     C08-033             Detail Warning Summary                 23/APR/2026  3:19pm
+    ================================================================================
+     
+     ENDWALL
+     -------
+         No Warnings!
+     
+     EXTENSIONS
+     ----------
+         No Warnings!
+     
+     RIGID FRAME #1
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     RIGID FRAME #2
+     --------------
+         CONFLICT
+           SPLICE
+             WRN(RFD-001): Purlin\Girt Near Splice
+     
+     WIND FRAMING
+     ------------
+         No Warnings!
+     
+     BOM
+     ---
+       INPUT
+       -----
+             WRN(AB-105) : No anchor bolt record for diameter
+               16.00
+     
+       OUTPUT
+       ------
+         COST
+           BOM
+             WRN(CST-01) : Incomplete cost information!
+                 ------(150Z20  )
+                 ------(150Z18  )
+                 ------(150Z15  )
+                 ------(AB16    )

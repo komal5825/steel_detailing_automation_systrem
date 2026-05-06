@@ -51,8 +51,8 @@ export default function Sidebar() {
           <Zap size={14} className="text-white" />
         </div>
         <div>
-          <div className="text-xs font-bold leading-tight tracking-wide text-white">INFINITI STEEL</div>
-          <div className="text-xxs leading-tight text-blue-200">PEB AGENT SYSTEM</div>
+          <div className="text-xs font-bold leading-tight tracking-wide text-white">INFINITI SOLUTIONS</div>
+          <div className="text-xxs leading-tight text-blue-200">STEEL DETAILING AUTOMATION SYSTEM</div>
         </div>
       </div>
 
@@ -72,11 +72,11 @@ export default function Sidebar() {
       <div className="border-t border-white/10 px-4 py-3">
         <div className="flex items-center gap-2">
           <div className="flex h-7 w-7 items-center justify-center rounded-full bg-blue-700 text-xxs font-bold text-white">
-            RM
+            KS
           </div>
           <div>
-            <div className="text-xs font-semibold leading-tight text-white">R. Mahesh</div>
-            <div className="text-xxs leading-tight text-blue-200">Lead Engineer</div>
+            <div className="text-xs font-semibold leading-tight text-white">Komal S</div>
+            <div className="text-xxs leading-tight text-blue-200">It Team</div>
           </div>
         </div>
       </div>

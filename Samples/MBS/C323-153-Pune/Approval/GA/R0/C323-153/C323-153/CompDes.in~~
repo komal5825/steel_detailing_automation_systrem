@@ -1,0 +1,7 @@
+*(17)EXTENSION BEAMS:
+*     Ext Line                                                   Load  ------Depth------ Splice_Type
+*No.   Id  Id   Use       Orn   Part       Type Shape Rot Opt    Width Set   Min    Max  Start   End Bracket
+   3    1   1  'ATTACH  ' 'H'  '--------'  'S'   'H'  '-' '-'   5617.5 'N' 200.00   0.00  'SS'  '--'   'N'
+        1   1  'ATT_SUPP' 'H'  'W30b155'  'W'   'H'  '-' '-'   5617.5 'N' 200.00   0.00  'SS'  'S3'   'N'
+        1   2  'ATTACH  ' 'H'  '--------'  'S'   'H'  '-' '-'   5617.5 'N' 200.00   0.00  'SS'  '--'   'Y'
+

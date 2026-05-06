@@ -1,0 +1,36 @@
+*DRAWING: RIGID FRAME STIFFENER PLATES  CELL:RF_STF
+*
+*( 1)DRAWING:
+*  Name          Title             Orient
+  'ST3'        'RIGID FRAME STIFFENER PLATES'  'R'
+
+*( 2)PLATE SIZES:
+*No. Type    Id     Qty   Part           Width   Thick    Length    Offset  Weight Opt
+  1   'ST'    3     12   'ST3'            60.000   8.000   360.000     0.00      1.4 '-'
+
+*( 3)PLATE COORDINATES:
+*  No.
+* Coord  X-Coord  Y-Coord
+     0
+
+*( 4)HOLE LOCATION:
+*  No.   Hole  Hole   Hole    Hole    Hole    Hole   Hole  No.  Location
+* Holes  Type   Id    Dia     Slot    Off     Gage   Ang   Loc          
+    0
+
+*( 5)PLATE CUTS:
+* No.  Plate  Plate  Cut  Cut     Cut      Cut
+* Cut  Type     Id   Loc  Type  Width   Length
+    1  'ST'      3    4   'C'  15.000   15.000
+     
+
+*( 6)PLATE MEMBER:
+*No.   Plate        Member
+  6   'ST3     '   'RF1-2       '
+      'ST3     '   'RF1-3       '
+      'ST3     '   'RF4-2       '
+      'ST3     '   'RF4-3       '
+      'ST3     '   'RF5-2       '
+      'ST3     '   'RF5-3       '
+
+   

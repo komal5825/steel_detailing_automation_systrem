@@ -4,7 +4,11 @@ from uuid import UUID
 
 from sqlalchemy.orm import Session
 
-from app.agents.phase2.output_utils import load_project_field_map, write_json_output
+from app.agents.phase2.output_utils import (
+    load_project_field_map,
+    write_json_output,
+    write_processed_json,
+)
 from app.db.crud.stages import update_stage_result
 from app.db.models import StageStatus
 from app.db.session import SessionLocal
@@ -44,7 +48,9 @@ def _generate_ga(project_id: UUID, db: Session) -> dict:
         "general_arrangement_fields": {code: fields.get(code) for code in GA_FIELD_CODES if fields.get(code) is not None},
         "source_field_count": len(fields),
         "status": "draft_generated",
+        "main_output": "reports/p2-04_summary.json",
     }
+    write_processed_json(project_id, "p2-04_summary.json", payload)
     output_path = write_json_output(project_id, "ga", "general_arrangement.json", payload)
     result = {**payload, "output_path": str(output_path)}
     update_stage_result(db, project_id=project_id, stage_code="P2-04", status=StageStatus.PASSED, result=result)

@@ -1,0 +1,44 @@
+================================================================================
+ C08-033             Design Warning Summary                 23/APR/2026  3:18pm
+================================================================================
+
+ LEFT ENDWALL
+ ------------
+     No Warnings!
+
+ RIGHT ENDWALL
+ -------------
+     No Warnings!
+
+ FRONT SIDEWALL
+ --------------
+     No Warnings!
+
+ BACK SIDEWALL
+ -------------
+     No Warnings!
+
+ ROOF
+ ----
+     No Warnings!
+
+ EXTENSIONS
+ ----------
+     No Warnings!
+
+ RIGID FRAME #1
+ --------------
+     FRAME RAFTER
+       End Plate
+         WRN(RFE-413): Weld Size < Required
+
+ RIGID FRAME #2
+ --------------
+     FRAME RAFTER
+       End Plate
+         WRN(RFE-413): Weld Size < Required
+ 
+     INTERIOR COLUMN
+       Member
+         WRN(CIM-204): Axial + Moment > Limit
+           1.11                                              

@@ -1,0 +1,380 @@
+*===============================================================================
+*C463-002            Rigid Frame Drawing Input              18/DEC/2025  2:52pm
+*===============================================================================
+
+*( 1)TITLE BLOCK:
+  'INFINITI SOLUTIONS                      '    .. Manufacturer
+  '                                        '    .. Builder
+  'Proposed Warehouse                      '    .. Project
+  'Warehouse                               '    .. Project Address
+  'Vapi                                    '    .. Project Address
+  'C463-002                                '    .. Project ID
+
+*( 2)DRAWING SIZE FACTORS:
+*   Drawing_Size    ----Object_Offset----  ---------Scale_Factor------------
+*  Width  Height      Lt   Rt   Top   Bot   Text  Table   Dim   Build  Title
+   420.0   297.0    15.0 15.0  10.0  40.0   0.55   0.55  0.55 -1.0000  0.700
+
+*( 3)DRAWING OPTIONS:
+*Content  Splice   Show   Member  Bolt   General             Page_Number
+*Option   Break   Detail  Table   Table   Notes   Logo       Id    Total
+  'FS'      2      'Y'     'Y'     'Y'    'N '   'N       ' '----' '----'
+
+*( 4)FRAME LAYOUT:
+* --Frame--  Line    L_Col_Line     R_Col_Line
+* Id  Type    Id    Id    Offset   Id    Offset
+   1  'RF-'    1   'C   ' 230.00  'A   ' 230.00 
+
+*( 5)BUILDING LAYOUT:
+*                           Floor     Wall
+* Type    Width    Length     Ref   Length
+ 'FF-'  12800.0   30500.0    0.00  12800.0
+
+*( 6)SURFACE SHAPE:
+*No.   X_Coord   Y_Coord   Offset
+  4        0.0    9100.0   230.00
+        6400.0    9740.0   200.00
+       12800.0    9100.0   200.00
+       12800.0       0.0   230.00
+
+*( 7)MEMBER DEPTHS:
+* Surf   Depth   Depth  No.  Interior_Depths
+*  Id    Start     End  Dep   Locate   Depth
+    1   400.00  400.00   0
+    2   400.00  300.00   0
+    3   300.00  400.00   0
+    4   400.00  400.00   0
+
+*( 8)SEGMENT PLATES:
+*    Surf Mem Seg      Seg   Member    Flange   ---Plate_Thickness---
+*No.  Id   Id  Id   Length   Part       Width     Web  OS_Flg  IS_Flg
+   4   1    1   1        0  '--------'  150.0    5.00    6.00    8.00
+       2    2   2        0  '--------'  125.0    4.00    5.00    5.00
+       3    3   3        0  '--------'  125.0    4.00    5.00    5.00
+       4    4   4        0  '--------'  150.0    5.00    6.00    8.00
+
+*( 9)SPLICES:
+*Surf No. -----Splice-----  ----Plate_Size---- -------------Splice_Bolts--------------
+* Id  Spl Id     Loc  Type  Width Thick Length Quan Row  Type     Dia  Gage Space   Len
+   1   0
+   2   1   1       0 'HSS'  200.0 16.00 600.00   4   2  'Gr8.8' 20.00 100.0 100.0  90.0
+                                                 4   2  'Gr8.8' 20.00 100.0 100.0  90.0
+   3   1   2       0 '-SS'  200.0 16.00 501.20   4   2  'Gr8.8' 20.00 100.0 100.0  90.0
+                                                 4   2  'Gr8.8' 20.00 100.0 100.0  90.0
+   4   1   3       0 'HSS'  200.0 16.00 600.00   4   2  'Gr8.8' 20.00 100.0 100.0  90.0
+                                                 4   2  'Gr8.8' 20.00 100.0 100.0  90.0
+
+*(10)INTERIOR COLUMNS:
+*    Col Col   Col        Col      Col  Cap     Cap    Cap     Cap  ---------Cap_Bolts--------
+*No.  Id Type  Part       Rot      Loc  Type  Width  Thick  Length  Quan   Type    Dia   Gage    Len
+  0
+
+*(11)TAPERED INTERIOR COLUMNS:
+*Col   Col   No.    Start   Depth   Depth    Web    Flange  OS_Flg  IS_Flg
+* Id  Shape  Mem   Locate   Start    End    Thick   Width    Thick   Thick
+
+*(12)BASE PLATE:
+*-------------Base_Plate-------------  -----Bolts-----          --Stiffener-
+*Type  Width   Length   Thick   Elev   Type     Dia Row  Gage   Width  Thick
+ 'FI'  250.0   707.00   16.00   0.00  'A36  ' 24.00  2 100.00    60.0   8.00    
+ 'FI'  250.0   707.00   16.00   0.00  'A36  ' 24.00  2 100.00    60.0   8.00    
+
+*(13)PURLIN LAYOUT:
+* Surf  Purlin  Purlin   Purlin  Purlin  Purlin
+*  Id    Type   Offset  Project   Depth   Width
+    2    'ZB'     0.00     0.00  200.00    0.00
+    3    'ZB'     0.00     0.00  200.00    0.00
+
+*(14)PURLIN LOCATION:
+*Surf    Peak
+* Id    Space  Row  Locate
+   2    300.0    4  1334.9   2933.9   4532.9   6131.9
+   3    300.0    4   300.0   1899.0   3498.0   5097.0
+
+*(15)EAVE STRUTS:
+*Wall        Flg  Web
+* Id   Type  Rot  Orn  Offset   Part
+   2   'ZB'  'O'  'P'   80.00  '200Z25  '
+   4   'ZB'  'O'  'P'   80.00  '200Z25  '
+
+*(16)SIDEWALL GIRTS:
+*Surf  Girt    Girt    Girt   Girt Bay  No.
+* Id   Type  Offset Project  Depth  Id Girt  Locate  Type  Rot  Opt   Depth
+   1   'ZB'    0.00  230.00 200.00   4   5   3080.0  'ZB'  'D'  '-'  200.00
+                                             4280.0  'ZB'  'D'  '-'  200.00
+                                             5780.0  'ZB'  'D'  '-'  200.00
+                                             7280.0  'ZB'  'D'  '-'  200.00
+                                             8280.0  'ZB'  'D'  '-'  200.00
+
+   4   'ZB'    0.00  230.00 200.00   1   5   3080.0  'ZB'  'D'  '-'  200.00
+                                             4280.0  'ZB'  'D'  '-'  200.00
+                                             5780.0  'ZB'  'D'  '-'  200.00
+                                             7280.0  'ZB'  'D'  '-'  200.00
+                                             8280.0  'ZB'  'D'  '-'  200.00
+
+
+*(17)PARTIAL WALL:
+* Surf       Base  Top
+*  Id   Use  Type  Type   Height
+    1   'P'  '-'   '-'    3000.0
+    4   'P'  '-'   '-'    3000.0
+
+*(18)WALL/ROOF STRUTS:
+*      Strut   Location    Bay   Attach  Option  Strut
+* No.   Id     Use   Id     Id   Locate    Id     Type   Rot  Mount
+   2     1     'W'    2      1   7430.0     4     'T'    'N'   '-'
+         2     'W'    4      4   7430.0     4     'T'    'N'   '-'
+
+*(19)EXTENSION LAYOUT:
+*         Wall                    --Bay_Id-   -Edge_Extend-   Clear Concrete
+*No.  Id   Id   Type  Opt  Mount  Start End    Left   Right    Vert    Elev
+  0
+
+*(20)EXTENSION SIZE:
+*    ----------Horizontal----------  -----------Vertical-----------  --Orient--  -------Support------
+*Id     Elev   Width  Slope  Offset    Elev  Height  Slope  Project  Beam Panel  Offset   Elev Splice
+
+*(21)EXTENSION BEAM:
+*    Ext  Line                                        Mem           Connection
+*No.  Id   Id   Use       Orn  Type  Shape  Rot  Opt   Id  Bracket  Start  End
+  0
+
+*(22)EXTENSION PURLINS:
+*    Ext                                        Max
+*No.  Id   Use        Type  Rot  Row   Peak   Space
+  0
+
+*(23)EXTENSION EAVE STRUT & GUTTER:
+*    Ext                              --Gutter--
+*No.  Id   Use        Type  Rot  Opt  Use  Width
+  0
+
+*(24)EXTENSION PANELS:
+*    Ext
+*No.  Id   Use       Part       Rot
+  0
+
+*(25)FLANGE BRACES:
+*Surf                                                           Clip        Clip2
+* Id  No. Loc Side Type  Mark      Length  Offset  Opt  Ref     Mark        Mark
+   1   2    1   1   'A' 'FB568   '  567.9  330.00  '-' '-----' '--------'  '--------'
+            3   1   'A' 'FB568   '  567.9  330.00  '-' '-----' '--------'  '--------'
+   2   3    1   1   'A' 'FB536   '  535.9  330.00  '-' '-----' '--------'  '--------'
+            3   1   'A' 'FB488   '  487.9  330.00  '-' '-----' '--------'  '--------'
+            4   1   'A' 'FB464   '  464.1  330.00  '-' '-----' '--------'  '--------'
+   3   3    1   1   'A' 'FB464   '  464.1  330.00  '-' '-----' '--------'  '--------'
+            2   1   'A' 'FB488   '  487.9  330.00  '-' '-----' '--------'  '--------'
+            4   1   'A' 'FB536   '  535.9  330.00  '-' '-----' '--------'  '--------'
+   4   2    1   1   'A' 'FB568   '  567.9  330.00  '-' '-----' '--------'  '--------'
+            3   1   'A' 'FB568   '  567.9  330.00  '-' '-----' '--------'  '--------'
+
+*(26)EXTENSION FLANGE BRACES:
+*Ext
+* Id  No. Loc Side Type  Mark      Length  Offset
+
+*(27)PURLIN ANTI-ROLL:
+*      Line  Surf           Roll    Detail      No.
+* No.   Id    Id  Opt  Rot   Id        Id     Purlin  Purlin_Id
+   0
+
+*(28)ROOF PANEL & GUTTERS:
+* Panel      Stand  Panel  --Gutters--   Max_Eave_Ext   Panel_Offset1   Panel_Offset2
+* Part       Seam   Color  Left  Right   Left   Right    Left   Right    Left   Right
+ '45250 .5'   'N'   'A3'    'Y'   'Y'     0.0     0.0   500.0   500.0     0.0     0.0
+
+*(29)ROOF LIGHT PANELS:
+*        Surf  Panel  Panel   Panel    Panel   Remove
+*  No.    Id   Quan   Type   Length   Offset   Panel
+    0
+
+*(30)FRAME PIECE LAYOUT:
+*       -Locate-  Table   No.
+* No.   Use   Id    Id   Line  Line_Id
+   4   'FC'    1     1     0
+       'FR'    2     2     0
+       'FR'    3     3     0
+       'FC'    4     4     0
+    
+
+*(31)VERTICAL CLEARANCE:
+* --Corner_Column--   --Max_Interior--  ------------Interior_Column------------
+*    Left     Right    Locate   Height  No.  Height
+   8560.5    8560.5    6400.0   9132.8   0  
+
+*(32)HORIZONTAL CLEARANCE:
+*   Left   Right   No.
+* Offset  Offset  Span   ------Span_Clearance------
+   644.0   644.0   1      11512.0 
+
+*(33)CRANES:
+*       System Bay_Id  Crane  Crane    Crane    Crane    Crane   ---Rail---
+* No.     Id   Lt  Rt  Type   Height  OffsetL    Span   OffsetR  Type Depth
+   1       1    1   1  'TG'   7000.0   1200.0  10400.0   1200.0  '-'   0.00
+    
+
+*(34)CRANE COMPONENTS:
+*Sys  ------Runway------  ----------Column--------- ----Bracket----  Diag
+*Id   Type Mem_Id  Width  Type Rot  Mem_Id     Elev Type Opt Mem_Id  Stiff
+  1   'WB'     5  250.00  '-'  '-'      0      0.00 'W'  '1'     6    'N'
+  1   'WB'     7  250.00  '-'  '-'      0      0.00 'W'  '1'     8    'N'
+
+*(35)CRANE CLEARANCE:
+*     Sys                        ----Frame_Coord---
+*No.   Id  Orn  Side     Clear    X_Coord   Y_Coord
+  3     1  'H'  'L'      439.0      636.0    7000.0
+        1  'H'  'R'      439.0    12164.0    7000.0
+        1  'V'  '-'     1533.5      644.0    8533.5
+
+*(36)DRAWING REVISIONS:
+* No.    Revisions
+    0
+
+*(37)USER DETAILS:
+*     --------Detail--------   -------------Insert------------
+*No.  Type  Name               X_Coord  Y_Coord  Scale   Angle
+  0
+
+*(38)SHORT COLUMNS:
+*      Col  ---Location----         ---------------Column---------------
+* No.  Id    Offset   Height  Elev  Type  Rot   Depth     Id         Part
+   0
+
+*(39)SHORT COLUMN CONNECTION: (Top-Bottom)
+*      Col   ---------Plate_Size---------   ----------Bolt_Size----------
+* No.   Id    Type  Width   Thick  Length   Quan  Row    Type    Dia    Len
+   0
+
+*(40)FLOOR BEAMS:
+*       Beam ---------Location---------- ----------      Beam----------
+* No.    Id    Start    End     Height   Type   Depth    Id          Part
+   0
+
+*(41)FLOOR BEAM CONNECTION: (Left-Right)
+*      Beam  ---------Plate_Size---------   ----------Bolt_Size----------
+* No.   Id    Type  Width   Thick  Length   Quan  Row    Type    Dia    Len
+   0
+
+*(42)WELDS:
+*                     ---OS_Flange---  ---IS_Flange---  ------Web------
+* No.  Location  Id    Size Type Side   Size Type Side   Size Type Side
+  16  'BASE    '  1    6.00  'F'   2    6.00  'F'   2    4.00  'F'   2
+      'BP_STIFF'  1    6.00  'F'   2    4.00  'F'   2    0.00  '-'   2
+      'BASE    '  2    6.00  'F'   2    6.00  'F'   2    4.00  'F'   2
+      'BP_STIFF'  2    6.00  'F'   2    4.00  'F'   2    0.00  '-'   2
+      'SPLICE  '  1    4.00  'F'   2    5.00  'F'   2    4.00  'F'   2
+      'SPLICE  '  1    4.00  'F'   2    4.00  'G'   1    4.00  'F'   2
+      'SPLICE  '  2    4.00  'F'   2    4.00  'F'   2    4.00  'F'   2
+      'SPLICE  '  2    4.00  'F'   2    4.00  'F'   2    4.00  'F'   2
+      'SPLICE  '  3    4.00  'F'   2    4.00  'G'   1    4.00  'F'   2
+      'SPLICE  '  3    4.00  'F'   2    5.00  'F'   2    4.00  'F'   2
+      'STIFF_B '  1    8.00  'F'   2    8.00  'F'   2    4.00  'F'   2
+      'STIFF_B '  2    8.00  'F'   2    8.00  'F'   2    4.00  'F'   2
+      'SEGMENT '  1    4.00  'F'   1    4.00  'F'   1    0.00  '-'   0
+      'SEGMENT '  2    4.00  'F'   1    4.00  'F'   1    0.00  '-'   0
+      'SEGMENT '  3    4.00  'F'   1    4.00  'F'   1    0.00  '-'   0
+      'SEGMENT '  4    4.00  'F'   1    4.00  'F'   1    0.00  '-'   0
+    
+
+*(43)USER TEXT ADJUST:
+*         ---------Adjust---------
+*  No.    X_Coord  Y_Coord  Rotate  Text
+   0
+
+*(44)FRAME LINES:
+*Total    No.  Frame          Line
+* Line   Line   Line  Offset  Id
+    5      1      1    390.0 '1   '
+
+
+*(45)JACK BEAM LAYOUT:
+*      Beam  -Bay_Id--
+* No.   Id   Start End     Offset   Height
+   0
+
+*(46)JACK BEAM MEMBERS:
+*      Jack  ------Jack_Beam-----  Stub_Column     -Flange_Brace-
+* No.   Id   Type  Mark     Depth  Type  Mark      Left     Right
+   0
+
+*(47)FRAME PLATES:
+*       Piece      -Plate-
+* No.   Mark       Type Id  Width1   Width2   Thick   Length
+   22  ' CL1-1  '  'WB'  1  400.00   400.00    5.00  8517.48 
+       ' CL1-1  '  'ST'  1   70.00    70.00    6.00   300.00 
+       ' CL1-1  '  'ST'  2   70.00    70.00    6.00   300.00 
+       ' CL1-1  '  'ST'  3  140.00   140.00    6.00   300.00 
+       ' CL1-1  '  'OF'  1  150.00   150.00    6.00  8517.48 
+       ' CL1-1  '  'IF'  1  150.00   150.00    8.00  8517.48 
+       ' RF1-2  '  'IF'  1  125.00   125.00    5.00  5682.50 
+       ' RF1-2  '  'OF'  2  125.00   125.00    5.00   351.60 
+       ' RF1-2  '  'OF'  1  125.00   125.00    5.00  6405.29 
+       ' RF1-2  '  'ST'  1   60.00    60.00    8.00   360.00 
+       ' RF1-2  '  'WB'  1  400.50   299.99    4.00  6213.70 
+       ' RF1-3  '  'WB'  1  299.99   400.50    4.00  6213.70 
+       ' RF1-3  '  'ST'  1   60.00    60.00    8.00   360.00 
+       ' RF1-3  '  'OF'  1  125.00   125.00    5.00  6405.29 
+       ' RF1-3  '  'OF'  2  125.00   125.00    5.00   351.60 
+       ' RF1-3  '  'IF'  1  125.00   125.00    5.00  5682.50 
+       ' CL1-4  '  'IF'  1  150.00   150.00    8.00  8517.48 
+       ' CL1-4  '  'OF'  1  150.00   150.00    6.00  8517.48 
+       ' CL1-4  '  'ST'  3  140.00   140.00    6.00   300.00 
+       ' CL1-4  '  'ST'  2   70.00    70.00    6.00   300.00 
+       ' CL1-4  '  'ST'  1   70.00    70.00    6.00   300.00 
+       ' CL1-4  '  'WB'  1  400.00   400.00    5.00  8517.48 
+
+*(48)ROOF OPENING LAYOUT:
+*   Open  -Location-      Frame --Surface-- ----Bay----                     Ref
+*No.  Id  Use     Id  Opt  Type Id   Offset Id   Offset    Width   Length   Id
+   0
+
+*(49)ROOF OPENING FRAMING:
+*    Mem Open     Bay           ---------Member--------  Frame_Opt   Frame_Id  Connect_Id
+*No.  Id  Id  Use  Id   Offset  Type Opt  Rot  Part      Start End  Start End  Start  End
+   0
+
+*(50)ADDITIONAL PURLINS:
+*         Surf Bay Purl                                   ---Extension---   Frame_Opt -Frame_Id-  Connect_Id
+*No.  Id   Id   Id  Id    Offset  Type Rot Opt  Part         Left   Right  Left Right Left Right  Left Right
+   0
+
+*(51)ADDITIONAL COLUMNS:
+*    Col          Line                                                          ConnBot  ConnTop
+*No.  Id   Locate  Id   Type  Rot  Opt  Mark       Part          Elev   Height  Id  Opt  Id  Opt
+   1   0   7685.0   1    'W'  'N'  'E' 'EC-1    ' 'W30a158 '      0.0   8976.2   0  '-'   0  'F'
+    
+
+*(52)MEMBER TABLE:
+*    Table
+*No.   Id   Mark            Part       Depth1  Depth2   Width   Length  Weight
+  8     1  ' CL1-1  '      '--------'    0.00    0.00    0.00  8549.48  393.18
+        2  ' RF1-2  '      '--------'    0.00    0.00    0.00  6199.77  171.89
+        3  ' RF1-3  '      '--------'    0.00    0.00    0.00  6199.77  174.43
+        4  ' CL1-4  '      '--------'    0.00    0.00    0.00  8549.48  393.18
+        5  'RB-5    '      'W50b2510'  520.00  520.00  250.00  6805.00  414.10
+        6  'Brkt1   '      'W35b228 '  366.00  366.00  225.00     0.00    0.00
+        7  'RB-6    '      'W50b2510'  520.00  520.00  250.00  6805.00  414.10
+        8  'Brkt2   '      'W35b228 '  366.00  366.00  225.00     0.00    0.00
+
+*(53)CONNECTIONS:
+*    --Connect--  ------Plate-----  -----Plate_Size----  --------Bolt-------            Mem   Plate -------Hole-------
+*No. Id Type Opt  Use       Id Loc  Width Length  Thick     Dia  Gage  Gage2 DtBolt   Depth  Offset No. Location
+  7   0 '--' '-' 'BP_STIFF'  1   1 146.50 196.50  12.00    0.00  0.00   0.00     0     0.00    0.00  0
+      0 '--' '-' 'BP_STIFF'  2   1 146.50 196.50  12.00    0.00  0.00   0.00     0     0.00    0.00  0
+      0 'SS' '-' 'SPLICE  '  1   1 200.00 600.00  16.00   22.00 100.0   0.00     0   414.00   94.00  4    50.00 150.00
+                                                                                                         450.00 550.00
+      0 'SS' '-' 'SPLICE  '  2   1 200.00 501.20  16.00   22.00 100.0   0.00     0   311.26   94.97  4    50.00 150.00
+                                                                                                         350.00 450.00
+      0 'SS' '-' 'SPLICE  '  3   1 200.00 600.00  16.00   22.00 100.0   0.00     0   414.00   94.00  4    50.00 150.00
+                                                                                                         450.00 550.00
+      0 'FI' '-' 'BASE    '  1   1 250.00 707.00  16.00   30.00 100.0   0.00     0   414.00  147.00  4    75.00 225.00
+                                                                                                         482.00 632.00
+      0 'FI' '-' 'BASE    '  2   1 250.00 707.00  16.00   30.00 100.0   0.00     0   414.00  147.00  4    75.00 225.00
+                                                                                                         482.00 632.00
+   
+
+*(54)VERTICAL GRID LINE:
+*         B_SW   Line
+*No.    Offset   Id
+  3        0.0  'C   '
+        7685.0  'B   '
+       12800.0  'A   '

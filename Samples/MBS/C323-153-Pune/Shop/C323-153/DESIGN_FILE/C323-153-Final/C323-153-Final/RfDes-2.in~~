@@ -1,0 +1,129 @@
+*( 4)OPTIMIZATION OPTIONS:
+*Plate  Depth  Frame  -L_Col_Depth_Opt-  -R_Col_Depth_Opt-    Rafter_Depth_Opt
+* Opt    Opt    Sym   Typ    Min    Max  Typ    Min    Max   Typ    Min    Max
+  'N'    'N'    'S'  'T '  250.0 1400.0 'T '  250.0 1400.0  'T '  350.0 1400.0
+
+*( 8)DEFLECTION LIMITS:
+* ------Vertical-----  -------Horizontal-------  -Weak_Axis-
+*  Live   Wind  Total  Total  Seis  Crane Floor   Wind  Seis
+  150.0    0.0  150.0   75.0  50.0  100.0   0.0   60.0  50.0
+
+*(10)BUILDING LAYOUT:
+*                             -----------Wall-----------
+* Type      Width     Length  Type Opt   Offset   Length
+  'FF'    22470.0    36285.0   '-' '-'     0.00  22470.0
+
+*(12)MEMBER DEPTHS:
+*Surf   ----Depth----  No.   --Interior_Depth-
+* Id    Start     End  Dep    Locate     Depth
+   1   400.00  700.00   1     4000.0    700.00
+   2   600.00  450.00   1     4700.0    250.00
+   3   450.00  600.00   1     6591.0    250.00
+   4   700.00  400.00   1     4420.0    700.00
+
+*(13)MEMBER SPLICES:
+*Surf    No.    Splice Splice
+* Id   Splice   Locate  Type
+   1      0
+   2      2        0.0  'HSS'
+                4700.0  '-SS'
+   3      2        0.0  '-SS'
+                6591.0  '-SS'
+   4      1        0.0  'HSS'
+ 
+ 
+*(14)SEGMENT PLATES:
+*    Surf Mem ---Segment--    Member      Flange  ----Plate_Thickness---
+*No.  Id   Id  Id   Length    Part         Width     Web  OS_Flg  IS_Flg
+   8   1    1   1      0.0   '--------'   150.00    5.00    6.00    6.00
+       1    2   2      0.0   '--------'   150.00    5.00    6.00    6.00
+       2    3   3      0.0   '--------'   125.00    4.00    6.00    8.00
+       2    4   4      0.0   '--------'   125.00    4.00    5.00    5.00
+       3    5   5      0.0   '--------'   125.00    4.00    5.00    5.00
+       3    6   6      0.0   '--------'   125.00    4.00    6.00    8.00
+       4    7   7      0.0   '--------'   150.00    5.00    6.00    6.00
+       4    8   8      0.0   '--------'   150.00    5.00    6.00    6.00
+
+*(19)BASE DISPLACEMENT:
+*Base
+* Id   Opt  Dir  Displace
+   0   '-'  '-'     0.00
+
+*(25)COLUMN ADDITIONAL BRACE LOCATIONS:
+*     Col                  -Minor-
+*No.   Id   Height  Major  Out  In
+  2     0   6050.0   'N'   'N'  'Y'
+        1   6050.0   'N'   'N'  'Y'
+
+
+*(27)LOAD GROUPS:
+*    Group
+*No.   Id   Description
+   1  '-'  'Standard       '
+
+*(28)BASIC LOADS:
+*                                             ---Deflection---
+*Group Dead  Coll   Live   Snow  Rain  Basic     Load_Ratio       Temp
+*  Id  Load  Load   Load   Load  Load   Wind  Snow  Wind  Seis   Change
+  '-' 0.100 0.050  0.570  0.000  0.00  0.554  1.00  1.00  1.00     20.0
+
+*(37)STEPPED LOAD COEFFICIENTS:
+*    Group Basic    Loc   No.  ----Step_1---   ----Step_2---   ----Step_3---
+*No.   Id  Load      Id  Step  Locate   Coef   Locate   Coef   Locate   Coef
+  4   '-' 'WINDL1  '  2    2  11235.0  1.000  11291.0  0.638
+      '-' 'WINDR1  '  3    2     56.0  0.638  11291.0  1.000
+      '-' 'WINDL2  '  2    2  11235.0  1.000  11291.0  0.383
+      '-' 'WINDR2  '  3    2     56.0  0.383  11291.0  1.000
+   
+
+*(41)DESIGN PLATES:
+*     ----Plate---   --Plate_Size-   Bolt   Bolt  ----Top---  --Bottom--   Bolt
+*No.  Type      Id   Width   Thick    Dia   Gage  Row  Space  Row  Space  Gage2
+  2  'BASE    '  1     0.0    0.00   0.00    0.0   1     0.0   1     0.0    0.0
+     'BASE    '  2     0.0    0.00   0.00    0.0   1     0.0   1     0.0    0.0
+   
+
+*(46)DESIGN CODE OPTIONS:
+*No.   Event                         Condition
+  0
+ 
+*COLUMN ADDITIONAL BRACE LOCATION DESCRIPTIONS:
+*  Id  Description
+*   1  Crane System 1
+*   2  Crane System 1
+ 
+*AUXILIARY LOAD DESCRIPTIONS:
+* Aux
+*  Id  Description
+*   1  Crane load
+*   2  Crane load
+*   3  Crane load
+*   4  Crane load
+*   5  Longitudinal wind load, case 1
+*   6  Longitudinal wind load, case 1
+*   7  Longitudinal wind load, case 2
+*   8  Longitudinal wind load, case 2
+*
+*ADDITIONAL LOAD DESCRIPTIONS:
+* Add
+*  Id  Description
+*   1  Crane load vertical on aisle 1 left column
+*   2  Crane load horizontal to right on aisle 1 left column
+*   3  Crane load vertical on aisle 1 right column
+*   4  Crane load horizontal to left on aisle 1 right column
+*   5  Longitudinal wind load
+*   6  Longitudinal wind load
+*
+* Code files used:
+*   MBMA.10N
+*   RF_MBMA.10N Version 4.0
+*
+*DS_RFDEP.Siz
+*Surface  Span  --Required-   -----------Selected----------
+*  Id      Id   Type   Span   Type   Span  #Depth  #Splice
+*   1       1    W     8420    No record selected
+*   2       1    C    11235    C    11000     1       1
+*   3       1    C    11235    C    11000     1       1
+*   4       1    W     8420    No record selected
+*
+* Calculated Seismic Mass, W = 80.19 kN

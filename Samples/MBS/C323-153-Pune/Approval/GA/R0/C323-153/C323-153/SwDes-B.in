@@ -1,0 +1,173 @@
+*===============================================================================
+*C323-153            Sidewall Design Input                  23/JUL/2025 11:20am
+*===============================================================================
+
+*( 1)JOBID: 
+    'C323-153'
+
+*( 2)PROGRAM OPTIONS:
+*Sidewall  Run    Run    Lap
+*   Id     Girt   Panel Stiff
+   'B'      'Y'   'Y'    0.50
+
+*( 3)DESIGN CODE:
+*Design  ---Steel_Code---             ---Build---   Code     Seismic
+* Code   Cold       Hot      Country  Code   Year   Label     Zone
+  'WS'  'NAUS07  ' 'AISC05'  '    '  'MBMA'  '10'  'MBMA 10 ' 'B  '
+
+*( 4)DESIGN CONSTANTS:
+*               ---Strength_Factors--
+* Stress_Ratio          ---Seismic---
+* Girt   Panel    Wind   Frame  Brace
+  1.00    1.00  1.0000  1.0000 1.0000
+
+*( 5)STEEL YIELDS:
+* Web   Flg  C_Sec  W_Sec  R_Sec  P_Sec  T_Sec  U_Sec    EP     BP
+  345   345    345    345    235    345    317    235   345    345
+
+*( 6)DEFLECTION LIMITS:
+* ---Girt---  --Panel---
+* Wall Facia  Wall Facia
+   90.  120.   90.  120.
+
+*( 7)REPORTS:
+*   Input  Wall  Door  Wall
+*   Echo   Girt  Jamb  Panel
+    'Y'    'Y'   'Y'   'Y'
+
+*( 8)BUILDING LAYOUT:
+*---------Build----------   -----Left_Expand_EW-----   -----Right_Expand_EW----
+* Type    Width    Length   Use  Opt  Extend  Offset   Use  Opt  Extend  Offset
+ 'FF-'  22470.0   36270.0  'Y '  '-'    0.00  440.00  'Y '  '-'    0.00  440.00
+
+*( 9)WALL LAYOUT:
+* Id  Use     Type Opt     Start   Length
+   4 'BACK  '  '-' '-'       0.0  36270.0
+
+*(10)SURFACE SHAPE:
+* No.    X_Coord  Y_Coord  Offset
+   4         0.0   8170.0  200.00
+         11235.0   9293.5  200.00
+         22470.0   8170.0  200.00
+         22470.0      0.0  200.00
+
+*(11)SIDEWALL BAY SPACING:
+*   No.   ---Bay_Set---
+*  Sets     Width  Quan
+     6     6250.0    1
+           5870.0    1
+           6230.0    1
+           5730.0    1
+           5990.0    1
+           6200.0    1
+
+*(12)WALL OPENINGS:
+*         ----Bay---                            Sill   Base    Set  Panel  JambL/JambR/Header/Sill
+*No.  Id  Id  Offset  Type    Width   Height  Height   Elev  Depth   Opt    Type    Part
+  0
+
+*(13)PARTIAL WALLS:
+*                --Bay_Id-  ----Offset----          Jamb Base  Top Full_Load  ------Panel------  Deflect_Limit
+*No. Id  Use Opt Start End   Start     End   Height Type Type Type Girt  Col  Part      Opt Rot   Girt   Panel
+  1   4  'P' 'O'    1    6     0.0     0.0   2500.0  '-'  '-'  '-'  'N'  'Y' '--------' '-' '-'   90.0    90.0
+ 
+*(14)GIRT DESIGN:
+*Girt  --Flange_Strap--    Set     Set     Max
+*Type  Out  In    Space  Depth     Lap   Space
+ 'ZB'  'C'  'Y'  2250.0 200.00     0.0  1500.0
+
+*(15)GIRT LOCATION:
+* Set
+* Loc   No.   Location
+  'Y'    4    2580.0   4080.0   5580.0   7080.0 
+
+*(16)SPECIAL GIRT:
+*     --Bay_Id--
+*No.  Start  End   Height  Type  Rot  Part       Use
+  0
+
+*(17)PANELS/GUTTERS:
+*--Wall_Panel--  -----Gutter-----  ------Insulation-----  Stand
+* Part      Rot  Use  Type  Width  Use  Thick  Part       Seam
+ '45250 .5' '-'  '-'  'Y'    0.00  'N'   0.00 '--------'  'N'
+
+*(18)LINER PANELS: 
+*      --Bay_Id-                       Flange
+*No.   Start End    Height   Part       Opt
+  0
+
+*(19)FACIA/PARAPET:
+*                     -Bay_Id--    Horz -Vertical_Size-   --Edge_Extend-           Beam
+* No.   Id  Type Opt  Start End   Width    Elev  Height     Left   Right  Mount     Lap
+   0
+
+*(20)FACIA/PARAPET GIRTS:
+*Ext ---Top--  Interior  -Gutter-    Set
+*Id  Type Rot  Type Rot  Type Rot  Depth
+
+*(21)FACIA/PARAPET PANELS:
+*Ext  Front      -----Back----    Angle
+*Id   Part       Part      Rot  Spacing
+
+*(22)LOAD GROUPS:
+*    Group
+*No.   Id   Description
+   1  '-'  'Standard            '
+
+*(23)BASIC LOADS:
+*              ---Deflection---    Wind
+*Group Basic      Load_Ratio       Load  -------Seismic-------
+*  Id   Wind   Snow  Wind  Seis  Factor   Dead   Coeff  Factor
+  '-' 0.5542   1.00  1.00  1.00    1.00 0.0957  0.0000    1.00
+
+*(24)EDGE ZONE:
+*                                    ---Ratio---
+*Group -Left_Zone--   -Right_Zone-   Girt/
+*  Id  Width   Base   Width   Base   Jamb  Panel
+  '-'   2247      0    2247      0   1.07   1.00
+
+*(25)WIND PRESSURE/SUCTION:
+*Group   Wind    Wind
+*  Id   Press    Suct
+  '-'  0.4844 -0.5342    .. Girt/Header
+  '-'  0.5986 -0.6485    .. Panel
+  '-'  0.4844 -0.5342    .. Jamb
+  '-'  0.0000  0.0000    .. Parapet Girt
+
+*(26)GIRT LAPS: 
+*      Data  ------Set_1-------  ------Set_2-------  ------Set_3-------
+* Opt  Sets  Left    Right Quan  Left    Right Quan  Left    Right Quan
+  '-'   0
+
+*(27)GIRT STRAPS: 
+*     Data  ---Set_1---  ---Set_2---  ---Set_3---  ---Set_4---
+*Opt  Sets  Strap  Quan  Strap  Quan  Strap  Quan  Strap  Quan
+ '-'   0
+
+*(28)EXPANSION JOINTS: 
+* No.  Expansion_Location
+   0
+
+*(29)BEAMS:
+*     Bay
+*No.   Id Use    Height   Offset  Locate1  Locate2
+  0
+
+*(30)DESIGN CODE OPTIONS:
+*No.   Event                         Condition
+  0
+
+*(31)PANEL SCREWS: 
+* No.                                    Washer
+*Zone Zone   Part          Dia    Limit     Dia  -------Spacing------
+   2 'INT ' '14x20SDS'    4.80   13.700   19.00  250.00 125.00  83.33
+     'EDGE' '14x20SDS'    4.80   13.700   19.00  250.00 125.00  83.33
+
+*(32)GIRT LAYOUT:
+*      Bay                                    -----Extend----   Frame_Opt  -Frame_Id-
+*  No.  Id   Locate  Type  Rot Opt  Part         Left   Right  Left Right  Left Right
+    0
+
+* Code files used:
+*   MBMA.10N                                                                        
+*   EW_MBMA.10N Version 4.0                                                         

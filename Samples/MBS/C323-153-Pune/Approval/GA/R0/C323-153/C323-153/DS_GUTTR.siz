@@ -1,0 +1,52 @@
+*   FILE: DS_GUTTER.SIZ              
+*=================================================================================
+*   MBS  1-24-06
+*   This file contains data information for auto calculation of 
+*   Gutters and Downspouts.  This is read by the program MBS\UTIL\GUTTER.EXE
+* 
+*The column headings are as follows:
+* '@GUTTER'  All gutter entries *are to follow this marker.
+* '@DOWNSPOUTS' All downspou*ts entries are to follow this marker.
+* Profile: This is an indicator *on the appearance of the gutter.
+* Size: This symbol represents t*he size of the gutter.
+*  Profile and size can be *any single digit letter or number. These values
+*   will appear on the sele*ction screen while running the gutter program.
+* Style: This is a two digit sym*bol that uniquely identifies the gutter or downspout.
+*  This symbol must match t*he Style entry in the DT_TRIM.SIZ file.
+* Descritpion: Enter up to ?? ch*aracters to describe the item.
+* Width (in, mm): Enter the width of gutter or downspout.
+* Depth (in, mm): Enter the depth of gutter or downspout.
+* Area (in2, mm2): Enter the area of gutter or downspout.
+* Downspout Spacing (feet, mm): The program will calculate the downspout spacing based
+*  on flow capacity. An additional consideration is the minimum and maximum
+*  downspout spacing independent of flow. Enter those minimum and maximum 
+*  spacing values.
+*
+* Note: The available colors for gutters and downspouts need to be identified as 'ST'
+*  type in the DT_COLOR.SIZ file.
+*
+*=================================================================================
+*
+*   This file contains data information for auto calculation of 
+*   Gutters and Downspouts.  This is read by the program MBS\UTIL\GUTTER.EXE
+*
+*=================================================================================
+*                                         Width    Depth   Area    Downspout Spac.?
+*Profile   Size  Style Description        (mm)     (mm)   (mm2)   Min(mm) Max(mm)
+*-------   ----  ----------------------   -----    -----  ------   ------  ------- 
+
+'@GUTTER' 
+ 'S'        '1'   '4C' 'Std 24ga J&H  '      146    127    18550        0     0
+ 'S'        '2'   '6M' 'Big 26ga J&H  '      187    178    33305        0     0
+ 'D'        '1'   '6M' 'Std Gutter    '      146    127    18550        0     0 
+ 'D'        '2'   '6V' 'Big Gutter    '      187    178    33305        0     0
+ 'Z'        '2'   '6V' 'Big Gutter    '      187    178    33305        0     0
+
+'@DOWNSPOUT'
+ 'S'        '1'   '4C'  'Std Downspout'      102     74    7536      5791  21946
+ 'S'        '2'   '6M'  'Big Downspout'      102    129   13123      5791  21946
+ 'D'        '1'   '6M'  'Std Downspout'      102     74    7536      5791  21946
+ 'D'        '2'   '6V'  'Big Downspout'      102    129   13123      5791  21946
+ 'Z'        '2'   '6V'  'Big Downspout'      102    129   13123      5791  21946
+
+

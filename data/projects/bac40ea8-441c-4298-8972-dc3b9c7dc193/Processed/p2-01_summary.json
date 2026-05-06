@@ -1,0 +1,25 @@
+{
+  "status": "partial_success",
+  "project_id": "bac40ea8-441c-4298-8972-dc3b9c7dc193",
+  "files_found": 12,
+  "parsed_files": 10,
+  "failed_files": 2,
+  "extracted_fields": 54,
+  "normalized_fields": 8,
+  "governing_file": {
+    "file_id": "c113e60b-fd14-4891-b923-bd6d1fd2835e",
+    "original_filename": "C007-117-Malegaon-3D.STD",
+    "file_type": "STAAD",
+    "source_application": "STAAD",
+    "likely_role": "governing",
+    "classification_confidence": 90
+  },
+  "governing_details": {
+    "node_count": "445",
+    "member_count": "679",
+    "support_count": "182",
+    "unit_system": "METER KN",
+    "job_date": "10-May-25"
+  },
+  "main_output": "reports/p2-01_summary.json"
+}

@@ -1,0 +1,26 @@
+*==============================================================================
+* BldCtrl.Log  :  Building Maintenance Control Log File   17-12-2025  15:11:20
+*==============================================================================
+*
+*(1) DESCTRL SELECTED FILE:
+*
+* Date         ID       File              Description
+'17-12-2025'  'in'     'Desctrl.in'      'Default CS-30x49.5x7'
+ 
+*
+*(2) DWGCTRL SELECTED FILE:
+*
+* Date         ID       File              Description
+'17-12-2025'  'in'     'DwgCtrl.in'      'Default CS-30x49.5x7'
+ 
+*
+*(3) JOBINFO SELECTED FILE:
+*
+* Date         ID       File              Description
+'17-12-2025'  'in'     'MBS.in'          'Sivoko Setup'
+ 
+*
+*(4) DATABASE SELECTED FILES:
+*
+* Date         ID       File              Description
+ 

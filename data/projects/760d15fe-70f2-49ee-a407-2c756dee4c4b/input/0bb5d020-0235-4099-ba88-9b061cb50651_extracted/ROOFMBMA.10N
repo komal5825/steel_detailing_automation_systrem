@@ -1,0 +1,206 @@
+*FILE:ROOFMBMA.10n            UNIT:ENGLISH                        8/9/11  10:54am
+* Revisions:
+*  4.00.01  9/13/12 Added RAIN load combinations
+*  4.00.02  4/11/13 CJS Increased Max No of design loads to 200
+*                   Added SNOW:MIN load combinations
+*                   Added unbalanced snow combination lines 15 & 16
+*  4.00.03   1/26/2016 SPF Added unbalanced snow deflection factors on line 13
+*  4.50.00   3/ 1/2018 SPF Implemented Bracing Deflection load combinations
+*  4.50.01   9/23/2021 SPF Activated deflections factors for partial loads on lines 9
+*
+*===============================================================================
+*
+* For additional information, see code file help
+*===============================================================================
+* VERSION
+* NUMBER
+   4.50
+ 
+*( 1)CODE IDENTIFICATION:
+*    Name   Year   Code_Type   Extra    Extra
+    'MBMA'  '10'     'WS'       '-'      '-'
+ 
+*( 2)PURLIN DESIGN LOADS FOR STRENGTH:
+*
+* No. Load Load                                        -Add_Snow-  Wind  Wind
+*Load  Id  Type         Factor Dead Collat Live  Snow Drift Slide Press  Suct
+  13    1  '-'           0.00  1.00  1.00  1.00  0.00  0.00  0.00  0.00  0.00
+        2  'RAIN'        1.00  1.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00
+        3  '-'           0.00  1.00  1.00  0.00  1.00  0.00  0.00  0.00  0.00
+        4  '-'           0.00  1.00  1.00  0.00  1.00  1.00  0.00  0.00  0.00
+        5  '-'           0.00  1.00  1.00  0.00  1.00  0.00  1.00  0.00  0.00
+        6  '-'           0.00  1.00  1.00  0.75  0.00  0.00  0.00  0.75  0.00
+        7  'RAIN'        0.75  1.00  1.00  0.00  0.00  0.00  0.00  0.75  0.00
+        8  '-'           0.00  1.00  1.00  0.00  0.75  0.00  0.00  0.75  0.00
+        9  '-'           0.00  1.00  1.00  0.00  0.75  0.75  0.00  0.75  0.00
+       10  '-'           0.00  1.00  1.00  0.00  0.75  0.00  0.75  0.75  0.00
+       11  '-'           0.00  0.60  0.00  0.00  0.00  0.00  0.00  0.00  1.00
+       12  'SNOW:MIN'    1.00  1.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00
+       13  'SNOW:MIN'    0.75  1.00  1.00  0.00  0.00  0.00  0.00  0.75  0.00
+ 
+*( 3)PURLIN DESIGN LOADS FOR DEFLECTION:
+*
+* No. Load Load                                        -Add_Snow-  Wind  Wind
+*Load  Id  Type         Factor Dead Collat Live  Snow Drift Slide Press  Suct
+   0
+ 
+*( 4)BRACING DESIGN LOADS FOR STRENGTH:
+*
+* No. Load Load                            ---Live---        -Add_Snow-  Wind  Wind
+*Load  Id  Type         Factor Dead Collat Roof Floor  Snow Drift Slide Press  Suct  Seis Crane
+  16    1  '-'           0.00  1.00  1.00  0.00  0.00  1.00  0.00  0.00  1.00  1.00  0.00  0.00
+        2  '-'           0.00  1.00  1.00  0.00  0.00  1.00  1.00  0.00  1.00  1.00  0.00  0.00
+        3  '-'           0.00  1.00  1.00  0.00  0.00  1.00  0.00  1.00  1.00  1.00  0.00  0.00
+        4  '-'           0.00  1.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.70  0.00
+        5  'SEIS:ABC'    0.14  1.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.70  0.00
+        6  'SEIS:ABC'    0.105 1.00  1.00  0.75  0.00  0.00  0.00  0.00  0.00  0.00  0.525 0.00
+        7  'SEIS:ABC'    0.105 1.00  1.00  0.00  0.00  0.75  0.00  0.00  0.00  0.00  0.525 0.00
+        8  'SEIS:ABC'    0.105 1.00  1.00  0.00  0.00  0.75  0.75  0.00  0.00  0.00  0.525 0.00
+        9  'SEIS:ABC'    0.105 1.00  1.00  0.00  0.00  0.75  0.00  0.75  0.00  0.00  0.525 0.00
+       10  'SEIS:ABC'   -0.14  0.60  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.70  0.00
+       11  'SEIS:DEF'    0.14  1.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.70  0.00
+       12  'SEIS:DEF'    0.105 1.00  1.00  0.75  0.00  0.00  0.00  0.00  0.00  0.00  0.525 0.00
+       13  'SEIS:DEF'    0.105 1.00  1.00  0.00  0.00  0.75  0.00  0.00  0.00  0.00  0.525 0.00
+       14  'SEIS:DEF'    0.105 1.00  1.00  0.00  0.00  0.75  0.75  0.00  0.00  0.00  0.525 0.00
+       15  'SEIS:DEF'    0.105 1.00  1.00  0.00  0.00  0.75  0.00  0.75  0.00  0.00  0.525 0.00
+       16  'SEIS:DEF'   -0.14  0.60  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.70  0.00
+ 
+*( 5)BRACING DESIGN LOADS FOR DEFLECTION:
+*
+* No. Load Load                            ---Live---        -Add_Snow-  Wind  Wind
+*Load  Id  Type         Factor Dead Collat Roof Floor  Snow Drift Slide Press  Suct  Seis Crane
+   0 
+ 
+*( 6)PANEL DESIGN LOADS FOR STRENGTH:
+*
+* No. Load Load                                        -Add_Snow-  Wind  Wind
+*Load  Id  Type         Factor Dead Collat Live  Snow Drift Slide Press  Suct
+  10    1  '-'           0.00  1.00   0.00 1.00  0.00  0.00  0.00  0.00  0.00
+        2  'RAIN'        1.00  1.00   0.00 0.00  0.00  0.00  0.00  0.00  0.00
+        3  '-'           0.00  1.00   0.00 0.00  1.00  0.00  0.00  0.00  0.00
+        4  '-'           0.00  1.00   0.00 0.00  1.00  1.00  0.00  0.00  0.00
+        5  '-'           0.00  1.00   0.00 0.00  1.00  0.00  1.00  0.00  0.00
+        6  'RAIN'        0.75  1.00   0.00 0.00  0.00  0.00  0.00  0.75  0.00
+        7  '-'           0.00  1.00   0.00 0.00  0.75  0.00  0.00  0.75  0.00
+        8  '-'           0.00  0.60   0.00 0.00  0.00  0.00  0.00  0.00  1.00
+        9  'SNOW:MIN'    1.00  1.00   0.00 0.00  0.00  0.00  0.00  0.00  0.00
+       10  'SNOW:MIN'    0.75  1.00   0.00 0.00  0.00  0.00  0.00  0.75  0.00
+ 
+*( 7)PANEL DESIGN LOADS FOR DEFLECTION:
+*
+* No. Load Load                                        -Add_Snow-  Wind  Wind
+*Load  Id  Type         Factor Dead Collat Live  Snow Drift Slide Press  Suct
+   8    1  '-'           0.00  0.00   0.00 1.00  0.00  0.00  0.00  0.00  0.00
+        2  'RAIN'        1.00  0.00   0.00 0.00  0.00  0.00  0.00  0.00  0.00
+        3  '-'           0.00  0.00   0.00 0.00  1.00  0.00  0.00  0.00  0.00
+        4  '-'           0.00  0.00   0.00 0.00  1.00  1.00  0.00  0.00  0.00
+        5  '-'           0.00  0.00   0.00 0.00  1.00  0.00  1.00  0.00  0.00
+        6  '-'           0.00  0.00   0.00 0.00  0.00  0.00  0.00  1.00  0.00
+        7  '-'           0.00  0.00   0.00 0.00  0.00  0.00  0.00  0.00  1.00
+        8  'SNOW:MIN'    1.00  0.00   0.00 0.00  0.00  0.00  0.00  0.00  0.00
+
+*( 8)LOAD COEFFICIENTS FOR PATTERN OR PARTIAL LOADS FOR STRENGTH:
+*
+*        Do not use
+*        on Live if:
+* No.  < % of                           --------Snow---------  --------Live---------
+*Step  Snow    Live >   Dead   Collat   Full  Reduced Pattern  Full  Reduced Pattern
+   1   0.00    19.99    1.00    1.00    1.00  0.50      'C'    1.00   0.00     'E'
+ 
+*( 9)LOAD COEFFICIENTS FOR PATTERN OR PARTIAL LOADS FOR DEFLECTION:
+*
+*        Do not use
+*        on Live if:
+* No.  < % of                           --------Snow---------  --------Live---------
+*Step  Snow    Live >   Dead   Collat   Full  Reduced Pattern  Full  Reduced Pattern
+   1   0.00    19.99    1.00    1.00    1.00  0.50      'C'    1.00   0.00     'E'
+ 
+*(10)AMOUNT OF SNOW LOAD TO BE INCLUDED WITH THE  SEISMIC MASS AND IN DESIGN LOADS:
+*
+* Snow
+* with       No.  -----Step----
+* Seismic   Step  Load  Percent
+   'Y'        1   30.0    0.20
+ 
+*(11)RATIO OF EDGE STRIP LOADING TO INTERIOR ZONE LOADING ON THE ROOF
+*
+*   ----Roof_Purlins-----
+*   -----Roof_Slope------
+*   < 2.11  < 6.93  >6.94     Extra  Extra  Extra
+      1.22    1.75   1.25      0.00   0.00   0.00
+ 
+*(12)MAXIMUM NUMBER OF DESIGN LOADS:
+*
+* Max No. Of        Increase in live/snow load
+* Design Loads        without pattern loads
+     200                    0.21
+ 
+*(13)UNBALANCED SNOW LOADS FOR STRENGTH AND DEFLECTION:
+*
+* No.           For Strength, For Deflection
+*Step  Slope/W    Low  High     Low   High
+   2    240.0    0.30  1.00    0.30   1.00
+      24000.0    0.30  1.00    0.30   1.00
+ 
+*(14)RATIO OF EDGE STRIP LOADING TO INTERIOR ZONE LOADING ON ROOF:
+*                                Max
+* No.   Comp                    Slope     Wind_Ratio    Open
+*Comp    Id        Zone        (RS:12) Suction Pressure Class
+  44   'PURLIN'   'EDGE'        1.473    1.22   1.00    '-'
+       'PANEL'    'EDGE'        1.473    1.80   1.00    '-'
+       'PURLIN'   'CORNER'      1.473    1.22   1.00    '-'
+       'PANEL'    'CORNER'      1.473    2.80   1.00    '-'
+       'PURLIN'   'EDGE'        6.114    1.50   1.00    '-'
+       'PANEL'    'EDGE'        6.114    1.88   1.00    '-'
+       'PURLIN'   'CORNER'      6.114    2.50   1.00    '-'
+       'PANEL'    'CORNER'      6.114    2.88   1.00    '-'
+       'PURLIN'   'EDGE'       12.000    1.25   1.00    '-'
+       'PANEL'    'EDGE'       12.000    1.20   1.00    '-'
+       'PURLIN'   'CORNER'     12.000    1.25   1.00    '-'
+       'PANEL'    'CORNER'     12.000    1.20   1.00    '-'
+       'PURLIN'   'SS_EDGE'     2.115    1.09   1.00    '-'
+       'PANEL'    'SS_EDGE'     2.115    1.18   1.00    '-'
+       'PURLIN'   'SS_CORNER'   2.115    1.09   1.00    '-'
+       'PANEL'    'SS_CORNER'   2.115    1.63   1.00    '-'
+       'PURLIN'   'SS_EDGEH'    2.115    1.36   1.00    '-'
+       'PANEL'    'SS_EDGEH'    2.115    1.45   1.00    '-'
+       'PURLIN'   'SS_CORNERH'  2.115    1.45   1.00    '-'
+       'PANEL'    'SS_CORNERH'  2.115    2.36   1.00    '-'
+       'PURLIN'   'SS_EDGE'     6.928    1.09   1.00    '-'
+       'PANEL'    'SS_EDGE'     6.928    1.23   1.00    '-'
+       'PURLIN'   'SS_CORNER'   6.928    1.09   1.00    '-'
+       'PANEL'    'SS_CORNER'   6.928    1.23   1.00    '-'
+       'PURLIN'   'SS_EDGEH'    6.928    1.09   1.00    '-'
+       'PANEL'    'SS_EDGEH'    6.928    1.23   1.00    '-'
+       'PURLIN'   'SS_CORNERH'  6.928    1.82   1.00    '-'
+       'PANEL'    'SS_CORNERH'  6.928    2.23   1.00    '-'
+       'PANEL'    'MIDDLE'      1.579    1.50   1.60    'O'
+       'PANEL'    'EDGE'        1.579    3.00   2.00    'O'
+       'PANEL'    'MIDDLE'     12.000    1.53   2.00    'O'
+       'PANEL'    'EDGE'       12.000    2.00   2.00    'O'
+       'PURLIN'   'MIDDLE'      1.579    1.53   1.60    'O'
+       'PURLIN'   'EDGE'        1.579    1.53   1.60    'O'
+       'PURLIN'   'MIDDLE'     12.000    1.50   1.60    'O'
+       'PURLIN'   'EDGE'       12.000    1.50   1.60    'O'
+       'PANEL'    'SS_MIDDLE'   1.579    1.54   1.50    'O'
+       'PANEL'    'SS_EDGE'     1.579    3.00   2.00    'O'
+       'PANEL'    'SS_MIDDLE'  12.000    1.50   1.50    'O'
+       'PANEL'    'SS_EDGE'    12.000    2.00   2.00    'O'
+       'PURLIN'   'SS_MIDDLE'   1.579    1.53   1.60    'O'
+       'PURLIN'   'SS_EDGE'     1.579    1.53   1.60    'O'
+       'PURLIN'   'SS_MIDDLE'  12.000    1.50   1.60    'O'
+       'PURLIN'   'SS_EDGE'    12.000    1.50   1.60    'O'
+
+*(15)PURLIN DESIGN UNBALANCED SNOW LOADS FOR STRENGTH:
+*
+* No. Load Load                                        -Add_Snow-  Wind  Wind
+*Load  Id  Type         Factor Dead Collat Live  Snow Drift Slide Press  Suct  
+   1    1  '-'           0.00  1.00  1.00  0.00  1.00  0.00  0.00  0.00  0.00  
+
+*(16)PURLIN DESIGN UNBALANCED SNOW LOADS FOR DEFLECTION:
+*
+* No. Load Load                                        -Add_Snow-  Wind  Wind
+*Load  Id  Type         Factor Dead Collat Live  Snow Drift Slide Press  Suct  
+   0
+
+

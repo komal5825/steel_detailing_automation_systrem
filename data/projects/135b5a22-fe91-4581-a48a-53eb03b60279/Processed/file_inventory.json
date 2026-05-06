@@ -1,0 +1,18 @@
+{
+  "project_id": "135b5a22-fe91-4581-a48a-53eb03b60279",
+  "total_files": 1,
+  "parsed_files": 0,
+  "failed_files": 0,
+  "files": [
+    {
+      "file_id": "de768659-f5b5-4bff-ba49-9399c2346693",
+      "original_filename": "C08-033-Proposal drawing.dwg",
+      "file_type": "DWG",
+      "file_category": "drawing",
+      "source_application": "CAD",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PENDING"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+*===============================================================================
+*C08-033             Crane Design Input                     23/APR/2026  3:16pm
+*===============================================================================
+
+*( 1)JOBID:
+    'C08-033'
+
+*( 2)DESIGN CODE:
+*Design  ---Steel_Code---             ---Build---   Code     Seismic
+* Code   Cold       Hot      Country  Code   Year   Label     Zone
+  'WS'  'NAUS07  ' 'AISC05'  '    '  'MBMA'  '10'  'MBMA 10 ' 'B  '
+
+*( 3)DESIGN CONSTANTS:
+*                                                      Wind     Load
+* ---------------Steel_Yield----------------  Stress Strength   Ratio
+* Web   Flg  C_Sec W_Sec R_Sec  U_Sec   EP    Ratio   Ratio    Factor
+  345   345    345   345   235    235   345    1.00    1.0000  1.0000
+
+*( 4)REPORTS:
+* Input  Runway   ---Support---  Cable
+* Echo    Beam    Beam   Column  Brace
+   'I'    'Y'     'Y'     'Y'     'Y'
+
+*( 5)BUILDING LAYOUT:
+* Build   L_Expand_EW  R_Expand_EW
+*  Type   Use  Offset  Use  Offset
+  'FF-'   'Y ' 380.00  'Y ' 380.00
+
+*( 6)SURFACE SHAPE:
+*  No.     X_Coord  Y_Coord  Offset
+     4        0.0    7000.0  150.00
+          30500.0   10050.0  200.00
+          61000.0    7000.0  200.00
+          61000.0       0.0  150.00
+
+*( 7)BAY SPACING:
+* Wall   No.   ---Bay_Set---
+*  Id   Sets     Width  Quan
+    1     3     7400.0    1
+                7700.0    6
+                7400.0    1
+    2     3     7350.0    1
+                7700.0    4
+                7350.0    1
+    3     3     7400.0    1
+                7700.0    6
+                7400.0    1
+    4     3     7350.0    1
+                7700.0    4
+                7350.0    1
+    5     3     7350.0    1
+                7700.0    4
+                7350.0    1
+
+*( 8)CRANE RUNWAY LAYOUT:
+*        Crane Runway -----------------Runway_Location----------------    Frame_Offset
+*No. Id  Type  Orn      Elev    Offset      Span      Start        End    Left   Right
+  0
+
+*( 9)CRANE OPTIONS:
+*System Runway ---Support---        ----------Rail---------  Min_Crane   Set
+* Id     Beam  Beam   Column Stops  Type  Depth Conn   Dead    Space    Order
+
+*(10)CRANE SYSTEM OPTIMIZATION:
+*    --------Runway_Beam--------  -----Support_Beam-----  ---------Support_Column---------
+*Sys ------Depth-----   Deflect   -----Depth------  Defl  ---Left_Depth--  --Right_Depth--
+* Id Opt  Min   Max    Horz Vert  Opt  Min    Max   Vert  Opt  Min   Max   Opt  Min   Max
+
+*(11)CRANE RUNWAY BEAM:
+*    Sys Mem Rnwy        Member                            ----Web----   Bot_Flange    Top_Flange       Max
+* No. Id  Id Side  Locate Type  Opt  Beam       Channel    Depth Thick  Width  Thick  Width  Thick      UBL
+    0
+
+*(12)CRANE SUPPORT BEAM:
+*    Sys Member Rnwy                                 Conn
+* No. Id   Id   Side   Locate Type Opt    Part       Type
+   0
+
+*(13)CRANE SUPPORT COLUMN:
+*    Sys Member Rnwy                                       Base      Max
+* No. Id   Id   Side   Locate Type Rot   Opt  Part         Elev      UBL
+   0
+
+*(14)CRANE BRACKET:
+*       Sys Member Rnwy  ------------Bracket----------- Conn
+*  No.   Id   Id   Side    Locate Type  Opt   Part      Type
+    0
+
+*(15)CRANE STOP:
+*    Sys Member Rnwy                                Conn
+* No. Id   Id   Side   Locate Type Opt   Part       Type
+   0
+
+*(16)CRANE MEMBER:
+*     Sys                          --Wheel_Base--
+*No.  Id  Id     Start       End      Out      In
+  0
+
+*(17)CRANE LOAD:
+*                                                                Vertical_Impact
+*     Sys               --------------Wheel_Loads-------------    Frame    Beam   Overload Service    No.
+*No.  Id  Id  Capacity  Bridge  Hoist  Vertical  Lateral  Long   Factor  Factor    Factor    Class  Cycles
+  0
+
+*(18)INDEPENDENT DIAGONAL BRACING:
+*             Support_Beam  --------Runway_Brace---------
+*System  Rnwy    Brace      Brace Brace    No.
+*  Id    Side    Type       Type   Opt    Bays     Bay_Id
+
+*(19)DESIGN CODE OPTIONS:
+*No.   Event                         Condition
+  0
+
+* Code file used:
+*   MBMA.10N                                                                        

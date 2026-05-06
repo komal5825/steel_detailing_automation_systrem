@@ -1,0 +1,16 @@
+*(12) ROOF DRAWING OPTIONS
+*
+*Roof
+* Dwg   Contents  Call-Out  Member  Trim   Angle  List Panel   Gen
+* Id     Option   Details   Table   Table  Table   Length    Notes   Logo
+   1     'FO '     'Y '     'Y'     '6'    'Y'      'Y '     'N ' 'N'  .. RoofDwg-1
+   2     'SO '     'Y '     'Y'     '6'    'Y'      'N '     'N ' 'N'  .. RoofDwg-2
+   3     'FO '     'N '     'N'     '6'    'Y'      'N '     'N ' 'N'  .. RoofDwg-3
+
+*(15) RIGID FRAME DRAWING OPTIONS
+*
+* RF
+* Dwg  Content  Call-Out Member  Bolt   General
+* Id   Option   Detail   Table   Table   Notes   Logo
+   1    'FF '    'Y '     'Y'     'Y '    'N ' 'N' .. RFDwg-1
+

@@ -1,0 +1,170 @@
+*( 1)JOB IDENTIFICATION:
+*   Job Id
+  'C163-027 Saswad'
+
+*( 4)BASE OPTIONS:
+*  Angle   Channel   Seal   Angle/Seal
+   'Y'      'N'      'NHA--'      'N'
+   'Y'      'N'      'NHA--'      'N'
+   'Y'      'N'      'NHA--'      'N'
+   'Y'      'N'      'NHA--'      'N'
+
+*( 5)STEEL YIELD:
+*  -------------Steel_Yield--------------    Max
+*                Wall  Roof  Flange   Web    Stress
+*  Hot   Cold   Panel  Panel  Plate  Plate   Ratio
+   250.0  350.0   250.0   250.0   350.0   350.0   1.00
+
+*( 6)DEFLECTION LIMITS:
+*  EW   --EW_RAF--  Wall  --Purlin--  Wall  Roof_Panel  Rigid_Frame Wind Rigid_Frame Wind_Frame -Total_Vertical-
+*  Col  Live  Wind  Girt  Live  Wind Panel  Live  Wind  Horz  Live  Bent Crane Seism   Seismic  Purlin   EW   RF
+   120   180   150    90   180   120    90   180   120   100   180    60   100    50    50           0    0    0
+
+*( 7)BUILDING CODE:
+* Wind Des Code  Hot   Cold      Exposure/Code                   Closure  Seismic   Importance  Column_Wind
+* Code Typ Year  Ver    Ver     (B/C:CCode:Code Lbl:Code File)    (O/C)    Zone     Seis  Wind  EW     SW 
+ 'MBMA:WS' '10:AISC05:NAUS07  '  'B  :    :MBMA 10 :MBMA.10     '  'C '    'B '      1.00  1.00  'YY'   'YY'
+
+*( 8)BUILDING LOADS:
+*  Dead    Live    Snow   Colat.  Wind     Load
+*  Load    Load    Load    Load   Speed    Reduce Wind10  Wind30   Sa02   Sa05   Sa10   Sa20  Temp
+   0.100    0.570   0.000   0.050  140.400    'N'   0.000   0.000  0.0000 0.1600 0.0000 1.0000   20
+
+*( 9)BUILDING SHAPE:
+* Build   Build     Build    L_Eave   R_Eave   Peak     L_Roof
+* Type    Width    Length    Height   Height   Offset   Slope
+ 'FF-S'      12000    52000      7600     7600    6000  1.2000
+
+*(10)EXPANDABLE ENDWALL/FLUSH WALL:
+* -L_Expand_EW-  -R_Expand_EW-  Flush_Wall  Wall
+* Use    Offset  Use    Offset  Use  Depth  Same
+ 'YE :-'    365 'YE :-'    365  'N'      0  'Y'
+
+*(12)WALL BAY SPACING:
+*  Wall   Sets     Bay     No.
+*   Id    Bays    Width    Bays
+     1    1     6000    2
+     2    3     7250    1
+               7500    5
+               7250    1
+     3    1     6000    2
+     4    3     7250    1
+               7500    5
+               7250    1
+     5    3     7250    1
+               7500    5
+               7250    1
+
+*(13)WALL OPENINGS:
+* Wall   No.   Bay                                       Sill      Base  Panel
+*  Id   Open   Id     Width   Height   Offset   Type   Height      Elev   Opt
+    1    1     2         3650    6000    3000     51         0        0      'Y'
+    2    1     5         3650    6000    3000     51         0        0      'Y'
+    3    0
+    4    0
+*(14)ENDWALL FRAMING:
+* Wall     Corner_Column     Interior_Column   ----Rafter---     Splice
+*  Id   Type  Rot    Depth    Type    Depth    Type    Depth      Type
+    1   'W   :-:-'        0   'W   '        0  'W   '          0   'M :M '
+    3   'W   :-:-'        0   'W   '        0  'W   '          0   'M :M '
+
+*(16)BASE ELEVATION:
+*  -----Base_Elevation-------
+*    Endwalls       Sidewalls
+*  Left   Right   Front   Back
+      0      0      0      0
+
+*(17)WALL GIRTS:
+* Wall  Girt  Flange_Brace                      Set      Set
+*  Id   Type   Use  Supply   Offset   Project   Depth    Lap
+    1   'ZB'   'Y'    'Y'         0       230         0         0
+    2   'ZB'   'Y'    'Y'         0       230         0         0
+    3   'ZB'   'Y'    'Y'         0       230         0         0
+    4   'ZB'   'Y'    'Y'         0       230         0         0
+
+*(21)WALL PANEL DATA:
+*                   Wall       ---Trim_Color---    Screw   -------Insulation-----  Thermal  Panel
+* Part        Thk   Color    Eave  Corner   Jamb    Type   Use Type   Thick  Wire   Block    Rot
+  '45250 .5'   0.50  'A2--'  'HA--' 'HA--'  'HA--'  'M--'  'N' '--'    0.00   'N'    0.0000   '-'
+  '45250 .5'   0.50  'A2--'  'HA--' 'HA--'  'HA--'  'M--'  'N' '--'    0.00   'N'    0.0000   '-'
+  '45250 .5'   0.50  'A2--'  'HA--' 'HA--'  'HA--'  'M--'  'N' '--'    0.00   'N'    0.0000   '-'
+  '45250 .5'   0.50  'A2--'  'HA--' 'HA--'  'HA--'  'M--'  'N' '--'    0.00   'N'    0.0000   '-'
+
+*(22)ROOF PANEL DATA:
+*                   Roof     Gable  Screw  -----Insulation-----  -------------Standing_Seam-------------
+* Part        Thk   Color    Color  Type   Use Type  Thick Wire  Use  Type  Clip   Seam Type       Clamp  Thermal_Block
+  '45250 .5'  0.50  'A3--'   'HA--' 'M--'  'N' '--'   0.00  'N'  'N'  '--'  0.00  '---------------' 'N'    0.0000
+
+*(23)RIGID FRAMES:
+* No_Diff  Frame  Frame  Load     --Frame_Shape--  Frame  Frame  Frame_Line
+* Frames    Id    Type   Width    Col/ConL:R  Raf   Symm    Quan     Id_No.
+     2       1    'RF-'     4500  'T:P :P '   'T '   'S'      2      1   8 
+             2    'RF-'     7500  'T:P :P '   'T '   'S'      6      2   3   4   5   6   7 
+
+*(24)RIGID FRAME INTERIOR COLUMNS:
+* Frame  Column  Column  Column   No.       Column
+*  Id    Typ/Con Rot/Shp  Elev   Columns   Location
+    1     'WPP'    'YC'         0   1          6000
+    2     '-P-'    'N-'         0   0 
+
+*(25)WIND FRAMING:
+* Wall  Panel  Diagonal  Wind   Wind   Weak_Axis  Brace
+*  Id   Shear  Bracing   Bent  Column   Bending   Option    Height
+    1    'N'     'N'     'N'     'N'     'N'      '--'         0
+    2    'N'     'R'     'N'     'N'     'N'      '--'         0
+    3    'N'     'N'     'N'     'N'     'N'      '--'         0
+    4    'N'     'R'     'N'     'N'     'N'      '--'         0
+    5    'N'     'R:N'     'N'     'N'     'N'      '--'         0
+
+*(26)WIND BRACING LOCATION:
+* Wall  No.    Bay
+*  Id   Bays   Id
+    1     0   
+    2     3    1 4 8
+    3     0   
+    4     3    1 4 8
+    5     3    1 4 8
+
+*(30)GUTTERS & DOWNSPOUTS:
+*  Gutter_Length      No. Downspouts     -----Color-----
+*  Front_SW  Back_SW  Front_SW  Back_SW  Gutter Downspout
+   52000     52000    10        10       '----E' '----'
+
+*(38)LINER PANELS:
+*     Loc          -----Location-----  ---------------Panel----------------  Liner_Trim
+* No.  Id   Use      Start        End   Part         Thick    Yield   Color  Use  Color   Opt    Height
+    0
+
+*(66)SOLDIER COLUMN FRAMING:
+* Wall  --Soldier_Column--  --Soldier_Rafter--  --Bracing--    Eave  Ext_Ev
+*  Id   Type   Depth   Opt  Type   Depth   Opt  Type   Loc      Opt     Opt
+    2   '--'        0  ' '  '--'        0  '4'  'N '        0   '-'     '-'
+    4   '--'        0  ' '  '--'        0  '4'  'N '        0   '-'     '-'
+
+*(67)CRANE RUNWAY LAYOUT:
+*No. Sys Crane Runway -----------------Runway Location----------------
+*Sys Id  Type  Orn    Elev     Offset     Span       Start      End       
+  1  1   'TG'  'L'     6100      1100       9800           0      52000
+
+*(68)CRANES OPTIONS:
+*System Runway  ---Support---         --Bracket--  ----------Rail---------  RF Vert.  Min Crane  Overload
+* Id     Beam   Beam   Column  Stops  Left  Right  Type  Depth Conn  Dead    Impact     Space     Factor
+  1      'Y-'   'N-'   'N-'    'N-'   'Y-'  'Y-'   'R-'    50  'H'   30.0     'Y'           0      'N'
+
+
+*(79)PARTIAL WALL LAYOUT:
+*        Wall      --Bay_Id--  ----Offset----  -----Height-----   --Attach_Type--  ---Jamb--    Full  Deflect_Limit
+* No. Id  Id  Use  Start  End   Start     End   Bottom      Top   Bottom      Top  Type  Opt    Load   Girt   Panel
+   4   1   1  'PO'   1     2        0       0        0     3000   '-:---' '-:1--'  '-'   '-'    'NY'     90      0
+       2   2  'PO'   1     7        0       0        0     3000   '-:---' '-:1--'  '-'   '-'    'NY'     90      0
+       3   3  'PO'   1     2        0       0        0     3000   '-:---' '-:1--'  '-'   '-'    'NY'     90      0
+       4   4  'PO'   1     7        0       0        0     3000   '-:---' '-:1--'  '-'   '-'    'NY'     90      0
+
+*(80)PARTIAL WALL PANEL & TRIM:
+*    --------Panel-----------   -----------Trim----------   Screw  ----Insulation-----  Panel
+*Id  Part        Color    Opt   Base   LeftRghtJamb   Top   Type   Use Type Thick Wire   Rot
+  1 '--------'  '----'   '-N'  '----' '------------' '----' '---'  '-' '--'     0  '-'   '-'
+  2 '--------'  '----'   '-N'  '----' '------------' '----' '---'  '-' '--'     0  '-'   '-'
+  3 '--------'  '----'   '-N'  '----' '------------' '----' '---'  '-' '--'     0  '-'   '-'
+  4 '--------'  '----'   '-N'  '----' '------------' '----' '---'  '-' '--'     0  '-'   '-'
+

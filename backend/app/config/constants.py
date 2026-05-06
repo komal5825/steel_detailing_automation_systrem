@@ -3,6 +3,7 @@ from enum import Enum
 class FileType(str, Enum):
     STAAD = "STAAD"
     MBS = "MBS"
+    IN_FILE = "IN_FILE"
     ETABS = "ETABS"
     PROTASTEEL = "PROTASTEEL"
     DWG = "DWG"

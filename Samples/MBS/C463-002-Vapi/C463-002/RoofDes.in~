@@ -1,0 +1,569 @@
+*( 1)JOBID:
+    'C463-002'
+
+*( 2)PROGRAM OPTIONS:
+*    Run     Run     Run     Lap
+*   Purlin  Panel   Brace   Stiff
+     'Y'     'Y'     'Y'     0.50
+
+*( 3)DESIGN CODE:
+*Design  ---Steel_Code---             ---Build---   Code     Seismic
+* Code   Cold       Hot      Country  Code   Year   Label     Zone
+  'WS'  'NAUS07  ' 'AISC05'  '    '  'MBMA'  '10'  'MBMA 10 ' 'C  '
+
+*( 4)DESIGN CONSTANTS:
+*                            ---Strength_Factor---
+*  ------Stress_Ratio------          ---Seismic---
+*  Purlin Panel  Wind_Frame   Wind   Frame   Brace
+   1.0000  1.00      1.00    1.000   1.000   1.000
+
+*( 5)STEEL YIELDS:
+* Web   Flg  C_Sec  W_Sec  R_Sec  P_Sec  T_Sec  U_Sec    EP     BP
+  345   345    345    345    235    345    317    235   345    345
+
+*( 6)DEFLECTION LIMITS:
+*------Purlin-----   ----Extension---  ----Gable_Ext----  Facia  ---Panel---  Facia  Wind_Frame
+*Live   Wind Total   Live  Wind Total   Live  Wind Total   Girt   Live  Wind  Panel  Wind  Seis
+ 180.0 120.0   0.0  150.0 150.0 120.0   75.0  75.0  60.0  120.0  180.0 120.0  120.0  60.0  50.0
+
+*( 7)REPORTS:
+*   Input   Roof   Eave   Roof   Cable  Roof
+*   Echo   Purlin  Strut  Panel  Brace  Open
+     'Y'     'Y'    'Y'    'Y'    'Y'    'Y'
+
+*( 8)BUILDING LAYOUT:
+*                            L_Expand_EW  R_Expand_EW  Column
+*Type      Width    Length   Use  Offset  Use  Offset   Opt
+'FF-'    12800.0   30500.0  'Y '  390.00 'Y '  390.00   '-'
+
+*( 9)WALL LAYOUT:
+*                           -------Wall-------
+* No. Id  Use     Type Opt     Start    Length   Open
+   5  1  'LEFT  ' '-'  '-'       0.0   12800.0   'N'
+      2  'FRONT ' '-'  '-'       0.0   30500.0   'N'
+      3  'RIGHT ' '-'  '-'       0.0   12800.0   'N'
+      4  'BACK  ' '-'  '-'       0.0   30500.0   'N'
+      5  'ROOF  ' '-'  '-'       0.0   30500.0   'N'
+
+*(10)SURFACE SHAPE:
+* No.    X_Coord  Y_Coord  Opt
+   4         0.0   9100.0  '-'
+          6400.0   9740.0  '-'
+         12800.0   9100.0  '-'
+         12800.0      0.0  '-'
+
+*(11)WALL BAY SPACING:
+* Wall     No.   ---Bay_Set---
+*  Id     Sets     Width  Quan
+    1       2     7685.0    1
+                  5115.0    1
+    2       4     8535.0    1
+                  8210.0    1
+                  6715.0    1
+                  7040.0    1
+    3       2     5115.0    1
+                  7685.0    1
+    4       4     7040.0    1
+                  6715.0    1
+                  8210.0    1
+                  8535.0    1
+    5       4     8535.0    1
+                  8210.0    1
+                  6715.0    1
+                  7040.0    1
+
+*(12)WALL OPENINGS:
+* Wall         Bay                              
+*  Id    No.   Id    Offset     Width   HeightL   HeightR  Type  Option
+    1     1     1     843.0    6000.0    7000.0    7000.0    1     'N'
+    2     1     3    1358.0    4000.0    4000.0    4000.0    1     'N'
+    3     1     2    1843.0    4000.0    4000.0    4000.0    1     'N'
+    4     0
+
+*(13)PARTIAL WALLS/ WIDE OPENINGS:
+*Wall Set_Of          --Bay_Id--  ----Offset----              Total  Full_Load
+* Id   Bays  Id  Use  Start  End   Start     End    Height   Weight  Girt  Col
+   1     1    1  'P'     1     2     0.0      0.0   3000.0        0  'N'   'Y'
+   2     1    2  'P'     1     4     0.0      0.0   3000.0        0  'N'   'Y'
+   3     1    3  'P'     1     2     0.0      0.0   3000.0        0  'N'   'Y'
+   4     1    4  'P'     1     4     0.0      0.0   3000.0        0  'N'   'Y'
+
+*(14)JACK BEAM LAYOUT:
+*            --Bay_Id-
+* No.   Id   Start End   Offset   Height
+   0
+
+*(15)SURFACE EXTENSION/FRAME RECESS:
+* Surf  ---Surf_Ext---  Frame_Recess
+*  Id    Left    Right   Left    Right
+    2      0.0     0.0   390.0   390.0
+    3      0.0     0.0   390.0   390.0
+
+*(16)ENDWALL COLUMN/RAFTER:
+*Wall  L_Column  R_Column
+* Id   Type Rot  Type Rot   Rafter
+   1   '-'  'N'  '-'  'N'  '--------'
+   3   '-'  'N'  '-'  'N'  '--------'
+
+*(17)PURLINS:
+* Surf  Purlin                   --Flange_Strap--     Set   ----Set_Lap---
+*  Id    Type   Offset  Project  Out  In    Space   Depth      Ext     Int
+    2    'ZB'     0.00     0.00  'C'  'Y'  2250.0    0.00      0.0     0.0
+    3    'ZB'     0.00     0.00  'C'  'Y'  2250.0    0.00      0.0     0.0
+
+*(18)PURLIN SPACING:
+* Surf  Space    Peak      Max     Set   No.   -Purlin_Set-
+*  Id    Opt    Space    Space   Space  Sets    Space  Quan
+    2    '-'    300.0   1650.0     0.0    0
+    3    '-'    300.0   1650.0     0.0    0
+
+*(19)PURLIN SIZE:
+*Surf  Show
+* Id    Id   No.   Part
+   2     0     0
+   3     0     0
+
+*(20)REPLACEMENT PURLINS:
+*     Surf  Bay
+*No.   Id    Id   Id  Part
+   0
+
+*(21)EAVE STRUT:
+*Wall
+* Id   Type  Rot  Opt   No.   Part
+   2   'ZB'  'O'  '-'    0
+   4   'ZB'  'O'  '-'    0
+
+*(22)WALL GIRT:
+*Wall  Girt   Girt
+* Id   Type   Part       Offset    Proj
+   1   'ZB'  '200Z15  '    0.00  230.00
+   2   'ZB'  '200Z15  '    0.00  230.00
+   3   'ZB'  '200Z15  '    0.00  230.00
+   4   'ZB'  '200Z15  '    0.00  230.00
+
+*(23)GUTTER/SOLDIER COLUMN:
+*Wall  --Gutter--  Soldier_Opt
+* Id   Use  Width  Rafter Brace
+   2   'Y'   0.00    '4'   '-'
+   4   'Y'   0.00    '4'   '-'
+
+*(24)ROOF PANELS:
+*                    -----------Standing_Seam-----------  -Panel_Extend-
+* Part        Start  Type Height  Seam Type        Clamp  Front     Back
+ '45250 .5'  -125.0  '--'   0.00 '---------------'  'N'    0.00     0.00
+
+*(25)WALL PANELS:
+*Front        Back
+'45250 .5'   '45250 .5'
+
+*(26)LINER PANELS:
+*      --Bay_Id-             Flange
+*No.   Start End   Part       Opt
+  0
+
+*(27)INSULATION:
+* Use  Thick  Part
+  'N'   0.00 '--------'
+
+*(28)ROOF BRACING OPTIONS:
+*                 -----L_EW_Brace_To_Frame-----  -----R_EW_Brace_To_Frame-----
+*Panel  Diagonal  Left_Bay       Right_Bay       Left_Bay       Right_Bay
+*Shear  Bracing   Opt  Part      Opt  Part       Opt  Part      Opt  Part
+  'N'     'Y '    '-' '--------' '-' '--------'  '-' '--------' '-' '--------'
+
+*(29)ROOF DIAGONAL BRACING:
+*   Max_Pan  Brace   Each  User_Selected_Roof_Bays
+*    Shear    Type    EW   No.  Bay_Id
+     820.5  'R'       'L'   2     1  4
+                            0
+
+*(30)ROOF BRACING ATTACHMENT:
+*Wall
+* Id     No. Location
+   1      3     0.0   6400.0  12800.0 
+   3      3     0.0   6400.0  12800.0
+
+*(31)WALL/INTERIOR BRACING OPTIONS:
+*        -----------Order_Of_Selection-----------
+* Wall   Panel  Diagonal  Wind   Wind   Weak_Axis  Brace
+*  Id    Shear  Bracing   Bent  Column   Bending   Option  Height
+    2     'N'     'Y '     'N'    'N'      'N'      '--'      0.0
+    4     'N'     'Y '     'N'    'N'      'N'      '--'      0.0
+    5     'N'     'N '     'N'    'N'      'N'      '--'      0.0
+
+*(32)SIDEWALL DIAGONAL BRACING:
+* Wall    Max_Pan            User_Selected_SW_Bays
+*  Id      Shear   Type      No.  Bay_Id
+    2      820.5  'R'         2     1  4
+    4      820.5  'R'         2     1  4
+
+*(33)WIND BENTS:
+*Wall  Member  Column  Rafter  No.  Bay   Column     Rafter
+* Id    Type    Depth   Depth  Bay   Id   Part       Part
+   2    'W'       0.0     0.0    0
+   4    'W'       0.0     0.0    0
+   5    'W'       0.0     0.0    0
+
+*(34)WIND COLUMNS:
+*Wall  Member                                   Left/
+* Id    Type  Depth  Part        No.   Bay_Id   Right
+   2    'W'    0.0  '--------'    0
+   4    'W'    0.0  '--------'    0
+   5    'W'    0.0  '--------'    0
+
+*(35)WALL BRACING ATTACHMENT:
+*Wall                    --Bay_Id--                            No.   ----Level----
+* Id     No.      Id     Start  End     Elev  Connect Option  Level  Height  Strut
+   2       1       1       1     4      0.00    'F'     0       2    7280.0   'G'
+                                                                     9100.0   'E'
+   4       1       2       1     4      0.00    'F'     0       2    7280.0   'G'
+                                                                     9100.0   'E'
+
+*(36)INTERIOR DIAGONAL BRACING:
+*         Attach          User_Selected_Int_Bays
+*No.      Offset Type     No.   Bay_Id
+  0
+
+*(37)INTERIOR BRACING ATTACHMENT:
+*               --Bay_Id--            No.
+*No.    Offset  Start  End     Elev  Level  Level_Height
+   0
+
+*(38)EXTENSION LAYOUT:
+*    Ext  Wall                   --Bay_Id-   --Edge_Extend--  End_Option  End_Support Frame
+*No.  Id   Id   Type  Opt  Mount Start End     Left    Right  Left Right   Left Right  Opt
+  3    1    1   'EC'  '-'   'B'     1    1      0.0      0.0  '-'   '-'    '-'   '-'   '-'
+       2    2   'EC'  '-'   'B'     3    3      0.0      0.0  '-'   '-'    '-'   '-'   '-'
+       3    3   'EC'  '-'   'B'     2    2      0.0      0.0  '-'   '-'    '-'   '-'   '-'
+
+*(39)EXTENSION SIZE:
+*Ext ----Horizontal_Size----   ---------Vertical_Size--------  --Orient--
+*Id   Height   Width   Slope      Elev  Height  Slope Project  Beam Panel
+  1   8200.0  1500.0  10.000       0.0     0.0  0.000    0.00  '-'   '-'
+  2   5200.0  1500.0  10.000       0.0     0.0  0.000    0.00  '-'   '-'
+  3   5200.0  1500.0  10.000       0.0     0.0  0.000    0.00  '-'   '-'
+
+*(40)EXTENSION PURLINS:
+*    Ext             --Flange_Strap--    Set  ----Set_Lap---    Peak     Max     Set
+*No.  Id  Loc  Type  Out  In    Space  Depth     Ext     Int   Space   Space   Space
+  3    1  'R'  'ZB'  'C'  'Y'  2250.0   0.00     0.0     0.0   300.0  1650.0     0.0
+       2  'R'  'ZB'  'C'  'Y'  2250.0   0.00     0.0     0.0   300.0  1650.0     0.0
+       3  'R'  'ZB'  'C'  'Y'  2250.0   0.00     0.0     0.0   300.0  1650.0     0.0
+
+*(41)EXTENSION EAVE STRUTS/GUTTERS:
+*    Ext  ----Eave----  --Gutter--
+*No.  Id  Type Rot Opt  Use  Width
+  3    1  'ZB' '-' '-'  'N'   0.00
+       2  'ZB' '-' '-'  'N'   0.00
+       3  'ZB' '-' '-'  'N'   0.00
+
+*(42)EXTENSION PANELS:
+*    Ext                                ------------Standing_Seam-----------
+*No.  Id  Loc   Part       Rot   Space  Type  Height  Seam Type        Clamp
+  6    1  'R'  '45250 .5'  'N'     0.0  '--'    0.00 '---------------'  'N'
+       1  'S'  '--------'  'N'     0.0  '--'    0.00 '---------------'  'N'
+       2  'R'  '45250 .5'  'N'     0.0  '--'    0.00 '---------------'  'N'
+       2  'S'  '--------'  'N'     0.0  '--'    0.00 '---------------'  'N'
+       3  'R'  '45250 .5'  'N'     0.0  '--'    0.00 '---------------'  'N'
+       3  'S'  '--------'  'N'     0.0  '--'    0.00 '---------------'  'N'
+
+*(43)EXTENSION BRACING:
+*    Ext   Run   Max_Pan  ---Wind---  ---Seis---  Brace  User_Selected_Bays
+*No.  Id  Brace   Shear   Group Load  Group Load  Type   No.  Bay_Id
+  3    1   'N'     1094    '-'   0.33  '-'  0.04  '--'   0
+       2   'N'     1094    '-'   0.22  '-'  0.03  '--'   0
+       3   'N'     1094    '-'   0.22  '-'  0.04  '--'   0
+
+*(44)WALL BASE ELEVATION/DEAD:
+*Wall  Base   Wall   Seis  --%_Open--
+* Id   Elev   Dead   Opt   Seis  Wind
+   1    0.0  0.096   'Y'   0.00  0.00
+   2    0.0  0.096   'Y'   0.00  0.00
+   3    0.0  0.096   'Y'   0.00  0.00
+   4    0.0  0.096   'Y'   0.00  0.00
+   5    0.0  0.246   'Y'   0.00  0.00
+
+*(45)LOAD GROUPS:
+*    Group
+*No.   Id   Description
+   1  '-'  'Standard            '
+
+*(46)ROOF BASIC LOADS:
+*                                              ------Deflection------                  Wall  Seismic
+*Group Dead  Coll   Live   Snow   Rain  Basic     Load_Ratio     Bent   --Friction--   Edge  Ld_Rat
+*  Id  Load  Load   Load   Load   Load   Wind  Snow  Wind  Seis  Seis   Wind    Coef   Zone  Factor
+  '-' 0.100 0.050  0.570  0.000  0.000  0.986  1.00  1.00  1.00  1.00  0.986  0.0000   2560  1.0000
+
+*(47)WIND PRESSURE/SUCTION:
+*Group  Wind    Wind    Wind
+*  Id  Press    Suct   Suct_Roof
+  '-'  0.479  -1.065           .. Purlins
+  '-'  0.479  -1.164           .. Interior Roof Panels
+  '-'  0.395  -0.286  -0.681   .. Long Bracing, Wall Interior Zone
+  '-'  0.602  -0.424           .. Long Bracing, Wall Edge Zone
+  '-'  1.480  -0.986   0.789   .. Long Bracing, Facia/Parapet
+
+*(48)EXTENSION BASIC LOADS:
+*Group Ext
+*  Id   Id  Dead  Coll   Live   Snow  Drift  Slide  Rain
+  '-'    1 0.100 0.050  0.570  0.000  0.000  0.000 0.000
+  '-'    2 0.100 0.050  0.570  0.000  0.000  0.000 0.000
+  '-'    3 0.100 0.050  0.570  0.000  0.000  0.000 0.000
+
+*(49)EXTENSION WIND PRESSURE/SUCTION:
+*           --------------Purlin_Wind---------------  ---------------Panel_Wind---------------
+*Group Ext   Attach_Beam   Facia_Beam    Soffit_Beam   Attach_Beam    Facia_Beam   Soffit_Beam
+*  Id   Id   Press   Suct  Press   Suct  Press   Suct  Press   Suct  Press   Suct  Press   Suct
+  '-'    1   0.479 -1.366  0.000  0.000  1.366 -0.479  0.479 -1.677  0.000  0.000  1.677 -0.479
+  '-'    2   0.479 -1.366  0.000  0.000  1.366 -0.479  0.479 -1.677  0.000  0.000  1.677 -0.479
+  '-'    3   0.479 -1.366  0.000  0.000  1.366 -0.479  0.479 -1.677  0.000  0.000  1.677 -0.479
+
+*(50)ROOF EDGE & CORNER ZONES:
+*Group Wind Surf  No  Zone                   ---Purlin---   ---Panel----  Screw
+*  Id   Id   Id  Zone  Id    Width   Length  Press   Suct   Press   Suct   Suct
+  '-'    1    2    6    1      0.0      0.0   1.00   1.00    1.00   1.00   1.00 .. Interior                      
+                        3      0.0   1280.0   1.00   1.18    1.00   1.68   1.68 .. Edge_Left                     
+                        4   1280.0      0.0   1.00   1.18    1.00   1.68   1.68 .. Edge_Top                      
+                        5      0.0   1280.0   1.00   1.18    1.00   1.68   1.68 .. Edge_Right                    
+                        7   1280.0   1280.0   1.00   1.18    1.00   2.53   2.53 .. Corner_Top_Left               
+                        8   1280.0   1280.0   1.00   1.18    1.00   2.53   2.53 .. Corner_Top_Right              
+  '-'    1    3    6    1      0.0      0.0   1.00   1.00    1.00   1.00   1.00 .. Interior                      
+                        3      0.0   1280.0   1.00   1.18    1.00   1.68   1.68 .. Edge_Left                     
+                        5      0.0   1280.0   1.00   1.18    1.00   1.68   1.68 .. Edge_Right                    
+                        6   1280.0      0.0   1.00   1.18    1.00   1.68   1.68 .. Edge_Bottom                   
+                        9   1280.0   1280.0   1.00   1.18    1.00   2.53   2.53 .. Corner_Bottom_Right           
+                       10   1280.0   1280.0   1.00   1.18    1.00   2.53   2.53 .. Corner_Bottom_Left            
+  '-'    2    2    1    1      0.0      0.0   1.00   1.00    1.00   1.00   1.00 .. Interior                      
+  '-'    2    3    1    1      0.0      0.0   1.00   1.00    1.00   1.00   1.00 .. Interior
+
+*(51)ROOF EDGE & CORNER ZONES - LONGITUDINAL:
+*       EW
+*Group Wind Surf  No  Zone                   Purlin
+*  Id   Id   Id  Zone  Id    Width   Length   Suct
+  '-'    1    2    1    1      0.0      0.0   1.00   .Interior                      
+  '-'    1    3    1    1      0.0      0.0   1.00   .Interior                      
+  '-'    2    2    1    1      0.0      0.0   1.00   .Interior                      
+  '-'    2    3    1    1      0.0      0.0   1.00   .Interior
+
+*(52)EXTENSION EDGE ZONES:
+*    Group Ext        No.  Zone          ---Purlin--  ---Panel---  Screw
+*No.   Id   Id  Orn  Zone   Id   Length  Press  Suct  Press  Suct   Suct
+  3   '-'    1  'H'    1     1      0.0   1.00  1.00   1.00  1.00   1.00
+      '-'    2  'H'    1     1      0.0   1.00  1.00   1.00  1.00   1.00
+      '-'    3  'H'    1     1      0.0   1.00  1.00   1.00  1.00   1.00
+
+*(53)PURLIN LOAD COMBINATIONS - STRENGTH:
+*Surf     Load Group                        -Add_Snow-        ---Wind1---  ---Wind2---   Long_Wind  Aux_Load
+* Id  No.  Id    Id Dead  Coll  Live  Snow Drift Slide  Rain  Press  Suct  Press  Suct   EW1   EW2  Id  Coef
+   2   14   1   '-' 1.00  1.00  1.00  0.00  0.00  0.00  0.00   0.00  0.00   0.00  0.00  0.00  0.00   0  0.00
+            2   '-' 1.00  1.00  0.00  1.00  0.00  0.00  0.00   0.00  0.00   0.00  0.00  0.00  0.00   0  0.00
+            3   '-' 1.00  1.00  0.00  1.00  1.00  0.00  0.00   0.00  0.00   0.00  0.00  0.00  0.00   0  0.00
+            4   '-' 1.00  1.00  0.00  1.00  0.00  1.00  0.00   0.00  0.00   0.00  0.00  0.00  0.00   0  0.00
+            5   '-' 1.00  1.00  0.75  0.00  0.00  0.00  0.00   0.75  0.00   0.00  0.00  0.00  0.00   0  0.00
+            6   '-' 1.00  1.00  0.00  0.75  0.00  0.00  0.00   0.75  0.00   0.00  0.00  0.00  0.00   0  0.00
+            7   '-' 1.00  1.00  0.00  0.75  0.75  0.00  0.00   0.75  0.00   0.00  0.00  0.00  0.00   0  0.00
+            8   '-' 1.00  1.00  0.00  0.75  0.00  0.75  0.00   0.75  0.00   0.00  0.00  0.00  0.00   0  0.00
+            9   '-' 0.60  0.00  0.00  0.00  0.00  0.00  0.00   0.00  1.00   0.00  0.00  0.00  0.00   0  0.00
+           10   '-' 1.00  1.00  0.01  0.00  0.00  0.00  0.00   0.00  0.00   0.00  0.00  0.00  0.00   1  2.00
+           11   '-' 1.00  1.00  0.01  0.00  0.00  0.00  0.00   0.00  0.00   0.00  0.00  0.00  0.00   2  2.00
+           12   '-' 1.00  1.00  0.01  0.00  0.00  0.00  0.00   0.00  0.00   0.00  0.00  0.00  0.00   3  2.00
+           13   '-' 1.00  1.00  0.01  0.00  0.00  0.00  0.00   0.00  0.00   0.00  0.00  0.00  0.00   4  2.00
+           14   '-' 1.00  1.00  0.01  0.00  0.00  0.00  0.00   0.00  0.00   0.00  0.00  0.00  0.00   5  2.00
+   3   14   1   '-' 1.00  1.00  1.00  0.00  0.00  0.00  0.00   0.00  0.00   0.00  0.00  0.00  0.00   0  0.00
+            2   '-' 1.00  1.00  0.00  1.00  0.00  0.00  0.00   0.00  0.00   0.00  0.00  0.00  0.00   0  0.00
+            3   '-' 1.00  1.00  0.00  1.00  1.00  0.00  0.00   0.00  0.00   0.00  0.00  0.00  0.00   0  0.00
+            4   '-' 1.00  1.00  0.00  1.00  0.00  1.00  0.00   0.00  0.00   0.00  0.00  0.00  0.00   0  0.00
+            5   '-' 1.00  1.00  0.75  0.00  0.00  0.00  0.00   0.75  0.00   0.00  0.00  0.00  0.00   0  0.00
+            6   '-' 1.00  1.00  0.00  0.75  0.00  0.00  0.00   0.75  0.00   0.00  0.00  0.00  0.00   0  0.00
+            7   '-' 1.00  1.00  0.00  0.75  0.75  0.00  0.00   0.75  0.00   0.00  0.00  0.00  0.00   0  0.00
+            8   '-' 1.00  1.00  0.00  0.75  0.00  0.75  0.00   0.75  0.00   0.00  0.00  0.00  0.00   0  0.00
+            9   '-' 0.60  0.00  0.00  0.00  0.00  0.00  0.00   0.00  1.00   0.00  0.00  0.00  0.00   0  0.00
+           10   '-' 1.00  1.00  0.01  0.00  0.00  0.00  0.00   0.00  0.00   0.00  0.00  0.00  0.00   1  2.00
+           11   '-' 1.00  1.00  0.01  0.00  0.00  0.00  0.00   0.00  0.00   0.00  0.00  0.00  0.00   2  2.00
+           12   '-' 1.00  1.00  0.01  0.00  0.00  0.00  0.00   0.00  0.00   0.00  0.00  0.00  0.00   3  2.00
+           13   '-' 1.00  1.00  0.01  0.00  0.00  0.00  0.00   0.00  0.00   0.00  0.00  0.00  0.00   4  2.00
+           14   '-' 1.00  1.00  0.01  0.00  0.00  0.00  0.00   0.00  0.00   0.00  0.00  0.00  0.00   5  2.00
+
+*(54)PURLIN LOAD COMBINATIONS - DEFLECTION:
+*Surf     Load Group                        -Add_Snow-        ---Wind1---  ---Wind2---   Long_Wind  Aux_Load
+* Id  No.  Id    Id Dead  Coll  Live  Snow Drift Slide  Rain  Press  Suct  Press  Suct   EW1   EW2  Id  Coef
+   2    0
+   3    0
+
+*(55)BRACING LOAD COMBINATIONS - STRENGTH:
+*         Load Group                        -Add_Snow-         Long_Wind        Aux_Load
+*     No.  Id    Id Dead  Coll  Live  Snow Drift Slide  Rain   EW1   EW2  Seis  Id Coef
+       11   1   '-' 1.00  1.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00  0.00   0 0.00
+            2   '-' 1.00  1.00  0.00  1.00  0.00  0.00  0.00  0.00  1.00  0.00   0 0.00
+            3   '-' 1.00  1.00  0.00  1.00  1.00  0.00  0.00  1.00  0.00  0.00   0 0.00
+            4   '-' 1.00  1.00  0.00  1.00  1.00  0.00  0.00  0.00  1.00  0.00   0 0.00
+            5   '-' 1.00  1.00  0.00  1.00  0.00  1.00  0.00  1.00  0.00  0.00   0 0.00
+            6   '-' 1.00  1.00  0.00  1.00  0.00  1.00  0.00  0.00  1.00  0.00   0 0.00
+            7   '-' 1.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.70   0 0.00
+            8   '-' 1.01  1.01  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.70   0 0.00
+            9   '-' 1.01  1.01  0.75  0.00  0.00  0.00  0.00  0.00  0.00  0.52   0 0.00
+           10   '-' 1.01  1.01  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.52   0 0.00
+           11   '-' 0.59  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.70   0 0.00
+
+*(56)BRACING LOAD COMBINATIONS - DEFLECTION:
+*         Load Group                        -Add_Snow-         Long_Wind        Aux_Load
+*     No.  Id    Id Dead  Coll  Live  Snow Drift Slide  Rain   EW1   EW2  Seis  Id Coef
+        6  12   '-' 1.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00   0 0.00
+           13   '-' 1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00   0 0.00
+           14   '-' 1.00  0.00  0.50  0.00  0.00  0.00  0.00  1.00  0.00  0.00   0 0.00
+           15   '-' 1.00  0.00  0.50  0.00  0.00  0.00  0.00  0.00  1.00  0.00   0 0.00
+           16   '-' 1.00  1.00  1.00  0.00  0.00  0.00  0.00  0.50  0.00  0.00   0 0.00
+           17   '-' 1.00  1.00  1.00  0.00  0.00  0.00  0.00  0.00  0.50  0.00   0 0.00
+
+*(57)EXTENSION LOAD COMBINATIONS - STRENGTH:
+*         Load Group                        -Add_Snow-         Wind  Wind
+*     No.  Id    Id Dead  Coll  Live  Snow Drift Slide  Rain  Press  Suct
+        9   1   '-' 1.00  1.00  1.00  0.00  0.00  0.00  0.00   0.00  0.00
+            2   '-' 1.00  1.00  0.00  1.00  0.00  0.00  0.00   0.00  0.00
+            3   '-' 1.00  1.00  0.00  1.00  1.00  0.00  0.00   0.00  0.00
+            4   '-' 1.00  1.00  0.00  1.00  0.00  1.00  0.00   0.00  0.00
+            5   '-' 1.00  1.00  0.75  0.00  0.00  0.00  0.00   0.75  0.00
+            6   '-' 1.00  1.00  0.00  0.75  0.00  0.00  0.00   0.75  0.00
+            7   '-' 1.00  1.00  0.00  0.75  0.75  0.00  0.00   0.75  0.00
+            8   '-' 1.00  1.00  0.00  0.75  0.00  0.75  0.00   0.75  0.00
+            9   '-' 0.60  0.00  0.00  0.00  0.00  0.00  0.00   0.00  1.00
+
+*(58)EXTENSION LOAD COMBINATIONS - DEFLECTION:
+*         Load Group                        -Add_Snow-         Wind  Wind
+*     No.  Id    Id Dead  Coll  Live  Snow Drift Slide  Rain  Press  Suct
+        0
+
+*(59)PANEL LOAD COMBINATIONS - STRENGTH:
+*         Load Group                        -Add_Snow-        ---Wind1---  ---Wind2---  Aux_Load
+*     No.  Id    Id Dead  Coll  Live  Snow Drift Slide  Rain  Press  Suct  Press  Suct  Id  Coef
+        6   1   '-' 1.00  0.00  1.00  0.00  0.00  0.00  0.00   0.00  0.00   0.00  0.00   0  0.00
+            2   '-' 1.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00   0.00  0.00   0.00   0  0.00
+            3   '-' 1.00  0.00  0.00  1.00  1.00  0.00  0.00  0.00   0.00  0.00   0.00   0  0.00
+            4   '-' 1.00  0.00  0.00  1.00  0.00  1.00  0.00  0.00   0.00  0.00   0.00   0  0.00
+            5   '-' 1.00  0.00  0.00  0.75  0.00  0.00  0.00  0.75   0.00  0.00   0.00   0  0.00
+            6   '-' 0.60  0.00  0.00  0.00  0.00  0.00  0.00  0.00   1.00  0.00   0.00   0  0.00
+
+*(60)PANEL LOAD COMBINATIONS - DEFLECTION:
+*         Load Group                        -Add_Snow-        ---Wind1---  ---Wind2---  Aux_Load
+*     No.  Id    Id Dead  Coll  Live  Snow Drift Slide  Rain  Press  Suct  Press  Suct  Id  Coef
+        6   7   '-' 0.00  0.00  1.00  0.00  0.00  0.00  0.00   0.00  0.00   0.00  0.00   0  0.00
+            8   '-' 0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00   0.00  0.00   0.00   0  0.00
+            9   '-' 0.00  0.00  0.00  1.00  1.00  0.00  0.00  0.00   0.00  0.00   0.00   0  0.00
+           10   '-' 0.00  0.00  0.00  1.00  0.00  1.00  0.00  0.00   0.00  0.00   0.00   0  0.00
+           11   '-' 0.00  0.00  0.00  0.00  0.00  0.00  0.00  1.00   0.00  0.00   0.00   0  0.00
+           12   '-' 0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00   1.00  0.00   0.00   0  0.00
+
+*(61)AUXILIARY LOADS:
+*                         No._Add   Add_Load
+* No.  Id    Name          Combs   Id    Coef
+    5   1   'PAT_LL_1  '     2      1    0.50
+                                    2    0.50
+        2   'PAT_LL_2  '     2      2    0.50
+                                    3    0.50
+        3   'PAT_LL_3  '     2      3    0.50
+                                    4    0.50
+        4   'PAT_LL_4  '     2      1    0.50
+                                    3    0.50
+        5   'PAT_LL_5  '     2      2    0.50
+                                    4    0.50
+
+*(62)ADDITIONAL LOADS:
+*    Add  Group Surf Basic    Load Load      F                D             ----Surface----
+* No. Id    Id   Id  Load     Type  Orn     W1     W2        D1       D2     Start      End
+    4  1   '-'    0 'U_LIVE'  'D '  'L'   -0.57   -0.57      0.0   8535.0      0.0      0.0
+       2   '-'    0 'U_LIVE'  'D '  'L'   -0.57   -0.57   8535.0  16745.0      0.0      0.0
+       3   '-'    0 'U_LIVE'  'D '  'L'   -0.57   -0.57  16745.0  23460.0      0.0      0.0
+       4   '-'    0 'U_LIVE'  'D '  'L'   -0.57   -0.57  23460.0  30500.0      0.0      0.0
+
+*(63)PURLIN LAPS:
+*Surf      Data  -------Set_1-------  -------Set_2-------  -------Set_3-------
+* Id  Opt  Sets    Left   Right Quan    Left   Right Quan    Left   Right Quan
+   2  '-'   0
+   3  '-'   0
+
+*(64)PURLIN LAPS: Extensions
+*Ext       Data  -------Set_1-------  -------Set_2-------  -------Set_3-------
+* Id  Opt  Sets    Left   Right Quan    Left   Right Quan    Left   Right Quan
+   1  '-'   0
+   2  '-'   0
+   3  '-'   0
+
+*(65)PURLIN STRAPS:
+*      No.
+* Opt  Bay   Straps/Bay
+  '-'   0
+
+*(66)PURLIN STRAPS: Extensions
+*Ext   No.
+* Id   Bay   Straps/Bay
+   1    0
+   2    0
+   3    0
+
+*(67)PANEL SCREWS:
+* No.                                                 Washer
+*Zone Locate  Id  Zone    Part          Dia    Limit     Dia  -------Spacing------
+   7  'ROOF '  0 'INT '  '14x55SDS'    4.80   13.700   19.00  250.00   0.00   0.00
+      'ROOF '  0 'EDGE'  '14x55SDS'    4.80   13.700   19.00  250.00   0.00   0.00
+      'ROOF '  0 'CORN'  '14x55SDS'    4.80   13.700   19.00  250.00   0.00   0.00
+      'WALL '  0 'BASE'  '14x20SDS'    4.80   13.700   19.00  250.00   0.00   0.00
+      'EXT_R'  1 'INT '  '14x55SDS'    4.80   13.700   19.00  250.00   0.00   0.00
+      'EXT_R'  2 'INT '  '14x55SDS'    4.80   13.700   19.00  250.00   0.00   0.00
+      'EXT_R'  3 'INT '  '14x55SDS'    4.80   13.700   19.00  250.00   0.00   0.00
+
+*(68)EXPANSION JOINTS:
+*No.   Expansion_Location
+   0
+
+*(69)ADDED PURLINS:
+*          Surf  --Bay_Id--   -Surface_Offset-  ---Support---
+*No.   Id   Id   Start  End    Start       End  Opt    Locate
+   0
+
+*(70)PURLIN SYSTEMS:
+*Surf               Added_Purlins
+* Id   No.    Id    No.     Id
+   2   1       1     0
+   3   1       1     0
+
+*(71)ROOF OPENING LAYOUT:
+*        -Location-     Frame --Surface-- ----Bay----
+*No. Id  Use     Id Opt  Type Id   Offset Id   Offset    Width   Length   Ref        Dist
+  0
+
+*(72)ROOF OPENING FRAMING:
+*Open Jamb Head ----Support----  Panel        Load
+* Id  Type Type Type  Opt Depth   Opt   Load   Opt
+
+*(73)WALL LIGHT PANELS:
+*         Wall  ---Bay----  -Light_Panel-
+*   No.    Id   Id  Offset  Length Offset  Quan
+     0
+
+*(74)WEAK AXIS RIGID FRAMES:
+*     ---Frame--  Interior_Column
+*No.  Line  Type   No.    Locate
+  0
+ 
+*AUXILIARY LOAD DESCRIPTIONS:
+* Aux
+*  Id  Description
+*   1  Pattern live load                                 
+*   2  Pattern live load                                 
+*   3  Pattern live load                                 
+*   4  Pattern live load                                 
+*   5  Pattern live load                                 
+*
+*ADDITIONAL LOAD DESCRIPTIONS:
+* Add
+*  Id  Description
+*   1  Pattern live load bay 1                                     
+*   2  Pattern live load bay 2                                     
+*   3  Pattern live load bay 3                                     
+*   4  Pattern live load bay 4                                     
+*
+* Code files used:
+*   MBMA.10N                                                                        
+*   ROOFMBMA.10N Version 4.5
+
