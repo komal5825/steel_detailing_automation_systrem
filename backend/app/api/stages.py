@@ -45,21 +45,7 @@ async def get_stage_status(project_id: str, db: Session = Depends(get_db)):
         pid = UUID(project_id)
     except ValueError as exc:
         raise HTTPException(status_code=400, detail="Invalid project_id") from exc
-    stages = list_project_stages(db, pid)
-    return {
-        "project_id": project_id,
-        "stages": [
-            {
-                "stage_code": s.stage_code,
-                "status": s.status.value,
-                "started_at": s.started_at.isoformat() if s.started_at else None,
-                "completed_at": s.completed_at.isoformat() if s.completed_at else None,
-                "error_message": s.error_message,
-                "result": json.loads(s.result_json or "{}"),
-            }
-            for s in stages
-        ],
-    }
+    return _CTRL.get_pipeline_status(project_id, db=db)
 
 
 # ---------------------------------------------------------------------------
@@ -84,11 +70,10 @@ async def run_pipeline(
         raise HTTPException(status_code=400, detail="Invalid project_id") from exc
     try:
         result = _CTRL.run(project_id=project_id, from_stage=body.from_stage, to_stage=body.to_stage, db=db)
-        if result.get("pipeline_failed"):
-            # If the pipeline failed (hard failure), we return the summary but with 422
-            # to let the frontend know it stopped due to an error.
+        if result.get("pipeline_failed") or result.get("pipeline_blocked"):
+            # Return 422 for both hard failures and blocks to signal incomplete run
             raise HTTPException(status_code=422, detail={
-                "message": "Pipeline failed",
+                "message": "Pipeline failed" if result.get("pipeline_failed") else "Pipeline blocked",
                 "summary": result
             })
         return result
@@ -151,11 +136,11 @@ async def run_single_stage(
         broadcast_stage_update(pid, normalized_stage_code, "RUNNING")
         result = fn(project_id=project_id, db=db)
         
-        # Check if the single stage run resulted in a failure
+        # Check if the single stage run resulted in a failure or block
         overall = result.get("overall", "PASS")
-        if overall == "FAIL":
+        if overall in ("FAIL", "BLOCKED"):
              raise HTTPException(status_code=422, detail={
-                "message": f"Stage {normalized_stage_code} failed",
+                "message": f"Stage {normalized_stage_code} {overall}",
                 "result": result
             })
 

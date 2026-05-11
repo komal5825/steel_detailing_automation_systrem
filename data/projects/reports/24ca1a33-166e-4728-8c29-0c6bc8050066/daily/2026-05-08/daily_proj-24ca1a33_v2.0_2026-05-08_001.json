@@ -1,0 +1,176 @@
+{
+  "header": {
+    "report_type": "DAILY",
+    "date": "2026-05-08",
+    "project_uuid": "24ca1a33-166e-4728-8c29-0c6bc8050066",
+    "proposal_id": "UI-FAIL-24ca1a",
+    "project_name": "UI Failure Visibility Demo",
+    "project_status": "IN_PROGRESS",
+    "build_version": "2.0",
+    "generated_at": "2026-05-08T11:30:00.485823",
+    "generated_by": "system",
+    "report_id": "daily_proj-24ca1a33_v2.0_2026-05-08_001",
+    "sequence": 1,
+    "qc_status": "pending"
+  },
+  "execution_summary": {
+    "tasks_run": 3,
+    "rules_evaluated": 0,
+    "gates_touched": 3,
+    "reruns_triggered": 0,
+    "audit_events_today": 0,
+    "files_total": 0,
+    "files_parsed": 0,
+    "files_failed": 0
+  },
+  "lane_summary": {
+    "Lane 1 - Ingestion": {
+      "stages": [
+        "P2-01"
+      ],
+      "statuses": [
+        "PASSED"
+      ],
+      "overall": "PASSED"
+    },
+    "Lane 2 - Completeness": {
+      "stages": [
+        "P2-02"
+      ],
+      "statuses": [
+        "FAILED"
+      ],
+      "overall": "FAILED"
+    },
+    "Lane 3 - Generation": {
+      "stages": [
+        "P2-03",
+        "P2-04"
+      ],
+      "statuses": [
+        "BLOCKED",
+        "PENDING"
+      ],
+      "overall": "BLOCKED"
+    },
+    "Lane 4 - Validation": {
+      "stages": [
+        "P2-05"
+      ],
+      "statuses": [
+        "PENDING"
+      ],
+      "overall": "PENDING"
+    }
+  },
+  "stage_detail": [
+    {
+      "stage_code": "P2-01",
+      "status": "PASSED",
+      "revision": 1,
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null
+    },
+    {
+      "stage_code": "P2-02",
+      "status": "FAILED",
+      "revision": 1,
+      "started_at": null,
+      "completed_at": null,
+      "error_message": "Missing mandatory fields: F-081, F-086"
+    },
+    {
+      "stage_code": "P2-03",
+      "status": "BLOCKED",
+      "revision": 1,
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null
+    },
+    {
+      "stage_code": "P2-04",
+      "status": "PENDING",
+      "revision": 1,
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null
+    },
+    {
+      "stage_code": "P2-05",
+      "status": "PENDING",
+      "revision": 1,
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null
+    }
+  ],
+  "gate_snapshot": {
+    "P2-01 \u2013 ingestion_gate": {
+      "stage_code": "P2-01",
+      "checkpoint_label": "ingestion_gate",
+      "gate_status": "PASS",
+      "created_at": "2026-05-07T06:41:54.678621"
+    },
+    "P2-02 \u2013 completeness_gate": {
+      "stage_code": "P2-02",
+      "checkpoint_label": "completeness_gate",
+      "gate_status": "FAIL",
+      "created_at": "2026-05-07T06:41:54.678628"
+    },
+    "P2-03 \u2013 ab_gate": {
+      "stage_code": "P2-03",
+      "checkpoint_label": "ab_gate",
+      "gate_status": "PENDING",
+      "created_at": "2026-05-07T06:41:54.678631"
+    }
+  },
+  "severity_summary": {
+    "CRITICAL": 0,
+    "MAJOR": 0,
+    "MINOR": 0,
+    "release_blockers": 0
+  },
+  "top_blockers": [],
+  "manual_review_summary": {
+    "total": 0,
+    "open": 0,
+    "resolved": 0,
+    "open_items": []
+  },
+  "source_fallback_summary": {
+    "parser_runs_total": 0,
+    "parser_runs_success": 0,
+    "parser_runs_failed": 0,
+    "avg_confidence": 0,
+    "source_distribution": {}
+  },
+  "defect_summary": {
+    "total_escalations": 0,
+    "open": 0,
+    "resolved": 0,
+    "critical_open": 0,
+    "by_severity": {
+      "CRITICAL": 0,
+      "MAJOR": 0,
+      "MINOR": 0
+    }
+  },
+  "audit_events_today": [],
+  "next_day_critical_path": {
+    "blocked_stages": [
+      {
+        "stage_code": "P2-02",
+        "status": "FAILED",
+        "error": "Missing mandatory fields: F-081, F-086"
+      },
+      {
+        "stage_code": "P2-03",
+        "status": "BLOCKED",
+        "error": null
+      }
+    ],
+    "critical_missing": [],
+    "action_required": true
+  }
+}

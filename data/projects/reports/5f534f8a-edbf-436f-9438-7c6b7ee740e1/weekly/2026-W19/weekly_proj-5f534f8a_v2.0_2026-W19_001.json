@@ -1,0 +1,63 @@
+{
+  "header": {
+    "report_type": "WEEKLY",
+    "week": "2026-W19",
+    "week_start": "2026-05-04",
+    "week_end": "2026-05-10",
+    "project_uuid": "5f534f8a-edbf-436f-9438-7c6b7ee740e1",
+    "project_name": "Partial Success Test",
+    "proposal_id": "WARN-TEST-5f534f",
+    "build_version": "2.0",
+    "generated_at": "2026-05-08T11:45:02.336402",
+    "generated_by": "system",
+    "report_id": "weekly_proj-5f534f8a_v2.0_2026-W19_001",
+    "sequence": 1,
+    "qc_status": "pending"
+  },
+  "throughput": {
+    "stages_completed": 2,
+    "stages_passed": 1,
+    "stages_failed_or_blocked": 1,
+    "reruns_triggered": 0,
+    "close_discipline_pct": 50.0
+  },
+  "gate_trend": {
+    "total_gate_events": 0,
+    "gate_pass": 0,
+    "gate_fail": 0,
+    "rerun_triggered": 0
+  },
+  "validation_summary": {
+    "CRITICAL": 87,
+    "MAJOR": 0,
+    "MINOR": 41,
+    "release_blockers": 87,
+    "total_rules_evaluated": 128
+  },
+  "recurring_blockers": [],
+  "parser_stability": {
+    "total_runs": 0,
+    "success": 0,
+    "failed": 0,
+    "stability_pct": 0,
+    "unstable_parsers": []
+  },
+  "fallback_usage": {
+    "fallback_events": 0,
+    "details": []
+  },
+  "defect_summary": {
+    "opened": 0,
+    "resolved": 0,
+    "sla_breaches": 0,
+    "net_open": 0
+  },
+  "audit_event_counts": {
+    "CHECKPOINT_CREATED": 2,
+    "PIPELINE_STARTED": 1,
+    "STAGE_STARTED": 1,
+    "STAGE_BLOCKED": 1,
+    "PIPELINE_COMPLETED": 1
+  },
+  "top_10_improvement_areas": []
+}

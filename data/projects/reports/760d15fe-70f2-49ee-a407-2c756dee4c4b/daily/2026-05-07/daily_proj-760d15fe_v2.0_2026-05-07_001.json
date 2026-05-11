@@ -1,0 +1,198 @@
+{
+  "header": {
+    "report_type": "DAILY",
+    "date": "2026-05-07",
+    "project_uuid": "760d15fe-70f2-49ee-a407-2c756dee4c4b",
+    "proposal_id": "C163-027",
+    "project_name": "MBS",
+    "project_status": "CREATED",
+    "build_version": "2.0",
+    "generated_at": "2026-05-07T11:46:45.219713",
+    "generated_by": "system",
+    "report_id": "daily_proj-760d15fe_v2.0_2026-05-07_001",
+    "sequence": 1,
+    "qc_status": "pending"
+  },
+  "execution_summary": {
+    "tasks_run": 0,
+    "rules_evaluated": 0,
+    "gates_touched": 0,
+    "reruns_triggered": 0,
+    "audit_events_today": 0,
+    "files_total": 1781,
+    "files_parsed": 54,
+    "files_failed": 2
+  },
+  "lane_summary": {
+    "Lane 1 - Ingestion": {
+      "stages": [
+        "P2-01"
+      ],
+      "statuses": [
+        "PENDING"
+      ],
+      "overall": "PENDING"
+    },
+    "Lane 2 - Completeness": {
+      "stages": [
+        "P2-02"
+      ],
+      "statuses": [
+        "PENDING"
+      ],
+      "overall": "PENDING"
+    },
+    "Lane 3 - Generation": {
+      "stages": [
+        "P2-03",
+        "P2-04"
+      ],
+      "statuses": [
+        "PENDING",
+        "PENDING"
+      ],
+      "overall": "PENDING"
+    },
+    "Lane 4 - Validation": {
+      "stages": [
+        "P2-05"
+      ],
+      "statuses": [
+        "PENDING"
+      ],
+      "overall": "PENDING"
+    }
+  },
+  "stage_detail": [
+    {
+      "stage_code": "P2-01",
+      "status": "PENDING",
+      "revision": 1,
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null
+    },
+    {
+      "stage_code": "P2-02",
+      "status": "PENDING",
+      "revision": 1,
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null
+    },
+    {
+      "stage_code": "P2-03",
+      "status": "PENDING",
+      "revision": 1,
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null
+    },
+    {
+      "stage_code": "P2-04",
+      "status": "PENDING",
+      "revision": 1,
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null
+    },
+    {
+      "stage_code": "P2-05",
+      "status": "PENDING",
+      "revision": 1,
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null
+    }
+  ],
+  "gate_snapshot": {},
+  "severity_summary": {
+    "CRITICAL": 0,
+    "MAJOR": 0,
+    "MINOR": 0,
+    "release_blockers": 0
+  },
+  "top_blockers": [],
+  "manual_review_summary": {
+    "total": 0,
+    "open": 0,
+    "resolved": 0,
+    "open_items": []
+  },
+  "source_fallback_summary": {
+    "parser_runs_total": 318,
+    "parser_runs_success": 306,
+    "parser_runs_failed": 12,
+    "avg_confidence": 81.8,
+    "source_distribution": {
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\BOMext1.DXF": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\BOMext2.DXF": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\CompDes.Dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\COMPDET.Dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\CraneDes.Dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\CraneDet.Dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\DesCalc.Dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\DesCalc2.Dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\DesCalc3.Dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\DesCtrl.Dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\EwDes-L.Dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\EwDes-R.Dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\EWDET.Dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\FLOORDET.Dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\FramSum.Dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\PARTDET.Dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\RfDes-1.Dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\RfDes-2.Dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\RfDet-1.Dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\RfDet-2.Dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\RoofDes.Dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\SwDes-B.Dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\SwDes-F.Dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\WINDFRM.Dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\RfDes-3.Dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\3DBuild.dxf": 18,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\AnDwg-1.dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\AnDwg-2.dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\AnDwg-3.dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\BrcDwg.dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\DtDwg-1.dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\DtDwg-2.dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\EwDwg-L.dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\EwDwg-R.dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\LayOut.Dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\RfDwg-1.dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\RfDwg-1A.dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\RfDwg-1B.dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\RfDwg-2.dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\RfDwg-2A.dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\RfDwg-2B.dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\RfDwg-2C.dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\RoofDwg.dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\RoofDwg2.dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\RoofDwg3.dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\RoofZone1.Dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\RoofZone2.Dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\SwDwg-B.dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\SwDwg-F.dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\ZoneDwg.dxf": 30,
+      "..\\data\\projects\\760d15fe-70f2-49ee-a407-2c756dee4c4b\\input\\0bb5d020-0235-4099-ba88-9b061cb50651_extracted\\ZoneWind.dxf": 30
+    }
+  },
+  "defect_summary": {
+    "total_escalations": 0,
+    "open": 0,
+    "resolved": 0,
+    "critical_open": 0,
+    "by_severity": {
+      "CRITICAL": 0,
+      "MAJOR": 0,
+      "MINOR": 0
+    }
+  },
+  "audit_events_today": [],
+  "next_day_critical_path": {
+    "blocked_stages": [],
+    "critical_missing": [],
+    "action_required": false
+  }
+}

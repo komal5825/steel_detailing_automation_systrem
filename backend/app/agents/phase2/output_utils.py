@@ -6,13 +6,13 @@ from uuid import UUID
 
 from sqlalchemy.orm import Session
 
-from app.config.settings import settings
 from app.db.models import ExtractedFieldValue
+from app.utils.project_paths import get_writable_project_data_root
 
 
 def project_processed_dir(project_id: UUID) -> Path:
     """Returns the Processed/ directory for a project, creating it if needed."""
-    path = Path(settings.project_data_root) / str(project_id) / "Processed"
+    path = get_writable_project_data_root() / str(project_id) / "Processed"
     path.mkdir(parents=True, exist_ok=True)
     return path
 
@@ -25,7 +25,7 @@ def write_processed_json(project_id: UUID, filename: str, payload: dict) -> Path
 
 
 def project_output_dir(project_id: UUID, output_type: str) -> Path:
-    root = Path(settings.project_data_root)
+    root = get_writable_project_data_root()
     path = root / str(project_id) / "outputs" / output_type
     path.mkdir(parents=True, exist_ok=True)
     return path

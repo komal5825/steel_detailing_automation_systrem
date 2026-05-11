@@ -71,8 +71,12 @@ export default function FileUploadPanel({ projectId, onUpload, onClearAll, onDel
         setUploadProgress(percentCompleted);
       });
 
-      // Map response data to internal state
-      const uploadedFiles = response.data || [];
+      // Support both direct array response and wrapped { uploaded: [...] } shape.
+      const uploadedFiles = Array.isArray(response)
+        ? response
+        : Array.isArray(response?.uploaded)
+        ? response.uploaded
+        : [];
       
       setFiles((prev) =>
         prev.map((item) => {

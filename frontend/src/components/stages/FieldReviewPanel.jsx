@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
-import { AlertCircle, CheckCircle2, Save, Send, ShieldAlert } from 'lucide-react';
+import { CheckCircle2, Play, Save, Send, ShieldAlert } from 'lucide-react';
 import { stagesApi } from '../../api/stages';
 import LoadingSpinner from '../shared/LoadingSpinner';
 
@@ -28,6 +28,15 @@ export default function FieldReviewPanel({ projectId, stageCode }) {
     mutationFn: () => stagesApi.approveStage(projectId, stageCode),
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: ['stages', projectId] });
+    },
+  });
+
+  const resumeMutation = useMutation({
+    mutationFn: (fromStage) => stagesApi.runPipeline(projectId, fromStage),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ['stages', projectId] });
+      qc.invalidateQueries({ queryKey: ['pipeline', projectId] });
+      qc.invalidateQueries({ queryKey: ['fields', projectId, stageCode] });
     },
   });
 
@@ -62,6 +71,20 @@ export default function FieldReviewPanel({ projectId, stageCode }) {
       note: 'User override via FieldReviewPanel'
     }));
     await overrideMutation.mutateAsync(payload);
+    setIsSubmitting(false);
+  };
+
+  const applyAndResume = async () => {
+    setIsSubmitting(true);
+    const payload = Object.entries(overrides).map(([code, value]) => ({
+      field_code: code,
+      value: value,
+      note: 'User override via FieldReviewPanel'
+    }));
+    if (payload.length > 0) {
+      await overrideMutation.mutateAsync(payload);
+    }
+    await resumeMutation.mutateAsync(stageCode);
     setIsSubmitting(false);
   };
 
@@ -100,14 +123,26 @@ export default function FieldReviewPanel({ projectId, stageCode }) {
           ))}
         </div>
 
-        <div className="flex justify-end pt-2">
-          <button
-            onClick={submitOverrides}
-            disabled={Object.keys(overrides).length === 0 || isSubmitting}
-            className="flex items-center gap-2 rounded-md bg-amber-600 px-4 py-2 text-xs font-semibold text-white hover:bg-amber-700 disabled:opacity-50"
-          >
-            <Save size={14} /> {isSubmitting ? 'Saving...' : 'Apply Overrides'}
-          </button>
+        <div className="flex items-center justify-between pt-2">
+          <p className="text-xxs text-amber-800">
+            Resume control: pipeline will restart from <span className="font-mono font-bold">{stageCode}</span> after applying values.
+          </p>
+          <div className="flex gap-2">
+            <button
+              onClick={submitOverrides}
+              disabled={Object.keys(overrides).length === 0 || isSubmitting}
+              className="flex items-center gap-2 rounded-md bg-amber-600 px-4 py-2 text-xs font-semibold text-white hover:bg-amber-700 disabled:opacity-50"
+            >
+              <Save size={14} /> {isSubmitting ? 'Saving...' : 'Apply Overrides'}
+            </button>
+            <button
+              onClick={applyAndResume}
+              disabled={isSubmitting || resumeMutation.isPending}
+              className="flex items-center gap-2 rounded-md bg-blue-700 px-4 py-2 text-xs font-semibold text-white hover:bg-blue-800 disabled:opacity-50"
+            >
+              <Play size={14} /> {resumeMutation.isPending ? 'Resuming...' : 'Apply + Resume'}
+            </button>
+          </div>
         </div>
       </div>
     </div>

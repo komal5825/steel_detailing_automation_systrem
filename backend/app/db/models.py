@@ -46,9 +46,11 @@ class StageStatus(str, enum.Enum):
     PENDING = "PENDING"
     RUNNING = "RUNNING"
     PASSED = "PASSED"
+    PASS_WITH_WARNINGS = "PASS_WITH_WARNINGS"
     FAILED = "FAILED"
-    AWAITING_INPUT = "AWAITING_INPUT"
+    BLOCKED = "BLOCKED"
     SKIPPED = "SKIPPED"
+    AWAITING_INPUT = "AWAITING_INPUT"
 
 
 class FileProcessingStatus(str, enum.Enum):
@@ -223,3 +225,29 @@ class AuditEventLog(Base):
     field_code = Column(String(100))
     detail = Column(Text)   # JSON
     created_at = Column(DateTime, default=datetime.utcnow)
+
+
+class ReportType(str, enum.Enum):
+    DAILY = "DAILY"
+    WEEKLY = "WEEKLY"
+    MONTHLY = "MONTHLY"
+    BM = "BM"
+
+
+class ReportRecord(Base):
+    """Stores metadata and payload for every generated automated report."""
+    __tablename__ = "report_records"
+    id            = Column(GUID(), primary_key=True, default=uuid.uuid4)
+    project_id    = Column(GUID(), ForeignKey("projects.id"), nullable=True)
+    report_type   = Column(SAEnum(ReportType), nullable=False)
+    report_date   = Column(String(20), nullable=False)   # YYYY-MM-DD / YYYY-WNN / YYYY-MM
+    sequence      = Column(Integer, default=1)            # 001, 002 … same day/run counter
+    report_id_str = Column(String(200))                  # named ID: daily_proj-uuid_v2.0_2026-05-06_001
+    report_data   = Column(Text)                          # JSON payload
+    generated_at  = Column(DateTime, default=datetime.utcnow)
+    generated_by  = Column(String(100), default="automated_reporting_layer")
+    build_version = Column(String(50), default="2.0")
+    export_path   = Column(String(500))                  # path to primary JSON file on disk
+    qc_status     = Column(String(20), default="pending") # pending / approved / rejected
+    signed_off_by = Column(String(100))
+    signed_off_at = Column(DateTime)

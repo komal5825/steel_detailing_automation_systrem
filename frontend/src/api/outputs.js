@@ -23,7 +23,9 @@ export const outputsApi = {
   getAgentFiles: (uuid, agentCode) =>
     client.get(`/outputs/${uuid}/files/${agentCode}`),
 
+  getAuditEvents: (uuid, limit = 200) =>
+    client.get(`/outputs/${uuid}/audit-events?limit=${limit}`),
+
   processedExportUrl: (uuid, filename, format = 'pdf') =>
     `${apiRoot()}/api/outputs/${uuid}/processed/export/${filename}/${format}`,
 };
-

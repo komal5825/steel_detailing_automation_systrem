@@ -1,0 +1,114 @@
+{
+  "header": {
+    "report_type": "WEEKLY",
+    "week": "2026-W19",
+    "week_start": "2026-05-04",
+    "week_end": "2026-05-10",
+    "project_uuid": "bac40ea8-441c-4298-8972-dc3b9c7dc193",
+    "project_name": "STAAD",
+    "proposal_id": "C007-117",
+    "build_version": "2.0",
+    "generated_at": "2026-05-08T11:45:02.150642",
+    "generated_by": "system",
+    "report_id": "weekly_proj-bac40ea8_v2.0_2026-W19_001",
+    "sequence": 1,
+    "qc_status": "pending"
+  },
+  "throughput": {
+    "stages_completed": 0,
+    "stages_passed": 0,
+    "stages_failed_or_blocked": 0,
+    "reruns_triggered": 0,
+    "close_discipline_pct": 0
+  },
+  "gate_trend": {
+    "total_gate_events": 0,
+    "gate_pass": 0,
+    "gate_fail": 0,
+    "rerun_triggered": 0
+  },
+  "validation_summary": {
+    "CRITICAL": 375,
+    "MAJOR": 0,
+    "MINOR": 9,
+    "release_blockers": 375,
+    "total_rules_evaluated": 384
+  },
+  "recurring_blockers": [
+    {
+      "field_code": "F-001",
+      "occurrences": 3
+    },
+    {
+      "field_code": "F-003",
+      "occurrences": 3
+    },
+    {
+      "field_code": "F-009",
+      "occurrences": 3
+    },
+    {
+      "field_code": "F-010",
+      "occurrences": 3
+    },
+    {
+      "field_code": "F-013",
+      "occurrences": 3
+    },
+    {
+      "field_code": "F-014",
+      "occurrences": 3
+    },
+    {
+      "field_code": "F-015",
+      "occurrences": 3
+    },
+    {
+      "field_code": "F-016",
+      "occurrences": 3
+    },
+    {
+      "field_code": "F-017",
+      "occurrences": 3
+    },
+    {
+      "field_code": "F-019",
+      "occurrences": 3
+    }
+  ],
+  "parser_stability": {
+    "total_runs": 40,
+    "success": 36,
+    "failed": 4,
+    "stability_pct": 90.0,
+    "unstable_parsers": [
+      {
+        "parser": "PDFParser",
+        "failures": 4
+      }
+    ]
+  },
+  "fallback_usage": {
+    "fallback_events": 0,
+    "details": []
+  },
+  "defect_summary": {
+    "opened": 0,
+    "resolved": 0,
+    "sla_breaches": 0,
+    "net_open": 0
+  },
+  "audit_event_counts": {
+    "STAGE_STARTED": 3,
+    "CHECKPOINT_CREATED": 3,
+    "STAGE_AWAITING_INPUT": 3
+  },
+  "top_10_improvement_areas": [
+    "Recurring missing field: F-001 (3x)",
+    "Recurring missing field: F-003 (3x)",
+    "Recurring missing field: F-009 (3x)",
+    "Recurring missing field: F-010 (3x)",
+    "Recurring missing field: F-013 (3x)",
+    "Parser instability: PDFParser (4 failures)"
+  ]
+}

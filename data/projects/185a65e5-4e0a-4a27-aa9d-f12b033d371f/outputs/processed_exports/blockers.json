@@ -1,0 +1,9 @@
+[
+  {
+    "stage_code": "P2-01",
+    "field_code": "F001",
+    "status": "MISSING",
+    "severity": "CRITICAL",
+    "note": "Blocking test field"
+  }
+]

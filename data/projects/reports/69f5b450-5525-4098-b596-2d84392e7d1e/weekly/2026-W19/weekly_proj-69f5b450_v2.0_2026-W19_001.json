@@ -1,0 +1,59 @@
+{
+  "header": {
+    "report_type": "WEEKLY",
+    "week": "2026-W19",
+    "week_start": "2026-05-04",
+    "week_end": "2026-05-10",
+    "project_uuid": "69f5b450-5525-4098-b596-2d84392e7d1e",
+    "project_name": "Controlled Export Test",
+    "proposal_id": "EXP-69f5b4",
+    "build_version": "2.0",
+    "generated_at": "2026-05-08T11:45:03.262869",
+    "generated_by": "system",
+    "report_id": "weekly_proj-69f5b450_v2.0_2026-W19_001",
+    "sequence": 1,
+    "qc_status": "pending"
+  },
+  "throughput": {
+    "stages_completed": 0,
+    "stages_passed": 0,
+    "stages_failed_or_blocked": 0,
+    "reruns_triggered": 0,
+    "close_discipline_pct": 0
+  },
+  "gate_trend": {
+    "total_gate_events": 0,
+    "gate_pass": 0,
+    "gate_fail": 0,
+    "rerun_triggered": 0
+  },
+  "validation_summary": {
+    "CRITICAL": 1,
+    "MAJOR": 0,
+    "MINOR": 0,
+    "release_blockers": 1,
+    "total_rules_evaluated": 1
+  },
+  "recurring_blockers": [],
+  "parser_stability": {
+    "total_runs": 1,
+    "success": 1,
+    "failed": 0,
+    "stability_pct": 100.0,
+    "unstable_parsers": []
+  },
+  "fallback_usage": {
+    "fallback_events": 0,
+    "details": []
+  },
+  "defect_summary": {
+    "opened": 0,
+    "resolved": 0,
+    "sla_breaches": 0,
+    "net_open": 0
+  },
+  "audit_event_counts": {
+    "TEST_EVENT": 1
+  },
+  "top_10_improvement_areas": []
+}

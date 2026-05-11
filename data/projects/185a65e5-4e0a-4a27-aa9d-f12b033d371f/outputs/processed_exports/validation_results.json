@@ -1,0 +1,13 @@
+[
+  {
+    "id": "5552de60-1633-4995-94fe-06a0bda9c70b",
+    "stage_code": "P2-01",
+    "field_code": "F001",
+    "status": "MISSING",
+    "severity": "CRITICAL",
+    "source": null,
+    "value": null,
+    "note": "Blocking test field",
+    "created_at": "2026-05-07T05:29:15.740510"
+  }
+]

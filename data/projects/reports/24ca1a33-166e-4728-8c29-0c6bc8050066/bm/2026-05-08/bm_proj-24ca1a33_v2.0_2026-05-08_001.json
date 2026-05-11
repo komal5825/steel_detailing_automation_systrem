@@ -1,0 +1,198 @@
+{
+  "header": {
+    "report_type": "BM",
+    "milestone": "BM-001",
+    "milestone_title": "First Build Milestone \u2014 Phase 2 Complete",
+    "project_uuid": "24ca1a33-166e-4728-8c29-0c6bc8050066",
+    "proposal_id": "UI-FAIL-24ca1a",
+    "project_name": "UI Failure Visibility Demo",
+    "project_status": "IN_PROGRESS",
+    "build_version": "2.0",
+    "generated_at": "2026-05-08T12:09:35.267361",
+    "generated_by": "system",
+    "report_id": "bm_proj-24ca1a33_v2.0_2026-05-08_001",
+    "sequence": 1,
+    "qc_status": "pending"
+  },
+  "authorization_gate": {
+    "bm001_authorized": false,
+    "gate5_eligible": false,
+    "all_pipeline_gates_pass": false,
+    "critical_missing_count": 0,
+    "hold_reasons": [
+      "Stages not passed: P2-02, P2-03, P2-04, P2-05",
+      "Gate(s) did not PASS: P2-02 \u2013 completeness_gate, P2-03 \u2013 ab_gate"
+    ],
+    "verdict": "HOLD"
+  },
+  "pipeline_summary": {
+    "required_stages": [
+      "P2-01",
+      "P2-02",
+      "P2-03",
+      "P2-04",
+      "P2-05"
+    ],
+    "stages_passed": [
+      "P2-01"
+    ],
+    "stages_blocked": [
+      "P2-02",
+      "P2-03",
+      "P2-04",
+      "P2-05"
+    ],
+    "all_stages_complete": false
+  },
+  "stage_detail": [
+    {
+      "stage_code": "P2-01",
+      "status": "PASSED",
+      "revision": 1,
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null
+    },
+    {
+      "stage_code": "P2-02",
+      "status": "FAILED",
+      "revision": 1,
+      "started_at": null,
+      "completed_at": null,
+      "error_message": "Missing mandatory fields: F-081, F-086"
+    },
+    {
+      "stage_code": "P2-03",
+      "status": "BLOCKED",
+      "revision": 1,
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null
+    },
+    {
+      "stage_code": "P2-04",
+      "status": "PENDING",
+      "revision": 1,
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null
+    },
+    {
+      "stage_code": "P2-05",
+      "status": "PENDING",
+      "revision": 1,
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null
+    }
+  ],
+  "gate_results": {
+    "P2-01 \u2013 ingestion_gate": {
+      "stage_code": "P2-01",
+      "checkpoint_label": "ingestion_gate",
+      "gate_status": "PASS",
+      "created_at": "2026-05-07T06:41:54.678621"
+    },
+    "P2-02 \u2013 completeness_gate": {
+      "stage_code": "P2-02",
+      "checkpoint_label": "completeness_gate",
+      "gate_status": "FAIL",
+      "created_at": "2026-05-07T06:41:54.678628"
+    },
+    "P2-03 \u2013 ab_gate": {
+      "stage_code": "P2-03",
+      "checkpoint_label": "ab_gate",
+      "gate_status": "PENDING",
+      "created_at": "2026-05-07T06:41:54.678631"
+    }
+  },
+  "lane_summary": {
+    "Lane 1 - Ingestion": {
+      "stages": [
+        "P2-01"
+      ],
+      "statuses": [
+        "PASSED"
+      ],
+      "overall": "PASSED"
+    },
+    "Lane 2 - Completeness": {
+      "stages": [
+        "P2-02"
+      ],
+      "statuses": [
+        "FAILED"
+      ],
+      "overall": "FAILED"
+    },
+    "Lane 3 - Generation": {
+      "stages": [
+        "P2-03",
+        "P2-04"
+      ],
+      "statuses": [
+        "BLOCKED",
+        "PENDING"
+      ],
+      "overall": "BLOCKED"
+    },
+    "Lane 4 - Validation": {
+      "stages": [
+        "P2-05"
+      ],
+      "statuses": [
+        "PENDING"
+      ],
+      "overall": "PENDING"
+    }
+  },
+  "field_completeness": {
+    "total_validated": 0,
+    "present_count": 0,
+    "missing_count": 0,
+    "critical_missing_count": 0,
+    "critical_missing_codes": [],
+    "completeness_pct": 0.0
+  },
+  "severity_summary": {
+    "CRITICAL": 0,
+    "MAJOR": 0,
+    "MINOR": 0,
+    "release_blockers": 0
+  },
+  "top_blockers": [],
+  "source_extraction": {
+    "parser_runs_total": 0,
+    "parser_runs_success": 0,
+    "parser_runs_failed": 0,
+    "avg_confidence": 0,
+    "source_distribution": {}
+  },
+  "file_intake": {
+    "total_files": 0,
+    "parsed": 0,
+    "failed": 0,
+    "files": []
+  },
+  "defect_register": {
+    "total_escalations": 0,
+    "open": 0,
+    "resolved": 0,
+    "critical_open": 0,
+    "total_corrections": 0,
+    "escalations": [],
+    "corrections": []
+  },
+  "handoff_status": {
+    "handoffs_created": 0,
+    "approved": 0,
+    "pending": 0,
+    "rejected": 0
+  },
+  "manual_review": {
+    "total": 0,
+    "open": 0,
+    "resolved": 0,
+    "open_items": []
+  }
+}

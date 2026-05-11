@@ -33,6 +33,7 @@ from app.agents.phase2.output_utils import (
     write_processed_json,
 )
 from app.agents.support.checkpoint import CheckpointManager
+from app.agents.support.fallback import FallbackManager
 from app.db.crud.stages import update_stage_result
 from app.db.crud.validation import log_audit_event
 from app.db.models import ExtractedFieldValue, StageStatus
@@ -40,9 +41,11 @@ from app.db.session import SessionLocal
 from app.utils.audit_logger import get_logger
 from app.utils.master_db import fetch_ab_required_field_codes
 from app.utils.source_priority import build_resolved_field_map
+from app.utils.traceability import trace_action
 
 logger = get_logger(__name__)
 _CHECKPOINT_MGR = CheckpointManager()
+_FALLBACK_MGR = FallbackManager()
 
 # ---------------------------------------------------------------------------
 # AB-specific field code registry
@@ -106,7 +109,7 @@ def _generate_ab(project_id: UUID, db: Session) -> dict:
     update_stage_result(db, project_id=project_id, stage_code="P2-03",
                         status=StageStatus.RUNNING)
 
-    # 1. Resolved field map
+    # 1. Resolved field map from extracted values
     resolved_map = build_resolved_field_map(db, project_id)
     field_map: dict[str, str] = {
         fc: str(cr.winning_value)
@@ -116,7 +119,85 @@ def _generate_ab(project_id: UUID, db: Session) -> dict:
 
     ab_codes = set(fetch_ab_required_field_codes())
 
-    # 2. Build structured sections
+    # 2. Derive F-192 (bolt projection above FFL) from F-087 + F-193 when not
+    #    extracted directly.  Must be done before the fallback call so that the
+    #    derivation is recorded in the audit trail and F-192 is not treated as
+    #    missing when its source fields are present.
+    if "F-192" not in field_map and "F-087" in field_map and "F-193" in field_map:
+        proj_val = _to_float(field_map.get("F-087"), 0.0)
+        grout_val = _to_float(field_map.get("F-193"), 0.0)
+        field_map["F-192"] = str(proj_val + grout_val)
+        log_audit_event(
+            db, "FIELD_DERIVED", project_id=project_id, field_code="F-192",
+            detail={"derived_from": ["F-087", "F-193"], "value": field_map["F-192"],
+                    "stage": "P2-03"},
+        )
+
+    # 3. Supplement field_map with FallbackManager for any still-missing AB codes.
+    #    This ensures that system-standard defaults (e.g. bolt grade "4.6" for F-082)
+    #    are applied consistently and recorded in the audit trail rather than being
+    #    silently baked into the builder functions below.
+    missing_before_fallback = sorted(fc for fc in ab_codes if fc not in field_map)
+    if missing_before_fallback:
+        fallback_report = _FALLBACK_MGR.apply_fallbacks(
+            project_id=project_id,
+            missing_codes=missing_before_fallback,
+            db=db,
+        )
+        for outcome in fallback_report.applied:
+            if outcome.resolved and outcome.resolved_value is not None and outcome.resolved_value != "":
+                field_map[outcome.field_code] = outcome.resolved_value
+                log_audit_event(
+                    db, "FALLBACK_APPLIED", project_id=project_id,
+                    field_code=outcome.field_code,
+                    detail={
+                        "strategy": outcome.strategy,
+                        "value": outcome.resolved_value,
+                        "source": outcome.resolved_source,
+                        "stage": "P2-03",
+                    },
+                )
+
+    present_ab = [fc for fc in ab_codes if fc in field_map]
+    missing_ab = sorted(fc for fc in ab_codes if fc not in field_map)
+
+    # 4. Hard gate — FAIL immediately if any mandatory AB field is still missing.
+    #    P2-02 should have blocked before we reach here, but this is a defence-in-depth
+    #    check to ensure no silent generation with incomplete data.
+    if missing_ab:
+        gate_status = "FAIL"
+        field_summary = {
+            "total_ab_required": len(ab_codes),
+            "resolved_count": len(present_ab),
+            "missing_count": len(missing_ab),
+            "missing_codes": missing_ab,
+        }
+        _CHECKPOINT_MGR.record(
+            db, project_id=project_id, stage_code="P2-03",
+            label="AB Generation Gate", gate_status=gate_status,
+            gate_data=field_summary,
+        )
+        result = {
+            "project_id": str(project_id),
+            "status": "BLOCKED",
+            "gate_status": "FAIL",
+            "field_summary": field_summary,
+            "overall": "BLOCKED",
+            "main_output": "reports/p2-03_summary.json",
+        }
+        write_processed_json(project_id, "p2-03_summary.json", result)
+        update_stage_result(
+            db, project_id=project_id, stage_code="P2-03",
+            status=StageStatus.BLOCKED, result=result,
+        )
+        log_audit_event(
+            db, "STAGE_BLOCKED", project_id=project_id, stage_code="P2-03",
+            detail={"missing_codes": missing_ab, "gate_status": "FAIL"},
+        )
+        logger.warning("P2-03 BLOCKED: missing mandatory AB fields: %s", missing_ab)
+        return result
+
+    # All mandatory fields present — build structured sections
     grid_refs = _build_grid_references(field_map)
     col_locs = _build_column_locations(grid_refs)
     bolt_spec = _build_bolt_specification(field_map)
@@ -124,9 +205,6 @@ def _generate_ab(project_id: UUID, db: Session) -> dict:
     base_plate = _build_base_plate(field_map)
     template_map = _build_template_population_map(field_map, resolved_map)
     traceability = _build_traceability_matrix(db, project_id, ab_codes, resolved_map)
-
-    present_ab = [fc for fc in ab_codes if fc in field_map]
-    missing_ab = sorted(fc for fc in ab_codes if fc not in field_map)
 
     ab_package: dict = {
         "project_id": str(project_id),
@@ -138,9 +216,7 @@ def _generate_ab(project_id: UUID, db: Session) -> dict:
         "bolt_pattern": bolt_pat,
         "base_plate": base_plate,
         "grout_pad": {
-            "thickness_mm": _to_float(
-                field_map.get("F-193") or field_map.get("F-087"), 25
-            )
+            "thickness_mm": _to_float(field_map.get("F-193"), 0.0)
         },
         "template_population_map": template_map,
         "traceability_matrix": traceability,
@@ -182,8 +258,8 @@ def _generate_ab(project_id: UUID, db: Session) -> dict:
     pdf_path = cad_dir / "ab_drawing.pdf"
     _write_pdf_drawing(ab_package, pdf_path)
 
-    # 6. Checkpoint
-    gate_status = "PASS" if not missing_ab else "PASS_WITH_WARNINGS"
+    # 6. Checkpoint — gate is always PASS here (FAIL path returned early above)
+    gate_status = "PASS"
     _CHECKPOINT_MGR.record(
         db,
         project_id=project_id,
@@ -214,6 +290,16 @@ def _generate_ab(project_id: UUID, db: Session) -> dict:
     log_audit_event(db, "STAGE_PASSED", project_id=project_id, stage_code="P2-03",
                     detail={"field_summary": ab_package["field_summary"],
                             "gate_status": gate_status})
+    
+    trace_action(
+        db,
+        project_id,
+        "p2_03_ab_generated",
+        {
+            "field_summary": ab_package["field_summary"],
+            "outputs": result["outputs"]
+        }
+    )
     logger.info("P2-03 AB generation complete: resolved=%d missing=%d gate=%s",
                 len(present_ab), len(missing_ab), gate_status)
     return result
@@ -224,17 +310,19 @@ def _generate_ab(project_id: UUID, db: Session) -> dict:
 # ---------------------------------------------------------------------------
 
 def _build_grid_references(fm: dict[str, str]) -> dict:
-    labels_x = _split_labels(fm.get("F-041"), default=["A", "B"])
-    labels_y = _split_labels(fm.get("F-042"), default=["1", "2"])
+    # Mandatory fields guaranteed present by the gate check; defaults are
+    # safety nets for _to_float / _split_labels parse failures only.
+    labels_x = _split_labels(fm.get("F-041"), default=[])
+    labels_y = _split_labels(fm.get("F-042"), default=[])
     origin_x = _to_float(fm.get("F-043"), 0.0)
     origin_y = _to_float(fm.get("F-044"), 0.0)
-    bay_dim   = _to_float(fm.get("F-172"), 6000.0)
+    bay_dim   = _to_float(fm.get("F-172"), 0.0)
 
     # F-039 / F-040 may be CSV strings: "6200.0,5990.0,5730.0,…"
     n_bays_x = max(len(labels_x) - 1, 1)
     n_bays_y = max(len(labels_y) - 1, 1)
-    spacings_x = _parse_spacing_list(fm.get("F-039"), n_bays_x, 6000.0)
-    spacings_y = _parse_spacing_list(fm.get("F-040"), n_bays_y, 6000.0)
+    spacings_x = _parse_spacing_list(fm.get("F-039"), n_bays_x, 0.0)
+    spacings_y = _parse_spacing_list(fm.get("F-040"), n_bays_y, 0.0)
 
     # Primary (first) spacing used for legacy single-value consumers
     spacing_x = spacings_x[0] if spacings_x else 6000.0
@@ -288,19 +376,18 @@ def _build_column_locations(grid: dict) -> list[dict]:
 
 
 def _build_bolt_specification(fm: dict[str, str]) -> dict:
-    diam = fm.get("F-081", "M20")
-    grade = fm.get("F-082", "8.8")
-    embedment = _to_float(fm.get("F-086"), 450.0)
-    # F-087 = bolt projection above base plate; F-193 = grout pad thickness
-    # F-192 = total above-plate length = F-087 + F-193 (derived if not explicit)
-    bolt_proj = _to_float(fm.get("F-087"), 75.0)
-    grout_pad = _to_float(fm.get("F-193"), 50.0)
-    f192_raw = fm.get("F-192", "")
-    projection = _to_float(f192_raw, bolt_proj + grout_pad) if f192_raw else bolt_proj + grout_pad
+    # All mandatory fields guaranteed present by the gate check above.
+    diam = fm.get("F-081")           # bolt diameter, e.g. "M20" or "24"
+    grade = fm.get("F-082")          # bolt grade from parser or FallbackManager ("4.6" IS-1367)
+    embedment = _to_float(fm.get("F-086"), 0.0)
+    bolt_proj = _to_float(fm.get("F-087"), 0.0)
+    grout_pad = _to_float(fm.get("F-193"), 0.0)
+    # F-192 is either extracted or derived from F-087+F-193 in the pre-build step.
+    projection = _to_float(fm.get("F-192"), bolt_proj + grout_pad)
     return {
-        "diameter": diam,
-        "diameter_mm": _parse_bolt_mm(diam),
-        "grade": grade,
+        "diameter": diam or "",
+        "diameter_mm": _parse_bolt_mm(diam or ""),
+        "grade": grade or "",
         "standard": "AS 1252 / ISO 4016",
         "anchor_code": fm.get("F-089", ""),
         "embedment_depth_mm": embedment,
@@ -308,16 +395,16 @@ def _build_bolt_specification(fm: dict[str, str]) -> dict:
         "grout_pad_mm": grout_pad,
         "projection_mm": projection,
         "total_length_mm": embedment + projection,
-        "connection_type": fm.get("F-075", "Bolted"),
-        "base_axis_orientation": fm.get("F-194", "StrongAxisParallelX"),
+        "connection_type": fm.get("F-075", ""),
+        "base_axis_orientation": fm.get("F-194", ""),
     }
 
 
 def _build_bolt_pattern(fm: dict[str, str]) -> dict:
-    qty = int(_to_float(fm.get("F-083") or fm.get("F-078"), 4))
-    sx = _to_float(fm.get("F-084"), 85.0)
-    sy = _to_float(fm.get("F-085"), 85.0)
-    orient = fm.get("F-088", "Symmetric")
+    qty = int(_to_float(fm.get("F-083") or fm.get("F-078"), 0))
+    sx = _to_float(fm.get("F-084"), 0.0)
+    sy = _to_float(fm.get("F-085"), 0.0)
+    orient = fm.get("F-088", "")
     return {
         "bolts_per_column": qty,
         "spacing_x_mm": sx,
@@ -329,14 +416,14 @@ def _build_bolt_pattern(fm: dict[str, str]) -> dict:
 
 def _build_base_plate(fm: dict[str, str]) -> dict:
     size_str = fm.get("F-080", "")
-    thick = _to_float(fm.get("F-090"), 20.0)
+    thick = _to_float(fm.get("F-090"), 0.0)
     w, d = _parse_plate_size(size_str)
     return {
         "size_string": size_str or f"{w}×{d}",
         "width_mm": w,
         "depth_mm": d,
         "thickness_mm": thick,
-        "hole_diameter_mm": _nearest_hole(fm.get("F-081", "M20")),
+        "hole_diameter_mm": _nearest_hole(fm.get("F-081", "")),
         "material": "Grade 250 / S275",
     }
 

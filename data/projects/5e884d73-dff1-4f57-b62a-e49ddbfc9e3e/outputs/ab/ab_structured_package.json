@@ -1,0 +1,212 @@
+{
+  "project_id": "5e884d73-dff1-4f57-b62a-e49ddbfc9e3e",
+  "generated_at": "2026-05-07T05:50:58.407013+00:00",
+  "status": "GENERATED",
+  "grid_references": {
+    "grid_lines_x": [
+      "A",
+      "B"
+    ],
+    "grid_lines_y": [
+      "1",
+      "2"
+    ],
+    "spacings_x_mm": [
+      6000.0
+    ],
+    "spacings_y_mm": [
+      6000.0
+    ],
+    "grid_spacing_x_mm": 6000.0,
+    "grid_spacing_y_mm": 6000.0,
+    "grid_origin_x_mm": 0.0,
+    "grid_origin_y_mm": 0.0,
+    "total_span_x_mm": 6000.0,
+    "total_span_y_mm": 6000.0,
+    "bay_dimension_mm": 6000.0
+  },
+  "column_locations": [
+    {
+      "grid_ref": "A1",
+      "x_mm": 0.0,
+      "y_mm": 0.0,
+      "column_type": "CORNER"
+    },
+    {
+      "grid_ref": "A2",
+      "x_mm": 0.0,
+      "y_mm": 6000.0,
+      "column_type": "CORNER"
+    },
+    {
+      "grid_ref": "B1",
+      "x_mm": 6000.0,
+      "y_mm": 0.0,
+      "column_type": "CORNER"
+    },
+    {
+      "grid_ref": "B2",
+      "x_mm": 6000.0,
+      "y_mm": 6000.0,
+      "column_type": "CORNER"
+    }
+  ],
+  "bolt_specification": {
+    "diameter": "M24",
+    "diameter_mm": 24.0,
+    "grade": "8.8",
+    "standard": "AS 1252 / ISO 4016",
+    "anchor_code": "",
+    "embedment_depth_mm": 450.0,
+    "bolt_projection_mm": 75.0,
+    "grout_pad_mm": 50.0,
+    "projection_mm": 125.0,
+    "total_length_mm": 575.0,
+    "connection_type": "Bolted",
+    "base_axis_orientation": "StrongAxisParallelX"
+  },
+  "bolt_pattern": {
+    "bolts_per_column": 4,
+    "spacing_x_mm": 85.0,
+    "spacing_y_mm": 85.0,
+    "pattern_orientation": "Symmetric",
+    "pattern_type": "SQUARE"
+  },
+  "base_plate": {
+    "size_string": "250.0\u00d7250.0",
+    "width_mm": 250.0,
+    "depth_mm": 250.0,
+    "thickness_mm": 20.0,
+    "hole_diameter_mm": 28.0,
+    "material": "Grade 250 / S275"
+  },
+  "grout_pad": {
+    "thickness_mm": 25
+  },
+  "template_population_map": {
+    "template_family": "AB_STANDARD_AU",
+    "revision": "Rev01",
+    "populated_count": 2,
+    "field_mappings": {
+      "F-039": {
+        "template_variable": "grid_spacing_x",
+        "value": "6000",
+        "unit": "mm",
+        "source": "STAAD",
+        "confidence": 90
+      },
+      "F-081": {
+        "template_variable": "bolt_diameter",
+        "value": "M24",
+        "unit": "mm",
+        "source": "MBS",
+        "confidence": 0
+      }
+    }
+  },
+  "traceability_matrix": [
+    {
+      "field_code": "F-039",
+      "field_name": "Grid Spacing X",
+      "raw_value": "6000",
+      "normalized_value": "6000",
+      "unit": "",
+      "source_file": "test_staad.std",
+      "winning_source": "STAAD",
+      "resolution_strategy": "SINGLE_SOURCE",
+      "conflict_detected": false,
+      "extraction_confidence": 90,
+      "extracted_at": "2026-05-07T05:50:58.379188"
+    },
+    {
+      "field_code": "F-081",
+      "field_name": "Bolt Diameter",
+      "raw_value": "M24",
+      "normalized_value": "M24",
+      "unit": "",
+      "source_file": "test_mbs.mbs",
+      "winning_source": "MBS",
+      "resolution_strategy": "HUMAN_REVIEW",
+      "conflict_detected": true,
+      "extraction_confidence": 100,
+      "extracted_at": "2026-05-07T05:50:58.377435"
+    }
+  ],
+  "field_summary": {
+    "total_ab_required": 72,
+    "resolved_count": 2,
+    "missing_count": 70,
+    "missing_codes": [
+      "F-001",
+      "F-002",
+      "F-006",
+      "F-009",
+      "F-010",
+      "F-013",
+      "F-014",
+      "F-015",
+      "F-016",
+      "F-017",
+      "F-019",
+      "F-020",
+      "F-021",
+      "F-023",
+      "F-024",
+      "F-025",
+      "F-026",
+      "F-027",
+      "F-028",
+      "F-029",
+      "F-031",
+      "F-032",
+      "F-033",
+      "F-034",
+      "F-035",
+      "F-036",
+      "F-037",
+      "F-040",
+      "F-041",
+      "F-042",
+      "F-043",
+      "F-044",
+      "F-048",
+      "F-075",
+      "F-078",
+      "F-080",
+      "F-082",
+      "F-083",
+      "F-084",
+      "F-085",
+      "F-086",
+      "F-087",
+      "F-088",
+      "F-089",
+      "F-090",
+      "F-132",
+      "F-133",
+      "F-134",
+      "F-135",
+      "F-136",
+      "F-137",
+      "F-138",
+      "F-139",
+      "F-140",
+      "F-141",
+      "F-142",
+      "F-143",
+      "F-144",
+      "F-145",
+      "F-147",
+      "F-148",
+      "F-151",
+      "F-152",
+      "F-156",
+      "F-171",
+      "F-172",
+      "F-191",
+      "F-192",
+      "F-193",
+      "F-194"
+    ]
+  }
+}

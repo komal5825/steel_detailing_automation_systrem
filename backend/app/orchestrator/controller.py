@@ -8,8 +8,11 @@ from_stage parameter.  Hard Gate 5 is checked after P2-05.
 from __future__ import annotations
 
 import json
+import shutil
+import sqlite3
 import traceback
 from datetime import datetime, timezone
+from pathlib import Path
 from uuid import UUID
 
 from sqlalchemy.orm import Session
@@ -101,8 +104,22 @@ class OrchestrationController:
     ) -> dict:
         log_audit_event(db, "PIPELINE_STARTED", project_id=project_id,
                         detail={"from_stage": from_stage, "to_stage": to_stage})
+        snapshot_path = _take_db_snapshot(project_id)
+        if snapshot_path:
+            log_audit_event(db, "DB_SNAPSHOT_TAKEN", project_id=project_id,
+                            detail={"snapshot_path": snapshot_path})
 
         skipping = from_stage is not None
+        if from_stage is None:
+            # Auto-resume: find the first stage that is not PASSED or PASS_WITH_WARNINGS
+            existing_stages = {s.stage_code: s.status for s in list_project_stages(db, project_id)}
+            for sc, _ in _STAGE_PIPELINE:
+                if existing_stages.get(sc) not in {StageStatus.PASSED, StageStatus.PASS_WITH_WARNINGS}:
+                    from_stage = sc
+                    skipping = True
+                    logger.info("Auto-resuming pipeline from %s", from_stage)
+                    break
+
         failed_stage: str | None = None
         pipeline_blocked = False     # BLOCKED = missing input, recoverable
         pipeline_failed = False      # FAIL = hard failure, pipeline must stop
@@ -129,7 +146,9 @@ class OrchestrationController:
                 if overall == "BLOCKED":
                     failed_stage = stage_code
                     pipeline_blocked = True
-                    _broadcast(project_id, stage_code, "AWAITING_INPUT")
+                    update_stage_result(db, project_id=project_id, stage_code=stage_code,
+                                        status=StageStatus.BLOCKED, result=stage_result)
+                    _broadcast(project_id, stage_code, "BLOCKED")
                     logger.warning("Stage %s BLOCKED — pipeline paused awaiting input", stage_code)
                     break
 
@@ -148,8 +167,14 @@ class OrchestrationController:
                     logger.warning("Stage %s FAILED: %s", stage_code, failure_reason)
                     break
 
-                _broadcast(project_id, stage_code, "PASSED")
-                logger.info("Stage %s PASSED", stage_code)
+                status_to_set = StageStatus.PASSED
+                if overall == "PASS_WITH_WARNINGS":
+                    status_to_set = StageStatus.PASS_WITH_WARNINGS
+
+                update_stage_result(db, project_id=project_id, stage_code=stage_code,
+                                    status=status_to_set, result=stage_result)
+                _broadcast(project_id, stage_code, status_to_set.value)
+                logger.info("Stage %s %s", stage_code, status_to_set.value)
 
             except Exception as exc:
                 tb = traceback.format_exc()
@@ -215,7 +240,7 @@ def _check_hard_gate_5(project_id: UUID, db: Session) -> tuple[str, dict]:
     stages = list_project_stages(db, project_id)
     stage_map = {s.stage_code: s.status for s in stages}
     required = ["P2-01", "P2-02", "P2-03", "P2-04", "P2-05"]
-    not_passed = [s for s in required if stage_map.get(s) != StageStatus.PASSED]
+    not_passed = [s for s in required if stage_map.get(s) not in {StageStatus.PASSED, StageStatus.PASS_WITH_WARNINGS}]
 
     from app.agents.phase2.output_utils import project_output_dir  # noqa
     ab_exists = (project_output_dir(project_id, "ab") / "anchor_bolt_layout.json").exists()
@@ -237,6 +262,13 @@ def _check_hard_gate_5(project_id: UUID, db: Session) -> tuple[str, dict]:
 
 def _build_pipeline_status(project_id: UUID, db: Session) -> dict:
     stages = list_project_stages(db, project_id)
+    checkpoints = _CHECKPOINT_MGR.get_summary(db, project_id)
+    
+    # Map checkpoints by stage_code for easy lookup
+    cp_map = {}
+    for cp in checkpoints:
+        cp_map.setdefault(cp["stage_code"], []).append(cp)
+
     return {
         "project_id": str(project_id),
         "stages": [
@@ -247,10 +279,57 @@ def _build_pipeline_status(project_id: UUID, db: Session) -> dict:
                 "completed_at": s.completed_at.isoformat() if s.completed_at else None,
                 "error_message": s.error_message,
                 "result": json.loads(s.result_json or "{}"),
+                "checkpoints": cp_map.get(s.stage_code, []),
             }
             for s in stages
         ],
+        "checkpoints": checkpoints,  # Also include full list at top level
     }
+
+
+# ---------------------------------------------------------------------------
+# Pre-run DB snapshot
+# ---------------------------------------------------------------------------
+
+def _take_db_snapshot(project_id: UUID) -> str | None:
+    """
+    Hot-backup the SQLite DB to processed_exports before the pipeline mutates it.
+    Uses sqlite3.Connection.backup() which is WAL-safe and consistent.
+    Returns the snapshot path, or None on failure (non-fatal).
+    """
+    try:
+        from app.config.settings import settings
+        from app.utils.project_paths import get_writable_project_data_root
+        db_url = settings.database_url
+        if not db_url.startswith("sqlite:///"):
+            return None
+        db_rel = db_url[len("sqlite:///"):]
+        backend_dir = Path(__file__).resolve().parents[2]
+        db_path = (backend_dir / db_rel).resolve()
+        if not db_path.exists():
+            return None
+
+        export_dir = (
+            get_writable_project_data_root()
+            / str(project_id)
+            / "outputs"
+            / "processed_exports"
+        )
+        export_dir.mkdir(parents=True, exist_ok=True)
+
+        ts = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+        dest = export_dir / f"db_snapshot_pre_run_{ts}.sqlite"
+
+        src_conn = sqlite3.connect(str(db_path))
+        dst_conn = sqlite3.connect(str(dest))
+        src_conn.backup(dst_conn)
+        dst_conn.close()
+        src_conn.close()
+        logger.info("Pre-run DB snapshot saved: %s", dest.name)
+        return str(dest)
+    except Exception as exc:
+        logger.warning("Pre-run DB snapshot failed (non-fatal): %s", exc)
+        return None
 
 
 # ---------------------------------------------------------------------------

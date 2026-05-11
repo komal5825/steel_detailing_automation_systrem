@@ -3,6 +3,7 @@ import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { useNavigate, useParams } from 'react-router-dom';
 import {
   Activity,
+  AlertOctagon,
   AlertTriangle,
   ArrowLeft,
   CheckCircle2,
@@ -62,11 +63,12 @@ function mergeStages(defs, rows, locked = false) {
   return defs.map((info) => ({
     ...info,
     stage_code: info.code,
-    status: locked ? 'BLOCKED' : byCode.get(info.code)?.status || 'PENDING',
+    status: byCode.get(info.code)?.status || 'PENDING',
     started_at: byCode.get(info.code)?.started_at || null,
     completed_at: byCode.get(info.code)?.completed_at || null,
     error_message: byCode.get(info.code)?.error_message || null,
     result: byCode.get(info.code)?.result || {},
+    ui_locked: locked,
   }));
 }
 
@@ -83,6 +85,45 @@ function designCandidates(files) {
 
 function stageStatus(stages, code) {
   return stages.find((stage) => stage.stage_code === code)?.status || 'PENDING';
+}
+
+function summarizeStageReason(stage) {
+  const msg = stage?.error_message;
+  if (msg) return msg.split(':').pop().split('\n')[0].trim();
+  const blockers = stage?.result?.blocking_issues;
+  if (Array.isArray(blockers) && blockers.length) {
+    const first = blockers[0];
+    if (typeof first === 'string') return first;
+    return first?.note || first?.field_code || 'Blocking issue detected';
+  }
+  if (stage?.ui_locked) return 'Locked by upstream gate';
+  return 'No failure detail provided by backend';
+}
+
+function fullStageReason(stage) {
+  if (stage?.error_message) return stage.error_message;
+  const blockers = stage?.result?.blocking_issues;
+  if (Array.isArray(blockers) && blockers.length) {
+    return blockers
+      .map((b) => (typeof b === 'string' ? b : `${b.field_code || 'UNKNOWN'}: ${b.note || 'Blocking issue'}`))
+      .join('\n');
+  }
+  if (stage?.ui_locked) return 'Locked by upstream gate. Resolve upstream failed/blocked stage first.';
+  return 'No detailed failure reason returned by backend.';
+}
+
+function blockerFixHints(stage) {
+  const blockers = stage?.result?.blocking_issues;
+  if (!Array.isArray(blockers) || !blockers.length) return [];
+  return blockers.slice(0, 5).map((b) => {
+    if (typeof b === 'string') {
+      return `Review blocker: ${b}`;
+    }
+    const field = b.field_code || 'unknown field';
+    const affects = Array.isArray(b.affects) && b.affects.length ? ` (${b.affects.join('/')})` : '';
+    const note = b.note ? `: ${b.note}` : '';
+    return `Provide/correct ${field}${affects}${note}`;
+  });
 }
 
 export default function ProjectWorkspace() {
@@ -112,11 +153,18 @@ export default function ProjectWorkspace() {
 
   const { data: stages = [], isLoading: loadingStages } = useStages(projectId);
   const { data: pipelineStatus } = usePipelineStatus(projectId);
+  const { data: checkpoints = [] } = useQuery({
+    queryKey: ['checkpoints', projectId],
+    queryFn: () => stagesApi.getCheckpoints(projectId),
+    enabled: !!projectId,
+    refetchInterval: 5000,
+  });
 
   const uploadAndIngest = useMutation({
-    mutationFn: async (formData) => {
-      // Pass a dummy onProgress for now or handle it in FileUploadPanel via projectsApi update
-      const uploaded = await projectsApi.uploadFiles(projectId, formData);
+    mutationFn: async ({ formData, onProgress }) => {
+      const uploaded = await projectsApi.uploadFiles(projectId, formData, {
+        onUploadProgress: onProgress,
+      });
       const ingestion = await stagesApi.runStage(projectId, 'P2-01');
       return { uploaded, ingestion };
     },
@@ -188,6 +236,16 @@ export default function ProjectWorkspace() {
   const parsedFiles = files.filter((file) => file.processing_status === 'PARSED').length;
   const warnings = phase2.filter((stage) => ['FAILED', 'AWAITING_INPUT', 'BLOCKED'].includes(stage.status)).length;
   const activeAgents = phase2.filter((stage) => isRunning(stage.status)).length;
+  const failedStages = [...phase2, ...phase3].filter((stage) => stage.status === 'FAILED');
+  const blockedStages = [...phase2, ...phase3].filter((stage) => stage.status === 'BLOCKED' || stage.ui_locked);
+  const awaitingInputStages = [...phase2, ...phase3].filter((stage) => stage.status === 'AWAITING_INPUT');
+  const latestCheckpointByStage = React.useMemo(() => {
+    const map = new Map();
+    for (const cp of checkpoints || []) {
+      map.set(cp.stage_code, cp);
+    }
+    return map;
+  }, [checkpoints]);
 
   if (loadingProject) {
     return (
@@ -250,6 +308,12 @@ export default function ProjectWorkspace() {
       </section>
 
       <div className="flex-1 space-y-4 overflow-y-auto p-4">
+        <CriticalSignalsPanel
+          failedStages={failedStages}
+          blockedStages={blockedStages}
+          awaitingInputStages={awaitingInputStages}
+        />
+
         <section className="rounded-md border border-slate-300 bg-white">
           <div className="flex items-center justify-between border-b border-slate-200 px-4 py-3">
             <div className="flex items-center gap-2">
@@ -264,10 +328,10 @@ export default function ProjectWorkspace() {
           <div className="p-4">
             <FileUploadPanel
               projectId={projectId}
-              onUpload={(formData, onProgress) => projectsApi.uploadFiles(projectId, formData, { onUploadProgress: onProgress })}
+              onUpload={(formData, onProgress) => uploadAndIngest.mutateAsync({ formData, onProgress })}
               onClearAll={() => resetIntake.mutate()}
               onDelete={(id) => deleteFile.mutate(id)}
-              uploading={uploadAndIngest.isPending || resetIntake.isPending}
+              uploading={uploadAndIngest.isPending}
             />
           </div>
 
@@ -281,10 +345,10 @@ export default function ProjectWorkspace() {
             <MetricCard icon={GitBranch} label="Phase 2" value={`${phaseProgress(phase2)}%`} detail="AB/GA layer" tone="slate" />
           </div>
           <div className="col-span-8 flex flex-col gap-4">
-            {phase2.some(s => s.status === 'AWAITING_INPUT') && (
+            {phase2.some((s) => ['AWAITING_INPUT', 'BLOCKED'].includes(s.status)) && (
               <FieldReviewPanel 
                 projectId={projectId} 
-                stageCode={phase2.find(s => s.status === 'AWAITING_INPUT')?.stage_code} 
+                stageCode={phase2.find((s) => ['AWAITING_INPUT', 'BLOCKED'].includes(s.status))?.stage_code} 
               />
             )}
             <LiveLogPanel />
@@ -320,7 +384,7 @@ export default function ProjectWorkspace() {
             </div>
             <span className="font-mono text-xxs text-slate-500">Stage progress {phase2.filter((stage) => isDone(stage.status)).length}/5</span>
           </div>
-          <AgentGrid stages={phase2} projectId={projectId} onRun={(code) => rerunStage.mutate(code)} running={rerunStage.isPending || runPipeline.isPending || loadingStages} onViewOutputs={setSelectedAgentCode} />
+          <AgentGrid stages={phase2} projectId={projectId} onRun={(code) => rerunStage.mutate(code)} running={rerunStage.isPending || runPipeline.isPending || loadingStages} onViewOutputs={setSelectedAgentCode} checkpoints={latestCheckpointByStage} />
         </section>
 
         <section className="rounded-md border border-slate-300 bg-white">
@@ -334,10 +398,10 @@ export default function ProjectWorkspace() {
                 <Lock size={11} /> Locked by P2 gate
               </span>
             ) : (
-              <StatusBadge status="PASSED" />
+              <StatusBadge status={phase3.some((s) => s.status === 'FAILED') ? 'FAILED' : phase3.every((s) => isDone(s.status)) ? 'PASSED' : 'PENDING'} />
             )}
           </div>
-          <AgentGrid stages={phase3} projectId={projectId} locked={phase3Locked} onViewOutputs={setSelectedAgentCode} />
+          <AgentGrid stages={phase3} projectId={projectId} locked={phase3Locked} onViewOutputs={setSelectedAgentCode} checkpoints={latestCheckpointByStage} />
         </section>
       </div>
 
@@ -362,8 +426,8 @@ export default function ProjectWorkspace() {
 function PhaseRibbon({ phase2, phase3 }) {
   const phases = [
     { label: 'Phase 1 - Master DB', progress: 100, status: 'Done' },
-    { label: 'Phase 2 - AB / GA', progress: phaseProgress(phase2), status: phase2.some((stage) => isRunning(stage.status)) ? 'Running' : 'Active' },
-    { label: 'Phase 3 - Detailing', progress: phaseProgress(phase3), status: phase3.every((stage) => stage.status === 'BLOCKED') ? 'Queued' : 'Active' },
+    { label: 'Phase 2 - AB / GA', progress: phaseProgress(phase2), status: phase2.some((s) => s.status === 'FAILED') ? 'Failed' : phase2.some((s) => s.status === 'BLOCKED' || s.status === 'AWAITING_INPUT') ? 'Blocked' : phase2.some((stage) => isRunning(stage.status)) ? 'Running' : 'Active' },
+    { label: 'Phase 3 - Detailing', progress: phaseProgress(phase3), status: phase3.some((s) => s.status === 'FAILED') ? 'Failed' : phase3.every((stage) => stage.ui_locked) ? 'Queued' : 'Active' },
   ];
   return (
     <div className="grid grid-cols-3 gap-3">
@@ -595,7 +659,61 @@ function AgentOutputsModal({ projectId, stageCode, stageName, onClose }) {
   );
 }
 
-function AgentGrid({ stages, projectId, onRun, running, locked = false, onViewOutputs }) {
+function CriticalSignalsPanel({ failedStages, blockedStages, awaitingInputStages }) {
+  if (!failedStages.length && !blockedStages.length && !awaitingInputStages.length) {
+    return null;
+  }
+
+  return (
+    <section className="rounded-md border border-red-300 bg-red-50">
+      <div className="flex items-center gap-2 border-b border-red-200 px-4 py-2.5">
+        <AlertOctagon size={14} className="text-red-700" />
+        <h2 className="text-sm font-bold text-red-900">Critical Workflow Signals</h2>
+      </div>
+      <div className="grid grid-cols-3 gap-3 p-3 text-xs">
+        <SignalList
+          title={`Failures (${failedStages.length})`}
+          tone="red"
+          items={failedStages.map((s) => `${s.stage_code}: ${summarizeStageReason(s)}`)}
+        />
+        <SignalList
+          title={`Blocked (${blockedStages.length})`}
+          tone="amber"
+          items={blockedStages.map((s) => `${s.stage_code}: ${s.ui_locked ? 'Locked by upstream gate' : summarizeStageReason(s)}`)}
+        />
+        <SignalList
+          title={`Awaiting Input (${awaitingInputStages.length})`}
+          tone="blue"
+          items={awaitingInputStages.map((s) => `${s.stage_code}: operator input required`)}
+        />
+      </div>
+    </section>
+  );
+}
+
+function SignalList({ title, tone, items }) {
+  const toneClasses = {
+    red: 'border-red-200 bg-white text-red-900',
+    amber: 'border-amber-200 bg-white text-amber-900',
+    blue: 'border-blue-200 bg-white text-blue-900',
+  };
+  return (
+    <div className={clsx('rounded border p-2', toneClasses[tone])}>
+      <p className="mb-1 font-semibold">{title}</p>
+      {items.length ? (
+        <div className="space-y-1">
+          {items.slice(0, 4).map((item) => (
+            <p key={item} className="font-mono text-[10px]">{item}</p>
+          ))}
+        </div>
+      ) : (
+        <p className="text-[10px] opacity-70">None</p>
+      )}
+    </div>
+  );
+}
+
+function AgentGrid({ stages, projectId, onRun, running, locked = false, onViewOutputs, checkpoints }) {
   return (
     <div className="grid grid-cols-5 gap-3 p-4">
       {stages.map((stage, index) => (
@@ -608,18 +726,20 @@ function AgentGrid({ stages, projectId, onRun, running, locked = false, onViewOu
           running={running}
           locked={locked}
           onViewOutputs={onViewOutputs}
+          checkpoint={checkpoints?.get(stage.stage_code)}
         />
       ))}
     </div>
   );
 }
 
-function AgentCard({ stage, projectId, index, onRun, running, locked, onViewOutputs }) {
+function AgentCard({ stage, projectId, index, onRun, running, locked, onViewOutputs, checkpoint }) {
   const meta = STATUS_META[stage.status] || STATUS_META.PENDING;
   const canRun = onRun && !locked && !isRunning(stage.status);
-  const errorSummary = stage.error_message 
-    ? stage.error_message.split(':').pop().split('\n')[0].trim()
-    : null;
+  const errorSummary = summarizeStageReason(stage);
+  const errorFull = fullStageReason(stage);
+  const fixHints = blockerFixHints(stage);
+  const checkpointState = checkpoint?.gate_status || 'PENDING';
 
   return (
     <div className={clsx('relative flex flex-col rounded-md border bg-white p-3 shadow-sm transition-all', meta.border)}>
@@ -636,19 +756,41 @@ function AgentCard({ stage, projectId, index, onRun, running, locked, onViewOutp
         <h3 className="mt-1 text-sm font-bold text-slate-900">{stage.name}</h3>
         <p className="mt-2 text-xxs leading-4 text-slate-500 line-clamp-2">{stage.description}</p>
         
-        {stage.status === 'FAILED' && errorSummary && (
+        {(stage.status === 'FAILED' || stage.status === 'BLOCKED' || stage.ui_locked) && errorSummary && (
           <div className="mt-2 flex items-start gap-1.5 rounded border border-red-100 bg-red-50 p-1.5 text-[10px] text-red-700">
             <AlertTriangle size={10} className="mt-0.5 flex-shrink-0" />
             <p className="font-medium leading-tight line-clamp-2">{errorSummary}</p>
           </div>
         )}
+        {(stage.status === 'FAILED' || stage.status === 'BLOCKED' || stage.ui_locked) && (
+          <details className="mt-2 rounded border border-red-200 bg-red-50/60 p-2 text-[10px]">
+            <summary className="cursor-pointer font-semibold text-red-800">Full backend reason</summary>
+            <pre className="mt-1 whitespace-pre-wrap font-mono text-red-800">{errorFull}</pre>
+          </details>
+        )}
+        {fixHints.length > 0 && (
+          <div className="mt-2 rounded border border-amber-200 bg-amber-50 p-2 text-[10px] text-amber-900">
+            <p className="mb-1 font-semibold">How to fix</p>
+            <div className="space-y-1">
+              {fixHints.map((hint) => (
+                <p key={hint} className="font-mono">{hint}</p>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
 
       <div className="mt-3 rounded border border-slate-200 bg-slate-50 p-2 text-xxs text-slate-600">
-        <div className="mb-1 flex items-center gap-1.5 font-semibold text-slate-700">
+        <div className="mb-1 flex items-center justify-between gap-1.5 font-semibold text-slate-700">
+          <div className="flex items-center gap-1.5">
           <ShieldCheck size={11} className="text-blue-600" /> Validator {index + 1}
+          </div>
+          <StatusBadge size="sm" status={checkpointState === 'PASS' ? 'PASSED' : checkpointState === 'FAIL' ? 'FAILED' : 'PENDING'} />
         </div>
         <p className="line-clamp-1 italic">{VALIDATORS[stage.stage_code]}</p>
+        <p className="mt-1 font-mono text-[10px] text-slate-500">
+          Checkpoint: {checkpointState}{checkpoint?.label ? ` (${checkpoint.label})` : ''}
+        </p>
       </div>
       
       <div className="mt-3 flex items-center justify-between border-t border-slate-200 pt-3">
@@ -680,4 +822,3 @@ function AgentCard({ stage, projectId, index, onRun, running, locked, onViewOutp
     </div>
   );
 }
-

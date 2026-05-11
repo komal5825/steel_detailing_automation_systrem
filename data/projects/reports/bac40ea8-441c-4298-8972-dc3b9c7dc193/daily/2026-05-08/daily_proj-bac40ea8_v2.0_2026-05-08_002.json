@@ -1,0 +1,2121 @@
+{
+  "header": {
+    "report_type": "DAILY",
+    "date": "2026-05-08",
+    "project_uuid": "bac40ea8-441c-4298-8972-dc3b9c7dc193",
+    "proposal_id": "C007-117",
+    "project_name": "STAAD",
+    "project_status": "CREATED",
+    "build_version": "2.0",
+    "generated_at": "2026-05-08T11:30:00.226372",
+    "generated_by": "system",
+    "report_id": "daily_proj-bac40ea8_v2.0_2026-05-08_002",
+    "sequence": 2,
+    "qc_status": "pending"
+  },
+  "execution_summary": {
+    "tasks_run": 0,
+    "rules_evaluated": 384,
+    "gates_touched": 1,
+    "reruns_triggered": 0,
+    "audit_events_today": 0,
+    "files_total": 30,
+    "files_parsed": 10,
+    "files_failed": 2
+  },
+  "lane_summary": {
+    "Lane 1 - Ingestion": {
+      "stages": [
+        "P2-01"
+      ],
+      "statuses": [
+        "PENDING"
+      ],
+      "overall": "PENDING"
+    },
+    "Lane 2 - Completeness": {
+      "stages": [
+        "P2-02"
+      ],
+      "statuses": [
+        "PENDING"
+      ],
+      "overall": "PENDING"
+    },
+    "Lane 3 - Generation": {
+      "stages": [
+        "P2-03",
+        "P2-04"
+      ],
+      "statuses": [
+        "PENDING",
+        "PENDING"
+      ],
+      "overall": "PENDING"
+    },
+    "Lane 4 - Validation": {
+      "stages": [
+        "P2-05"
+      ],
+      "statuses": [
+        "PENDING"
+      ],
+      "overall": "PENDING"
+    }
+  },
+  "stage_detail": [
+    {
+      "stage_code": "P2-01",
+      "status": "PENDING",
+      "revision": 1,
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null
+    },
+    {
+      "stage_code": "P2-02",
+      "status": "PENDING",
+      "revision": 1,
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null
+    },
+    {
+      "stage_code": "P2-03",
+      "status": "PENDING",
+      "revision": 1,
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null
+    },
+    {
+      "stage_code": "P2-04",
+      "status": "PENDING",
+      "revision": 1,
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null
+    },
+    {
+      "stage_code": "P2-05",
+      "status": "PENDING",
+      "revision": 1,
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null
+    }
+  ],
+  "gate_snapshot": {
+    "P2-02 \u2013 Completeness Hard Gate": {
+      "stage_code": "P2-02",
+      "checkpoint_label": "Completeness Hard Gate",
+      "gate_status": "FAIL",
+      "created_at": "2026-05-05T07:15:31.015670"
+    }
+  },
+  "severity_summary": {
+    "CRITICAL": 375,
+    "MAJOR": 0,
+    "MINOR": 9,
+    "release_blockers": 375
+  },
+  "top_blockers": [
+    {
+      "field_code": "F-001",
+      "stage_code": "P2-02",
+      "status": "MISSING",
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-001 \u2014 no automated fallback available",
+      "source": null
+    },
+    {
+      "field_code": "F-001",
+      "stage_code": "P2-02",
+      "status": "MISSING",
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-001 \u2014 no automated fallback available",
+      "source": null
+    },
+    {
+      "field_code": "F-001",
+      "stage_code": "P2-02",
+      "status": "MISSING",
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-001 \u2014 no automated fallback available",
+      "source": null
+    },
+    {
+      "field_code": "F-003",
+      "stage_code": "P2-02",
+      "status": "MISSING",
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-003 \u2014 no automated fallback available",
+      "source": null
+    },
+    {
+      "field_code": "F-003",
+      "stage_code": "P2-02",
+      "status": "MISSING",
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-003 \u2014 no automated fallback available",
+      "source": null
+    },
+    {
+      "field_code": "F-003",
+      "stage_code": "P2-02",
+      "status": "MISSING",
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-003 \u2014 no automated fallback available",
+      "source": null
+    },
+    {
+      "field_code": "F-009",
+      "stage_code": "P2-02",
+      "status": "MISSING",
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-009 \u2014 no automated fallback available",
+      "source": null
+    },
+    {
+      "field_code": "F-009",
+      "stage_code": "P2-02",
+      "status": "MISSING",
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-009 \u2014 no automated fallback available",
+      "source": null
+    },
+    {
+      "field_code": "F-009",
+      "stage_code": "P2-02",
+      "status": "MISSING",
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-009 \u2014 no automated fallback available",
+      "source": null
+    },
+    {
+      "field_code": "F-010",
+      "stage_code": "P2-02",
+      "status": "MISSING",
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-010 \u2014 no automated fallback available",
+      "source": null
+    }
+  ],
+  "manual_review_summary": {
+    "total": 0,
+    "open": 0,
+    "resolved": 0,
+    "open_items": []
+  },
+  "source_fallback_summary": {
+    "parser_runs_total": 40,
+    "parser_runs_success": 36,
+    "parser_runs_failed": 4,
+    "avg_confidence": 79.0,
+    "source_distribution": {
+      "..\\data\\projects\\bac40ea8-441c-4298-8972-dc3b9c7dc193\\input\\2f5fec53-d866-4071-9500-164e64053f49.std": 49,
+      "..\\data\\projects\\bac40ea8-441c-4298-8972-dc3b9c7dc193\\input\\d5cecf7d-9a99-4ea4-a324-aaad9a4730b7.std": 35,
+      "..\\data\\projects\\bac40ea8-441c-4298-8972-dc3b9c7dc193\\input\\4b3f3cb6-7ba1-4a8d-aadc-f22da67d0eb2.std": 28,
+      "..\\data\\projects\\bac40ea8-441c-4298-8972-dc3b9c7dc193\\input\\7421a8b9-be20-4059-b1a9-119355d1f932.std": 28,
+      "..\\data\\projects\\bac40ea8-441c-4298-8972-dc3b9c7dc193\\input\\3c574922-46f9-491b-a3f7-62eb7efaf13a.xlsx": 8,
+      "..\\data\\projects\\bac40ea8-441c-4298-8972-dc3b9c7dc193\\input\\99d6af58-3ae7-4c04-a063-5c442867f711.xlsx": 8,
+      "..\\data\\projects\\bac40ea8-441c-4298-8972-dc3b9c7dc193\\input\\10d102f6-aed7-4517-a528-e9a145be9d12.std": 14,
+      "..\\data\\projects\\bac40ea8-441c-4298-8972-dc3b9c7dc193\\input\\e560418b-f362-4cba-8870-67e3a9fbbb48.std": 14,
+      "..\\data\\projects\\bac40ea8-441c-4298-8972-dc3b9c7dc193\\input\\d3ea482e-bb8b-489f-9924-e649da5e0161.pdf": 8,
+      "..\\data\\projects\\bac40ea8-441c-4298-8972-dc3b9c7dc193\\input\\b2f25aa0-bd9d-48b7-a5eb-ca19dc3cf408.pdf": 8
+    }
+  },
+  "defect_summary": {
+    "total_escalations": 0,
+    "open": 0,
+    "resolved": 0,
+    "critical_open": 0,
+    "by_severity": {
+      "CRITICAL": 0,
+      "MAJOR": 0,
+      "MINOR": 0
+    }
+  },
+  "audit_events_today": [],
+  "next_day_critical_path": {
+    "blocked_stages": [],
+    "critical_missing": [
+      {
+        "field_code": "F-001",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-001 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-003",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-003 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-009",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-009 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-010",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-010 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-013",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-013 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-014",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-014 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-015",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-015 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-016",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-016 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-017",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-017 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-019",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-019 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-021",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-021 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-023",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-023 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-024",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-024 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-025",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-025 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-026",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-026 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-027",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-027 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-028",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-028 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-029",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-029 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-031",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-031 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-032",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-032 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-033",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-033 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-034",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-034 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-035",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-035 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-036",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-036 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-037",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-037 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-039",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-039 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-040",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-040 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-041",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-041 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-042",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-042 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-043",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-043 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-044",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-044 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-045",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-045 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-046",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-046 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-047",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-047 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-048",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-048 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-051",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-051 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-052",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-052 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-054",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-054 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-055",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-055 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-056",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-056 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-057",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-057 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-059",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-059 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-060",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-060 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-061",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-061 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-063",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-063 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-064",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-064 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-065",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-065 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-066",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-066 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-067",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-067 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-069",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-069 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-072",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-072 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-073",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-073 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-075",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-075 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-076",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-076 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-077",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-077 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-078",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-078 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-080",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-080 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-081",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-081 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-082",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-082 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-083",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-083 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-084",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-084 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-085",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-085 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-086",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-086 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-087",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-087 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-088",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-088 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-089",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-089 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-090",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-090 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-091",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-091 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-092",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-092 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-093",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-093 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-095",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-095 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-098",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-098 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-100",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-100 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-101",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-101 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-104",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-104 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-107",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-107 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-108",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-108 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-109",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-109 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-111",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-111 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-112",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-112 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-114",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-114 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-115",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-115 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-116",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-116 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-118",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-118 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-119",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-119 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-121",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-121 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-122",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-122 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-123",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-123 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-124",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-124 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-132",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-132 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-133",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-133 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-134",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-134 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-135",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-135 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-136",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-136 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-137",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-137 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-138",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-138 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-139",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-139 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-140",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-140 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-141",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-141 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-142",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-142 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-143",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-143 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-144",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-144 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-145",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-145 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-147",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-147 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-148",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-148 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-149",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-149 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-150",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-150 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-151",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-151 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-152",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-152 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-156",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-156 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-157",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-157 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-159",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-159 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-160",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-160 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-161",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-161 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-162",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-162 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-163",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-163 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-170",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-170 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-171",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-171 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-172",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-172 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-173",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-173 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-183",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-183 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-191",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-191 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-192",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-192 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-193",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-193 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-194",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-194 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-001",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-001 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-003",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-003 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-009",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-009 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-010",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-010 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-013",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-013 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-014",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-014 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-015",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-015 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-016",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-016 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-017",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-017 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-019",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-019 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-021",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-021 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-023",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-023 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-024",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-024 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-025",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-025 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-026",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-026 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-027",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-027 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-028",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-028 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-029",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-029 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-031",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-031 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-032",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-032 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-033",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-033 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-034",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-034 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-035",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-035 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-036",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-036 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-037",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-037 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-039",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-039 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-040",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-040 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-041",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-041 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-042",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-042 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-043",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-043 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-044",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-044 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-045",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-045 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-046",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-046 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-047",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-047 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-048",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-048 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-051",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-051 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-052",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-052 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-054",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-054 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-055",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-055 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-056",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-056 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-057",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-057 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-059",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-059 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-060",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-060 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-061",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-061 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-063",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-063 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-064",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-064 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-065",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-065 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-066",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-066 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-067",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-067 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-069",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-069 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-072",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-072 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-073",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-073 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-075",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-075 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-076",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-076 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-077",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-077 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-078",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-078 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-080",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-080 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-081",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-081 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-082",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-082 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-083",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-083 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-084",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-084 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-085",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-085 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-086",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-086 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-087",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-087 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-088",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-088 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-089",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-089 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-090",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-090 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-091",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-091 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-092",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-092 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-093",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-093 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-095",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-095 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-098",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-098 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-100",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-100 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-101",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-101 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-104",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-104 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-107",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-107 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-108",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-108 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-109",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-109 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-111",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-111 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-112",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-112 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-114",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-114 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-115",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-115 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-116",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-116 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-118",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-118 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-119",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-119 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-121",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-121 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-122",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-122 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-123",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-123 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-124",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-124 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-132",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-132 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-133",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-133 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-134",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-134 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-135",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-135 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-136",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-136 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-137",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-137 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-138",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-138 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-139",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-139 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-140",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-140 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-141",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-141 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-142",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-142 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-143",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-143 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-144",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-144 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-145",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-145 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-147",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-147 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-148",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-148 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-149",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-149 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-150",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-150 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-151",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-151 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-152",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-152 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-156",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-156 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-157",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-157 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-159",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-159 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-160",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-160 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-161",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-161 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-162",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-162 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-163",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-163 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-170",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-170 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-171",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-171 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-172",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-172 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-173",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-173 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-183",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-183 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-191",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-191 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-192",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-192 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-193",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-193 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-194",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-194 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-001",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-001 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-003",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-003 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-009",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-009 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-010",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-010 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-013",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-013 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-014",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-014 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-015",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-015 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-016",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-016 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-017",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-017 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-019",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-019 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-021",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-021 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-023",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-023 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-024",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-024 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-025",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-025 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-026",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-026 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-027",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-027 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-028",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-028 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-029",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-029 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-031",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-031 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-032",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-032 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-033",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-033 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-034",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-034 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-035",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-035 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-036",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-036 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-037",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-037 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-039",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-039 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-040",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-040 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-041",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-041 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-042",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-042 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-043",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-043 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-044",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-044 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-045",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-045 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-046",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-046 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-047",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-047 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-048",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-048 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-051",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-051 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-052",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-052 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-054",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-054 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-055",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-055 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-056",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-056 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-057",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-057 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-059",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-059 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-060",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-060 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-061",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-061 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-063",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-063 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-064",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-064 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-065",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-065 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-066",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-066 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-067",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-067 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-069",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-069 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-072",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-072 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-073",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-073 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-075",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-075 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-076",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-076 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-077",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-077 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-078",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-078 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-080",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-080 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-081",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-081 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-082",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-082 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-083",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-083 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-084",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-084 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-085",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-085 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-086",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-086 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-087",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-087 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-088",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-088 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-089",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-089 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-090",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-090 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-091",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-091 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-092",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-092 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-093",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-093 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-095",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-095 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-098",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-098 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-100",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-100 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-101",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-101 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-104",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-104 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-107",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-107 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-108",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-108 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-109",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-109 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-111",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-111 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-112",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-112 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-114",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-114 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-115",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-115 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-116",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-116 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-118",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-118 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-119",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-119 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-121",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-121 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-122",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-122 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-123",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-123 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-124",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-124 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-132",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-132 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-133",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-133 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-134",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-134 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-135",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-135 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-136",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-136 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-137",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-137 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-138",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-138 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-139",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-139 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-140",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-140 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-141",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-141 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-142",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-142 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-143",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-143 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-144",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-144 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-145",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-145 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-147",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-147 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-148",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-148 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-149",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-149 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-150",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-150 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-151",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-151 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-152",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-152 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-156",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-156 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-157",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-157 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-159",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-159 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-160",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-160 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-161",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-161 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-162",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-162 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-163",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-163 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-170",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-170 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-171",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-171 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-172",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-172 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-173",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-173 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-183",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-183 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-191",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-191 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-192",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-192 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-193",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-193 \u2014 no automated fallback available"
+      },
+      {
+        "field_code": "F-194",
+        "stage_code": "P2-02",
+        "note": "Engineer must supply F-194 \u2014 no automated fallback available"
+      }
+    ],
+    "action_required": true
+  }
+}

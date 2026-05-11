@@ -7,7 +7,13 @@
       "Bash(python -m py_compile backend/app/agents/phase2/p2_03_ab_generation.py)",
       "Bash(python -m py_compile backend/app/agents/support/fallback.py)",
       "Bash(python -m py_compile backend/app/parsers/mbs_parser.py)",
-      "Bash(python -c ' *)"
+      "Bash(python -c ' *)",
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\User\\\\Desktop\\\\Steel Detailing Automation\\\\backend\\\\app\\\\parsers\\\\\" -File)",
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\User\\\\Desktop\\\\Steel Detailing Automation\\\\backend\" -Recurse -Include \"*.in\",\"*.mbs\",\"test*.py\" -ErrorAction SilentlyContinue)",
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\User\\\\Desktop\\\\Steel Detailing Automation\\\\backend\" -Recurse -Directory)",
+      "Bash(xargs grep *)",
+      "Bash(python -c \"import ast, sys; ast.parse\\(open\\('app/api/reports.py'\\).read\\(\\)\\); print\\('SYNTAX OK'\\)\")"
     ]
   }
 }

@@ -28,6 +28,7 @@ from app.utils.master_db import (
     fetch_source_category_priorities,
     fetch_source_fallback_chain,
 )
+from app.db.crud.validation import log_audit_event
 from app.utils.audit_logger import get_logger
 
 logger = get_logger(__name__)
@@ -179,10 +180,54 @@ def build_resolved_field_map(
         try:
             result = resolve_field_conflict(fc, candidates)
             resolved[fc] = result
+            
+            # Log conflicts
             if result.conflict_detected:
                 logger.info(
                     "Conflict on %s — %d candidates, strategy=%s, winner=%s",
                     fc, len(candidates), result.resolution_strategy, result.winning_source,
+                )
+                log_audit_event(
+                    db,
+                    "CONFLICT_RESOLVED",
+                    project_id=project_id,
+                    field_code=fc,
+                    detail={
+                        "candidates": result.candidates,
+                        "strategy": result.resolution_strategy,
+                        "winner": result.winning_source,
+                        "winning_value": result.winning_value,
+                    }
+                )
+            
+            # Log fallbacks (if winner is not the top priority source available for this project)
+            priorities = fetch_source_category_priorities()
+            # Find the best possible source available for this field among all project files
+            # (Note: we don't know the full project file list here easily without querying,
+            # but we can check if there are candidates with better priority than the winner)
+            best_candidate = min(candidates, key=lambda c: priorities.get(c.source, 99))
+            if result.winning_source != best_candidate.source:
+                # This would be weird if the resolution strategy was HIGHEST_PRIORITY,
+                # but if it was HIGHEST_CONFIDENCE, it might happen.
+                pass 
+            
+            # Let's log if we used a fallback source because a higher priority source didn't have it.
+            # (This is already handled by resolve_field_conflict if candidates only contains lower priority sources)
+            # Actually, a "fallback" is more interesting if we have NO candidates from the primary source.
+            
+            # For simplicity, I'll log a FALLBACK_APPLIED if the winning source rank > 1
+            if priorities.get(result.winning_source, 99) > 1:
+                 log_audit_event(
+                    db,
+                    "FALLBACK_APPLIED",
+                    project_id=project_id,
+                    field_code=fc,
+                    detail={
+                        "winner": result.winning_source,
+                        "winning_value": result.winning_value,
+                        "strategy": result.resolution_strategy,
+                        "note": f"Primary source (rank 1) did not provide {fc}"
+                    }
                 )
         except Exception as exc:
             logger.warning("Failed to resolve conflict for %s: %s", fc, exc)
@@ -196,10 +241,19 @@ def build_resolved_field_map(
 
 def _infer_source(row: ExtractedFieldValue) -> str:
     """
-    Derive the logical source name (MBS / STAAD / …) from the file path
-    stored in source_path.  Falls back to UNKNOWN.
+    Derive the logical source name (MBS / STAAD / …) from the source_path.
+
+    New format (stamped by P2-01 ingestion): "FILE_TYPE::actual/file/path"
+    Legacy format: raw file path — scan for source tokens in the path string.
     """
-    path_upper = (row.source_path or "").upper()
+    path = row.source_path or ""
+    # New format: type prefix before "::"
+    if "::" in path:
+        prefix = path.split("::", 1)[0].upper()
+        if prefix in ("MBS", "STAAD", "ETABS", "PROTASTEEL", "DXF", "PDF"):
+            return prefix
+    # Legacy: scan full path for known source tokens
+    path_upper = path.upper()
     for token in ("MBS", "STAAD", "ETABS", "PROTASTEEL", "PROTA", "DXF", "PDF"):
         if token in path_upper:
             return "PROTASTEEL" if token == "PROTA" else token

@@ -32,7 +32,7 @@ def update_stage_result(
     stage.error_message = error_message
     if status == StageStatus.RUNNING and stage.started_at is None:
         stage.started_at = datetime.utcnow()
-    if status in {StageStatus.PASSED, StageStatus.FAILED, StageStatus.AWAITING_INPUT}:
+    if status in {StageStatus.PASSED, StageStatus.PASS_WITH_WARNINGS, StageStatus.FAILED, StageStatus.BLOCKED}:
         stage.completed_at = datetime.utcnow()
     db.flush()
     return stage

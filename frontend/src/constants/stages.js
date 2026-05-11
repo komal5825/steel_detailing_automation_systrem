@@ -48,7 +48,7 @@ export const STATUS_META = {
   PASSED: { label: 'Completed', color: 'text-emerald-700', bg: 'bg-emerald-50', dot: 'bg-emerald-500', border: 'border-emerald-300' },
   FAILED: { label: 'Failed', color: 'text-red-700', bg: 'bg-red-50', dot: 'bg-red-500', border: 'border-red-300' },
   AWAITING_INPUT: { label: 'Needs Input', color: 'text-amber-700', bg: 'bg-amber-50', dot: 'bg-amber-500', border: 'border-amber-300' },
-  BLOCKED: { label: 'Blocked', color: 'text-slate-600', bg: 'bg-slate-100', dot: 'bg-slate-500', border: 'border-slate-300' },
+  BLOCKED: { label: 'Blocked', color: 'text-amber-800', bg: 'bg-amber-100', dot: 'bg-amber-600', border: 'border-amber-300' },
   SKIPPED: { label: 'Skipped', color: 'text-amber-700', bg: 'bg-amber-50', dot: 'bg-amber-500', border: 'border-amber-300' },
   PASS_WITH_WARNINGS: { label: 'Warnings', color: 'text-amber-700', bg: 'bg-amber-50', dot: 'bg-amber-500', border: 'border-amber-300' },
   PARSED: { label: 'Parsed', color: 'text-emerald-700', bg: 'bg-emerald-50', dot: 'bg-emerald-500', border: 'border-emerald-300' },

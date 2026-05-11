@@ -235,7 +235,7 @@ def _check_completeness(project_id: UUID, db: Session) -> dict:
     }
     write_processed_json(project_id, "p2-02_summary.json", result)
 
-    stage_status = StageStatus.PASSED if is_complete else StageStatus.AWAITING_INPUT
+    stage_status = StageStatus.PASSED if is_complete else StageStatus.BLOCKED
     update_stage_result(
         db,
         project_id=project_id,
@@ -245,7 +245,7 @@ def _check_completeness(project_id: UUID, db: Session) -> dict:
     )
     log_audit_event(
         db,
-        "STAGE_PASSED" if is_complete else "STAGE_AWAITING_INPUT",
+        "STAGE_PASSED" if is_complete else "STAGE_BLOCKED",
         project_id=project_id,
         stage_code="P2-02",
         detail={

@@ -1,0 +1,164 @@
+{
+  "header": {
+    "report_type": "DAILY",
+    "date": "2026-05-07",
+    "project_uuid": "4766fa25-02ab-41bd-94d1-59e3f3b64ba1",
+    "proposal_id": "AWAIT-4766fa",
+    "project_name": "Awaiting Input Resume Demo",
+    "project_status": "IN_PROGRESS",
+    "build_version": "2.0",
+    "generated_at": "2026-05-07T11:46:45.574647",
+    "generated_by": "system",
+    "report_id": "daily_proj-4766fa25_v2.0_2026-05-07_001",
+    "sequence": 1,
+    "qc_status": "pending"
+  },
+  "execution_summary": {
+    "tasks_run": 2,
+    "rules_evaluated": 2,
+    "gates_touched": 0,
+    "reruns_triggered": 0,
+    "audit_events_today": 0,
+    "files_total": 0,
+    "files_parsed": 0,
+    "files_failed": 0
+  },
+  "lane_summary": {
+    "Lane 1 - Ingestion": {
+      "stages": [
+        "P2-01"
+      ],
+      "statuses": [
+        "PASSED"
+      ],
+      "overall": "PASSED"
+    },
+    "Lane 2 - Completeness": {
+      "stages": [
+        "P2-02"
+      ],
+      "statuses": [
+        "BLOCKED"
+      ],
+      "overall": "BLOCKED"
+    },
+    "Lane 3 - Generation": {
+      "stages": [
+        "P2-03",
+        "P2-04"
+      ],
+      "statuses": [
+        "PENDING",
+        "PENDING"
+      ],
+      "overall": "PENDING"
+    },
+    "Lane 4 - Validation": {
+      "stages": [
+        "P2-05"
+      ],
+      "statuses": [
+        "PENDING"
+      ],
+      "overall": "PENDING"
+    }
+  },
+  "stage_detail": [
+    {
+      "stage_code": "P2-01",
+      "status": "PASSED",
+      "revision": 1,
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null
+    },
+    {
+      "stage_code": "P2-02",
+      "status": "BLOCKED",
+      "revision": 1,
+      "started_at": null,
+      "completed_at": null,
+      "error_message": "Missing mandatory values from governing source"
+    },
+    {
+      "stage_code": "P2-03",
+      "status": "PENDING",
+      "revision": 1,
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null
+    }
+  ],
+  "gate_snapshot": {},
+  "severity_summary": {
+    "CRITICAL": 2,
+    "MAJOR": 0,
+    "MINOR": 0,
+    "release_blockers": 2
+  },
+  "top_blockers": [
+    {
+      "field_code": "F-081",
+      "stage_code": "P2-02",
+      "status": "MISSING",
+      "severity": "CRITICAL",
+      "note": "Anchor dia missing",
+      "source": null
+    },
+    {
+      "field_code": "F-086",
+      "stage_code": "P2-02",
+      "status": "MISSING",
+      "severity": "CRITICAL",
+      "note": "Column spacing missing",
+      "source": null
+    }
+  ],
+  "manual_review_summary": {
+    "total": 0,
+    "open": 0,
+    "resolved": 0,
+    "open_items": []
+  },
+  "source_fallback_summary": {
+    "parser_runs_total": 0,
+    "parser_runs_success": 0,
+    "parser_runs_failed": 0,
+    "avg_confidence": 0,
+    "source_distribution": {}
+  },
+  "defect_summary": {
+    "total_escalations": 0,
+    "open": 0,
+    "resolved": 0,
+    "critical_open": 0,
+    "by_severity": {
+      "CRITICAL": 0,
+      "MAJOR": 0,
+      "MINOR": 0
+    }
+  },
+  "audit_events_today": [],
+  "next_day_critical_path": {
+    "blocked_stages": [
+      {
+        "stage_code": "P2-02",
+        "status": "BLOCKED",
+        "error": "Missing mandatory values from governing source"
+      }
+    ],
+    "critical_missing": [
+      {
+        "field_code": "F-081",
+        "stage_code": "P2-02",
+        "note": "Anchor dia missing"
+      },
+      {
+        "field_code": "F-086",
+        "stage_code": "P2-02",
+        "note": "Column spacing missing"
+      }
+    ],
+    "action_required": true
+  }
+}

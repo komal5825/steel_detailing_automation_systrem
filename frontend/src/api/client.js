@@ -20,7 +20,19 @@ client.interceptors.request.use((config) => {
 client.interceptors.response.use(
   (res) => res.data,
   (err) => {
-    const msg = err.response?.data?.detail || err.message || 'Request failed';
+    const detail = err.response?.data?.detail;
+    let msg = err.message || 'Request failed';
+    if (typeof detail === 'string') {
+      msg = detail;
+    } else if (detail?.message) {
+      msg = detail.message;
+    } else if (detail) {
+      try {
+        msg = JSON.stringify(detail);
+      } catch {
+        msg = String(detail);
+      }
+    }
     console.error('[API Error]', msg);
     return Promise.reject(new Error(msg));
   }

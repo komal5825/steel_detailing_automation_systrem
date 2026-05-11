@@ -70,6 +70,13 @@ def _run_ingestion(project_id: UUID, db: Session) -> dict:
             result = parser.parse(project_file.stored_path)
             all_parser_results[project_file.id] = result
             fields = [field_dictionary.normalize_field(field) for field in result["fields"]]
+            # Stamp source_path with file type so source priority engine can
+            # reliably infer the source regardless of the storage directory name.
+            file_type_tag = project_file.file_type
+            fields = [
+                {**f, "source_path": f"{file_type_tag}::{f.get('source_path', '')}"}
+                for f in fields
+            ]
             normalized_fields += sum(
                 1
                 for original, normalized in zip(result["fields"], fields)
@@ -95,7 +102,8 @@ def _run_ingestion(project_id: UUID, db: Session) -> dict:
             parsed_files += 1
             extracted_fields += result["field_count"]
             trace_action(
-                str(project_id),
+                db,
+                project_id,
                 "p2_01_parse_success",
                 {
                     "file_id": str(project_file.id),
@@ -118,7 +126,8 @@ def _run_ingestion(project_id: UUID, db: Session) -> dict:
             project_file.processing_status = FileProcessingStatus.FAILED
             failed_files += 1
             trace_action(
-                str(project_id),
+                db,
+                project_id,
                 "p2_01_parse_failed",
                 {
                     "file_id": str(project_file.id),
@@ -220,8 +229,17 @@ def _run_ingestion(project_id: UUID, db: Session) -> dict:
             if f["field_name"] in ["node_count", "member_count", "support_count", "job_date", "unit_system"]:
                 governing_details[f["field_name"]] = f["raw_value"]
 
+    overall_status = "PASS"
+    if parsed_files == 0 and failed_files > 0:
+        overall_status = "FAIL"
+    elif failed_files > 0:
+        overall_status = "PASS_WITH_WARNINGS"
+    elif len(files) == 0:
+        overall_status = "BLOCKED"
+
     result = {
         "status": "success" if failed_files == 0 else "partial_success",
+        "overall": overall_status,
         "project_id": str(project_id),
         "files_found": len(files),
         "parsed_files": parsed_files,
@@ -233,11 +251,21 @@ def _run_ingestion(project_id: UUID, db: Session) -> dict:
         "main_output": "reports/p2-01_summary.json",
     }
     write_processed_json(project_id, "p2-01_summary.json", result)
+    
+    # Map overall_status string back to StageStatus enum for DB
+    db_status = StageStatus.PASSED
+    if overall_status == "PASS_WITH_WARNINGS":
+        db_status = StageStatus.PASS_WITH_WARNINGS
+    elif overall_status == "FAIL":
+        db_status = StageStatus.FAILED
+    elif overall_status == "BLOCKED":
+        db_status = StageStatus.BLOCKED
+
     update_stage_result(
         db,
         project_id=project_id,
         stage_code="P2-01",
-        status=StageStatus.PASSED if failed_files == 0 else StageStatus.FAILED,
+        status=db_status,
         result=result,
     )
     db.commit()

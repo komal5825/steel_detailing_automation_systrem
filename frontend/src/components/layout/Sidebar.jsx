@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import {
+  BarChart2,
   ClipboardList,
   Database,
   FileText,
@@ -39,6 +40,12 @@ const NAV_SECTIONS = [
       { to: '/outputs', icon: Package, label: 'Shipping & Release' },
       { to: '/audit', icon: ClipboardList, label: 'Audit Logs' },
       { to: '/settings', icon: Settings, label: 'Settings' },
+    ],
+  },
+  {
+    label: 'REPORTING',
+    items: [
+      { to: '/reports', icon: BarChart2, label: 'Automated Reports' },
     ],
   },
 ];

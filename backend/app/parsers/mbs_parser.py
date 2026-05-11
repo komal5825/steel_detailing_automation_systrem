@@ -46,6 +46,52 @@ _DESIGN_STD_MAP = {
     "NAUS":  "AISC-US",
 }
 
+# Maps MBS internal extracted-field names to canonical F-codes.
+# Fields not listed here fall back to the RAW-MBS-<KEY> code and are
+# normalized later by FieldDictionary if an alias exists.
+_MBS_FIELD_CODE_MAP: dict[str, str] = {
+    # Document metadata
+    "draw_date":               "F-024",
+    "created_date":            "F-017",
+    "drawing_class":           "F-020",
+    "size":                    "F-028",
+    "scale":                   "F-029",
+    # Project identity
+    "project_code":            "F-001",
+    "project_name":            "F-002",
+    "company_name":            "F-010",
+    "project_design_standard": "F-191",
+    # Building layout
+    "bldg_type":               "F-048",
+    "building_width_mm":       "F-046",
+    "building_length_mm":      "F-045",
+    # Horizontal grid (bay spacings along building length)
+    "col_label_x":             "F-041",
+    "bay_spacing_x":           "F-039",
+    "origin_x":                "F-043",
+    "bay_seq":                 "F-171",
+    "bay_dim":                 "F-172",
+    # Vertical grid (bay spacings across building width)
+    "col_label_y":             "F-042",
+    "bay_spacing_y":           "F-040",
+    "origin_y":                "F-044",
+    # Anchor bolt details (section 20)
+    "bolt_dia":                "F-081",
+    "bolt_qty":                "F-083",
+    "bolt_sp_x":               "F-084",
+    "bolt_sp_y":               "F-085",
+    "embed_depth":             "F-086",
+    "bolt_proj":               "F-087",
+    "bolt_orient":             "F-088",
+    "ab_code":                 "F-089",
+    # Base plate
+    "bp_size":                 "F-080",
+    "bp_thick":                "F-090",
+    # Connection
+    "conn_type":               "F-075",
+    "conn_bolt_qty":           "F-078",
+}
+
 # Sheet size from width × height (mm) → ISO code
 _SHEET_SIZE_MAP = [
     ((1189, 841), "A0"),
@@ -156,7 +202,15 @@ class MBSParser:
                 self._parse_design_code(body, extracted)
             elif "JOBID" in sec_name and sec_num == 1:
                 self._parse_jobid(body, extracted)
-            elif "DETAILS" in sec_name and sec_num == 20:
+            elif sec_num == 20 and (
+                "DETAILS" in sec_name
+                or "BOLT" in sec_name
+                or "ANCHOR" in sec_name
+                or not any(k in sec_name for k in (
+                    "TITLE", "DRAWING", "BUILDING", "DESIGN",
+                    "JOBID", "HORIZONTAL", "VERTICAL",
+                ))
+            ):
                 self._parse_details_section(body, extracted)
             elif "HORIZONTAL GRID" in sec_name:
                 self._parse_horizontal_grid(body, extracted)
@@ -165,7 +219,9 @@ class MBSParser:
 
         return [
             ParsedField(
-                field_code=f"RAW-MBS-{self._clean_key(name).upper()}",
+                field_code=_MBS_FIELD_CODE_MAP.get(
+                    name, f"RAW-MBS-{self._clean_key(name).upper()}"
+                ),
                 field_name=name,
                 raw_value=value,
                 normalized_value=self._normalize_value(value),
@@ -343,14 +399,14 @@ class MBSParser:
         End-wall detail = 'e1'; emitted with 'ew_' prefix for traceability.
         """
         detail_re = re.compile(
-            r"'([^']+)'"                           # Id
-            r"\s+([\d.]+)"                         # Dia
-            r"\s+(\d+)\s+(\d+)"                   # In  Out
-            r"\s+([\d.]+)\s+([\d.]+)\s+([\d.]+)"  # A  B  C
-            r"\s+([\d.]+)\s+([\d.]+)\s+([\d.]+)"  # D  E  F
-            r"\s+([\d.]+)\s+([\d.]+)\s+([\d.]+)"  # BpWidth  BpLength  BpThick
-            r"\s+'([^']*)'"                        # Opt
-            r"\s+([\d.]+)\s+([\d.]+)"              # ColDepth  ColWidth
+            r"'([^']+)'"                           # Id          (1)
+            r"\s+([\d.]+)"                         # Dia         (2)
+            r"\s+([\d.]+)\s+([\d.]+)"             # In  Out     (3,4) — allow floats e.g. "2.0"
+            r"\s+([\d.]+)\s+([\d.]+)\s+([\d.]+)"  # A  B  C    (5,6,7)
+            r"\s+([\d.]+)\s+([\d.]+)\s+([\d.]+)"  # D  E  F    (8,9,10)
+            r"\s+([\d.]+)\s+([\d.]+)\s+([\d.]+)"  # BpW BpL BpT (11,12,13)
+            r"(?:\s+'([^']*)')?"                   # Opt         (14, optional)
+            r"(?:\s+([\d.]+)\s+([\d.]+))?"         # ColD ColW   (15,16, optional)
         )
 
         primary: dict | None = None
@@ -365,16 +421,16 @@ class MBSParser:
             det: dict = {
                 "id":       m.group(1).strip(),
                 "dia":      m.group(2),
-                "rows_in":  int(m.group(3)),
-                "rows_out": int(m.group(4)),
+                "rows_in":  int(float(m.group(3))),
+                "rows_out": int(float(m.group(4))),
                 "a": m.group(5),  "b": m.group(6),  "c": m.group(7),
                 "d": m.group(8),  "e": m.group(9),  "f": m.group(10),
                 "bp_width":  m.group(11),
                 "bp_length": m.group(12),
                 "bp_thick":  m.group(13),
-                "bp_opt":    m.group(14).strip(),
-                "col_depth": m.group(15),
-                "col_width": m.group(16),
+                "bp_opt":    (m.group(14) or "").strip(),
+                "col_depth": m.group(15),   # may be None
+                "col_width": m.group(16),   # may be None
             }
             if first is None:
                 first = det

@@ -1,0 +1,13 @@
+[
+  {
+    "id": "176f7c49-4a16-4992-ba07-13b6de459394",
+    "stage_code": "P2-02",
+    "field_code": "F-081",
+    "status": "MISSING",
+    "severity": "CRITICAL",
+    "source": "MBS",
+    "value": "",
+    "note": "Required",
+    "created_at": "2026-05-07T06:34:35.328372"
+  }
+]

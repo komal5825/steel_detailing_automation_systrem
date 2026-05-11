@@ -36,7 +36,9 @@ logger = get_logger(__name__)
 _SYSTEM_DEFAULTS: dict[str, str] = {
     # ── Technical / derivable ─────────────────────────────────────────────
     "F-082": "4.6",                    # standard IS-1367 anchor bolt grade
-    "F-192": "",                       # derived in P2-03: bolt_proj + grout_pad
+    # F-192 intentionally omitted: it is derived in P2-03 as F-087 + F-193.
+    # Providing an empty-string default here caused it to appear as PRESENT
+    # in validation results while carrying no real value.
     "F-193": "50",                     # 50 mm standard non-shrink grout pad
     "F-194": "StrongAxisParallelX",    # default column orientation
     # ── Document metadata placeholders ───────────────────────────────────

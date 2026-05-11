@@ -101,8 +101,11 @@ def _validate(project_id: UUID, db: Session) -> dict:
 
     # ---- 4. Overall verdict ----
     file_ok = all(itm["passed"] for itm in file_items)
-    rules_ok = rule_report.overall == "PASS"
-    overall = "PASS" if (file_ok and rules_ok) else "FAIL"
+    
+    if not file_ok:
+        overall = "FAIL"
+    else:
+        overall = rule_report.overall
 
     result = {
         "project_id": str(project_id),
@@ -121,7 +124,7 @@ def _validate(project_id: UUID, db: Session) -> dict:
     _CHECKPOINT_MGR.record(
         db, project_id=project_id, stage_code="P2-05",
         label="AB/GA Validation Gate",
-        gate_status=overall,
+        gate_status="PASS" if overall in ("PASS", "PASS_WITH_WARNINGS") else "FAIL",
         gate_data=result,
     )
 
@@ -129,13 +132,20 @@ def _validate(project_id: UUID, db: Session) -> dict:
     report_path = write_json_output(project_id, "validation", "abga_validation.json", result)
     result["report_path"] = str(report_path)
 
+    # Map string to StageStatus enum
+    db_status = StageStatus.FAILED
+    if overall == "PASS":
+        db_status = StageStatus.PASSED
+    elif overall == "PASS_WITH_WARNINGS":
+        db_status = StageStatus.PASS_WITH_WARNINGS
+
     update_stage_result(
         db, project_id=project_id, stage_code="P2-05",
-        status=StageStatus.PASSED if overall == "PASS" else StageStatus.FAILED,
+        status=db_status,
         result=result,
     )
     log_audit_event(
-        db, "STAGE_PASSED" if overall == "PASS" else "STAGE_FAILED",
+        db, f"STAGE_{overall.upper()}",
         project_id=project_id, stage_code="P2-05",
         detail={"overall": overall,
                 "blocking_failures": rule_report.blocking_failures},

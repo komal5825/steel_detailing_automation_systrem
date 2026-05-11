@@ -1,0 +1,15 @@
+{
+  "project_id": "c8a91f38-2a03-4618-869b-fc897a894f6e",
+  "stages": [
+    {
+      "stage_code": "P2-02",
+      "status": "BLOCKED",
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null,
+      "result": {},
+      "checkpoints": []
+    }
+  ],
+  "checkpoints": []
+}

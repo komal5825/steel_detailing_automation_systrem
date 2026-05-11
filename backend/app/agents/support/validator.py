@@ -98,8 +98,16 @@ class Validator:
             ))
 
         blocking_failures = sum(1 for r in results if not r.passed and r.blocking)
+        non_blocking_failures = sum(1 for r in results if not r.passed and not r.blocking)
+
+        overall = "PASS"
+        if blocking_failures > 0:
+            overall = "FAIL"
+        elif non_blocking_failures > 0:
+            overall = "PASS_WITH_WARNINGS"
+
         return ValidationReport(
-            overall="PASS" if blocking_failures == 0 else "FAIL",
+            overall=overall,
             blocking_failures=blocking_failures,
             results=results,
         )

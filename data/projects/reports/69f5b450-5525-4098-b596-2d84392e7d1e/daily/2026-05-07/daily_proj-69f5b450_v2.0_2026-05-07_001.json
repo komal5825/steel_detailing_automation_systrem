@@ -1,0 +1,145 @@
+{
+  "header": {
+    "report_type": "DAILY",
+    "date": "2026-05-07",
+    "project_uuid": "69f5b450-5525-4098-b596-2d84392e7d1e",
+    "proposal_id": "EXP-69f5b4",
+    "project_name": "Controlled Export Test",
+    "project_status": "CREATED",
+    "build_version": "2.0",
+    "generated_at": "2026-05-07T11:46:45.483745",
+    "generated_by": "system",
+    "report_id": "daily_proj-69f5b450_v2.0_2026-05-07_001",
+    "sequence": 1,
+    "qc_status": "pending"
+  },
+  "execution_summary": {
+    "tasks_run": 1,
+    "rules_evaluated": 1,
+    "gates_touched": 0,
+    "reruns_triggered": 0,
+    "audit_events_today": 1,
+    "files_total": 1,
+    "files_parsed": 0,
+    "files_failed": 0
+  },
+  "lane_summary": {
+    "Lane 1 - Ingestion": {
+      "stages": [
+        "P2-01"
+      ],
+      "statuses": [
+        "PENDING"
+      ],
+      "overall": "PENDING"
+    },
+    "Lane 2 - Completeness": {
+      "stages": [
+        "P2-02"
+      ],
+      "statuses": [
+        "BLOCKED"
+      ],
+      "overall": "BLOCKED"
+    },
+    "Lane 3 - Generation": {
+      "stages": [
+        "P2-03",
+        "P2-04"
+      ],
+      "statuses": [
+        "PENDING",
+        "PENDING"
+      ],
+      "overall": "PENDING"
+    },
+    "Lane 4 - Validation": {
+      "stages": [
+        "P2-05"
+      ],
+      "statuses": [
+        "PENDING"
+      ],
+      "overall": "PENDING"
+    }
+  },
+  "stage_detail": [
+    {
+      "stage_code": "P2-02",
+      "status": "BLOCKED",
+      "revision": 1,
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null
+    }
+  ],
+  "gate_snapshot": {},
+  "severity_summary": {
+    "CRITICAL": 1,
+    "MAJOR": 0,
+    "MINOR": 0,
+    "release_blockers": 1
+  },
+  "top_blockers": [
+    {
+      "field_code": "F-081",
+      "stage_code": "P2-02",
+      "status": "MISSING",
+      "severity": "CRITICAL",
+      "note": "Required",
+      "source": "MBS"
+    }
+  ],
+  "manual_review_summary": {
+    "total": 0,
+    "open": 0,
+    "resolved": 0,
+    "open_items": []
+  },
+  "source_fallback_summary": {
+    "parser_runs_total": 1,
+    "parser_runs_success": 1,
+    "parser_runs_failed": 0,
+    "avg_confidence": 96.0,
+    "source_distribution": {
+      "sheet1!A1": 1
+    }
+  },
+  "defect_summary": {
+    "total_escalations": 0,
+    "open": 0,
+    "resolved": 0,
+    "critical_open": 0,
+    "by_severity": {
+      "CRITICAL": 0,
+      "MAJOR": 0,
+      "MINOR": 0
+    }
+  },
+  "audit_events_today": [
+    {
+      "event_type": "TEST_EVENT",
+      "actor": null,
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-07T06:33:00.161477"
+    }
+  ],
+  "next_day_critical_path": {
+    "blocked_stages": [
+      {
+        "stage_code": "P2-02",
+        "status": "BLOCKED",
+        "error": null
+      }
+    ],
+    "critical_missing": [
+      {
+        "field_code": "F-081",
+        "stage_code": "P2-02",
+        "note": "Required"
+      }
+    ],
+    "action_required": true
+  }
+}

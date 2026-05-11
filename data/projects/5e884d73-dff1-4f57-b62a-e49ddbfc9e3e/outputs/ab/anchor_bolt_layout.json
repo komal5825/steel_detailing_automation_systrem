@@ -1,0 +1,10 @@
+{
+  "project_id": "5e884d73-dff1-4f57-b62a-e49ddbfc9e3e",
+  "output_type": "AB",
+  "anchor_bolt_fields": {
+    "F-039": "6000",
+    "F-081": "M24"
+  },
+  "source_field_count": 2,
+  "status": "generated"
+}
