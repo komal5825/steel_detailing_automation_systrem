@@ -1032,7 +1032,7 @@ async def export_pipeline_snapshot_png(project_id: str, db: Session = Depends(ge
         nonlocal y
         page.insert_text(
             fitz.Point(x, y), txt,
-            fontsize=size, fontname="helv-bold" if bold else "helv", color=color,
+            fontsize=size, fontname="hebo" if bold else "helv", color=color,
         )
         y += size * 1.8
 
@@ -1062,10 +1062,10 @@ async def export_pipeline_snapshot_png(project_id: str, db: Session = Depends(ge
         page.draw_rect(fitz.Rect(36, card_y, 106, card_y + 30),
                        color=color, fill=color)
         page.insert_text(fitz.Point(41, card_y + 19), sc,
-                         fontsize=9, fontname="helv-bold", color=(1, 1, 1))
+                         fontsize=9, fontname="hebo", color=(1, 1, 1))
         # Status label
         page.insert_text(fitz.Point(114, card_y + 19), st,
-                         fontsize=9, fontname="helv-bold", color=color)
+                         fontsize=9, fontname="hebo", color=color)
         # Detail (error or overall result)
         err    = stage.get("error_message") or ""
         result = stage.get("result") or {}

@@ -16,6 +16,8 @@ class SourceClassifier:
     EXTENSION_MAP = {
         '.std': FileType.STAAD,
         '.mbs': FileType.MBS,
+        '.in': FileType.IN_FILE,   # MBS structured input files
+        '.inn': FileType.IN_FILE,  # legacy typo/variant extension from field teams
         '.xml': FileType.MBS,  # MBS also uses XML
         '.edb': FileType.ETABS,
         '.dwg': FileType.DWG,
@@ -52,6 +54,7 @@ class SourceClassifier:
         source_application = {
             FileType.STAAD: "STAAD",
             FileType.MBS: "MBS",
+            FileType.IN_FILE: "MBS-IN",
             FileType.ETABS: "ETABS",
             FileType.PROTASTEEL: "PROTASTEEL",
             FileType.DWG: "CAD",
@@ -62,7 +65,7 @@ class SourceClassifier:
         }.get(file_type, "UNKNOWN")
 
         likely_role = "supporting"
-        if file_type in [FileType.STAAD, FileType.MBS, FileType.ETABS]:
+        if file_type in [FileType.STAAD, FileType.MBS, FileType.IN_FILE, FileType.ETABS]:
             likely_role = "governing"
         elif "template" in filename or "title" in filename:
             likely_role = "template"
@@ -80,7 +83,7 @@ class SourceClassifier:
 
     @classmethod
     def is_design_file(cls, file_type: FileType) -> bool:
-        return file_type in [FileType.STAAD, FileType.MBS, FileType.ETABS, FileType.PROTASTEEL]
+        return file_type in [FileType.STAAD, FileType.MBS, FileType.IN_FILE, FileType.ETABS, FileType.PROTASTEEL]
 
     @classmethod
     def is_drawing_file(cls, file_type: FileType) -> bool:

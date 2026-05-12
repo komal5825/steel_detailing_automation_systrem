@@ -1,10 +1,10 @@
 import React from 'react';
-import { 
-  CheckCircle2, 
-  AlertCircle, 
-  FileText, 
-  Database, 
-  ShieldCheck, 
+import {
+  CheckCircle2,
+  AlertCircle,
+  FileText,
+  Database,
+  ShieldCheck,
   X,
   ChevronRight,
   Info
@@ -17,7 +17,7 @@ export default function IngestionSummaryModal({ result, onClose }) {
 
   const isSuccess = result.status === 'success';
   const governing = result.governing_file;
-  
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm animate-in fade-in duration-200">
       <div className="relative w-full max-w-2xl scale-in-center overflow-hidden rounded-xl border border-slate-200 bg-white shadow-2xl">
@@ -37,7 +37,7 @@ export default function IngestionSummaryModal({ result, onClose }) {
               <p className="text-xs text-slate-600">Design File Injection (P2-01)</p>
             </div>
           </div>
-          <button 
+          <button
             onClick={onClose}
             className="rounded-full p-1 text-slate-400 hover:bg-slate-200 hover:text-slate-600 transition-colors"
           >
@@ -49,23 +49,23 @@ export default function IngestionSummaryModal({ result, onClose }) {
         <div className="max-h-[70vh] overflow-y-auto p-6">
           {/* Summary Stats */}
           <div className="grid grid-cols-3 gap-4 mb-8">
-            <StatCard 
-              label="Files Parsed" 
-              value={`${result.parsed_files}/${result.files_found}`} 
+            <StatCard
+              label="Files Parsed"
+              value={`${result.parsed_files}/${result.files_found}`}
               subValue={`${result.failed_files} failed`}
               icon={FileText}
               color="blue"
             />
-            <StatCard 
-              label="Fields Extracted" 
-              value={result.extracted_fields} 
+            <StatCard
+              label="Fields Extracted"
+              value={result.extracted_fields}
               subValue={`${result.normalized_fields} normalized`}
               icon={Database}
               color="amber"
             />
-            <StatCard 
-              label="Status" 
-              value={isSuccess ? "PASS" : "PARTIAL"} 
+            <StatCard
+              label="Status"
+              value={isSuccess ? "PASS" : "PARTIAL"}
               subValue="Quality Gate 1"
               icon={ShieldCheck}
               color={isSuccess ? "emerald" : "amber"}
@@ -85,7 +85,7 @@ export default function IngestionSummaryModal({ result, onClose }) {
                 </span>
               )}
             </div>
-            
+
             {governing ? (
               <div className="flex items-center justify-between gap-4">
                 <div className="min-w-0">
@@ -122,13 +122,13 @@ export default function IngestionSummaryModal({ result, onClose }) {
 
         {/* Footer */}
         <div className="flex items-center justify-end gap-3 border-t bg-slate-50 px-6 py-4">
-          <button 
+          <button
             onClick={onClose}
             className="rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50"
           >
             Review Files
           </button>
-          <button 
+          <button
             onClick={onClose}
             className="flex items-center gap-2 rounded-md bg-slate-900 px-6 py-2 text-sm font-bold text-white hover:bg-blue-700 transition-all shadow-md"
           >
@@ -147,7 +147,7 @@ function StatCard({ label, value, subValue, icon: Icon, color }) {
     emerald: "text-emerald-600 bg-emerald-50 border-emerald-100",
     slate: "text-slate-600 bg-slate-50 border-slate-100",
   };
-  
+
   return (
     <div className={clsx("rounded-xl border p-4 shadow-sm", colors[color])}>
       <div className="mb-2 flex items-center justify-between">

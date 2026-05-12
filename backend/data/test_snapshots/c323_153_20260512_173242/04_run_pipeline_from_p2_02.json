@@ -1,0 +1,1284 @@
+{
+  "status_code": 422,
+  "body": {
+    "detail": {
+      "message": "Pipeline failed",
+      "summary": {
+        "project_id": "6ab928d5-25fc-473d-8ee3-dcee5f29d1ae",
+        "pipeline_complete": false,
+        "pipeline_blocked": false,
+        "pipeline_failed": true,
+        "failed_stage": "P2-05",
+        "last_stage_run": "P2-05",
+        "hard_gate_5": "FAIL",
+        "hard_gate_5_detail": {
+          "required_stages": [
+            "P2-01",
+            "P2-02",
+            "P2-03",
+            "P2-04",
+            "P2-05"
+          ],
+          "not_passed_stages": [
+            "P2-05"
+          ],
+          "ab_output_exists": true,
+          "ga_output_exists": true
+        },
+        "phase3_eligible": false,
+        "handoff": {},
+        "stages": [
+          {
+            "stage_code": "P2-01",
+            "status": "PASS_WITH_WARNINGS",
+            "started_at": "2026-05-12T12:02:47.282313",
+            "completed_at": "2026-05-12T12:03:02.613466",
+            "error_message": null,
+            "result": {
+              "status": "partial_success",
+              "overall": "PASS_WITH_WARNINGS",
+              "project_id": "6ab928d5-25fc-473d-8ee3-dcee5f29d1ae",
+              "files_found": 118,
+              "parsed_files": 116,
+              "failed_files": 2,
+              "skipped_files": 2,
+              "extracted_fields": 1902,
+              "normalized_fields": 35,
+              "governing_file": {
+                "file_id": "b46af0ba-76f2-40b6-a719-01c5ea175dcc",
+                "original_filename": "BLOCK.IN",
+                "file_type": "MBS",
+                "source_application": "MBS",
+                "likely_role": "governing",
+                "classification_confidence": 90
+              },
+              "governing_details": {},
+              "warnings": [
+                {
+                  "status": "Warning",
+                  "agent": "P2-01",
+                  "title": "Source File Parse Failure",
+                  "issue": "File 'JACKDET.Dxf' (DXF) failed to parse after 3 attempt(s)",
+                  "affected_fields": [],
+                  "root_cause": "could not convert string to float: '**********'",
+                  "parser": "ProtaSteelParser",
+                  "recommended_fix": "Verify the file is a valid, uncorrupted export from the source application. Re-upload the corrected file and re-run P2-01 ingestion.",
+                  "can_continue": true,
+                  "severity": "MINOR"
+                },
+                {
+                  "status": "Warning",
+                  "agent": "P2-01",
+                  "title": "Source File Parse Failure",
+                  "issue": "File 'SHIP.XLS' (EXCEL) failed to parse after 3 attempt(s)",
+                  "affected_fields": [],
+                  "root_cause": "ETABS parser expects an Excel export",
+                  "parser": "EtabsParser",
+                  "recommended_fix": "Verify the file is a valid, uncorrupted export from the source application. Re-upload the corrected file and re-run P2-01 ingestion.",
+                  "can_continue": true,
+                  "severity": "MINOR"
+                }
+              ],
+              "warnings_count": 2,
+              "main_output": "reports/p2-01_summary.json",
+              "skip_log": "reports/parse_skip_log.json"
+            },
+            "checkpoints": [
+              {
+                "stage_code": "P2-01",
+                "label": "File Ingestion Gate",
+                "gate_status": "PASS",
+                "created_at": "2026-05-12 12:03:02.611292",
+                "gate_data": {
+                  "files_found": 118,
+                  "parsed_files": 116,
+                  "failed_files": 2,
+                  "extracted_fields": 1902,
+                  "warnings_count": 2
+                }
+              }
+            ]
+          },
+          {
+            "stage_code": "P2-02",
+            "status": "PASSED",
+            "started_at": "2026-05-12T12:03:03.814677",
+            "completed_at": "2026-05-12T12:03:10.953873",
+            "error_message": null,
+            "result": {
+              "project_id": "6ab928d5-25fc-473d-8ee3-dcee5f29d1ae",
+              "ab_readiness": {
+                "output": "AB",
+                "required_count": 72,
+                "present_count": 72,
+                "missing_count": 0,
+                "missing_codes": [],
+                "status": "READY",
+                "fields": {
+                  "F-001": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "C323-153"
+                  },
+                  "F-002": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "Proposed Warehouse"
+                  },
+                  "F-006": {
+                    "status": "SUSPICIOUS",
+                    "source": "MBS",
+                    "value": "METRIC"
+                  },
+                  "F-009": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "CLIENT"
+                  },
+                  "F-010": {
+                    "status": "SUSPICIOUS",
+                    "source": "MBS",
+                    "value": "RECLA INTERNATIONAL PRIVATE LIMITED"
+                  },
+                  "F-013": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "DrawingSet"
+                  },
+                  "F-014": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "AB-001"
+                  },
+                  "F-015": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "Anchor Bolt Drawing"
+                  },
+                  "F-016": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "DXF"
+                  },
+                  "F-017": {
+                    "status": "SUSPICIOUS",
+                    "source": "MBS",
+                    "value": "2025-08-07"
+                  },
+                  "F-019": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "0.85"
+                  },
+                  "F-020": {
+                    "status": "SUSPICIOUS",
+                    "source": "MBS",
+                    "value": "DET"
+                  },
+                  "F-021": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "ab_drawing.dxf"
+                  },
+                  "F-023": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "SYSTEM"
+                  },
+                  "F-024": {
+                    "status": "SUSPICIOUS",
+                    "source": "MBS",
+                    "value": "2025-08-07"
+                  },
+                  "F-025": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "1"
+                  },
+                  "F-026": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "8420.00"
+                  },
+                  "F-027": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "ANCHOR BOLT LAYOUT"
+                  },
+                  "F-028": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "A3"
+                  },
+                  "F-029": {
+                    "status": "SUSPICIOUS",
+                    "source": "MBS",
+                    "value": "0.7"
+                  },
+                  "F-031": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "R0"
+                  },
+                  "F-032": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "2026-05-12"
+                  },
+                  "F-033": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "Issued for Approval"
+                  },
+                  "F-034": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "SYSTEM"
+                  },
+                  "F-035": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "PENDING"
+                  },
+                  "F-036": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "2026-05-12"
+                  },
+                  "F-037": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "IFC"
+                  },
+                  "F-039": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "6200.05990.06145.05700.06000.06250.0"
+                  },
+                  "F-040": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "11235.011235.0"
+                  },
+                  "F-041": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "1,2,3,4,5,6,7"
+                  },
+                  "F-042": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "C,B,A"
+                  },
+                  "F-043": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "0.0"
+                  },
+                  "F-044": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "0.0"
+                  },
+                  "F-048": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "FF"
+                  },
+                  "F-075": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "Bolted"
+                  },
+                  "F-078": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "4"
+                  },
+                  "F-080": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "200.00 x 704.81"
+                  },
+                  "F-081": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "20"
+                  },
+                  "F-082": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "8.8"
+                  },
+                  "F-083": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "4"
+                  },
+                  "F-084": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "75.00"
+                  },
+                  "F-085": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "50.80"
+                  },
+                  "F-086": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "150.00"
+                  },
+                  "F-087": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "83.00"
+                  },
+                  "F-088": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "Symmetric"
+                  },
+                  "F-089": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "m1"
+                  },
+                  "F-090": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "16.00"
+                  },
+                  "F-132": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "Pending"
+                  },
+                  "F-133": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "PENDING"
+                  },
+                  "F-134": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "3.0000"
+                  },
+                  "F-135": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "Y"
+                  },
+                  "F-136": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "Pending"
+                  },
+                  "F-137": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "2026-05-12T12:03:10.175187+00:00"
+                  },
+                  "F-138": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "P2-03"
+                  },
+                  "F-139": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "AnDwg.in"
+                  },
+                  "F-140": {
+                    "status": "SUSPICIOUS",
+                    "source": "MBS",
+                    "value": "Equivalent Lateral Force, Section 12.8"
+                  },
+                  "F-141": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "85"
+                  },
+                  "F-142": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "1"
+                  },
+                  "F-143": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "Pending"
+                  },
+                  "F-144": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "COMPLETENESS_CHECK"
+                  },
+                  "F-145": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "N"
+                  },
+                  "F-147": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "S3"
+                  },
+                  "F-148": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "Pending"
+                  },
+                  "F-151": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "AB_STANDARD"
+                  },
+                  "F-152": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "STANDARD_TITLE_BLOCK"
+                  },
+                  "F-156": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "A3_BORDER"
+                  },
+                  "F-171": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "6"
+                  },
+                  "F-172": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "6200.0"
+                  },
+                  "F-191": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "AISC-US"
+                  },
+                  "F-192": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "83.00"
+                  },
+                  "F-193": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "50"
+                  },
+                  "F-194": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "StrongAxisParallelX"
+                  }
+                }
+              },
+              "ga_readiness": {
+                "output": "GA",
+                "required_count": 78,
+                "present_count": 78,
+                "missing_count": 0,
+                "missing_codes": [],
+                "status": "READY",
+                "fields": {
+                  "F-001": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "C323-153"
+                  },
+                  "F-002": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "Proposed Warehouse"
+                  },
+                  "F-003": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "Proposed Warehouse, PINE"
+                  },
+                  "F-006": {
+                    "status": "SUSPICIOUS",
+                    "source": "MBS",
+                    "value": "METRIC"
+                  },
+                  "F-009": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "CLIENT"
+                  },
+                  "F-010": {
+                    "status": "SUSPICIOUS",
+                    "source": "MBS",
+                    "value": "RECLA INTERNATIONAL PRIVATE LIMITED"
+                  },
+                  "F-013": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "DrawingSet"
+                  },
+                  "F-014": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "AB-001"
+                  },
+                  "F-015": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "Anchor Bolt Drawing"
+                  },
+                  "F-016": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "DXF"
+                  },
+                  "F-017": {
+                    "status": "SUSPICIOUS",
+                    "source": "MBS",
+                    "value": "2025-08-07"
+                  },
+                  "F-019": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "0.85"
+                  },
+                  "F-020": {
+                    "status": "SUSPICIOUS",
+                    "source": "MBS",
+                    "value": "DET"
+                  },
+                  "F-021": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "ab_drawing.dxf"
+                  },
+                  "F-023": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "SYSTEM"
+                  },
+                  "F-024": {
+                    "status": "SUSPICIOUS",
+                    "source": "MBS",
+                    "value": "2025-08-07"
+                  },
+                  "F-025": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "1"
+                  },
+                  "F-026": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "8420.00"
+                  },
+                  "F-027": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "ANCHOR BOLT LAYOUT"
+                  },
+                  "F-028": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "A3"
+                  },
+                  "F-029": {
+                    "status": "SUSPICIOUS",
+                    "source": "MBS",
+                    "value": "0.7"
+                  },
+                  "F-031": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "R0"
+                  },
+                  "F-032": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "2026-05-12"
+                  },
+                  "F-033": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "Issued for Approval"
+                  },
+                  "F-034": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "SYSTEM"
+                  },
+                  "F-035": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "PENDING"
+                  },
+                  "F-036": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "2026-05-12"
+                  },
+                  "F-037": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "IFC"
+                  },
+                  "F-039": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "6200.05990.06145.05700.06000.06250.0"
+                  },
+                  "F-040": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "11235.011235.0"
+                  },
+                  "F-041": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "1,2,3,4,5,6,7"
+                  },
+                  "F-042": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "C,B,A"
+                  },
+                  "F-043": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "0.0"
+                  },
+                  "F-044": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "0.0"
+                  },
+                  "F-045": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "36285.0"
+                  },
+                  "F-046": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "22470.0"
+                  },
+                  "F-047": {
+                    "status": "SUSPICIOUS",
+                    "source": "MBS",
+                    "value": "8420.0"
+                  },
+                  "F-048": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "FF"
+                  },
+                  "F-051": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "0.0"
+                  },
+                  "F-052": {
+                    "status": "SUSPICIOUS",
+                    "source": "MBS",
+                    "value": "GL"
+                  },
+                  "F-054": {
+                    "status": "SUSPICIOUS",
+                    "source": "MBS",
+                    "value": "0.1000"
+                  },
+                  "F-055": {
+                    "status": "SUSPICIOUS",
+                    "source": "MBS",
+                    "value": "0.1000"
+                  },
+                  "F-056": {
+                    "status": "SUSPICIOUS",
+                    "source": "MBS",
+                    "value": "8420.0"
+                  },
+                  "F-057": {
+                    "status": "SUSPICIOUS",
+                    "source": "MBS",
+                    "value": "9543.5"
+                  },
+                  "F-059": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "22470.0"
+                  },
+                  "F-060": {
+                    "status": "SUSPICIOUS",
+                    "source": "MBS",
+                    "value": "Rigid Frame"
+                  },
+                  "F-061": {
+                    "status": "SUSPICIOUS",
+                    "source": "MBS",
+                    "value": "1"
+                  },
+                  "F-063": {
+                    "status": "SUSPICIOUS",
+                    "source": "MBS",
+                    "value": "-"
+                  },
+                  "F-064": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "Column"
+                  },
+                  "F-065": {
+                    "status": "SUSPICIOUS",
+                    "source": "MBS",
+                    "value": "Fe345"
+                  },
+                  "F-067": {
+                    "status": "SUSPICIOUS",
+                    "source": "MBS",
+                    "value": "-"
+                  },
+                  "F-072": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "C"
+                  },
+                  "F-121": {
+                    "status": "SUSPICIOUS",
+                    "source": "MBS",
+                    "value": "250Z18"
+                  },
+                  "F-122": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "300.0"
+                  },
+                  "F-123": {
+                    "status": "SUSPICIOUS",
+                    "source": "MBS",
+                    "value": "5750.0"
+                  },
+                  "F-132": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "Pending"
+                  },
+                  "F-133": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "PENDING"
+                  },
+                  "F-134": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "3.0000"
+                  },
+                  "F-135": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "Y"
+                  },
+                  "F-136": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "Pending"
+                  },
+                  "F-137": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "2026-05-12T12:03:10.175187+00:00"
+                  },
+                  "F-138": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "P2-03"
+                  },
+                  "F-139": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "AnDwg.in"
+                  },
+                  "F-140": {
+                    "status": "SUSPICIOUS",
+                    "source": "MBS",
+                    "value": "Equivalent Lateral Force, Section 12.8"
+                  },
+                  "F-141": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "85"
+                  },
+                  "F-142": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "1"
+                  },
+                  "F-143": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "Pending"
+                  },
+                  "F-144": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "COMPLETENESS_CHECK"
+                  },
+                  "F-145": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "N"
+                  },
+                  "F-147": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "S3"
+                  },
+                  "F-148": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "Pending"
+                  },
+                  "F-151": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "AB_STANDARD"
+                  },
+                  "F-152": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "STANDARD_TITLE_BLOCK"
+                  },
+                  "F-156": {
+                    "status": "PRESENT",
+                    "source": "SYSTEM_DEFAULT",
+                    "value": "A3_BORDER"
+                  },
+                  "F-171": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "6"
+                  },
+                  "F-172": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "6200.0"
+                  },
+                  "F-173": {
+                    "status": "SUSPICIOUS",
+                    "source": "MBS",
+                    "value": "H"
+                  },
+                  "F-191": {
+                    "status": "PRESENT",
+                    "source": "MBS",
+                    "value": "AISC-US"
+                  }
+                }
+              },
+              "blocking_issues_count": 0,
+              "blocking_issues": [],
+              "non_blocking_warnings_count": 11,
+              "human_review_required": [
+                "F-069",
+                "F-073",
+                "F-095",
+                "F-098",
+                "F-100",
+                "F-104",
+                "F-107",
+                "F-108",
+                "F-109",
+                "F-111",
+                "F-112",
+                "F-114",
+                "F-115",
+                "F-116",
+                "F-118",
+                "F-119",
+                "F-149",
+                "F-150",
+                "F-170"
+              ],
+              "is_complete": true,
+              "overall": "PASS",
+              "field_completion": {
+                "Extracted": 78,
+                "Calculated": 15,
+                "Fallback": 38,
+                "Failed": 65,
+                "Total": 196
+              },
+              "hard_stop_satisfied": true,
+              "failed_field_ids": [
+                "F-004",
+                "F-005",
+                "F-007",
+                "F-011",
+                "F-012",
+                "F-022",
+                "F-038",
+                "F-058",
+                "F-069",
+                "F-070",
+                "F-071",
+                "F-073",
+                "F-074",
+                "F-094",
+                "F-095",
+                "F-098",
+                "F-099",
+                "F-100",
+                "F-104",
+                "F-105",
+                "F-107",
+                "F-108",
+                "F-109",
+                "F-110",
+                "F-111",
+                "F-112",
+                "F-113",
+                "F-114",
+                "F-115",
+                "F-116",
+                "F-117",
+                "F-118",
+                "F-119",
+                "F-120",
+                "F-125",
+                "F-126",
+                "F-127",
+                "F-128",
+                "F-129",
+                "F-130",
+                "F-131",
+                "F-146",
+                "F-153",
+                "F-155",
+                "F-158",
+                "F-165",
+                "F-166",
+                "F-167",
+                "F-168",
+                "F-175",
+                "F-176",
+                "F-177",
+                "F-178",
+                "F-179",
+                "F-180",
+                "F-181",
+                "F-182",
+                "F-184",
+                "F-185",
+                "F-186",
+                "F-187",
+                "F-188",
+                "F-189",
+                "F-190",
+                "F-195"
+              ],
+              "warnings": [
+                {
+                  "status": "Warning",
+                  "agent": "P2-02",
+                  "title": "Unresolved Fields Detected",
+                  "issue": "65 field(s) could not be resolved from source files, derivation, or fallback defaults",
+                  "affected_fields": [
+                    "F-004",
+                    "F-005",
+                    "F-007",
+                    "F-011",
+                    "F-012",
+                    "F-022",
+                    "F-038",
+                    "F-058",
+                    "F-069",
+                    "F-070",
+                    "F-071",
+                    "F-073",
+                    "F-074",
+                    "F-094",
+                    "F-095",
+                    "F-098",
+                    "F-099",
+                    "F-100",
+                    "F-104",
+                    "F-105",
+                    "F-107",
+                    "F-108",
+                    "F-109",
+                    "F-110",
+                    "F-111",
+                    "F-112",
+                    "F-113",
+                    "F-114",
+                    "F-115",
+                    "F-116",
+                    "F-117",
+                    "F-118",
+                    "F-119",
+                    "F-120",
+                    "F-125",
+                    "F-126",
+                    "F-127",
+                    "F-128",
+                    "F-129",
+                    "F-130",
+                    "F-131",
+                    "F-146",
+                    "F-153",
+                    "F-155",
+                    "F-158",
+                    "F-165",
+                    "F-166",
+                    "F-167",
+                    "F-168",
+                    "F-175",
+                    "F-176",
+                    "F-177",
+                    "F-178",
+                    "F-179",
+                    "F-180",
+                    "F-181",
+                    "F-182",
+                    "F-184",
+                    "F-185",
+                    "F-186",
+                    "F-187",
+                    "F-188",
+                    "F-189",
+                    "F-190",
+                    "F-195"
+                  ],
+                  "root_cause": "Fields not extracted from source files and no system default or fallback rule available. These may be optional/conditional or require manual entry.",
+                  "recommended_fix": "Provide missing values via the Field Review panel, or upload a more complete source file. Download missing_field_report.json for per-field remediation guidance.",
+                  "can_continue": true,
+                  "severity": "MINOR"
+                }
+              ],
+              "warnings_count": 1,
+              "main_output": "reports/p2-02_summary.json",
+              "outputs": {
+                "field_completion_matrix": "reports/field_completion_matrix.json",
+                "missing_field_report": "reports/missing_field_report.json",
+                "fallback_invocation_log": "reports/fallback_invocation_log.json",
+                "extraction_readiness_report": "reports/extraction_readiness_report.json"
+              }
+            },
+            "checkpoints": [
+              {
+                "stage_code": "P2-02",
+                "label": "Completeness Hard Gate",
+                "gate_status": "PASS",
+                "created_at": "2026-05-12 12:03:10.938315",
+                "gate_data": {
+                  "ab_missing": [],
+                  "ga_missing": [],
+                  "fallback_resolved_count": 35,
+                  "non_blocking_warnings_count": 11,
+                  "total_fields_processed": 196,
+                  "extracted": 78,
+                  "calculated": 15,
+                  "fallback": 38,
+                  "failed": 65,
+                  "invariant_holds": true
+                }
+              }
+            ]
+          },
+          {
+            "stage_code": "P2-03",
+            "status": "PASSED",
+            "started_at": "2026-05-12T12:03:10.958830",
+            "completed_at": "2026-05-12T12:03:19.054194",
+            "error_message": null,
+            "result": {
+              "project_id": "6ab928d5-25fc-473d-8ee3-dcee5f29d1ae",
+              "status": "GENERATED",
+              "gate_status": "PASS",
+              "outputs": {
+                "ab_structured_package": "data\\projects\\6ab928d5-25fc-473d-8ee3-dcee5f29d1ae\\outputs\\ab\\ab_structured_package.json",
+                "dxf_plan": "data\\projects\\6ab928d5-25fc-473d-8ee3-dcee5f29d1ae\\outputs\\ab\\ab_plan_view.dxf",
+                "dxf_section": "data\\projects\\6ab928d5-25fc-473d-8ee3-dcee5f29d1ae\\outputs\\ab\\ab_section_view.dxf",
+                "dxf_detail": "data\\projects\\6ab928d5-25fc-473d-8ee3-dcee5f29d1ae\\outputs\\ab\\ab_detail_view.dxf",
+                "pdf": "data\\projects\\6ab928d5-25fc-473d-8ee3-dcee5f29d1ae\\outputs\\ab\\ab_drawing.pdf"
+              },
+              "field_summary": {
+                "total_ab_required": 72,
+                "resolved_count": 72,
+                "missing_count": 0,
+                "missing_codes": []
+              },
+              "overall": "PASS",
+              "main_output": "reports/p2-03_summary.json"
+            },
+            "checkpoints": [
+              {
+                "stage_code": "P2-03",
+                "label": "AB Generation Gate",
+                "gate_status": "PASS",
+                "created_at": "2026-05-12 12:03:19.044002",
+                "gate_data": {
+                  "total_ab_required": 72,
+                  "resolved_count": 72,
+                  "missing_count": 0,
+                  "missing_codes": []
+                }
+              }
+            ]
+          },
+          {
+            "stage_code": "P2-04",
+            "status": "PASSED",
+            "started_at": "2026-05-12T12:03:19.057406",
+            "completed_at": "2026-05-12T12:03:25.105443",
+            "error_message": null,
+            "result": {
+              "project_id": "6ab928d5-25fc-473d-8ee3-dcee5f29d1ae",
+              "output_type": "GA",
+              "general_arrangement_fields": {
+                "F-039": "6200.05990.06145.05700.06000.06250.0",
+                "F-040": "11235.011235.0",
+                "F-041": "1,2,3,4,5,6,7",
+                "F-042": "C,B,A",
+                "F-045": "36285.0",
+                "F-046": "22470.0",
+                "F-054": "0.1000",
+                "F-056": "8420.0",
+                "F-063": "-",
+                "F-064": "Column"
+              },
+              "source_field_count": 371,
+              "status": "draft_generated",
+              "gate_status": "PASS",
+              "main_output": "reports/p2-04_summary.json",
+              "output_path": "data\\projects\\6ab928d5-25fc-473d-8ee3-dcee5f29d1ae\\outputs\\ga\\general_arrangement.json"
+            },
+            "checkpoints": [
+              {
+                "stage_code": "P2-04",
+                "label": "GA Generation Gate",
+                "gate_status": "PASS",
+                "created_at": "2026-05-12 12:03:25.093663",
+                "gate_data": {
+                  "total_ga_required": 78,
+                  "resolved_count": 78
+                }
+              }
+            ]
+          },
+          {
+            "stage_code": "P2-05",
+            "status": "FAILED",
+            "started_at": "2026-05-12T12:03:25.108209",
+            "completed_at": "2026-05-12T12:03:25.399125",
+            "error_message": "Agent returned FAIL",
+            "result": {
+              "project_id": "6ab928d5-25fc-473d-8ee3-dcee5f29d1ae",
+              "overall": "FAIL",
+              "file_checks": [
+                {
+                  "rule_id": "AB_OUTPUT_EXISTS",
+                  "passed": true,
+                  "severity": "INFO",
+                  "evidence": "data\\projects\\6ab928d5-25fc-473d-8ee3-dcee5f29d1ae\\outputs\\ab\\anchor_bolt_layout.json"
+                },
+                {
+                  "rule_id": "GA_OUTPUT_EXISTS",
+                  "passed": true,
+                  "severity": "INFO",
+                  "evidence": "data\\projects\\6ab928d5-25fc-473d-8ee3-dcee5f29d1ae\\outputs\\ga\\general_arrangement.json"
+                },
+                {
+                  "rule_id": "AB_HAS_FIELDS",
+                  "passed": true,
+                  "severity": "INFO",
+                  "evidence": "data\\projects\\6ab928d5-25fc-473d-8ee3-dcee5f29d1ae\\outputs\\ab\\anchor_bolt_layout.json"
+                },
+                {
+                  "rule_id": "GA_HAS_FIELDS",
+                  "passed": true,
+                  "severity": "INFO",
+                  "evidence": "data\\projects\\6ab928d5-25fc-473d-8ee3-dcee5f29d1ae\\outputs\\ga\\general_arrangement.json"
+                }
+              ],
+              "rule_validation": {
+                "overall": "FAIL",
+                "blocking_failures": 129,
+                "rules_evaluated": 293
+              },
+              "main_output": "reports/p2-05_summary.json",
+              "report_path": "data\\projects\\6ab928d5-25fc-473d-8ee3-dcee5f29d1ae\\outputs\\validation\\abga_validation.json"
+            },
+            "checkpoints": [
+              {
+                "stage_code": "P2-05",
+                "label": "AB/GA Validation Gate",
+                "gate_status": "FAIL",
+                "created_at": "2026-05-12 12:03:25.390905",
+                "gate_data": {
+                  "project_id": "6ab928d5-25fc-473d-8ee3-dcee5f29d1ae",
+                  "overall": "FAIL",
+                  "file_checks": [
+                    {
+                      "rule_id": "AB_OUTPUT_EXISTS",
+                      "passed": true,
+                      "severity": "INFO",
+                      "evidence": "data\\projects\\6ab928d5-25fc-473d-8ee3-dcee5f29d1ae\\outputs\\ab\\anchor_bolt_layout.json"
+                    },
+                    {
+                      "rule_id": "GA_OUTPUT_EXISTS",
+                      "passed": true,
+                      "severity": "INFO",
+                      "evidence": "data\\projects\\6ab928d5-25fc-473d-8ee3-dcee5f29d1ae\\outputs\\ga\\general_arrangement.json"
+                    },
+                    {
+                      "rule_id": "AB_HAS_FIELDS",
+                      "passed": true,
+                      "severity": "INFO",
+                      "evidence": "data\\projects\\6ab928d5-25fc-473d-8ee3-dcee5f29d1ae\\outputs\\ab\\anchor_bolt_layout.json"
+                    },
+                    {
+                      "rule_id": "GA_HAS_FIELDS",
+                      "passed": true,
+                      "severity": "INFO",
+                      "evidence": "data\\projects\\6ab928d5-25fc-473d-8ee3-dcee5f29d1ae\\outputs\\ga\\general_arrangement.json"
+                    }
+                  ],
+                  "rule_validation": {
+                    "overall": "FAIL",
+                    "blocking_failures": 129,
+                    "rules_evaluated": 293
+                  },
+                  "main_output": "reports/p2-05_summary.json"
+                }
+              },
+              {
+                "stage_code": "P2-05",
+                "label": "Hard Gate 5 \u2014 Phase 2 Release Gate",
+                "gate_status": "FAIL",
+                "created_at": "2026-05-12 12:03:25.405776",
+                "gate_data": {
+                  "required_stages": [
+                    "P2-01",
+                    "P2-02",
+                    "P2-03",
+                    "P2-04",
+                    "P2-05"
+                  ],
+                  "not_passed_stages": [
+                    "P2-05"
+                  ],
+                  "ab_output_exists": true,
+                  "ga_output_exists": true
+                }
+              }
+            ]
+          }
+        ],
+        "run_at": "2026-05-12T12:03:25.409081+00:00"
+      }
+    }
+  }
+}

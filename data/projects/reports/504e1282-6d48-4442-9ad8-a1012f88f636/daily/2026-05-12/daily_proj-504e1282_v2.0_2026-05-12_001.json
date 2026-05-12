@@ -1,0 +1,203 @@
+{
+  "header": {
+    "report_type": "DAILY",
+    "date": "2026-05-12",
+    "project_uuid": "504e1282-6d48-4442-9ad8-a1012f88f636",
+    "proposal_id": "C323-153-Punne",
+    "project_name": "Recla International Private Limited",
+    "project_status": "CREATED",
+    "build_version": "2.0",
+    "generated_at": "2026-05-12T11:30:01.316758",
+    "generated_by": "system",
+    "report_id": "daily_proj-504e1282_v2.0_2026-05-12_001",
+    "sequence": 1,
+    "qc_status": "pending"
+  },
+  "execution_summary": {
+    "tasks_run_today": 1,
+    "reruns_today": 0,
+    "rules_evaluated_total": 0,
+    "gates_touched_total": 1,
+    "corrections_today": 0,
+    "audit_events_today": 5,
+    "files_total": 0,
+    "files_parsed": 0,
+    "files_failed": 0
+  },
+  "lane_summary": {
+    "Lane 1 - Ingestion": {
+      "stages": [
+        "P2-01"
+      ],
+      "statuses": [
+        "BLOCKED"
+      ],
+      "overall": "BLOCKED"
+    },
+    "Lane 2 - Completeness": {
+      "stages": [
+        "P2-02"
+      ],
+      "statuses": [
+        "PENDING"
+      ],
+      "overall": "PENDING"
+    },
+    "Lane 3 - Generation": {
+      "stages": [
+        "P2-03",
+        "P2-04"
+      ],
+      "statuses": [
+        "PENDING",
+        "PENDING"
+      ],
+      "overall": "PENDING"
+    },
+    "Lane 4 - Validation": {
+      "stages": [
+        "P2-05"
+      ],
+      "statuses": [
+        "PENDING"
+      ],
+      "overall": "PENDING"
+    }
+  },
+  "stage_detail": [
+    {
+      "stage_code": "P2-01",
+      "status": "BLOCKED",
+      "revision": 1,
+      "started_at": "2026-05-12T07:32:46.936755",
+      "completed_at": "2026-05-12T08:49:23.220461",
+      "error_message": null,
+      "ran_today": true
+    },
+    {
+      "stage_code": "P2-02",
+      "status": "PENDING",
+      "revision": 1,
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null,
+      "ran_today": false
+    },
+    {
+      "stage_code": "P2-03",
+      "status": "PENDING",
+      "revision": 1,
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null,
+      "ran_today": false
+    },
+    {
+      "stage_code": "P2-04",
+      "status": "PENDING",
+      "revision": 1,
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null,
+      "ran_today": false
+    },
+    {
+      "stage_code": "P2-05",
+      "status": "PENDING",
+      "revision": 1,
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null,
+      "ran_today": false
+    }
+  ],
+  "gate_snapshot": {
+    "P2-01 \u2013 File Ingestion Gate": {
+      "stage_code": "P2-01",
+      "checkpoint_label": "File Ingestion Gate",
+      "gate_status": "FAIL",
+      "created_at": "2026-05-12T08:49:23.214137"
+    }
+  },
+  "severity_summary": {
+    "CRITICAL": 0,
+    "MAJOR": 0,
+    "MINOR": 0,
+    "release_blockers": 0
+  },
+  "top_blockers": [],
+  "manual_review_summary": {
+    "total": 0,
+    "open": 0,
+    "resolved": 0,
+    "open_items": []
+  },
+  "source_fallback_summary": {
+    "parser_runs_total": 0,
+    "parser_runs_success": 0,
+    "parser_runs_failed": 0,
+    "avg_confidence": 0,
+    "source_distribution": {}
+  },
+  "defect_summary": {
+    "total_escalations": 0,
+    "open": 0,
+    "resolved": 0,
+    "critical_open": 0,
+    "by_severity": {
+      "CRITICAL": 0,
+      "MAJOR": 0,
+      "MINOR": 0
+    }
+  },
+  "corrections_today": [],
+  "audit_events_today": [
+    {
+      "event_type": "CHECKPOINT_CREATED",
+      "actor": "system",
+      "stage_code": "P2-01",
+      "field_code": null,
+      "created_at": "2026-05-12T07:32:47.094091"
+    },
+    {
+      "event_type": "STAGE_APPROVED",
+      "actor": "system",
+      "stage_code": "P2-01",
+      "field_code": null,
+      "created_at": "2026-05-12T07:32:57.272407"
+    },
+    {
+      "event_type": "CHECKPOINT_CREATED",
+      "actor": "system",
+      "stage_code": "P2-01",
+      "field_code": null,
+      "created_at": "2026-05-12T07:33:00.637177"
+    },
+    {
+      "event_type": "STAGE_APPROVED",
+      "actor": "system",
+      "stage_code": "P2-01",
+      "field_code": null,
+      "created_at": "2026-05-12T07:33:03.753827"
+    },
+    {
+      "event_type": "CHECKPOINT_CREATED",
+      "actor": "system",
+      "stage_code": "P2-01",
+      "field_code": null,
+      "created_at": "2026-05-12T08:49:23.214663"
+    }
+  ],
+  "next_day_critical_path": {
+    "blocked_stages": [
+      {
+        "stage_code": "P2-01",
+        "status": "BLOCKED",
+        "error": null
+      }
+    ],
+    "critical_missing": [],
+    "action_required": true
+  },
+  "p2_02_parse_failures": []
+}

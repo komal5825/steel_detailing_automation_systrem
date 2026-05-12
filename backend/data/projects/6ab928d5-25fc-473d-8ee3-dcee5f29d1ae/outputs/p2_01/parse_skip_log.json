@@ -1,0 +1,25 @@
+{
+  "project_id": "6ab928d5-25fc-473d-8ee3-dcee5f29d1ae",
+  "skipped_file_count": 2,
+  "max_retries_per_file": 3,
+  "skipped_files": [
+    {
+      "file_id": "8d6ecfb2-fc38-47f2-8490-c4aa0655797d",
+      "filename": "JACKDET.Dxf",
+      "file_type": "DXF",
+      "parser": "ProtaSteelParser",
+      "attempts": 3,
+      "reason": "could not convert string to float: '**********'",
+      "action": "SKIP_AFTER_MAX_RETRIES"
+    },
+    {
+      "file_id": "d6eb9a04-ba37-44c3-a505-ca0744b7a36a",
+      "filename": "SHIP.XLS",
+      "file_type": "EXCEL",
+      "parser": "EtabsParser",
+      "attempts": 3,
+      "reason": "ETABS parser expects an Excel export",
+      "action": "SKIP_AFTER_MAX_RETRIES"
+    }
+  ]
+}

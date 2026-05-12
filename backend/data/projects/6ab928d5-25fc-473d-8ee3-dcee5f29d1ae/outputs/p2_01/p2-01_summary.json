@@ -1,0 +1,49 @@
+{
+  "status": "partial_success",
+  "overall": "PASS_WITH_WARNINGS",
+  "project_id": "6ab928d5-25fc-473d-8ee3-dcee5f29d1ae",
+  "files_found": 118,
+  "parsed_files": 116,
+  "failed_files": 2,
+  "skipped_files": 2,
+  "extracted_fields": 1902,
+  "normalized_fields": 35,
+  "governing_file": {
+    "file_id": "b46af0ba-76f2-40b6-a719-01c5ea175dcc",
+    "original_filename": "BLOCK.IN",
+    "file_type": "MBS",
+    "source_application": "MBS",
+    "likely_role": "governing",
+    "classification_confidence": 90
+  },
+  "governing_details": {},
+  "warnings": [
+    {
+      "status": "Warning",
+      "agent": "P2-01",
+      "title": "Source File Parse Failure",
+      "issue": "File 'JACKDET.Dxf' (DXF) failed to parse after 3 attempt(s)",
+      "affected_fields": [],
+      "root_cause": "could not convert string to float: '**********'",
+      "parser": "ProtaSteelParser",
+      "recommended_fix": "Verify the file is a valid, uncorrupted export from the source application. Re-upload the corrected file and re-run P2-01 ingestion.",
+      "can_continue": true,
+      "severity": "MINOR"
+    },
+    {
+      "status": "Warning",
+      "agent": "P2-01",
+      "title": "Source File Parse Failure",
+      "issue": "File 'SHIP.XLS' (EXCEL) failed to parse after 3 attempt(s)",
+      "affected_fields": [],
+      "root_cause": "ETABS parser expects an Excel export",
+      "parser": "EtabsParser",
+      "recommended_fix": "Verify the file is a valid, uncorrupted export from the source application. Re-upload the corrected file and re-run P2-01 ingestion.",
+      "can_continue": true,
+      "severity": "MINOR"
+    }
+  ],
+  "warnings_count": 2,
+  "main_output": "reports/p2-01_summary.json",
+  "skip_log": "reports/parse_skip_log.json"
+}

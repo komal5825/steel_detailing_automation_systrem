@@ -15,6 +15,6 @@ export const projectsApi = {
 
 
   getFiles: (uuid) => client.get(`/projects/${uuid}/files`),
-  
+
   deleteFile: (uuid, fileUuid) => client.delete(`/projects/${uuid}/files/${fileUuid}`),
 };

@@ -1,0 +1,44 @@
+================================================================================
+ C323-153            Detail Warning Summary                  7/AUG/2025  9:44am
+================================================================================
+
+ ENDWALL
+ -------
+     No Warnings!
+
+ EXTENSIONS
+ ----------
+     No Warnings!
+
+ RIGID FRAME #1
+ --------------
+     No Warnings!
+
+ RIGID FRAME #2
+ --------------
+     CONFLICT
+       SPLICE
+         WRN(RFD-001): Purlin\Girt Near Splice
+
+ CRANE SYSTEM
+ ------------
+     No Warnings!
+
+ WIND FRAMING
+ ------------
+     No Warnings!
+
+ BOM
+ ---
+   INPUT
+   -----
+         WRN(AB-105) : No anchor bolt record for diameter
+           16.00                                             
+
+   OUTPUT
+   ------
+     COST
+       BOM
+         WRN(CST-01) : Incomplete cost information!
+             ------(150Z15  )                                
+             ------(Z20020  )                                

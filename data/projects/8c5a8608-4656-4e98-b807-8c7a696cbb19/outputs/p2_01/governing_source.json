@@ -1,0 +1,27 @@
+{
+  "project_id": "8c5a8608-4656-4e98-b807-8c7a696cbb19",
+  "governing_file": {
+    "file_id": "1ec21427-95e3-4764-b4ca-30b055af1044",
+    "original_filename": "C165-276.in",
+    "file_type": "MBS",
+    "source_application": "MBS",
+    "likely_role": "governing",
+    "classification_confidence": 90
+  },
+  "selection_method": "HIGHEST_CONFIDENCE_WITH_SOURCE_PRIORITY",
+  "rationale": "Selected 'C165-276.in' (type=MBS, confidence=90)",
+  "candidates": [
+    {
+      "file_id": "1ec21427-95e3-4764-b4ca-30b055af1044",
+      "original_filename": "C165-276.in",
+      "file_type": "MBS",
+      "classification_confidence": 90
+    },
+    {
+      "file_id": "9bd50923-ad78-4672-8eff-7479abbabe46",
+      "original_filename": "C165-276_estimate.xlsx",
+      "file_type": "EXCEL",
+      "classification_confidence": 90
+    }
+  ]
+}

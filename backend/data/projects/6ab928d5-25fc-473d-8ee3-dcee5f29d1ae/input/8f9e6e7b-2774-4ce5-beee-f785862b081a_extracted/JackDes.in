@@ -1,0 +1,128 @@
+*===============================================================================
+*C323-153            Jack Beam Design Input                  6/AUG/2025  1:26pm
+*===============================================================================
+*( 1)JOBID:
+    'C323-153'
+
+*( 2)DESIGN CODE:
+*Design  ---Steel_Code---             ---Build---   Code     Seismic
+* Code   Cold       Hot      Country  Code   Year   Label     Zone
+  'WS'  'NAUS07' 'AISC05'    '    '  'MBMA'  '10'  'MBMA 10 ' 'B  '
+
+*( 3)DESIGN CONSTANTS:
+*               ---Strength_Factor---
+* Stress_Ratio          ---Seismic---
+* Frame     EP    Wind   Frame  Brace
+   1.00   1.00  1.0000  1.0000 1.0000
+
+*( 4)STEEL YIELDS:
+* Web   Flg  C_Sec  W_Sec  R_Sec  P_Sec  T_Sec  U_Sec    EP     BP
+  345   345    345    345    235    345    317    235   345    345
+
+*( 5)DEFLECTION LIMITS:
+* --Vertical--  Horizontal
+*  Live  Total  Total  Seis
+  150.0  150.0   75.0  50.0
+
+*( 6)REPORTS:
+*Input Design   End   Action  Sec  Segment Unbrace
+*Echo  Summary Plate Strength Prop  Disp   Length
+  'I'    'Y'    'Y'     'N'   'N'    'N'    'N'
+
+*( 7)BUILDING LAYOUT:
+*Build        Build_Size    L_Expand_EW  R_Expand_EW
+* Type     Width   Length   Use  Offset  Use  Offset
+  'FF'   22470.0  36285.0  'Y '  440.00 'Y '  440.00
+
+*( 8)SURFACE SHAPE:
+*No.    X_Coord   Y_Coord  Offset
+*Surf     (mm)      (mm)     (mm)    
+  4        0.0    8420.0   230.00
+       11235.0    9543.5     0.00
+       22470.0    8420.0     0.00
+       22470.0       0.0   230.00
+
+*( 9)BAY SPACING:
+*Wall     No.   --Bay_Set--
+* Id     Sets   Width  Quan
+   1       1  11235.0    2
+   2       6   6200.0    1
+               5990.0    1
+               6145.0    1
+               5700.0    1
+               6000.0    1
+               6250.0    1
+   3       1  11235.0    2
+   4       6   6250.0    1
+               6000.0    1
+               5700.0    1
+               6145.0    1
+               5990.0    1
+               6200.0    1
+   5       6   6200.0    1
+               5990.0    1
+               6145.0    1
+               5700.0    1
+               6000.0    1
+               6250.0    1
+
+*(10)JACK BEAMS:
+* No.  Jack  --Bay_Id-     Beam    Beam  Beam   Set  ---Extend---
+*Beam   Id   Start End   Offset  Height  Type  Size   Left  Right
+   0
+
+*(11)DEPTHS: 
+*Jack  Depth   Depth   ----Depth----  No.   Interior_Depths
+* Id     Min     Max   Start     End  Dep    Locate   Depth
+
+*(12)SEGMENT PLATES:
+*Jack No. Mem Seg      Seg   Member     Flange  ----Plate_Thickness---
+* Id  Seg  Id  Id   Length   Part        Width     Web  OS_Flg  IS_Flg
+
+*(13)SPLICES:
+*Jack No.  Spl   Splice Splice
+* Id  Spl   Id   Locate  Type
+
+*(14)STUB COLUMNS:
+*No. Col Jack    Jack  Col  Col
+*Col  Id  Id   Offset  Typ  Rot
+  0
+
+*(15)DIAGONAL BRACING:
+*Jack  Brace  Attach   Strut
+* Id    Type  Locate   Type
+
+*(16)LOAD GROUPS:
+*     Group
+*No.    Id   Description
+   1   '-'  'Standard       '
+
+*(17)BEAM LOADS: (Strength)
+*No.   Load  Jack  Frame Frame Group  ------Load-----
+*Load   Id    Id     Id  Load    Id     Horz     Vert  Adjust
+   0
+
+*(18)BEAM LOADS: (Deflection)
+*No.   Load  Jack  Frame Frame Group  ------Load-----
+*Load   Id    Id     Id  Load    Id     Horz     Vert  Adjust
+   0
+
+*(19)BASIC LOADS:
+*Jack   Frame   No.   Basic Group                    Basic
+* Id      Id   Basic    Id    Id     Horz     Vert   Name
+
+*(20)RIGID FRAME AT JACK BEAM:
+*Jack  Line  Frame  Flange           Bottom_Angle
+* Id    Id     Id   Height  Offset    Left  Right
+
+*(21)RIGID FRAME AT SUPPORT:
+*Jack  Line  Frame  Flange  Support
+* Id    Id     Id   Height    Stiff
+
+*(22)DESIGN CODE OPTIONS:
+*No.   Event                         Condition
+  0
+
+*DS_RFDEP.SIZ
+* Jack   Jack   -----------Selected----------
+*  Id    Span   Type   Span  #Depth  #Splice

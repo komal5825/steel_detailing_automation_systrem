@@ -1,0 +1,20 @@
+{
+  "project_id": "6ab928d5-25fc-473d-8ee3-dcee5f29d1ae",
+  "output_type": "GA",
+  "general_arrangement_fields": {
+    "F-039": "6200.05990.06145.05700.06000.06250.0",
+    "F-040": "11235.011235.0",
+    "F-041": "1,2,3,4,5,6,7",
+    "F-042": "C,B,A",
+    "F-045": "36285.0",
+    "F-046": "22470.0",
+    "F-054": "0.1000",
+    "F-056": "8420.0",
+    "F-063": "-",
+    "F-064": "Column"
+  },
+  "source_field_count": 371,
+  "status": "draft_generated",
+  "gate_status": "PASS",
+  "main_output": "reports/p2-04_summary.json"
+}

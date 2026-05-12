@@ -24,6 +24,7 @@ from sqlalchemy.orm import Session
 from app.db.models import CorrectionEvent
 from app.reports.collector import (
     BUILD_VERSION,
+    _field_description,
     collect_audit_events,
     collect_project_snapshot,
     gate_snapshot,
@@ -182,6 +183,22 @@ def generate_daily_report(
 
         # ── Next-Day Critical Path ──────────────────────────────────────────
         "next_day_critical_path": next_day_critical_path(stages, validations),
+
+        # ── P2-02 Parse Failures — fields not extracted from source files ───
+        # Lists every field P2-02 recorded as MISSING/FAILED, with field_id
+        # and description so the reader knows exactly what was not resolved.
+        "p2_02_parse_failures": [
+            {
+                "field_id":    v.field_code,
+                "description": _field_description(v.field_code),
+                "status":      v.status,
+                "severity":    v.severity,
+                "source":      v.source,
+                "note":        v.note,
+            }
+            for v in validations
+            if v.stage_code == "P2-02" and v.status in ("MISSING", "FAILED", "SUSPICIOUS")
+        ],
     }
 
     return report

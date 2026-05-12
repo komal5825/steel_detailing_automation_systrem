@@ -1,0 +1,1356 @@
+{
+  "project_id": "8c5a8608-4656-4e98-b807-8c7a696cbb19",
+  "ab_readiness": {
+    "output": "AB",
+    "required_count": 72,
+    "present_count": 41,
+    "missing_count": 31,
+    "missing_codes": [
+      "F-001",
+      "F-002",
+      "F-006",
+      "F-010",
+      "F-017",
+      "F-020",
+      "F-024",
+      "F-028",
+      "F-029",
+      "F-040",
+      "F-041",
+      "F-042",
+      "F-043",
+      "F-044",
+      "F-048",
+      "F-075",
+      "F-078",
+      "F-080",
+      "F-081",
+      "F-083",
+      "F-084",
+      "F-085",
+      "F-086",
+      "F-087",
+      "F-088",
+      "F-089",
+      "F-090",
+      "F-171",
+      "F-172",
+      "F-191",
+      "F-192"
+    ],
+    "status": "BLOCKED",
+    "fields": {
+      "F-009": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "test"
+      },
+      "F-013": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "DrawingSet"
+      },
+      "F-014": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "AB-001"
+      },
+      "F-015": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "Anchor Bolt Drawing"
+      },
+      "F-016": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "DXF"
+      },
+      "F-019": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "AB-001"
+      },
+      "F-021": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "ab_drawing.dxf"
+      },
+      "F-023": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "SYSTEM"
+      },
+      "F-025": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "1"
+      },
+      "F-026": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "AISC"
+      },
+      "F-027": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "ANCHOR BOLT LAYOUT"
+      },
+      "F-031": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "R0"
+      },
+      "F-032": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "2026-05-12"
+      },
+      "F-033": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "Issued for Approval"
+      },
+      "F-034": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "SYSTEM"
+      },
+      "F-035": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "PENDING"
+      },
+      "F-036": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "2026-05-12"
+      },
+      "F-037": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "IFC"
+      },
+      "F-039": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "7.660 ! Sidewall bay spacing (m)"
+      },
+      "F-082": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "5.6"
+      },
+      "F-132": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "Pending"
+      },
+      "F-133": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "PENDING"
+      },
+      "F-134": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "2026-05-12 16:05"
+      },
+      "F-135": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "Y"
+      },
+      "F-136": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "Pending"
+      },
+      "F-137": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "2026-05-12T12:32:33.939378+00:00"
+      },
+      "F-138": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "P2-03"
+      },
+      "F-139": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "AnDwg.in"
+      },
+      "F-140": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "Parser"
+      },
+      "F-141": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "85"
+      },
+      "F-142": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "1"
+      },
+      "F-143": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "Pending"
+      },
+      "F-144": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "COMPLETENESS_CHECK"
+      },
+      "F-145": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "N"
+      },
+      "F-147": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "S3"
+      },
+      "F-148": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "Pending"
+      },
+      "F-151": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "AB_STANDARD"
+      },
+      "F-152": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "STANDARD_TITLE_BLOCK"
+      },
+      "F-156": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "A3_BORDER"
+      },
+      "F-193": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "50"
+      },
+      "F-194": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "StrongAxisParallelX"
+      },
+      "F-001": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-002": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-006": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-010": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-017": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-020": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-024": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-028": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-029": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-040": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-041": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-042": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-043": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-044": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-048": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-075": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-078": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-080": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-081": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-083": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-084": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-085": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-086": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-087": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-088": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-089": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-090": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-171": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-172": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-191": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-192": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      }
+    }
+  },
+  "ga_readiness": {
+    "output": "GA",
+    "required_count": 78,
+    "present_count": 42,
+    "missing_count": 36,
+    "missing_codes": [
+      "F-001",
+      "F-002",
+      "F-006",
+      "F-010",
+      "F-017",
+      "F-020",
+      "F-024",
+      "F-028",
+      "F-029",
+      "F-040",
+      "F-041",
+      "F-042",
+      "F-043",
+      "F-044",
+      "F-045",
+      "F-046",
+      "F-047",
+      "F-048",
+      "F-051",
+      "F-052",
+      "F-055",
+      "F-057",
+      "F-059",
+      "F-061",
+      "F-063",
+      "F-064",
+      "F-065",
+      "F-067",
+      "F-072",
+      "F-121",
+      "F-122",
+      "F-123",
+      "F-171",
+      "F-172",
+      "F-173",
+      "F-191"
+    ],
+    "status": "BLOCKED",
+    "fields": {
+      "F-003": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "kolhapur"
+      },
+      "F-009": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "test"
+      },
+      "F-013": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "DrawingSet"
+      },
+      "F-014": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "AB-001"
+      },
+      "F-015": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "Anchor Bolt Drawing"
+      },
+      "F-016": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "DXF"
+      },
+      "F-019": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "AB-001"
+      },
+      "F-021": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "ab_drawing.dxf"
+      },
+      "F-023": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "SYSTEM"
+      },
+      "F-025": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "1"
+      },
+      "F-026": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "AISC"
+      },
+      "F-027": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "ANCHOR BOLT LAYOUT"
+      },
+      "F-031": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "R0"
+      },
+      "F-032": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "2026-05-12"
+      },
+      "F-033": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "Issued for Approval"
+      },
+      "F-034": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "SYSTEM"
+      },
+      "F-035": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "PENDING"
+      },
+      "F-036": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "2026-05-12"
+      },
+      "F-037": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "IFC"
+      },
+      "F-039": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "7.660 ! Sidewall bay spacing (m)"
+      },
+      "F-054": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "1:24"
+      },
+      "F-056": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "3.650 ! Left eave clear height (m)"
+      },
+      "F-060": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "CLEAR SPAN"
+      },
+      "F-132": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "Pending"
+      },
+      "F-133": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "PENDING"
+      },
+      "F-134": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "2026-05-12 16:05"
+      },
+      "F-135": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "Y"
+      },
+      "F-136": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "Pending"
+      },
+      "F-137": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "2026-05-12T12:32:33.939378+00:00"
+      },
+      "F-138": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "P2-03"
+      },
+      "F-139": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "AnDwg.in"
+      },
+      "F-140": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "Parser"
+      },
+      "F-141": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "85"
+      },
+      "F-142": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "1"
+      },
+      "F-143": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "Pending"
+      },
+      "F-144": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "COMPLETENESS_CHECK"
+      },
+      "F-145": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "N"
+      },
+      "F-147": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "S3"
+      },
+      "F-148": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "Pending"
+      },
+      "F-151": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "AB_STANDARD"
+      },
+      "F-152": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "STANDARD_TITLE_BLOCK"
+      },
+      "F-156": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "A3_BORDER"
+      },
+      "F-001": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-002": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-006": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-010": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-017": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-020": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-024": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-028": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-029": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-040": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-041": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-042": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-043": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-044": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-045": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-046": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-047": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-048": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-051": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-052": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-055": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-057": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-059": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-061": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-063": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-064": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-065": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-067": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-072": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-121": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-122": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-123": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-171": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-172": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-173": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      },
+      "F-191": {
+        "status": "MISSING",
+        "source": null,
+        "value": null
+      }
+    }
+  },
+  "blocking_issues": [
+    {
+      "field_code": "F-001",
+      "affects": [
+        "AB",
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-001 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-002",
+      "affects": [
+        "AB",
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-002 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-006",
+      "affects": [
+        "AB",
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-006 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-010",
+      "affects": [
+        "AB",
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-010 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-017",
+      "affects": [
+        "AB",
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-017 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-020",
+      "affects": [
+        "AB",
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-020 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-024",
+      "affects": [
+        "AB",
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-024 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-028",
+      "affects": [
+        "AB",
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-028 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-029",
+      "affects": [
+        "AB",
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-029 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-040",
+      "affects": [
+        "AB",
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-040 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-041",
+      "affects": [
+        "AB",
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-041 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-042",
+      "affects": [
+        "AB",
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-042 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-043",
+      "affects": [
+        "AB",
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-043 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-044",
+      "affects": [
+        "AB",
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-044 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-045",
+      "affects": [
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-045 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-046",
+      "affects": [
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-046 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-047",
+      "affects": [
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-047 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-048",
+      "affects": [
+        "AB",
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-048 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-051",
+      "affects": [
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-051 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-052",
+      "affects": [
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-052 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-055",
+      "affects": [
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-055 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-057",
+      "affects": [
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-057 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-059",
+      "affects": [
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-059 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-061",
+      "affects": [
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-061 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-063",
+      "affects": [
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-063 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-064",
+      "affects": [
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-064 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-065",
+      "affects": [
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-065 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-067",
+      "affects": [
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-067 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-072",
+      "affects": [
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-072 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-075",
+      "affects": [
+        "AB"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-075 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-078",
+      "affects": [
+        "AB"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-078 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-080",
+      "affects": [
+        "AB"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-080 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-081",
+      "affects": [
+        "AB"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-081 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-083",
+      "affects": [
+        "AB"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-083 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-084",
+      "affects": [
+        "AB"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-084 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-085",
+      "affects": [
+        "AB"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-085 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-086",
+      "affects": [
+        "AB"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-086 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-087",
+      "affects": [
+        "AB"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-087 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-088",
+      "affects": [
+        "AB"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-088 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-089",
+      "affects": [
+        "AB"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-089 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-090",
+      "affects": [
+        "AB"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-090 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-121",
+      "affects": [
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-121 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-122",
+      "affects": [
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-122 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-123",
+      "affects": [
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-123 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-171",
+      "affects": [
+        "AB",
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-171 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-172",
+      "affects": [
+        "AB",
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-172 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-173",
+      "affects": [
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-173 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-191",
+      "affects": [
+        "AB",
+        "GA"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-191 \u2014 no automated fallback available"
+    },
+    {
+      "field_code": "F-192",
+      "affects": [
+        "AB"
+      ],
+      "severity": "CRITICAL",
+      "note": "Engineer must supply F-192 \u2014 no automated fallback available"
+    }
+  ],
+  "non_blocking_warnings": [
+    {
+      "field_code": "F-125",
+      "note": "Non-mandatory conflict auto-resolved via HIGHEST_PRIORITY. Candidates: [{'value': 'YES', 'source': 'MBS', 'confidence': 80}, {'value': 'None', 'source': 'MBS', 'confidence': 80}]"
+    }
+  ],
+  "human_review_required": [
+    "F-001",
+    "F-002",
+    "F-006",
+    "F-010",
+    "F-017",
+    "F-020",
+    "F-024",
+    "F-028",
+    "F-029",
+    "F-040",
+    "F-041",
+    "F-042",
+    "F-043",
+    "F-044",
+    "F-045",
+    "F-046",
+    "F-047",
+    "F-048",
+    "F-051",
+    "F-052",
+    "F-055",
+    "F-057",
+    "F-059",
+    "F-061",
+    "F-063",
+    "F-064",
+    "F-065",
+    "F-066",
+    "F-067",
+    "F-069",
+    "F-072",
+    "F-073",
+    "F-075",
+    "F-076",
+    "F-077",
+    "F-078",
+    "F-080",
+    "F-081",
+    "F-083",
+    "F-084",
+    "F-085",
+    "F-086",
+    "F-087",
+    "F-088",
+    "F-089",
+    "F-090",
+    "F-091",
+    "F-092",
+    "F-093",
+    "F-095",
+    "F-098",
+    "F-100",
+    "F-101",
+    "F-104",
+    "F-107",
+    "F-108",
+    "F-109",
+    "F-111",
+    "F-112",
+    "F-114",
+    "F-115",
+    "F-116",
+    "F-119",
+    "F-121",
+    "F-122",
+    "F-123",
+    "F-124",
+    "F-149",
+    "F-150",
+    "F-157",
+    "F-159",
+    "F-160",
+    "F-161",
+    "F-162",
+    "F-163",
+    "F-170",
+    "F-171",
+    "F-172",
+    "F-173",
+    "F-191",
+    "F-192"
+  ],
+  "gate_status": "FAIL",
+  "overall": "BLOCKED",
+  "field_completion_summary": {
+    "Field Status": {
+      "Extracted": 15,
+      "Calculated": 6,
+      "Fallback": 39,
+      "Failed": 136,
+      "Total": 196
+    },
+    "invariant_holds": true,
+    "hard_stop_satisfied": true
+  }
+}

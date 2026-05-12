@@ -1,0 +1,24 @@
+{
+  "status": "success",
+  "overall": "PASS",
+  "project_id": "8c5a8608-4656-4e98-b807-8c7a696cbb19",
+  "files_found": 2,
+  "parsed_files": 2,
+  "failed_files": 0,
+  "skipped_files": 0,
+  "extracted_fields": 54,
+  "normalized_fields": 16,
+  "governing_file": {
+    "file_id": "1ec21427-95e3-4764-b4ca-30b055af1044",
+    "original_filename": "C165-276.in",
+    "file_type": "MBS",
+    "source_application": "MBS",
+    "likely_role": "governing",
+    "classification_confidence": 90
+  },
+  "governing_details": {},
+  "warnings": [],
+  "warnings_count": 0,
+  "main_output": "reports/p2-01_summary.json",
+  "skip_log": "reports/parse_skip_log.json"
+}

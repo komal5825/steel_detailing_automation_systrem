@@ -1,0 +1,13 @@
+{
+  "project_id": "6ab928d5-25fc-473d-8ee3-dcee5f29d1ae",
+  "proposal_id": "AUTO-C323-153-20260512_173242",
+  "snapshot_dir": "c:\\Users\\User\\Desktop\\Steel Detailing Automation\\backend\\data\\test_snapshots\\c323_153_20260512_173242",
+  "stage_statuses": {
+    "P2-01": "PASS_WITH_WARNINGS",
+    "P2-02": "PASSED",
+    "P2-03": "PASSED",
+    "P2-04": "PASSED",
+    "P2-05": "FAILED"
+  },
+  "execution_log_count": 5
+}

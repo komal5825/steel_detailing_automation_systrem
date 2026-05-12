@@ -1,0 +1,92 @@
+! =====================================================================
+! MBS INPUT FILE
+! Generated  : 2026-05-12 16:05
+! Job No.    : C165-276
+! Project    : c165-276-kolhapur
+! Client     : test
+! Location   : kolhapur
+! Option     : 3 — Optimised Clear Span | 7.655m bays | Hybrid tapered sections | Member bracing
+! =====================================================================
+
+*JOB
+  JOBNO     = C165-276
+  JOBNAME   = c165-276-kolhapur
+  CLIENT    = test
+  LOCATION  = kolhapur
+  CODE      = AISC
+  DATE      = 2026-05-12 16:05
+*END JOB
+
+*GEOMETRY
+  BUILDLEN  = 30.515    ! Building length o/o steel (m)
+  BUILDWID  = 15.275    ! Building width o/o steel (m)
+  EAVEHTL   = 3.650    ! Left eave clear height (m)
+  EAVEHTР   = 3.650    ! Right eave clear height (m)
+  ROOFTYPE  = GABLE
+  ROOFSLOPE = 1:24
+  FRAMETYPE = CLEAR SPAN
+  BAYSPAC   = 7.660    ! Sidewall bay spacing (m)
+  BAYSTEXT  = 1@7.655+3@7.62
+*END GEOMETRY
+
+*SECTION_STRATEGY
+  SECTYPE   = TW    ! hybrid tapered
+  BRACTYPE  = MBR    ! member
+  DENSITY   = 31.68    ! Preliminary kg/m²
+  TOTALWT   = 14766.6    ! Preliminary total weight (kg)
+*END SECTION_STRATEGY
+
+*LOADS
+  DEADLOAD  = 0.10    ! kN/m²
+  LIVELOAD  = 0.57    ! kN/m² (roof)
+  COLLAT    = 0.00    ! kN/m² (collateral)
+  WINDSPD   = 39.0    ! m/s (design wind speed)
+  SEISMIC   = 0.160    ! Seismic coefficient
+  EXPOSURE  = B    ! Wind exposure category
+*END LOADS
+
+*SERVICEABILITY
+  DEFL_FV   = span/150    ! Frame vertical deflection limit
+  DEFL_FH   = H/60    ! Frame horizontal (drift) limit
+  DEFL_PUR  = span/150    ! Purlin deflection limit
+  DEFL_GRT  = L/120    ! Girt deflection limit
+*END SERVICEABILITY
+
+*MATERIALS
+  STEELGR   = Fe 250
+  BOLTGR    = 5.6
+  ROOFSHT   = 0.45mm aluzinc
+  WALLSHT   = Colour Coated
+*END MATERIALS
+
+*CRANE
+  CRANE     = YES
+  CRANECAP  = 0.000    ! tonnes
+  CRANETYP  = None
+*END CRANE
+
+*MEZZANINE
+  MEZZ      = YES
+  MEZZLEN   = 0.000    ! m
+  MEZZWID   = 0.000    ! m
+  MEZZHT    = 0.000    ! m
+  MEZZLL    = 0.000    ! kN/m²
+*END MEZZANINE
+
+*WEIGHT_BREAKDOWN
+  COLUMNS_KG                   = 2067.3
+  RAFTERS_KG                   = 3839.4
+  PURLINS_KG                   = 1772.0
+  GIRTS_KG                     = 1181.3
+  ROOF_BRACING_KG              = 738.3
+  WALL_BRACING_KG              = 738.3
+  CONNECTION_PLATES_KG         = 1181.3
+  BOLTS_KG                     = 590.7
+  ANCHOR_BOLTS_KG              = 443.0
+  ROOF_SHEET_KG                = 1329.0
+  WALL_SHEET_KG                = 590.7
+  TRIMS_ACCESSORIES_KG         = 295.3
+*END WEIGHT_BREAKDOWN
+
+*ENDDATA
+! EOF

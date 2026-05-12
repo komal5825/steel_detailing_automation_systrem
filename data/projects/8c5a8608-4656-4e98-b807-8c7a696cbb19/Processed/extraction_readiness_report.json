@@ -1,0 +1,622 @@
+{
+  "project_id": "8c5a8608-4656-4e98-b807-8c7a696cbb19",
+  "gate_status": "BLOCKED",
+  "hard_stop_rule": "SATISFIED \u2014 all fields accounted for",
+  "field_counts": {
+    "Extracted": 15,
+    "Calculated": 6,
+    "Fallback": 39,
+    "Failed": 136,
+    "Total": 196
+  },
+  "mandatory_blockers": [
+    {
+      "field_code": "F-001",
+      "name": "project_code",
+      "output_classes": "All",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-002",
+      "name": "project_name",
+      "output_classes": "All",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-006",
+      "name": "project_unit_system",
+      "output_classes": "All",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-010",
+      "name": "client_name",
+      "output_classes": "All",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-017",
+      "name": "document_creation_date",
+      "output_classes": "All",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-020",
+      "name": "drawing_class",
+      "output_classes": "All",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-024",
+      "name": "drawing_creation_date",
+      "output_classes": "All",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-028",
+      "name": "sheet_size_code",
+      "output_classes": "All",
+      "remediation": "Select correct drawing template and title-block configuration"
+    },
+    {
+      "field_code": "F-029",
+      "name": "sheet_scale",
+      "output_classes": "All",
+      "remediation": "Select correct drawing template and title-block configuration"
+    },
+    {
+      "field_code": "F-040",
+      "name": "grid_spacing_y",
+      "output_classes": "GA, Shop, AB",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-041",
+      "name": "grid_label_x",
+      "output_classes": "GA, AB",
+      "remediation": "Select correct drawing template and title-block configuration"
+    },
+    {
+      "field_code": "F-042",
+      "name": "grid_label_y",
+      "output_classes": "GA, AB",
+      "remediation": "Select correct drawing template and title-block configuration"
+    },
+    {
+      "field_code": "F-043",
+      "name": "grid_origin_x",
+      "output_classes": "GA, AB",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-044",
+      "name": "grid_origin_y",
+      "output_classes": "GA, AB",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-045",
+      "name": "building_length",
+      "output_classes": "GA, Shop, Ship",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-046",
+      "name": "building_width",
+      "output_classes": "GA, Shop, Ship",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-047",
+      "name": "building_height",
+      "output_classes": "GA, Shop",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-048",
+      "name": "building_type",
+      "output_classes": "All",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-051",
+      "name": "level_elevation",
+      "output_classes": "GA, Shop, Install",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-052",
+      "name": "level_code",
+      "output_classes": "GA, Shop",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-055",
+      "name": "roof_slope_display",
+      "output_classes": "GA",
+      "remediation": "Select correct drawing template and title-block configuration"
+    },
+    {
+      "field_code": "F-057",
+      "name": "roof_ridge_height",
+      "output_classes": "GA",
+      "remediation": "Run derived-field calculation pass; check dependency fields are populated"
+    },
+    {
+      "field_code": "F-059",
+      "name": "roof_span_length",
+      "output_classes": "GA, Shop",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-061",
+      "name": "frame_bay_number",
+      "output_classes": "GA, Shop",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-063",
+      "name": "member_section_size",
+      "output_classes": "GA, Shop, Ship, Install",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-064",
+      "name": "member_type",
+      "output_classes": "GA, Shop, Ship",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-065",
+      "name": "member_material_grade",
+      "output_classes": "GA, Shop, Ship",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-066",
+      "name": "member_length",
+      "output_classes": "Shop, Ship",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-067",
+      "name": "member_mark",
+      "output_classes": "GA, Shop, Ship, Install",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-069",
+      "name": "member_quantity",
+      "output_classes": "Shop, Ship",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-072",
+      "name": "member_location_reference",
+      "output_classes": "GA, Shop",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-073",
+      "name": "member_surface_treatment",
+      "output_classes": "Shop, Ship",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-075",
+      "name": "connection_type",
+      "output_classes": "Shop, AB",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-076",
+      "name": "connection_bolt_size",
+      "output_classes": "Shop",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-077",
+      "name": "connection_bolt_grade",
+      "output_classes": "Shop",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-078",
+      "name": "connection_bolt_quantity",
+      "output_classes": "Shop, AB",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-080",
+      "name": "base_plate_size",
+      "output_classes": "AB, Shop",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-081",
+      "name": "bolt_diameter",
+      "output_classes": "AB",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-083",
+      "name": "bolt_quantity_per_column",
+      "output_classes": "AB",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-084",
+      "name": "bolt_spacing_x",
+      "output_classes": "AB",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-085",
+      "name": "bolt_spacing_y",
+      "output_classes": "AB",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-086",
+      "name": "bolt_embedment_depth",
+      "output_classes": "AB",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-087",
+      "name": "bolt_projection",
+      "output_classes": "AB",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-088",
+      "name": "bolt_pattern_orientation",
+      "output_classes": "AB",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-089",
+      "name": "anchor_bolt_code",
+      "output_classes": "AB",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-090",
+      "name": "base_plate_thickness",
+      "output_classes": "AB, Shop",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-091",
+      "name": "sheeting_zone_code",
+      "output_classes": "Sheet",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-092",
+      "name": "sheeting_material_type",
+      "output_classes": "Sheet",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-093",
+      "name": "sheeting_gauge",
+      "output_classes": "Sheet",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-095",
+      "name": "sheeting_fastener_type",
+      "output_classes": "Sheet",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-098",
+      "name": "sheeting_support_ref",
+      "output_classes": "Sheet",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-100",
+      "name": "sheeting_lapping_direction",
+      "output_classes": "Sheet",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-101",
+      "name": "detail_reference",
+      "output_classes": "Shop",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-104",
+      "name": "shop_drawing_file_ref",
+      "output_classes": "Shop",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-107",
+      "name": "plate_thickness",
+      "output_classes": "Shop",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-108",
+      "name": "shipping_bundle_code",
+      "output_classes": "Ship",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-109",
+      "name": "bundle_member_list",
+      "output_classes": "Ship",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-111",
+      "name": "bundle_sequence_number",
+      "output_classes": "Ship",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-112",
+      "name": "bundle_destination",
+      "output_classes": "Ship",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-114",
+      "name": "installation_package_code",
+      "output_classes": "Install",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-115",
+      "name": "installation_sequence_number",
+      "output_classes": "Install",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-116",
+      "name": "assembly_code",
+      "output_classes": "Install",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-119",
+      "name": "temporary_bracing_required",
+      "output_classes": "Install",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-121",
+      "name": "purlin_girt_section_size",
+      "output_classes": "GA, Shop, Sheet",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-122",
+      "name": "purlin_spacing",
+      "output_classes": "GA, Shop",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-123",
+      "name": "girt_spacing",
+      "output_classes": "GA, Shop",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-124",
+      "name": "purlin_laps",
+      "output_classes": "Shop",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-157",
+      "name": "connection_web_plate_thickness",
+      "output_classes": "Shop",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-159",
+      "name": "connection_bolt_rows",
+      "output_classes": "Shop",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-160",
+      "name": "connection_bolt_columns",
+      "output_classes": "Shop",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-161",
+      "name": "connection_gauge_distance",
+      "output_classes": "Shop",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-162",
+      "name": "connection_end_distance",
+      "output_classes": "Shop",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-163",
+      "name": "connection_edge_distance",
+      "output_classes": "Shop",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-171",
+      "name": "bay_sequence_number",
+      "output_classes": "GA, AB, Shop",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-172",
+      "name": "bay_dimension_mm",
+      "output_classes": "GA, AB, Shop",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-173",
+      "name": "bay_type_code",
+      "output_classes": "GA, Shop",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-191",
+      "name": "project_design_standard",
+      "output_classes": "All",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-192",
+      "name": "bolt_projection_above_ffl",
+      "output_classes": "AB",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    }
+  ],
+  "failed_field_ids": [
+    "F-001",
+    "F-002",
+    "F-004",
+    "F-005",
+    "F-006",
+    "F-008",
+    "F-010",
+    "F-011",
+    "F-012",
+    "F-017",
+    "F-020",
+    "F-022",
+    "F-024",
+    "F-028",
+    "F-029",
+    "F-038",
+    "F-040",
+    "F-041",
+    "F-042",
+    "F-043",
+    "F-044",
+    "F-045",
+    "F-046",
+    "F-047",
+    "F-048",
+    "F-050",
+    "F-051",
+    "F-052",
+    "F-053",
+    "F-055",
+    "F-057",
+    "F-058",
+    "F-059",
+    "F-061",
+    "F-062",
+    "F-063",
+    "F-064",
+    "F-065",
+    "F-066",
+    "F-067",
+    "F-068",
+    "F-069",
+    "F-070",
+    "F-071",
+    "F-072",
+    "F-073",
+    "F-074",
+    "F-075",
+    "F-076",
+    "F-077",
+    "F-078",
+    "F-079",
+    "F-080",
+    "F-081",
+    "F-083",
+    "F-084",
+    "F-085",
+    "F-086",
+    "F-087",
+    "F-088",
+    "F-089",
+    "F-090",
+    "F-091",
+    "F-092",
+    "F-093",
+    "F-094",
+    "F-095",
+    "F-096",
+    "F-098",
+    "F-099",
+    "F-100",
+    "F-101",
+    "F-103",
+    "F-104",
+    "F-105",
+    "F-106",
+    "F-107",
+    "F-108",
+    "F-109",
+    "F-110",
+    "F-111",
+    "F-112",
+    "F-113",
+    "F-114",
+    "F-115",
+    "F-116",
+    "F-117",
+    "F-119",
+    "F-120",
+    "F-121",
+    "F-122",
+    "F-123",
+    "F-124",
+    "F-126",
+    "F-127",
+    "F-128",
+    "F-129",
+    "F-131",
+    "F-146",
+    "F-153",
+    "F-155",
+    "F-157",
+    "F-158",
+    "F-159",
+    "F-160",
+    "F-161",
+    "F-162",
+    "F-163",
+    "F-164",
+    "F-165",
+    "F-166",
+    "F-167",
+    "F-168",
+    "F-169",
+    "F-171",
+    "F-172",
+    "F-173",
+    "F-175",
+    "F-176",
+    "F-177",
+    "F-178",
+    "F-179",
+    "F-180",
+    "F-181",
+    "F-182",
+    "F-184",
+    "F-185",
+    "F-186",
+    "F-187",
+    "F-188",
+    "F-189",
+    "F-190",
+    "F-191",
+    "F-192",
+    "F-195",
+    "F-196"
+  ],
+  "process_complete": "YES \u2014 all F-001 through F-196 accounted for",
+  "pipeline_verdict": "BLOCKED \u2014 78 mandatory field(s) unresolved"
+}

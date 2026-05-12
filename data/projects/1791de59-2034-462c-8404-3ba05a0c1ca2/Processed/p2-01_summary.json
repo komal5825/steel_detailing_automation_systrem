@@ -1,0 +1,22 @@
+{
+  "status": "partial_success",
+  "overall": "PASS_WITH_WARNINGS",
+  "project_id": "1791de59-2034-462c-8404-3ba05a0c1ca2",
+  "files_found": 236,
+  "parsed_files": 232,
+  "failed_files": 4,
+  "skipped_files": 4,
+  "extracted_fields": 3804,
+  "normalized_fields": 72,
+  "governing_file": {
+    "file_id": "269b072c-b130-408c-b470-0916137e97ac",
+    "original_filename": "BLOCK.IN",
+    "file_type": "MBS",
+    "source_application": "MBS",
+    "likely_role": "governing",
+    "classification_confidence": 90
+  },
+  "governing_details": {},
+  "main_output": "reports/p2-01_summary.json",
+  "skip_log": "reports/parse_skip_log.json"
+}

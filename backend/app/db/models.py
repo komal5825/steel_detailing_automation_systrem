@@ -251,3 +251,19 @@ class ReportRecord(Base):
     qc_status     = Column(String(20), default="pending") # pending / approved / rejected
     signed_off_by = Column(String(100))
     signed_off_at = Column(DateTime)
+
+
+class AgentExecutionLog(Base):
+    """Persistent per-attempt execution trace for stage agents."""
+    __tablename__ = "agent_execution_logs"
+    id = Column(GUID(), primary_key=True, default=uuid.uuid4)
+    project_id = Column(GUID(), ForeignKey("projects.id"), nullable=False)
+    stage_code = Column(String(10), nullable=False)
+    trigger_type = Column(String(30), nullable=False, default="manual")
+    status = Column(String(20), nullable=False, default="RUNNING")
+    input_payload = Column(Text)
+    output_payload = Column(Text)
+    error_message = Column(Text)
+    root_cause = Column(Text)
+    started_at = Column(DateTime, default=datetime.utcnow)
+    completed_at = Column(DateTime)

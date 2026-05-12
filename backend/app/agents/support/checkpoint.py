@@ -107,15 +107,23 @@ class CheckpointManager:
             .order_by(StageCheckpoint.created_at)
             .all()
         )
-        return [
-            {
+        import json as _json
+        results = []
+        for r in rows:
+            gate_data_parsed = {}
+            if r.gate_data:
+                try:
+                    gate_data_parsed = _json.loads(r.gate_data)
+                except Exception:
+                    gate_data_parsed = {}
+            results.append({
                 "stage_code": r.stage_code,
                 "label": r.checkpoint_label,
                 "gate_status": r.gate_status,
                 "created_at": str(r.created_at),
-            }
-            for r in rows
-        ]
+                "gate_data": gate_data_parsed,
+            })
+        return results
 
     # ------------------------------------------------------------------
     # Convenience classmethod (no external session needed)

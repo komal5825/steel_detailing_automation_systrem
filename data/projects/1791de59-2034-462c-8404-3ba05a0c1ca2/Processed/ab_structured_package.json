@@ -1,0 +1,864 @@
+{
+  "project_id": "1791de59-2034-462c-8404-3ba05a0c1ca2",
+  "generated_at": "2026-05-11T12:23:41.803461+00:00",
+  "status": "GENERATED",
+  "grid_references": {
+    "grid_lines_x": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "grid_lines_y": [
+      "C",
+      "B",
+      "A"
+    ],
+    "spacings_x_mm": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "spacings_y_mm": [
+      0.0,
+      0.0
+    ],
+    "grid_spacing_x_mm": 0.0,
+    "grid_spacing_y_mm": 0.0,
+    "grid_origin_x_mm": 0.0,
+    "grid_origin_y_mm": 0.0,
+    "total_span_x_mm": 0.0,
+    "total_span_y_mm": 0.0,
+    "bay_dimension_mm": 6200.0
+  },
+  "column_locations": [
+    {
+      "grid_ref": "1C",
+      "x_mm": 0.0,
+      "y_mm": 0.0,
+      "column_type": "CORNER"
+    },
+    {
+      "grid_ref": "1B",
+      "x_mm": 0.0,
+      "y_mm": 0.0,
+      "column_type": "EDGE"
+    },
+    {
+      "grid_ref": "1A",
+      "x_mm": 0.0,
+      "y_mm": 0.0,
+      "column_type": "CORNER"
+    },
+    {
+      "grid_ref": "2C",
+      "x_mm": 0.0,
+      "y_mm": 0.0,
+      "column_type": "EDGE"
+    },
+    {
+      "grid_ref": "2B",
+      "x_mm": 0.0,
+      "y_mm": 0.0,
+      "column_type": "INTERNAL"
+    },
+    {
+      "grid_ref": "2A",
+      "x_mm": 0.0,
+      "y_mm": 0.0,
+      "column_type": "EDGE"
+    },
+    {
+      "grid_ref": "3C",
+      "x_mm": 0.0,
+      "y_mm": 0.0,
+      "column_type": "EDGE"
+    },
+    {
+      "grid_ref": "3B",
+      "x_mm": 0.0,
+      "y_mm": 0.0,
+      "column_type": "INTERNAL"
+    },
+    {
+      "grid_ref": "3A",
+      "x_mm": 0.0,
+      "y_mm": 0.0,
+      "column_type": "EDGE"
+    },
+    {
+      "grid_ref": "4C",
+      "x_mm": 0.0,
+      "y_mm": 0.0,
+      "column_type": "EDGE"
+    },
+    {
+      "grid_ref": "4B",
+      "x_mm": 0.0,
+      "y_mm": 0.0,
+      "column_type": "INTERNAL"
+    },
+    {
+      "grid_ref": "4A",
+      "x_mm": 0.0,
+      "y_mm": 0.0,
+      "column_type": "EDGE"
+    },
+    {
+      "grid_ref": "5C",
+      "x_mm": 0.0,
+      "y_mm": 0.0,
+      "column_type": "EDGE"
+    },
+    {
+      "grid_ref": "5B",
+      "x_mm": 0.0,
+      "y_mm": 0.0,
+      "column_type": "INTERNAL"
+    },
+    {
+      "grid_ref": "5A",
+      "x_mm": 0.0,
+      "y_mm": 0.0,
+      "column_type": "EDGE"
+    },
+    {
+      "grid_ref": "6C",
+      "x_mm": 0.0,
+      "y_mm": 0.0,
+      "column_type": "EDGE"
+    },
+    {
+      "grid_ref": "6B",
+      "x_mm": 0.0,
+      "y_mm": 0.0,
+      "column_type": "INTERNAL"
+    },
+    {
+      "grid_ref": "6A",
+      "x_mm": 0.0,
+      "y_mm": 0.0,
+      "column_type": "EDGE"
+    },
+    {
+      "grid_ref": "7C",
+      "x_mm": 0.0,
+      "y_mm": 0.0,
+      "column_type": "CORNER"
+    },
+    {
+      "grid_ref": "7B",
+      "x_mm": 0.0,
+      "y_mm": 0.0,
+      "column_type": "EDGE"
+    },
+    {
+      "grid_ref": "7A",
+      "x_mm": 0.0,
+      "y_mm": 0.0,
+      "column_type": "CORNER"
+    }
+  ],
+  "bolt_specification": {
+    "diameter": "20",
+    "diameter_mm": 20.0,
+    "grade": "8.8",
+    "standard": "AS 1252 / ISO 4016",
+    "anchor_code": "m1",
+    "embedment_depth_mm": 150.0,
+    "bolt_projection_mm": 83.0,
+    "grout_pad_mm": 50.0,
+    "projection_mm": 83.0,
+    "total_length_mm": 233.0,
+    "connection_type": "Bolted",
+    "base_axis_orientation": "StrongAxisParallelX"
+  },
+  "bolt_pattern": {
+    "bolts_per_column": 4,
+    "spacing_x_mm": 75.0,
+    "spacing_y_mm": 50.8,
+    "pattern_orientation": "Symmetric",
+    "pattern_type": "SQUARE"
+  },
+  "base_plate": {
+    "size_string": "200.00 x 704.81",
+    "width_mm": 200.0,
+    "depth_mm": 704.81,
+    "thickness_mm": 16.0,
+    "hole_diameter_mm": 24.0,
+    "material": "Grade 250 / S275"
+  },
+  "grout_pad": {
+    "thickness_mm": 50.0
+  },
+  "template_population_map": {
+    "template_family": "AB_STANDARD_AU",
+    "revision": "Rev01",
+    "populated_count": 24,
+    "field_mappings": {
+      "F-039": {
+        "template_variable": "grid_spacing_x",
+        "value": "6200.05990.06145.05700.06000.06250.0",
+        "unit": "mm",
+        "source": "MBS",
+        "confidence": 90
+      },
+      "F-040": {
+        "template_variable": "grid_spacing_y",
+        "value": "11235.011235.0",
+        "unit": "mm",
+        "source": "MBS",
+        "confidence": 90
+      },
+      "F-041": {
+        "template_variable": "grid_label_x",
+        "value": "1,2,3,4,5,6,7",
+        "unit": "",
+        "source": "MBS",
+        "confidence": 90
+      },
+      "F-042": {
+        "template_variable": "grid_label_y",
+        "value": "C,B,A",
+        "unit": "",
+        "source": "MBS",
+        "confidence": 90
+      },
+      "F-043": {
+        "template_variable": "grid_origin_x",
+        "value": "0.0",
+        "unit": "mm",
+        "source": "MBS",
+        "confidence": 90
+      },
+      "F-044": {
+        "template_variable": "grid_origin_y",
+        "value": "0.0",
+        "unit": "mm",
+        "source": "MBS",
+        "confidence": 90
+      },
+      "F-171": {
+        "template_variable": "bay_sequence_number",
+        "value": "6",
+        "unit": "",
+        "source": "MBS",
+        "confidence": 90
+      },
+      "F-172": {
+        "template_variable": "bay_dimension_mm",
+        "value": "6200.0",
+        "unit": "mm",
+        "source": "MBS",
+        "confidence": 90
+      },
+      "F-081": {
+        "template_variable": "bolt_diameter",
+        "value": "20",
+        "unit": "mm",
+        "source": "MBS",
+        "confidence": 0
+      },
+      "F-082": {
+        "template_variable": "bolt_grade",
+        "value": "8.8",
+        "unit": "",
+        "source": "MBS",
+        "confidence": 0
+      },
+      "F-083": {
+        "template_variable": "bolt_quantity_per_column",
+        "value": "4",
+        "unit": "count",
+        "source": "MBS",
+        "confidence": 90
+      },
+      "F-084": {
+        "template_variable": "bolt_spacing_x",
+        "value": "75.00",
+        "unit": "mm",
+        "source": "MBS",
+        "confidence": 90
+      },
+      "F-085": {
+        "template_variable": "bolt_spacing_y",
+        "value": "50.80",
+        "unit": "mm",
+        "source": "MBS",
+        "confidence": 90
+      },
+      "F-086": {
+        "template_variable": "bolt_embedment_depth",
+        "value": "150.00",
+        "unit": "mm",
+        "source": "MBS",
+        "confidence": 90
+      },
+      "F-087": {
+        "template_variable": "bolt_projection",
+        "value": "83.00",
+        "unit": "mm",
+        "source": "MBS",
+        "confidence": 90
+      },
+      "F-088": {
+        "template_variable": "bolt_pattern_orientation",
+        "value": "Symmetric",
+        "unit": "",
+        "source": "MBS",
+        "confidence": 90
+      },
+      "F-089": {
+        "template_variable": "anchor_bolt_code",
+        "value": "m1",
+        "unit": "",
+        "source": "MBS",
+        "confidence": 90
+      },
+      "F-192": {
+        "template_variable": "bolt_projection_above_ffl",
+        "value": "83.00",
+        "unit": "mm",
+        "source": "MBS",
+        "confidence": 90
+      },
+      "F-193": {
+        "template_variable": "grout_pad_thickness",
+        "value": "50",
+        "unit": "mm",
+        "source": "UNKNOWN",
+        "confidence": null
+      },
+      "F-080": {
+        "template_variable": "base_plate_size",
+        "value": "200.00 x 704.81",
+        "unit": "mm\u00d7mm",
+        "source": "MBS",
+        "confidence": 90
+      },
+      "F-090": {
+        "template_variable": "base_plate_thickness",
+        "value": "16.00",
+        "unit": "mm",
+        "source": "MBS",
+        "confidence": 90
+      },
+      "F-075": {
+        "template_variable": "connection_type",
+        "value": "Bolted",
+        "unit": "",
+        "source": "MBS",
+        "confidence": 90
+      },
+      "F-078": {
+        "template_variable": "connection_bolt_quantity",
+        "value": "4",
+        "unit": "count",
+        "source": "MBS",
+        "confidence": 90
+      },
+      "F-194": {
+        "template_variable": "column_base_axis_orientation",
+        "value": "StrongAxisParallelX",
+        "unit": "",
+        "source": "UNKNOWN",
+        "confidence": null
+      }
+    }
+  },
+  "traceability_matrix": [
+    {
+      "field_code": "F-001",
+      "field_name": "project_code",
+      "raw_value": "C323-153",
+      "normalized_value": "C323-153",
+      "unit": "",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\BOM.in",
+      "winning_source": "MBS",
+      "resolution_strategy": "HIGHEST_CONFIDENCE",
+      "conflict_detected": false,
+      "extraction_confidence": 90,
+      "extracted_at": "2026-05-11T11:27:58.524684"
+    },
+    {
+      "field_code": "F-002",
+      "field_name": "project_name",
+      "raw_value": "Proposed Warehouse",
+      "normalized_value": "Proposed Warehouse",
+      "unit": "",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\DtDwg-3.in",
+      "winning_source": "MBS",
+      "resolution_strategy": "HIGHEST_CONFIDENCE",
+      "conflict_detected": false,
+      "extraction_confidence": 90,
+      "extracted_at": "2026-05-11T11:28:02.938057"
+    },
+    {
+      "field_code": "F-006",
+      "field_name": "project_unit_system",
+      "raw_value": "METRIC",
+      "normalized_value": "METRIC",
+      "unit": "metric|imperial",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\BOM.in",
+      "winning_source": "MBS",
+      "resolution_strategy": "HIGHEST_PRIORITY",
+      "conflict_detected": true,
+      "extraction_confidence": 90,
+      "extracted_at": "2026-05-11T11:27:58.524679"
+    },
+    {
+      "field_code": "F-010",
+      "field_name": "client_name",
+      "raw_value": "RECLA INTERNATIONAL PRIVATE LIMITED",
+      "normalized_value": "RECLA INTERNATIONAL PRIVATE LIMITED",
+      "unit": "",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\DtDwg-3.in",
+      "winning_source": "MBS",
+      "resolution_strategy": "HUMAN_REVIEW",
+      "conflict_detected": true,
+      "extraction_confidence": 90,
+      "extracted_at": "2026-05-11T11:28:02.938051"
+    },
+    {
+      "field_code": "F-017",
+      "field_name": "document_creation_date",
+      "raw_value": "2025-08-07",
+      "normalized_value": "2025-08-07",
+      "unit": "YYYY-MM-DD",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\BOM.in",
+      "winning_source": "MBS",
+      "resolution_strategy": "HIGHEST_PRIORITY",
+      "conflict_detected": true,
+      "extraction_confidence": 90,
+      "extracted_at": "2026-05-11T11:27:58.524673"
+    },
+    {
+      "field_code": "F-019",
+      "field_name": "drawing_code",
+      "raw_value": "0.85",
+      "normalized_value": "0.85",
+      "unit": "",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\Wind.In",
+      "winning_source": "MBS",
+      "resolution_strategy": "HIGHEST_PRIORITY",
+      "conflict_detected": false,
+      "extraction_confidence": 80,
+      "extracted_at": "2026-05-11T11:28:22.735579"
+    },
+    {
+      "field_code": "F-020",
+      "field_name": "drawing_class",
+      "raw_value": "DET",
+      "normalized_value": "DET",
+      "unit": "GA|ASM|DET|AB|Ship",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\CompDet.in",
+      "winning_source": "MBS",
+      "resolution_strategy": "HUMAN_REVIEW",
+      "conflict_detected": true,
+      "extraction_confidence": 90,
+      "extracted_at": "2026-05-11T11:28:00.157871"
+    },
+    {
+      "field_code": "F-024",
+      "field_name": "drawing_creation_date",
+      "raw_value": "2025-08-07",
+      "normalized_value": "2025-08-07",
+      "unit": "YYYY-MM-DD",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\BOM.in",
+      "winning_source": "MBS",
+      "resolution_strategy": "HIGHEST_PRIORITY",
+      "conflict_detected": true,
+      "extraction_confidence": 90,
+      "extracted_at": "2026-05-11T11:27:58.524664"
+    },
+    {
+      "field_code": "F-026",
+      "field_name": "sheet_code",
+      "raw_value": "8420.00",
+      "normalized_value": "8420.00",
+      "unit": "",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\Wind.In",
+      "winning_source": "MBS",
+      "resolution_strategy": "HIGHEST_PRIORITY",
+      "conflict_detected": false,
+      "extraction_confidence": 80,
+      "extracted_at": "2026-05-11T11:28:22.735564"
+    },
+    {
+      "field_code": "F-028",
+      "field_name": "sheet_size_code",
+      "raw_value": "A3",
+      "normalized_value": "A3",
+      "unit": "A0|A1|A2|A3",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\KeyDwg.in",
+      "winning_source": "MBS",
+      "resolution_strategy": "HIGHEST_PRIORITY",
+      "conflict_detected": false,
+      "extraction_confidence": 90,
+      "extracted_at": "2026-05-11T11:28:10.426639"
+    },
+    {
+      "field_code": "F-029",
+      "field_name": "sheet_scale",
+      "raw_value": "0.7",
+      "normalized_value": "0.7",
+      "unit": "1:50|1:100|1:200|NTS",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\KeyDwg.in",
+      "winning_source": "MBS",
+      "resolution_strategy": "HIGHEST_PRIORITY",
+      "conflict_detected": true,
+      "extraction_confidence": 90,
+      "extracted_at": "2026-05-11T11:28:10.426643"
+    },
+    {
+      "field_code": "F-039",
+      "field_name": "grid_spacing_x",
+      "raw_value": "6200.0,5990.0,6145.0,5700.0,6000.0,6250.0",
+      "normalized_value": "6200.05990.06145.05700.06000.06250.0",
+      "unit": "mm",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RoofIns.in",
+      "winning_source": "MBS",
+      "resolution_strategy": "HIGHEST_CONFIDENCE",
+      "conflict_detected": false,
+      "extraction_confidence": 90,
+      "extracted_at": "2026-05-11T11:28:16.806120"
+    },
+    {
+      "field_code": "F-040",
+      "field_name": "grid_spacing_y",
+      "raw_value": "11235.0,11235.0",
+      "normalized_value": "11235.011235.0",
+      "unit": "mm",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RoofIns.in",
+      "winning_source": "MBS",
+      "resolution_strategy": "HIGHEST_CONFIDENCE",
+      "conflict_detected": false,
+      "extraction_confidence": 90,
+      "extracted_at": "2026-05-11T11:28:16.806140"
+    },
+    {
+      "field_code": "F-041",
+      "field_name": "grid_label_x",
+      "raw_value": "1,2,3,4,5,6,7",
+      "normalized_value": "1,2,3,4,5,6,7",
+      "unit": "",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RoofIns.in",
+      "winning_source": "MBS",
+      "resolution_strategy": "HIGHEST_PRIORITY",
+      "conflict_detected": false,
+      "extraction_confidence": 90,
+      "extracted_at": "2026-05-11T11:28:16.806116"
+    },
+    {
+      "field_code": "F-042",
+      "field_name": "grid_label_y",
+      "raw_value": "C,B,A",
+      "normalized_value": "C,B,A",
+      "unit": "",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RoofIns.in",
+      "winning_source": "MBS",
+      "resolution_strategy": "HIGHEST_PRIORITY",
+      "conflict_detected": false,
+      "extraction_confidence": 90,
+      "extracted_at": "2026-05-11T11:28:16.806137"
+    },
+    {
+      "field_code": "F-043",
+      "field_name": "grid_origin_x",
+      "raw_value": "0.0",
+      "normalized_value": "0.0",
+      "unit": "mm",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RoofIns.in",
+      "winning_source": "MBS",
+      "resolution_strategy": "HIGHEST_PRIORITY",
+      "conflict_detected": false,
+      "extraction_confidence": 90,
+      "extracted_at": "2026-05-11T11:28:16.806124"
+    },
+    {
+      "field_code": "F-044",
+      "field_name": "grid_origin_y",
+      "raw_value": "0.0",
+      "normalized_value": "0.0",
+      "unit": "mm",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RoofIns.in",
+      "winning_source": "MBS",
+      "resolution_strategy": "HIGHEST_PRIORITY",
+      "conflict_detected": false,
+      "extraction_confidence": 90,
+      "extracted_at": "2026-05-11T11:28:16.806145"
+    },
+    {
+      "field_code": "F-048",
+      "field_name": "building_type",
+      "raw_value": "FF",
+      "normalized_value": "FF",
+      "unit": "Warehouse|Factory|Mezzanine|HighBay|Mixed",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\CompDes.in",
+      "winning_source": "MBS",
+      "resolution_strategy": "HIGHEST_PRIORITY",
+      "conflict_detected": false,
+      "extraction_confidence": 90,
+      "extracted_at": "2026-05-11T11:27:59.373521"
+    },
+    {
+      "field_code": "F-075",
+      "field_name": "connection_type",
+      "raw_value": "Bolted",
+      "normalized_value": "Bolted",
+      "unit": "Bolted|Welded|Pinned|Fixed",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\AnDwg-1.in",
+      "winning_source": "MBS",
+      "resolution_strategy": "HIGHEST_PRIORITY",
+      "conflict_detected": false,
+      "extraction_confidence": 90,
+      "extracted_at": "2026-05-11T11:28:26.025338"
+    },
+    {
+      "field_code": "F-078",
+      "field_name": "connection_bolt_quantity",
+      "raw_value": "4",
+      "normalized_value": "4",
+      "unit": "count",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\AnDwg-1.in",
+      "winning_source": "MBS",
+      "resolution_strategy": "HIGHEST_PRIORITY",
+      "conflict_detected": false,
+      "extraction_confidence": 90,
+      "extracted_at": "2026-05-11T11:28:26.025346"
+    },
+    {
+      "field_code": "F-080",
+      "field_name": "base_plate_size",
+      "raw_value": "200.00 x 704.81",
+      "normalized_value": "200.00 x 704.81",
+      "unit": "mm \u00d7 mm",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\AnDwg-1.in",
+      "winning_source": "MBS",
+      "resolution_strategy": "HIGHEST_PRIORITY",
+      "conflict_detected": false,
+      "extraction_confidence": 90,
+      "extracted_at": "2026-05-11T11:28:26.025329"
+    },
+    {
+      "field_code": "F-081",
+      "field_name": "bolt_diameter",
+      "raw_value": "20",
+      "normalized_value": "20",
+      "unit": "M12|M16|M20|M24|M30|M36",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\AnDwg-1.in",
+      "winning_source": "MBS",
+      "resolution_strategy": "HUMAN_REVIEW",
+      "conflict_detected": false,
+      "extraction_confidence": 90,
+      "extracted_at": "2026-05-11T11:28:26.025282"
+    },
+    {
+      "field_code": "F-082",
+      "field_name": "bolt_grade_anchor",
+      "raw_value": "8.8",
+      "normalized_value": "8.8",
+      "unit": "4.6|5.6|8.8",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\BOM.in",
+      "winning_source": "MBS",
+      "resolution_strategy": "HUMAN_REVIEW",
+      "conflict_detected": false,
+      "extraction_confidence": 90,
+      "extracted_at": "2026-05-11T11:27:58.524713"
+    },
+    {
+      "field_code": "F-083",
+      "field_name": "bolt_quantity_per_column",
+      "raw_value": "4",
+      "normalized_value": "4",
+      "unit": "count",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\AnDwg-1.in",
+      "winning_source": "MBS",
+      "resolution_strategy": "HIGHEST_PRIORITY",
+      "conflict_detected": false,
+      "extraction_confidence": 90,
+      "extracted_at": "2026-05-11T11:28:26.025295"
+    },
+    {
+      "field_code": "F-084",
+      "field_name": "bolt_spacing_x",
+      "raw_value": "75.00",
+      "normalized_value": "75.00",
+      "unit": "mm",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\AnDwg-1.in",
+      "winning_source": "MBS",
+      "resolution_strategy": "HIGHEST_PRIORITY",
+      "conflict_detected": false,
+      "extraction_confidence": 90,
+      "extracted_at": "2026-05-11T11:28:26.025300"
+    },
+    {
+      "field_code": "F-085",
+      "field_name": "bolt_spacing_y",
+      "raw_value": "50.80",
+      "normalized_value": "50.80",
+      "unit": "mm",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\AnDwg-1.in",
+      "winning_source": "MBS",
+      "resolution_strategy": "HIGHEST_PRIORITY",
+      "conflict_detected": false,
+      "extraction_confidence": 90,
+      "extracted_at": "2026-05-11T11:28:26.025304"
+    },
+    {
+      "field_code": "F-086",
+      "field_name": "bolt_embedment_depth",
+      "raw_value": "150.00",
+      "normalized_value": "150.00",
+      "unit": "mm",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\AnDwg-1.in",
+      "winning_source": "MBS",
+      "resolution_strategy": "HIGHEST_PRIORITY",
+      "conflict_detected": false,
+      "extraction_confidence": 90,
+      "extracted_at": "2026-05-11T11:28:26.025308"
+    },
+    {
+      "field_code": "F-087",
+      "field_name": "bolt_projection",
+      "raw_value": "83.00",
+      "normalized_value": "83.00",
+      "unit": "mm",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\AnDwg-1.in",
+      "winning_source": "MBS",
+      "resolution_strategy": "HIGHEST_PRIORITY",
+      "conflict_detected": false,
+      "extraction_confidence": 90,
+      "extracted_at": "2026-05-11T11:28:26.025312"
+    },
+    {
+      "field_code": "F-088",
+      "field_name": "bolt_pattern_orientation",
+      "raw_value": "Symmetric",
+      "normalized_value": "Symmetric",
+      "unit": "Symmetric|Offset|Custom",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\AnDwg-1.in",
+      "winning_source": "MBS",
+      "resolution_strategy": "HIGHEST_PRIORITY",
+      "conflict_detected": false,
+      "extraction_confidence": 90,
+      "extracted_at": "2026-05-11T11:28:26.025321"
+    },
+    {
+      "field_code": "F-089",
+      "field_name": "anchor_bolt_code",
+      "raw_value": "m1",
+      "normalized_value": "m1",
+      "unit": "",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\AnDwg-1.in",
+      "winning_source": "MBS",
+      "resolution_strategy": "HIGHEST_PRIORITY",
+      "conflict_detected": false,
+      "extraction_confidence": 90,
+      "extracted_at": "2026-05-11T11:28:26.025325"
+    },
+    {
+      "field_code": "F-090",
+      "field_name": "base_plate_thickness",
+      "raw_value": "16.00",
+      "normalized_value": "16.00",
+      "unit": "mm",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\AnDwg-1.in",
+      "winning_source": "MBS",
+      "resolution_strategy": "HIGHEST_PRIORITY",
+      "conflict_detected": false,
+      "extraction_confidence": 90,
+      "extracted_at": "2026-05-11T11:28:26.025333"
+    },
+    {
+      "field_code": "F-134",
+      "field_name": "qc_date",
+      "raw_value": "3.0000",
+      "normalized_value": "3.0000",
+      "unit": "YYYY-MM-DD",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\SEISMIC.IN",
+      "winning_source": "MBS",
+      "resolution_strategy": "HIGHEST_PRIORITY",
+      "conflict_detected": false,
+      "extraction_confidence": 80,
+      "extracted_at": "2026-05-11T11:28:17.019551"
+    },
+    {
+      "field_code": "F-140",
+      "field_name": "extraction_method",
+      "raw_value": "Equivalent Lateral Force, Section 12.8",
+      "normalized_value": "Equivalent Lateral Force, Section 12.8",
+      "unit": "Parser|OCR|Manual|Derived|Template",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\SEISMIC.IN",
+      "winning_source": "MBS",
+      "resolution_strategy": "HIGHEST_PRIORITY",
+      "conflict_detected": true,
+      "extraction_confidence": 80,
+      "extracted_at": "2026-05-11T11:28:17.019459"
+    },
+    {
+      "field_code": "F-171",
+      "field_name": "bay_sequence_number",
+      "raw_value": "6",
+      "normalized_value": "6",
+      "unit": "sequence",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RoofIns.in",
+      "winning_source": "MBS",
+      "resolution_strategy": "HIGHEST_PRIORITY",
+      "conflict_detected": false,
+      "extraction_confidence": 90,
+      "extracted_at": "2026-05-11T11:28:16.806128"
+    },
+    {
+      "field_code": "F-172",
+      "field_name": "bay_dimension_mm",
+      "raw_value": "6200.0",
+      "normalized_value": "6200.0",
+      "unit": "mm",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RoofIns.in",
+      "winning_source": "MBS",
+      "resolution_strategy": "HIGHEST_PRIORITY",
+      "conflict_detected": false,
+      "extraction_confidence": 90,
+      "extracted_at": "2026-05-11T11:28:16.806133"
+    },
+    {
+      "field_code": "F-191",
+      "field_name": "project_design_standard",
+      "raw_value": "AISC-US",
+      "normalized_value": "AISC-US",
+      "unit": "IS-Indian|AISC-US|BS-UK|Eurocode-EU",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\CompDes.in",
+      "winning_source": "MBS",
+      "resolution_strategy": "HIGHEST_PRIORITY",
+      "conflict_detected": false,
+      "extraction_confidence": 90,
+      "extracted_at": "2026-05-11T11:27:59.373511"
+    },
+    {
+      "field_code": "F-192",
+      "field_name": "bolt_projection_above_ffl",
+      "raw_value": "83.00",
+      "normalized_value": "83.00",
+      "unit": "mm",
+      "source_file": "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\AnDwg-1.in",
+      "winning_source": "MBS",
+      "resolution_strategy": "HIGHEST_PRIORITY",
+      "conflict_detected": false,
+      "extraction_confidence": 90,
+      "extracted_at": "2026-05-11T11:28:26.025317"
+    }
+  ],
+  "field_summary": {
+    "total_ab_required": 72,
+    "resolved_count": 72,
+    "missing_count": 0,
+    "missing_codes": []
+  }
+}

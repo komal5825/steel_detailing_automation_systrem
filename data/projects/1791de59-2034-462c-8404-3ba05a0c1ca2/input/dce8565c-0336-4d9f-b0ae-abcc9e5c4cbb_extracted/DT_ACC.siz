@@ -1,0 +1,223 @@
+* DT_ACC.SIZ      
+* 
+*-------------
+*
+*  This file contains a list and description of each accessory. 
+*  Each accessory starts with a single line providing an 
+*  identification mark (ACC#) followed by a description. The 
+*  following lines, until the next accessory is listed, contain 
+*  those items which are to be included with that accessory.
+*  These items will be listed in the bill of materials as follows.
+*
+*    Type    Description
+*    ----    --------------------
+*    ACC#    Description only, not an item.
+*    TRIM    Trim (Pg 7)
+*    SCRW    Fasteners (Pg 10)
+*    BOLT    Fasteners (Pg 10)
+*    CLIP    Connection Plates (Pg 5)
+*    ANGL    Angles (Pg 6)
+*    MEM     C,Z,D,R or W Members (Pg 3)
+*    CLOS    Outside Closure (Pg 8)
+*    CLIS    Inside  Closure (Pg 8)
+*    ----    Accessories (Pg 9)
+*    PG01    Items To Go On Page  1
+*    PG02    Items To Go On Page  2
+*    PG03    Items To Go On Page  3
+*    PG04    Items To Go On Page  4
+*    PG05    Items To Go On Page  5
+*    PG06    Items To Go On Page  6
+*    PG07    Items To Go On Page  7
+*    PG08    Items To Go On Page  8
+*    PG09    Items To Go On Page  9
+*    PG10    Items To Go On Page 10
+*
+*
+*  COLORS
+*  ------
+*    The following color variables can be used if the color of the
+*    accessory items are to be one of the colors read in the BOM
+*    input file.
+*
+*    Color
+*    Code      Color Used 
+*    -----     -----------------
+*     @W     - Wall   Color
+*     @R     - Roof   Color
+*     @J     - Jamb   Trim Color
+*     @E     - Eave   Trim Color
+*     @G     - Gable  Trim Color
+*     @C     - Corner Trim Color
+*
+*
+*
+*
+*
+**Type   Description               Mark       Part    Color Quan  Length   Weight
+**-----  ----------------------   -------- ---------- ----- ----  -------  ------
+ 'ACC00' '                  '                 
+ 'ACC00' '                  '                 
+
+ 'ACC0'   '------------------------------------------------------'
+ 'ACC0'   '----------------------Walk Doors----------------------'
+ 'ACC0'   '------------------------------------------------------'
+  
+ 'ACC220' 'Steel Metal Door Frame 150x900x2100'  
+ 'PG09'   'Metal Door Frame    '  'D9x21 ' 'D9x21   ' '--'     1  2100.0    50.00
+ 
+
+
+
+ 'ACC00' '                  '                 
+ 'ACC00' '                  '                 
+
+ 'ACC0'   '------------------------------------------------------'
+ 'ACC0'   '------------------Turbine Ventilator------------------'
+ 'ACC0'   '------------------------------------------------------'
+ 
+ 'ACC280' 'Turbine Ventilator 360mm (14inch)    '
+ 'PG09'   'T-Ventilator 360    '  'TV360 ' 'TV360   ' '--'     1   360.0     5.00
+ 
+ 'ACC281' 'Turbine Ventilator 360mm (14inch) CKD'
+ 'PG09'   'T-Ventilator 360 CKD'  'TV360C' 'TV360CKD' '--'     1   360.0     5.00
+
+ 
+ 'ACC282' 'Turbine Ventilator 460mm (18inch)'
+ 'PG09'   'T-Ventilator 460    '  'TV460 ' 'TV460   ' '--'     1   460.0     5.00
+
+ 
+ 'ACC283' 'Turbine Ventilator 460mm (18inch) CKD'
+ 'PG09'   'T-Ventilator 460 CKD'  'TV460C' 'TV460CKD' '--'     1   460.0     5.00
+
+ 
+ 'ACC284' 'Turbine Ventilator 600mm (24inch)'
+ 'PG09'   'T-Ventilator 600    '  'TV600 ' 'TV600   ' '--'     1   600.0     5.00
+
+ 
+ 'ACC285' 'Turbine Ventilator 600mm (24inch) CKD'
+ 'PG09'   'T-Ventilator 600 CKD'  'TV600 ' 'TV600   ' '--'     1   600.0     5.00
+
+
+
+
+
+ 'ACC00' '                  '                 
+ 'ACC00' '                  '                 
+
+ 'ACC0'   '------------------------------------------------------'
+ 'ACC0'   '-------------------Insulation Items-------------------'
+ 'ACC0'   '------------------------------------------------------'
+ 
+ 'ACC300' 'Roof Mesh Roll (1.8m x 30m) '
+ 'PG09'   'Roof Mesh Roll      '  'RMR30 ' 'RMR30   ' '--'     1 30000.0    50.00
+ 
+ 'ACC301' 'Aluminum Foil Roll (1.25m x 50m)'
+ 'PG09'   'Aluminum Foil Roll  '  'AFR50 ' 'AFR50   ' '--'     1 50000.0    50.00
+
+ 'ACC302' 'Aluminum Foil (120 x 1.3m)  '
+ 'PG09'   'AluminumFoil 120x1.3'  'AF1.3 ' 'AF1.3   ' '--'     1  1300.0     5.00
+
+ 'ACC303' 'Roxul Rockwool (75 x 1200 x 600)'
+ 'PG09'   'Roxul Rockwool      '  'RR1200' 'RR1200  ' '--'     1  1200.0     5.00
+
+
+
+'ACC8'  'Cbl Hardware'
+
+ '----'  'NUT 16'             '---'    'HN16'     '--'    2     1.0       0.050
+ '----'  'HILLSIDE WASHER16'  '---'    'HW16'     '--'    2     1.0       0.354
+ '----'  'FLAT WASHER16'      '---'    'Ø16WSHR'  '--'    2     1.0       0.034
+
+
+'ACC9'  'Cbl Hardware'
+
+ '----'  'NUT 20'             '---'    'HN20'     '--'    2     1.0       0.050
+ '----'  'HILLSIDE WASHER20'  '---'    'HW20'     '--'    2     1.0       0.354
+ '----'  'FLAT WASHER20'      '---'    'Ø20WSHR' '--'     2     1.0       0.034
+
+'ACC10'  'Cbl Hardware'
+
+ '----'  'NUT 25'             '---'    'HN24'     '--'    2     1.0       0.130
+ '----'  'HILLSIDE WASHER24'  '---'    'HW24'     '--'    2     1.0       0.760
+ '----'  'FLAT WASHER24'      '---'    'Ø24WSHR' '--'     2     1.0       0.067
+
+
+
+
+STOP
+
+ 'ACC0'   '------------------------------------------------------'
+ 'ACC0'   '------Items Below This Line Picked Up By Program------'
+ 'ACC0'   '----------------------------------------------------
+
+ 'ACC100' '3x3 FIXED LOUVER GALVANIZED' 
+ 'PG09' '3x3 FIXED LOUVER'      '3x3LVR' '45L33G'    'GZ'    1    36.00   54.00
+                        
+ 'ACC101' '4x3 FIXED LOUVER GALVANIZED'     
+ 'PG09' '4x3 FIXED LOUVER'      '4x3LVR' '45L43G'    'GZ'     1    36.00   72.00
+
+ 'ACC102' '4x4 FIXED LOUVER GALVANIZED'     
+ 'PG09' '4x4 FIXED LOUVER'      '4x4LVR' '45L44G'    'GZ'     1    48.00   96.00
+
+ 'ACC103' '5x3 FIXED LOUVER GALVANIZED'     
+ 'PG09' '5x3 FIXED LOUVER'      '5x3LVR' '45L53G'    'GZ'     1    60.00   90.00
+
+ 'ACC104' '6x3 FIXED LOUVER GALVANIZED'     
+ 'PG09' '6x3 FIXED LOUVER'      '6x3LVR' '45L63G'    'GZ'     1    72.00  108.00
+
+ 'ACC105' '6x4 FIXED LOUVER GALVANIZED'     
+ 'PG09' '6x4 FIXED LOUVER'      '6x4LVR' '45L64G'    'GZ'     1    72.00  144.00
+
+ 'ACC106' 'TOUCH UP PAINT 2 OZ'
+ 'PG09' 'TOUCH UP PAINT 2 OZ'   '-----' '42TU9'   'CO'     1     2.0     0.25
+
+ 'ACC107' 'TOUCH UP PAINT 2 OZ'
+ 'PG09' 'TOUCH UP PAINT 2 OZ'   '-----' '42TU9'   'K*'     1     2.0     0.25
+
+ 'ACC108' 'TOUCH UP PAINT GAL' 
+ 'PG09' 'TOUCH UP PAINT GAL'    '-----' '42TU9'   'RO'     1     8.0    10.00
+
+ 'ACC109' 'ROOF JACK 1/4"-2"'        
+ 'PG09' '1/4"-2" ROOF JACK'     '------' 'HW-1000'  ' '     1     4.50    3.00
+ 'SCRW' 'SDS Screws'            '----'  '#14x.875' '@R'    15    0.750    0.016 
+                                                        
+ 'ACC110' 'ROOF JACK 1/4"-4"'       
+ 'PG09' '1/4"-4" ROOF JACK'     '------' 'HW-1001'  ' '     1     8.00    3.00
+ 'SCRW' 'SDS Screws'            '----'  '#14x.875' '@R'    15    0.750    0.016 
+                                                                                       
+ 'ACC111' 'ROOF JACK 4"-7"'          
+ 'PG09' '4"-7" ROOF JACK'       '------' 'HW-1002'  ' '     1    11.00    5.00
+ 'SCRW' 'SDS Screws'            '----'  '#14x.875' '@R'    15    0.750    0.016 
+                                                        
+ 'ACC112' 'ROOF JACK 6"-11"'        
+ 'PG09' '6"-11" ROOF JACK'      '------' 'HW-1003'  ' '     1    14.00   11.00
+ 'SCRW' 'SDS Screws'            '----'  '#14x.875' '@R'    15    0.750    0.016 
+                                                        
+ 'ACC113' 'ROOF JACK 7"-13"'         
+ 'PG09' '7"-13" ROOF JACK'      '------' 'HW-1004'  ' '     1    17.00   13.00
+ 'SCRW' 'SDS Screws'            '----'  '#14x.875' '@R'    15    0.750    0.016 
+
+ 'ACC114'  '5020 HORIZ. MILL FIN'             
+ 'PG09' '5020 H.S.WINDOW'       '5020'  '45W5020'   '--'     1    60.00   30.00
+
+ 'ACC115' '3x3 FIXED LOUVER' 
+ 'PG09' '3x3 FIXED LOUVER'      '3x3LVR' '45L33C'    'CO'    1    36.00   54.00
+                        
+ 'ACC116' '4x3 FIXED LOUVER'    
+ 'PG09' '4x3 FIXED LOUVER'      '4x3LVR' '45L43C'    'CO'     1    36.00   72.00
+
+ 'ACC117' '4x4 FIXED LOUVER'    
+ 'PG09' '4x4 FIXED LOUVER'      '4x4LVR' '45L44C'    'CO'     1    48.00   96.00
+
+ 'ACC118' '5x3 FIXED LOUVER'    
+ 'PG09' '5x3 FIXED LOUVER'      '5x3LVR' '45L53C'    'CO'     1    60.00   90.00
+
+ 'ACC119' '6x3 FIXED LOUVER'    
+ 'PG09' '6x3 FIXED LOUVER'      '6x3LVR' '45L63C'    'CO'     1    72.00  108.00
+
+ 'ACC120' '6x4 FIXED LOUVER'    
+ 'PG09' '6x4 FIXED LOUVER'      '6x4LVR' '45L64C'    'CO'     1    72.00  144.00
+
+
+
+

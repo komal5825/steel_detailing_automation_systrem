@@ -55,6 +55,117 @@ const VALIDATORS = {
   'P3-05': 'End-to-end, package, approval check',
 };
 
+// Derive human-readable pending reason from checkpoint gate_data
+function pendingValidatorReason(stageCode, checkpoint) {
+  if (!checkpoint || checkpoint.gate_status === 'PASS') return null;
+  const gd = checkpoint.gate_data || {};
+
+  if (stageCode === 'P2-01') {
+    return {
+      validator: 'File Ingestion Validator',
+      reason: 'Stage has not run yet or produced no parseable files',
+      blocking_dependency: 'At least one valid design file must be successfully parsed',
+      recommended_fix: 'Upload a valid MBS / STAAD / ETABS / DXF file and re-run P2-01',
+    };
+  }
+  if (stageCode === 'P2-02') {
+    const abMissing = gd.ab_missing || [];
+    const gaMissing = gd.ga_missing || [];
+    const total = new Set([...abMissing, ...gaMissing]).size;
+    return {
+      validator: 'Completeness Validator',
+      reason: total
+        ? `${total} mandatory field(s) still unresolved after fallback (AB: ${abMissing.length}, GA: ${gaMissing.length})`
+        : 'Completeness gate has not been evaluated yet',
+      blocking_dependency: 'All AB-required and GA-required fields must be present or fallback-resolved',
+      recommended_fix: total
+        ? `Provide missing fields via the Field Review panel or upload a more complete source file. Missing: ${[...new Set([...abMissing, ...gaMissing])].slice(0, 8).join(', ')}${total > 8 ? ` … +${total - 8} more` : ''}`
+        : 'Run P2-02 completeness check first',
+    };
+  }
+  if (stageCode === 'P2-03') {
+    const missing = gd.missing_ab_fields || [];
+    return {
+      validator: 'AB Generation Validator',
+      reason: missing.length
+        ? `AB generation blocked — ${missing.length} required AB field(s) missing`
+        : 'AB generation has not been attempted yet',
+      blocking_dependency: 'All AB-required fields must be resolved before anchor bolt drawings can be generated',
+      recommended_fix: missing.length
+        ? `Resolve missing AB fields: ${missing.slice(0, 5).join(', ')}`
+        : 'Ensure P2-02 passes with no AB blockers, then re-run P2-03',
+    };
+  }
+  if (stageCode === 'P2-04') {
+    const missing = gd.missing_ga_fields || [];
+    return {
+      validator: 'GA Generation Validator',
+      reason: missing.length
+        ? `GA generation blocked — ${missing.length} required GA field(s) missing`
+        : 'GA generation has not been attempted yet',
+      blocking_dependency: 'All GA-required fields must be resolved before general arrangement can be generated',
+      recommended_fix: missing.length
+        ? `Resolve missing GA fields: ${missing.slice(0, 5).join(', ')}`
+        : 'Ensure P2-02 passes with no GA blockers, then re-run P2-04',
+    };
+  }
+  if (stageCode === 'P2-05') {
+    return {
+      validator: 'AB/GA Output Validator',
+      reason: 'AB and GA output files have not been validated yet',
+      blocking_dependency: 'Both anchor_bolt_layout.json and general_arrangement.json must exist and pass rule checks',
+      recommended_fix: 'Complete P2-03 and P2-04 successfully, then run P2-05 validation',
+    };
+  }
+  return null;
+}
+
+// Extract per-stage field metrics from result dict
+function stageFieldMetrics(stage) {
+  const r = stage?.result || {};
+  const code = stage?.stage_code;
+
+  if (code === 'P2-01') {
+    if (r.files_found === undefined) return null;
+    return [
+      { label: 'Files Found', value: r.files_found ?? '—' },
+      { label: 'Parsed', value: r.parsed_files ?? '—' },
+      { label: 'Failed', value: r.failed_files ?? '—', tone: r.failed_files > 0 ? 'red' : 'green' },
+      { label: 'Fields Extracted', value: r.extracted_fields ?? '—' },
+    ];
+  }
+  if (code === 'P2-02') {
+    const fc = r.field_completion;
+    if (!fc) return null;
+    return [
+      { label: 'Total Fields', value: fc.Total ?? '—' },
+      { label: 'Extracted', value: fc.Extracted ?? '—', tone: 'green' },
+      { label: 'Calculated', value: fc.Calculated ?? '—', tone: 'blue' },
+      { label: 'Fallback', value: fc.Fallback ?? '—', tone: 'amber' },
+      { label: 'Failed', value: fc.Failed ?? '—', tone: fc.Failed > 0 ? 'red' : 'green' },
+    ];
+  }
+  if (code === 'P2-03') {
+    const ab = r.ab_readiness;
+    if (!ab) return null;
+    return [
+      { label: 'AB Required', value: ab.required_count ?? '—' },
+      { label: 'Present', value: ab.present_count ?? '—', tone: 'green' },
+      { label: 'Missing', value: ab.missing_count ?? '—', tone: ab.missing_count > 0 ? 'red' : 'green' },
+    ];
+  }
+  if (code === 'P2-04') {
+    const ga = r.ga_readiness;
+    if (!ga) return null;
+    return [
+      { label: 'GA Required', value: ga.required_count ?? '—' },
+      { label: 'Present', value: ga.present_count ?? '—', tone: 'green' },
+      { label: 'Missing', value: ga.missing_count ?? '—', tone: ga.missing_count > 0 ? 'red' : 'green' },
+    ];
+  }
+  return null;
+}
+
 const isRunning = (status) => status === 'RUNNING' || status === 'IN_PROGRESS';
 const isDone = (status) => status === 'PASSED' || status === 'PASS_WITH_WARNINGS';
 
@@ -126,6 +237,15 @@ function blockerFixHints(stage) {
   });
 }
 
+function formatApiError(error) {
+  if (!error) return 'Unknown error';
+  const parts = [error.message || 'Request failed'];
+  if (error.stage) parts.push(`Stage: ${error.stage}`);
+  if (error.rootCause) parts.push(`Root cause: ${error.rootCause}`);
+  if (error.suggestedFix) parts.push(`Fix: ${error.suggestedFix}`);
+  return parts.join(' | ');
+}
+
 export default function ProjectWorkspace() {
   const { projectId } = useParams();
   const navigate = useNavigate();
@@ -159,6 +279,12 @@ export default function ProjectWorkspace() {
     enabled: !!projectId,
     refetchInterval: 5000,
   });
+  const { data: executionLogs = [] } = useQuery({
+    queryKey: ['executionLogs', projectId],
+    queryFn: () => stagesApi.getExecutionLogs(projectId, 200),
+    enabled: !!projectId,
+    refetchInterval: 5000,
+  });
 
   const uploadAndIngest = useMutation({
     mutationFn: async ({ formData, onProgress }) => {
@@ -171,12 +297,24 @@ export default function ProjectWorkspace() {
     onSuccess: (data) => {
       qc.invalidateQueries({ queryKey: ['projectFiles', projectId] });
       qc.invalidateQueries({ queryKey: ['stages', projectId] });
+      qc.invalidateQueries({ queryKey: ['checkpoints', projectId] });
       qc.invalidateQueries({ queryKey: ['pipeline', projectId] });
       setIngestionResult(data.ingestion);
       setShowIngestionModal(true);
-      add({ type: 'success', text: 'Files uploaded and P2-01 ingestion completed' });
+      add({ type: 'success', text: 'P2-01 ingestion complete — running P2-02 → P2-05 automatically' });
+      // Auto-advance: P2-01 passed so kick off the rest of the pipeline immediately.
+      // runPipeline handles failures gracefully (422 → onError) so this is safe.
+      runPipeline.mutate('P2-02');
     },
-    onError: (error) => add({ type: 'error', text: error.message }),
+    onError: (error) => {
+      // Queries must refresh even on failure — the upload succeeded and reset stages,
+      // so the UI needs to reflect the current DB state (new files, PENDING stages).
+      qc.invalidateQueries({ queryKey: ['projectFiles', projectId] });
+      qc.invalidateQueries({ queryKey: ['stages', projectId] });
+      qc.invalidateQueries({ queryKey: ['checkpoints', projectId] });
+      qc.invalidateQueries({ queryKey: ['pipeline', projectId] });
+      add({ type: 'error', text: `P2-01: ${formatApiError(error)}` });
+    },
   });
 
   const resetIntake = useMutation({
@@ -184,10 +322,11 @@ export default function ProjectWorkspace() {
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: ['projectFiles', projectId] });
       qc.invalidateQueries({ queryKey: ['stages', projectId] });
+      qc.invalidateQueries({ queryKey: ['checkpoints', projectId] });
       qc.invalidateQueries({ queryKey: ['pipeline', projectId] });
       add({ type: 'success', text: 'Intake reset and files cleared' });
     },
-    onError: (error) => add({ type: 'error', text: error.message }),
+    onError: (error) => add({ type: 'error', text: formatApiError(error) }),
   });
 
   const runPipeline = useMutation({
@@ -197,7 +336,7 @@ export default function ProjectWorkspace() {
       qc.invalidateQueries({ queryKey: ['pipeline', projectId] });
       add({ type: 'success', text: 'Phase 2 pipeline run completed' });
     },
-    onError: (error) => add({ type: 'error', text: error.message }),
+    onError: (error) => add({ type: 'error', text: formatApiError(error) }),
   });
 
   const deleteFile = useMutation({
@@ -205,10 +344,11 @@ export default function ProjectWorkspace() {
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: ['projectFiles', projectId] });
       qc.invalidateQueries({ queryKey: ['stages', projectId] });
+      qc.invalidateQueries({ queryKey: ['checkpoints', projectId] });
       qc.invalidateQueries({ queryKey: ['pipeline', projectId] });
-      add({ type: 'success', text: 'File deleted and stages reset' });
+      add({ type: 'success', text: 'File deleted and pipeline reset to PENDING' });
     },
-    onError: (error) => add({ type: 'error', text: error.message }),
+    onError: (error) => add({ type: 'error', text: formatApiError(error) }),
   });
 
   const rerunStage = useMutation({
@@ -216,13 +356,18 @@ export default function ProjectWorkspace() {
     onSuccess: (data, stageCode) => {
       qc.invalidateQueries({ queryKey: ['stages', projectId] });
       qc.invalidateQueries({ queryKey: ['projectFiles', projectId] });
-      if (stageCode === 'P2-01') {
-        setIngestionResult(data);
-        setShowIngestionModal(true);
-      }
-      add({ type: 'success', text: `${stageCode} run completed` });
+      qc.invalidateQueries({ queryKey: ['checkpoints', projectId] });
+      qc.invalidateQueries({ queryKey: ['pipeline', projectId] });
+      // Auto-open output review for all stages (P2-01 shows file outputs, not the
+      // ingestion modal — that modal is only for the upload+ingest combined flow).
+      setSelectedAgentCode(stageCode);
+      add({ type: 'success', text: `${stageCode} completed — output review opened` });
     },
-    onError: (error) => add({ type: 'error', text: error.message }),
+    onError: (error) => {
+      qc.invalidateQueries({ queryKey: ['stages', projectId] });
+      qc.invalidateQueries({ queryKey: ['checkpoints', projectId] });
+      add({ type: 'error', text: formatApiError(error) });
+    },
   });
 
 
@@ -313,6 +458,7 @@ export default function ProjectWorkspace() {
           blockedStages={blockedStages}
           awaitingInputStages={awaitingInputStages}
         />
+        <ExecutionLogPanel rows={executionLogs} />
 
         <section className="rounded-md border border-slate-300 bg-white">
           <div className="flex items-center justify-between border-b border-slate-200 px-4 py-3">
@@ -356,8 +502,8 @@ export default function ProjectWorkspace() {
         </section>
 
 
-        <section className="grid grid-cols-12 gap-4">
-          <div className="col-span-8 rounded-md border border-slate-300 bg-white">
+        <section className="grid grid-cols-12 gap-4 items-start">
+          <div className="col-span-8 flex flex-col rounded-md border border-slate-300 bg-white">
             <div className="flex items-center justify-between border-b border-slate-200 px-4 py-3">
               <div className="flex items-center gap-2">
                 <Files size={14} className="text-blue-600" />
@@ -423,6 +569,124 @@ export default function ProjectWorkspace() {
   );
 }
 
+function ExecutionLogPanel({ rows }) {
+  const downloadJson = React.useCallback(() => {
+    const blob = new Blob([JSON.stringify(rows, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `agent_execution_logs_${new Date().toISOString().replace(/[:.]/g, '-')}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+  }, [rows]);
+
+  const downloadCsv = React.useCallback(() => {
+    const header = [
+      'id', 'project_id', 'stage_code', 'trigger_type', 'status',
+      'started_at', 'completed_at', 'error_message', 'root_cause',
+    ];
+    const esc = (v) => {
+      const s = v == null ? '' : String(v);
+      return `"${s.replace(/"/g, '""')}"`;
+    };
+    const lines = [
+      header.join(','),
+      ...rows.map((r) => ([
+        r.id,
+        r.project_id,
+        r.stage_code,
+        r.trigger_type,
+        r.status,
+        r.started_at,
+        r.completed_at,
+        r.error_message || '',
+        r.root_cause || '',
+      ]).map(esc).join(',')),
+    ];
+    const blob = new Blob([lines.join('\n')], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `agent_execution_logs_${new Date().toISOString().replace(/[:.]/g, '-')}.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+  }, [rows]);
+
+  return (
+    <section className="rounded-md border border-slate-300 bg-white">
+      <div className="flex items-center justify-between border-b border-slate-200 px-4 py-2.5">
+        <h2 className="text-sm font-bold text-slate-900">Agent Execution Log</h2>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={downloadJson}
+            className="rounded border border-slate-300 bg-white px-2 py-1 text-xxs font-semibold text-slate-700 hover:border-blue-300 hover:text-blue-700"
+          >
+            Download JSON
+          </button>
+          <button
+            onClick={downloadCsv}
+            className="rounded border border-slate-300 bg-white px-2 py-1 text-xxs font-semibold text-slate-700 hover:border-blue-300 hover:text-blue-700"
+          >
+            Download CSV
+          </button>
+          <span className="font-mono text-xxs text-slate-500">{rows.length} attempts</span>
+        </div>
+      </div>
+      <div className="max-h-72 overflow-auto">
+        <table className="min-w-full text-xs">
+          <thead className="bg-slate-50 text-slate-600">
+            <tr>
+              <th className="px-3 py-2 text-left">Time</th>
+              <th className="px-3 py-2 text-left">Stage</th>
+              <th className="px-3 py-2 text-left">Trigger</th>
+              <th className="px-3 py-2 text-left">Status</th>
+              <th className="px-3 py-2 text-left">Failure</th>
+              <th className="px-3 py-2 text-left">Trace</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((r) => (
+              <tr key={r.id} className="border-t border-slate-100 align-top">
+                <td className="px-3 py-2 font-mono text-[10px] text-slate-500">{fmtDateTime(r.started_at)}</td>
+                <td className="px-3 py-2 font-mono text-[10px] text-slate-700">{r.stage_code}</td>
+                <td className="px-3 py-2 text-slate-600">{r.trigger_type}</td>
+                <td className="px-3 py-2">
+                  <span className={clsx(
+                    'rounded px-1.5 py-0.5 font-mono text-[10px]',
+                    r.status === 'FAILED' ? 'bg-red-100 text-red-700' :
+                    r.status === 'BLOCKED' ? 'bg-amber-100 text-amber-700' :
+                    r.status?.includes('PASS') ? 'bg-emerald-100 text-emerald-700' :
+                    'bg-slate-100 text-slate-600'
+                  )}>
+                    {r.status}
+                  </span>
+                </td>
+                <td className="px-3 py-2 text-[10px] text-slate-600">
+                  <p className="line-clamp-2">{r.error_message || '—'}</p>
+                  {r.root_cause && <p className="line-clamp-2 text-red-700">{r.root_cause}</p>}
+                </td>
+                <td className="px-3 py-2 text-[10px] text-slate-600">
+                  <details>
+                    <summary className="cursor-pointer text-blue-700">View</summary>
+                    <pre className="mt-1 max-w-md overflow-auto rounded bg-slate-50 p-2 text-[9px]">
+{`Input: ${r.input_payload || '{}'}\n\nOutput: ${r.output_payload || '{}'}`}
+                    </pre>
+                  </details>
+                </td>
+              </tr>
+            ))}
+            {rows.length === 0 && (
+              <tr>
+                <td colSpan={6} className="px-3 py-6 text-center text-slate-500">No execution attempts logged yet.</td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  );
+}
+
 function PhaseRibbon({ phase2, phase3 }) {
   const phases = [
     { label: 'Phase 1 - Master DB', progress: 100, status: 'Done' },
@@ -473,7 +737,7 @@ function FileInventory({ files, loading, onDelete }) {
     return <div className="p-8 text-center text-xs text-slate-500">No files registered.</div>;
   }
   return (
-    <div className="max-h-80 overflow-auto">
+    <div className="overflow-y-auto" style={{ minHeight: '9rem', maxHeight: '480px' }}>
       <table className="w-full text-left text-xs">
         <thead className="sticky top-0 bg-slate-50 text-xxs uppercase tracking-wide text-slate-500">
           <tr>
@@ -739,10 +1003,33 @@ function AgentCard({ stage, projectId, index, onRun, running, locked, onViewOutp
   const errorSummary = summarizeStageReason(stage);
   const errorFull = fullStageReason(stage);
   const fixHints = blockerFixHints(stage);
-  const checkpointState = checkpoint?.gate_status || 'PENDING';
+  // When no checkpoint record exists yet, infer gate state from the stage status
+  // so the validator doesn't show PENDING for a stage that already passed.
+  const checkpointState = checkpoint?.gate_status
+    || (isDone(stage.status) ? 'PASS' : stage.status === 'FAILED' ? 'FAIL' : 'PENDING');
+  const validatorStatus = checkpointState === 'PASS' ? 'PASSED' : checkpointState === 'FAIL' ? 'FAILED' : 'PENDING';
+
+  // Pending validator context — shown when validator hasn't cleared
+  const pendingReason = validatorStatus === 'PENDING'
+    ? pendingValidatorReason(stage.stage_code, checkpoint)
+    : null;
+
+  // Field metrics for completed stages
+  const metrics = isDone(stage.status) ? stageFieldMetrics(stage) : null;
+
+  // Structured warnings for PASS_WITH_WARNINGS
+  const warnings = stage.status === 'PASS_WITH_WARNINGS'
+    ? (stage.result?.warnings || [])
+    : [];
+
+  // Failed field IDs for P2-02 with failures
+  const failedFieldIds = stage.stage_code === 'P2-02' && stage.result?.failed_field_ids?.length
+    ? stage.result.failed_field_ids
+    : [];
 
   return (
     <div className={clsx('relative flex flex-col rounded-md border bg-white p-3 shadow-sm transition-all', meta.border)}>
+      {/* Header */}
       <div className="mb-3 flex items-center justify-between">
         <span className={clsx('flex h-7 w-7 items-center justify-center rounded font-mono text-xxs font-bold', meta.bg, meta.color)}>
           {String(index + 1).padStart(2, '0')}
@@ -751,58 +1038,154 @@ function AgentCard({ stage, projectId, index, onRun, running, locked, onViewOutp
           <StatusBadge status={stage.status} />
         </div>
       </div>
-      <div className="min-h-20 flex-1">
-        <p className="font-mono text-xxs font-semibold text-slate-500">{stage.stage_code}</p>
-        <h3 className="mt-1 text-sm font-bold text-slate-900">{stage.name}</h3>
-        <p className="mt-2 text-xxs leading-4 text-slate-500 line-clamp-2">{stage.description}</p>
-        
-        {(stage.status === 'FAILED' || stage.status === 'BLOCKED' || stage.ui_locked) && errorSummary && (
-          <div className="mt-2 flex items-start gap-1.5 rounded border border-red-100 bg-red-50 p-1.5 text-[10px] text-red-700">
-            <AlertTriangle size={10} className="mt-0.5 flex-shrink-0" />
-            <p className="font-medium leading-tight line-clamp-2">{errorSummary}</p>
+
+      <div className="flex-1 space-y-2">
+        <div>
+          <p className="font-mono text-xxs font-semibold text-slate-500">{stage.stage_code}</p>
+          <h3 className="mt-1 text-sm font-bold text-slate-900">{stage.name}</h3>
+          <p className="mt-1 text-xxs leading-4 text-slate-500 line-clamp-2">{stage.description}</p>
+        </div>
+
+        {/* ── FAILED / BLOCKED error panel ── */}
+        {(stage.status === 'FAILED' || stage.status === 'BLOCKED' || stage.ui_locked) && (
+          <div className="rounded border border-red-200 bg-red-50 p-2 text-[10px] text-red-800 space-y-1">
+            <div className="flex items-center gap-1 font-bold">
+              <AlertTriangle size={10} className="flex-shrink-0" />
+              <span>
+                {stage.status === 'BLOCKED' ? 'Stage Blocked' : stage.ui_locked ? 'Locked by Upstream Gate' : 'Stage Failed'}
+              </span>
+            </div>
+            {errorSummary && <p className="font-medium">{errorSummary}</p>}
+            <details className="mt-1">
+              <summary className="cursor-pointer font-semibold text-red-700">Full diagnostic</summary>
+              <pre className="mt-1 whitespace-pre-wrap font-mono text-[9px] text-red-700 leading-3">{errorFull}</pre>
+            </details>
+            {fixHints.length > 0 && (
+              <div className="mt-1 border-t border-red-200 pt-1">
+                <p className="font-bold text-red-900 mb-0.5">Recommended fixes</p>
+                {fixHints.map((hint) => (
+                  <p key={hint} className="font-mono text-[9px]">• {hint}</p>
+                ))}
+              </div>
+            )}
           </div>
         )}
-        {(stage.status === 'FAILED' || stage.status === 'BLOCKED' || stage.ui_locked) && (
-          <details className="mt-2 rounded border border-red-200 bg-red-50/60 p-2 text-[10px]">
-            <summary className="cursor-pointer font-semibold text-red-800">Full backend reason</summary>
-            <pre className="mt-1 whitespace-pre-wrap font-mono text-red-800">{errorFull}</pre>
-          </details>
+
+        {/* ── PASS_WITH_WARNINGS warning panel ── */}
+        {warnings.length > 0 && (
+          <div className="rounded border border-amber-200 bg-amber-50 p-2 text-[10px] text-amber-900 space-y-1.5">
+            <p className="font-bold flex items-center gap-1">
+              <AlertTriangle size={10} className="flex-shrink-0 text-amber-600" />
+              {warnings.length} Warning{warnings.length > 1 ? 's' : ''} Detected
+            </p>
+            {warnings.map((w, i) => (
+              <details key={i} className="rounded border border-amber-200 bg-white/60 p-1.5">
+                <summary className="cursor-pointer font-semibold text-amber-800 text-[9px]">
+                  [{w.severity}] {w.title}
+                </summary>
+                <div className="mt-1 space-y-0.5 text-[9px] font-mono">
+                  <p><span className="font-bold">Issue:</span> {w.issue}</p>
+                  <p><span className="font-bold">Root Cause:</span> {w.root_cause}</p>
+                  <p><span className="font-bold">Parser:</span> {w.parser}</p>
+                  <p><span className="font-bold">Fix:</span> {w.recommended_fix}</p>
+                  <p className={clsx('font-bold', w.can_continue ? 'text-green-700' : 'text-red-700')}>
+                    Pipeline can continue: {w.can_continue ? 'Yes' : 'No'}
+                  </p>
+                </div>
+              </details>
+            ))}
+          </div>
         )}
-        {fixHints.length > 0 && (
-          <div className="mt-2 rounded border border-amber-200 bg-amber-50 p-2 text-[10px] text-amber-900">
-            <p className="mb-1 font-semibold">How to fix</p>
-            <div className="space-y-1">
-              {fixHints.map((hint) => (
-                <p key={hint} className="font-mono">{hint}</p>
+
+        {/* ── Field extraction metrics (completed stages) ── */}
+        {metrics && (
+          <div className="rounded border border-emerald-200 bg-emerald-50 p-2 text-[10px]">
+            <p className="mb-1.5 font-bold text-emerald-800 flex items-center gap-1">
+              <CheckCircle2 size={10} /> Field Extraction Summary
+            </p>
+            <div className="grid grid-cols-2 gap-x-3 gap-y-0.5">
+              {metrics.map(({ label, value, tone }) => (
+                <div key={label} className="flex items-center justify-between">
+                  <span className="text-slate-600">{label}</span>
+                  <span className={clsx(
+                    'font-mono font-bold',
+                    tone === 'red' && value > 0 ? 'text-red-700'
+                    : tone === 'amber' && value > 0 ? 'text-amber-700'
+                    : tone === 'blue' ? 'text-blue-700'
+                    : 'text-emerald-700'
+                  )}>{value}</span>
+                </div>
               ))}
             </div>
           </div>
         )}
+
+        {/* ── P2-02 failed field IDs ── */}
+        {failedFieldIds.length > 0 && (
+          <details className="rounded border border-red-200 bg-red-50/60 p-2 text-[10px]">
+            <summary className="cursor-pointer font-bold text-red-800">
+              {failedFieldIds.length} Unresolved Field{failedFieldIds.length > 1 ? 's' : ''} — click to expand
+            </summary>
+            <div className="mt-1.5 flex flex-wrap gap-1">
+              {failedFieldIds.map((fc) => (
+                <span key={fc} className="rounded bg-red-100 px-1 py-0.5 font-mono text-[9px] text-red-700 border border-red-200">
+                  {fc}
+                </span>
+              ))}
+            </div>
+            <p className="mt-1.5 text-[9px] text-red-700 font-mono">
+              Download missing_field_report.json from Outputs for root-cause details per field.
+            </p>
+          </details>
+        )}
       </div>
 
+      {/* ── Validator block ── */}
       <div className="mt-3 rounded border border-slate-200 bg-slate-50 p-2 text-xxs text-slate-600">
         <div className="mb-1 flex items-center justify-between gap-1.5 font-semibold text-slate-700">
           <div className="flex items-center gap-1.5">
-          <ShieldCheck size={11} className="text-blue-600" /> Validator {index + 1}
+            <ShieldCheck size={11} className="text-blue-600" /> Validator {index + 1}
           </div>
-          <StatusBadge size="sm" status={checkpointState === 'PASS' ? 'PASSED' : checkpointState === 'FAIL' ? 'FAILED' : 'PENDING'} />
+          <StatusBadge size="sm" status={validatorStatus} />
         </div>
-        <p className="line-clamp-1 italic">{VALIDATORS[stage.stage_code]}</p>
-        <p className="mt-1 font-mono text-[10px] text-slate-500">
-          Checkpoint: {checkpointState}{checkpoint?.label ? ` (${checkpoint.label})` : ''}
+        <p className="italic text-[10px] text-slate-500 line-clamp-1">{VALIDATORS[stage.stage_code]}</p>
+        <p className="mt-0.5 font-mono text-[9px] text-slate-400">
+          Gate: {checkpointState}{checkpoint?.label ? ` · ${checkpoint.label}` : checkpoint ? '' : ' (inferred)'}
         </p>
+
+        {/* Pending validator explanation */}
+        {pendingReason && (
+          <details className="mt-1.5 rounded border border-blue-200 bg-blue-50/60 p-1.5 text-[9px]">
+            <summary className="cursor-pointer font-bold text-blue-800">Why is this validator pending?</summary>
+            <div className="mt-1 space-y-0.5 font-mono text-blue-900">
+              <p><span className="font-bold">Validator:</span> {pendingReason.validator}</p>
+              <p><span className="font-bold">Reason:</span> {pendingReason.reason}</p>
+              <p><span className="font-bold">Dependency:</span> {pendingReason.blocking_dependency}</p>
+              <p><span className="font-bold">Fix:</span> {pendingReason.recommended_fix}</p>
+            </div>
+          </details>
+        )}
+
+        {/* FAIL validator explanation from gate_data */}
+        {validatorStatus === 'FAILED' && checkpoint?.gate_data && (
+          <details className="mt-1.5 rounded border border-red-200 bg-red-50/60 p-1.5 text-[9px]">
+            <summary className="cursor-pointer font-bold text-red-800">Validator failure detail</summary>
+            <pre className="mt-1 whitespace-pre-wrap font-mono text-[8px] text-red-800 leading-3">
+              {JSON.stringify(checkpoint.gate_data, null, 2)}
+            </pre>
+          </details>
+        )}
       </div>
-      
+
+      {/* ── Footer actions ── */}
       <div className="mt-3 flex items-center justify-between border-t border-slate-200 pt-3">
-        <div className="flex items-center gap-2">
-          <button
-            onClick={() => onViewOutputs?.(stage.stage_code)}
-            className="flex h-7 items-center gap-1.5 rounded border border-blue-200 bg-blue-50 px-2 text-[10px] font-bold text-blue-700 hover:bg-blue-600 hover:text-white transition-colors"
-            title="View output files"
-          >
-            <Files size={10} /> Outputs
-          </button>
-        </div>
+        <button
+          onClick={() => onViewOutputs?.(stage.stage_code)}
+          className="flex h-7 items-center gap-1.5 rounded border border-blue-200 bg-blue-50 px-2 text-[10px] font-bold text-blue-700 hover:bg-blue-600 hover:text-white transition-colors"
+          title="View output files"
+        >
+          <Files size={10} /> Outputs
+        </button>
         {canRun ? (
           <button
             onClick={() => onRun(stage.stage_code)}

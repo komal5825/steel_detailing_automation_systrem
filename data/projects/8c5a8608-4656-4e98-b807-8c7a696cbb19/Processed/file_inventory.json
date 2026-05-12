@@ -1,0 +1,38 @@
+{
+  "project_id": "8c5a8608-4656-4e98-b807-8c7a696cbb19",
+  "total_files": 3,
+  "parsed_files": 2,
+  "failed_files": 0,
+  "files": [
+    {
+      "file_id": "1ec21427-95e3-4764-b4ca-30b055af1044",
+      "original_filename": "C165-276.in",
+      "file_type": "MBS",
+      "file_category": "design_file",
+      "source_application": "MBS",
+      "likely_role": "governing",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "file_id": "9bd50923-ad78-4672-8eff-7479abbabe46",
+      "original_filename": "C165-276_estimate.xlsx",
+      "file_type": "EXCEL",
+      "file_category": "spreadsheet",
+      "source_application": "EXCEL",
+      "likely_role": "supporting",
+      "classification_confidence": 90,
+      "processing_status": "PARSED"
+    },
+    {
+      "file_id": "fb55bbf9-0b15-4bb8-a813-8468924e946c",
+      "original_filename": "C165-276_proposal.docx",
+      "file_type": "UNKNOWN",
+      "file_category": "unsupported",
+      "source_application": "UNKNOWN",
+      "likely_role": "irrelevant",
+      "classification_confidence": 0,
+      "processing_status": "UNSUPPORTED"
+    }
+  ]
+}

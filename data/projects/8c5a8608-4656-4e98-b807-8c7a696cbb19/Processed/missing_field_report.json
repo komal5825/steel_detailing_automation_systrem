@@ -1,0 +1,964 @@
+{
+  "total_failed": 136,
+  "mandatory_failed": 78,
+  "conditional_failed": 33,
+  "optional_or_derived_failed": 25,
+  "mandatory_missing": [
+    {
+      "field_code": "F-001",
+      "name": "project_code",
+      "output_classes": "All",
+      "note": "Field F-001 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-002",
+      "name": "project_name",
+      "output_classes": "All",
+      "note": "Field F-002 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-006",
+      "name": "project_unit_system",
+      "output_classes": "All",
+      "note": "Field F-006 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-010",
+      "name": "client_name",
+      "output_classes": "All",
+      "note": "Field F-010 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-017",
+      "name": "document_creation_date",
+      "output_classes": "All",
+      "note": "Field F-017 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-020",
+      "name": "drawing_class",
+      "output_classes": "All",
+      "note": "Field F-020 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-024",
+      "name": "drawing_creation_date",
+      "output_classes": "All",
+      "note": "Field F-024 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-028",
+      "name": "sheet_size_code",
+      "output_classes": "All",
+      "note": "Field F-028 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Select correct drawing template and title-block configuration"
+    },
+    {
+      "field_code": "F-029",
+      "name": "sheet_scale",
+      "output_classes": "All",
+      "note": "Field F-029 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Select correct drawing template and title-block configuration"
+    },
+    {
+      "field_code": "F-040",
+      "name": "grid_spacing_y",
+      "output_classes": "GA, Shop, AB",
+      "note": "Field F-040 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-041",
+      "name": "grid_label_x",
+      "output_classes": "GA, AB",
+      "note": "Field F-041 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Select correct drawing template and title-block configuration"
+    },
+    {
+      "field_code": "F-042",
+      "name": "grid_label_y",
+      "output_classes": "GA, AB",
+      "note": "Field F-042 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Select correct drawing template and title-block configuration"
+    },
+    {
+      "field_code": "F-043",
+      "name": "grid_origin_x",
+      "output_classes": "GA, AB",
+      "note": "Field F-043 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-044",
+      "name": "grid_origin_y",
+      "output_classes": "GA, AB",
+      "note": "Field F-044 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-045",
+      "name": "building_length",
+      "output_classes": "GA, Shop, Ship",
+      "note": "Field F-045 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-046",
+      "name": "building_width",
+      "output_classes": "GA, Shop, Ship",
+      "note": "Field F-046 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-047",
+      "name": "building_height",
+      "output_classes": "GA, Shop",
+      "note": "Field F-047 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-048",
+      "name": "building_type",
+      "output_classes": "All",
+      "note": "Field F-048 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-051",
+      "name": "level_elevation",
+      "output_classes": "GA, Shop, Install",
+      "note": "Field F-051 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-052",
+      "name": "level_code",
+      "output_classes": "GA, Shop",
+      "note": "Field F-052 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-055",
+      "name": "roof_slope_display",
+      "output_classes": "GA",
+      "note": "Field F-055 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Select correct drawing template and title-block configuration"
+    },
+    {
+      "field_code": "F-057",
+      "name": "roof_ridge_height",
+      "output_classes": "GA",
+      "note": "Field F-057 could not be resolved. BLOCKING: this field is mandatory. Derived type: calculated. Calculation failed: Missing F-056 (eave_height), F-054 (slope), or F-059 (span) Missing source dependency. Engineer review required.",
+      "remediation": "Run derived-field calculation pass; check dependency fields are populated"
+    },
+    {
+      "field_code": "F-059",
+      "name": "roof_span_length",
+      "output_classes": "GA, Shop",
+      "note": "Field F-059 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-061",
+      "name": "frame_bay_number",
+      "output_classes": "GA, Shop",
+      "note": "Field F-061 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-063",
+      "name": "member_section_size",
+      "output_classes": "GA, Shop, Ship, Install",
+      "note": "Field F-063 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-064",
+      "name": "member_type",
+      "output_classes": "GA, Shop, Ship",
+      "note": "Field F-064 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-065",
+      "name": "member_material_grade",
+      "output_classes": "GA, Shop, Ship",
+      "note": "Field F-065 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-066",
+      "name": "member_length",
+      "output_classes": "Shop, Ship",
+      "note": "Field F-066 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-067",
+      "name": "member_mark",
+      "output_classes": "GA, Shop, Ship, Install",
+      "note": "Field F-067 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-069",
+      "name": "member_quantity",
+      "output_classes": "Shop, Ship",
+      "note": "Field F-069 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-072",
+      "name": "member_location_reference",
+      "output_classes": "GA, Shop",
+      "note": "Field F-072 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-073",
+      "name": "member_surface_treatment",
+      "output_classes": "Shop, Ship",
+      "note": "Field F-073 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-075",
+      "name": "connection_type",
+      "output_classes": "Shop, AB",
+      "note": "Field F-075 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-076",
+      "name": "connection_bolt_size",
+      "output_classes": "Shop",
+      "note": "Field F-076 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-077",
+      "name": "connection_bolt_grade",
+      "output_classes": "Shop",
+      "note": "Field F-077 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-078",
+      "name": "connection_bolt_quantity",
+      "output_classes": "Shop, AB",
+      "note": "Field F-078 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-080",
+      "name": "base_plate_size",
+      "output_classes": "AB, Shop",
+      "note": "Field F-080 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-081",
+      "name": "bolt_diameter",
+      "output_classes": "AB",
+      "note": "Field F-081 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-083",
+      "name": "bolt_quantity_per_column",
+      "output_classes": "AB",
+      "note": "Field F-083 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-084",
+      "name": "bolt_spacing_x",
+      "output_classes": "AB",
+      "note": "Field F-084 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-085",
+      "name": "bolt_spacing_y",
+      "output_classes": "AB",
+      "note": "Field F-085 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-086",
+      "name": "bolt_embedment_depth",
+      "output_classes": "AB",
+      "note": "Field F-086 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-087",
+      "name": "bolt_projection",
+      "output_classes": "AB",
+      "note": "Field F-087 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-088",
+      "name": "bolt_pattern_orientation",
+      "output_classes": "AB",
+      "note": "Field F-088 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-089",
+      "name": "anchor_bolt_code",
+      "output_classes": "AB",
+      "note": "Field F-089 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-090",
+      "name": "base_plate_thickness",
+      "output_classes": "AB, Shop",
+      "note": "Field F-090 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-091",
+      "name": "sheeting_zone_code",
+      "output_classes": "Sheet",
+      "note": "Field F-091 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-092",
+      "name": "sheeting_material_type",
+      "output_classes": "Sheet",
+      "note": "Field F-092 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-093",
+      "name": "sheeting_gauge",
+      "output_classes": "Sheet",
+      "note": "Field F-093 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-095",
+      "name": "sheeting_fastener_type",
+      "output_classes": "Sheet",
+      "note": "Field F-095 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-098",
+      "name": "sheeting_support_ref",
+      "output_classes": "Sheet",
+      "note": "Field F-098 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-100",
+      "name": "sheeting_lapping_direction",
+      "output_classes": "Sheet",
+      "note": "Field F-100 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-101",
+      "name": "detail_reference",
+      "output_classes": "Shop",
+      "note": "Field F-101 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-104",
+      "name": "shop_drawing_file_ref",
+      "output_classes": "Shop",
+      "note": "Field F-104 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-107",
+      "name": "plate_thickness",
+      "output_classes": "Shop",
+      "note": "Field F-107 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-108",
+      "name": "shipping_bundle_code",
+      "output_classes": "Ship",
+      "note": "Field F-108 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-109",
+      "name": "bundle_member_list",
+      "output_classes": "Ship",
+      "note": "Field F-109 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-111",
+      "name": "bundle_sequence_number",
+      "output_classes": "Ship",
+      "note": "Field F-111 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-112",
+      "name": "bundle_destination",
+      "output_classes": "Ship",
+      "note": "Field F-112 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-114",
+      "name": "installation_package_code",
+      "output_classes": "Install",
+      "note": "Field F-114 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-115",
+      "name": "installation_sequence_number",
+      "output_classes": "Install",
+      "note": "Field F-115 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-116",
+      "name": "assembly_code",
+      "output_classes": "Install",
+      "note": "Field F-116 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-119",
+      "name": "temporary_bracing_required",
+      "output_classes": "Install",
+      "note": "Field F-119 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-121",
+      "name": "purlin_girt_section_size",
+      "output_classes": "GA, Shop, Sheet",
+      "note": "Field F-121 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-122",
+      "name": "purlin_spacing",
+      "output_classes": "GA, Shop",
+      "note": "Field F-122 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-123",
+      "name": "girt_spacing",
+      "output_classes": "GA, Shop",
+      "note": "Field F-123 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-124",
+      "name": "purlin_laps",
+      "output_classes": "Shop",
+      "note": "Field F-124 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-157",
+      "name": "connection_web_plate_thickness",
+      "output_classes": "Shop",
+      "note": "Field F-157 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-159",
+      "name": "connection_bolt_rows",
+      "output_classes": "Shop",
+      "note": "Field F-159 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-160",
+      "name": "connection_bolt_columns",
+      "output_classes": "Shop",
+      "note": "Field F-160 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-161",
+      "name": "connection_gauge_distance",
+      "output_classes": "Shop",
+      "note": "Field F-161 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-162",
+      "name": "connection_end_distance",
+      "output_classes": "Shop",
+      "note": "Field F-162 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-163",
+      "name": "connection_edge_distance",
+      "output_classes": "Shop",
+      "note": "Field F-163 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-171",
+      "name": "bay_sequence_number",
+      "output_classes": "GA, AB, Shop",
+      "note": "Field F-171 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-172",
+      "name": "bay_dimension_mm",
+      "output_classes": "GA, AB, Shop",
+      "note": "Field F-172 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-173",
+      "name": "bay_type_code",
+      "output_classes": "GA, Shop",
+      "note": "Field F-173 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-191",
+      "name": "project_design_standard",
+      "output_classes": "All",
+      "note": "Field F-191 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-192",
+      "name": "bolt_projection_above_ffl",
+      "output_classes": "AB",
+      "note": "Field F-192 could not be resolved. BLOCKING: this field is mandatory. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    }
+  ],
+  "conditional_missing": [
+    {
+      "field_code": "F-008",
+      "name": "project_wind_speed",
+      "output_classes": "GA",
+      "note": "Field F-008 could not be resolved. May be non-blocking if condition is not met for this project. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-058",
+      "name": "roof_eave_overhang",
+      "output_classes": "GA, Sheet",
+      "note": "Field F-058 could not be resolved. May be non-blocking if condition is not met for this project. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-062",
+      "name": "frame_zone_code",
+      "output_classes": "GA, Shop, Ship",
+      "note": "Field F-062 could not be resolved. May be non-blocking if condition is not met for this project. Missing source dependency. Engineer review required.",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-074",
+      "name": "member_camber",
+      "output_classes": "Shop",
+      "note": "Field F-074 could not be resolved. May be non-blocking if condition is not met for this project. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-079",
+      "name": "weld_size",
+      "output_classes": "Shop",
+      "note": "Field F-079 could not be resolved. May be non-blocking if condition is not met for this project. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-094",
+      "name": "sheeting_color",
+      "output_classes": "Sheet",
+      "note": "Field F-094 could not be resolved. May be non-blocking if condition is not met for this project. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-099",
+      "name": "sheeting_opening_ref",
+      "output_classes": "Sheet",
+      "note": "Field F-099 could not be resolved. May be non-blocking if condition is not met for this project. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-105",
+      "name": "connection_detail_ref",
+      "output_classes": "Shop",
+      "note": "Field F-105 could not be resolved. May be non-blocking if condition is not met for this project. Missing source dependency. Engineer review required.",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-126",
+      "name": "crane_capacity",
+      "output_classes": "GA, Shop",
+      "note": "Field F-126 could not be resolved. May be non-blocking if condition is not met for this project. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-127",
+      "name": "crane_span",
+      "output_classes": "GA, Shop",
+      "note": "Field F-127 could not be resolved. May be non-blocking if condition is not met for this project. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-128",
+      "name": "crane_rail_level",
+      "output_classes": "GA",
+      "note": "Field F-128 could not be resolved. May be non-blocking if condition is not met for this project. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-129",
+      "name": "mezzanine_level_elevation",
+      "output_classes": "GA, Shop",
+      "note": "Field F-129 could not be resolved. May be non-blocking if condition is not met for this project. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-131",
+      "name": "staircase_type",
+      "output_classes": "Shop",
+      "note": "Field F-131 could not be resolved. May be non-blocking if condition is not met for this project. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-146",
+      "name": "override_reason",
+      "output_classes": "All",
+      "note": "Field F-146 could not be resolved. May be non-blocking if condition is not met for this project. Missing source dependency. Engineer review required.",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-155",
+      "name": "north_arrow_position",
+      "output_classes": "GA",
+      "note": "Field F-155 could not be resolved. May be non-blocking if condition is not met for this project. Missing source dependency. Engineer review required.",
+      "remediation": "Select correct drawing template and title-block configuration"
+    },
+    {
+      "field_code": "F-158",
+      "name": "connection_flange_plate_thickness",
+      "output_classes": "Shop",
+      "note": "Field F-158 could not be resolved. May be non-blocking if condition is not met for this project. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-165",
+      "name": "connection_weld_type",
+      "output_classes": "Shop",
+      "note": "Field F-165 could not be resolved. May be non-blocking if condition is not met for this project. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-166",
+      "name": "connection_backing_bar_flag",
+      "output_classes": "Shop",
+      "note": "Field F-166 could not be resolved. May be non-blocking if condition is not met for this project. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-167",
+      "name": "connection_stiffener_required",
+      "output_classes": "Shop",
+      "note": "Field F-167 could not be resolved. May be non-blocking if condition is not met for this project. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-168",
+      "name": "connection_stiffener_thickness",
+      "output_classes": "Shop",
+      "note": "Field F-168 could not be resolved. May be non-blocking if condition is not met for this project. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-176",
+      "name": "crane_runway_beam_section",
+      "output_classes": "GA, Shop",
+      "note": "Field F-176 could not be resolved. May be non-blocking if condition is not met for this project. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-177",
+      "name": "crane_rail_section",
+      "output_classes": "GA, Shop",
+      "note": "Field F-177 could not be resolved. May be non-blocking if condition is not met for this project. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-178",
+      "name": "crane_bracket_plate_size",
+      "output_classes": "Shop",
+      "note": "Field F-178 could not be resolved. May be non-blocking if condition is not met for this project. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-179",
+      "name": "crane_bracket_bolt_size",
+      "output_classes": "Shop, AB",
+      "note": "Field F-179 could not be resolved. May be non-blocking if condition is not met for this project. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-180",
+      "name": "crane_end_stop_type",
+      "output_classes": "GA, Shop",
+      "note": "Field F-180 could not be resolved. May be non-blocking if condition is not met for this project. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-181",
+      "name": "crane_gantry_girder_flag",
+      "output_classes": "GA",
+      "note": "Field F-181 could not be resolved. May be non-blocking if condition is not met for this project. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-184",
+      "name": "buildup_web_plate_thickness",
+      "output_classes": "Shop, Ship",
+      "note": "Field F-184 could not be resolved. May be non-blocking if condition is not met for this project. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-185",
+      "name": "buildup_web_plate_height",
+      "output_classes": "Shop, Ship",
+      "note": "Field F-185 could not be resolved. May be non-blocking if condition is not met for this project. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-186",
+      "name": "buildup_top_flange_width",
+      "output_classes": "Shop, Ship",
+      "note": "Field F-186 could not be resolved. May be non-blocking if condition is not met for this project. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-187",
+      "name": "buildup_top_flange_thickness",
+      "output_classes": "Shop, Ship",
+      "note": "Field F-187 could not be resolved. May be non-blocking if condition is not met for this project. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-188",
+      "name": "buildup_bot_flange_width",
+      "output_classes": "Shop, Ship",
+      "note": "Field F-188 could not be resolved. May be non-blocking if condition is not met for this project. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-189",
+      "name": "buildup_bot_flange_thickness",
+      "output_classes": "Shop, Ship",
+      "note": "Field F-189 could not be resolved. May be non-blocking if condition is not met for this project. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    },
+    {
+      "field_code": "F-195",
+      "name": "expansion_joint_location",
+      "output_classes": "GA, Shop",
+      "note": "Field F-195 could not be resolved. May be non-blocking if condition is not met for this project. Missing source dependency. Engineer review required.",
+      "remediation": "Re-run extraction from MBS/STAAD/ETABS source files; verify file is complete"
+    }
+  ],
+  "optional_missing": [
+    {
+      "field_code": "F-004",
+      "name": "project_address",
+      "output_classes": "Install",
+      "note": "Field F-004 could not be resolved. Non-blocking: optional field. Missing source dependency. Engineer review required.",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-005",
+      "name": "project_engineer_name",
+      "output_classes": "All",
+      "note": "Field F-005 could not be resolved. Non-blocking: optional field. Missing source dependency. Engineer review required.",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-011",
+      "name": "client_contact_person",
+      "output_classes": "Install",
+      "note": "Field F-011 could not be resolved. Non-blocking: optional field. Missing source dependency. Engineer review required.",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-012",
+      "name": "client_phone",
+      "output_classes": "Install",
+      "note": "Field F-012 could not be resolved. Non-blocking: optional field. Missing source dependency. Engineer review required.",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-022",
+      "name": "drawing_file_location",
+      "output_classes": "All",
+      "note": "Field F-022 could not be resolved. Non-blocking: optional field. Missing source dependency. Engineer review required.",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-038",
+      "name": "revision_display_style",
+      "output_classes": "All",
+      "note": "Field F-038 could not be resolved. Non-blocking: optional field. Missing source dependency. Engineer review required.",
+      "remediation": "Select correct drawing template and title-block configuration"
+    },
+    {
+      "field_code": "F-050",
+      "name": "number_of_bays_y",
+      "output_classes": "GA",
+      "note": "Field F-050 could not be resolved. Derived field \u2014 dependency fields may be missing. Derived type: calculated. Calculation failed: F-040 (bay_spacing_y) not available Missing source dependency. Engineer review required.",
+      "remediation": "Run derived-field calculation pass; check dependency fields are populated"
+    },
+    {
+      "field_code": "F-053",
+      "name": "level_description",
+      "output_classes": "GA",
+      "note": "Field F-053 could not be resolved. Non-blocking: optional field. Missing source dependency. Engineer review required.",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-068",
+      "name": "member_full_mark",
+      "output_classes": "Shop, Ship",
+      "note": "Field F-068 could not be resolved. Derived field \u2014 dependency fields may be missing. Derived type: calculated. Calculation failed: F-067 (member_mark) not available Missing source dependency. Engineer review required.",
+      "remediation": "Run derived-field calculation pass; check dependency fields are populated"
+    },
+    {
+      "field_code": "F-070",
+      "name": "member_weight_per_unit_length",
+      "output_classes": "Shop, Ship",
+      "note": "Field F-070 could not be resolved. Derived field \u2014 dependency fields may be missing. Derived type: lookup. Calculation failed: F-063 (member_section_size) not available Missing source dependency. Engineer review required.",
+      "remediation": "Run derived-field calculation pass; check dependency fields are populated"
+    },
+    {
+      "field_code": "F-071",
+      "name": "member_weight_total",
+      "output_classes": "Ship",
+      "note": "Field F-071 could not be resolved. Derived field \u2014 dependency fields may be missing. Derived type: calculated. Calculation failed: Missing: F-070=None, F-066=None, F-069=None Missing source dependency. Engineer review required.",
+      "remediation": "Run derived-field calculation pass; check dependency fields are populated"
+    },
+    {
+      "field_code": "F-096",
+      "name": "sheeting_zone_area",
+      "output_classes": "Sheet",
+      "note": "Field F-096 could not be resolved. Derived field \u2014 dependency fields may be missing. Derived type: calculated. Calculation failed: F-045 or F-046 not available Missing source dependency. Engineer review required.",
+      "remediation": "Run derived-field calculation pass; check dependency fields are populated"
+    },
+    {
+      "field_code": "F-103",
+      "name": "member_mark_auto_generated",
+      "output_classes": "Shop",
+      "note": "Field F-103 could not be resolved. Derived field \u2014 dependency fields may be missing. Derived type: auto-generated. Calculation failed: F-067 (member_mark) not available Missing source dependency. Engineer review required.",
+      "remediation": "Run derived-field calculation pass; check dependency fields are populated"
+    },
+    {
+      "field_code": "F-106",
+      "name": "hole_diameter",
+      "output_classes": "Shop",
+      "note": "Field F-106 could not be resolved. Derived field \u2014 dependency fields may be missing. Derived type: calculated. Calculation failed: F-081 (bolt_diameter) not available Missing source dependency. Engineer review required.",
+      "remediation": "Run derived-field calculation pass; check dependency fields are populated"
+    },
+    {
+      "field_code": "F-110",
+      "name": "bundle_total_weight",
+      "output_classes": "Ship",
+      "note": "Field F-110 could not be resolved. Derived field \u2014 dependency fields may be missing. Derived type: calculated. Calculation failed: F-071 (member_weight_total) not available Missing source dependency. Engineer review required.",
+      "remediation": "Run derived-field calculation pass; check dependency fields are populated"
+    },
+    {
+      "field_code": "F-113",
+      "name": "bundle_truck_load",
+      "output_classes": "Ship",
+      "note": "Field F-113 could not be resolved. Non-blocking: optional field. Missing source dependency. Engineer review required.",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-117",
+      "name": "assembly_weight",
+      "output_classes": "Install",
+      "note": "Field F-117 could not be resolved. Derived field \u2014 dependency fields may be missing. Derived type: calculated. Calculation failed: F-071 (member_weight_total) not available Missing source dependency. Engineer review required.",
+      "remediation": "Run derived-field calculation pass; check dependency fields are populated"
+    },
+    {
+      "field_code": "F-120",
+      "name": "erection_setup_time",
+      "output_classes": "Install",
+      "note": "Field F-120 could not be resolved. Non-blocking: optional field. Missing source dependency. Engineer review required.",
+      "remediation": "Engineer manual input required via Review API"
+    },
+    {
+      "field_code": "F-153",
+      "name": "dimension_text_height",
+      "output_classes": "All",
+      "note": "Field F-153 could not be resolved. Non-blocking: optional field. Missing source dependency. Engineer review required.",
+      "remediation": "Select correct drawing template and title-block configuration"
+    },
+    {
+      "field_code": "F-164",
+      "name": "connection_bolt_pitch",
+      "output_classes": "Shop",
+      "note": "Field F-164 could not be resolved. Derived field \u2014 dependency fields may be missing. Derived type: calculated. Calculation failed: Neither gauge distance nor bolt spacing available Missing source dependency. Engineer review required.",
+      "remediation": "Run derived-field calculation pass; check dependency fields are populated"
+    },
+    {
+      "field_code": "F-169",
+      "name": "bolt_group_eccentricity",
+      "output_classes": "AB, Shop",
+      "note": "Field F-169 could not be resolved. Derived field \u2014 dependency fields may be missing. Derived type: calculated. Calculation failed: Missing bolt spacing or quantity Missing source dependency. Engineer review required.",
+      "remediation": "Run derived-field calculation pass; check dependency fields are populated"
+    },
+    {
+      "field_code": "F-175",
+      "name": "bay_sum_check_x",
+      "output_classes": "GA, AB",
+      "note": "Field F-175 could not be resolved. Derived field \u2014 dependency fields may be missing. Derived type: calculated. Calculation failed: Could not parse bay spacings: could not convert string to float: '7.660 ! Sidewall bay spacing (m)' Missing source dependency. Engineer review required.",
+      "remediation": "Run derived-field calculation pass; check dependency fields are populated"
+    },
+    {
+      "field_code": "F-182",
+      "name": "crane_minimum_clearance",
+      "output_classes": "GA",
+      "note": "Field F-182 could not be resolved. Derived field \u2014 dependency fields may be missing. Derived type: calculated. Calculation failed: Missing F-057 or F-128 for crane clearance Missing source dependency. Engineer review required.",
+      "remediation": "Run derived-field calculation pass; check dependency fields are populated"
+    },
+    {
+      "field_code": "F-190",
+      "name": "buildup_weight_per_metre",
+      "output_classes": "Shop, Ship",
+      "note": "Field F-190 could not be resolved. Derived field \u2014 dependency fields may be missing. Derived type: calculated. Calculation failed: One or more built-up section dimensions (F-184..F-189) not available Missing source dependency. Engineer review required.",
+      "remediation": "Run derived-field calculation pass; check dependency fields are populated"
+    },
+    {
+      "field_code": "F-196",
+      "name": "sheeting_panel_run_length",
+      "output_classes": "Sheet",
+      "note": "Field F-196 could not be resolved. Derived field \u2014 dependency fields may be missing. Derived type: calculated. Calculation failed: F-059 (roof_span_length) not available Missing source dependency. Engineer review required.",
+      "remediation": "Run derived-field calculation pass; check dependency fields are populated"
+    }
+  ]
+}

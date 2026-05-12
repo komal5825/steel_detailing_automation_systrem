@@ -19,7 +19,7 @@ from uuid import UUID
 
 from sqlalchemy.orm import Session
 
-from app.agents.phase2.output_utils import write_processed_json
+from app.agents.phase2.output_utils import write_json_output, write_processed_json
 from app.agents.support.checkpoint import CheckpointManager
 from app.agents.support.fallback import FallbackManager
 from app.db.crud.stages import update_stage_result
@@ -27,6 +27,12 @@ from app.db.crud.validation import log_audit_event, save_validation_items
 from app.db.models import StageStatus
 from app.db.session import SessionLocal
 from app.utils.audit_logger import get_logger
+from app.utils.field_completion_engine import (
+    FieldCompletionEngine,
+    build_extraction_readiness_report,
+    build_fallback_invocation_log,
+    build_missing_field_report,
+)
 from app.utils.master_db import (
     fetch_ab_required_field_codes,
     fetch_ga_required_field_codes,
@@ -182,7 +188,34 @@ def _check_completeness(project_id: UUID, db: Session) -> dict:
     is_complete = len(unique_blockers) == 0
     gate_status = "PASS" if is_complete else "FAIL"
 
-    # ---- 8. Write completeness_matrix.json to Processed/ ----
+    # ---- 8. Full 196-field completion engine (hard-stop gate) ----
+    completion_report = FieldCompletionEngine(resolved_map, db, project_id).run()
+
+    missing_field_report = build_missing_field_report(completion_report)
+    fallback_log = build_fallback_invocation_log(completion_report)
+    readiness_report = build_extraction_readiness_report(completion_report)
+
+    field_completion_dict = completion_report.to_dict()
+    write_processed_json(project_id, "field_completion_matrix.json", field_completion_dict)
+    write_processed_json(project_id, "missing_field_report.json", missing_field_report)
+    write_processed_json(project_id, "fallback_invocation_log.json", fallback_log)
+    write_processed_json(project_id, "extraction_readiness_report.json", readiness_report)
+    write_json_output(project_id, "p2_02", "field_completion_matrix.json", field_completion_dict)
+    write_json_output(project_id, "p2_02", "missing_field_report.json", missing_field_report)
+    write_json_output(project_id, "p2_02", "fallback_invocation_log.json", fallback_log)
+    write_json_output(project_id, "p2_02", "extraction_readiness_report.json", readiness_report)
+
+    logger.info(
+        "Field completion (all 196): extracted=%d calculated=%d fallback=%d failed=%d | "
+        "invariant=%s",
+        completion_report.extracted_count,
+        completion_report.calculated_count,
+        completion_report.fallback_count,
+        completion_report.failed_count,
+        completion_report.invariant_holds,
+    )
+
+    # ---- 9. Write completeness_matrix.json to Processed/ ----
     matrix_payload: dict = {
         "project_id": str(project_id),
         "ab_readiness": ab_readiness,
@@ -202,10 +235,12 @@ def _check_completeness(project_id: UUID, db: Session) -> dict:
         "human_review_required": fallback_report.unresolved_human_fields,
         "gate_status": gate_status,
         "overall": "PASS" if is_complete else "BLOCKED",
+        "field_completion_summary": completion_report.summary_table(),
     }
     write_processed_json(project_id, "completeness_matrix.json", matrix_payload)
+    # Agent-dir copy written later (after result is built) to include full result context
 
-    # ---- 9. Hard-gate checkpoint ----
+    # ---- 10. Hard-gate checkpoint ----
     _CHECKPOINT_MGR.record(
         db,
         project_id=project_id,
@@ -217,10 +252,40 @@ def _check_completeness(project_id: UUID, db: Session) -> dict:
             "ga_missing": ga_still_missing,
             "fallback_resolved_count": len(fallback_resolved_set),
             "non_blocking_warnings_count": len(non_blocking_warnings),
+            "total_fields_processed": completion_report.total_fields,
+            "extracted": completion_report.extracted_count,
+            "calculated": completion_report.calculated_count,
+            "fallback": completion_report.fallback_count,
+            "failed": completion_report.failed_count,
+            "invariant_holds": completion_report.invariant_holds,
         },
     )
 
-    # ---- 10. Stage result + audit ----
+    # ---- 11. Stage result + audit ----
+    failed_ids = completion_report.failed_field_ids()
+    p2_02_warnings = []
+    if failed_ids:
+        p2_02_warnings.append({
+            "status": "Warning",
+            "agent": "P2-02",
+            "title": "Unresolved Fields Detected",
+            "issue": (
+                f"{len(failed_ids)} field(s) could not be resolved from source files, "
+                f"derivation, or fallback defaults"
+            ),
+            "affected_fields": failed_ids,
+            "root_cause": (
+                "Fields not extracted from source files and no system default or fallback rule "
+                "available. These may be optional/conditional or require manual entry."
+            ),
+            "recommended_fix": (
+                "Provide missing values via the Field Review panel, or upload a more complete "
+                "source file. Download missing_field_report.json for per-field remediation guidance."
+            ),
+            "can_continue": is_complete,
+            "severity": "MINOR" if is_complete else "CRITICAL",
+        })
+
     result = {
         "project_id": str(project_id),
         "ab_readiness": ab_readiness,
@@ -231,11 +296,36 @@ def _check_completeness(project_id: UUID, db: Session) -> dict:
         "human_review_required": fallback_report.unresolved_human_fields,
         "is_complete": is_complete,
         "overall": "PASS" if is_complete else "BLOCKED",
+        "field_completion": {
+            "Extracted":  completion_report.extracted_count,
+            "Calculated": completion_report.calculated_count,
+            "Fallback":   completion_report.fallback_count,
+            "Failed":     completion_report.failed_count,
+            "Total":      completion_report.total_fields,
+        },
+        "hard_stop_satisfied": completion_report.invariant_holds,
+        "failed_field_ids": failed_ids,
+        "warnings": p2_02_warnings,
+        "warnings_count": len(p2_02_warnings),
         "main_output": "reports/p2-02_summary.json",
+        "outputs": {
+            "field_completion_matrix":    "reports/field_completion_matrix.json",
+            "missing_field_report":       "reports/missing_field_report.json",
+            "fallback_invocation_log":    "reports/fallback_invocation_log.json",
+            "extraction_readiness_report":"reports/extraction_readiness_report.json",
+        },
     }
     write_processed_json(project_id, "p2-02_summary.json", result)
+    write_json_output(project_id, "p2_02", "p2-02_summary.json", result)
+    write_json_output(project_id, "p2_02", "completeness_matrix.json", matrix_payload)
 
-    stage_status = StageStatus.PASSED if is_complete else StageStatus.BLOCKED
+    # PASS_WITH_WARNINGS when gate passes but some fields remain unresolved
+    if not is_complete:
+        stage_status = StageStatus.BLOCKED
+    elif failed_ids:
+        stage_status = StageStatus.PASS_WITH_WARNINGS
+    else:
+        stage_status = StageStatus.PASSED
     update_stage_result(
         db,
         project_id=project_id,

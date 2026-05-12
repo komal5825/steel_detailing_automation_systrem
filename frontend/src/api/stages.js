@@ -25,5 +25,6 @@ export const stagesApi = {
     client.post(`/stages/${uuid}/approve?stage_code=${stageCode}`),
 
   getCheckpoints: (uuid) => client.get(`/stages/${uuid}/checkpoints`),
-};
 
+  getExecutionLogs: (uuid, limit = 200) => client.get(`/stages/${uuid}/execution-logs?limit=${limit}`),
+};

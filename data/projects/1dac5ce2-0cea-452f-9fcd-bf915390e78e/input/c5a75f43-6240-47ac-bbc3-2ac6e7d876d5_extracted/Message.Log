@@ -1,0 +1,82 @@
+06/03/2025|05:36:24:503 PM|Warnings Exist in Rigid Frames|Ignore errors?|*WRN(RG-006) Rigid Frame 2 load width of 605.0000 < 6055.0000
+<NL>
+06/03/2025|05:38:47:438 PM|Warnings Exist in Building|Save changes to DesCtrl.in?|*WRN(FR-006) Wall 4, Framed Opening 4: Framed opening width (4000.0000) + offset (1750.0000) > bay width (5720.0000)
+<NL>*WRN(FR-012) Wall 4, Framed Opening 4: Offset (-30.0000) must be > 0.0 In SW Bay
+<NL>*WRN(PW-002) Wall 1, Partial Wall 1: Has an invalid End Bay: 5
+<NL>*WRN(PW-002) Wall 2, Partial Wall 2: Has an invalid End Bay: 7
+<NL>*WRN(PW-002) Wall 3, Partial Wall 3: Has an invalid End Bay: 5
+<NL>*WRN(PW-002) Wall 4, Partial Wall 4: Has an invalid End Bay: 7
+<NL>*WRN(WF-018) Wind Framing 1, Invalid diagonal bracing bay ids: 4
+<NL>*WRN(WF-018) Wind Framing 3, Invalid diagonal bracing bay ids: 4
+<NL>
+06/03/2025|05:59:40:233 PM|WARNING: Running C:\MBS\EXE2\XDtDwg.exe||
+<NL>  PROGRAM DETAILS:
+<NL>     *WRN(DT-130 ): Detail block not found - C72
+<NL>     *WRN(DT-130 ): Detail block not found - D77
+<NL>
+06/04/2025|10:40:13:051 AM|Warnings Exist in Runway Crane|Ignore errors?|*WRN(CR-008) Crane System 1, Runway Crane 1: End Location (0) invalid.  Must be in range (0, 35858)
+<NL>*WRN(CR-006) Crane System 1, Runway Crane 1: Must have Capacity > 0 (0)
+<NL>*WRN(CR-004) Crane System 1, Runway Crane 1: must have Bridge Weight > 0 (0)
+<NL>*WRN(CR-010) Crane System 1, Runway Crane 1: Must have HoistTrolleyWeight > 0 (0)
+<NL>*WRN(CR-015) Crane System 1, Runway Crane 1: must have Wheel Base Out > 0 (0)
+<NL>
+06/04/2025|10:42:09:168 AM|Warnings Exist in Runway Crane|Ignore errors?|*WRN(CR-008) Crane System 1, Runway Crane 1: End Location (0) invalid.  Must be in range (0, 35858)
+<NL>*WRN(CR-006) Crane System 1, Runway Crane 1: Must have Capacity > 0 (0)
+<NL>*WRN(CR-004) Crane System 1, Runway Crane 1: must have Bridge Weight > 0 (0)
+<NL>*WRN(CR-010) Crane System 1, Runway Crane 1: Must have HoistTrolleyWeight > 0 (0)
+<NL>*WRN(CR-015) Crane System 1, Runway Crane 1: must have Wheel Base Out > 0 (0)
+<NL>
+07/18/2025|03:24:20:647 PM|Warnings Exist in Building|Ignore errors?|*WRN(PW-002) Wall 1, Partial Wall 1: Has an invalid End Bay: 3
+<NL>*WRN(PW-002) Wall 3, Partial Wall 3: Has an invalid End Bay: 3
+<NL>
+07/18/2025|03:35:31:834 PM|CompDes.err||================================================================================
+<NL> C323-153            Program Warning Summary                18/JUL/2025  3:35pm
+<NL>================================================================================
+<NL>
+<NL> EXTENSIONS
+<NL> ----------
+<NL>     EXTENSION BEAM
+<NL>       Member
+<NL>        *WRN(BXM-203): Moment > Limit
+<NL>        *WRN(BXM-204): Axial + Moment > Limit
+<NL>        *WRN(BXM-206): Deflection > Limit
+<NL>        *WRN(BXM-211): KL/R > Limit
+<NL>       End Plate
+<NL>        *WRN(BXE-010): Plate Thickness < Required
+<NL>        *WRN(BXE-403): Bolt Diameter < Required
+<NL>        *WRN(BXE-407): Plate Thickness < Required
+<NL>        *WRN(BXE-413): Weld Size < Required
+<NL>
+07/23/2025|11:08:37:031 AM|Warnings Exist in Building|Ignore errors?|*WRN(CR-008) Crane System 1, Runway Crane 1: End Location (36290) invalid.  Must be in range (0, 36270)
+<NL>
+07/23/2025|11:12:38:343 AM|RUN TIME ERROR: Running C:\MBS\EXE2\XEwDes.exe||
+<NL>  (25)GIRT LOCATION:
+<NL>     *ERR(IO-110): Invalid input line
+<NL>          'Y'    8     2580.0   3580.0   4580.0   5580.0   6580.0  7
+<NL>
+07/23/2025|11:13:54:636 AM|WARNING: Running C:\MBS\EXE2\XEwDes.exe||
+<NL>  (19)COLUMN PART & ELEVATION:
+<NL>    W40Bb155
+<NL>     *WRN(DA-105): Member not found in database files
+<NL>
+07/23/2025|11:23:56:402 AM|WARNING: Running C:\MBS\EXE2\XDtDwg.exe||
+<NL>  PROGRAM DETAILS:
+<NL>     *WRN(DT-130 ): Detail block not found - D77
+<NL>
+08/06/2025|12:56:19:020 PM|Warnings Exist in Building|Ignore errors?|*WRN(PW-002) Wall 2, Partial Wall 2: Has an invalid End Bay: 6
+<NL>*WRN(PW-002) Wall 4, Partial Wall 4: Has an invalid End Bay: 6
+<NL>
+08/06/2025|12:56:23:722 PM|WARNING: Running C:\MBS\EXE2\XDesCtrl.exe||
+<NL>  (15)PARTIAL WALLS (NO LONGER USED):
+<NL>    Wall-2 Bay= 6
+<NL>     *WRN(PW-115): Invalid partial wall bay Id
+<NL>    Wall-4 Bay= 6
+<NL>     *WRN(PW-115): Invalid partial wall bay Id
+<NL>
+08/06/2025|01:09:14:794 PM|RUN TIME ERROR: Running C:\MBS\EXE2\XCompDes.exe||
+<NL>  CompDes.in
+<NL>    (17)EXTENSION BEAMS:
+<NL>     *ERR(IO-110 ): Invalid input line
+<NL>                1   1  'ATT_SUPP' 'H' 'W30b155'  'W'   '-' '-'   561
+<NL>
+08/07/2025|09:46:13:364 AM|WARNING: Running C:\MBS\EXE2\XDtDwg.exe||<NL>  PROGRAM DETAILS:<NL>     *WRN(DT-130 ): Detail block not found - D77<NL>

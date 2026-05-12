@@ -1,7 +1,6 @@
 """Collect raw state from all source-of-record SQLite tables for report generation."""
 from __future__ import annotations
 
-import json
 from datetime import datetime
 from typing import Optional
 from uuid import UUID
@@ -21,6 +20,18 @@ from app.db.models import (
     StageCheckpoint,
     ValidationResult,
 )
+
+
+def _field_description(field_code: str) -> str:
+    """Return the human-readable field name for a field code, or the code itself."""
+    try:
+        from app.utils.field_dictionary import get_field_dictionary
+        dictionary = get_field_dictionary()
+        by_code = getattr(dictionary, "_fields_by_code", {}) or {}
+        defn = by_code.get(field_code) or by_code.get(str(field_code).upper()) or by_code.get(str(field_code).lower())
+        return defn.standard_field_name if defn else field_code
+    except Exception:
+        return field_code
 
 BUILD_VERSION = "2.0"
 
@@ -173,7 +184,9 @@ def top_blockers(validations: list, limit: int = 10) -> list:
     blockers.sort(key=lambda v: (0 if v.severity == "CRITICAL" else 1, v.field_code))
     return [
         {
+            "field_id":    v.field_code,
             "field_code":  v.field_code,
+            "description": _field_description(v.field_code),
             "stage_code":  v.stage_code,
             "status":      v.status,
             "severity":    v.severity,
@@ -225,7 +238,13 @@ def next_day_critical_path(stages: list, validations: list) -> dict:
         if s.status.value in ("FAILED", "BLOCKED")
     ]
     critical_missing = [
-        {"field_code": v.field_code, "stage_code": v.stage_code, "note": v.note}
+        {
+            "field_id":    v.field_code,
+            "field_code":  v.field_code,
+            "description": _field_description(v.field_code),
+            "stage_code":  v.stage_code,
+            "note":        v.note,
+        }
         for v in validations
         if v.status == "MISSING" and v.severity == "CRITICAL"
     ]

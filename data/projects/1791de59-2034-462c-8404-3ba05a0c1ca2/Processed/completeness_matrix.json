@@ -1,0 +1,854 @@
+{
+  "project_id": "1791de59-2034-462c-8404-3ba05a0c1ca2",
+  "ab_readiness": {
+    "output": "AB",
+    "required_count": 72,
+    "present_count": 72,
+    "missing_count": 0,
+    "missing_codes": [],
+    "status": "READY",
+    "fields": {
+      "F-001": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "C323-153"
+      },
+      "F-002": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "Proposed Warehouse"
+      },
+      "F-006": {
+        "status": "SUSPICIOUS",
+        "source": "MBS",
+        "value": "METRIC"
+      },
+      "F-009": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "CLIENT"
+      },
+      "F-010": {
+        "status": "SUSPICIOUS",
+        "source": "MBS",
+        "value": "RECLA INTERNATIONAL PRIVATE LIMITED"
+      },
+      "F-013": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "DrawingSet"
+      },
+      "F-014": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "AB-001"
+      },
+      "F-015": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "Anchor Bolt Drawing"
+      },
+      "F-016": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "DXF"
+      },
+      "F-017": {
+        "status": "SUSPICIOUS",
+        "source": "MBS",
+        "value": "2025-08-07"
+      },
+      "F-019": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "0.85"
+      },
+      "F-020": {
+        "status": "SUSPICIOUS",
+        "source": "MBS",
+        "value": "DET"
+      },
+      "F-021": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "ab_drawing.dxf"
+      },
+      "F-023": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "SYSTEM"
+      },
+      "F-024": {
+        "status": "SUSPICIOUS",
+        "source": "MBS",
+        "value": "2025-08-07"
+      },
+      "F-025": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "1"
+      },
+      "F-026": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "8420.00"
+      },
+      "F-027": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "ANCHOR BOLT LAYOUT"
+      },
+      "F-028": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "A3"
+      },
+      "F-029": {
+        "status": "SUSPICIOUS",
+        "source": "MBS",
+        "value": "0.7"
+      },
+      "F-031": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "R0"
+      },
+      "F-032": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "2026-05-11"
+      },
+      "F-033": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "Issued for Approval"
+      },
+      "F-034": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "SYSTEM"
+      },
+      "F-035": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "PENDING"
+      },
+      "F-036": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "2026-05-11"
+      },
+      "F-037": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "IFC"
+      },
+      "F-039": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "6200.05990.06145.05700.06000.06250.0"
+      },
+      "F-040": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "11235.011235.0"
+      },
+      "F-041": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "1,2,3,4,5,6,7"
+      },
+      "F-042": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "C,B,A"
+      },
+      "F-043": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "0.0"
+      },
+      "F-044": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "0.0"
+      },
+      "F-048": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "FF"
+      },
+      "F-075": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "Bolted"
+      },
+      "F-078": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "4"
+      },
+      "F-080": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "200.00 x 704.81"
+      },
+      "F-081": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "20"
+      },
+      "F-082": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "8.8"
+      },
+      "F-083": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "4"
+      },
+      "F-084": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "75.00"
+      },
+      "F-085": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "50.80"
+      },
+      "F-086": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "150.00"
+      },
+      "F-087": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "83.00"
+      },
+      "F-088": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "Symmetric"
+      },
+      "F-089": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "m1"
+      },
+      "F-090": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "16.00"
+      },
+      "F-132": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "Pending"
+      },
+      "F-133": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "PENDING"
+      },
+      "F-134": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "3.0000"
+      },
+      "F-135": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "Y"
+      },
+      "F-136": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "Pending"
+      },
+      "F-137": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "2026-05-11T12:18:25.663485+00:00"
+      },
+      "F-138": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "P2-03"
+      },
+      "F-139": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "AnDwg.in"
+      },
+      "F-140": {
+        "status": "SUSPICIOUS",
+        "source": "MBS",
+        "value": "Equivalent Lateral Force, Section 12.8"
+      },
+      "F-141": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "85"
+      },
+      "F-142": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "1"
+      },
+      "F-143": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "Pending"
+      },
+      "F-144": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "COMPLETENESS_CHECK"
+      },
+      "F-145": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "N"
+      },
+      "F-147": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "S3"
+      },
+      "F-148": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "Pending"
+      },
+      "F-151": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "AB_STANDARD"
+      },
+      "F-152": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "STANDARD_TITLE_BLOCK"
+      },
+      "F-156": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "A3_BORDER"
+      },
+      "F-171": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "6"
+      },
+      "F-172": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "6200.0"
+      },
+      "F-191": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "AISC-US"
+      },
+      "F-192": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "83.00"
+      },
+      "F-193": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "50"
+      },
+      "F-194": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "StrongAxisParallelX"
+      }
+    }
+  },
+  "ga_readiness": {
+    "output": "GA",
+    "required_count": 78,
+    "present_count": 78,
+    "missing_count": 0,
+    "missing_codes": [],
+    "status": "READY",
+    "fields": {
+      "F-001": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "C323-153"
+      },
+      "F-002": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "Proposed Warehouse"
+      },
+      "F-003": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "Proposed Warehouse, PINE"
+      },
+      "F-006": {
+        "status": "SUSPICIOUS",
+        "source": "MBS",
+        "value": "METRIC"
+      },
+      "F-009": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "CLIENT"
+      },
+      "F-010": {
+        "status": "SUSPICIOUS",
+        "source": "MBS",
+        "value": "RECLA INTERNATIONAL PRIVATE LIMITED"
+      },
+      "F-013": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "DrawingSet"
+      },
+      "F-014": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "AB-001"
+      },
+      "F-015": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "Anchor Bolt Drawing"
+      },
+      "F-016": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "DXF"
+      },
+      "F-017": {
+        "status": "SUSPICIOUS",
+        "source": "MBS",
+        "value": "2025-08-07"
+      },
+      "F-019": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "0.85"
+      },
+      "F-020": {
+        "status": "SUSPICIOUS",
+        "source": "MBS",
+        "value": "DET"
+      },
+      "F-021": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "ab_drawing.dxf"
+      },
+      "F-023": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "SYSTEM"
+      },
+      "F-024": {
+        "status": "SUSPICIOUS",
+        "source": "MBS",
+        "value": "2025-08-07"
+      },
+      "F-025": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "1"
+      },
+      "F-026": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "8420.00"
+      },
+      "F-027": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "ANCHOR BOLT LAYOUT"
+      },
+      "F-028": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "A3"
+      },
+      "F-029": {
+        "status": "SUSPICIOUS",
+        "source": "MBS",
+        "value": "0.7"
+      },
+      "F-031": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "R0"
+      },
+      "F-032": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "2026-05-11"
+      },
+      "F-033": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "Issued for Approval"
+      },
+      "F-034": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "SYSTEM"
+      },
+      "F-035": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "PENDING"
+      },
+      "F-036": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "2026-05-11"
+      },
+      "F-037": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "IFC"
+      },
+      "F-039": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "6200.05990.06145.05700.06000.06250.0"
+      },
+      "F-040": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "11235.011235.0"
+      },
+      "F-041": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "1,2,3,4,5,6,7"
+      },
+      "F-042": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "C,B,A"
+      },
+      "F-043": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "0.0"
+      },
+      "F-044": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "0.0"
+      },
+      "F-045": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "36285.0"
+      },
+      "F-046": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "22470.0"
+      },
+      "F-047": {
+        "status": "SUSPICIOUS",
+        "source": "MBS",
+        "value": "8420.0"
+      },
+      "F-048": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "FF"
+      },
+      "F-051": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "0.0"
+      },
+      "F-052": {
+        "status": "SUSPICIOUS",
+        "source": "MBS",
+        "value": "GL"
+      },
+      "F-054": {
+        "status": "SUSPICIOUS",
+        "source": "MBS",
+        "value": "0.1000"
+      },
+      "F-055": {
+        "status": "SUSPICIOUS",
+        "source": "MBS",
+        "value": "0.1000"
+      },
+      "F-056": {
+        "status": "SUSPICIOUS",
+        "source": "MBS",
+        "value": "8420.0"
+      },
+      "F-057": {
+        "status": "SUSPICIOUS",
+        "source": "MBS",
+        "value": "9543.5"
+      },
+      "F-059": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "22470.0"
+      },
+      "F-060": {
+        "status": "SUSPICIOUS",
+        "source": "MBS",
+        "value": "Rigid Frame"
+      },
+      "F-061": {
+        "status": "SUSPICIOUS",
+        "source": "MBS",
+        "value": "1"
+      },
+      "F-063": {
+        "status": "SUSPICIOUS",
+        "source": "MBS",
+        "value": "-"
+      },
+      "F-064": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "Column"
+      },
+      "F-065": {
+        "status": "SUSPICIOUS",
+        "source": "MBS",
+        "value": "Fe345"
+      },
+      "F-067": {
+        "status": "SUSPICIOUS",
+        "source": "MBS",
+        "value": "-"
+      },
+      "F-072": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "C"
+      },
+      "F-121": {
+        "status": "SUSPICIOUS",
+        "source": "MBS",
+        "value": "250Z18"
+      },
+      "F-122": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "300.0"
+      },
+      "F-123": {
+        "status": "SUSPICIOUS",
+        "source": "MBS",
+        "value": "5750.0"
+      },
+      "F-132": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "Pending"
+      },
+      "F-133": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "PENDING"
+      },
+      "F-134": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "3.0000"
+      },
+      "F-135": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "Y"
+      },
+      "F-136": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "Pending"
+      },
+      "F-137": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "2026-05-11T12:18:25.663485+00:00"
+      },
+      "F-138": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "P2-03"
+      },
+      "F-139": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "AnDwg.in"
+      },
+      "F-140": {
+        "status": "SUSPICIOUS",
+        "source": "MBS",
+        "value": "Equivalent Lateral Force, Section 12.8"
+      },
+      "F-141": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "85"
+      },
+      "F-142": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "1"
+      },
+      "F-143": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "Pending"
+      },
+      "F-144": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "COMPLETENESS_CHECK"
+      },
+      "F-145": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "N"
+      },
+      "F-147": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "S3"
+      },
+      "F-148": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "Pending"
+      },
+      "F-151": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "AB_STANDARD"
+      },
+      "F-152": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "STANDARD_TITLE_BLOCK"
+      },
+      "F-156": {
+        "status": "PRESENT",
+        "source": "SYSTEM_DEFAULT",
+        "value": "A3_BORDER"
+      },
+      "F-171": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "6"
+      },
+      "F-172": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "6200.0"
+      },
+      "F-173": {
+        "status": "SUSPICIOUS",
+        "source": "MBS",
+        "value": "H"
+      },
+      "F-191": {
+        "status": "PRESENT",
+        "source": "MBS",
+        "value": "AISC-US"
+      }
+    }
+  },
+  "blocking_issues": [],
+  "non_blocking_warnings": [
+    {
+      "field_code": "PROTA-DXF-ENTITY-COUNT",
+      "note": "Non-mandatory conflict auto-resolved via HIGHEST_PRIORITY. Candidates: [{'value': '24', 'source': 'DXF', 'confidence': 90}, {'value': '31', 'source': 'DXF', 'confidence': 90}, {'value': '33', 'source': 'DXF', 'confidence': 90}, {'value': '121', 'source': 'DXF', 'confidence': 90}, {'value': '178', 'source': 'DXF', 'confidence': 90}, {'value': '109', 'source': 'DXF', 'confidence': 90}, {'value': '109', 'source': 'DXF', 'confidence': 90}, {'value': '81', 'source': 'DXF', 'confidence': 90}, {'value': '86', 'source': 'DXF', 'confidence': 90}, {'value': '95', 'source': 'DXF', 'confidence': 90}, {'value': '98', 'source': 'DXF', 'confidence': 90}, {'value': '40', 'source': 'DXF', 'confidence': 90}, {'value': '872', 'source': 'DXF', 'confidence': 90}, {'value': '12', 'source': 'DXF', 'confidence': 90}, {'value': '184', 'source': 'DXF', 'confidence': 90}, {'value': '163', 'source': 'DXF', 'confidence': 90}, {'value': '776', 'source': 'DXF', 'confidence': 90}, {'value': '1192', 'source': 'DXF', 'confidence': 90}, {'value': '198', 'source': 'DXF', 'confidence': 90}, {'value': '85', 'source': 'DXF', 'confidence': 90}, {'value': '85', 'source': 'DXF', 'confidence': 90}, {'value': '120', 'source': 'DXF', 'confidence': 90}, {'value': '145', 'source': 'DXF', 'confidence': 90}, {'value': '1', 'source': 'DXF', 'confidence': 90}, {'value': '35', 'source': 'DXF', 'confidence': 90}, {'value': '37', 'source': 'DXF', 'confidence': 90}, {'value': '41', 'source': 'DXF', 'confidence': 90}, {'value': '37', 'source': 'DXF', 'confidence': 90}, {'value': '39', 'source': 'DXF', 'confidence': 90}, {'value': '39', 'source': 'DXF', 'confidence': 90}, {'value': '104', 'source': 'DXF', 'confidence': 90}, {'value': '79', 'source': 'DXF', 'confidence': 90}, {'value': '42', 'source': 'DXF', 'confidence': 90}, {'value': '39', 'source': 'DXF', 'confidence': 90}, {'value': '47', 'source': 'DXF', 'confidence': 90}, {'value': '46', 'source': 'DXF', 'confidence': 90}, {'value': '46', 'source': 'DXF', 'confidence': 90}, {'value': '45', 'source': 'DXF', 'confidence': 90}, {'value': '44', 'source': 'DXF', 'confidence': 90}, {'value': '44', 'source': 'DXF', 'confidence': 90}, {'value': '40', 'source': 'DXF', 'confidence': 90}, {'value': '39', 'source': 'DXF', 'confidence': 90}, {'value': '39', 'source': 'DXF', 'confidence': 90}, {'value': '41', 'source': 'DXF', 'confidence': 90}, {'value': '40', 'source': 'DXF', 'confidence': 90}, {'value': '38', 'source': 'DXF', 'confidence': 90}, {'value': '38', 'source': 'DXF', 'confidence': 90}, {'value': '24', 'source': 'DXF', 'confidence': 90}, {'value': '31', 'source': 'DXF', 'confidence': 90}, {'value': '33', 'source': 'DXF', 'confidence': 90}, {'value': '121', 'source': 'DXF', 'confidence': 90}, {'value': '178', 'source': 'DXF', 'confidence': 90}, {'value': '109', 'source': 'DXF', 'confidence': 90}, {'value': '109', 'source': 'DXF', 'confidence': 90}, {'value': '81', 'source': 'DXF', 'confidence': 90}, {'value': '86', 'source': 'DXF', 'confidence': 90}, {'value': '95', 'source': 'DXF', 'confidence': 90}, {'value': '98', 'source': 'DXF', 'confidence': 90}, {'value': '40', 'source': 'DXF', 'confidence': 90}, {'value': '872', 'source': 'DXF', 'confidence': 90}, {'value': '12', 'source': 'DXF', 'confidence': 90}, {'value': '184', 'source': 'DXF', 'confidence': 90}, {'value': '163', 'source': 'DXF', 'confidence': 90}, {'value': '776', 'source': 'DXF', 'confidence': 90}, {'value': '1192', 'source': 'DXF', 'confidence': 90}, {'value': '198', 'source': 'DXF', 'confidence': 90}, {'value': '85', 'source': 'DXF', 'confidence': 90}, {'value': '85', 'source': 'DXF', 'confidence': 90}, {'value': '120', 'source': 'DXF', 'confidence': 90}, {'value': '145', 'source': 'DXF', 'confidence': 90}, {'value': '1', 'source': 'DXF', 'confidence': 90}, {'value': '35', 'source': 'DXF', 'confidence': 90}, {'value': '37', 'source': 'DXF', 'confidence': 90}, {'value': '41', 'source': 'DXF', 'confidence': 90}, {'value': '37', 'source': 'DXF', 'confidence': 90}, {'value': '39', 'source': 'DXF', 'confidence': 90}, {'value': '39', 'source': 'DXF', 'confidence': 90}, {'value': '104', 'source': 'DXF', 'confidence': 90}, {'value': '79', 'source': 'DXF', 'confidence': 90}, {'value': '42', 'source': 'DXF', 'confidence': 90}, {'value': '39', 'source': 'DXF', 'confidence': 90}, {'value': '47', 'source': 'DXF', 'confidence': 90}, {'value': '46', 'source': 'DXF', 'confidence': 90}, {'value': '46', 'source': 'DXF', 'confidence': 90}, {'value': '45', 'source': 'DXF', 'confidence': 90}, {'value': '44', 'source': 'DXF', 'confidence': 90}, {'value': '44', 'source': 'DXF', 'confidence': 90}, {'value': '40', 'source': 'DXF', 'confidence': 90}, {'value': '39', 'source': 'DXF', 'confidence': 90}, {'value': '39', 'source': 'DXF', 'confidence': 90}, {'value': '41', 'source': 'DXF', 'confidence': 90}, {'value': '40', 'source': 'DXF', 'confidence': 90}, {'value': '38', 'source': 'DXF', 'confidence': 90}, {'value': '38', 'source': 'DXF', 'confidence': 90}, {'value': '24', 'source': 'DXF', 'confidence': 90}, {'value': '31', 'source': 'DXF', 'confidence': 90}, {'value': '33', 'source': 'DXF', 'confidence': 90}, {'value': '121', 'source': 'DXF', 'confidence': 90}, {'value': '178', 'source': 'DXF', 'confidence': 90}, {'value': '109', 'source': 'DXF', 'confidence': 90}, {'value': '109', 'source': 'DXF', 'confidence': 90}, {'value': '81', 'source': 'DXF', 'confidence': 90}, {'value': '86', 'source': 'DXF', 'confidence': 90}, {'value': '95', 'source': 'DXF', 'confidence': 90}, {'value': '98', 'source': 'DXF', 'confidence': 90}, {'value': '40', 'source': 'DXF', 'confidence': 90}, {'value': '872', 'source': 'DXF', 'confidence': 90}, {'value': '12', 'source': 'DXF', 'confidence': 90}, {'value': '184', 'source': 'DXF', 'confidence': 90}, {'value': '163', 'source': 'DXF', 'confidence': 90}, {'value': '776', 'source': 'DXF', 'confidence': 90}, {'value': '1192', 'source': 'DXF', 'confidence': 90}, {'value': '198', 'source': 'DXF', 'confidence': 90}, {'value': '85', 'source': 'DXF', 'confidence': 90}, {'value': '85', 'source': 'DXF', 'confidence': 90}, {'value': '120', 'source': 'DXF', 'confidence': 90}, {'value': '145', 'source': 'DXF', 'confidence': 90}, {'value': '1', 'source': 'DXF', 'confidence': 90}, {'value': '35', 'source': 'DXF', 'confidence': 90}, {'value': '37', 'source': 'DXF', 'confidence': 90}, {'value': '41', 'source': 'DXF', 'confidence': 90}, {'value': '37', 'source': 'DXF', 'confidence': 90}, {'value': '39', 'source': 'DXF', 'confidence': 90}, {'value': '39', 'source': 'DXF', 'confidence': 90}, {'value': '104', 'source': 'DXF', 'confidence': 90}, {'value': '79', 'source': 'DXF', 'confidence': 90}, {'value': '42', 'source': 'DXF', 'confidence': 90}, {'value': '39', 'source': 'DXF', 'confidence': 90}, {'value': '47', 'source': 'DXF', 'confidence': 90}, {'value': '46', 'source': 'DXF', 'confidence': 90}, {'value': '46', 'source': 'DXF', 'confidence': 90}, {'value': '45', 'source': 'DXF', 'confidence': 90}, {'value': '44', 'source': 'DXF', 'confidence': 90}, {'value': '44', 'source': 'DXF', 'confidence': 90}, {'value': '40', 'source': 'DXF', 'confidence': 90}, {'value': '39', 'source': 'DXF', 'confidence': 90}, {'value': '39', 'source': 'DXF', 'confidence': 90}, {'value': '41', 'source': 'DXF', 'confidence': 90}, {'value': '40', 'source': 'DXF', 'confidence': 90}, {'value': '38', 'source': 'DXF', 'confidence': 90}, {'value': '38', 'source': 'DXF', 'confidence': 90}, {'value': '24', 'source': 'DXF', 'confidence': 90}, {'value': '31', 'source': 'DXF', 'confidence': 90}, {'value': '33', 'source': 'DXF', 'confidence': 90}, {'value': '121', 'source': 'DXF', 'confidence': 90}, {'value': '178', 'source': 'DXF', 'confidence': 90}, {'value': '109', 'source': 'DXF', 'confidence': 90}, {'value': '109', 'source': 'DXF', 'confidence': 90}, {'value': '81', 'source': 'DXF', 'confidence': 90}, {'value': '86', 'source': 'DXF', 'confidence': 90}, {'value': '95', 'source': 'DXF', 'confidence': 90}, {'value': '98', 'source': 'DXF', 'confidence': 90}, {'value': '40', 'source': 'DXF', 'confidence': 90}, {'value': '872', 'source': 'DXF', 'confidence': 90}, {'value': '12', 'source': 'DXF', 'confidence': 90}, {'value': '184', 'source': 'DXF', 'confidence': 90}, {'value': '163', 'source': 'DXF', 'confidence': 90}, {'value': '776', 'source': 'DXF', 'confidence': 90}, {'value': '1192', 'source': 'DXF', 'confidence': 90}, {'value': '198', 'source': 'DXF', 'confidence': 90}, {'value': '85', 'source': 'DXF', 'confidence': 90}, {'value': '85', 'source': 'DXF', 'confidence': 90}, {'value': '120', 'source': 'DXF', 'confidence': 90}, {'value': '145', 'source': 'DXF', 'confidence': 90}, {'value': '1', 'source': 'DXF', 'confidence': 90}, {'value': '35', 'source': 'DXF', 'confidence': 90}, {'value': '37', 'source': 'DXF', 'confidence': 90}, {'value': '41', 'source': 'DXF', 'confidence': 90}, {'value': '37', 'source': 'DXF', 'confidence': 90}, {'value': '39', 'source': 'DXF', 'confidence': 90}, {'value': '39', 'source': 'DXF', 'confidence': 90}, {'value': '104', 'source': 'DXF', 'confidence': 90}, {'value': '79', 'source': 'DXF', 'confidence': 90}, {'value': '42', 'source': 'DXF', 'confidence': 90}, {'value': '39', 'source': 'DXF', 'confidence': 90}, {'value': '47', 'source': 'DXF', 'confidence': 90}, {'value': '46', 'source': 'DXF', 'confidence': 90}, {'value': '46', 'source': 'DXF', 'confidence': 90}, {'value': '45', 'source': 'DXF', 'confidence': 90}, {'value': '44', 'source': 'DXF', 'confidence': 90}, {'value': '44', 'source': 'DXF', 'confidence': 90}, {'value': '40', 'source': 'DXF', 'confidence': 90}, {'value': '39', 'source': 'DXF', 'confidence': 90}, {'value': '39', 'source': 'DXF', 'confidence': 90}, {'value': '41', 'source': 'DXF', 'confidence': 90}, {'value': '40', 'source': 'DXF', 'confidence': 90}, {'value': '38', 'source': 'DXF', 'confidence': 90}, {'value': '38', 'source': 'DXF', 'confidence': 90}, {'value': '24', 'source': 'DXF', 'confidence': 90}, {'value': '31', 'source': 'DXF', 'confidence': 90}, {'value': '33', 'source': 'DXF', 'confidence': 90}, {'value': '121', 'source': 'DXF', 'confidence': 90}, {'value': '178', 'source': 'DXF', 'confidence': 90}, {'value': '109', 'source': 'DXF', 'confidence': 90}, {'value': '109', 'source': 'DXF', 'confidence': 90}, {'value': '81', 'source': 'DXF', 'confidence': 90}, {'value': '86', 'source': 'DXF', 'confidence': 90}, {'value': '95', 'source': 'DXF', 'confidence': 90}, {'value': '98', 'source': 'DXF', 'confidence': 90}, {'value': '40', 'source': 'DXF', 'confidence': 90}, {'value': '872', 'source': 'DXF', 'confidence': 90}, {'value': '12', 'source': 'DXF', 'confidence': 90}, {'value': '184', 'source': 'DXF', 'confidence': 90}, {'value': '163', 'source': 'DXF', 'confidence': 90}, {'value': '776', 'source': 'DXF', 'confidence': 90}, {'value': '1192', 'source': 'DXF', 'confidence': 90}, {'value': '198', 'source': 'DXF', 'confidence': 90}, {'value': '85', 'source': 'DXF', 'confidence': 90}, {'value': '85', 'source': 'DXF', 'confidence': 90}, {'value': '120', 'source': 'DXF', 'confidence': 90}, {'value': '145', 'source': 'DXF', 'confidence': 90}, {'value': '1', 'source': 'DXF', 'confidence': 90}, {'value': '35', 'source': 'DXF', 'confidence': 90}, {'value': '37', 'source': 'DXF', 'confidence': 90}, {'value': '41', 'source': 'DXF', 'confidence': 90}, {'value': '37', 'source': 'DXF', 'confidence': 90}, {'value': '39', 'source': 'DXF', 'confidence': 90}, {'value': '39', 'source': 'DXF', 'confidence': 90}, {'value': '104', 'source': 'DXF', 'confidence': 90}, {'value': '79', 'source': 'DXF', 'confidence': 90}, {'value': '42', 'source': 'DXF', 'confidence': 90}, {'value': '39', 'source': 'DXF', 'confidence': 90}, {'value': '47', 'source': 'DXF', 'confidence': 90}, {'value': '46', 'source': 'DXF', 'confidence': 90}, {'value': '46', 'source': 'DXF', 'confidence': 90}, {'value': '45', 'source': 'DXF', 'confidence': 90}, {'value': '44', 'source': 'DXF', 'confidence': 90}, {'value': '44', 'source': 'DXF', 'confidence': 90}, {'value': '40', 'source': 'DXF', 'confidence': 90}, {'value': '39', 'source': 'DXF', 'confidence': 90}, {'value': '39', 'source': 'DXF', 'confidence': 90}, {'value': '41', 'source': 'DXF', 'confidence': 90}, {'value': '40', 'source': 'DXF', 'confidence': 90}, {'value': '38', 'source': 'DXF', 'confidence': 90}, {'value': '38', 'source': 'DXF', 'confidence': 90}, {'value': '24', 'source': 'DXF', 'confidence': 90}, {'value': '31', 'source': 'DXF', 'confidence': 90}, {'value': '33', 'source': 'DXF', 'confidence': 90}, {'value': '121', 'source': 'DXF', 'confidence': 90}, {'value': '178', 'source': 'DXF', 'confidence': 90}, {'value': '109', 'source': 'DXF', 'confidence': 90}, {'value': '109', 'source': 'DXF', 'confidence': 90}, {'value': '81', 'source': 'DXF', 'confidence': 90}, {'value': '86', 'source': 'DXF', 'confidence': 90}, {'value': '95', 'source': 'DXF', 'confidence': 90}, {'value': '98', 'source': 'DXF', 'confidence': 90}, {'value': '40', 'source': 'DXF', 'confidence': 90}, {'value': '872', 'source': 'DXF', 'confidence': 90}, {'value': '12', 'source': 'DXF', 'confidence': 90}, {'value': '184', 'source': 'DXF', 'confidence': 90}, {'value': '163', 'source': 'DXF', 'confidence': 90}, {'value': '776', 'source': 'DXF', 'confidence': 90}, {'value': '1192', 'source': 'DXF', 'confidence': 90}, {'value': '198', 'source': 'DXF', 'confidence': 90}, {'value': '85', 'source': 'DXF', 'confidence': 90}, {'value': '85', 'source': 'DXF', 'confidence': 90}, {'value': '120', 'source': 'DXF', 'confidence': 90}, {'value': '145', 'source': 'DXF', 'confidence': 90}, {'value': '1', 'source': 'DXF', 'confidence': 90}, {'value': '35', 'source': 'DXF', 'confidence': 90}, {'value': '37', 'source': 'DXF', 'confidence': 90}, {'value': '41', 'source': 'DXF', 'confidence': 90}, {'value': '37', 'source': 'DXF', 'confidence': 90}, {'value': '39', 'source': 'DXF', 'confidence': 90}, {'value': '39', 'source': 'DXF', 'confidence': 90}, {'value': '104', 'source': 'DXF', 'confidence': 90}, {'value': '79', 'source': 'DXF', 'confidence': 90}, {'value': '42', 'source': 'DXF', 'confidence': 90}, {'value': '39', 'source': 'DXF', 'confidence': 90}, {'value': '47', 'source': 'DXF', 'confidence': 90}, {'value': '46', 'source': 'DXF', 'confidence': 90}, {'value': '46', 'source': 'DXF', 'confidence': 90}, {'value': '45', 'source': 'DXF', 'confidence': 90}, {'value': '44', 'source': 'DXF', 'confidence': 90}, {'value': '44', 'source': 'DXF', 'confidence': 90}, {'value': '40', 'source': 'DXF', 'confidence': 90}, {'value': '39', 'source': 'DXF', 'confidence': 90}, {'value': '39', 'source': 'DXF', 'confidence': 90}, {'value': '41', 'source': 'DXF', 'confidence': 90}, {'value': '40', 'source': 'DXF', 'confidence': 90}, {'value': '38', 'source': 'DXF', 'confidence': 90}, {'value': '38', 'source': 'DXF', 'confidence': 90}]"
+    },
+    {
+      "field_code": "PROTA-DXF-LAYER-COUNT",
+      "note": "Non-mandatory conflict auto-resolved via HIGHEST_PRIORITY. Candidates: [{'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '6', 'source': 'DXF', 'confidence': 90}, {'value': '6', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '9', 'source': 'DXF', 'confidence': 90}, {'value': '10', 'source': 'DXF', 'confidence': 90}, {'value': '7', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '2', 'source': 'DXF', 'confidence': 90}, {'value': '9', 'source': 'DXF', 'confidence': 90}, {'value': '9', 'source': 'DXF', 'confidence': 90}, {'value': '7', 'source': 'DXF', 'confidence': 90}, {'value': '7', 'source': 'DXF', 'confidence': 90}, {'value': '10', 'source': 'DXF', 'confidence': 90}, {'value': '6', 'source': 'DXF', 'confidence': 90}, {'value': '6', 'source': 'DXF', 'confidence': 90}, {'value': '6', 'source': 'DXF', 'confidence': 90}, {'value': '8', 'source': 'DXF', 'confidence': 90}, {'value': '1', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '4', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '4', 'source': 'DXF', 'confidence': 90}, {'value': '4', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '6', 'source': 'DXF', 'confidence': 90}, {'value': '6', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '9', 'source': 'DXF', 'confidence': 90}, {'value': '10', 'source': 'DXF', 'confidence': 90}, {'value': '7', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '2', 'source': 'DXF', 'confidence': 90}, {'value': '9', 'source': 'DXF', 'confidence': 90}, {'value': '9', 'source': 'DXF', 'confidence': 90}, {'value': '7', 'source': 'DXF', 'confidence': 90}, {'value': '7', 'source': 'DXF', 'confidence': 90}, {'value': '10', 'source': 'DXF', 'confidence': 90}, {'value': '6', 'source': 'DXF', 'confidence': 90}, {'value': '6', 'source': 'DXF', 'confidence': 90}, {'value': '6', 'source': 'DXF', 'confidence': 90}, {'value': '8', 'source': 'DXF', 'confidence': 90}, {'value': '1', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '4', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '4', 'source': 'DXF', 'confidence': 90}, {'value': '4', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '6', 'source': 'DXF', 'confidence': 90}, {'value': '6', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '9', 'source': 'DXF', 'confidence': 90}, {'value': '10', 'source': 'DXF', 'confidence': 90}, {'value': '7', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '2', 'source': 'DXF', 'confidence': 90}, {'value': '9', 'source': 'DXF', 'confidence': 90}, {'value': '9', 'source': 'DXF', 'confidence': 90}, {'value': '7', 'source': 'DXF', 'confidence': 90}, {'value': '7', 'source': 'DXF', 'confidence': 90}, {'value': '10', 'source': 'DXF', 'confidence': 90}, {'value': '6', 'source': 'DXF', 'confidence': 90}, {'value': '6', 'source': 'DXF', 'confidence': 90}, {'value': '6', 'source': 'DXF', 'confidence': 90}, {'value': '8', 'source': 'DXF', 'confidence': 90}, {'value': '1', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '4', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '4', 'source': 'DXF', 'confidence': 90}, {'value': '4', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '6', 'source': 'DXF', 'confidence': 90}, {'value': '6', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '9', 'source': 'DXF', 'confidence': 90}, {'value': '10', 'source': 'DXF', 'confidence': 90}, {'value': '7', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '2', 'source': 'DXF', 'confidence': 90}, {'value': '9', 'source': 'DXF', 'confidence': 90}, {'value': '9', 'source': 'DXF', 'confidence': 90}, {'value': '7', 'source': 'DXF', 'confidence': 90}, {'value': '7', 'source': 'DXF', 'confidence': 90}, {'value': '10', 'source': 'DXF', 'confidence': 90}, {'value': '6', 'source': 'DXF', 'confidence': 90}, {'value': '6', 'source': 'DXF', 'confidence': 90}, {'value': '6', 'source': 'DXF', 'confidence': 90}, {'value': '8', 'source': 'DXF', 'confidence': 90}, {'value': '1', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '4', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '4', 'source': 'DXF', 'confidence': 90}, {'value': '4', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '6', 'source': 'DXF', 'confidence': 90}, {'value': '6', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '9', 'source': 'DXF', 'confidence': 90}, {'value': '10', 'source': 'DXF', 'confidence': 90}, {'value': '7', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '2', 'source': 'DXF', 'confidence': 90}, {'value': '9', 'source': 'DXF', 'confidence': 90}, {'value': '9', 'source': 'DXF', 'confidence': 90}, {'value': '7', 'source': 'DXF', 'confidence': 90}, {'value': '7', 'source': 'DXF', 'confidence': 90}, {'value': '10', 'source': 'DXF', 'confidence': 90}, {'value': '6', 'source': 'DXF', 'confidence': 90}, {'value': '6', 'source': 'DXF', 'confidence': 90}, {'value': '6', 'source': 'DXF', 'confidence': 90}, {'value': '8', 'source': 'DXF', 'confidence': 90}, {'value': '1', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '4', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '4', 'source': 'DXF', 'confidence': 90}, {'value': '4', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '6', 'source': 'DXF', 'confidence': 90}, {'value': '6', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '9', 'source': 'DXF', 'confidence': 90}, {'value': '10', 'source': 'DXF', 'confidence': 90}, {'value': '7', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '5', 'source': 'DXF', 'confidence': 90}, {'value': '2', 'source': 'DXF', 'confidence': 90}, {'value': '9', 'source': 'DXF', 'confidence': 90}, {'value': '9', 'source': 'DXF', 'confidence': 90}, {'value': '7', 'source': 'DXF', 'confidence': 90}, {'value': '7', 'source': 'DXF', 'confidence': 90}, {'value': '10', 'source': 'DXF', 'confidence': 90}, {'value': '6', 'source': 'DXF', 'confidence': 90}, {'value': '6', 'source': 'DXF', 'confidence': 90}, {'value': '6', 'source': 'DXF', 'confidence': 90}, {'value': '8', 'source': 'DXF', 'confidence': 90}, {'value': '1', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '4', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '4', 'source': 'DXF', 'confidence': 90}, {'value': '4', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}, {'value': '3', 'source': 'DXF', 'confidence': 90}]"
+    },
+    {
+      "field_code": "PROTA-DXF-LAYERS",
+      "note": "Non-mandatory conflict auto-resolved via HIGHEST_PRIORITY. Candidates: [{'value': '0, 1, 16, 2, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 16, 21, 23, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 21, 23, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 15, 21, 3, 7, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 2, 21, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 2, 21, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 2, 21, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 2, 3, 5, 6, 8, 9', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 2, 21, 3, 5, 6, 8, 9', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 3, 5, 8, 9', 'source': 'DXF', 'confidence': 85}, {'value': '0, 15, 7', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 29, 5, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 10, 16, 21, 3, 5, 8, 9', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 10, 16, 21, 3, 5, 8, 9', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 17, 3, 5, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 17, 3, 5, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 10, 2, 21, 22, 23, 3, 6, 7, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 2, 21, 4, 6, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 2, 21, 4, 6, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 16, 23, 3, 4, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 17, 21, 3, 7, 8', 'source': 'DXF', 'confidence': 85}, {'value': 'Default', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 22, 24', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 22, 24', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 2, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 16, 21, 23, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 21, 23, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 15, 21, 3, 7, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 2, 21, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 2, 21, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 2, 21, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 2, 3, 5, 6, 8, 9', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 2, 21, 3, 5, 6, 8, 9', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 3, 5, 8, 9', 'source': 'DXF', 'confidence': 85}, {'value': '0, 15, 7', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 29, 5, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 10, 16, 21, 3, 5, 8, 9', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 10, 16, 21, 3, 5, 8, 9', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 17, 3, 5, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 17, 3, 5, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 10, 2, 21, 22, 23, 3, 6, 7, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 2, 21, 4, 6, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 2, 21, 4, 6, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 16, 23, 3, 4, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 17, 21, 3, 7, 8', 'source': 'DXF', 'confidence': 85}, {'value': 'Default', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 22, 24', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 22, 24', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 2, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 16, 21, 23, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 21, 23, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 15, 21, 3, 7, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 2, 21, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 2, 21, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 2, 21, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 2, 3, 5, 6, 8, 9', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 2, 21, 3, 5, 6, 8, 9', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 3, 5, 8, 9', 'source': 'DXF', 'confidence': 85}, {'value': '0, 15, 7', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 29, 5, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 10, 16, 21, 3, 5, 8, 9', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 10, 16, 21, 3, 5, 8, 9', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 17, 3, 5, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 17, 3, 5, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 10, 2, 21, 22, 23, 3, 6, 7, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 2, 21, 4, 6, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 2, 21, 4, 6, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 16, 23, 3, 4, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 17, 21, 3, 7, 8', 'source': 'DXF', 'confidence': 85}, {'value': 'Default', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 22, 24', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 22, 24', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 2, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 16, 21, 23, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 21, 23, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 15, 21, 3, 7, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 2, 21, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 2, 21, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 2, 21, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 2, 3, 5, 6, 8, 9', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 2, 21, 3, 5, 6, 8, 9', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 3, 5, 8, 9', 'source': 'DXF', 'confidence': 85}, {'value': '0, 15, 7', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 29, 5, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 10, 16, 21, 3, 5, 8, 9', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 10, 16, 21, 3, 5, 8, 9', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 17, 3, 5, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 17, 3, 5, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 10, 2, 21, 22, 23, 3, 6, 7, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 2, 21, 4, 6, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 2, 21, 4, 6, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 16, 23, 3, 4, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 17, 21, 3, 7, 8', 'source': 'DXF', 'confidence': 85}, {'value': 'Default', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 22, 24', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 22, 24', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 2, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 16, 21, 23, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 21, 23, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 15, 21, 3, 7, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 2, 21, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 2, 21, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 2, 21, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 2, 3, 5, 6, 8, 9', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 2, 21, 3, 5, 6, 8, 9', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 3, 5, 8, 9', 'source': 'DXF', 'confidence': 85}, {'value': '0, 15, 7', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 29, 5, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 10, 16, 21, 3, 5, 8, 9', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 10, 16, 21, 3, 5, 8, 9', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 17, 3, 5, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 17, 3, 5, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 10, 2, 21, 22, 23, 3, 6, 7, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 2, 21, 4, 6, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 2, 21, 4, 6, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 16, 23, 3, 4, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 17, 21, 3, 7, 8', 'source': 'DXF', 'confidence': 85}, {'value': 'Default', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 22, 24', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 22, 24', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 2, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 16, 21, 23, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 21, 23, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 15, 21, 3, 7, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 2, 21, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 2, 21, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 2, 21, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 2, 3, 5, 6, 8, 9', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 2, 21, 3, 5, 6, 8, 9', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 3, 5, 8, 9', 'source': 'DXF', 'confidence': 85}, {'value': '0, 15, 7', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 29, 5, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 10, 16, 21, 3, 5, 8, 9', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 10, 16, 21, 3, 5, 8, 9', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 17, 3, 5, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 17, 3, 5, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 10, 2, 21, 22, 23, 3, 6, 7, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 2, 21, 4, 6, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 2, 21, 4, 6, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 16, 23, 3, 4, 8', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 16, 17, 21, 3, 7, 8', 'source': 'DXF', 'confidence': 85}, {'value': 'Default', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 22, 24', 'source': 'DXF', 'confidence': 85}, {'value': '0, 1, 22, 24', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}, {'value': '0, 14, 22', 'source': 'DXF', 'confidence': 85}]"
+    },
+    {
+      "field_code": "PROTA-DXF-LINE-COUNT",
+      "note": "Non-mandatory conflict auto-resolved via HIGHEST_PRIORITY. Candidates: [{'value': '16', 'source': 'DXF', 'confidence': 85}, {'value': '22', 'source': 'DXF', 'confidence': 85}, {'value': '24', 'source': 'DXF', 'confidence': 85}, {'value': '117', 'source': 'DXF', 'confidence': 85}, {'value': '91', 'source': 'DXF', 'confidence': 85}, {'value': '51', 'source': 'DXF', 'confidence': 85}, {'value': '51', 'source': 'DXF', 'confidence': 85}, {'value': '78', 'source': 'DXF', 'confidence': 85}, {'value': '82', 'source': 'DXF', 'confidence': 85}, {'value': '90', 'source': 'DXF', 'confidence': 85}, {'value': '93', 'source': 'DXF', 'confidence': 85}, {'value': '37', 'source': 'DXF', 'confidence': 85}, {'value': '829', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '152', 'source': 'DXF', 'confidence': 85}, {'value': '137', 'source': 'DXF', 'confidence': 85}, {'value': '699', 'source': 'DXF', 'confidence': 85}, {'value': '1113', 'source': 'DXF', 'confidence': 85}, {'value': '194', 'source': 'DXF', 'confidence': 85}, {'value': '76', 'source': 'DXF', 'confidence': 85}, {'value': '76', 'source': 'DXF', 'confidence': 85}, {'value': '85', 'source': 'DXF', 'confidence': 85}, {'value': '129', 'source': 'DXF', 'confidence': 85}, {'value': '15', 'source': 'DXF', 'confidence': 85}, {'value': '15', 'source': 'DXF', 'confidence': 85}, {'value': '15', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '71', 'source': 'DXF', 'confidence': 85}, {'value': '51', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '16', 'source': 'DXF', 'confidence': 85}, {'value': '22', 'source': 'DXF', 'confidence': 85}, {'value': '24', 'source': 'DXF', 'confidence': 85}, {'value': '117', 'source': 'DXF', 'confidence': 85}, {'value': '91', 'source': 'DXF', 'confidence': 85}, {'value': '51', 'source': 'DXF', 'confidence': 85}, {'value': '51', 'source': 'DXF', 'confidence': 85}, {'value': '78', 'source': 'DXF', 'confidence': 85}, {'value': '82', 'source': 'DXF', 'confidence': 85}, {'value': '90', 'source': 'DXF', 'confidence': 85}, {'value': '93', 'source': 'DXF', 'confidence': 85}, {'value': '37', 'source': 'DXF', 'confidence': 85}, {'value': '829', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '152', 'source': 'DXF', 'confidence': 85}, {'value': '137', 'source': 'DXF', 'confidence': 85}, {'value': '699', 'source': 'DXF', 'confidence': 85}, {'value': '1113', 'source': 'DXF', 'confidence': 85}, {'value': '194', 'source': 'DXF', 'confidence': 85}, {'value': '76', 'source': 'DXF', 'confidence': 85}, {'value': '76', 'source': 'DXF', 'confidence': 85}, {'value': '85', 'source': 'DXF', 'confidence': 85}, {'value': '129', 'source': 'DXF', 'confidence': 85}, {'value': '15', 'source': 'DXF', 'confidence': 85}, {'value': '15', 'source': 'DXF', 'confidence': 85}, {'value': '15', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '71', 'source': 'DXF', 'confidence': 85}, {'value': '51', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '16', 'source': 'DXF', 'confidence': 85}, {'value': '22', 'source': 'DXF', 'confidence': 85}, {'value': '24', 'source': 'DXF', 'confidence': 85}, {'value': '117', 'source': 'DXF', 'confidence': 85}, {'value': '91', 'source': 'DXF', 'confidence': 85}, {'value': '51', 'source': 'DXF', 'confidence': 85}, {'value': '51', 'source': 'DXF', 'confidence': 85}, {'value': '78', 'source': 'DXF', 'confidence': 85}, {'value': '82', 'source': 'DXF', 'confidence': 85}, {'value': '90', 'source': 'DXF', 'confidence': 85}, {'value': '93', 'source': 'DXF', 'confidence': 85}, {'value': '37', 'source': 'DXF', 'confidence': 85}, {'value': '829', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '152', 'source': 'DXF', 'confidence': 85}, {'value': '137', 'source': 'DXF', 'confidence': 85}, {'value': '699', 'source': 'DXF', 'confidence': 85}, {'value': '1113', 'source': 'DXF', 'confidence': 85}, {'value': '194', 'source': 'DXF', 'confidence': 85}, {'value': '76', 'source': 'DXF', 'confidence': 85}, {'value': '76', 'source': 'DXF', 'confidence': 85}, {'value': '85', 'source': 'DXF', 'confidence': 85}, {'value': '129', 'source': 'DXF', 'confidence': 85}, {'value': '15', 'source': 'DXF', 'confidence': 85}, {'value': '15', 'source': 'DXF', 'confidence': 85}, {'value': '15', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '71', 'source': 'DXF', 'confidence': 85}, {'value': '51', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '16', 'source': 'DXF', 'confidence': 85}, {'value': '22', 'source': 'DXF', 'confidence': 85}, {'value': '24', 'source': 'DXF', 'confidence': 85}, {'value': '117', 'source': 'DXF', 'confidence': 85}, {'value': '91', 'source': 'DXF', 'confidence': 85}, {'value': '51', 'source': 'DXF', 'confidence': 85}, {'value': '51', 'source': 'DXF', 'confidence': 85}, {'value': '78', 'source': 'DXF', 'confidence': 85}, {'value': '82', 'source': 'DXF', 'confidence': 85}, {'value': '90', 'source': 'DXF', 'confidence': 85}, {'value': '93', 'source': 'DXF', 'confidence': 85}, {'value': '37', 'source': 'DXF', 'confidence': 85}, {'value': '829', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '152', 'source': 'DXF', 'confidence': 85}, {'value': '137', 'source': 'DXF', 'confidence': 85}, {'value': '699', 'source': 'DXF', 'confidence': 85}, {'value': '1113', 'source': 'DXF', 'confidence': 85}, {'value': '194', 'source': 'DXF', 'confidence': 85}, {'value': '76', 'source': 'DXF', 'confidence': 85}, {'value': '76', 'source': 'DXF', 'confidence': 85}, {'value': '85', 'source': 'DXF', 'confidence': 85}, {'value': '129', 'source': 'DXF', 'confidence': 85}, {'value': '15', 'source': 'DXF', 'confidence': 85}, {'value': '15', 'source': 'DXF', 'confidence': 85}, {'value': '15', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '71', 'source': 'DXF', 'confidence': 85}, {'value': '51', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '16', 'source': 'DXF', 'confidence': 85}, {'value': '22', 'source': 'DXF', 'confidence': 85}, {'value': '24', 'source': 'DXF', 'confidence': 85}, {'value': '117', 'source': 'DXF', 'confidence': 85}, {'value': '91', 'source': 'DXF', 'confidence': 85}, {'value': '51', 'source': 'DXF', 'confidence': 85}, {'value': '51', 'source': 'DXF', 'confidence': 85}, {'value': '78', 'source': 'DXF', 'confidence': 85}, {'value': '82', 'source': 'DXF', 'confidence': 85}, {'value': '90', 'source': 'DXF', 'confidence': 85}, {'value': '93', 'source': 'DXF', 'confidence': 85}, {'value': '37', 'source': 'DXF', 'confidence': 85}, {'value': '829', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '152', 'source': 'DXF', 'confidence': 85}, {'value': '137', 'source': 'DXF', 'confidence': 85}, {'value': '699', 'source': 'DXF', 'confidence': 85}, {'value': '1113', 'source': 'DXF', 'confidence': 85}, {'value': '194', 'source': 'DXF', 'confidence': 85}, {'value': '76', 'source': 'DXF', 'confidence': 85}, {'value': '76', 'source': 'DXF', 'confidence': 85}, {'value': '85', 'source': 'DXF', 'confidence': 85}, {'value': '129', 'source': 'DXF', 'confidence': 85}, {'value': '15', 'source': 'DXF', 'confidence': 85}, {'value': '15', 'source': 'DXF', 'confidence': 85}, {'value': '15', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '71', 'source': 'DXF', 'confidence': 85}, {'value': '51', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '16', 'source': 'DXF', 'confidence': 85}, {'value': '22', 'source': 'DXF', 'confidence': 85}, {'value': '24', 'source': 'DXF', 'confidence': 85}, {'value': '117', 'source': 'DXF', 'confidence': 85}, {'value': '91', 'source': 'DXF', 'confidence': 85}, {'value': '51', 'source': 'DXF', 'confidence': 85}, {'value': '51', 'source': 'DXF', 'confidence': 85}, {'value': '78', 'source': 'DXF', 'confidence': 85}, {'value': '82', 'source': 'DXF', 'confidence': 85}, {'value': '90', 'source': 'DXF', 'confidence': 85}, {'value': '93', 'source': 'DXF', 'confidence': 85}, {'value': '37', 'source': 'DXF', 'confidence': 85}, {'value': '829', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '152', 'source': 'DXF', 'confidence': 85}, {'value': '137', 'source': 'DXF', 'confidence': 85}, {'value': '699', 'source': 'DXF', 'confidence': 85}, {'value': '1113', 'source': 'DXF', 'confidence': 85}, {'value': '194', 'source': 'DXF', 'confidence': 85}, {'value': '76', 'source': 'DXF', 'confidence': 85}, {'value': '76', 'source': 'DXF', 'confidence': 85}, {'value': '85', 'source': 'DXF', 'confidence': 85}, {'value': '129', 'source': 'DXF', 'confidence': 85}, {'value': '15', 'source': 'DXF', 'confidence': 85}, {'value': '15', 'source': 'DXF', 'confidence': 85}, {'value': '15', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '71', 'source': 'DXF', 'confidence': 85}, {'value': '51', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}, {'value': '17', 'source': 'DXF', 'confidence': 85}]"
+    },
+    {
+      "field_code": "PROTA-DXF-TEXT-COUNT",
+      "note": "Non-mandatory conflict auto-resolved via HIGHEST_PRIORITY. Candidates: [{'value': '8', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '4', 'source': 'DXF', 'confidence': 85}, {'value': '87', 'source': 'DXF', 'confidence': 85}, {'value': '58', 'source': 'DXF', 'confidence': 85}, {'value': '58', 'source': 'DXF', 'confidence': 85}, {'value': '3', 'source': 'DXF', 'confidence': 85}, {'value': '4', 'source': 'DXF', 'confidence': 85}, {'value': '5', 'source': 'DXF', 'confidence': 85}, {'value': '5', 'source': 'DXF', 'confidence': 85}, {'value': '3', 'source': 'DXF', 'confidence': 85}, {'value': '23', 'source': 'DXF', 'confidence': 85}, {'value': '3', 'source': 'DXF', 'confidence': 85}, {'value': '32', 'source': 'DXF', 'confidence': 85}, {'value': '26', 'source': 'DXF', 'confidence': 85}, {'value': '10', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '4', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '35', 'source': 'DXF', 'confidence': 85}, {'value': '16', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '8', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '4', 'source': 'DXF', 'confidence': 85}, {'value': '87', 'source': 'DXF', 'confidence': 85}, {'value': '58', 'source': 'DXF', 'confidence': 85}, {'value': '58', 'source': 'DXF', 'confidence': 85}, {'value': '3', 'source': 'DXF', 'confidence': 85}, {'value': '4', 'source': 'DXF', 'confidence': 85}, {'value': '5', 'source': 'DXF', 'confidence': 85}, {'value': '5', 'source': 'DXF', 'confidence': 85}, {'value': '3', 'source': 'DXF', 'confidence': 85}, {'value': '23', 'source': 'DXF', 'confidence': 85}, {'value': '3', 'source': 'DXF', 'confidence': 85}, {'value': '32', 'source': 'DXF', 'confidence': 85}, {'value': '26', 'source': 'DXF', 'confidence': 85}, {'value': '10', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '4', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '35', 'source': 'DXF', 'confidence': 85}, {'value': '16', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '8', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '4', 'source': 'DXF', 'confidence': 85}, {'value': '87', 'source': 'DXF', 'confidence': 85}, {'value': '58', 'source': 'DXF', 'confidence': 85}, {'value': '58', 'source': 'DXF', 'confidence': 85}, {'value': '3', 'source': 'DXF', 'confidence': 85}, {'value': '4', 'source': 'DXF', 'confidence': 85}, {'value': '5', 'source': 'DXF', 'confidence': 85}, {'value': '5', 'source': 'DXF', 'confidence': 85}, {'value': '3', 'source': 'DXF', 'confidence': 85}, {'value': '23', 'source': 'DXF', 'confidence': 85}, {'value': '3', 'source': 'DXF', 'confidence': 85}, {'value': '32', 'source': 'DXF', 'confidence': 85}, {'value': '26', 'source': 'DXF', 'confidence': 85}, {'value': '10', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '4', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '35', 'source': 'DXF', 'confidence': 85}, {'value': '16', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '8', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '4', 'source': 'DXF', 'confidence': 85}, {'value': '87', 'source': 'DXF', 'confidence': 85}, {'value': '58', 'source': 'DXF', 'confidence': 85}, {'value': '58', 'source': 'DXF', 'confidence': 85}, {'value': '3', 'source': 'DXF', 'confidence': 85}, {'value': '4', 'source': 'DXF', 'confidence': 85}, {'value': '5', 'source': 'DXF', 'confidence': 85}, {'value': '5', 'source': 'DXF', 'confidence': 85}, {'value': '3', 'source': 'DXF', 'confidence': 85}, {'value': '23', 'source': 'DXF', 'confidence': 85}, {'value': '3', 'source': 'DXF', 'confidence': 85}, {'value': '32', 'source': 'DXF', 'confidence': 85}, {'value': '26', 'source': 'DXF', 'confidence': 85}, {'value': '10', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '4', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '35', 'source': 'DXF', 'confidence': 85}, {'value': '16', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '8', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '4', 'source': 'DXF', 'confidence': 85}, {'value': '87', 'source': 'DXF', 'confidence': 85}, {'value': '58', 'source': 'DXF', 'confidence': 85}, {'value': '58', 'source': 'DXF', 'confidence': 85}, {'value': '3', 'source': 'DXF', 'confidence': 85}, {'value': '4', 'source': 'DXF', 'confidence': 85}, {'value': '5', 'source': 'DXF', 'confidence': 85}, {'value': '5', 'source': 'DXF', 'confidence': 85}, {'value': '3', 'source': 'DXF', 'confidence': 85}, {'value': '23', 'source': 'DXF', 'confidence': 85}, {'value': '3', 'source': 'DXF', 'confidence': 85}, {'value': '32', 'source': 'DXF', 'confidence': 85}, {'value': '26', 'source': 'DXF', 'confidence': 85}, {'value': '10', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '4', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '35', 'source': 'DXF', 'confidence': 85}, {'value': '16', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '8', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '4', 'source': 'DXF', 'confidence': 85}, {'value': '87', 'source': 'DXF', 'confidence': 85}, {'value': '58', 'source': 'DXF', 'confidence': 85}, {'value': '58', 'source': 'DXF', 'confidence': 85}, {'value': '3', 'source': 'DXF', 'confidence': 85}, {'value': '4', 'source': 'DXF', 'confidence': 85}, {'value': '5', 'source': 'DXF', 'confidence': 85}, {'value': '5', 'source': 'DXF', 'confidence': 85}, {'value': '3', 'source': 'DXF', 'confidence': 85}, {'value': '23', 'source': 'DXF', 'confidence': 85}, {'value': '3', 'source': 'DXF', 'confidence': 85}, {'value': '32', 'source': 'DXF', 'confidence': 85}, {'value': '26', 'source': 'DXF', 'confidence': 85}, {'value': '10', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '4', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '9', 'source': 'DXF', 'confidence': 85}, {'value': '35', 'source': 'DXF', 'confidence': 85}, {'value': '16', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}, {'value': '19', 'source': 'DXF', 'confidence': 85}]"
+    },
+    {
+      "field_code": "F-062",
+      "note": "Non-mandatory conflict auto-resolved via HIGHEST_PRIORITY. Candidates: [{'value': 'B', 'source': 'MBS', 'confidence': 80}, {'value': '2.0', 'source': 'MBS', 'confidence': 80}, {'value': 'B', 'source': 'MBS', 'confidence': 80}, {'value': '2.0', 'source': 'MBS', 'confidence': 80}, {'value': 'B', 'source': 'MBS', 'confidence': 80}, {'value': '2.0', 'source': 'MBS', 'confidence': 80}, {'value': 'B', 'source': 'MBS', 'confidence': 80}, {'value': '2.0', 'source': 'MBS', 'confidence': 80}, {'value': 'B', 'source': 'MBS', 'confidence': 80}, {'value': '2.0', 'source': 'MBS', 'confidence': 80}, {'value': 'B', 'source': 'MBS', 'confidence': 80}, {'value': '2.0', 'source': 'MBS', 'confidence': 80}]"
+    },
+    {
+      "field_code": "RAW-MBS-IMPORT",
+      "note": "Non-mandatory conflict auto-resolved via HIGHEST_PRIORITY. Candidates: [{'value': 'Ie', 'source': 'MBS', 'confidence': 75}, {'value': 'I', 'source': 'MBS', 'confidence': 75}, {'value': 'Ie', 'source': 'MBS', 'confidence': 75}, {'value': 'I', 'source': 'MBS', 'confidence': 75}, {'value': 'Ie', 'source': 'MBS', 'confidence': 75}, {'value': 'I', 'source': 'MBS', 'confidence': 75}, {'value': 'Ie', 'source': 'MBS', 'confidence': 75}, {'value': 'I', 'source': 'MBS', 'confidence': 75}, {'value': 'Ie', 'source': 'MBS', 'confidence': 75}, {'value': 'I', 'source': 'MBS', 'confidence': 75}, {'value': 'Ie', 'source': 'MBS', 'confidence': 75}, {'value': 'I', 'source': 'MBS', 'confidence': 75}]"
+    },
+    {
+      "field_code": "F-079",
+      "note": "Non-mandatory conflict auto-resolved via HIGHEST_PRIORITY. Candidates: [{'value': 'W', 'source': 'MBS', 'confidence': 80}, {'value': '1.00', 'source': 'MBS', 'confidence': 80}, {'value': 'W', 'source': 'MBS', 'confidence': 80}, {'value': '1.00', 'source': 'MBS', 'confidence': 80}, {'value': 'W', 'source': 'MBS', 'confidence': 80}, {'value': '1.00', 'source': 'MBS', 'confidence': 80}, {'value': 'W', 'source': 'MBS', 'confidence': 80}, {'value': '1.00', 'source': 'MBS', 'confidence': 80}, {'value': 'W', 'source': 'MBS', 'confidence': 80}, {'value': '1.00', 'source': 'MBS', 'confidence': 80}, {'value': 'W', 'source': 'MBS', 'confidence': 80}, {'value': '1.00', 'source': 'MBS', 'confidence': 80}]"
+    },
+    {
+      "field_code": "RAW-MBS-COEFF1",
+      "note": "Non-mandatory conflict auto-resolved via HIGHEST_PRIORITY. Candidates: [{'value': '0.0320', 'source': 'MBS', 'confidence': 75}, {'value': '0.3293', 'source': 'MBS', 'confidence': 75}, {'value': '0.0320', 'source': 'MBS', 'confidence': 75}, {'value': '0.3293', 'source': 'MBS', 'confidence': 75}, {'value': '0.0320', 'source': 'MBS', 'confidence': 75}, {'value': '0.3293', 'source': 'MBS', 'confidence': 75}, {'value': '0.0320', 'source': 'MBS', 'confidence': 75}, {'value': '0.3293', 'source': 'MBS', 'confidence': 75}, {'value': '0.0320', 'source': 'MBS', 'confidence': 75}, {'value': '0.3293', 'source': 'MBS', 'confidence': 75}, {'value': '0.0320', 'source': 'MBS', 'confidence': 75}, {'value': '0.3293', 'source': 'MBS', 'confidence': 75}]"
+    },
+    {
+      "field_code": "RAW-MBS-COEFF2",
+      "note": "Non-mandatory conflict auto-resolved via HIGHEST_PRIORITY. Candidates: [{'value': '0.0245', 'source': 'MBS', 'confidence': 75}, {'value': '-0.2324', 'source': 'MBS', 'confidence': 75}, {'value': '0.0245', 'source': 'MBS', 'confidence': 75}, {'value': '-0.2324', 'source': 'MBS', 'confidence': 75}, {'value': '0.0245', 'source': 'MBS', 'confidence': 75}, {'value': '-0.2324', 'source': 'MBS', 'confidence': 75}, {'value': '0.0245', 'source': 'MBS', 'confidence': 75}, {'value': '-0.2324', 'source': 'MBS', 'confidence': 75}, {'value': '0.0245', 'source': 'MBS', 'confidence': 75}, {'value': '-0.2324', 'source': 'MBS', 'confidence': 75}, {'value': '0.0245', 'source': 'MBS', 'confidence': 75}, {'value': '-0.2324', 'source': 'MBS', 'confidence': 75}]"
+    },
+    {
+      "field_code": "RAW-MBS-COEFF3",
+      "note": "Non-mandatory conflict auto-resolved via HIGHEST_PRIORITY. Candidates: [{'value': '0.0213', 'source': 'MBS', 'confidence': 75}, {'value': '-0.3824', 'source': 'MBS', 'confidence': 75}, {'value': '0.0213', 'source': 'MBS', 'confidence': 75}, {'value': '-0.3824', 'source': 'MBS', 'confidence': 75}, {'value': '0.0213', 'source': 'MBS', 'confidence': 75}, {'value': '-0.3824', 'source': 'MBS', 'confidence': 75}, {'value': '0.0213', 'source': 'MBS', 'confidence': 75}, {'value': '-0.3824', 'source': 'MBS', 'confidence': 75}, {'value': '0.0213', 'source': 'MBS', 'confidence': 75}, {'value': '-0.3824', 'source': 'MBS', 'confidence': 75}, {'value': '0.0213', 'source': 'MBS', 'confidence': 75}, {'value': '-0.3824', 'source': 'MBS', 'confidence': 75}]"
+    }
+  ],
+  "human_review_required": [
+    "F-069",
+    "F-073",
+    "F-095",
+    "F-098",
+    "F-100",
+    "F-104",
+    "F-107",
+    "F-108",
+    "F-109",
+    "F-111",
+    "F-112",
+    "F-114",
+    "F-115",
+    "F-116",
+    "F-118",
+    "F-119",
+    "F-149",
+    "F-150",
+    "F-170"
+  ],
+  "gate_status": "PASS",
+  "overall": "PASS",
+  "field_completion_summary": {
+    "Field Status": {
+      "Extracted": 78,
+      "Calculated": 15,
+      "Fallback": 38,
+      "Failed": 65,
+      "Total": 196
+    },
+    "invariant_holds": true,
+    "hard_stop_satisfied": true
+  }
+}

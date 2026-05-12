@@ -1,0 +1,278 @@
+{
+  "total_fallback_applied": 39,
+  "entries": [
+    {
+      "field_code": "F-013",
+      "name": "document_type",
+      "value_applied": "DrawingSet",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-014",
+      "name": "document_code",
+      "value_applied": "AB-001",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-015",
+      "name": "document_title",
+      "value_applied": "Anchor Bolt Drawing",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-016",
+      "name": "document_file_format",
+      "value_applied": "DXF",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-019",
+      "name": "drawing_code",
+      "value_applied": "AB-001",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-021",
+      "name": "drawing_filename",
+      "value_applied": "ab_drawing.dxf",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-023",
+      "name": "drawing_created_by",
+      "value_applied": "SYSTEM",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-025",
+      "name": "sheet_sequence_number",
+      "value_applied": "1",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-027",
+      "name": "sheet_title",
+      "value_applied": "ANCHOR BOLT LAYOUT",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-031",
+      "name": "revision_code",
+      "value_applied": "R0",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-032",
+      "name": "revision_date",
+      "value_applied": "2026-05-12",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-033",
+      "name": "revision_description",
+      "value_applied": "Issued for Approval",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-034",
+      "name": "revision_initiated_by",
+      "value_applied": "SYSTEM",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-035",
+      "name": "approved_by",
+      "value_applied": "PENDING",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-036",
+      "name": "approval_date",
+      "value_applied": "2026-05-12",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-037",
+      "name": "document_release_status",
+      "value_applied": "IFC",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-132",
+      "name": "qc_check_status",
+      "value_applied": "Pending",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-133",
+      "name": "qc_checked_by",
+      "value_applied": "PENDING",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-135",
+      "name": "approval_required_flag",
+      "value_applied": "Y",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-136",
+      "name": "approval_status",
+      "value_applied": "Pending",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-137",
+      "name": "audit_timestamp",
+      "value_applied": "2026-05-12T12:32:35.404558+00:00",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-138",
+      "name": "created_by_agent",
+      "value_applied": "P2-03",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-139",
+      "name": "source_file_reference",
+      "value_applied": "AnDwg.in",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-140",
+      "name": "extraction_method",
+      "value_applied": "Parser",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-141",
+      "name": "extraction_confidence",
+      "value_applied": "85",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-142",
+      "name": "source_priority_used",
+      "value_applied": "1",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-143",
+      "name": "validation_result",
+      "value_applied": "Pending",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-144",
+      "name": "validation_rule_applied",
+      "value_applied": "COMPLETENESS_CHECK",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-145",
+      "name": "override_event_flag",
+      "value_applied": "N",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-147",
+      "name": "stage_gate_id",
+      "value_applied": "S3",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-148",
+      "name": "stage_gate_status",
+      "value_applied": "Pending",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-149",
+      "name": "ab_gate_passed",
+      "value_applied": "Pending",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-150",
+      "name": "ga_gate_passed",
+      "value_applied": "Pending",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-151",
+      "name": "template_family_ref",
+      "value_applied": "AB_STANDARD",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-152",
+      "name": "title_block_ref",
+      "value_applied": "STANDARD_TITLE_BLOCK",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-156",
+      "name": "drawing_border_ref",
+      "value_applied": "A3_BORDER",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-170",
+      "name": "connection_source_type",
+      "value_applied": "Bolted",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-193",
+      "name": "grout_pad_thickness",
+      "value_applied": "50",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    },
+    {
+      "field_code": "F-194",
+      "name": "column_base_axis_orientation",
+      "value_applied": "StrongAxisParallelX",
+      "source": "SYSTEM_DEFAULT",
+      "note": "Applied built-in system default or fallback rule"
+    }
+  ]
+}

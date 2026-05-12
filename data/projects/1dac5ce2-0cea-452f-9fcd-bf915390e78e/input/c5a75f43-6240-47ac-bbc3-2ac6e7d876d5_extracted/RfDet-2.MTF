@@ -1,0 +1,180 @@
+[RFDET-2:MEMBER1  ]
+Type=FRAME_RIGID
+Id=  1
+Mark=RF2-1       
+Wall=5
+LineId=2
+[RFDET-2:MEMBER2  ]
+Type=FRAME_RIGID
+Id=  2
+Mark=RF2-2       
+Wall=5
+LineId=2
+[RFDET-2:MEMBER3  ]
+Type=FRAME_RIGID
+Id=  3
+Mark=RF2-3       
+Wall=5
+LineId=2
+[RFDET-2:MEMBER4  ]
+Type=FRAME_RIGID
+Id=  4
+Mark=RF2-4       
+Wall=5
+LineId=2
+[RFDET-2:MEMBER5  ]
+Type=FRAME_RIGID
+Id=  5
+Mark=RF2-5       
+Wall=5
+LineId=2
+[RFDET-2:MEMBER6  ]
+Type=FRAME_RIGID
+Id=  6
+Mark=RF2-6       
+Wall=5
+LineId=2
+[RFDET-2:MEMBER7  ]
+Type=FRAME_RIGID
+Id=  7
+Mark=RF2-1       
+Wall=5
+LineId=3
+[RFDET-2:MEMBER8  ]
+Type=FRAME_RIGID
+Id=  8
+Mark=RF2-2       
+Wall=5
+LineId=3
+[RFDET-2:MEMBER9  ]
+Type=FRAME_RIGID
+Id=  9
+Mark=RF2-3       
+Wall=5
+LineId=3
+[RFDET-2:MEMBER10 ]
+Type=FRAME_RIGID
+Id= 10
+Mark=RF2-4       
+Wall=5
+LineId=3
+[RFDET-2:MEMBER11 ]
+Type=FRAME_RIGID
+Id= 11
+Mark=RF2-5       
+Wall=5
+LineId=3
+[RFDET-2:MEMBER12 ]
+Type=FRAME_RIGID
+Id= 12
+Mark=RF2-6       
+Wall=5
+LineId=3
+[RFDET-2:MEMBER13 ]
+Type=FRAME_RIGID
+Id= 13
+Mark=RF2-1       
+Wall=5
+LineId=4
+[RFDET-2:MEMBER14 ]
+Type=FRAME_RIGID
+Id= 14
+Mark=RF2-2       
+Wall=5
+LineId=4
+[RFDET-2:MEMBER15 ]
+Type=FRAME_RIGID
+Id= 15
+Mark=RF2-3       
+Wall=5
+LineId=4
+[RFDET-2:MEMBER16 ]
+Type=FRAME_RIGID
+Id= 16
+Mark=RF2-4       
+Wall=5
+LineId=4
+[RFDET-2:MEMBER17 ]
+Type=FRAME_RIGID
+Id= 17
+Mark=RF2-5       
+Wall=5
+LineId=4
+[RFDET-2:MEMBER18 ]
+Type=FRAME_RIGID
+Id= 18
+Mark=RF2-6       
+Wall=5
+LineId=4
+[RFDET-2:MEMBER19 ]
+Type=FRAME_RIGID
+Id= 19
+Mark=RF2-1       
+Wall=5
+LineId=5
+[RFDET-2:MEMBER20 ]
+Type=FRAME_RIGID
+Id= 20
+Mark=RF2-2       
+Wall=5
+LineId=5
+[RFDET-2:MEMBER21 ]
+Type=FRAME_RIGID
+Id= 21
+Mark=RF2-3       
+Wall=5
+LineId=5
+[RFDET-2:MEMBER22 ]
+Type=FRAME_RIGID
+Id= 22
+Mark=RF2-4       
+Wall=5
+LineId=5
+[RFDET-2:MEMBER23 ]
+Type=FRAME_RIGID
+Id= 23
+Mark=RF2-5       
+Wall=5
+LineId=5
+[RFDET-2:MEMBER24 ]
+Type=FRAME_RIGID
+Id= 24
+Mark=RF2-6       
+Wall=5
+LineId=5
+[RFDET-2:MEMBER25 ]
+Type=FRAME_RIGID
+Id= 25
+Mark=RF2-7       
+Wall=5
+LineId=6
+[RFDET-2:MEMBER26 ]
+Type=FRAME_RIGID
+Id= 26
+Mark=RF2-2       
+Wall=5
+LineId=6
+[RFDET-2:MEMBER27 ]
+Type=FRAME_RIGID
+Id= 27
+Mark=RF2-3       
+Wall=5
+LineId=6
+[RFDET-2:MEMBER28 ]
+Type=FRAME_RIGID
+Id= 28
+Mark=RF2-4       
+Wall=5
+LineId=6
+[RFDET-2:MEMBER29 ]
+Type=FRAME_RIGID
+Id= 29
+Mark=RF2-5       
+Wall=5
+LineId=6
+[RFDET-2:MEMBER30 ]
+Type=FRAME_RIGID
+Id= 30
+Mark=RF2-8       
+Wall=5
+LineId=6

@@ -15,7 +15,7 @@ import {
 import { clsx } from 'clsx';
 import { fmtFileSize } from '../../utils/formatters';
 
-const ACCEPTED_EXTS = ['.std', '.mbs', '.xml', '.xlsx', '.xls', '.dwg', '.dxf', '.pdf', '.zip', '.rar', '.docx', '.doc'];
+const ACCEPTED_EXTS = ['.std', '.mbs', '.in', '.inn', '.xml', '.xlsx', '.xls', '.dwg', '.dxf', '.pdf', '.zip', '.rar', '.docx', '.doc'];
 
 function FileKindIcon({ name }) {
   const ext = name.split('.').pop().toLowerCase();
@@ -24,7 +24,7 @@ function FileKindIcon({ name }) {
   if (['dwg', 'dxf'].includes(ext)) return <DraftingCompass className={className} />;
   if (ext === 'pdf') return <FileText className={className} />;
   if (['xlsx', 'xls'].includes(ext)) return <FileSpreadsheet className={className} />;
-  if (['std', 'mbs', 'xml'].includes(ext)) return <FileCode2 className={className} />;
+  if (['std', 'mbs', 'in', 'inn', 'xml'].includes(ext)) return <FileCode2 className={className} />;
   return <File className={className} />;
 }
 
@@ -121,7 +121,7 @@ export default function FileUploadPanel({ projectId, onUpload, onClearAll, onDel
         </div>
         <div className="text-center">
           <p className="text-xs font-semibold text-slate-900">Drop files or click to browse</p>
-          <p className="mt-1 text-xxs text-slate-500">STD, MBS, DWG, DXF, PDF, XLSX, DOCX, ZIP and RAR</p>
+          <p className="mt-1 text-xxs text-slate-500">STD, MBS, IN/INN, DWG, DXF, PDF, XLSX, DOCX, ZIP and RAR</p>
           <p className="mt-1.5 rounded bg-amber-50 px-2 py-0.5 text-xxs font-medium text-amber-700">
             New upload resets all previous stage results
           </p>
@@ -155,7 +155,7 @@ export default function FileUploadPanel({ projectId, onUpload, onClearAll, onDel
             </button>
           )}
         </div>
-        <div className="min-h-36 max-h-52 flex-1 overflow-y-auto">
+        <div className="min-h-56 max-h-[50vh] flex-1 overflow-y-auto">
           {files.length === 0 ? (
             <p className="mt-6 text-center text-xxs italic text-slate-500">No files queued.</p>
           ) : (

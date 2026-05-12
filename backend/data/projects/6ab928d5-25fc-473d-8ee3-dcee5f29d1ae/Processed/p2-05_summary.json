@@ -1,0 +1,36 @@
+{
+  "project_id": "6ab928d5-25fc-473d-8ee3-dcee5f29d1ae",
+  "overall": "FAIL",
+  "file_checks": [
+    {
+      "rule_id": "AB_OUTPUT_EXISTS",
+      "passed": true,
+      "severity": "INFO",
+      "evidence": "data\\projects\\6ab928d5-25fc-473d-8ee3-dcee5f29d1ae\\outputs\\ab\\anchor_bolt_layout.json"
+    },
+    {
+      "rule_id": "GA_OUTPUT_EXISTS",
+      "passed": true,
+      "severity": "INFO",
+      "evidence": "data\\projects\\6ab928d5-25fc-473d-8ee3-dcee5f29d1ae\\outputs\\ga\\general_arrangement.json"
+    },
+    {
+      "rule_id": "AB_HAS_FIELDS",
+      "passed": true,
+      "severity": "INFO",
+      "evidence": "data\\projects\\6ab928d5-25fc-473d-8ee3-dcee5f29d1ae\\outputs\\ab\\anchor_bolt_layout.json"
+    },
+    {
+      "rule_id": "GA_HAS_FIELDS",
+      "passed": true,
+      "severity": "INFO",
+      "evidence": "data\\projects\\6ab928d5-25fc-473d-8ee3-dcee5f29d1ae\\outputs\\ga\\general_arrangement.json"
+    }
+  ],
+  "rule_validation": {
+    "overall": "FAIL",
+    "blocking_failures": 129,
+    "rules_evaluated": 293
+  },
+  "main_output": "reports/p2-05_summary.json"
+}

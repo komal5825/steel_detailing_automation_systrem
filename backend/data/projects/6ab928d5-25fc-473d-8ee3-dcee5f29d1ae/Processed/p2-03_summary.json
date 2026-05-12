@@ -1,0 +1,20 @@
+{
+  "project_id": "6ab928d5-25fc-473d-8ee3-dcee5f29d1ae",
+  "status": "GENERATED",
+  "gate_status": "PASS",
+  "outputs": {
+    "ab_structured_package": "data\\projects\\6ab928d5-25fc-473d-8ee3-dcee5f29d1ae\\outputs\\ab\\ab_structured_package.json",
+    "dxf_plan": "data\\projects\\6ab928d5-25fc-473d-8ee3-dcee5f29d1ae\\outputs\\ab\\ab_plan_view.dxf",
+    "dxf_section": "data\\projects\\6ab928d5-25fc-473d-8ee3-dcee5f29d1ae\\outputs\\ab\\ab_section_view.dxf",
+    "dxf_detail": "data\\projects\\6ab928d5-25fc-473d-8ee3-dcee5f29d1ae\\outputs\\ab\\ab_detail_view.dxf",
+    "pdf": "data\\projects\\6ab928d5-25fc-473d-8ee3-dcee5f29d1ae\\outputs\\ab\\ab_drawing.pdf"
+  },
+  "field_summary": {
+    "total_ab_required": 72,
+    "resolved_count": 72,
+    "missing_count": 0,
+    "missing_codes": []
+  },
+  "overall": "PASS",
+  "main_output": "reports/p2-03_summary.json"
+}

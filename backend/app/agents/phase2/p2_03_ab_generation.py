@@ -1143,7 +1143,7 @@ def _pdf_draw_data_table(page, pkg: dict, W: float, _H: float) -> None:
     )
     page.insert_text(fitz.Point(tx0 + 4, ty0 + 13),
                      "ANCHOR BOLT — DATA SUMMARY",
-                     fontsize=9, fontname="helv-bold", color=(1, 1, 1))
+                     fontsize=9, fontname="hebo", color=(1, 1, 1))
 
     for i, (label, value) in enumerate(rows):
         y = ty0 + 18 + i * row_h

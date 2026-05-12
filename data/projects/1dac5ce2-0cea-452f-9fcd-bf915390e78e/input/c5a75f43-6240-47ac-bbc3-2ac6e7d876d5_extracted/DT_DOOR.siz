@@ -1,0 +1,57 @@
+*                               DT_DOOR.SIZ
+*
+*
+*                                  SI UNITS
+*
+*     Door Size: Door identification from input file. For accessories 
+*          use '---' unless the accessory is only applicable for a 
+*          specific door in which case the door identification must be 
+*          entered.
+*
+*     Door Type: Use 'SWDR' for the doors and any other name for the 
+*          accessories.
+*
+*     Description: Describe the door as it will appear in the BOM.
+*
+*     Mark: This is a label for the part.
+*
+*     Part Number: This is the order number for the part.
+*
+*     Color: This is further identification for the door.
+*     Quan : Item Quantity
+*
+*     Length: Length of item in millimeters.
+*
+*     Weight: Weight of item in kilograms.
+*
+*                                                                              
+* Door     Door                                                            Length   Weight
+* Size     Type   Description            Mark       Part        Color Quan   mm      kg   
+ '3070M'  'SWDR'  'SINGLE WALK DOOR '    '3070M'    '3070M'      '--'   1   2134.    64.50
+ '3070G'  'SWDR'  'SINGLE WALK DOOR '    '3070G'    '3070G'      '--'   1   2134.    64.50
+
+ '3070M'  'PNHW'  'Panic Hardware '     '3070PH'   '3070PH'     '--'    1   2134.    4.50
+ '3070G'  'PNHW'  'Panic Hardware '     '3070PH'   '3070PH'     '--'    1   2134.    4.50
+
+
+
+ '3070 '  'TRM1'  'FLASHING VERT.'       'DF501A'   'DF501A'     '@J'   2   2250.     1.18
+ '3070 '  'TRM2'  'FLASHING VERT.'       'DF501B'   'DF501B'     '@J'   2   2250.     1.18
+ '3070 '  'TRM3'  'FLASHING HEADER '     'DF502'    'DF502'      '@W'   1   1165.     1.18
+
+ '3070 '  'SWDR'  'SILL & DOOR ANGLE '   '2-PM'     '100x50x2'  '--'   2   1075.     1.18
+ 
+ '6070M'  'SWDR'  'DOUBLE WALK DOOR '    '6070M'    '6070M'      '--'   1   2134.    64.50
+ '6070G'  'SWDR'  'DOUBLE WALK DOOR '    '6070G'    '6070G'      '--'   1   2134.    64.50
+
+ '6070M'  'MULL'  'Mullion          '    'Mullion'   '6070M'     '--'   1   2134.     4.50
+ '6070G'   'MULL'  'Mullion          '    'Mullion'   '6070M'     '--'   1   2134.     4.50
+
+
+ '6070 '  'TRM1'  'FLASHING VERT.'       'DF501A'   'DF501A'     '@J'   2   2250.     1.18
+ '6070 '  'TRM2'  'FLASHING VERT.'       'DF501B'   'DF501B'     '@J'   2   2250.     1.18
+ '6070 '  'TRM4'  'FLASHING HEADER '     'DF502'    'DF502'      '@W'   1   2080.     1.18
+
+ '6070 '  'ACC8'  'SILL & DOOR ANGLE '   '2-PM'     '100x50x2'  '--'   1   2075.     1.18
+
+stop

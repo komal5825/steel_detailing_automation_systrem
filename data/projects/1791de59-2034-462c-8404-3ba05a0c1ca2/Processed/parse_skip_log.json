@@ -1,0 +1,43 @@
+{
+  "project_id": "1791de59-2034-462c-8404-3ba05a0c1ca2",
+  "skipped_file_count": 4,
+  "max_retries_per_file": 3,
+  "skipped_files": [
+    {
+      "file_id": "a69408a6-bd90-43bf-a9cd-fc3bb5fd3f0a",
+      "filename": "JACKDET.Dxf",
+      "file_type": "DXF",
+      "parser": "ProtaSteelParser",
+      "attempts": 3,
+      "reason": "could not convert string to float: '**********'",
+      "action": "SKIP_AFTER_MAX_RETRIES"
+    },
+    {
+      "file_id": "62790ae9-a993-4aa0-8de2-c369896b33cd",
+      "filename": "SHIP.XLS",
+      "file_type": "EXCEL",
+      "parser": "EtabsParser",
+      "attempts": 3,
+      "reason": "ETABS parser expects an Excel export",
+      "action": "SKIP_AFTER_MAX_RETRIES"
+    },
+    {
+      "file_id": "e96ffee1-b8d6-4c14-97d8-97dc6d6183ed",
+      "filename": "JACKDET.Dxf",
+      "file_type": "DXF",
+      "parser": "ProtaSteelParser",
+      "attempts": 3,
+      "reason": "could not convert string to float: '**********'",
+      "action": "SKIP_AFTER_MAX_RETRIES"
+    },
+    {
+      "file_id": "eb401aca-9c0a-435c-833e-73e4aeed9fa8",
+      "filename": "SHIP.XLS",
+      "file_type": "EXCEL",
+      "parser": "EtabsParser",
+      "attempts": 3,
+      "reason": "ETABS parser expects an Excel export",
+      "action": "SKIP_AFTER_MAX_RETRIES"
+    }
+  ]
+}

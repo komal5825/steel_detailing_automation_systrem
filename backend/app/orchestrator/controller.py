@@ -24,6 +24,7 @@ from app.agents.phase2.p2_04_ga_generation import generate_ga_drawings
 from app.agents.phase2.p2_05_abga_validation import validate_abga
 from app.agents.support.checkpoint import CheckpointManager
 from app.db.crud.stages import list_project_stages, update_stage_result
+from app.db.crud.agent_execution_logs import create_execution_log, finalize_execution_log
 from app.db.crud.validation import log_audit_event
 from app.db.models import StageStatus
 from app.db.session import SessionLocal
@@ -138,7 +139,21 @@ class OrchestrationController:
             db.flush()
             _broadcast(project_id, stage_code, "RUNNING")
 
+            exec_log = None
             try:
+                exec_log = create_execution_log(
+                    db,
+                    project_id=project_id,
+                    stage_code=stage_code,
+                    trigger_type="pipeline",
+                    status="RUNNING",
+                    input_payload={
+                        "project_id": str(project_id),
+                        "stage_code": stage_code,
+                        "from_stage": from_stage,
+                        "to_stage": to_stage,
+                    },
+                )
                 stage_result = agent_fn(project_id=str(project_id), db=db)
                 overall = stage_result.get("overall", "PASS")
                 last_stage_run = stage_code
@@ -149,6 +164,14 @@ class OrchestrationController:
                     update_stage_result(db, project_id=project_id, stage_code=stage_code,
                                         status=StageStatus.BLOCKED, result=stage_result)
                     _broadcast(project_id, stage_code, "BLOCKED")
+                    finalize_execution_log(
+                        db,
+                        log_id=exec_log.id,
+                        status="BLOCKED",
+                        output_payload=stage_result,
+                        error_message="Stage blocked by validator gate",
+                        root_cause=stage_result.get("reason") or stage_result.get("error"),
+                    )
                     logger.warning("Stage %s BLOCKED — pipeline paused awaiting input", stage_code)
                     break
 
@@ -164,6 +187,14 @@ class OrchestrationController:
                         error_message=failure_reason,
                     )
                     _broadcast(project_id, stage_code, "FAILED")
+                    finalize_execution_log(
+                        db,
+                        log_id=exec_log.id,
+                        status="FAILED",
+                        output_payload=stage_result,
+                        error_message=failure_reason,
+                        root_cause=failure_reason,
+                    )
                     logger.warning("Stage %s FAILED: %s", stage_code, failure_reason)
                     break
 
@@ -174,6 +205,12 @@ class OrchestrationController:
                 update_stage_result(db, project_id=project_id, stage_code=stage_code,
                                     status=status_to_set, result=stage_result)
                 _broadcast(project_id, stage_code, status_to_set.value)
+                finalize_execution_log(
+                    db,
+                    log_id=exec_log.id,
+                    status=status_to_set.value,
+                    output_payload=stage_result,
+                )
                 logger.info("Stage %s %s", stage_code, status_to_set.value)
 
             except Exception as exc:
@@ -184,6 +221,18 @@ class OrchestrationController:
                 log_audit_event(db, "STAGE_FAILED", project_id=project_id,
                                 stage_code=stage_code, detail={"error": str(exc), "traceback": tb})
                 _broadcast(project_id, stage_code, "FAILED")
+                try:
+                    if exec_log is not None:
+                        finalize_execution_log(
+                            db,
+                            log_id=exec_log.id,
+                            status="FAILED",
+                            output_payload={},
+                            error_message=str(exc),
+                            root_cause=str(exc),
+                        )
+                except Exception:
+                    pass
                 failed_stage = stage_code
                 pipeline_failed = True
                 last_stage_run = stage_code

@@ -1,0 +1,1919 @@
+{
+  "header": {
+    "report_type": "DAILY",
+    "date": "2026-05-11",
+    "project_uuid": "1791de59-2034-462c-8404-3ba05a0c1ca2",
+    "proposal_id": "C323-153_",
+    "project_name": "Recla International Private Limited",
+    "project_status": "CREATED",
+    "build_version": "2.0",
+    "generated_at": "2026-05-11T11:30:05.159010",
+    "generated_by": "system",
+    "report_id": "daily_proj-1791de59_v2.0_2026-05-11_001",
+    "sequence": 1,
+    "qc_status": "pending"
+  },
+  "execution_summary": {
+    "tasks_run_today": 1,
+    "reruns_today": 0,
+    "rules_evaluated_total": 0,
+    "gates_touched_total": 0,
+    "corrections_today": 0,
+    "audit_events_today": 236,
+    "files_total": 538,
+    "files_parsed": 117,
+    "files_failed": 2
+  },
+  "lane_summary": {
+    "Lane 1 - Ingestion": {
+      "stages": [
+        "P2-01"
+      ],
+      "statuses": [
+        "PASS_WITH_WARNINGS"
+      ],
+      "overall": "PASSED"
+    },
+    "Lane 2 - Completeness": {
+      "stages": [
+        "P2-02"
+      ],
+      "statuses": [
+        "PENDING"
+      ],
+      "overall": "PENDING"
+    },
+    "Lane 3 - Generation": {
+      "stages": [
+        "P2-03",
+        "P2-04"
+      ],
+      "statuses": [
+        "PENDING",
+        "PENDING"
+      ],
+      "overall": "PENDING"
+    },
+    "Lane 4 - Validation": {
+      "stages": [
+        "P2-05"
+      ],
+      "statuses": [
+        "PENDING"
+      ],
+      "overall": "PENDING"
+    }
+  },
+  "stage_detail": [
+    {
+      "stage_code": "P2-01",
+      "status": "PASS_WITH_WARNINGS",
+      "revision": 1,
+      "started_at": "2026-05-11T11:27:58.311849",
+      "completed_at": "2026-05-11T11:30:04.215130",
+      "error_message": null,
+      "ran_today": true
+    },
+    {
+      "stage_code": "P2-02",
+      "status": "PENDING",
+      "revision": 1,
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null,
+      "ran_today": false
+    },
+    {
+      "stage_code": "P2-03",
+      "status": "PENDING",
+      "revision": 1,
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null,
+      "ran_today": false
+    },
+    {
+      "stage_code": "P2-04",
+      "status": "PENDING",
+      "revision": 1,
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null,
+      "ran_today": false
+    },
+    {
+      "stage_code": "P2-05",
+      "status": "PENDING",
+      "revision": 1,
+      "started_at": null,
+      "completed_at": null,
+      "error_message": null,
+      "ran_today": false
+    }
+  ],
+  "gate_snapshot": {},
+  "severity_summary": {
+    "CRITICAL": 0,
+    "MAJOR": 0,
+    "MINOR": 0,
+    "release_blockers": 0
+  },
+  "top_blockers": [],
+  "manual_review_summary": {
+    "total": 0,
+    "open": 0,
+    "resolved": 0,
+    "open_items": []
+  },
+  "source_fallback_summary": {
+    "parser_runs_total": 236,
+    "parser_runs_success": 232,
+    "parser_runs_failed": 4,
+    "avg_confidence": 80.4,
+    "source_distribution": {
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\BOM.in": 34,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\BOMext1.DXF": 10,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\CompDes.Dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\CompDes.in": 52,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\COMPDET.Dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\CompDet.in": 54,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\CraneDes.in": 18,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\CraneDet.Dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\CraneDet.in": 44,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\DesCalc.Dxf": 10,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\DesCalc2.Dxf": 10,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\DesCalc3.Dxf": 10,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\DesCtrl.Dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\Desctrl.In": 12,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\DE_COL.in": 2,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\DtDwg-3.in": 14,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\DwgCtrl.In": 2,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\EwDes-L.Dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\EwDes-L.in": 44,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\EwDes-R.Dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\EwDes-R.in": 46,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\EWDET.Dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\EwDet.in": 38,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\FLOORDES.IN": 36,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\FLOORDET.Dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\FLOORDET.IN": 22,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\FramSum.Dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\JackDes.in": 34,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\JackDet.In": 30,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\KeyDwg.in": 30,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\LOAD.IN": 2,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\PartDes.in": 34,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\PARTDET.Dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\PartDet.in": 28,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RfBase1.In": 4,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RfBase2.In": 4,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RfDes-1.Dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RfDes-1.in": 44,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RfDes-2.Dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RfDes-2.in": 44,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RfDet-1.Dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RfDet-1.in": 32,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RfDet-2.Dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RfDet-2.in": 32,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RFINP.In": 8,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RoofDes.Dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RoofDes.in": 38,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RoofIns.in": 54,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RoofLnr.in": 54,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\ScDes.in": 34,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\ScrewDwg.in": 12,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\SEISMIC.IN": 54,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\SwDes-B.Dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\SwDes-B.in": 34,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\SwDes-F.Dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\SwDes-F.in": 34,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\WallDes6.in": 44,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\WallDes7.in": 44,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\WallIns.in": 54,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\WallLnr.in": 54,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\Wind.In": 524,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\WINDFRM.Dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\WindFrm.in": 44,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\CraneDes.Dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\BrcDwg.in": 70,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\CrnDwg1.in": 68,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\CrnDwg2.in": 68,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\3DBuild.dxf": 6,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\3DBuild.in": 30,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\AnDwg-1.dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\AnDwg-1.in": 118,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\AnDwg-2.dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\AnDwg-2.in": 118,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\AnDwg-3.dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\AnDwg-3.in": 118,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\BrcDwg.dxf": 10,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\CrnDwg1.dxf": 10,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\CrnDwg2.dxf": 10,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\DtDwg-1.dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\DtDwg-1.in": 14,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\DtDwg-2.dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\DtDwg-2.in": 14,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\EwDwg-L.dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\EwDwg-L.in": 72,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\EwDwg-R.dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\EwDwg-R.in": 72,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RfDwg-1.dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RfDwg-1.in": 46,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RfDwg-1A.dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RfDwg-1A.in": 46,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RfDwg-1B.dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RfDwg-1B.in": 46,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RfDwg-2.dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RfDwg-2.in": 46,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RfDwg-2A.dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RfDwg-2A.in": 46,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RfDwg-2B.dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RfDwg-2B.in": 46,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RoofDwg.dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RoofDwg.in": 74,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RoofDwg2.dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RoofDwg2.in": 74,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RoofDwg3.dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\RoofDwg3.in": 74,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\SwDwg-B.dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\SwDwg-B.in": 72,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\SwDwg-F.dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\SwDwg-F.in": 72,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\ZoneDwg.dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\ZoneDwg.in": 56,
+      "DXF::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\ZoneWind.dxf": 10,
+      "MBS::..\\data\\projects\\1791de59-2034-462c-8404-3ba05a0c1ca2\\input\\f55c0a72-891b-46d6-a777-bbed35262d6a_extracted\\ZoneWind.in": 56
+    }
+  },
+  "defect_summary": {
+    "total_escalations": 0,
+    "open": 0,
+    "resolved": 0,
+    "critical_open": 0,
+    "by_severity": {
+      "CRITICAL": 0,
+      "MAJOR": 0,
+      "MINOR": 0
+    }
+  },
+  "corrections_today": [],
+  "audit_events_today": [
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:27:58.480707"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:27:58.542327"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:27:58.778520"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:27:59.288737"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:27:59.455224"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:00.143188"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:00.175568"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:00.210489"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:00.819488"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:00.890755"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:01.313481"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:01.413061"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:02.303062"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:02.751024"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:02.774337"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:02.862145"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:02.928125"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:03.081815"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:03.132710"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:03.639141"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:03.668569"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:03.931912"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:04.033668"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:04.460341"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:04.540988"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:04.616312"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:04.720215"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:05.252500"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:05.267662"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:06.131031"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:06.309976"
+    },
+    {
+      "event_type": "P2_01_PARSE_SKIPPED",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:10.386791"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:10.417674"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:10.475788"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:10.501084"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:10.508396"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:10.519241"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:11.259676"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:11.327816"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:11.381621"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:11.410854"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:12.093881"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:12.203678"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:12.836764"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:12.906353"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:14.149627"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:14.258440"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:16.122607"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:16.232187"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:16.263748"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:16.725198"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:16.801383"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:16.858289"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:16.928044"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:16.965701"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:16.994031"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:17.062310"
+    },
+    {
+      "event_type": "P2_01_PARSE_SKIPPED",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:21.149953"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:21.666594"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:21.692878"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:22.359445"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:22.400647"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:22.463960"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:22.536594"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:22.611367"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:22.701500"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:22.872085"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:23.780525"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:23.899278"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:24.539247"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:24.613261"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:24.639790"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:24.780289"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:25.496147"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:25.515281"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:26.017465"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:26.063346"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:26.710724"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:26.745362"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:27.623067"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:27.684020"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:28.439160"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:29.712831"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:29.967992"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:42.833097"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:42.837060"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:46.219720"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:46.301007"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:47.066237"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:47.147209"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:48.509013"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:48.569929"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:49.048014"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:49.062324"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:50.369791"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:50.471186"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:51.703943"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:51.715665"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:53.170046"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:53.223801"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:55.179877"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:55.200057"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:56.695487"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:56.731384"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:57.364343"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:57.451550"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:58.802542"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:58.931449"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:59.867537"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:28:59.894089"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:00.059107"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:00.072351"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:00.930533"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:00.962887"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:01.608606"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:01.644957"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:02.051109"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:02.167760"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:04.237706"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:04.268508"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:04.596267"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:04.650460"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:04.701112"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:05.270900"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:05.319965"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:05.348571"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:05.849636"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:05.906902"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:06.585663"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:07.491662"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:08.293261"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:08.524069"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:08.647337"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:08.738784"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:08.779193"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:08.831643"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:08.865604"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:09.745615"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:09.841377"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:10.282830"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:10.384589"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:10.766931"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:10.819263"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:10.830978"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:10.846901"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:11.348801"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:11.444549"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:12.886406"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:12.951956"
+    },
+    {
+      "event_type": "P2_01_PARSE_SKIPPED",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:17.040246"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:17.114410"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:17.165709"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:17.195319"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:17.292705"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:17.371029"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:18.090060"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:18.168790"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:18.231135"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:18.276416"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:18.798913"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:18.920444"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:19.393600"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:19.410754"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:19.932383"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:19.970663"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:21.440529"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:21.530583"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:21.598606"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:22.207919"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:22.385506"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:22.513656"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:22.624369"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:22.691079"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:22.729097"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:22.876351"
+    },
+    {
+      "event_type": "P2_01_PARSE_SKIPPED",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:26.927668"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:27.288018"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:27.402587"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:28.127566"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:28.194366"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:28.376908"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:28.491564"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:28.545149"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:28.608521"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:28.947847"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:29.434108"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:29.543264"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:30.457989"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:30.552534"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:30.628621"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:30.732330"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:31.527885"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:31.575915"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:31.971416"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:31.996660"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:32.129994"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:32.248530"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:32.867176"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:32.992908"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:33.440934"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:34.244703"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:35.578061"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:50.376218"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:50.379289"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:55.601439"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:55.613089"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:56.727626"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:56.798252"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:58.279275"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:58.373708"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:59.303225"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:29:59.391291"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:30:00.695463"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:30:00.858336"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:30:01.566690"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:30:01.621737"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:30:02.337436"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:30:02.470762"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:30:03.270031"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:30:03.310935"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:30:03.459603"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:30:03.466153"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:30:03.627793"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:30:03.643700"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:30:03.762415"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:30:03.769796"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:30:03.831412"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:30:03.842957"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:30:03.915761"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:30:03.961909"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:30:04.057716"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:30:04.067563"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:30:04.110400"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:30:04.116523"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:30:04.148611"
+    },
+    {
+      "event_type": "P2_01_PARSE_SUCCESS",
+      "actor": "system",
+      "stage_code": null,
+      "field_code": null,
+      "created_at": "2026-05-11T11:30:04.154136"
+    }
+  ],
+  "next_day_critical_path": {
+    "blocked_stages": [],
+    "critical_missing": [],
+    "action_required": false
+  }
+}

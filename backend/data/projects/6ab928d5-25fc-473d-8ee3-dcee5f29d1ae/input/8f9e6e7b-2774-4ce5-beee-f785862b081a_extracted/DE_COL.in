@@ -1,0 +1,25 @@
+*FILE:DE_COL.in    VERSION:1.00    UNITS:METRIC
+
+*( 1)COLUMNS:
+*        ------Location-----  ---------------Column-----------------          --Member_Size--  Grout    Base
+*No. Id  Use      Id  Offset  Type  Part      Rot Opt Material Shape   Height   Width   Depth  Thick    Elev
+  0
+
+*( 2)ATTACHMENTS:
+*   Column ---Attach---  ---------Bearing_Area----------  Grout    Column
+*No.  Id   Type  Use       Height   Width   Thick  Length  Thick    Side     Offset     Part
+  0
+
+*( 3)GRID PROPERTIES:
+*Alignment  ---Horizontal---    ----Vertical---  Use  ---------Grid_To_Include------------------   
+*Reference  Grid     Up/Down    Grid    Up/Down  HIO  Rf_Col   Jack_Col  Floor  Crane  Partition   
+    '-'     '-'        '-'      '-'       '-'    '-'   '-'        '-'     '-'    '-'      '-'
+
+*( 4)HORIZONTAL GRIDS:
+* No.  Location   Id
+  0
+
+*( 5)VERTICAL GRIDS:
+* No.  Location   Id
+  0
+

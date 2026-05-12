@@ -1,0 +1,117 @@
+[
+  {
+    "stage_code": "P2-01",
+    "label": "File Ingestion Gate",
+    "gate_status": "PASS",
+    "created_at": "2026-05-12 12:03:02.611292",
+    "gate_data": {
+      "files_found": 118,
+      "parsed_files": 116,
+      "failed_files": 2,
+      "extracted_fields": 1902,
+      "warnings_count": 2
+    }
+  },
+  {
+    "stage_code": "P2-02",
+    "label": "Completeness Hard Gate",
+    "gate_status": "PASS",
+    "created_at": "2026-05-12 12:03:10.938315",
+    "gate_data": {
+      "ab_missing": [],
+      "ga_missing": [],
+      "fallback_resolved_count": 35,
+      "non_blocking_warnings_count": 11,
+      "total_fields_processed": 196,
+      "extracted": 78,
+      "calculated": 15,
+      "fallback": 38,
+      "failed": 65,
+      "invariant_holds": true
+    }
+  },
+  {
+    "stage_code": "P2-03",
+    "label": "AB Generation Gate",
+    "gate_status": "PASS",
+    "created_at": "2026-05-12 12:03:19.044002",
+    "gate_data": {
+      "total_ab_required": 72,
+      "resolved_count": 72,
+      "missing_count": 0,
+      "missing_codes": []
+    }
+  },
+  {
+    "stage_code": "P2-04",
+    "label": "GA Generation Gate",
+    "gate_status": "PASS",
+    "created_at": "2026-05-12 12:03:25.093663",
+    "gate_data": {
+      "total_ga_required": 78,
+      "resolved_count": 78
+    }
+  },
+  {
+    "stage_code": "P2-05",
+    "label": "AB/GA Validation Gate",
+    "gate_status": "FAIL",
+    "created_at": "2026-05-12 12:03:25.390905",
+    "gate_data": {
+      "project_id": "6ab928d5-25fc-473d-8ee3-dcee5f29d1ae",
+      "overall": "FAIL",
+      "file_checks": [
+        {
+          "rule_id": "AB_OUTPUT_EXISTS",
+          "passed": true,
+          "severity": "INFO",
+          "evidence": "data\\projects\\6ab928d5-25fc-473d-8ee3-dcee5f29d1ae\\outputs\\ab\\anchor_bolt_layout.json"
+        },
+        {
+          "rule_id": "GA_OUTPUT_EXISTS",
+          "passed": true,
+          "severity": "INFO",
+          "evidence": "data\\projects\\6ab928d5-25fc-473d-8ee3-dcee5f29d1ae\\outputs\\ga\\general_arrangement.json"
+        },
+        {
+          "rule_id": "AB_HAS_FIELDS",
+          "passed": true,
+          "severity": "INFO",
+          "evidence": "data\\projects\\6ab928d5-25fc-473d-8ee3-dcee5f29d1ae\\outputs\\ab\\anchor_bolt_layout.json"
+        },
+        {
+          "rule_id": "GA_HAS_FIELDS",
+          "passed": true,
+          "severity": "INFO",
+          "evidence": "data\\projects\\6ab928d5-25fc-473d-8ee3-dcee5f29d1ae\\outputs\\ga\\general_arrangement.json"
+        }
+      ],
+      "rule_validation": {
+        "overall": "FAIL",
+        "blocking_failures": 129,
+        "rules_evaluated": 293
+      },
+      "main_output": "reports/p2-05_summary.json"
+    }
+  },
+  {
+    "stage_code": "P2-05",
+    "label": "Hard Gate 5 \u2014 Phase 2 Release Gate",
+    "gate_status": "FAIL",
+    "created_at": "2026-05-12 12:03:25.405776",
+    "gate_data": {
+      "required_stages": [
+        "P2-01",
+        "P2-02",
+        "P2-03",
+        "P2-04",
+        "P2-05"
+      ],
+      "not_passed_stages": [
+        "P2-05"
+      ],
+      "ab_output_exists": true,
+      "ga_output_exists": true
+    }
+  }
+]
